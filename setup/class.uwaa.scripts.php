@@ -3,7 +3,7 @@
  * This is where all the JS files are registered
  *    Modified version of the UW-2014 Script loader.  Yanking out jquery, child theme stuff as they already call it.  Mirronring 
  *    their approach to loading admin and public and site scripts.  
- *    Since we are using sourcemaps in this child theme, the '.dev' functionality is also removed.
+ *    Also loading our scripts in the footer...
  */
 
 class UWAA_Scripts
@@ -19,9 +19,10 @@ class UWAA_Scripts
       
       'site'   => array (
         'id'      => 'uwaa.site',
-        'url'     => get_bloginfo('stylesheet_directory') . '/js/site.min.js',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/uwaa.site' . $this->dev_script() . '.js',
         'deps'    => array(),
         'version' => '1.0.3',
+        'in_footer' => true,
         'admin'   => false
       ),
 
@@ -53,7 +54,8 @@ class UWAA_Scripts
           $script->id,
           $script->url,
           $script->deps,
-          $script->version
+          $script->version,
+          $script->in_footer
         );
 
       }
@@ -95,6 +97,11 @@ class UWAA_Scripts
         }
       }
 
+  }
+
+  public function dev_script()
+  {
+    return is_user_logged_in() ? '.dev' : '';
   }
 
 }

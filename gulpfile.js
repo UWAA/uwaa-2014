@@ -3,7 +3,9 @@ less = require('gulp-less'),
 rename = require("gulp-rename"),
 watch = require('gulp-watch'),
 uglify = require('gulp-uglifyjs'),
-header = require('gulp-header');
+header = require('gulp-header'),
+concat = require('gulp-concat'),
+mainBowerFiles = require('main-bower-files');
 
 
 var pkg = require('./package.json');
@@ -18,6 +20,7 @@ var banner = ['/*',
   ''].join('\n');
 
 
+var mainFiles = mainBowerFiles();
 
 
 // Catches errors.  Will play a system tone and display your mistake.
@@ -31,13 +34,25 @@ gulp.task('default', function() {
   
 });
 
-gulp.task('uglify', function() {
-  gulp.src('./js/_*.js')
-    .pipe(uglify('site.min.js', {
-      outSourceMap: true
+
+// Builds both dev and minified version of our JS files.
+gulp.task('scripts', function() {
+
+  
+  gulp.src([ './js/libraries/**/*.js', './js/_*.js'])
+    .pipe(concat('uwaa.site.dev.js'))
+    .on('error', catchErrors)
+    .pipe(gulp.dest('./js'));
+
+  gulp.src(['./js/libraries/**/*.js', './js/_*.js'])
+    .pipe(uglify('uwaa.site.js', {
+      mangle: true,
+      output: {
+        beautify: false
+      }
     }))
     .on('error', catchErrors)
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./js'));
 });
 
 
@@ -52,10 +67,13 @@ gulp.task('less', function () {
 
 gulp.task('watch', function () {
     gulp.watch('less/*.less', ['less']);
-    gulp.watch('js/*.js', ['uglify']);
+    gulp.watch('js/*.js', ['scripts']);
 });
 
 
-
+gulp.task('library', function() {
+    gulp.src(mainBowerFiles(/* options */), { base: 'bower_components' })
+    .pipe(gulp.dest('./js/libraries'));
+});
  
  

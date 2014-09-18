@@ -18,12 +18,14 @@ class UWAA
     {
         require_once('class.uwaa.cpt.php');
         require_once('class.uwaa.scripts.php');
+        require_once ('class.uwaa.taxonomies.php');
       
     }
 
     private function initialize()
     {
         $this->CPT = new UWAA_CustomPostTypes; //Holds UWAA Custom Posts Types
+        $this->Taxonomy = new UWAA_CustomTaxonomies; //Holds custom taxonomies
         $this->Scripts = new UWAA_Scripts;  //Loads UWAA child-theme specific scripts
     }
 }

@@ -2,3 +2,4 @@ node_modules
 *.swp
 *.swo
 assets/fonts/heron.*
+bower_components
