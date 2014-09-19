@@ -39,12 +39,25 @@ gulp.task('default', function() {
 gulp.task('scripts', function() {
 
   
-  gulp.src([ './js/libraries/**/*.js', './js/_*.js'])
+  gulp.src([ './js/_*.js'])
     .pipe(concat('uwaa.site.dev.js'))
     .on('error', catchErrors)
     .pipe(gulp.dest('./js'));
 
-  gulp.src(['./js/libraries/**/*.js', './js/_*.js'])
+ gulp.src(['./js/support/*.js'])
+    .pipe(rename(function (path){
+      path.extname = ".min.js"
+    }))
+    .pipe(uglify({
+      mangle: true,
+      output: {
+        beautify: false
+      }
+    }))    
+    .on('error', catchErrors)
+    .pipe(gulp.dest('./js/support'));
+
+  gulp.src(['./js/_*.js'])
     .pipe(uglify('uwaa.site.js', {
       mangle: true,
       output: {

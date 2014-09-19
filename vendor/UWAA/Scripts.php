@@ -10,6 +10,7 @@ class Scripts
 {
 
   public $SCRIPTS;
+  public $SUPPORT_SCRIPTS;
 
 
   function __construct()
@@ -37,13 +38,36 @@ class Scripts
 
     ));
 
-    add_action( 'wp_enqueue_scripts', array( $this, 'uw_register_default_scripts' ) );
-    add_action( 'wp_enqueue_scripts', array( $this, 'uw_enqueue_default_scripts' ) );
-    add_action( 'admin_enqueue_scripts', array( $this, 'uw_enqueue_admin_scripts' ) );
+    $this->SUPPORT_SCRIPTS = array_merge( array(
+      
+      'isotope'   => array (
+        'id'      => 'isotope',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/isotope/dist/isotope.pkgd.js',
+        'deps'    => array('jquery'),
+        'version' => '2.0.1',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+
+      'isotopeInit' => array (
+        'id'      => 'isotopeInit',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/isotopeInit' . $this->min_script() . '.js',
+        'deps'    => array('isotope'),
+        'version' => '1.0',
+        'admin'   => false
+      ),
+    
+
+    ));
+
+    add_action( 'wp_enqueue_scripts', array( $this, 'uwaa_register_default_scripts' ) );
+    add_action( 'wp_enqueue_scripts', array( $this, 'uwaa_register_support_scripts' ) );
+    add_action( 'wp_enqueue_scripts', array( $this, 'uwaa_enqueue_default_scripts' ) );
+    add_action( 'admin_enqueue_scripts', array( $this, 'uwaa_enqueue_admin_scripts' ) );
 
   }
 
-  function uw_register_default_scripts()
+  function uwaa_register_default_scripts()
   {
       
       foreach ( $this->SCRIPTS as $script )
@@ -62,7 +86,28 @@ class Scripts
 
   }
 
-  function uw_enqueue_default_scripts()
+  //Used to register, but not necessarily Enqueue certain scripts unless needed.  Scripts can be loaded on specific templates as necessary.
+
+  public function uwaa_register_support_scripts()
+  {
+      
+      foreach ( $this->SUPPORT_SCRIPTS as $script )
+      {
+        $script = (object) $script;
+
+        wp_register_script(
+          $script->id,
+          $script->url,
+          $script->deps,
+          $script->version,
+          $script->in_footer
+        );
+
+      }
+
+  }
+
+  function uwaa_enqueue_default_scripts()
   {
       foreach ( $this->SCRIPTS as $script )
       {
@@ -73,7 +118,7 @@ class Scripts
       }
   }
 
-  function uw_enqueue_admin_scripts()
+  function uwaa_enqueue_admin_scripts()
   {
       if ( ! is_admin() )
         return;
@@ -102,6 +147,11 @@ class Scripts
   public function dev_script()
   {
     return is_user_logged_in() ? '.dev' : '';
+  }
+
+  public function min_script()
+  {
+    return !is_user_logged_in() ? '.min' : '';
   }
 
 }

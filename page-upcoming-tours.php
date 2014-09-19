@@ -1,7 +1,7 @@
 <?php get_header(); 
 
-wp_register_script('isotopeTours', get_bloginfo('stylesheet_directory').'/js/isotopeTours.js', array(), null, true);
-wp_enqueue_script('isotopeTours');
+// wp_register_script('isotopeTours', get_bloginfo('stylesheet_directory').'/js/isotopeTours.js', array(), null, true);
+wp_enqueue_script('isotopeInit');
 ?>
 
 
