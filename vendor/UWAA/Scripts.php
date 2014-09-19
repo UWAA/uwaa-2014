@@ -1,4 +1,4 @@
-<?php
+<?php namespace UWAA;
 /**
  * This is where all the JS files are registered
  *    Modified version of the UW-2014 Script loader.  Yanking out jquery, child theme stuff as they already call it.  Mirronring 
@@ -6,7 +6,7 @@
  *    Also loading our scripts in the footer...
  */
 
-class UWAA_Scripts
+class Scripts
 {
 
   public $SCRIPTS;

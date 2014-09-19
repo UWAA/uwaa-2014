@@ -1,6 +1,6 @@
-<?php
+<?php namespace UWAA\CustomPostTypes;
 
-class UWAA_Tours_Posts
+class Tours
 {
     function __construct()
     {

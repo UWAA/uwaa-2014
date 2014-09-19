@@ -58,7 +58,7 @@ gulp.task('scripts', function() {
 
 
 gulp.task('less', function () {
-     gulp.src('./less/**/*.less')
+     gulp.src('./less/style.less')
      .pipe(header(banner, { pkg : pkg } ))
     .pipe(less())
     .on('error', catchErrors)     

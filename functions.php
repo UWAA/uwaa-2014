@@ -1,13 +1,15 @@
 <?php
 
 
+//TODO - Get PSR-X all up in this.  
+
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
 if (!isset($UWAA)){
-    require( get_stylesheet_directory() . '/setup/class.uwaa.php' );
-    $UWAA = new UWAA();
+    new UWAA\Loader();
 }
-
-
-
 
 if ( ! function_exists( 'uwaa_get_tour_taxonomy_categories') ) :
 
@@ -25,3 +27,11 @@ if ( ! function_exists( 'uwaa_get_tour_taxonomy_categories') ) :
 }
 
  endif;
+
+
+ if (! function_exists('uwaa_thumbnail_browser') ) :
+
+
+
+
+    endif;

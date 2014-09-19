@@ -1,14 +1,17 @@
 {
-    "name": "uwaa-2014",
-    "authors": "Ben Erickson and Jane Higgins",
-    "description": "A child theme built on the 2014 boundless UW theme",
-    "dependencies": {
-        "isotope": "latest"
-    },
-    "overrides": {
-        "isotope" : {            
-            "dependencies" : "null",
-            "main" : "dist/isotope.pkgd.js"
-        }
+  "name": "uwaa-2014",
+  "authors": "Ben Erickson and Jane Higgins",
+  "description": "A child theme built on the 2014 boundless UW theme",
+  "dependencies": {
+    "isotope": "latest"
+  },
+  "overrides": {
+    "isotope": {
+      "dependencies": "null",
+      "main": "dist/isotope.pkgd.js"
     }
+  },
+  "devDependencies": {
+    "bootstrap": "~3.2.0"
+  }
 }

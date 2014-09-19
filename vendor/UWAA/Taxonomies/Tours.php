@@ -1,6 +1,6 @@
-<?php
+<?php namespace UWAA\Taxonomies;
 
-class UWAA_Tours_Taxonomy
+class Tours
 {
     function __construct()
     {

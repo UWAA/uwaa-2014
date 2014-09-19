@@ -1,0 +1,20 @@
+{
+    "name": "uwaa/uwaa-2014",
+    "description": "A WordPress child theme of uw-2014",
+    "require": {
+        "symfony/http-foundation": "2.5.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben Erickson",
+            "email": "bperick@uw.edu"
+        }
+    ],
+    "autoload": {
+        "psr-0" : {
+            "UWAA\\" : "vendor/"
+        }
+    },
+    "minimum-stability": "dev"
+}

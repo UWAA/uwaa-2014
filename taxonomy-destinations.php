@@ -13,7 +13,7 @@
       <?php get_template_part( 'breadcrumbs' ); ?>
 
       <div class="uw-body-copy">
-        <h3>---Taxonomy Page---</h3>
+        
           <div class="row">
             <?php
                 // Start the Loop.
@@ -37,7 +37,7 @@
       </div>
 
     </div>
-
+    <h3>---Taxonomy Page---</h3>
     <?php get_sidebar() ?>
 
   </div>
