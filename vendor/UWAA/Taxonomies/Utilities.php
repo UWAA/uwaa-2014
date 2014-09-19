@@ -10,7 +10,7 @@ class Utilities
                 
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :   
             foreach ( $terms as $term ) {
-                echo " " . $term->name . " ";     
+                echo " " . strtolower($term->name) . " ";     
                 }  
         endif;
      

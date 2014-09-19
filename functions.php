@@ -1,37 +1,13 @@
 <?php
 
 
-//TODO - Get PSR-X all up in this.  
 
+//Autoloads all of the UWAA classes, as they follow autoloading standards.  Classes can be called using that \UWAA\Path\To\Class::Method syntax
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-
+//Instatiates site-wite classes.  
 if (!isset($UWAA)){
     new UWAA\Loader();
 }
 
-if ( ! function_exists( 'uwaa_get_tour_taxonomy_categories') ) :
-
- function uwaa_get_tour_taxonomy_categories(){
-
- $terms = get_the_terms( $post->ID, "destinations");
- if ( !empty( $terms ) && !is_wp_error( $terms ) ){
-     
-     foreach ( $terms as $term ) {
-       echo " " . $term->name . " ";       
-     }
-     
- }
-
-}
-
- endif;
-
-
- if (! function_exists('uwaa_thumbnail_browser') ) :
-
-
-
-
-    endif;
