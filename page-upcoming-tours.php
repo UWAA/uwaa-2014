@@ -19,16 +19,16 @@ wp_enqueue_script('isotopeInit');
       <?php get_template_part( 'breadcrumbs' ); ?>
 
       <div class="uw-body-copy">
-        <?php \UWAA\View\Isotope::buildSortingToolbar('destinations'); ?>
+        <?php /*\UWAA\View\Isotope::buildSortingToolbar('destinations');*/ ?>
             <div class="isotope">
-            <?php get_template_part( 'thumbnail-browser' ); ?>
+            <!-- <?php get_template_part( 'thumbnail-browser' ); ?> -->
             </div>
 
       </div>
 
     </div>
     <h3>---tours browser---</h3>
-    <?php get_sidebar() ?>
+    <?php /*get_sidebar()*/ ?>
 
   </div>
 

@@ -40,8 +40,8 @@ class Scripts
 
     $this->SUPPORT_SCRIPTS = array_merge( array(
       
-      'isotope'   => array (
-        'id'      => 'isotope',
+      'isotopeLibrary'   => array (
+        'id'      => 'isotopeLibrary',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/isotope/dist/isotope.pkgd.js',
         'deps'    => array('jquery'),
         'version' => '2.0.1',
@@ -49,10 +49,10 @@ class Scripts
         'admin'   => false
       ),
 
-      'isotopeInit' => array (
+      'isotope' => array (
         'id'      => 'isotopeInit',
-        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/isotopeInit' . $this->min_script() . '.js',
-        'deps'    => array('isotope'),
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/isotope/uwaa.isotope' . $this->dev_script() . '.js',
+        'deps'    => array('isotopeLibrary'),
         'version' => '1.0',
         'admin'   => false
       ),

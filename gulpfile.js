@@ -35,6 +35,39 @@ gulp.task('default', function() {
 });
 
 
+
+gulp.task('isotopeScripts', function() {
+  
+  gulp.src([   //Manually specify order for concat and uglify so we load in the right order
+    './js/isotope/*Model.js',
+    './js/isotope/*Controller.js',
+    './js/isotope/*View.js'
+
+    ])
+    .pipe(concat('uwaa.isotope.dev.js'))
+    .on('error', catchErrors)
+    .pipe(gulp.dest('./js/isotope'));
+
+
+     gulp.src([ 
+    './js/isotope/*Model.js',
+    './js/isotope/*Controller.js',
+    './js/isotope/*View.js'
+
+    ])
+    .pipe(uglify('uwaa.isotope.js', {
+      mangle: true,
+      output: {
+        beautify: false
+      }
+    }))
+    .on('error', catchErrors)
+    .pipe(gulp.dest('./js/isotope'));
+
+
+});
+
+
 // Builds both dev and minified version of our JS files.
 gulp.task('scripts', function() {
 
@@ -44,18 +77,6 @@ gulp.task('scripts', function() {
     .on('error', catchErrors)
     .pipe(gulp.dest('./js'));
 
- gulp.src(['./js/support/*.js'])
-    .pipe(rename(function (path){
-      path.extname = ".min.js"
-    }))
-    .pipe(uglify({
-      mangle: true,
-      output: {
-        beautify: false
-      }
-    }))    
-    .on('error', catchErrors)
-    .pipe(gulp.dest('./js/support'));
 
   gulp.src(['./js/_*.js'])
     .pipe(uglify('uwaa.site.js', {
@@ -80,7 +101,7 @@ gulp.task('less', function () {
 
 gulp.task('watch', function () {
     gulp.watch('less/*.less', ['less']);
-    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('js/**/*.js', ['scripts', 'isotopeScripts']);
 });
 
 
