@@ -1,4 +1,9 @@
 var Tour = Backbone.Model.extend({
+    defaults: {
+        title: '',
+        link: ''
+
+    }
 
 
 
@@ -15,12 +20,23 @@ var Tours = Backbone.Collection.extend({
         return Backbone.Collection.prototype.fetch.call(this, options);
     }, 
 
-    // parse: function(response) {
-    //     return response.channel;
-    // } ,
+    parse: function(data) {
+        
+        var parsed = [];
+
+        $(data).find('item').each(function (index){
+            postTitle= $(this).find('title').text();
+            postLink= $(this).find('link').text();
+
+            parsed.push({
+                title : postTitle,
+                link : postLink
+            });
+
+        });
+
+        return parsed;
+    },
 
 });
 
-var tours = new Tours();
-    tours.fetch();
-    console.log('hi');

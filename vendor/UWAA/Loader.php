@@ -18,9 +18,7 @@ class Loader
     private function initialize()
     {
             
-        //Front-End specific helper functions
-        // new \UWAA\View\Isotope;
-
+        
 
         //Scripts needed on all pages of the theme
 
@@ -34,6 +32,9 @@ class Loader
 
          //Custom Taxonomies
         new \UWAA\Taxonomies\Tours; //Holds custom taxonomies
+
+        //MAYBE Build a real API to get some of the post information...
+        // new \UWAA\API\API; 
         
 
         

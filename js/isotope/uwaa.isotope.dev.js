@@ -1,4 +1,9 @@
 var Tour = Backbone.Model.extend({
+    defaults: {
+        title: '',
+        link: ''
+
+    }
 
 
 
@@ -15,15 +20,27 @@ var Tours = Backbone.Collection.extend({
         return Backbone.Collection.prototype.fetch.call(this, options);
     }, 
 
-    // parse: function(response) {
-    //     return response.channel;
-    // } ,
+    parse: function(data) {
+        
+        var parsed = [];
+
+        $(data).find('item').each(function (index){
+            postTitle= $(this).find('title').text();
+            postLink= $(this).find('link').text();
+
+            parsed.push({
+                title : postTitle,
+                link : postLink
+            });
+
+        });
+
+        return parsed;
+    },
 
 });
 
-var tours = new Tours();
-    tours.fetch();
-    console.log('hi');
+
 
 
 //TODO Make a UWAA object and clear space for these.
@@ -33,41 +50,44 @@ ToursView = Backbone.View.extend({
 
 
 
-  isotopeContainer: '.isotope',
-  filterContainer: '#filter',
+  // isotopeContainer: '.isotope',
+  // filterContainer: '#filter',
 
-  events: {
-    'click #filters' : 'filter'
+  // events: {
+  //   'click #filters' : 'filter'
 
-  },
+  // },
 
   initialize: function() {
     _.bindAll(this, 'render');
+    // this.listenTo(this.collection, "reset sync add remove", this.render);
     // _bindAll(isotopeContainer, 'isotope');
 
   },
 
-  filter: function() {
+  // filter: function() {
 
-  },
+  // },
 
-  isotope: function() {
-    this.isotopeContainer.isotope({
-      itemSelector: '.tour-thumbnail',
-      layoutMode: 'fitRows'  
-    })
-  },
+  // isotope: function() {
+  //   this.isotopeContainer.isotope({
+  //     itemSelector: '.tour-thumbnail',
+  //     layoutMode: 'fitRows'  
+  //   })
+  // },
 
 render: function() {
-    // this.$el.html(this.template(this.model.attributes));
+    this.$el.html(this.template(this.model.attributes));
     console.log(this.collection.toJSON());
-    return this;
+
+    // return this;
   }
 
 });
 
-toursView = new ToursView({collection:tours});
-tours.fetch;
+var tours = new Tours();
+toursView = new ToursView({collection: tours});
+tours.fetch();
 
 
 
