@@ -17,12 +17,13 @@ if ( $toursQuery->have_posts() ) {
         $toursQuery->the_post();
         ?>
 
+<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+<div class="isotope-slide <?php esc_attr(\UWAA\Taxonomies\Utilities::echoListOfTerms('destinations')); ?>">
 
-<div class="tour-thumbnail <?php esc_attr(\UWAA\Taxonomies\Utilities::echoListOfTerms('destinations')); ?>">
-
-<h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a></h1>
+<h2><?php the_title() ?></h2>
 
 </div>
+</a>
 
 <?php
 

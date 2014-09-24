@@ -24,7 +24,10 @@
                      * use this in a child theme, then include a file called called content-___.php
                      * (where ___ is the post format) and that will be used instead.
                      */
-                    get_template_part( 'thumbnail-browser' );
+                    if ( is_archive() )
+    the_excerpt();
+  else
+    the_content();
 
                     // If comments are open or we have at least one comment, load up the comment template.
                     if ( comments_open() || get_comments_number() ) {

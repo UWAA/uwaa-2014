@@ -4,8 +4,62 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b98c94cb764b25bc455a855e6e896bcc",
+    "hash": "5ca07f5c537689215703e6d7b134ca8a",
     "packages": [
+        {
+            "name": "jmikola/geojson",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jmikola/geojson.git",
+                "reference": "8ff29f87748849de7b0cb59ca9aef6d15e48ed24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jmikola/geojson/zipball/8ff29f87748849de7b0cb59ca9aef6d15e48ed24",
+                "reference": "8ff29f87748849de7b0cb59ca9aef6d15e48ed24",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "GeoJson\\": "src/"
+                },
+                "classmap": [
+                    "stubs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Mikola",
+                    "email": "jmikola@gmail.com",
+                    "homepage": "http://jmikola.net"
+                }
+            ],
+            "description": "GeoJSON implementation for PHP",
+            "homepage": "https://github.com/jmikola/geojson",
+            "keywords": [
+                "geo",
+                "geojson",
+                "geospatial"
+            ],
+            "time": "2013-11-26 20:16:57"
+        },
         {
             "name": "symfony/http-foundation",
             "version": "2.5.x-dev",
@@ -13,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "c645c7a1102969c89df334015779ef319c6d4b8f"
+                "reference": "4acdca6017754d05489d1ece68e9372e1f514700"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/c645c7a1102969c89df334015779ef319c6d4b8f",
-                "reference": "c645c7a1102969c89df334015779ef319c6d4b8f",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/4acdca6017754d05489d1ece68e9372e1f514700",
+                "reference": "4acdca6017754d05489d1ece68e9372e1f514700",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +111,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-09-17 09:50:16"
+            "time": "2014-09-22 15:58:58"
         }
     ],
     "packages-dev": [],

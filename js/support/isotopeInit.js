@@ -1,9 +1,10 @@
 //TODO Make a UWAA object and clear bind this there?.
 Isotope = Backbone.View.extend({
-    el: '#isotope-canvas',    
+    el: '#isotope-canvas',
+
 
   events: {
-    "click button" : "filterByButton",
+    "click .filter-button" : "filterByButton",
     "keyup #quicksearch" : "filterBySearch",
     "click .list-button" : "listView",
     "click .tile-button" : "tileView"
@@ -12,7 +13,7 @@ Isotope = Backbone.View.extend({
 
   initialize: function() {
     this.$('.isotope').isotope({
-    itemSelector: '.tour-thumbnail',
+    itemSelector: '.isotope-slide',
     layoutMode: 'fitRows'
     });
   },
@@ -43,15 +44,19 @@ Isotope = Backbone.View.extend({
     ),
 
   listView: function() {
-    this.$('.isotope').isotope({
+    this.$('.isotope')
+    .addClass('list').removeClass('tile')
+    .isotope({
     layoutMode: 'vertical'
     });
   },
 
   tileView: function() {
-    this.$('.isotope').isotope({
+    this.$('.isotope')
+    .addClass('tile').removeClass('list')
+    .isotope({
     layoutMode: 'fitRows'
-    });
+    });    
   }
 
 

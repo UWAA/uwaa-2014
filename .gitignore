@@ -3,6 +3,5 @@ node_modules
 *.swo
 assets/fonts/heron.*
 bower_components
-vendor/composer/*
-vendor/symfony/*
-vendor/autoload.php
+vendor
+!vendor/uwaa

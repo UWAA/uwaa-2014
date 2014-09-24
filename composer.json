@@ -2,7 +2,8 @@
     "name": "uwaa/uwaa-2014",
     "description": "A WordPress child theme of uw-2014",
     "require": {
-        "symfony/http-foundation": "2.5.*"
+        "symfony/http-foundation": "2.5.*",
+        "jmikola/geojson" : "1.0"
     },
     "license": "MIT",
     "authors": [
