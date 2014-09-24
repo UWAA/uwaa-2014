@@ -19,10 +19,12 @@ wp_enqueue_script('isotopeInit');
       <?php get_template_part( 'breadcrumbs' ); ?>
 
       <div class="uw-body-copy">
+        <div id="isotope-canvas">
         <?php \UWAA\View\Isotope::buildSortingToolbar('destinations'); ?>
             <div class="isotope">
             <?php get_template_part( 'thumbnail-browser' ); ?>
             </div>
+        </div>
 
       </div>
 

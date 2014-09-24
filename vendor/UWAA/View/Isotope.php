@@ -18,13 +18,16 @@ class Isotope
 
 
         //This builds a clear-filters button  (passes a blank filter to Isotope)
-        echo '<button class="button btn is-checked" data-filter="">Clear Filters</button>';
+        echo '<button class="button btn" data-filter="">Clear Filters</button>';
         $terms = get_terms("$taxonomyName");
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
                 echo sprintf('<button class="button btn" data-filter=".%s">%s</button>', strtolower($term->name), $term->name);
         }
         echo '</div>';
+        echo '<button class="button btn list-button">List View</button>';
+        echo '<button class="button btn tile-button">Tile View</button>';
+        
         
         endif;
     }

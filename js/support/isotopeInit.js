@@ -1,95 +1,61 @@
-
-
-
-/*UWAA.Isotope = Backbone.View.extend({
-
-  isotopeContainer: '.isotope',
-  filterContainer: '#filter',
+//TODO Make a UWAA object and clear bind this there?.
+Isotope = Backbone.View.extend({
+    el: '#isotope-canvas',    
 
   events: {
-    'click #filters' : 'filter'
+    "click button" : "filterByButton",
+    "keyup #quicksearch" : "filterBySearch",
+    "click .list-button" : "listView",
+    "click .tile-button" : "tileView"
 
-  }
+  },
 
   initialize: function() {
-    _bindAll(isotopeContainer, 'isotope');
-  },
-
-  filter: function() {
-
-  },
-
-  isotope: function() {
-    this.isotopeContainer.isotope({
-      itemSelector: '.tour-thumbnail',
-      layoutMode: 'fitRows'  
-    })
-  }
-
-
-
-});*/
-//TODO  MAKE THIS NOT HELL.
-$( function() {
-
-  var qsRegex;
-
-  // init Isotope
-  var $container = $('.isotope').isotope({
+    this.$('.isotope').isotope({
     itemSelector: '.tour-thumbnail',
     layoutMode: 'fitRows'
-  });
-
-  // filter functions
- 
-
-    // use value of search field to filter
- var $quicksearch = $('#quicksearch').keyup( debounce( function() {
-    qsRegex = new RegExp( $quicksearch.val(), 'gi' );
-    console.log(qsRegex);
-    $container.isotope({
-      filter: function() {
-      return qsRegex ? $(this).text().match( qsRegex ) : true;
-    }
     });
-  }, 200 ) );
+  },
 
-  
-  // bind filter button click
-  $('#filters').on( 'click', 'button', function() {
 
-    var filterValue = $(this).attr('data-filter');
-    
-    $container.isotope({ filter: filterValue });
-    console.log(filterValue);
-  });
-  // change is-checked class on buttons
-  $('.button-group').each( function( i, buttonGroup ) {
-    var $buttonGroup = $( buttonGroup );
-    $buttonGroup.on( 'click', 'button', function() {
-      $quicksearch.val('');
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $( this ).addClass('is-checked');
+  filterByButton: function(e) {
+    var $target = $(e.target);
+    this.$('#quicksearch').val('');
+    var filterValue = $target.attr('data-filter'); 
+    this.$('.isotope').isotope({filter: filterValue});    
+    this.toggleButtonClass($target);
+  },
+
+  toggleButtonClass: function(target) {
+    this.$('.button-group').find('.is-checked').removeClass('is-checked');
+    target.addClass('is-checked');
+
+  },
+
+  filterBySearch: _.debounce(function() {
+        var qsRegex = new RegExp( this.$('#quicksearch').val(), 'gi' );
+        this.$('.isotope').isotope({
+          filter: function() {
+          return qsRegex ? $(this).text().match( qsRegex ) : true;
+          }
+         });
+    }, 200
+    ),
+
+  listView: function() {
+    this.$('.isotope').isotope({
+    layoutMode: 'vertical'
     });
-  });
+  },
+
+  tileView: function() {
+    this.$('.isotope').isotope({
+    layoutMode: 'fitRows'
+    });
+  }
 
 
-
-  
-  
 });
 
-// debounce so filtering doesn't happen every millisecond
-function debounce( fn, threshold ) {
-  var timeout;
-  return function debounced() {
-    if ( timeout ) {
-      clearTimeout( timeout );
-    }
-    function delayed() {
-      fn();
-      timeout = null;
-    }
-    timeout = setTimeout( delayed, threshold || 100 );
-  }
-}
+isotopeInit = new Isotope();
+
