@@ -9,8 +9,8 @@
 class Scripts
 {
 
-  public $SCRIPTS;
-  public $SUPPORT_SCRIPTS;
+  private $SCRIPTS;
+  private $SUPPORT_SCRIPTS;
 
 
   function __construct()

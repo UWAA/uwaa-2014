@@ -34,6 +34,9 @@ class Loader
 
          //Custom Taxonomies
         new \UWAA\Taxonomies\Tours; //Holds custom taxonomies
+
+        //API
+        new \UWAA\API\API;  //Sets up the UWAA API for specialized feeds
         
 
         
