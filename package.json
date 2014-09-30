@@ -4,6 +4,10 @@
   "description": "A child theme built on the 2014 boundless UW theme",
   "template": "uw-2014",
   "authorUri": "http://www.uw.edu/alumni",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/nambuben/uwaa-2014"
+  },
   "version": "0.1.0",
   "devDependencies": {
     "gulp": "3.*",
