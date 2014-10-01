@@ -108,7 +108,8 @@ class API
         'features' => array(),
       );
 
-      // while ($query->have_posts()): $query->the_post();
+      // while ($query->have_posts()): $query->the_post();  
+      $randomLatLong = array(rand(-100, 100),rand(-100, 100));
 
       foreach ($posts as $post):
         $marker = array(
@@ -116,7 +117,7 @@ class API
           'properties' => array (
             'title' => get_the_title($post->ID)
             ),
-          'geometry' => new GeoJson\Geometry\Point([1,1])
+          'geometry' => new GeoJson\Geometry\Point($randomLatLong)
           );     
           array_push($featureLayer['features'], $marker);
       endforeach;
