@@ -125,6 +125,9 @@ class API
 
       echo json_encode($featureLayer);
 
+      $point = new \GeoJson\Geometry\Point([1, 1]);
+      var_dump(json_encode($point));
+
 
 
 
