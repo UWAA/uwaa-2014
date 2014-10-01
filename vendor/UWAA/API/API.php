@@ -64,7 +64,7 @@ class API
   private function handle_request(){
     $wp = $this->wp();
     $contentSection = $wp->query_vars['contentSection'];
-    $dataType = $wp->query_vars['dateType'];  
+    $dataType = $wp->query_vars['dataType'];  
     switch ($contentSection) {
       case 'tours':
         $this->getWPObject('tours');
