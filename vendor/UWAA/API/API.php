@@ -116,7 +116,7 @@ class API
           'properties' => array (
             'title' => get_the_title($post->ID)
             ),
-          'geometry' => new GeoJson\Geometry\Point([rand(-100, 100),rand(-100, 100)])
+          'geometry' => new GeoJson\Geometry\Point([1,1])
           );     
           array_push($featureLayer['features'], $marker);
       endforeach;
