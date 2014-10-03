@@ -37,6 +37,9 @@ class Loader
 
         //API
         new \UWAA\API\API;  //Sets up the UWAA API for specialized feeds
+
+        //Custom Post Metadata
+        new \UWAA\CustomPostData\Mapping;
         
 
         

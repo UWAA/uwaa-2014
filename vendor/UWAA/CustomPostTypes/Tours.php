@@ -48,4 +48,6 @@ class Tours
             register_post_type( 'tours', $args );
         }
 
+
+
 } 
