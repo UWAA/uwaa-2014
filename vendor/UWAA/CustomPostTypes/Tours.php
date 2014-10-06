@@ -5,6 +5,7 @@ class Tours
     function __construct()
     {
         add_action( 'init', array($this, 'setup_tours_posts'), 1 );
+        $this->add_tours_meta();
     }  
 
         public static function setup_tours_posts() 
@@ -46,6 +47,25 @@ class Tours
                 'capability_type'     => 'post',
             );
             register_post_type( 'tours', $args );
+        }
+
+        protected function add_tours_meta() {
+            new \UWAA\CustomPostData('tours', array(
+                'title' => 'Mapping Information',
+                'pages' => array('tours'),
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Latitude/Longitude',
+                        'id'=> 'lat_long',
+                        'type'=> 'text',
+                        'desc'=> 'The latitude, longitude coordinates for the trip'
+                        )
+                )
+            )
+            );
+
         }
 
 

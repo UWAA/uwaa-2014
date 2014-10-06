@@ -5,14 +5,9 @@
  */
 
 class GeoJSON
-{
-    
+{   
   
 
-    public function newQuery($args)
-    {
-    return new WP_Query($args);
-    }
 
 /** Get a WordPress Object and 
   * @param string $postType List of current public query vars
@@ -25,7 +20,7 @@ class GeoJSON
         'orderby' => 'rand',
         );
         var_dump($this);
-        $query = self::newQuery($args);
+        $query = new \WP_Query($args);
         var_dump($query);
 
     }

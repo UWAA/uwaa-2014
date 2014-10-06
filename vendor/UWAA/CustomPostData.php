@@ -9,12 +9,12 @@
 
 
 
-class PostMetaBox {
+class CustomPostData {
 
     protected $meta_box;
     protected $id;
 
-    static $prefix = "_uwaa_mb_";
+    static $prefix = "mb_";
 
     // Create Meta Boxes based on input
 
@@ -41,7 +41,6 @@ class PostMetaBox {
 
     //Callback to show selected fields
     public function show($post) {
-        //echo '<input type="hidden" name="' . $this->id . '_meta_box_nonce" value="', wp_create_nonce('smartmetabox' . $this->id) , '" />';
         wp_nonce_field($this->id, $this->id.'_nonce' );
 
 
@@ -148,7 +147,7 @@ class PostMetaBox {
 //@TODO Remove this as we'll call it from the CPT spots.  
 // function add_CustomMetaBox($id, $options) {
 //     new CustomMetaBox($id, $options);
-}
+// }
 
 
 
