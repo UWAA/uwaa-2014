@@ -2,6 +2,8 @@
 
 //JETPACK, HASHIN!
 
+require_once(__DIR__. '/vendor/UWAA/.env.php');
+
 add_filter( 'jetpack_development_mode', '__return_true' );
 //Comment
 
@@ -9,8 +11,9 @@ add_filter( 'jetpack_development_mode', '__return_true' );
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
 //Instatiates site-wite classes.  
 if (!isset($UWAA)){
-    new UWAA\Loader();
+    new UWAA\UWAA($wp);
 }
 

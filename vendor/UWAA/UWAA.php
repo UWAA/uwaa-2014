@@ -2,18 +2,20 @@
 
 /*
  *  This is the UWAA object that contains all the classes for our added back-end functionality
- *  All classes should be accessible by UWAA::ClassName
+ *  All classes should be accessible by \UWAA\ClassName
  */
 
-class Loader
+class UWAA
 {
 
-    function __construct()
-    {
-        $this->initialize();
-    }
+    protected $wp;
 
-   
+    function __construct($wp)
+    {
+        $this->wp = $wp;
+        $this->initialize();
+        
+    }   
 
     private function initialize()
     {
@@ -36,9 +38,10 @@ class Loader
         new \UWAA\Taxonomies\Tours; //Holds custom taxonomies
 
         //API
-        new \UWAA\API\API;  //Sets up the UWAA API for specialized feeds
+        new \UWAA\API\API($this->wp);  //Sets up the UWAA API for specialized feeds
 
         
+
         
 
         

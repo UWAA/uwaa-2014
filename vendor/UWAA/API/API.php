@@ -5,32 +5,22 @@
  */
 
 
-// use \GeoJson;
+
 
 class API
 {
 
-  
+  private $wp = null;
   
 
-  function __construct()
+  function __construct($wp)
   {
    add_action( 'init', array($this, 'addAPIEndpoints'), 0 );
    add_filter( 'query_vars', array($this, 'createAPIQueryVars'), 0 );
    add_action( 'parse_request', array($this, 'parseAPIRequest'), 0 );
-   $wp = $this->wp();   
-  }
-
-  public function wp()  {
-    global $wp;
- 
-    return $wp;
-  }
-
-  public function newQuery($args) {
-
-    return new \WP_Query($args);
-  }
+   $this->wp = $wp;
+   
+ } 
 
 /** Add public query vars
   * @param array $vars List of current public query vars
@@ -50,9 +40,7 @@ class API
 
   //Only thing about doing this is api is in the query string
   public function parseAPIRequest() {
-    $wp = $this->wp();
-    // $this->wp;
-    if ( isset($wp->query_vars['api'])) {
+    if ( isset($this->wp->query_vars['api'])) {
         $this->handle_request();
         exit;
     }
@@ -61,19 +49,30 @@ class API
   }
 
   //Do something with this...
-  private function handle_request(){
-    $wp = $this->wp();
-    $contentSection = $wp->query_vars['contentSection'];
-    $dataType = $wp->query_vars['dataType'];  
+  private function handle_request(){    
+    $contentSection = $this->wp->query_vars['contentSection'];
+    $dataType = $this->wp->query_vars['dataType'];  
     switch ($contentSection) {
       case 'tours':
-        $this->getWPObject('tours');
-        break;
+        switch ($dataType) {
+          case 'geojson':
+            $query = $this->getWPObject('tours');
+            GeoJSON::buildGeoJSONPayload($query);
+            break;
+          case 'json' :
+            echo "working--JSON";
+            break;          
+          default:
+            header("HTTP/1.0 404 Not Found");
+            echo 'Nope';
+            break;
+        }        
+        break;  //case tours
 
       case 'benefits':
         echo 'Benefits Request';
         break;
-      //TODO - Make this return to regular WP
+      //TODO - Make this return to regular WP 404 Page
       default:
         header("HTTP/1.0 404 Not Found");
         echo 'Nope';
@@ -86,52 +85,53 @@ class API
 
 //TODO- Investigate whether or not there should be a cache check here or if we don't need to worry about it.
 //TODO- Not Random, add more args to pass through.
-/** Get a WordPress Object and 
-  * @param string $postType List of current public query vars
-  * @return array $arrayToMakeIntoJSON 
-  */
+// * Get a WordPress Object and 
+//   * @param string $postType List of current public query vars
+//   * @return array $arrayToMakeIntoJSON 
+  
     private function getWPObject($postType) {
         
         $args = array (
         'post_type' => $postType,
         'orderby' => 'asc',
         );
-        $query = $this->newQuery($args);
-        $this->extractGEOJSONDetails($query);
+        $query = new \WP_query($args);
+        return $query;
+        //GeoJSON::extractGEOJSONDetails($query);
 
     }
 
-    private function extractGEOJSONDetails($query) {
-      $posts = $query->get_posts();
-      $featureLayer = array(
-        'type'=> 'FeatureCollection',
-        'features' => array(),
-      );
-
-      // while ($query->have_posts()): $query->the_post();  
-      $randomLatLong = array(rand(-100, 100),rand(-100, 100));
-
-      foreach ($posts as $post):
-        $marker = array(
-          'type' => 'Feature',
-          'properties' => array (
-            'title' => get_the_title($post->ID)
-            ),
-          'geometry' => new \GeoJson\Geometry\Point($randomLatLong)
-          );     
-          array_push($featureLayer['features'], $marker);
-      endforeach;
-      // endwhile;
-
-      echo json_encode($featureLayer);
-
-      $point = new \GeoJson\Geometry\Point([1, 1]);
-      var_dump(json_encode($point));
+    // private function extractGEOJSONDetails($query) {
+    //   $posts = $query->get_posts();
+    //   $featureLayer = array(
+    //     'type'=> 'FeatureCollection',
+    //     'features' => array(),
+    //   );
 
 
 
+      
+    //   $randomLatLong = array(rand(-100, 100),rand(-100, 100));
 
-    }
+    //   foreach ($posts as $post):
+    //     setup_postdata( $post ); 
+    //     $marker = array(
+    //       'type' => 'Feature',
+    //       'properties' => array (
+    //         'title' => get_the_title()
+    //         ),
+    //       'geometry' => new \GeoJson\Geometry\Point($randomLatLong)
+    //       );     
+    //       array_push($featureLayer['features'], $marker);
+    //       echo get_post_meta($post->ID, 'mb_lat_long', true); 
+    //   endforeach;
+      
+         
+          
+
+    //   echo json_encode($featureLayer);
+    //   var_dump($posts);
+    // }
 
 
 

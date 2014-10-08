@@ -61,6 +61,12 @@ class Tours
                         'id'=> 'lat_long',
                         'type'=> 'text',
                         'desc'=> 'The latitude, longitude coordinates for the trip'
+                        ),
+                    array(
+                        'name' => 'Tour Marker Position',
+                        'id'=> 'marker_postion',
+                        'type'=> 'text',
+                        'desc'=> "The place where you would like this tour's marker to show on the map"
                         )
                 )
             )
