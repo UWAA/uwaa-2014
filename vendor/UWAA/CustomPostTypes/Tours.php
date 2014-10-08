@@ -30,7 +30,7 @@ class Tours
                 'description'         => 'These posts correspond to individual UW Alumni Tours',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-                'taxonomies'          => array( 'destinations' , 'category' ),
+                'taxonomies'          => array( 'destinations' , 'catemargory' ),
                 'hierarchical'        => false,
                 'public'              => true,
                 'show_ui'             => true,
@@ -64,7 +64,7 @@ class Tours
                         ),
                     array(
                         'name' => 'Tour Marker Position',
-                        'id'=> 'marker_postion',
+                        'id'=> 'marker_position',
                         'type'=> 'text',
                         'desc'=> "The place where you would like this tour's marker to show on the map"
                         )

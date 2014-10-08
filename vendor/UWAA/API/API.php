@@ -57,7 +57,8 @@ class API
         switch ($dataType) {
           case 'geojson':
             $query = $this->getWPObject('tours');
-            GeoJSON::buildGeoJSONPayload($query);
+            $geoJSON = new GeoJSON();
+            $geoJSON->buildGeoJSONPayload($query);
             break;
           case 'json' :
             echo "working--JSON";
@@ -96,43 +97,11 @@ class API
         'orderby' => 'asc',
         );
         $query = new \WP_query($args);
-        return $query;
-        //GeoJSON::extractGEOJSONDetails($query);
+        return $query;   
 
     }
 
-    // private function extractGEOJSONDetails($query) {
-    //   $posts = $query->get_posts();
-    //   $featureLayer = array(
-    //     'type'=> 'FeatureCollection',
-    //     'features' => array(),
-    //   );
-
-
-
-      
-    //   $randomLatLong = array(rand(-100, 100),rand(-100, 100));
-
-    //   foreach ($posts as $post):
-    //     setup_postdata( $post ); 
-    //     $marker = array(
-    //       'type' => 'Feature',
-    //       'properties' => array (
-    //         'title' => get_the_title()
-    //         ),
-    //       'geometry' => new \GeoJson\Geometry\Point($randomLatLong)
-    //       );     
-    //       array_push($featureLayer['features'], $marker);
-    //       echo get_post_meta($post->ID, 'mb_lat_long', true); 
-    //   endforeach;
-      
-         
-          
-
-    //   echo json_encode($featureLayer);
-    //   var_dump($posts);
-    // }
-
+    
 
 
 
