@@ -22,7 +22,7 @@ class Isotope
         $terms = get_terms("$taxonomyName");
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
-                echo sprintf('<button class="button btn filter-button" data-filter=".%s">%s</button>', strtolower($term->name), $term->name);
+                echo sprintf('<button class="button btn filter-button" data-filter=".%s">%s</button>', strtolower($term->slug), $term->name);
         }
         echo '</div>';
         echo '<button class="button btn list-button">List View</button>';

@@ -22,7 +22,7 @@ wp_enqueue_script('isotopeInit');
         <div id="isotope-canvas">
         <?php \UWAA\View\Isotope::buildSortingToolbar('destinations'); ?>
             <div class="isotope tile">
-            <?php get_template_part( 'thumbnail-browser' ); ?>
+            <?php get_template_part( 'partials/thumbnail-browser' ); ?>
             </div>
         </div>
 
