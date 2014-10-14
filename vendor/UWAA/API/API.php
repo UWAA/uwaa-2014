@@ -35,7 +35,7 @@ class API
   }
 
   public function addAPIEndpoints() {
-      add_rewrite_rule('^api/?(tours|benefits|)?/?geojson?/?','index.php?api=1&contentSection=$matches[1]&dataType=$matches[2]','top');
+      add_rewrite_rule('^api/?(tours|benefits|)?/?(geojson|json)?/?','index.php?api=1&contentSection=$matches[1]&dataType=$matches[2]','top');
   }
 
   //Only thing about doing this is api is in the query string
