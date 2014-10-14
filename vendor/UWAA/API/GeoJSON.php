@@ -88,7 +88,11 @@ class GeoJSON
 
     }
 
-
+    /**
+     * Builds and echos out a valid GeoJSON feature collection for our API
+     * @param  object $query a WP_Query Object
+     * @return GEOJSON        a GeoJSON file eched to the screen.
+     */
     public function buildGeoJSONPayload($query) {
       $posts = $query->get_posts();
       foreach ($posts as $post):

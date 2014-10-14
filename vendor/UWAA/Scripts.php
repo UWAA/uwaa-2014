@@ -49,10 +49,27 @@ class Scripts
         'admin'   => false
       ),
 
+      'mapbox'   => array (
+        'id'      => 'mapbox',
+        'url'     => "https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js",
+        'deps'    => array(),
+        'version' => '2.0.1',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+
       'isotopeInit' => array (
         'id'      => 'isotopeInit',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/isotopeInit' . $this->min_script() . '.js',
         'deps'    => array('isotope'),
+        'version' => '1.0',
+        'admin'   => false
+      ),
+
+       'toursMap' => array (
+        'id'      => 'toursMap',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/toursMap' . $this->min_script() . '.js',
+        'deps'    => array('mapbox'),
         'version' => '1.0',
         'admin'   => false
       ),
