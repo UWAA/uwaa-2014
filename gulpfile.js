@@ -5,6 +5,7 @@ watch = require('gulp-watch'),
 uglify = require('gulp-uglifyjs'),
 header = require('gulp-header'),
 concat = require('gulp-concat'),
+foreach = require('gulp-foreach'),
 mainBowerFiles = require('main-bower-files');
 
 
@@ -29,6 +30,11 @@ console.log("\007");
 console.log(error);
 }
 
+var paths = {
+  scripts: {
+    support: ['./js/support/*.js', '!./js/support/*.min.js'],
+  }
+}
 
 gulp.task('default', function() {
   
@@ -44,9 +50,12 @@ gulp.task('scripts', function() {
     .on('error', catchErrors)
     .pipe(gulp.dest('./js'));
 
- gulp.src(['./js/support/*.js'])
+ gulp.src(paths.scripts.support)
+ .pipe(foreach(function(stream, file){
+    return stream
     .pipe(rename(function (path){
-      path.extname = ".min.js"
+      path.basename += ".min";
+      path.extname = ".js";
     }))
     .pipe(uglify({
       mangle: true,
@@ -55,6 +64,7 @@ gulp.task('scripts', function() {
       }
     }))    
     .on('error', catchErrors)
+  }))
     .pipe(gulp.dest('./js/support'));
 
   gulp.src(['./js/_*.js'])

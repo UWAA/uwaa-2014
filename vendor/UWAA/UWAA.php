@@ -24,9 +24,11 @@ class UWAA
         // new \UWAA\View\Isotope;
 
 
-        //Scripts needed on all pages of the theme
+        //Scripts needed on all pages of the theme, and registrations for ad-hoc scripts.
 
         new \UWAA\Scripts;  //Loads UWAA child-theme specific scripts
+        new \UWAA\Styles;
+
 
 
         //Custom Post Types

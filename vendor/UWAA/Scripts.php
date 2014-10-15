@@ -38,6 +38,18 @@ class Scripts
 
     ));
 
+    $this->STYLES = array(
+
+      'mapbox' => array(
+          'id'      => 'mapbox',
+          'url'     => 'https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css',
+          'deps'    => array(),
+          'version' => '2.1.2',
+          'admin'   => false
+      ),
+
+    );
+
     $this->SUPPORT_SCRIPTS = array_merge( array(
       
       'isotope'   => array (
@@ -48,7 +60,7 @@ class Scripts
         'in_footer' => true,
         'admin'   => false
       ),
-
+      // @TODO  Local fallback if CDN is no-go.
       'mapbox'   => array (
         'id'      => 'mapbox',
         'url'     => "https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js",
