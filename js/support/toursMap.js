@@ -36,7 +36,23 @@
 
     });
 
-markerLayer.loadURL('http://dev.alumni.washington.edu/wordpress/api/tours/geojson');
+//Janky Test Stuff, but necessary for getting this working.
+var host = window.location.hostname;
+
+switch (host) {
+    case "dev.alumni.washington.edu" : 
+    markerLayer.loadURL('http://dev.alumni.washington.edu/wordpress/api/tours/geojson');
+    break;
+
+    case "http://54.69.164.216/" :
+    markerLayer.loadURL('http://54.69.164.216/acr_test/api/tours/geojson');
+    break;
+
+}
+
+
+
+
 
     
  
