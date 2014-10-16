@@ -45,7 +45,7 @@ switch (host) {
     break;
 
     case "54.69.164.216" :
-    markerLayer.loadURL('http://54.69.164.216/acr-test/api/tours/geojson');
+    markerLayer.loadURL('http://54.69.164.216/uwaa_test/api/tours/geojson');
     break;
 
     default: 
