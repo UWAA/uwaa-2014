@@ -2,10 +2,16 @@
 
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
-    var map = L.mapbox.map('map', 'bperick.jn9abl0c', {
+    var map = L.mapbox.map('map', 'bperick.d9650d93', {
+        // tileLayer : {'bperick.d9650d93',
+        //             continuousWorld: false,        
+        //             noWrap: true
+        //             }
        
     });
     map.setView([0, 0], 2);
+
+
 
     //TODO Single Origin Policy, and abstract.  
     var markerLayer = L.mapbox.featureLayer().addTo(map);
@@ -18,7 +24,7 @@
         //@TODO Get custom excerpt into JSON feed.
         var popupContent = '<a href="' + feature.properties.link + '">' +
                             feature.properties.title +  '</a>' +
-                            '<p>Custom Excerpt</p>' +
+                            '<p>' + feature.properties.excerpt + '</p>' +
                             '<a href="' + feature.properties.link + '">' +
                             'Learn More' +
                         '</a>'; 
@@ -30,9 +36,9 @@
 
     });
 
+markerLayer.loadURL('http://dev.alumni.washington.edu/wordpress/api/tours/geojson');
 
-
-    markerLayer.loadURL('http://dev.alumni.washington.edu/wordpress/api/tours/geojson');
+    
  
 
 }(jQuery)); 

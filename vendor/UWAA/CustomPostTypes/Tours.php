@@ -29,7 +29,7 @@ class Tours
                 'label'               => 'tours',
                 'description'         => 'These posts correspond to individual UW Alumni Tours',
                 'labels'              => $labels,
-                'supports'            => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+                'supports'            => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'excerpt' ),
                 'taxonomies'          => array( 'destinations' , 'catemargory' ),
                 'hierarchical'        => false,
                 'public'              => true,
@@ -48,7 +48,7 @@ class Tours
             );
             register_post_type( 'tours', $args );
         }
-
+        // @TODO  Think about moving this elsewhere and purposing for mapping on Regional as well as wherever...
         protected function add_tours_meta() {
             new \UWAA\CustomPostData('tours', array(
                 'title' => 'Mapping Information',
@@ -67,7 +67,13 @@ class Tours
                         'id'=> 'marker_position',
                         'type'=> 'text',
                         'desc'=> "The place where you would like this tour's marker to show on the map"
-                        )
+                        ),
+                    // array(
+                    //     'name' => 'Map Excerpt',
+                    //     'id'=> 'map_excerpt',
+                    //     'type'=> 'text',
+                    //     'desc'=> "This is the text that will show up in the map "
+                    //     )
                 )
             )
             );

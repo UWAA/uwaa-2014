@@ -99,9 +99,11 @@ class GeoJSON
         setup_postdata( $post );
         $coordinates = $this->getCoordinates($post);
         $geometry = new \GeoJson\Geometry\Point($coordinates);
+        // var_dump($post);
         $geometryCollection[] = new \GeoJson\Feature\Feature($geometry, array (
-            'title' => get_the_title($post->ID),
-            'link' => get_permalink($post->ID)
+            'title' => htmlspecialchars(get_the_title($post->ID)),
+            'link' => get_permalink($post->ID),
+            'excerpt' => htmlspecialchars($post->post_excerpt) 
             )
           );
           $testCollection = new \GeoJson\Feature\FeatureCollection($geometryCollection);
