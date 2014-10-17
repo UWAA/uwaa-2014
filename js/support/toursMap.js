@@ -3,13 +3,13 @@
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
-        // tileLayer : {'bperick.d9650d93',
-        //             continuousWorld: false,        
-        //             noWrap: true
-        //             }
+        tileLayer : {
+                    continuousWorld: false,        
+                    noWrap: true
+                    }
        
     });
-    map.setView([0, 0], 2);
+    map.setView([40, 0], 2);
 
 
 
