@@ -28,6 +28,7 @@ class UWAA
 
         new \UWAA\Scripts;  //Loads UWAA child-theme specific scripts
         new \UWAA\Styles;
+        new \UWAA\Sidebars;
 
 
 
@@ -38,6 +39,9 @@ class UWAA
 
          //Custom Taxonomies
         new \UWAA\Taxonomies\Tours; //Holds custom taxonomies
+
+        //Custom Meta Boxes
+        new \UWAA\CustomMetaBoxes\MetaBoxes; //Holds custom taxonomies
 
         //API
         new \UWAA\API\API($this->wp);  //Sets up the UWAA API for specialized feeds

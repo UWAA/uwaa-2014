@@ -1,6 +1,5 @@
 <?php get_header(); 
 
-// wp_register_script('isotopeTours', get_bloginfo('stylesheet_directory').'/js/isotopeTours.js', array(), null, true);
 wp_enqueue_script('isotopeInit');
 ?>
 
@@ -29,8 +28,13 @@ wp_enqueue_script('isotopeInit');
       </div>
 
     </div>
-    <h3>---tours browser---</h3>
-    <?php get_sidebar() ?>
+    <div class="col-md-4 uw-sidebar">
+    <?php 
+        
+        uw_sidebar_menu();
+        dynamic_sidebar( 'travel_sidebar' ); 
+    ?>
+    </div>
 
   </div>
 

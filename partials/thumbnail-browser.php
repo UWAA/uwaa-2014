@@ -18,7 +18,7 @@ if ( $toursQuery->have_posts() ) {
         ?>
 
 <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-<div class="isotope-slide <?php esc_attr(\UWAA\Taxonomies\Utilities::echoListOfTerms('destinations')); ?>">
+<div class="isotope-slide <?php \UWAA\Taxonomies\Utilities::echoListOfTerms('destinations'); ?>">
 
 <h2><?php the_title() ?></h2>
 
@@ -28,6 +28,9 @@ if ( $toursQuery->have_posts() ) {
 <?php
 
     }
+wp_reset_query();
+
 } else {
     echo "<h3>No Tours Found</h3>";
+    wp_reset_query();
 }

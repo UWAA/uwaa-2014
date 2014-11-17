@@ -1,10 +1,11 @@
-<?php get_header(); 
-wp_enqueue_script('toursMap');
-wp_enqueue_style('mapbox');
+<?php
+/*
+ * Template Name: Travel Pages
+ * Description: A Page Template for travel pages.
+ */
 
+get_header(); 
 ?>
-
-
 
 <div class="uw-hero-image"></div>
 
@@ -20,7 +21,7 @@ wp_enqueue_style('mapbox');
 
       <div class="uw-body-copy">
 
-        <?php
+      <?php
           // Start the Loop.
           while ( have_posts() ) : the_post();
 
@@ -37,19 +38,16 @@ wp_enqueue_style('mapbox');
             }
 
           endwhile;
-
-          get_template_part( 'partials/map' );
         ?>
          
-        
+           
 
          
 
       </div>
 
     </div>
-    
-     <div class="col-md-4 uw-sidebar">
+    <div class="col-md-4 uw-sidebar">
     <?php 
         uw_sidebar_menu();
         dynamic_sidebar( 'travel_sidebar' ); 

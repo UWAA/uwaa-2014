@@ -107,13 +107,12 @@
   padding-left: 15px;
   padding-right: 15px;
   background-color: #c9c9c9;
-  height: 150px;
-  overflow: hidden;
+  height: 190px;
 }
 @media (min-width: 992px) {
   .tile .isotope-slide {
     float: left;
-    width: 16.66666667%;
+    width: 25%;
   }
 }
 .list .isotope-slide {

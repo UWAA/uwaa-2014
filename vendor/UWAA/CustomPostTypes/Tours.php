@@ -5,7 +5,7 @@ class Tours
     function __construct()
     {
         add_action( 'init', array($this, 'setup_tours_posts'), 1 );
-        $this->add_tours_meta();
+        
     }  
 
         public static function setup_tours_posts() 
@@ -48,38 +48,6 @@ class Tours
             );
             register_post_type( 'tours', $args );
         }
-        // @TODO  Think about moving this elsewhere and purposing for mapping on Regional as well as wherever...
-        protected function add_tours_meta() {
-            new \UWAA\CustomPostData('tours', array(
-                'title' => 'Mapping Information',
-                'pages' => array('tours'),
-                'context' => 'normal',
-                'priority' => 'high',
-                'fields' => array(
-                    array(
-                        'name' => 'Latitude/Longitude',
-                        'id'=> 'lat_long',
-                        'type'=> 'text',
-                        'desc'=> 'The latitude, longitude coordinates for the trip'
-                        ),
-                    array(
-                        'name' => 'Tour Marker Position',
-                        'id'=> 'marker_position',
-                        'type'=> 'text',
-                        'desc'=> "The place where you would like this tour's marker to show on the map"
-                        ),
-                    // array(
-                    //     'name' => 'Map Excerpt',
-                    //     'id'=> 'map_excerpt',
-                    //     'type'=> 'text',
-                    //     'desc'=> "This is the text that will show up in the map "
-                    //     )
-                )
-            )
-            );
-
-        }
-
 
 
 } 

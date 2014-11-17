@@ -142,12 +142,7 @@ class CustomPostData {
     }
 
 
-};  //class
-
-//@TODO Remove this as we'll call it from the CPT spots.  
-// function add_CustomMetaBox($id, $options) {
-//     new CustomMetaBox($id, $options);
-// }
+};  
 
 
 
