@@ -25,12 +25,20 @@ class Tours
                 'not_found'           => 'No Tour Found',
                 'not_found_in_trash'  => 'No tour found in Trash',
             );
+
+            $rewrite = array(
+                'slug'                => 'travel/tours',
+                'with_front'          => false,
+                'pages'               => true,
+                'feeds'               => true,
+            );
+
             $args = array(
                 'label'               => 'tours',
                 'description'         => 'These posts correspond to individual UW Alumni Tours',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'excerpt' ),
-                'taxonomies'          => array( 'destinations' , 'catemargory' ),
+                'taxonomies'          => array( 'destinations' , 'category' ),
                 'hierarchical'        => false,
                 'public'              => true,
                 'show_ui'             => true,
@@ -44,6 +52,7 @@ class Tours
                 'exclude_from_search' => false,
                 'publicly_queryable'  => true,
                 'query_var'           => 'tours',
+                'rewrite'             => $rewrite,
                 'capability_type'     => 'post',
             );
             register_post_type( 'tours', $args );

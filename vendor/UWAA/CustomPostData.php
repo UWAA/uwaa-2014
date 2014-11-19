@@ -121,12 +121,12 @@ class CustomPostData {
 
     }//end public function save
 
-    static function get($name, $single = true, $post_id = null ) {
+    private function get($name, $single = true, $post_id = null ) {
         global $post;
         return get_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name, $single);
     }
 
-    static function set ($name, $new, $post_id = null, $sanitize_callback = '') {
+    private function set ($name, $new, $post_id = null, $sanitize_callback = '') {
         global $post;
 
         $id = (isset($post_id)) ? $post_id : $post->ID;
@@ -135,7 +135,7 @@ class CustomPostData {
         return update_post_meta($id, $meta_key, $new);
     }
 
-    static function delete($name, $post_id= null) {
+    private function delete($name, $post_id= null) {
         global $post;
         return delete_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name);
 
