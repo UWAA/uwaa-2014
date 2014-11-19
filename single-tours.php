@@ -10,7 +10,10 @@
 
       <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
 
-      <?php get_template_part( 'breadcrumbs' ); ?>
+      <?php
+      // TODO Fix these breadcrumbs and have them default to the section front as opposed to the archive page for "tours"
+      get_template_part( 'breadcrumbs' ); ?>
+
 
       <div class="uw-body-copy">
             <?php
