@@ -9,6 +9,7 @@ class UWAA
 {
 
     protected $wp;
+    public $UI;
 
     function __construct($wp)
     {
@@ -21,7 +22,7 @@ class UWAA
     {
             
         //Front-End specific helper functions
-        // new \UWAA\View\Isotope;
+        $this->UI = new \UWAA\View\UI;
 
 
         //Scripts needed on all pages of the theme, and registrations for ad-hoc scripts.

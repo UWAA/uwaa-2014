@@ -38,7 +38,13 @@ class MetaBoxes
                         'id'=> 'operator',
                         'type'=> 'text',
                         'desc'=> "The name of the tour operator."
-                        ),                
+                        ),
+                    array(
+                        'name' => 'Operator Provided Map URL',
+                        'id'=> 'operator_map',
+                        'type'=> 'text',
+                        'desc'=> "Provide the URL for the Tour Map you have uploaded via the media gallery (or on this page)."
+                        ),                 
 
                 )
             )

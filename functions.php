@@ -13,7 +13,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 //Instatiates site-wite classes.  
 if (!isset($UWAA)){
-    new UWAA\UWAA($wp);
+    $UWAA = new UWAA\UWAA($wp);
 }
 
 // hook the translation filters

@@ -1,6 +1,6 @@
 <?php namespace UWAA\View;
 
-class Isotope
+class UI
 {
     function __construct() 
     {

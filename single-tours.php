@@ -39,7 +39,13 @@
 
     </div>
 
-    <?php get_sidebar() ?>
+    <div class="col-md-4 uw-sidebar">
+    <?php 
+        // UWAA\View\getTourOperatorMap
+        dynamic_sidebar( 'travel_sidebar' ); 
+    ?>
+    </div>
+
 
   </div>
 
