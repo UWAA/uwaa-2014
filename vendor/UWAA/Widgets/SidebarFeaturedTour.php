@@ -10,6 +10,7 @@ class SidebarFeaturedTour extends \WP_Widget
 {
 
   const URL = '//www.washington.edu/maps/embed/?code=';
+  private $content;
 
   function __construct()
   {
@@ -19,18 +20,18 @@ class SidebarFeaturedTour extends \WP_Widget
     ) );
   }
 
-  function widget( $args, $instance )
+  public function widget( $args, $instance )
   {
     extract( $args );
     extract( $instance );
 
 //Build this out with real data from the tours, and bind templating so that it only pull what is needed.  Consider putting that code elsewhere.
   
-   $content .= '<div class="uwaa-featured-tour"> 
+   $this->content .= '<div class="uwaa-featured-tour"> 
                   <img src="http://fpoimg.com/302x250?text=SidebarImage">
                 </div>';
 
-    echo $before_widget . $content . $after_widget;
+    echo $before_widget . $this->content . $after_widget;
     }
  
 }

@@ -57,7 +57,7 @@ class CustomPostData {
         "text" => "<input type=\"text\" name=\"$id\" value=\"$value\" class=\"widefat\" />",
         "textarea" => "<textarea name='$id' class='widefat' rows='10'>$value</textarea>",
         "editor" => 1,
-        "checkbox" => "<input type='checkbox' name='$id' value='$name' $checked />",
+        "checkbox" => "<input type='checkbox' name='$id' value='$name' />",
         "select" => isset($select) ? $select : '',
         "file" => "<input type='file' name='$id' id='$id' />"
         );

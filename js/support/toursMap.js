@@ -48,6 +48,10 @@ switch (host) {
     markerLayer.loadURL('http://54.69.164.216/uwaa_test/api/tours/geojson');
     break;
 
+    case "local.wordpress.dev" :
+    markerLayer.loadURL('http://local.wordpress.dev/api/tours/geojson');
+    break;
+
     default: 
     console.log ("Error Getting GEOJSON.  Host: "+host+"");
 

@@ -32,6 +32,7 @@ class Scripts
         'url'     => get_bloginfo('stylesheet_directory') . '/js/admin/admin.js',
         'deps'    => array(),
         'version' => '1.0',
+        'in_footer' => true,
         'admin'   => true
       ),
     
@@ -75,7 +76,9 @@ class Scripts
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/isotopeInit' . $this->min_script() . '.js',
         'deps'    => array('isotope'),
         'version' => '1.0',
+        'in_footer' => true,
         'admin'   => false
+        
       ),
 
        'toursMap' => array (
@@ -83,7 +86,9 @@ class Scripts
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/toursMap' . $this->min_script() . '.js',
         'deps'    => array('mapbox'),
         'version' => '1.0',
+        'in_footer' => true,
         'admin'   => false
+        
       ),
     
 

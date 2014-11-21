@@ -30,6 +30,7 @@ class UWAA
         new \UWAA\Scripts;  //Loads UWAA child-theme specific scripts
         new \UWAA\Styles;
         new \UWAA\Sidebars;
+        new \UWAA\Images;
 
 
 

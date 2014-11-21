@@ -1,74 +1,89 @@
 <?php namespace UWAA;
 
+
 class Images {
 
     /** @var [array] [description] */
-    private $imageSizes = [];
-    private $postThumbnailSize [];
+    private $imageDetails = [];
+    private $postThumbnailSize = [];
 
-    function __construct() {
-        $this->setImageSizes();
-        add_theme_support( 'post-thumbnails' ); 
+    function __construct()
+    {
+        $this->addUWAAImageSizes();
+        add_action('after_setup_theme', array($this, 'register_UWAA_image_sizes'));        
 
     }
 
-    private setImageSizes() {
+    private function addUWAAImageSizes() {
 
-        $this->imageSizes = array_merge(array
+        $this->imageDetails = array (
 
             'postExcerptRowOfFive' => array (
-                'name'  => 'postExcerptRowOfFive',
-                'width'  => '215',
-                'height'  => '155',
+                'name'  => 'Row Of Five Excerpt',
+                'width'  => 215,
+                'height'  => 155,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
-                    )
+                    ),
+                'show'  => false
                 ),
             'gridViewNoSidebar' => array (
-                'name'  => 'gridViewNoSidebar',
-                'width'  => '275',
-                'height'  => '190',
+                'name'  => 'Grid Thumbnail - No Sidebar',
+                'width'  => 275,
+                'height'  => 190,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
-                    )
+                    ),
+                'show'  => false
                 ),
             'gridViewWithSidebar' => array (
-                'name'  => 'gridViewWithSidebar',
-                'width'  => '186',
-                'height'  => '130',
+                'name'  => 'Grid Thumbnail - With Sidebar',
+                'width'  => 186,
+                'height'  => 130,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
-                    )
+                    ),
+                'show'  => false
                 ),
-            'sidebarPromotedPost' => array (
-                'name'  => 'sidebarPromotedPost',
-                'width'  => '302',
-                'height'  => '190',
+            'communitiesProfileHeadshot' => array (
+                'name'  => 'Communities Section Headshot',
+                'width'  => 186,
+                'height'  => 212,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
-                    )
-                ),
+                    ),
+                'show'  => false
+                )
         );
-
+        
+        //This is the Featured Image crop that for the sidebar.
         $this->postThumbnailSize = array (
-            'height' => '',
-            'width' => '',
-            'crop' => ''  //boolean.  True to hard crop, false to soft (proportional).
+            'height' => '302',
+            'width' => '190',
+            'crop' => 'false'  //boolean.  True to hard crop, false to soft (proportional).
 
-            )
+            );
 
     }
 
-     private function register_image_sizes()
+     public function register_UWAA_image_sizes()
     {
-        foreach ($this->imageSizes as $imageSize )
+      
+      foreach ($this->imageDetails as $imageDetail=>$image )
       {
-        add_image_size($imageSize);
-      }      
+        add_image_size(
+        $imageDetail,
+        $image['width'],
+        $image['height'],
+        array($image['crop']['x_crop_position'], $image['crop']['x_crop_position'])
+        );
+      } 
+
+      set_post_thumbnail_size($this->postThumbnailSize);
     }
 
 
