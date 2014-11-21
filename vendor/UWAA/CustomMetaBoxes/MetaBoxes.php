@@ -44,7 +44,13 @@ class MetaBoxes
                         'id'=> 'operator_map',
                         'type'=> 'text',
                         'desc'=> "Provide the URL for the Tour Map you have uploaded via the media gallery (or on this page)."
-                        ),                 
+                        ),
+                    array(
+                        'name' => 'Operator Signup Form',
+                        'id'=> 'operator_form',
+                        'type'=> 'text',
+                        'desc'=> "Provide the URL for the signup form that for this tour. This could be uploaded through the media gallery or a link to a previously updated form"
+                        ),                  
 
                 )
             )
