@@ -32,5 +32,13 @@ class UI
         endif;
     }
 
+    public function getPostFeaturedImageURL($id, $size)
+    {
+        
+        $url = wp_get_attachment_image_src($id, $size);
+        // var_dump($url);
+        echo($url[0]);
+    }
+
 
 } 

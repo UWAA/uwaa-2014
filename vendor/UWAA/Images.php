@@ -57,18 +57,23 @@ class Images {
                     'y_crop_position' => 'center'
                     ),
                 'show'  => false
+                ),
+            'post-thumbnail' => array (
+                'name'  => 'Featured Image Thumbnail',
+                'width'  => 302,
+                'height'  => 250,
+                'crop'  => array (
+                    'x_crop_position' => 'center',
+                    'y_crop_position' => 'center'
+                    ),
+                'show'  => false
                 )
-        );
-        
-        //This is the Featured Image crop that for the sidebar.
-        $this->postThumbnailSize = array (
-            'height' => '302',
-            'width' => '190',
-            'crop' => 'false'  //boolean.  True to hard crop, false to soft (proportional).
-
-            );
+        );  
+       
 
     }
+
+
 
      public function register_UWAA_image_sizes()
     {
@@ -81,15 +86,8 @@ class Images {
         $image['height'],
         array($image['crop']['x_crop_position'], $image['crop']['x_crop_position'])
         );
-      } 
-
-      set_post_thumbnail_size($this->postThumbnailSize);
+      }      
+      
     }
-
-
-
-
-
-
 
 }

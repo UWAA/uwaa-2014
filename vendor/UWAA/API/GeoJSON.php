@@ -43,11 +43,10 @@ class GeoJSON
 
       $result = json_decode($input);
       
-
-      $coordinates = $result->features[0]->geometry->coordinates;
-      
-
-
+      if (empty($result->features)){
+        return array (1,1);
+      }
+      $coordinates = $result->features{0}->center;
       return $coordinates;
       
 
@@ -65,13 +64,13 @@ class GeoJSON
       $coordinates = get_post_meta($post->ID, 'mb_lat_long', true);
       $markerPosition = get_post_meta($post->ID, 'mb_marker_position', true);
       $tourTitle = get_the_title($post->ID);
-      if (!empty($coordinates))
+      if (!empty($coordinates) && is_string($coordinates))
         { 
           $coordinates = $this->parseCoordinates($coordinates);
           
           return $coordinates;
         }
-      else if (!empty($markerPosition))
+      else if (!empty($markerPosition)  && is_string($markerPosition))
         {
           $coordinates = $this->getCoordinatesFromString($markerPosition);
           
@@ -97,13 +96,25 @@ class GeoJSON
       $posts = $query->get_posts();
       foreach ($posts as $post):
         setup_postdata( $post );
+        try {
         $coordinates = $this->getCoordinates($post);
+         } catch(Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n";
+            continue; 
+         }
+         try {
         $geometry = new \GeoJson\Geometry\Point($coordinates);
+         } catch(Exception $e) {
+            echo 'Caught exception: ',  $e->getMessage(), "\n"; 
+            continue; 
+         }        
+        
+        
         // var_dump($post);
         $geometryCollection[] = new \GeoJson\Feature\Feature($geometry, array (
             'title' => htmlspecialchars(get_the_title($post->ID)),
             'link' => get_permalink($post->ID),
-            'excerpt' => htmlspecialchars($post->post_excerpt) 
+            'excerpt' => htmlspecialchars(get_post_meta($post->ID, 'mb_map_excerpt', true)) 
             )
           );
           $testCollection = new \GeoJson\Feature\FeatureCollection($geometryCollection);

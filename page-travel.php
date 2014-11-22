@@ -1,4 +1,5 @@
-<?php get_header(); 
+<?php 
+get_header(); 
 wp_enqueue_script('toursMap');
 wp_enqueue_style('mapbox');
 

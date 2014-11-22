@@ -21,8 +21,7 @@ class UWAA
     private function initialize()
     {
             
-        //Front-End specific helper functions
-        $this->UI = new \UWAA\View\UI;
+        
 
 
         //Scripts needed on all pages of the theme, and registrations for ad-hoc scripts.
@@ -53,6 +52,9 @@ class UWAA
         //Widgets
         new \UWAA\Widgets\SidebarFeaturedTour;
 
+
+        //Front-End specific helper functions
+        $this->UI = new \UWAA\View\UI;
         
 
         

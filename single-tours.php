@@ -1,14 +1,19 @@
-<?php get_header(); ?>
+<?php get_header(); 
+  // Start the Loop.
+  while ( have_posts() ) : the_post();
+  
+  
+?>
 
-<div class="uw-hero-image"></div>
+<div class="uwaa-hero-image" style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
 
 <div class="container uw-body">
 
   <div class="row">
 
-    <div class="col-md-8 uw-content" role='main'>
+    <div class="col-md-8 uw-content" role='small'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+      
 
       <?php
       // TODO Fix these breadcrumbs and have them default to the section front as opposed to the archive page for "tours"
@@ -17,8 +22,8 @@
 
       <div class="uw-body-copy">
             <?php
-                // Start the Loop.
-                while ( have_posts() ) : the_post();
+                // // Start the Loop.
+                // while ( have_posts() ) : the_post();
 
                     /*
                      * Include the post format-specific template for the content. If you want to
@@ -32,7 +37,7 @@
                         comments_template();
                     }
 
-                endwhile;
+                
             ?>
 
       </div>
@@ -41,8 +46,8 @@
 
     <div class="col-md-4 uw-sidebar">
     <?php 
-        // UWAA\View\getTourOperatorMap
         dynamic_sidebar( 'travel_sidebar' ); 
+        endwhile;
     ?>
     </div>
 
