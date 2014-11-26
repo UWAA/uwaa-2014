@@ -50,7 +50,7 @@ class UWAA
         new \UWAA\API\API($this->wp);  //Sets up the UWAA API for specialized feeds
 
         //Widgets
-        new \UWAA\Widgets\SidebarFeaturedTour;
+        new \UWAA\Widgets\SidebarFeaturedTour();
 
 
         //Front-End specific helper functions
