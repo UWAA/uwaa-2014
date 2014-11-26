@@ -131,3 +131,8 @@
   width: 100%;
   height: 400px;
 }
+.uwaa-hero-image {
+  height: 428px;
+  background-size: cover;
+  background-position: 50% 100%;
+}

@@ -20,6 +20,7 @@ class SidebarFeaturedTour extends \WP_Widget
   private $postThumbnailUrl;
   private $postCalloutText;
   private $postURL;
+  private $currentPostID;
   
 
   function __construct()
@@ -36,21 +37,33 @@ class SidebarFeaturedTour extends \WP_Widget
       
   }
 
-  private function getPosts() {
+  private function getCurrentPostID() 
+  {
+    $this->currentPostID = get_the_ID();    
+  }
+
+  private function getPostsToDisplay() {
+
     $args = array(
-      'post_type' => 'tours'
+      'post_type' => 'tours',
+      'orderby' => 'rand'
       );
 
     $query = new \WP_Query($args);
 
     $this->extractPostInformation($query);
-    return $query;
+  
   }
+
+
 
   private function extractPostInformation($query) 
   {
 
     while ( $query->have_posts() ) : $query->the_post();
+      if ($this->currentPostID == get_the_ID() ) {
+        continue;
+      }
         $this->postTitle = strip_tags(get_the_title());
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
@@ -61,7 +74,9 @@ class SidebarFeaturedTour extends \WP_Widget
 
   public function widget( $args, $instance )
   {
-     $this->getPosts();
+     $this->getCurrentPostID();
+     $this->getPostsToDisplay();
+
     // extract( $args );
     // extract( $instance );
     // TODO This will be built with a an argument passed from the widget backend perhaps.
@@ -70,6 +85,7 @@ class SidebarFeaturedTour extends \WP_Widget
     //DI for the needed variables....
   
    echo'<div class="uwaa-featured-tour">';
+   
                   
    // $this->content .= get_template_part( 'partials/featured-sidebar-post.php' );
    
