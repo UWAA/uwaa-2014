@@ -21,6 +21,8 @@ class SidebarFeaturedTour extends \WP_Widget
   private $postCalloutText;
   private $postURL;
   private $currentPostID;
+  private $postSidebarImage;
+  private $UI;
   
 
   function __construct()
@@ -33,9 +35,11 @@ class SidebarFeaturedTour extends \WP_Widget
         'classname'   => self::ID
       )
     );
-
+      $this->UI = new \UWAA\View\UI;
       
   }
+
+ 
 
   private function getCurrentPostID() 
   {
@@ -67,6 +71,8 @@ class SidebarFeaturedTour extends \WP_Widget
         $this->postTitle = strip_tags(get_the_title());
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
+        $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');        
+        
     endwhile;
 
     wp_reset_postdata();    
@@ -84,7 +90,7 @@ class SidebarFeaturedTour extends \WP_Widget
 //Build this out with real data from the tours, and bind templating so that it only pull what is needed.  Consider putting that code elsewhere.
     //DI for the needed variables....
   
-   echo'<div class="uwaa-featured-tour">';
+   echo'<div class="uwaa-featured-tour widget">';
    
                   
    // $this->content .= get_template_part( 'partials/featured-sidebar-post.php' );
@@ -94,6 +100,7 @@ class SidebarFeaturedTour extends \WP_Widget
 
 echo <<<CONTENT
    <a href="$this->postURL">$this->postTitle - $this->postCalloutText</a>
+   <img src="$this->postSidebarImage" />
 CONTENT;
 
 
