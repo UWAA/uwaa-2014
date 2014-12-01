@@ -6,6 +6,7 @@ class MetaBoxes
     function __construct() {
         $this->add_tours_meta();
         $this->add_thumbnail_meta();
+        $this->add_pullquote_meta();
     }
 
         protected function add_tours_meta() {
@@ -83,6 +84,31 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "This text will show up in the small purple line on the thumbnail."
                         ),                    
+                )
+            )
+            );
+
+        }
+
+        protected function add_pullquote_meta() {
+            new \UWAA\CustomPostData('pullquote_elements', array(
+                'title' => 'Pull Quote Information',
+                'pages' => array('tours', 'benefits', 'posts'),  //add events, regional pages as they are ready
+                'context' => 'side',
+                'priority' => 'default',
+                'fields' => array(
+                    array(
+                     'name' => 'Quote Text',
+                     'id'=> 'pull-quote-text',
+                     'type'=> 'text',
+                     'desc'=> "Pull Quote Text"
+                    ), 
+                    array(
+                        'name' => 'Attribution',
+                        'id'=> 'pull-quote-attribution',
+                        'type'=> 'text',
+                        'desc'=> 'To whom this quote is attributed.  Small gold text below quote.  e.g. Members name'
+                        )                                     
                 )
             )
             );

@@ -2,6 +2,8 @@
 
 class UI
 {
+
+    //TODO  Make this not horrible.  An actual interface?  
     function __construct() 
     {
 
@@ -45,6 +47,16 @@ class UI
         $url = wp_get_attachment_image_src($id, $size);
         return($url[0]);
     }
+
+    // public function renderPullQuote($id)
+    // {
+    //     $stuff = "placeholder";
+    //     $template = get_template_part( 'partials/pull-quote.php' );
+    //     echo $template;
+
+    // }
+
+
 
 
 } 

@@ -51,6 +51,7 @@ class UWAA
 
         //Widgets
         new \UWAA\Widgets\SidebarFeaturedTour();
+        new \UWAA\Widgets\SidebarPullQuote();
 
 
         //Front-End specific helper functions
