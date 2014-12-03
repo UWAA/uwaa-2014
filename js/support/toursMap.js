@@ -23,9 +23,9 @@
         //Template for Custom Tooltip
         //@TODO Get custom excerpt into JSON feed.
         var popupContent = '<a href="' + feature.properties.link + '">' +
-                            feature.properties.title +  '</a>' +
-                            '<p>' + feature.properties.excerpt + '</p>' +
-                            '<a href="' + feature.properties.link + '">' +
+                            '<p class="map-title">' + feature.properties.title +  '</p></a>' +
+                            '<p class="map-excerpt">' + feature.properties.excerpt + '</p>' +
+                            '<a class="map-link" href="' + feature.properties.link + '">' +
                             'Learn More' +
                         '</a>'; 
 
