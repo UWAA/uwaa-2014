@@ -30,11 +30,19 @@
                         '</a>'; 
 
         marker.bindPopup(popupContent,{
-        closeButton: false,
+        closeButton: true,
         minWidth: 320
     });
 
     });
+
+    markerLayer.on('mouseover', function(e) {
+    e.layer.openPopup();
+    });
+    
+    // markerLayer.on('mouseout', function(e) {
+    // e.layer.closePopup();
+    // });
 
 //Janky Test Stuff, but necessary for getting this working.
 var host = window.location.hostname;

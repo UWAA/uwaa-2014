@@ -136,3 +136,6 @@
   background-size: cover;
   background-position: 50% 100%;
 }
+.leaflet-popup-content {
+  font-family: 'Open Sans';
+}
