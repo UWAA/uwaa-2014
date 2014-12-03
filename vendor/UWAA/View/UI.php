@@ -6,7 +6,7 @@ class UI
     //TODO  Make this not horrible.  An actual interface?  
     function __construct() 
     {
-
+        $this->initShortcodes();
     }
 
     //TODO abstract this we only sends data for Isotope to chew on and render, as opposed to building HTML here. 
@@ -32,6 +32,10 @@ class UI
         
         
         endif;
+    }
+
+    private function initShortcodes(){
+        new Shortcodes\Button();
     }
 
     public function getPostFeaturedImageURL($id, $size)
