@@ -1,7 +1,7 @@
 <?php
 /*
- * Template Name: Travel
- * Description: A Page Template for travel pages.
+ * Template Name: Membership
+ * Description: A Page Template for membership pages.
  */
 
 get_header(); 
@@ -50,7 +50,7 @@ get_header();
     <div class="col-md-4 uw-sidebar">
     <?php 
         uw_sidebar_menu();
-        dynamic_sidebar( 'travel_sidebar' ); 
+        dynamic_sidebar( 'membership_sidebar' ); 
     ?>
     </div>
 
