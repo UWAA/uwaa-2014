@@ -51,7 +51,13 @@ class MetaBoxes
                         'id'=> 'operator_form',
                         'type'=> 'text',
                         'desc'=> "Provide the URL for the signup form that for this tour. This could be uploaded through the media gallery or a link to a previously updated form"
-                        ),                  
+                        ),
+                    array(
+                        'name' => 'Tour Price',
+                        'id'=> 'price',
+                        'type'=> 'text',
+                        'desc'=> "The price of the tour.  Input the number only with a comma."
+                        ),                   
 
                 )
             )
