@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Membership
+ * Template Name: UWAA-Membership
  * Description: A Page Template for membership pages.
  */
 

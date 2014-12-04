@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Communities
+ * Template Name: UWAA-Communities
  * Description: A Page Template for communities pages.
  */
 
