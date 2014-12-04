@@ -41,7 +41,6 @@ class UWAA
 
          //Custom Taxonomies
         new \UWAA\Taxonomies\Tours; //Holds custom taxonomy used for sorting tours
-        new \UWAA\Taxonomies\Media;
         //TODO  Merge taxonomies into their one class.
 
         //Custom Meta Boxes

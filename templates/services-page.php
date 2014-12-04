@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: UWAA-Services
+ * Template Name: Services
  * Description: A Page Template for Services pages.
  */
 

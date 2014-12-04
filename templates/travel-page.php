@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: UWAA-Travel
+ * Template Name: Travel
  * Description: A Page Template for travel pages.
  */
 
