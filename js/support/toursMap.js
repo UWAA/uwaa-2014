@@ -20,8 +20,7 @@
         var marker = e.layer,
             feature = marker.feature;
 
-        //Template for Custom Tooltip
-        //@TODO Get custom excerpt into JSON feed.
+        //Template for Custom Tooltip        
         var popupContent = '<a href="' + feature.properties.link + '">' +
                             '<p class="map-title">' + feature.properties.title +  '</p></a>' +
                             '<p class="map-excerpt">' + feature.properties.excerpt + '</p>' +

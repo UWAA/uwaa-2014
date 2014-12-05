@@ -35,7 +35,7 @@ class API
   }
 
   public function addAPIEndpoints() {
-      add_rewrite_rule('^api/?(tours|benefits|)?/?(geojson|json)?/?','index.php?api=1&contentSection=$matches[1]&dataType=$matches[2]','top');
+      add_rewrite_rule('^api/?(tours|benefits|communities)?/?(geojson|json)?/?','index.php?api=1&contentSection=$matches[1]&dataType=$matches[2]','top');
   }
 
   //Only thing about doing this is api is in the query string
@@ -57,6 +57,7 @@ class API
         switch ($dataType) {
           case 'geojson':
             $query = $this->getWPObject('tours');
+            //Implement interface/strategy pattern here
             $geoJSON = new GeoJSON();
             $geoJSON->buildGeoJSONPayload($query);
             break;
