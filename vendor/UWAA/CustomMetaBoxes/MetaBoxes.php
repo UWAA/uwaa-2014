@@ -8,6 +8,7 @@ class MetaBoxes
         $this->add_thumbnail_meta();
         $this->add_pullquote_meta();
         $this->add_regional_chapter_meta();
+        $this->add_benefit_meta();
     }
 
         protected function add_tours_meta() {
@@ -177,6 +178,27 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "URL for the chapter LinkIn page."
                         ), 
+
+                )
+            )
+            );
+
+        }
+
+        protected function add_benefit_meta() {
+            new \UWAA\CustomPostData('benefits', array(
+                'title' => 'Benefit Information',
+                'pages' => array('benefits'),
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Benefit Promotional Information',
+                        'id'=> 'benefit_promotion',
+                        'type'=> 'textarea',
+                        'desc'=> "Text to be displayed only if the user is logged in.  Such as promotional codes/offer details."
+                        ), 
+                     
 
                 )
             )

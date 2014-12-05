@@ -1,7 +1,7 @@
-<?php namespace UWAA\API\DataEnpoint;
+<?php namespace UWAA\API\DataEndpoint;
 
 
-interface DataEnpoint {
-    public function load();
-    public function build();
+interface DataEndpoint {
+    public function load($query);
+    public function build($endpointData);
 }
