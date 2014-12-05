@@ -38,7 +38,7 @@ class ContentSection
             'show_tagcloud'              => false,            
         );
            
-            register_taxonomy( 'uwaa_content_taxonomy', array( 'attachment' ), $args );
+            register_taxonomy( 'uwaa_content_taxonomy', array( 'page' ), $args );
         }
 
 } 
