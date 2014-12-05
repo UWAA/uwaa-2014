@@ -117,8 +117,10 @@ class GeoJSON
             'excerpt' => htmlspecialchars(get_post_meta($post->ID, 'mb_map_excerpt', true)) 
             )
           );
-          $testCollection = new \GeoJson\Feature\FeatureCollection($geometryCollection);
+          
       endforeach;
+
+      $testCollection = new \GeoJson\Feature\FeatureCollection($geometryCollection);
         
 
       echo json_encode($testCollection);

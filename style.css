@@ -119,6 +119,20 @@
   width: 100%;
   height: 100px;
 }
+h2.date {
+  color: #5a5a5a;
+  font-weight: 700;
+  padding-top: .588em;
+  padding-bottom: .353em;
+}
+a.uwaa-btn {
+  height: 2em;
+  width: auto;
+  color: #000000;
+}
+.gallery-item {
+  margin-bottom: 0px;
+}
 #map {
   position: absolute;
   top: 0;
