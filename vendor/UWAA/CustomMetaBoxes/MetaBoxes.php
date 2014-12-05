@@ -7,6 +7,7 @@ class MetaBoxes
         $this->add_tours_meta();
         $this->add_thumbnail_meta();
         $this->add_pullquote_meta();
+        $this->add_regional_chapter_meta();
     }
 
         protected function add_tours_meta() {
@@ -115,6 +116,68 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> 'To whom this quote is attributed.  Small gold text below quote.  e.g. Members name'
                         )                                     
+                )
+            )
+            );
+
+        }
+
+        protected function add_regional_chapter_meta() {
+            new \UWAA\CustomPostData('chapters', array(
+                'title' => 'Chapter Information',
+                'pages' => array('chapters'),
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Chapter Map Excerpt',
+                        'id'=> 'chapter_map_excerpt',
+                        'type'=> 'text',
+                        'desc'=> "Teaser text for the communities map.  E.g. 13,813 Alumni and frields in the XYZ area."
+                        ), 
+                    array(
+                        'name' => 'Chapter Leader 1',
+                        'id'=> 'chapter_leader_1',
+                        'type'=> 'text',
+                        'desc'=> "The name of the Chapter Leader, follow UWAA Style for grad year/school."
+                        ),                    
+                    array(
+                        'name' => 'Chapter Leader 1 Email',
+                        'id'=> 'chapter_leader_1_email',
+                        'type'=> 'text',
+                        'desc'=> "The e-mail address of the chapter leader."
+                        ),
+                    array(
+                        'name' => 'Chapter Leader 2',
+                        'id'=> 'chapter_leader_2',
+                        'type'=> 'text',
+                        'desc'=> "(optional) The name of the Chapter Leader, follow UWAA Style for grad year/school."
+                        ),                    
+                    array(
+                        'name' => 'Chapter Leader 2 Email',
+                        'id'=> 'chapter_leader_2_email',
+                        'type'=> 'text',
+                        'desc'=> "(optional) The e-mail address of the chapter leader."
+                        ),
+                    array(
+                        'name' => 'Chapter Logo Thumbnail ID',
+                        'id'=> 'chapter_logo_id',
+                        'type'=> 'text',
+                        'desc'=> "The attachment ID of the Thumbnail Logo.  Used to build map and event thumbnails."
+                        ),
+                    array(
+                        'name' => 'Chapter Facebook Link',
+                        'id'=> 'chapter_facebook',
+                        'type'=> 'text',
+                        'desc'=> "URL for the chapter Facebook page."
+                        ),
+                    array(
+                        'name' => 'Chapter LinkedIn',
+                        'id'=> 'chapter_linkedIn',
+                        'type'=> 'text',
+                        'desc'=> "URL for the chapter LinkIn page."
+                        ), 
+
                 )
             )
             );
