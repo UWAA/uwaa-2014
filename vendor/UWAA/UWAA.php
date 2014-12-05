@@ -37,6 +37,7 @@ class UWAA
         new \UWAA\CustomPostTypes\Tours; //Holds UWAA Custom Posts Types
         new \UWAA\CustomPostTypes\Benefits; //Holds UWAA Custom Posts Types
         new \UWAA\CustomPostTypes\Events; //Holds UWAA Custom Posts Types
+        new \UWAA\CustomPostTypes\RegionalChapters; //Holds UWAA Custom Posts Types
 
 
          //Custom Taxonomies
