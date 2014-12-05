@@ -13,7 +13,7 @@ class Tours
             $labels = array(
                 'name'                => 'Tours',
                 'singular_name'       => 'Tour',
-                'menu_name'           => 'Tours',
+                'menu_name'           => 'Tour Post',
                 'parent_item_colon'   => 'Parent Item:',
                 'all_items'           => 'All Tours',
                 'view_item'           => 'View Tour Details',
