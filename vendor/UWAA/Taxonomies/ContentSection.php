@@ -4,10 +4,10 @@ class ContentSection
 {
     function __construct()
     {
-        add_action( 'init', array($this, 'setup_ContentSection_taxonomy'), 0 );
+        add_action( 'init', array($this, 'setup_contentSection_taxonomy'), 0 );
     }  
 
-        public static function setup_content_taxonomy() 
+        public static function setup_contentSection_taxonomy() 
         {             
         $labels = array(
             'name'                       => _x( 'UWAA Content Sections', 'Taxonomy General Name'),
