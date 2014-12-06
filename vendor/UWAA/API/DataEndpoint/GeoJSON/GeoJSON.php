@@ -1,7 +1,7 @@
-<?php namespace UWAA\API\DataEndpoint;
+<?php namespace UWAA\API\DataEndpoint\GeoJSON;
 
 
-class GeoJSON implements DataEndpoint {
+class GeoJSON {
 
     protected $mapBoxToken;
     protected $mapBoxEndpoint;
@@ -15,45 +15,10 @@ class GeoJSON implements DataEndpoint {
         $this->endpointData = array();
     }
    
-    public function build($endpointData)
-    {
-        echo json_encode($this->buildFeatureCollection($endpointData));
-    }
-
-    public function load($query)
-    {
-        $posts = $query->get_posts();
-        foreach ($posts as $post):
-            setup_postdata( $post );
-            
-            $featureContents = $this->getFeatureContents($post);
-
-            try {
-                $coordinates = $this->getCoordinates($post);
-            } catch (Exception $e) 
-                {
-                echo 'Caught exception: ',  $e->getMessage(), "\n";
-                continue; 
-               }
-            try {
-               $geometry = new \GeoJson\Geometry\Point($coordinates);
-            
-         } catch(Exception $e) {
-            echo 'Caught exception: ',  $e->getMessage(), "\n"; 
-            continue; 
-         } 
-
-               
-
-            $this->endpointData[] = $this->buildGeometryCollection($geometry, $featureContents); 
-
-         endforeach;
-
-         return $this->endpointData;
-    }
+    
 
 
-    private function parseCoordinates($string) 
+    protected function parseCoordinates($string) 
     {
         if ($string) 
         {
@@ -62,7 +27,7 @@ class GeoJSON implements DataEndpoint {
         }
     }
 
-    private function lookupCoordinatesFromString($string) 
+    protected function lookupCoordinatesFromString($string) 
     {
         $token = $this->mapBoxToken;
         $query = urlencode($string);
@@ -83,7 +48,7 @@ class GeoJSON implements DataEndpoint {
 
     }
 
-    private function getCoordinates($post) {      
+    protected function getCoordinates($post) {      
       $coordinates = get_post_meta($post->ID, 'mb_lat_long', true);
       $markerPosition = get_post_meta($post->ID, 'mb_marker_position', true);
       $tourTitle = get_the_title($post->ID);
@@ -109,7 +74,7 @@ class GeoJSON implements DataEndpoint {
       }
     }
 
-    private function getFeatureContents($post)
+    protected function getFeatureContents($post)
     {
         $featureContents = [
             'title' => htmlspecialchars(get_the_title($post->ID)),
@@ -120,13 +85,13 @@ class GeoJSON implements DataEndpoint {
         return $featureContents;
     }
 
-    private function buildGeometryCollection($geometry, $featureContents) 
+    protected function buildGeometryCollection($geometry, $featureContents) 
     {
         return new \GeoJson\Feature\Feature($geometry, $featureContents);
         
     }
 
-    private function buildFeatureCollection($endpointData)
+    protected function buildFeatureCollection($endpointData)
     {
         return new \GeoJson\Feature\FeatureCollection($endpointData);
     }

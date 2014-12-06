@@ -17,7 +17,7 @@ class RequestHandler
   {
    add_action( 'init', array($this, 'addRequestEndpoints'), 0 );
    add_filter( 'query_vars', array($this, 'createRequestQueryVars'), 0 );
-   add_action( 'parse_request', array($this, 'parseAPIRequest'), 0 );
+   add_action( 'parse_request', array($this, 'detectAPIQueryRequest'), 0 );
    $this->wp = $wp;
    
  } 
@@ -39,9 +39,9 @@ class RequestHandler
   }
 
   //Only thing about doing this is api is in the query string
-  public function parseAPIRequest() {
+  public function detectAPIQueryRequest() {
     if ( isset($this->wp->query_vars['api'])) {
-        $this->handle_request();
+        $this->handleRequest();
         exit;
     }
     return;
@@ -49,7 +49,7 @@ class RequestHandler
   }
 
   //Do something with this...
-  private function handle_request(){    
+  private function handleRequest(){    
     $contentSection = $this->wp->query_vars['contentSection'];
     $dataType = $this->wp->query_vars['dataType'];  
     switch ($contentSection) {
@@ -58,7 +58,7 @@ class RequestHandler
           case 'geojson':
             $query = $this->getWPObject('tours');
             $endpoint = new API;
-            $endpoint->buildEndpoint($query, new DataEndpoint\GeoJSON);            
+            $endpoint->buildEndpoint($query, new DataEndpoint\GeoJSON\ToursMap);            
             break;
           case 'json' :
             echo "working--JSON-tours";
