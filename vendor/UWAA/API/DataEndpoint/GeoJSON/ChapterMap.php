@@ -44,7 +44,7 @@ public function build($endpointData)
         $featureContents = [
             'logourl' => htmlspecialchars(get_the_title($post->ID)),
             'link' => get_permalink($post->ID),
-            'excerpt' => htmlspecialchars(get_post_meta($post->ID, 'mb_map_excerpt', true))
+            'excerpt' => htmlspecialchars(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true))
             
         ];
 
