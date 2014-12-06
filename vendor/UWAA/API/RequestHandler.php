@@ -70,6 +70,23 @@ class RequestHandler
         }        
         break;  //case tours
 
+      case 'communities':
+        switch ($dataType) {
+          case 'geojson':
+            $query = $this->getWPObject('chapters');
+            $endpoint = new API;
+            $endpoint->buildEndpoint($query, new DataEndpoint\GeoJSON\ChapterMap);            
+            break;
+          case 'json' :
+            echo "working--JSON-tours";
+            break;          
+          default:
+            header("HTTP/1.0 404 Not Found");
+            echo 'Nope Communities';
+            break;
+        }        
+        break;  //case tours 
+
       case 'benefits':
         echo 'Benefits Request';
         break;
@@ -78,6 +95,8 @@ class RequestHandler
         header("HTTP/1.0 404 Not Found");
         echo 'Nope';
         break;
+
+       
     }
     
   }
