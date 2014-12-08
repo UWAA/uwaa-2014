@@ -69,7 +69,7 @@ class MetaBoxes
 
          protected function add_thumbnail_meta() {
             new \UWAA\CustomPostData('thumbnail_information', array(
-                'title' => 'Thumbnail Information',
+                'title' => 'Post Thumbnail Information',
                 'pages' => array('tours', 'benefits'),  //add events, regional pages as they are ready
                 'context' => 'side',
                 'priority' => 'default',
