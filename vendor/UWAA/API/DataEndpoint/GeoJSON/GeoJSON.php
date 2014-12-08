@@ -76,12 +76,6 @@ class GeoJSON {
 
     protected function getFeatureContents($post)
     {
-        $featureContents = [
-            'title' => htmlspecialchars(get_the_title($post->ID)),
-            'link' => get_permalink($post->ID),
-            'excerpt' => htmlspecialchars(get_post_meta($post->ID, 'mb_map_excerpt', true))
-        ];
-
         return $featureContents;
     }
 
