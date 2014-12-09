@@ -29,7 +29,7 @@ class Benefits
                 'description'         => 'These posts correspond to individual UW Member Benefits',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
-                'taxonomies'          => array( 'post_tag' ),
+                'taxonomies'          => array(),
                 'hierarchical'        => false,
                 'public'              => true,
                 'show_ui'             => true,

@@ -45,7 +45,7 @@ get_header();
         //   'terms'    => array( 'asia')
         // ),
         array(
-          'taxonomy' => 'post_tag',
+          'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'name',
           'terms'    => array( 'Home')
 

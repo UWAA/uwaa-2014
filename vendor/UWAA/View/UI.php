@@ -7,6 +7,7 @@ class UI
     function __construct() 
     {
         $this->initShortcodes();
+        add_action( 'admin_head', array($this, 'addAdminMenuIcons'));
     }
 
     //TODO abstract this we only sends data for Isotope to chew on and render, as opposed to building HTML here. 
@@ -84,6 +85,32 @@ class UI
 
 
 
+    }
+
+
+    public function addAdminMenuIcons() 
+    {
+        ?>
+        <style>
+        #adminmenu .menu-icon-tours div.wp-menu-image:before {
+            content: '\f319';
+        }
+
+
+        #adminmenu .menu-icon-benefits div.wp-menu-image:before {
+        content: '\f313';
+        }
+
+        #adminmenu .menu-icon-events div.wp-menu-image:before {
+            content: "\f508";
+        }
+
+         #adminmenu .menu-icon-chapters div.wp-menu-image:before {
+            content: "\f231";
+        }
+        
+
+    <?php
     }
 
 
