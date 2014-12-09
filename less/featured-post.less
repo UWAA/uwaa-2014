@@ -5,10 +5,21 @@
 
 
 .featured-post {
-    .make-md-column(2);
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width:20%;
 
-    &:first-of-type {
-        .make-md-column-offset(1);
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .featured-post {
+        width: 100%;
+        clear:right;
+        float:none;
+        .center-block;
     }
-
 }

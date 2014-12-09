@@ -13,7 +13,7 @@ class RegionalChapters
             $labels = array(
                 'name'                => 'Regional Chapter',
                 'singular_name'       => 'Chapter',
-                'menu_name'           => 'Regional Chapter Post',
+                'menu_name'           => 'Regional Chapter Page',
                 'parent_item_colon'   => 'Parent Chapter:',
                 'all_items'           => 'All Chapters',
                 'view_item'           => 'View Chapter Details',
@@ -38,7 +38,7 @@ class RegionalChapters
                 'description'         => 'These posts correspond to UW Regional Advancment Chapters',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
-                'taxonomies'          => array( 'uwaa_content_taxonomy' , 'category' ),
+                'taxonomies'          => array( 'uwaa_content_taxonomy' ),
                 'hierarchical'        => false,
                 'public'              => true,
                 'show_ui'             => true,

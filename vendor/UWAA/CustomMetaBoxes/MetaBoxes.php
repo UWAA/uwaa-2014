@@ -9,13 +9,39 @@ class MetaBoxes
         $this->add_pullquote_meta();
         $this->add_regional_chapter_meta();
         $this->add_benefit_meta();
+        $this->add_event_meta();
+        add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
+
     }
+
+        public function removeUnusedMetaBoxes()
+        {
+            $pagesToRemoveBoxesFrom = array(
+                'post',
+                'page'
+                );
+            $boxesToRemove = array(
+                'postcustom',
+                'trackbacksdiv',
+                'categorydiv'                
+                );
+
+            foreach ($pagesToRemoveBoxesFrom as $page):
+                foreach ($boxesToRemove as $box): 
+                    remove_meta_box($box, $page, 'normal');
+                endforeach;
+            endforeach;
+
+            remove_meta_box('formatdiv', 'post', 'normal');
+            remove_meta_box('tagsdiv-post_tag', 'post', 'normal');
+            
+        }
 
         protected function add_tours_meta() {
             new \UWAA\CustomPostData('tours', array(
                 'title' => 'Tour Information',
                 'pages' => array('tours'),
-                'context' => 'normal',
+                'context' => 'advanced',
                 'priority' => 'high',
                 'fields' => array(
                     array(
@@ -70,21 +96,21 @@ class MetaBoxes
          protected function add_thumbnail_meta() {
             new \UWAA\CustomPostData('thumbnail_information', array(
                 'title' => 'Post Thumbnail Information',
-                'pages' => array('tours', 'benefits', 'events'),  //add events, regional pages as they are ready
-                'context' => 'side',
+                'pages' => array('tours', 'benefits', 'events', 'post'),  //add events, regional pages as they are ready
+                'context' => 'advanced',
                 'priority' => 'default',
                 'fields' => array(
                     array(
                         'name' => 'Start Date',
                         'id'=> 'start_date',
                         'type'=> 'text',
-                        'desc'=> 'The date this event/tour starts.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)'
+                        'desc'=> 'The date this event/tour starts.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
                         ),
                     array(
-                     'name' => 'Thumbnail Date Range',
+                     'name' => 'Cosmetic Event Date',
                      'id'=> 'cosmetic_date',
                      'type'=> 'text',
-                     'desc'=> "Appears below the tour thumbnail.  Cosmetic, and not used to sort the thumbnails."
+                     'desc'=> "Appears below the tour thumbnail, and on event and travel posts in the page main content area. Cosmetic, and not used to sort the thumbnails."
                     ),
                     array(
                         'name' => 'Thumbnail Callout Box',
@@ -93,10 +119,10 @@ class MetaBoxes
                         'desc'=> "This text will show up in the small purple line on the thumbnail."
                         ),
                     array(
-                        'name' => 'Thumbnail Subtitle',
+                        'name' => 'Content Head',
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
-                        'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour."
+                        'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour, or can be overwritten with this field."
                         ),                    
                 )
             )
@@ -199,13 +225,39 @@ class MetaBoxes
                 'priority' => 'high',
                 'fields' => array(
                     array(
-                        'name' => 'Benefit Promotional Information',
+                        'name' => 'How to get your benefit:',
                         'id'=> 'benefit_promotion',
                         'type'=> 'textarea',
                         'desc'=> "Text to be displayed only if the user is logged in.  Such as promotional codes/offer details."
                         ), 
                      
 
+                )
+            )
+            );
+
+        }
+
+
+        protected function add_event_meta() {
+            new \UWAA\CustomPostData('pullquote_elements', array(
+                'title' => 'Event Post Information',
+                'pages' => array('events'),  //add events, regional pages as they are ready
+                'context' => 'normal',
+                'priority' => 'default',
+                'fields' => array(
+                    array(
+                     'name' => 'Event Location',
+                     'id'=> 'event_location',
+                     'type'=> 'text',
+                     'desc'=> "H5 - Where the event will be held - e.g. Kane Hall 120, UW Seattle Campus"
+                    ), 
+                    array(
+                        'name' => 'Event Time',
+                        'id'=> 'event_time',
+                        'type'=> 'text',
+                        'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
+                        )                                     
                 )
             )
             );

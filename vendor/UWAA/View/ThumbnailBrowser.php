@@ -104,7 +104,7 @@ class ThumbnailBrowser
       }
 
 
-        $this->postTitle = strip_tags(get_the_title());
+        $this->postTitle = strip_tags(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');    
@@ -130,14 +130,16 @@ private function buildTemplate() {
 $template = <<<TEMPLATE
 <div class="featured-post">
   <a href="{$this->postURL}">
-        <div class="image">
-            <img src="{$this->postImageThumbnailURL}" alt="">
-            <d class="callout">{$this->postCalloutText}</d>
-        </div>
-        <h3 class="subtitle">{$this->postSubtitle}</h3>
-        <h2 class="date">{$this->postDate}</h2>
-        <p class="excerpt">{$this->postExcerpt}</p>
+    <div class="image">
+      <img src="{$this->postImageThumbnailURL}" alt="">
+      <div class="callout">{$this->postCalloutText}</div>
+    </div>
   </a>
+ <h4 class="title">{$this->postTitle}</h4>
+ <h5 class="title">{$this->postSubtitle}</h5>
+ <h5 class="date">{$this->postDate}</h5>
+ <p class="excerpt">{$this->postExcerpt}</p>
+  
 </div>
 TEMPLATE;
 

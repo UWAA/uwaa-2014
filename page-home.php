@@ -25,6 +25,41 @@ get_header();
 
       <div class="uw-body-copy">
 
+  <div class="row">
+       <?php
+      $args = array (
+      'post_type' => array(
+        'tours',
+        'events',
+        'benefits',
+        'post'
+        ),
+      'orderby' => 'rand',
+      // 'tag' => 'Home'
+      
+      'tax_query' => array(
+        // 'relation' => 'AND',
+        // array(
+        //   'taxonomy' => 'destinations',
+        //   'field'    => 'name',
+        //   'terms'    => array( 'asia')
+        // ),
+        array(
+          'taxonomy' => 'post_tag',
+          'field'    => 'name',
+          'terms'    => array( 'Home')
+
+          )
+      ) //End tax query    
+      );
+
+      $thumbnailRow = new \UWAA\View\ThumbnailBrowser;
+
+      $thumbnailRow->makeThumbnailRow($args);
+
+      ?>
+
+</div>
 
 
         <?php
@@ -47,23 +82,6 @@ get_header();
 
           
         ?>
-      
-         
-      <?php
-      $args = array (
-      'post_type' => 'tours',
-      'orderby' => 'rand',
-      );
-
-      $thumbnailRow = new \UWAA\View\ThumbnailBrowser;
-
-      $thumbnailRow->makeThumbnailRow($args);
-
-      ?>
-        
-
-         
-
       </div>
 
     </div>
