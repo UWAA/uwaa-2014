@@ -133,6 +133,23 @@ a.uwaa-btn {
 .gallery-item {
   margin-bottom: 0px;
 }
+.featured-post {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .featured-post {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .featured-post:first-of-type {
+    margin-left: 8.33333333%;
+  }
+}
 #map {
   position: absolute;
   top: 0;

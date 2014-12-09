@@ -41,7 +41,7 @@ class SidebarFeaturedTour extends \WP_Widget
 
  
 
-  private function getCurrentPostID() 
+  private function setCurrentPostID() 
   {
     $this->currentPostID = get_the_ID();    
   }
@@ -80,7 +80,7 @@ class SidebarFeaturedTour extends \WP_Widget
 
   public function widget( $args, $instance )
   {
-     $this->getCurrentPostID();
+     $this->setCurrentPostID();
      $this->getPostsToDisplay();
 
     // extract( $args );

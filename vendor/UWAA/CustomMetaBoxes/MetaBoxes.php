@@ -70,7 +70,7 @@ class MetaBoxes
          protected function add_thumbnail_meta() {
             new \UWAA\CustomPostData('thumbnail_information', array(
                 'title' => 'Post Thumbnail Information',
-                'pages' => array('tours', 'benefits'),  //add events, regional pages as they are ready
+                'pages' => array('tours', 'benefits', 'events'),  //add events, regional pages as they are ready
                 'context' => 'side',
                 'priority' => 'default',
                 'fields' => array(
@@ -81,16 +81,22 @@ class MetaBoxes
                         'desc'=> 'The date this event/tour starts.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)'
                         ),
                     array(
-                     'name' => 'Date Range Text',
+                     'name' => 'Thumbnail Date Range',
                      'id'=> 'cosmetic_date',
                      'type'=> 'text',
                      'desc'=> "Appears below the tour thumbnail.  Cosmetic, and not used to sort the thumbnails."
                     ),
                     array(
-                        'name' => 'Callout Box Text',
+                        'name' => 'Thumbnail Callout Box',
                         'id'=> 'thumbnail_callout',
                         'type'=> 'text',
                         'desc'=> "This text will show up in the small purple line on the thumbnail."
+                        ),
+                    array(
+                        'name' => 'Thumbnail Subtitle',
+                        'id'=> 'thumbnail_subtitle',
+                        'type'=> 'text',
+                        'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour."
                         ),                    
                 )
             )

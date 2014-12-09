@@ -52,15 +52,39 @@ class UI
         return($url[0]);
     }
 
-    // public function renderPullQuote($id)
-    // {
-    //     $stuff = "placeholder";
-    //     $template = get_template_part( 'partials/pull-quote.php' );
-    //     echo $template;
+    
+    //Duplication in the Widget class.  Extract some of this WordPress data-handling stuff elsewhere.
+    public function buildPostThumbnailBrowser($args, $numberOfThumbnails, $order)
+    {
+        $args = $args;
 
-    // }
+        $query = new \WP_query($args);
+
+        return $query;
+        
+
+    }
+
+    private function renderPostThumbnailBrowser($query)
+    {
+        
+    while ( $query->have_posts() ) : $query->the_post();
+      if ($this->currentPostID == get_the_ID() ) {
+        continue;
+      }
+        $this->postTitle = strip_tags(get_the_title());
+        $this->postURL = get_permalink();
+        $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
+        $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
+        $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');        
+        
+    endwhile;
+
+    wp_reset_postdata();
 
 
+
+    }
 
 
 } 
