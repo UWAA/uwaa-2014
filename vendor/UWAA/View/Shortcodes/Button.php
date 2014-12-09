@@ -8,7 +8,7 @@
 class Button
 {
 
-    private $types = array('register', 'learn-more');
+    private static $types = array('slant-right', 'slant-left');
 
     function __construct()
     {
@@ -23,15 +23,15 @@ class Button
 
         $btnColors = shortcode_atts( array(
             'color' => 'none',
-        ), $atts );
+        ), $atts );       
  
 
         $color = 'btn-' . $btnColors['color'];
-            
+                   
         if(empty($content)){
             echo 'No text in this button';
             return;
-        }
+        }      
 
         if (isset($attributes->type)){
             $type = strtolower($attributes->type);
@@ -45,12 +45,11 @@ class Button
             $url = $attributes->url;
         }
 
-        if (property_exists($attributes, 'small')){
+        if ($attributes->small == true){
             array_push($classes, 'btn-sm');
         }
 
-        $class_string = implode($classes, ' ');
-
+        $class_string = implode($classes, ' ');        
         return sprintf('<a class="%s %s" href="%s">%s</a>', $class_string, $color, $url, $content);
     }
 }

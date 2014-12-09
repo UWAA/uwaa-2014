@@ -32,7 +32,7 @@ class MetaBoxes
                 endforeach;
             endforeach;
 
-            remove_meta_box('formatdiv', 'post', 'normal');
+            // remove_meta_box('formatdiv', 'post', 'normal');
             remove_meta_box('tagsdiv-post_tag', 'post', 'normal');
             
         }
