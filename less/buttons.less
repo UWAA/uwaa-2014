@@ -12,7 +12,40 @@ a.uwaa-btn {
     line-height: 1.3;
     text-transform: uppercase;
     padding: .412em;
-
-
+    z-index: -1;
+    
+   
     
 }
+
+div.uwaa-btn-wrapper{
+    
+
+&:before{
+position: absolute;
+left: 0;
+content: "";
+height: 2em;
+width: 100px;
+background-color: #b7a57a;
+z-index: -1;
+    }
+
+    &:after {
+    position: absolute;
+left: 0;
+content: "";
+height: 2em;
+width: 40px;
+-webkit-transform: skewX(-25deg) skewY(0);
+-o-transform: skewX(-25deg) skewY(0);
+transform: skewX(-25deg) skewY(0);
+-webkit-transform: skew(-25deg,0);
+-ms-transform: skewX(-25deg) skewY(0);
+transform: skew(-25deg,0);
+left: 80px;
+background-color: #fff;
+z-index: -1;
+    }
+}
+

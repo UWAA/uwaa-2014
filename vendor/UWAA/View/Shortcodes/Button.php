@@ -50,7 +50,7 @@ class Button
         }
 
         $class_string = implode($classes, ' ');        
-        return sprintf('<a class="%s %s" href="%s">%s</a>', $class_string, $color, $url, $content);
+        return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s">%s</a></div>', $class_string, $color, $url, $content);
     }
 }
 
