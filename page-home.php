@@ -1,6 +1,6 @@
 <?php 
 get_header(); 
-
+use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 
 ?>
 
@@ -27,35 +27,35 @@ get_header();
 
   <div class="row">
        <?php
-      $args = array (
-      'post_type' => array(
-        'tours',
-        'events',
-        'benefits',
-        'post'
-        ),
-      'orderby' => 'rand',
-      // 'tag' => 'Home'
+      // $args = array (
+      // 'post_type' => array(
+      //   'tours',
+      //   'events',
+      //   'benefits',
+      //   'post'
+      //   ),
+      // 'orderby' => 'rand',
+      // // 'tag' => 'Home'
       
-      'tax_query' => array(
-        // 'relation' => 'AND',
-        // array(
-        //   'taxonomy' => 'destinations',
-        //   'field'    => 'name',
-        //   'terms'    => array( 'asia')
-        // ),
-        array(
-          'taxonomy' => 'uwaa_content_promotion',
-          'field'    => 'name',
-          'terms'    => array( 'Home')
+      // 'tax_query' => array(
+      //   // 'relation' => 'AND',
+      //   // array(
+      //   //   'taxonomy' => 'destinations',
+      //   //   'field'    => 'name',
+      //   //   'terms'    => array( 'asia')
+      //   // ),
+      //   array(
+      //     'taxonomy' => 'uwaa_content_promotion',
+      //     'field'    => 'name',
+      //     'terms'    => array( 'Home')
 
-          )
-      ) //End tax query    
-      );
+      //     )
+      // ) //End tax query    
+      // );
 
-      $thumbnailRow = new \UWAA\View\ThumbnailBrowser;
+      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 
-      $thumbnailRow->makeThumbnailRow($args);
+      $thumbnailRow->makeThumbnails(new Homepage);
 
       ?>
 

@@ -1,1 +1,1 @@
-MemberStoreInit.js
+// MemberStoreInit.js

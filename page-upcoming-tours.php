@@ -1,5 +1,5 @@
 <?php get_header(); 
-
+use \UWAA\View\ThumbnailBrowser\Thumbnail\ToursIsotope;
 wp_enqueue_script('isotopeInit');
 ?>
 
@@ -11,7 +11,7 @@ wp_enqueue_script('isotopeInit');
 
   <div class="row">
 
-    <div class="col-md-8 uw-content" role='main'>
+    <div class="col-md-12 uw-content" role='main'>
 
       <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
 
@@ -23,20 +23,17 @@ wp_enqueue_script('isotopeInit');
           $UWAA->UI->buildSortingToolbar('destinations'); 
         ?>
             <div class="isotope tile">
-            <?php get_template_part( 'partials/thumbnail-browser' ); ?>
+            <?php
+            $isotopeThumbnails = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+            $isotopeThumbnails->makeThumbnails(new ToursIsotope);
+            ?>
             </div>
         </div>
 
       </div>
 
-    </div>
-    <div class="col-md-4 uw-sidebar">
-    <?php 
-        
-        uw_sidebar_menu();
-        dynamic_sidebar( 'travel_sidebar' ); 
-    ?>
-    </div>
+    </div>   
 
   </div>
 

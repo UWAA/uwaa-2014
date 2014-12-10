@@ -3,15 +3,13 @@
 class Utilities
 {
     
-    public function echoListOfTerms($taxonomyName)
+    public static function getListOfTerms($taxonomyName)
     {
 
         $terms = get_the_terms( $post->ID, "$taxonomyName");
                 
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :   
-            foreach ( $terms as $term ) {
-                echo " " . strtolower($term->slug) . " ";     
-                }  
+            implode(' ', $terms);
         endif;
      
      }

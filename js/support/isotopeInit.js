@@ -13,8 +13,8 @@ Isotope = Backbone.View.extend({
 
   initialize: function() {
     this.$('.isotope').isotope({
-    itemSelector: '.isotope-slide',
-    layoutMode: 'fitRows'
+      itemSelector: '.isotope-slide',
+      layoutMode: 'fitRows'
     });
   },
 
