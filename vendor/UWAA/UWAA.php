@@ -9,7 +9,7 @@ class UWAA
 {
 
     protected $wp;
-    public $UI;
+    public $UI;    
 
     function __construct($wp)
     {
@@ -44,6 +44,7 @@ class UWAA
         new \UWAA\Taxonomies\Tours; //Holds custom taxonomy used for sorting tours
         new \UWAA\Taxonomies\Media;
         new \UWAA\Taxonomies\ContentSection;
+        new \UWAA\Taxonomies\ContentPromotion;
         //TODO  Merge taxonomies into their one class.
 
         //Custom Meta Boxes

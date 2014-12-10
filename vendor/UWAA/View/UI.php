@@ -7,6 +7,7 @@ class UI
     function __construct() 
     {
         $this->initShortcodes();
+        add_action( 'admin_head', array($this, 'addAdminMenuIcons'));
     }
 
     //TODO abstract this we only sends data for Isotope to chew on and render, as opposed to building HTML here. 
@@ -52,15 +53,65 @@ class UI
         return($url[0]);
     }
 
-    // public function renderPullQuote($id)
-    // {
-    //     $stuff = "placeholder";
-    //     $template = get_template_part( 'partials/pull-quote.php' );
-    //     echo $template;
+    
+    //Duplication in the Widget class.  Extract some of this WordPress data-handling stuff elsewhere.
+    public function buildPostThumbnailBrowser($args, $numberOfThumbnails, $order)
+    {
+        $args = $args;
 
-    // }
+        $query = new \WP_query($args);
+
+        return $query;
+        
+
+    }
+
+    private function renderPostThumbnailBrowser($query)
+    {
+        
+    while ( $query->have_posts() ) : $query->the_post();
+      if ($this->currentPostID == get_the_ID() ) {
+        continue;
+      }
+        $this->postTitle = strip_tags(get_the_title());
+        $this->postURL = get_permalink();
+        $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
+        $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
+        $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');        
+        
+    endwhile;
+
+    wp_reset_postdata();
 
 
+
+    }
+
+
+    public function addAdminMenuIcons() 
+    {
+        ?>
+        <style>
+        #adminmenu .menu-icon-tours div.wp-menu-image:before {
+            content: '\f319';
+        }
+
+
+        #adminmenu .menu-icon-benefits div.wp-menu-image:before {
+        content: '\f313';
+        }
+
+        #adminmenu .menu-icon-events div.wp-menu-image:before {
+            content: "\f508";
+        }
+
+         #adminmenu .menu-icon-chapters div.wp-menu-image:before {
+            content: "\f231";
+        }
+        
+
+    <?php
+    }
 
 
 } 

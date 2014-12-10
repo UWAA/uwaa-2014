@@ -16,7 +16,7 @@ class Utilities
      
      }
 
-     public function getArrayOfTerms($taxonomyName) 
+     public static function getArrayOfTerms($taxonomyName) 
      {
          $terms = get_terms("$taxonomyName");
      if ( !empty( $terms ) && !is_wp_error( $terms ) ){
