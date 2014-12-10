@@ -3,12 +3,17 @@
   "authors": "Ben Erickson and Jane Higgins",
   "description": "A child theme built on the 2014 boundless UW theme",
   "dependencies": {
-    "isotope": "latest"
+    "isotope": "latest",
+    "handlebars" : "latest"
   },
   "overrides": {
     "isotope": {
       "dependencies": "null",
       "main": "dist/isotope.pkgd.js"
+    },
+    "handlebars": {
+      "dependencies": "handlebars",
+      "main": "handlebars.min.js"
     }
   },
   "devDependencies": {
