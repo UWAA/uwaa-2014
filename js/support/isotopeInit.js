@@ -28,8 +28,10 @@ Isotope = Backbone.View.extend({
   },
 
   toggleButtonClass: function(target) {
-    this.$('.button-group').find('.is-checked').removeClass('is-checked');
+    // this.$('.button-group').find('.is-checked').removeClass('is-checked');
+    target.siblings().removeClass('is-checked');
     target.addClass('is-checked');
+
 
   },
 

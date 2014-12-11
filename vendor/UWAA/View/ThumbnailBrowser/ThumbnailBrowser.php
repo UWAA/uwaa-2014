@@ -93,10 +93,10 @@ public function buildSortingToolbar($taxonomyName){
       echo $this->getSortingToolbarTemplate($toolbar);
     }
 
-    private function getSortingToolbarTemplate()
+    private function getSortingToolbarTemplate($typeOfToolbar)
     {
       
-      $buttons = $this->renderFilterButtons('Tours');
+      $buttons = $this->renderFilterButtons($typeOfToolbar);     
       $template = <<<TOOLBAR
       <div class="filter-row">
       <div id="filters">
@@ -113,9 +113,9 @@ TOOLBAR;
       return $template;
     }
 
-    private function renderFilterButtons($typeOfThumbnailsToSort) 
+    private function renderFilterButtons($typeOfToolbar) 
     {
-      $template = '<ul class="filter-group"><li class="filter-button" data-filter="">All '. $typeOfThumbnailsToSort .'</li>';
+      $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All '. $typeOfToolbar .'</li>';
 
       $terms = get_terms("destinations");
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
@@ -127,6 +127,20 @@ TOOLBAR;
 
       $template .= '</ul>';
       return $template;
+    }
+
+    public function renderSearchBox($typeOfToolbar)
+    {
+      $template = '<div id="isotope-search" class="uw-search-bar-container">
+<form>
+<label class="screen-reader" for="quicksearch">Enter search text to filter tours</label>
+<input id="quicksearch" type="search" placeholder="Search '.$typeOfToolbar.'" autocomplete="off">
+</form>
+<input type="submit" value="search" class="search" tabindex="-1">
+</div>';
+
+
+      echo $template;
     }
 
 

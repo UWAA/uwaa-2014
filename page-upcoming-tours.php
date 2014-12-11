@@ -17,11 +17,14 @@ wp_enqueue_script('isotopeInit');
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
+      <h1><?php the_title() ?></h1>
+
       <div class="uw-body-copy">
         <div id="isotope-canvas">
         <?php
           $tourGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
           
+          $tourGrid->renderSearchBox('Tours');
           $tourGrid->renderToolbar('Tours');
           // $tourGrid->buildSortingToolbar('destinations'); 
         ?>

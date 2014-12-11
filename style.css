@@ -94,6 +94,9 @@
 .modal-footer:after {
   clear: both;
 }
+#isotope-canvas {
+  position: relative;
+}
 .tile .isotope-slide {
   width: 275px;
   min-height: 325px;
@@ -170,6 +173,21 @@
 #filters ul li {
   display: inline-block;
   padding-left: 15px;
+  cursor: pointer;
+}
+#filters ul li.is-checked {
+  color: #b7a57a;
+  font-weight: 800;
+}
+#isotope-search {
+  position: absolute;
+  right: 0;
+  top: -70px;
+}
+#isotope-search form {
+  float: left;
+  width: 200px;
+  outline: 2px solid #ADADAD;
 }
 h2.date {
   color: #5a5a5a;

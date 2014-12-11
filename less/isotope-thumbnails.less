@@ -1,5 +1,9 @@
 //Style for the thumbnails generated for tile-based sorting pages (Member Benefits and Tours)
 
+#isotope-canvas{
+    position: relative;
+}
+
 
 .isotope{
 }
@@ -85,6 +89,9 @@
         text-transform: uppercase;
         font-weight: 800;
         font-size: 1.7em;        
+
+
+
     }
     
     
@@ -111,6 +118,12 @@
     li{
         display:inline-block;
         padding-left: 15px;
+        cursor: pointer;
+    }
+
+    li.is-checked {
+        color: @lightgold;
+        font-weight: 800;
     }
     
 }
@@ -118,3 +131,15 @@
 
 }
 
+
+#isotope-search {
+        position: absolute;
+        right: 0;
+        top: -70px;
+
+        form{
+        float: left;
+        width: 200px;
+        outline: 2px solid #ADADAD;
+        }
+    }
