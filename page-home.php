@@ -1,5 +1,6 @@
 <?php 
 get_header(); 
+use \UWAA\View\ThumbnailBrowser;
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 
 ?>
@@ -53,7 +54,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
       // ) //End tax query    
       // );
 
-      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+      $thumbnailRow = new ThumbnailBrowser;
 
       $thumbnailRow->makeThumbnails(new Homepage);
 

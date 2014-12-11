@@ -11,12 +11,35 @@
         margin-right:10px;
         margin-bottom: 10px;
         display: block;                
-    img{
+    
+    .image-frame{
+        position: relative;
+        
+        span {
+            position: absolute;
+            right: 0;
+            top:.94em;
+            background-color: @purple;
+            color:@white;
+            font-weight: 800;
+            font-family: "Encode Sans Compressed", sans-serif;
+            border-radius: 0;
+            font-size: .76em;
+            // height:1.7em;
+            padding: .235em;            
+            text-transform: uppercase;
+            -webkit-box-shadow: 0px 9px 6px -3px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 9px 6px -3px rgba(0,0,0,0.75);
+            box-shadow: 0px 9px 6px -3px rgba(0,0,0,0.75);
 
+        }
 
     }
 
-    div {
+
+    
+
+    .copy {
         color: @darkgray;
         padding: 0 0 10px 10px;
         box-shadow: -1px 2px 2px @gray, 1px 2px 2px @gray;

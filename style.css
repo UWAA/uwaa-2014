@@ -101,15 +101,34 @@
   margin-bottom: 10px;
   display: block;
 }
-.tile .isotope-slide div {
+.tile .isotope-slide .image-frame {
+  position: relative;
+}
+.tile .isotope-slide .image-frame span {
+  position: absolute;
+  right: 0;
+  top: .94em;
+  background-color: #4b2e83;
+  color: #ffffff;
+  font-weight: 800;
+  font-family: "Encode Sans Compressed", sans-serif;
+  border-radius: 0;
+  font-size: .76em;
+  padding: .235em;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 9px 6px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 9px 6px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 9px 6px -3px rgba(0, 0, 0, 0.75);
+}
+.tile .isotope-slide .copy {
   color: #5a5a5a;
   padding: 0 0 10px 10px;
   box-shadow: -1px 2px 2px #c9c9c9, 1px 2px 2px #c9c9c9;
 }
-.tile .isotope-slide div h4 {
+.tile .isotope-slide .copy h4 {
   margin: 0;
 }
-.tile .isotope-slide div h5.subtitle {
+.tile .isotope-slide .copy h5.subtitle {
   text-transform: uppercase;
   color: #85754d;
   padding: 0;

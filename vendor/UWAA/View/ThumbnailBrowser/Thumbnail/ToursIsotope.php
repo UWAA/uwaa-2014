@@ -81,8 +81,11 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 	$template = <<<ISOTOPE
 <div class="isotope-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
-		<img src="$this->postImageThumbnailURL"/>
-		<div>
+    <div class="image-frame">
+      <span>$this->postCalloutText</span>
+		  <img src="$this->postImageThumbnailURL"/>
+    </div>
+		<div class="copy">
 		<h5 class="subtitle">$this->postSubtitle</h5>
 		<h4>$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
