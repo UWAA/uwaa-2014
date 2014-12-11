@@ -97,17 +97,10 @@
 #isotope-canvas {
   position: relative;
 }
-.tile .isotope-slide {
-  width: 275px;
-  min-height: 325px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  display: block;
-}
-.tile .isotope-slide .image-frame {
+.image-frame {
   position: relative;
 }
-.tile .isotope-slide .image-frame span {
+.image-frame span {
   position: absolute;
   right: 0;
   top: .94em;
@@ -123,15 +116,22 @@
   -moz-box-shadow: 0px 9px 6px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 9px 6px -3px rgba(0, 0, 0, 0.75);
 }
-.tile .isotope-slide .copy {
+.post-thumbnail-slide {
+  width: 275px;
+  min-height: 325px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+.post-thumbnail-slide .copy {
   color: #5a5a5a;
   padding: 0 0 10px 10px;
   box-shadow: -1px 2px 2px #c9c9c9, 1px 2px 2px #c9c9c9;
 }
-.tile .isotope-slide .copy h4 {
+.post-thumbnail-slide .copy h4 {
   margin: 0;
 }
-.tile .isotope-slide .copy h5.subtitle {
+.post-thumbnail-slide .copy h5.subtitle {
   text-transform: uppercase;
   color: #85754d;
   padding: 0;
@@ -189,6 +189,12 @@
   width: 200px;
   outline: 2px solid #ADADAD;
 }
+#isotope-search form input {
+  height: 44px;
+}
+#isotope-search input.search {
+  height: 44px;
+}
 h2.date {
   color: #5a5a5a;
   font-weight: 700;
@@ -207,31 +213,13 @@ a.uwaa-btn {
   text-transform: uppercase;
   padding: .412em;
   z-index: -1;
+  display: inline-block;
 }
-div.uwaa-btn-wrapper:before {
-  position: absolute;
-  left: 0;
-  content: "";
-  height: 2em;
-  width: 100px;
+a.uwaa-btn.btn-gold {
   background-color: #b7a57a;
-  z-index: -1;
 }
-div.uwaa-btn-wrapper:after {
-  position: absolute;
-  left: 0;
-  content: "";
-  height: 2em;
-  width: 40px;
-  -webkit-transform: skewX(-25deg) skewY(0);
-  -o-transform: skewX(-25deg) skewY(0);
-  transform: skewX(-25deg) skewY(0);
-  -webkit-transform: skew(-25deg, 0);
-  -ms-transform: skewX(-25deg) skewY(0);
-  transform: skew(-25deg, 0);
-  left: 80px;
-  background-color: #fff;
-  z-index: -1;
+div.uwaa-btn-wrapper {
+  display: inline-block;
 }
 .gallery-item {
   margin-bottom: 0px;

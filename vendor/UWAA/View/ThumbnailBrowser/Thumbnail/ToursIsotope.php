@@ -58,7 +58,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         
         if ( $terms && !is_wp_error( $terms ) ) :
         	foreach ( $terms as $term ) {
-                $termArray[] = $term->name;
+                $termArray[] = $term->slug;
                 }               
         endif;
 
@@ -79,7 +79,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 
 	public function buildTemplate(){
 	$template = <<<ISOTOPE
-<div class="isotope-slide $this->postTerms">
+<div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
     <div class="image-frame">
       <span>$this->postCalloutText</span>

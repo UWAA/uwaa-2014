@@ -131,7 +131,7 @@ TOOLBAR;
 
     public function renderSearchBox($typeOfToolbar)
     {
-      $template = '<div id="isotope-search" class="uw-search-bar-container">
+      $template = '<div id="isotope-search" class="uw-search-bar-container hidden-xs">
 <form>
 <label class="screen-reader" for="quicksearch">Enter search text to filter tours</label>
 <input id="quicksearch" type="search" placeholder="Search '.$typeOfToolbar.'" autocomplete="off">

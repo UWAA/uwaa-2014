@@ -88,17 +88,19 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 public function buildTemplate() {
 
 $template = <<<TEMPLATE
-<div class="featured-post">
+<div class="post-thumbnail-slide">
   <a href="{$this->postURL}">
-    <div class="image">
+    <div class="image-frame">
       <img src="{$this->postImageThumbnailURL}" alt="">
-      <div class="callout">{$this->postCalloutText}</div>
+      <span>{$this->postCalloutText}</span>
     </div>
-  </a>
- <h4 class="title">{$this->postTitle}</h4>
- <h5 class="title">{$this->postSubtitle}</h5>
- <h5 class="date">{$this->postDate}</h5>
+  <div class="copy">
+ <h5 class="subtitle">{$this->postSubtitle}</h5>
+ <h4 class="title">{$this->postTitle}</h4> 
+ <h4 class="date">{$this->postDate}</h4>
  <p class="excerpt">{$this->postExcerpt}</p>
+ </div>
+ </a>
   
 </div>
 TEMPLATE;
