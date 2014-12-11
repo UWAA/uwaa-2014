@@ -76,6 +76,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     return $args;
   }  
 
+
 	public function buildTemplate(){
 	$template = <<<ISOTOPE
 <div class="isotope-slide $this->postTerms">
@@ -93,4 +94,6 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 ISOTOPE;
 return $template;
 }
+
+
 }
