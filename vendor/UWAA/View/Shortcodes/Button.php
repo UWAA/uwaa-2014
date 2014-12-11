@@ -45,7 +45,7 @@ class Button
             $url = $attributes->url;
         }
 
-        if ($attributes->small == true){
+        if (property_exists($attributes, 'small')){
             array_push($classes, 'btn-sm');
         }
 

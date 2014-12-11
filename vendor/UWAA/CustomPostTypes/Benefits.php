@@ -24,13 +24,20 @@ class Benefits
                 'not_found'           => 'No Benefit Found',
                 'not_found_in_trash'  => 'No Benefit found in Trash',
             );
+
+             $rewrite = array(
+                'slug'                => 'membership/benefits',
+                'with_front'          => false,
+                'pages'               => true,
+                'feeds'               => true,
+            );
             $args = array(
                 'label'               => 'benefits',
                 'description'         => 'These posts correspond to individual UW Member Benefits',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
-                'taxonomies'          => array(),
-                'hierarchical'        => false,
+                'taxonomies'          => array('benefits'),
+                'hierarchical'        => true,
                 'public'              => true,
                 'show_ui'             => true,
                 'show_in_menu'        => true,
@@ -44,6 +51,7 @@ class Benefits
                 'publicly_queryable'  => true,
                 'query_var'           => 'benefits',
                 'capability_type'     => 'post',
+                'rewrite'             => $rewrite,
             );
             register_post_type( 'benefits', $args );
         }

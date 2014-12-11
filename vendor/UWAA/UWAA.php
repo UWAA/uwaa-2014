@@ -32,6 +32,15 @@ class UWAA
         new \UWAA\Images;
 
 
+        //Custom Taxonomies
+        new \UWAA\Taxonomies\Tours; //Holds custom taxonomy used for sorting tours
+        new \UWAA\Taxonomies\Media;
+        new \UWAA\Taxonomies\ContentSection;
+        new \UWAA\Taxonomies\ContentPromotion;
+        new \UWAA\Taxonomies\Events;
+        new \UWAA\Taxonomies\Benefits;
+        //TODO  Merge taxonomies into their one class.
+
 
         //Custom Post Types
         new \UWAA\CustomPostTypes\Tours; //Holds UWAA Custom Posts Types
@@ -40,12 +49,7 @@ class UWAA
         new \UWAA\CustomPostTypes\RegionalChapters; //Holds UWAA Custom Posts Types
 
 
-         //Custom Taxonomies
-        new \UWAA\Taxonomies\Tours; //Holds custom taxonomy used for sorting tours
-        new \UWAA\Taxonomies\Media;
-        new \UWAA\Taxonomies\ContentSection;
-        new \UWAA\Taxonomies\ContentPromotion;
-        //TODO  Merge taxonomies into their one class.
+       
 
         //Custom Meta Boxes
         new \UWAA\CustomMetaBoxes\MetaBoxes; //Holds custom taxonomies

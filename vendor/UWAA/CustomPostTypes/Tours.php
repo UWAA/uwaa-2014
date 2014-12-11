@@ -48,7 +48,7 @@ class Tours
                 'menu_position'       => 20,
                 'can_export'          => true,
                 'menu_icon'           => '',
-                'has_archive'         => true,
+                'has_archive'         => false,
                 'exclude_from_search' => false,
                 'publicly_queryable'  => true,
                 'query_var'           => 'tours',

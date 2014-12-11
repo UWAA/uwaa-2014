@@ -12,20 +12,60 @@ a.uwaa-btn {
     line-height: 1.3;
     text-transform: uppercase;
     padding: .412em;
-    z-index: -1;
-    display: inline-block;  
+    z-index: 0;
+    display: inline-block;   
 
 
     &.btn-gold 
     {
         background-color: @lightgold;
-    }   
+    }
+
+    &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;    
+    -webkit-transform: skew(-20deg);
+    background-color: inherit;
+    height:2em;
+    width: 50px;
+    display: none;
+    }
+
+    &.btn-slant-left {
+        &:before{
+            left:-10px;
+            display:block;
+        }
+        
+    }
+
+    &.btn-slant-right {
+        &:before{
+            display: block;
+            right: -10px;
+        }
+        
+    }
+
+
+
+
     
 }
 
 
 
-div.uwaa-btn-wrapper{
+.uwaa-btn-wrapper{
     display: inline-block;
+    position: relative;
+    z-index: 0;
+    margin-right: 40px;
+
+   
 }
+
+       
+
 

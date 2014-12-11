@@ -64,30 +64,6 @@ class ThumbnailBrowser
     endif;
   }
 
-
-public function buildSortingToolbar($taxonomyName){
-        
-        echo '<p><input type="text" id="quicksearch" placeholder="Search Tours" /></p>';
-
-        echo '<div id="filters" class="button-group">';
-
-
-
-        //This builds a clear-filters button  (passes a blank filter to Isotope)
-        echo '<button class="button btn filter-button" data-filter="">All  Filters</button>';
-        $terms = get_terms("$taxonomyName");
-        if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
-            foreach ( $terms as $term ) {
-                echo sprintf('<button class="button btn filter-button" data-filter=".%s">%s</button>', strtolower($term->slug), $term->name);
-        }
-        echo '</div>';
-        echo '<button class="button btn list-button">List View</button>';
-        echo '<button class="button btn tile-button">Tile View</button>';
-        
-        
-        endif;
-    }
-
       public function renderToolbar($toolbar)
     {
       echo $this->getSortingToolbarTemplate($toolbar);
@@ -117,7 +93,7 @@ TOOLBAR;
     {
       $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All '. $typeOfToolbar .'</li>';
 
-      $terms = get_terms("destinations");
+      $terms = get_terms(strtolower($typeOfToolbar));
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
                 $template .= sprintf('<li class="filter-button" data-filter=".%s">%s</li>', strtolower($term->slug), $term->name);
