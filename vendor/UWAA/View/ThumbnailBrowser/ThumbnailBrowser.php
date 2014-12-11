@@ -74,7 +74,7 @@ public function buildSortingToolbar($taxonomyName){
 
 
         //This builds a clear-filters button  (passes a blank filter to Isotope)
-        echo '<button class="button btn filter-button" data-filter="">Clear Filters</button>';
+        echo '<button class="button btn filter-button" data-filter="">All  Filters</button>';
         $terms = get_terms("$taxonomyName");
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
@@ -96,14 +96,16 @@ public function buildSortingToolbar($taxonomyName){
     private function getSortingToolbarTemplate()
     {
       
-      $buttons = $this->renderFilterButtons();
+      $buttons = $this->renderFilterButtons('Tours');
       $template = <<<TOOLBAR
       <div class="filter-row">
+      <div id="filters">
       <h2 class="filter-head">FILTER:</h2>
         $buttons
-      </ul>
+      
 
 
+      </div>
       </div>
 
 TOOLBAR;
@@ -111,10 +113,19 @@ TOOLBAR;
       return $template;
     }
 
-    private function renderFilterButtons() 
+    private function renderFilterButtons($typeOfThumbnailsToSort) 
     {
-      $template = '<ul id="filters" class="filter-group"><li class="filter-button" data-filter="">Clear Filters</li>';
+      $template = '<ul class="filter-group"><li class="filter-button" data-filter="">All '. $typeOfThumbnailsToSort .'</li>';
 
+      $terms = get_terms("destinations");
+        if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
+            foreach ( $terms as $term ) {
+                $template .= sprintf('<li class="filter-button" data-filter=".%s">%s</li>', strtolower($term->slug), $term->name);
+        }     
+        
+        endif;
+
+      $template .= '</ul>';
       return $template;
     }
 

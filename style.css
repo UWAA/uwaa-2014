@@ -138,22 +138,38 @@
   width: 100%;
   height: 100px;
 }
-.filter-row .filter-head {
-  display: inline-block;
+.filter-row {
+  margin-bottom: 20px;
+  display: table;
+  border-top: solid 1px #b7a57a;
+  border-bottom: solid 1px #b7a57a;
+  width: 75%;
+}
+.filter-row h2.filter-head {
+  display: table-cell;
+  font-family: "Encode Sans Compressed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 1.7em;
 }
 #filters {
-  display: inline-block;
-  font-family: "Encode Sans Compressed", sans-serif;
-  font-weight: 800;
-  font-size: 1em;
-  padding: 5px 10px 21px 15px;
-  padding-left: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+#filters ul {
+  padding-left: 10px;
   padding-right: 0;
   margin: 0;
   list-style: none;
+  display: table-cell;
+  font-family: "Encode Sans Compressed", sans-serif;
+  font-weight: 400;
+  color: #3d3d3d;
+  font-size: 1.3em;
 }
-#filters li {
+#filters ul li {
   display: inline-block;
+  padding-left: 15px;
 }
 h2.date {
   color: #5a5a5a;

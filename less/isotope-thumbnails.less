@@ -73,27 +73,46 @@
 }
 
 .filter-row{
+    margin-bottom:20px;
+    display:table;
+    border-top: solid 1px @lightgold;
+    border-bottom: solid 1px @lightgold;
+    width: 75%;
     
-    .filter-head {
-        display: inline-block;    
+    h2.filter-head {
+        display: table-cell;        
+        font-family: "Encode Sans Compressed", sans-serif;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 1.7em;        
     }
     
     
 }
 
 #filters {
-    display: inline-block;
-    font-family: "Encode Sans Compressed", sans-serif;
-    font-weight: 800;
-    font-size: 1em;
-    padding: 5px 10px 21px 15px;
-    padding-left: 0;
+    display: table-cell;       
+    
+    vertical-align: middle;
+
+
+    
+    ul {
+    padding-left: 10px;
     padding-right: 0;
     margin: 0;
     list-style: none;
+    display: table-cell;
+    font-family: "Encode Sans Compressed", sans-serif;    
+    font-weight: 400;
+    color: @janegray;
+    font-size: 1.3em;
 
-    li {
-    display: inline-block;
+    li{
+        display:inline-block;
+        padding-left: 15px;
+    }
+    
 }
 
 
