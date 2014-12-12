@@ -164,13 +164,23 @@ class SidebarFeaturedPost extends \WP_Widget
         
     endwhile;
 
+
+
     wp_reset_postdata();    
   }
+
+   private function renderCallout(){
+    if ($this->postCalloutText){
+      return '<span>'.$this->postCalloutText.'</span>';
+    }
+    return;
+   }
 
   public function widget( $args, $instance )
   {
      $this->setCurrentPostInformation();
      $this->getPostsToDisplay();
+     $callout = $this->renderCallout();
 
     // extract( $args );
     // extract( $instance );
@@ -192,7 +202,7 @@ echo <<<CONTENT
    <a href="$this->postURL">
     <div class="image-frame">   
    <img src="$this->postSidebarImage" />
-   <span>$this->postCalloutText</span>
+   $callout
    </div>
    <div class="copy">
    <h4>$this->postTitle<h4>
