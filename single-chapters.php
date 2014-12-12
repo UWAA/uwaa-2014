@@ -47,7 +47,7 @@
 
     <div class="col-md-4 uw-sidebar">
     <?php 
-        
+        dynamic_sidebar( 'communities' ); 
         endwhile;
     ?>
     </div>

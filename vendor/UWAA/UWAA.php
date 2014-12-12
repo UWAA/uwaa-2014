@@ -58,7 +58,7 @@ class UWAA
         new \UWAA\API\RequestHandler($this->wp);  //Sets up the UWAA API for specialized feeds
 
         //Widgets
-        new \UWAA\Widgets\SidebarFeaturedTour();
+        new \UWAA\Widgets\SidebarFeaturedPost();
         new \UWAA\Widgets\SidebarPullQuote();
 
 

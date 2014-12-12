@@ -36,7 +36,7 @@ class ContentPromotion
             'show_tagcloud'              => true,            
         );
            
-            register_taxonomy( 'uwaa_content_promotion', array( 'posts', 'events', 'benefits', 'tours', 'chapters' ), $args );
+            register_taxonomy( 'uwaa_content_promotion', array( 'post', 'events', 'benefits', 'tours', 'chapters' ), $args );
         }
 
 } 
