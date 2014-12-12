@@ -136,7 +136,7 @@ class SidebarFeaturedPost extends \WP_Widget
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'name',
-          'terms'    => $promotedContentSource
+          'terms'    => array( $promotedContentSource, 'sitewide')
 
           )
       ) //End tax query    
