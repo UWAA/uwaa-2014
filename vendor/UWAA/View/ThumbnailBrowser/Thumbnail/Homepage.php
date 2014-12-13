@@ -88,8 +88,8 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 public function buildTemplate() {
 
 $template = <<<TEMPLATE
-<div class="post-thumbnail-slide">
-  <a href="{$this->postURL}">
+<div class="featured-post">
+<a href="{$this->postURL}">
     <div class="image-frame">
       <img src="{$this->postImageThumbnailURL}" alt="">
       <span>{$this->postCalloutText}</span>

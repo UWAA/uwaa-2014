@@ -5,7 +5,9 @@
   
 ?>
 
-<div class="uwaa-hero-image" style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+<div class="uwaa-chapter-header">
+<?php get_template_part('partials/chapter-header') ?>
+</div>
 
 <div class="container uw-body">
 

@@ -28,7 +28,7 @@ class ThumbnailBrowser
   //Default to text entered by an editor, but then check and see if a Tour or Benefit Tag applies and use that instead.
   protected function getPostSubtitle($post)
   {
-    $postSubtitle = get_post_meta(get_the_ID(), 'thumbnail_subtitle', true);
+    $postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
 
     if (!empty($postSubtitle)):
         return $postSubtitle;

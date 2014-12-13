@@ -1,0 +1,57 @@
+// chapter-header.less
+
+.uwaa-chapter-header {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    background-color: @purple;
+}
+
+.chapter-image-column{
+    .make-sm-column(6);
+    
+}
+
+.chapter-image{
+    .make-sm-column(12);
+    height:300px;
+    background-color: @brightgold;
+
+}
+
+.chapter-logo{
+    .make-sm-column(12);
+    height:150px;
+    background-color: @darkgold;
+}
+
+.event-information-column{
+    .make-sm-column(6);
+    height:100%;
+}
+
+
+//Tablet range, cut height in half but keep all content
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 480px) {
+    .uwaa-chapter-header {
+    height: 200px;
+    }
+
+    .chapter-image{
+        .responsive-invisibility();
+        
+    }
+
+    .chapter-logo{
+        height: 100px;
+        
+    }
+
+    .event-information-column{
+        height: 100px;
+    }
+   
+}
