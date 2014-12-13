@@ -18,7 +18,8 @@ class MetaBoxes
         {
             $pagesToRemoveBoxesFrom = array(
                 'post',
-                'page'
+                'page',
+                'events'
                 );
             $boxesToRemove = array(
                 'postcustom',
@@ -133,7 +134,7 @@ class MetaBoxes
         protected function add_pullquote_meta() {
             new \UWAA\CustomPostData('pullquote_elements', array(
                 'title' => 'Pull Quote Information',
-                'pages' => array('tours', 'benefits', 'posts'),  //add events, regional pages as they are ready
+                'pages' => array('tours', 'events' , 'benefits', 'post', 'chapters'),  //add events, regional pages as they are ready
                 'context' => 'side',
                 'priority' => 'default',
                 'fields' => array(
@@ -240,7 +241,7 @@ class MetaBoxes
 
 
         protected function add_event_meta() {
-            new \UWAA\CustomPostData('pullquote_elements', array(
+            new \UWAA\CustomPostData('event_elements', array(
                 'title' => 'Event Post Information',
                 'pages' => array('events'),  //add events, regional pages as they are ready
                 'context' => 'normal',

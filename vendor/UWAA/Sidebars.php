@@ -47,6 +47,13 @@ class Sidebars {
                 'before_widget' => self::BEFORE_WIDGET,
                 'after_widget'  => self::AFTER_WIDGET
                 ),
+            'events' => array (
+                'name'          => 'Events',
+                'id'            => 'events_sidebar',
+                'description'   => 'Sidebar for Events Pages',
+                'before_widget' => self::BEFORE_WIDGET,
+                'after_widget'  => self::AFTER_WIDGET
+                ),
 
             ));
     }  
