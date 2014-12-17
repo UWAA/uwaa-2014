@@ -28,7 +28,7 @@ class Events
                 'label'               => 'events',
                 'description'         => 'These posts hold all Events, including ACR led events as well as constituency groups.',
                 'labels'              => $labels,
-                'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
+                'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'excerpt' ),
                 'taxonomies'          => array('events'),
                 'hierarchical'        => false,
                 'public'              => true,

@@ -10,9 +10,9 @@ class Events
         public static function setup_events_taxonomy() 
         {             
         $labels = array(
-            'name'                       => _x( 'Event Categories', 'Taxonomy General Name'),
-            'singular_name'              => _x( 'Event Category', 'Taxonomy Singular Name'),
-            'menu_name'                  => __( 'Event Categories'),
+            'name'                       => _x( 'Event Sorting Categories', 'Taxonomy General Name'),
+            'singular_name'              => _x( 'Event Sorting Category', 'Taxonomy Singular Name'),
+            'menu_name'                  => __( 'Event Sorting Categories'),
             'all_items'                  => __( 'All Event Categories'),
             'parent_item'                => __( 'Parent location'),
             'parent_item_colon'          => __( 'Parent location:'),

@@ -39,7 +39,9 @@ class UWAA
         new \UWAA\Taxonomies\ContentPromotion;
         new \UWAA\Taxonomies\Events;
         new \UWAA\Taxonomies\Benefits;
-        //TODO  Merge taxonomies into their one class.
+        
+        //Relabels Tags
+        new \UWAA\Taxonomies\RenameTags;
 
 
         //Custom Post Types
