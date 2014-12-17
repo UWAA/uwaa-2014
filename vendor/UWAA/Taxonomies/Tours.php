@@ -10,9 +10,9 @@ class Tours
         public static function setup_tours_taxonomy() 
         {             
         $labels = array(
-            'name'                       => _x( 'Tour Categories', 'Taxonomy General Name'),
-            'singular_name'              => _x( 'Tour Category', 'Taxonomy Singular Name'),
-            'menu_name'                  => __( 'Tour Categories'),
+            'name'                       => _x( 'Tour Sorting Categories', 'Taxonomy General Name'),
+            'singular_name'              => _x( 'Tour Sorting Category', 'Taxonomy Singular Name'),
+            'menu_name'                  => __( 'Tour Sorting Categories'),
             'all_items'                  => __( 'All Tour Categories'),
             'parent_item'                => __( 'Parent location'),
             'parent_item_colon'          => __( 'Parent location:'),

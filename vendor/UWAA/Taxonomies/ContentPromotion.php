@@ -10,8 +10,8 @@ class ContentPromotion
         public static function setup_contentPromotion_taxonomy() 
         {             
         $labels = array(
-            'name'                       => _x( 'UWAA Content Promotion', 'Taxonomy General Name'),
-            'singular_name'              => _x( 'UWAA Content Promotion', 'Taxonomy Singular Name'),
+            'name'                       => _x( 'UWAA Content Promotion Tag', 'Taxonomy General Name'),
+            'singular_name'              => _x( 'UWAA Content Promotion Tags', 'Taxonomy Singular Name'),
             'menu_name'                  => __( 'UWAA Content Promotion'),
             'all_items'                  => __( 'All Content Promotions'),            
             'new_item_name'              => __( 'New area to promote content'),

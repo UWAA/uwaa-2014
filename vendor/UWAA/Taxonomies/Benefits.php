@@ -10,9 +10,9 @@ class Benefits
         public static function setup_benefits_taxonomy() 
         {             
         $labels = array(
-            'name'                       => _x( 'Benefits Categories', 'Taxonomy General Name'),
-            'singular_name'              => _x( 'Benefits Category', 'Taxonomy Singular Name'),
-            'menu_name'                  => __( 'Benefits Categories'),
+            'name'                       => _x( 'Benefit Sorting Categories', 'Taxonomy General Name'),
+            'singular_name'              => _x( 'Benefit Sorting Category', 'Taxonomy Singular Name'),
+            'menu_name'                  => __( 'Benefit Sorting Categories'),
             'all_items'                  => __( 'All Benefits Categories'),
             'parent_item'                => __( 'Parent location'),
             'parent_item_colon'          => __( 'Parent location:'),

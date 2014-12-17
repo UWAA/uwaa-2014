@@ -5,21 +5,38 @@ class MetaBoxes
 
     function __construct() {
         $this->add_tours_meta();
+        $this->add_tours_map_meta();
         $this->add_thumbnail_meta();
         $this->add_pullquote_meta();
         $this->add_regional_chapter_meta();
         $this->add_benefit_meta();
         $this->add_event_meta();
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
+        add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
+        add_filter('do_meta_boxes', array($this, 'renameFeaturedImage'), 0);
 
     }
+
+        public function renameFeaturedImage() {
+
+            $screen = get_current_screen();
+            remove_meta_box( 'postimagediv', $screen, 'side' );
+            add_meta_box('postimagediv', __('Post Header/Thumbnail Image'), 'post_thumbnail_meta_box', $screen, 'side', 'high');
+        }        
+
+        public function moveEditorBox() {
+            global $post, $wp_meta_boxes;
+            do_meta_boxes(get_current_screen(), 'advanced', $post);
+            unset($wp_meta_boxes[get_post_type($post)]['advanced']);
+        }
 
         public function removeUnusedMetaBoxes()
         {
             $pagesToRemoveBoxesFrom = array(
                 'post',
                 'page',
-                'events'
+                'events',
+                'tours'
                 );
             $boxesToRemove = array(
                 'postcustom',
@@ -33,8 +50,8 @@ class MetaBoxes
                 endforeach;
             endforeach;
 
-            // remove_meta_box('formatdiv', 'post', 'normal');
-            remove_meta_box('tagsdiv-post_tag', 'post', 'normal');
+            remove_meta_box('formatdiv', 'post', 'normal');
+            // remove_meta_box('tagsdiv-post_tag', 'post', 'normal');
             
         }
 
@@ -46,23 +63,17 @@ class MetaBoxes
                 'priority' => 'high',
                 'fields' => array(
                     array(
-                        'name' => 'Latitude/Longitude',
-                        'id'=> 'lat_long',
+                        'name' => 'Start Date',
+                        'id'=> 'start_date',
                         'type'=> 'text',
-                        'desc'=> 'The latitude, longitude coordinates for the trip.  Use this to precisely position the marker.'
+                        'desc'=> 'The date this tour starts.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
                         ),
                     array(
-                        'name' => 'Tour Thumbnail/Map Title',
-                        'id'=> 'marker_position',
-                        'type'=> 'text',
-                        'desc'=> "Title . If you omit Lat/Long, this will be used to place the marker on the tour map."
-                        ),
-                    array(
-                        'name' => 'Map Excerpt',
-                        'id'=> 'map_excerpt',
-                        'type'=> 'text',
-                        'desc'=> "This is the text that will show up in the map. Limit to XX characters. "
-                        ),                    
+                     'name' => 'Cosmetic Tour Start Date',
+                     'id'=> 'cosmetic_date',
+                     'type'=> 'text',
+                     'desc'=> "Appears over header image, ont the tour map, and in promotion thumbnails "
+                    ),
                     array(
                         'name' => 'Tour Operator',
                         'id'=> 'operator',
@@ -70,23 +81,30 @@ class MetaBoxes
                         'desc'=> "The name of the tour operator."
                         ),
                     array(
-                        'name' => 'Operator Provided Map URL',
-                        'id'=> 'operator_map',
-                        'type'=> 'text',
-                        'desc'=> "Provide the URL for the Tour Map you have uploaded via the media gallery (or on this page)."
-                        ),
-                    array(
-                        'name' => 'Operator Signup Form',
-                        'id'=> 'operator_form',
-                        'type'=> 'text',
-                        'desc'=> "Provide the URL for the signup form that for this tour. This could be uploaded through the media gallery or a link to a previously updated form"
-                        ),
-                    array(
                         'name' => 'Tour Price',
                         'id'=> 'price',
                         'type'=> 'text',
-                        'desc'=> "The price of the tour.  Input the number only with a comma."
-                        ),                   
+                        'desc'=> "The price of the tour. E.g. \"From $200\" "
+                        ),
+                    array(
+                        'name' => 'Thumbnail Callout Box',
+                        'id'=> 'thumbnail_callout',
+                        'type'=> 'text',
+                        'desc'=> "This text will show up in the small purple line on the thumbnail."
+                        ),
+                    array(
+                        'name' => 'Content Head',
+                        'id'=> 'thumbnail_subtitle',
+                        'type'=> 'text',
+                        'desc'=> "Small gold text that appears below the image in a featured post.  Defaults to region specified in \"Tour Sorting Categories\" , or can be overwritten with this field."
+                        ),                                                             
+                    array(
+                        'name' => 'Tour Map Image',
+                        'id'=> 'operator_map',
+                        'type'=> 'text',
+                        'desc'=> "Provide the URL for the Tour Map you have uploaded to WordPress (via the Media Gallery or this page)."
+                        ),
+                                       
 
                 )
             )
@@ -94,10 +112,66 @@ class MetaBoxes
 
         }
 
+        protected function add_tours_map_meta() {
+            new \UWAA\CustomPostData('thumbnail_information', array(
+                'title' => 'Map-Specific Information',
+                'pages' => array( 'tours'),  
+                'context' => 'normal',
+                'priority' => 'default',
+                'fields' => array(
+                    array(
+                        'name' => 'Latitude/Longitude',
+                        'id'=> 'lat_long',
+                        'type'=> 'text',
+                        'desc'=> 'The latitude, longitude coordinates for the trip.  Use this to precisely position the map-marker.'
+                        ),
+                    array(
+                        'name' => 'Map Title',
+                        'id'=> 'marker_position',
+                        'type'=> 'text',
+                        'desc'=> "Title For the Map. If you omit Lat/Long, this will be used to place the marker on the tour map."
+                        ),
+                    array(
+                        'name' => 'Map Excerpt',
+                        'id'=> 'map_excerpt',
+                        'type'=> 'text',
+                        'desc'=> "This is the text that will show up in the map. Limit to XX characters. "
+                        )                    
+                )
+            )
+            );
+
+        }
+
+        protected function add_chapter_map_meta() {
+            new \UWAA\CustomPostData('map_information', array(
+                'title' => 'Map-Specific Information',
+                'pages' => array( 'tours'),  //add events, regional pages as they are ready
+                'context' => 'core',
+                'priority' => 'default',
+                'fields' => array(
+                    array(
+                        'name' => 'Latitude/Longitude',
+                        'id'=> 'lat_long',
+                        'type'=> 'text',
+                        'desc'=> 'The latitude, longitude coordinates for the trip.  Use this to precisely position the map-marker.'
+                        ),                    
+                    array(
+                        'name' => 'Map Excerpt',
+                        'id'=> 'map_excerpt',
+                        'type'=> 'text',
+                        'desc'=> "This is the text that will show up in the map under the Chapter logo. Limit to XX characters."
+                        )                    
+                )
+            )
+            );
+}
+
+
          protected function add_thumbnail_meta() {
             new \UWAA\CustomPostData('thumbnail_information', array(
                 'title' => 'Post Thumbnail Information',
-                'pages' => array('tours', 'benefits', 'events', 'post'),  //add events, regional pages as they are ready
+                'pages' => array( 'benefits', 'post'),  //add events, regional pages as they are ready
                 'context' => 'advanced',
                 'priority' => 'default',
                 'fields' => array(
@@ -123,7 +197,7 @@ class MetaBoxes
                         'name' => 'Content Head',
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
-                        'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour, or can be overwritten with this field."
+                        'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour, or can be overwritten with this field.  Homepage featured posts should have this."
                         ),                    
                 )
             )
@@ -133,7 +207,7 @@ class MetaBoxes
 
         protected function add_pullquote_meta() {
             new \UWAA\CustomPostData('pullquote_elements', array(
-                'title' => 'Pull Quote Information',
+                'title' => 'Post Pull Quote',
                 'pages' => array('tours', 'events' , 'benefits', 'post', 'chapters'),  //add events, regional pages as they are ready
                 'context' => 'side',
                 'priority' => 'default',
@@ -241,14 +315,38 @@ class MetaBoxes
 
 
         protected function add_event_meta() {
-            new \UWAA\CustomPostData('event_elements', array(
+            new \UWAA\CustomPostData('events', array(
                 'title' => 'Event Post Information',
                 'pages' => array('events'),  //add events, regional pages as they are ready
-                'context' => 'normal',
-                'priority' => 'default',
+                'context' => 'advanced',
+                'priority' => 'high',
                 'fields' => array(
                     array(
-                     'name' => 'Event Location',
+                        'name' => 'Start Date',
+                        'id'=> 'start_date',
+                        'type'=> 'text',
+                        'desc'=> 'The date this event.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
+                        ),
+                    array(
+                     'name' => 'Cosmetic Event Start Date',
+                     'id'=> 'cosmetic_date',
+                     'type'=> 'text',
+                     'desc'=> "Appears over header image and under promotion thumbnails."
+                    ),                    
+                    array(
+                        'name' => 'Callout Box',
+                        'id'=> 'thumbnail_callout',
+                        'type'=> 'text',
+                        'desc'=> "This text will show up in the small purple line on the thumbnail."
+                        ),
+                    array(
+                        'name' => 'Content Head',
+                        'id'=> 'thumbnail_subtitle',
+                        'type'=> 'text',
+                        'desc'=> "Small gold text that appears below the image in a featured post thumbnail.  E.g. New York Huskies, Member 101 Series."
+                        ),                                     
+                    array(
+                     'name' => 'Location',
                      'id'=> 'event_location',
                      'type'=> 'text',
                      'desc'=> "H5 - Where the event will be held - e.g. Kane Hall 120, UW Seattle Campus"
@@ -258,8 +356,9 @@ class MetaBoxes
                         'id'=> 'event_time',
                         'type'=> 'text',
                         'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
-                        )                                     
-                )
+                        ),
+
+                    )
             )
             );
 
