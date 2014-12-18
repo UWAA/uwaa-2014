@@ -22,7 +22,7 @@
 
         //Template for Custom Tooltip        
         var popupContent = '<a href="' + feature.properties.link + '">' +
-                            '<p class="map-title">' + feature.properties.logourl +  '</p></a>' +
+                            '<div class="map-logo '+ feature.properties.logo +'"></div>' +
                             '<p class="map-excerpt">' + feature.properties.excerpt + '</p>' +
                             '<a class="map-link" href="' + feature.properties.link + '">' +
                             'Learn More' +

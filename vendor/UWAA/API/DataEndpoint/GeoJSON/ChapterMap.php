@@ -42,9 +42,9 @@ public function build($endpointData)
 	protected function getFeatureContents($post)
     {
         $featureContents = [
-            'logourl' => htmlspecialchars(get_the_title($post->ID)),
-            'link' => get_permalink($post->ID),
-            'excerpt' => htmlspecialchars(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
+            'logo' => htmlentities($post->post_name),
+            'link' => htmlentities(get_permalink($post->ID)),
+            'excerpt' => htmlentities(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
             'marker-color' => '#4b2e83'
             
         ];

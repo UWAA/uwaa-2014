@@ -5,9 +5,12 @@ wp_enqueue_style('mapbox');
 
 ?>
 
-
-
-<div class="uw-hero-image"></div>
+<div class="container">
+<?php get_template_part( 'breadcrumbs' ); ?>
+</div>
+<div class="communities-header">
+  <?php get_template_part('partials/communities-header') ?>
+</div>
 
 <div class="container uw-body">
 
@@ -15,9 +18,9 @@ wp_enqueue_style('mapbox');
 
     <div class="col-md-8 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+      
 
-      <?php get_template_part( 'breadcrumbs' ); ?>
+      
 
       <div class="uw-body-copy">
 

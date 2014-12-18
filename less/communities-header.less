@@ -1,0 +1,81 @@
+// communities-header.less
+
+
+.communities-header {
+    .make-row();
+    height: 400px;
+    
+
+
+.chapter-image-column{
+    .make-sm-column(6);
+    
+}
+
+.chapter-image-row{
+    .make-row();
+    height: 260px;
+}
+.chapter-image{
+    .make-sm-column(12);
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url('assets/FPO/NYHuskies_Photo_800x160.jpg');
+
+}
+
+
+.chapter-logo {
+    .make-sm-column(12);
+    height:140px;
+    background-color: @gray;
+    text-align: center;
+
+
+    svg {
+        height:100%;
+        
+    
+
+        #Huskies path{
+            fill: @purple;
+        }
+    }
+}    
+    
+
+
+
+.event-information-column{
+    .make-sm-column(6);
+    height:100%;
+    background-color: @purple;
+}
+}
+
+
+//Tablet range, cut height in half but keep all content
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .uwaa-chapter-header {
+    height: 200px;
+    }
+
+    .chapter-image{
+        .responsive-invisibility();
+        
+    }
+
+    .chapter-logo{
+        height: 100px;
+        
+    }
+
+    .event-information-column{
+        height: 100px;
+    }
+   
+}

@@ -16,7 +16,7 @@ class UI
         new Shortcodes\Button();
     }
 
-    public function getPostFeaturedImageURL($id, $size)
+    public static function getPostFeaturedImageURL($id, $size)
     {
         
         $url = wp_get_attachment_image_src($id, $size);

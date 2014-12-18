@@ -74,7 +74,11 @@
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after {
+.modal-footer:after,
+.communities-header:before,
+.communities-header:after,
+.communities-header .chapter-image-row:before,
+.communities-header .chapter-image-row:after {
   content: " ";
   display: table;
 }
@@ -91,7 +95,9 @@
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer:after,
+.communities-header:after,
+.communities-header .chapter-image-row:after {
   clear: both;
 }
 #isotope-canvas {
@@ -213,7 +219,6 @@ a.uwaa-btn {
   line-height: 1.3;
   text-transform: uppercase;
   padding: .412em;
-  z-index: 0;
   display: inline-block;
 }
 a.uwaa-btn.btn-gold {
@@ -281,66 +286,131 @@ a.uwaa-btn.btn-slant-right:before {
   }
 }
 .uwaa-chapter-header {
-  position: relative;
-  height: 450px;
+  height: 260px;
   overflow: hidden;
-  background-color: #4b2e83;
 }
-.chapter-image-column {
+.uwaa-chapter-header .chapter-image-column {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  height: inherit;
+  background-size: cover;
+  background-position: center;
 }
 @media (min-width: 768px) {
-  .chapter-image-column {
+  .uwaa-chapter-header .chapter-image-column {
     float: left;
     width: 50%;
   }
 }
-.chapter-image {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 300px;
-  background-color: #ffd800;
-}
-@media (min-width: 768px) {
-  .chapter-image {
-    float: left;
-    width: 100%;
-  }
-}
-.chapter-logo {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 150px;
-  background-color: #85754d;
-}
-@media (min-width: 768px) {
-  .chapter-logo {
-    float: left;
-    width: 100%;
-  }
-}
-.event-information-column {
+.uwaa-chapter-header .chapter-logo {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   height: 100%;
+  background-color: #4b2e83;
+  text-align: center;
+  padding: 0;
 }
 @media (min-width: 768px) {
-  .event-information-column {
+  .uwaa-chapter-header .chapter-logo {
+    float: left;
+    width: 50%;
+  }
+}
+.uwaa-chapter-header .chapter-logo svg {
+  height: 100%;
+  width: 70%;
+}
+.uwaa-chapter-header .chapter-logo svg #Huskies path {
+  fill: #ffffff;
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .uwaa-chapter-header {
+    height: 200px;
+  }
+  .uwaa-chapter-header .chapter-image-column {
+    display: none !important;
+  }
+}
+.communities-header {
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 400px;
+}
+.communities-header .chapter-image-column {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .communities-header .chapter-image-column {
+    float: left;
+    width: 50%;
+  }
+}
+.communities-header .chapter-image-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 260px;
+}
+.communities-header .chapter-image {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url('assets/FPO/NYHuskies_Photo_800x160.jpg');
+}
+@media (min-width: 768px) {
+  .communities-header .chapter-image {
+    float: left;
+    width: 100%;
+  }
+}
+.communities-header .chapter-logo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 140px;
+  background-color: #c9c9c9;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .communities-header .chapter-logo {
+    float: left;
+    width: 100%;
+  }
+}
+.communities-header .chapter-logo svg {
+  height: 100%;
+}
+.communities-header .chapter-logo svg #Huskies path {
+  fill: #4b2e83;
+}
+.communities-header .event-information-column {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  background-color: #4b2e83;
+}
+@media (min-width: 768px) {
+  .communities-header .event-information-column {
     float: left;
     width: 50%;
   }
 }
 /* Small Devices, Tablets */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .uwaa-chapter-header {
     height: 200px;
   }
@@ -353,6 +423,22 @@ a.uwaa-btn.btn-slant-right:before {
   .event-information-column {
     height: 100px;
   }
+}
+div.map-logo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  background-position: 50% 50%;
+  margin-bottom: 10px;
+}
+div.map-logo #Huskies path {
+  fill: #4b2e83;
+}
+div.map-logo.new-york-city {
+  background-image: url(assets/logos/chapters/NY-Huskies-386x87.png);
+}
+.leaflet-popup-content {
+  max-width: 250px;
 }
 #map {
   position: absolute;
