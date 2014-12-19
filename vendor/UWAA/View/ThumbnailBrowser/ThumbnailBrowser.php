@@ -58,7 +58,6 @@ class ThumbnailBrowser
           'fields' => 'names'
           );
         $tourPostTerms = wp_get_post_terms(get_the_id(), 'destinations', $getTermsArgs);
-        // var_dump($tourPostTerms);
         $result = array_values(array_intersect($toursRegions, $tourPostTerms));
         return $result[0];  
     endif;

@@ -21,7 +21,8 @@ class UWAA
     private function initialize()
     {
             
-        
+        //Front-End specific helper functions
+        $this->UI = new \UWAA\View\UI;
 
 
         //Scripts needed on all pages of the theme, and registrations for ad-hoc scripts.
@@ -63,9 +64,11 @@ class UWAA
         new \UWAA\Widgets\SidebarFeaturedPost();
         new \UWAA\Widgets\SidebarPullQuote();
 
+        // //SuperHero Slideshow (from UW Homepage)
+        // new \UWAA\Slideshow\Slideshow;
 
-        //Front-End specific helper functions
-        $this->UI = new \UWAA\View\UI;
+
+        
         
 
         

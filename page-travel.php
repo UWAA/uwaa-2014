@@ -1,13 +1,24 @@
 <?php 
 get_header(); 
-wp_enqueue_script('toursMap');
+wp_enqueue_script(array('toursMap', 'superHero'));
 wp_enqueue_style('mapbox');
 
 ?>
 
 
 
-<div class="uw-hero-image"></div>
+<?php 
+
+
+if(class_exists('\UWAA\Slideshow\TravelSlideshow')):
+
+$superhero = new \UWAA\Slideshow\TravelSlideshow("travel-superhero");
+
+include(locate_template('content-slideshow.php'));
+
+endif;
+
+?>
 
 <div class="container uw-body">
 
@@ -15,7 +26,7 @@ wp_enqueue_style('mapbox');
 
     <div class="col-md-8 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+     
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 

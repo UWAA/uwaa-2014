@@ -116,6 +116,14 @@ class Scripts
         'admin'   => false
         
       ),
+        'superHero' => array (
+        'id'      => 'superHero',
+        'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/uw.slider'. $this->min_script() .'.js',
+        'deps'    => array( 'backbone' ),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false,
+    )
 
     
 
