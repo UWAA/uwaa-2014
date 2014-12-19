@@ -786,7 +786,7 @@ div.map-logo.new-york-city {
   background: url(../uw-2014/assets/svg/uw-sprite.svg) no-repeat -630px 0px;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 71px;
   width: 38px;
   height: 112px;
   margin-right: 279px;
@@ -807,7 +807,7 @@ div.map-logo.new-york-city {
   text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.4);
   position: absolute;
   right: 15%;
-  bottom: 35px;
+  bottom: 90px;
   width: 240px;
 }
 .uw-homepage-slider-container .slideshow-controls .next-headline:after {

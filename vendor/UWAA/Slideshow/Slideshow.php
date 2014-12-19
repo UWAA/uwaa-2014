@@ -77,16 +77,15 @@ public function get_latest_slideshow()
 
     if ( $slideshow->have_posts()  ) :
 
-      // var_dump($slideshow);
+    
     while ( $slideshow->have_posts() ) : $slideshow->the_post();
-    // var_dump($slideshow);
-    // echo $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($slideshow->ID), 'original');
+    
     $slidesContent = array (
         'id' => get_the_id(),
         'title' => get_the_title(),
         'image' => $UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_id()), 'original'),
         'text' => get_the_excerpt(),
-        'link' => the_permalink(get_the_id())
+        'link' => get_the_permalink(get_the_id())
         );
 
     $load = (object) $slidesContent;
@@ -96,7 +95,7 @@ public function get_latest_slideshow()
     endwhile;
     endif;
 
-    // var_dump($slides);
+    
     
     wp_reset_postdata();
      return $slides ? json_decode( json_encode( array_reverse( $slides ) ) ) : array();
