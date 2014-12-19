@@ -33,7 +33,8 @@ class ChapterHeaderLogo {
     {
         $this->chapterSlugs = array (
             'new-york-city',
-            'los-angeles'
+            'los-angeles',
+            'anchorage'
             );
     }
 

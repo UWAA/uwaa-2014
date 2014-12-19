@@ -13,7 +13,9 @@ class UI
         
 
     private function initShortcodes(){
-        new Shortcodes\Button();
+        new Shortcodes\Button;
+        new Shortcodes\RegionalFacts;
+        new Shortcodes\Accordions;
     }
 
     public static function getPostFeaturedImageURL($id, $size)

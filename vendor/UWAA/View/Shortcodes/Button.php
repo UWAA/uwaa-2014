@@ -15,7 +15,7 @@ class Button
         add_shortcode('uwaa-button', array($this, 'button_handler'));        
     }
 
-    function button_handler($atts, $content)
+    public function button_handler($atts, $content)
     {
         $attributes = (object) $atts;
 
