@@ -3,9 +3,12 @@
   while ( have_posts() ) : the_post();
   
   
+
 ?>
 
-<div class="uwaa-hero-image" style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+
+
+<div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
 
 <div class="container uw-body">
 

@@ -19,7 +19,7 @@ wp_enqueue_script('isotopeInit');
       // get_template_part( 'breadcrumbs' );
       echo 'TODO- Custom Post Breadcrumbs'; ?>
 
-      <h1><?php the_title() ?></h1>
+      <h1>Membership Benefits</h1>
 
       <div class="uw-body-copy">
         <div id="isotope-canvas">

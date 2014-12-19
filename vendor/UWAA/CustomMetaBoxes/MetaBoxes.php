@@ -11,6 +11,7 @@ class MetaBoxes
         $this->add_regional_chapter_meta();
         $this->add_benefit_meta();
         $this->add_event_meta();
+        $this->add_header_text_toggle();
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
         add_filter('do_meta_boxes', array($this, 'renameFeaturedImage'), 0);
@@ -209,7 +210,7 @@ class MetaBoxes
             new \UWAA\CustomPostData('pullquote_elements', array(
                 'title' => 'Post Pull Quote',
                 'pages' => array('tours', 'events' , 'benefits', 'post', 'chapters'),  //add events, regional pages as they are ready
-                'context' => 'side',
+                'context' => 'core',
                 'priority' => 'default',
                 'fields' => array(
                     array(
@@ -304,6 +305,12 @@ class MetaBoxes
                         'id'=> 'benefit_promotion',
                         'type'=> 'textarea',
                         'desc'=> "Text to be displayed only if the user is logged in.  Such as promotional codes/offer details."
+                        ),                
+                    array(
+                        'name' => 'Benefit Provider Logo:',
+                        'id'=> 'benefit_provider_logo',
+                        'type'=> 'text',
+                        'desc'=> "URL for the uploaded Benefit Provider Logo"
                         ), 
                      
 
@@ -363,6 +370,33 @@ class MetaBoxes
             );
 
         }
+
+        protected function add_header_text_toggle() {
+            new \UWAA\CustomPostData('header_toggle', array(
+                'title' => 'Event Post Information',
+                'pages' => array('events', 'tours'),  //add events, regional pages as they are ready
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Header Text Color',
+                        'id'=> 'header_text_color',
+                        'type'=> 'select',
+                        'default' => 'white_text',
+                        'options' => array(
+                                'purple-header-overlay' => 'Purple Text', 
+                                'white-header-overlay' => 'White Text'
+                                ),
+                        'desc'=> 'Text overlays the hero image on this post type.  Choose between Purple and White text'
+                        ),
+                    )
+            )
+            );
+
+        }
+
+
+
 
 
 

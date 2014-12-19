@@ -37,8 +37,8 @@ class SidebarPullQuote extends \WP_Widget
   private function extractPostInformation() 
   {
         $currentPostID = get_the_ID();    
-        $this->quoteText = strip_tags(get_post_meta($currentPostID, 'mb_pull-quote-text', true));
-        $this->quoteAuthor = strip_tags(get_post_meta($currentPostID, 'mb_pull-quote-attribution', true));     
+        $this->quoteText = htmlspecialchars(get_post_meta($currentPostID, 'mb_pull-quote-text', true));
+        $this->quoteAuthor = htmlspecialchars(get_post_meta($currentPostID, 'mb_pull-quote-attribution', true));     
        
   }
 

@@ -50,28 +50,35 @@ class CustomPostData {
         foreach ($this->meta_box['fields'] as $field) {
             extract($field);
             $id = self::$prefix . $id;
-            $value = self::get($field['id']);
+            $value = self::get($field['id']);          
+            
 
         // Input Type Array
         $lookup = array(
         "text" => "<input type=\"text\" name=\"$id\" value=\"$value\" class=\"widefat\" />",
         "textarea" => "<textarea name='$id' class='widefat' rows='10'>$value</textarea>",
-        "editor" => 1,
         "checkbox" => "<input type='checkbox' name='$id' value='$name' />",
-        "select" => isset($select) ? $select : '',
+        "select" => $type == 'select' ? $this->renderSelect($id, $options, $value) : '' ,
         "file" => "<input type='file' name='$id' id='$id' />"
+        
         );
+        
+
             if (empty($value) && !sizeof(self::get($field['id'], false))) {
                 $value = isset($field['default']) ? $default : '';
             }
+
                 echo '<tr>', '<th style="width:20%"><label for="', $id, '">', $name, '</label></th>', '<td>';
+
                 echo $lookup[is_array($type) ? $type[0] : $type];
+                
                 if (isset($desc)) {
                 echo '&nbsp;<span class="description">' . $desc . '</span>';
                 }
                 echo '</td></tr>';
         }
         echo '</table>';
+        //
     }
 
 
@@ -138,6 +145,18 @@ class CustomPostData {
     private function delete($name, $post_id= null) {
         global $post;
         return delete_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name);
+
+    }
+
+    private function renderSelect($id, $options, $value) {
+
+        $return = "<select name=\"$id\" id=\"$id\">";
+        foreach ($options as $opt_value=>$opt_name):
+            $return .= "<option ". selected($value, $opt_value, false)." value=\"$opt_value\">$opt_name</option>";
+        endforeach;
+        $return .= "</select></br>";
+
+        return $return;
 
     }
 
