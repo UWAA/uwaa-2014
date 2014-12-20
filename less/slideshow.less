@@ -10,152 +10,7 @@
    // Individual slides
 
 
-    // Eco Car & W Day
-   .slide-15,
-   .slide-16,
-   .slide-21,
-   .slide-23 {
-     &.uw-homepage-slider .hero-container {
-       h1 {
-         color: #fff;
-         text-shadow: 1px 1px 1px rgba(0,0,0,.3);
-       }
-       .udub-slant span {
-          background-color: @lightgold;
-       }
-       p {
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0,0,0,.3);
-       }
-       a.uw-btn {
-          text-shadow: none;
-          &:before {
-            background-color: @lightgold;
-          }
-       }
-     }
-   }
-
-  // Techbox
-
-   .slide-19 {
-     &.uw-homepage-slider .hero-container {
-       h1 {
-         color: @purple;
-         text-shadow: none;
-       }
-       .udub-slant span {
-          background-color: @lightgold;
-       }
-       p {
-          color: #3E3E3E;
-          text-shadow: none;
-       }
-       a.uw-btn {
-          text-shadow: none;
-          &:before {
-            background-color: @lightgold;
-          }
-       }
-     }
-   } 
-
-  // Depths
-
-   .slide-25 {
-     &.uw-homepage-slider .hero-container {
-       h1 {
-         color: @purple;
-         text-shadow: none;
-       }
-       .udub-slant span {
-          background-color: @lightgold;
-       }
-       p {
-          color: #3E3E3E;
-          text-shadow: none;
-       }
-       a.uw-btn {
-          text-shadow: none;
-          .box-shadow(1px 1px 3px rgba(0, 0, 0, 0.1));
-          &:before {
-            background-color: @lightgold;
-          }
-       }
-     }
-   }
-
-  // Siva
-
-   .slide-17 {
-     &.uw-homepage-slider .hero-container {
-       h1 {
-         color: #fff;
-         text-shadow: 1px 1px 1px rgba(0,0,0,.3);
-       }
-       .udub-slant span {
-          background-color: @lightgold;
-       }
-       p {
-          color: white;
-          text-shadow: 1px 1px 1px rgba(0,0,0,.3);
-       }
-       a.uw-btn {
-          text-shadow: none;
-          &:before {
-            background-color: @lightgold;
-          }
-       }
-     }
-   }
-
-
-  // Citizens
-
-   .slide-59 {
-     &.uw-homepage-slider .hero-container {
-       h1 {
-
-       }
-       .udub-slant span {
-
-       }
-       p {
-          color: white;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-       }
-       a.uw-btn {
-          text-shadow: none;
-          &:before {
-            background-color: @lightgold;
-          }
-       }
-     }
-   }
-
-
-  // Citizens
-
-   .slide-59 {
-     &.uw-homepage-slider .hero-container {
-       h1 {
-
-       }
-       .udub-slant span {
-
-       }
-       p {
-          color: white;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-       }
-       a.uw-btn {
-          text-shadow: none;
-          &:before {
-            background-color: @lightgold;
-          }
-       }
-     }
-   }
+   
 
 
 
@@ -254,7 +109,8 @@
         font-weight: @ultra-font-weight;
         text-transform: uppercase;
         padding-right: 60px;
-        margin: 50px 0 0 0;
+        // margin: 50px 0 0 0;  UWEB
+        margin: 20px 0 0 0;
       }
 
       .udub-slant {
@@ -294,10 +150,37 @@
         z-index: 0;
       }
 
-
+      
 
     }
 
+    h2{
+       margin: 20px 0;
+       font-weight: 900;
+       font-style: 1.4em;
+       text-transform: uppercase;
+      }
+
+   
+
+    p{
+      margin-top: 15px;
+     }
+
+
+  &.white-header-overlay {
+          h1, h2, p{
+          color: @white;
+          }
+
+
+        }
+
+  &.purple-header-overlay {
+          h1, h2, p{
+          color: @purple;
+          }
+        }
 
   }
 

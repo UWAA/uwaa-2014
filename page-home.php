@@ -1,12 +1,24 @@
 <?php 
 get_header(); 
+wp_enqueue_script('superHero');
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 
 ?>
 
 
 
-<div class="uw-hero-image"></div>
+<?php 
+
+
+if(class_exists('\UWAA\Slideshow\Slideshow')):
+
+$superhero = new \UWAA\Slideshow\Slideshow("home-superhero");
+
+include(locate_template('content-slideshow.php'));
+
+endif;
+
+?>
 
 <div class="container uw-body">
 
@@ -14,7 +26,6 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 
     <div class="col-md-12 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
@@ -27,31 +38,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 
   <div class="row">
        <?php
-      // $args = array (
-      // 'post_type' => array(
-      //   'tours',
-      //   'events',
-      //   'benefits',
-      //   'post'
-      //   ),
-      // 'orderby' => 'rand',
-      // // 'tag' => 'Home'
       
-      // 'tax_query' => array(
-      //   // 'relation' => 'AND',
-      //   // array(
-      //   //   'taxonomy' => 'destinations',
-      //   //   'field'    => 'name',
-      //   //   'terms'    => array( 'asia')
-      //   // ),
-      //   array(
-      //     'taxonomy' => 'uwaa_content_promotion',
-      //     'field'    => 'name',
-      //     'terms'    => array( 'Home')
-
-      //     )
-      // ) //End tax query    
-      // );
 
       $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 

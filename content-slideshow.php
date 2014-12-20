@@ -5,7 +5,7 @@
   // if ( class_exists('\UWAA\Slideshow') ) :  
     ?>
 
-  <div class="uw-hero-image uw-homepage-slider slide-<?php echo $slide->id ?>" data-id="<?php echo $slide->id; ?>" style="background:url(<?php echo $slide->image; ?>) no-repeat center; background-size:cover;">
+  <div class="uw-hero-image uw-homepage-slider slide-<?php echo $slide->id .' ' .$slide->header_text_color ?>" data-id="<?php echo $slide->id; ?>" style="background:url(<?php echo $slide->image; ?>) no-repeat center; background-size:cover;">
 
   <?php if ( isset( $slide->mobileimage ) ) : ?>
     <div style="background-image:url('<?php echo $slide->mobileimage; ?>')" class="mobile-image"></div>
@@ -16,9 +16,11 @@
       <div class="row">
         <div class="col-md-8">
 
+          <h2><?php $subtitle = $slide->subtitle ? $slide->subtitle : ''; echo $subtitle ?></h2>
           <h1><?php echo $slide->title; ?></h1>
+          <h2><?php $date = $slide->date ? $slide->date : ''; echo $date ?></h2>
 
-          <span class="udub-slant"><span></span></span>
+          
 
           <?php echo apply_filters( 'the_content', $slide->text ); ?> <?php echo $slide->link; ?>
 
@@ -33,8 +35,6 @@
   <?php endforeach;?>
 
       <div class="slideshow-controls">
-          <span class="uw-boundless">Be Boundless</span>
-
           <p class="next-headline"></p>
       </div>
 

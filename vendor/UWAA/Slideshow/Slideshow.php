@@ -11,32 +11,11 @@ class Slideshow
     function __construct($location)
     {
         $this->location = $location;
-        $this->args = $this->setArgs();
+        $this->args = $this->getArgs();
         
     }
 
-    // public function get_latest_slideshow() 
-// {
-//     $UI = new UI;
-//     $info = [
-//         'id' => '51',
-//         'title' =>  'Sample Title',
-//         'text' => 'Sample text',
-//         'link' => 'Should be a rendered button',
-//         'contentHead' => 'Content Head',
-//         'overlayColor' => 'purple',
-//         'image' => $UI->returnPostFeaturedImageURL(get_post_thumbnail_id(51), 'original')
-//     ];
-
-//     $slideContents = (object) $info;
-
-
-//     $return[] = $slideContents;    
-
-//     return $return;
-// }
-
-protected function setArgs() {
+protected function getArgs() {
 
     
  return array (
@@ -68,10 +47,26 @@ protected function setArgs() {
       );
 }
 
+protected function getArrayOfData() {
+
+  $UI = new UI;
+
+  return array (
+        'id' => get_the_id(),
+        'title' => get_the_title(),
+        'image' => $UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_id()), 'original'),
+        'text' => get_the_excerpt(),
+        'link' => get_the_permalink(get_the_id()),
+        'header_text_color' => get_post_meta(get_the_ID(), 'mb_header_text_color', true),
+        'subtitle' => get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true),
+        'date' => get_post_meta(get_the_ID(), 'mb_cosmetic_date', true),
+        );
+}
+
 public function get_latest_slideshow()
   {
     
-    $UI = new UI;
+   
     
     $slideshow = new \WP_Query($this->args);
 
@@ -80,13 +75,7 @@ public function get_latest_slideshow()
     
     while ( $slideshow->have_posts() ) : $slideshow->the_post();
     
-    $slidesContent = array (
-        'id' => get_the_id(),
-        'title' => get_the_title(),
-        'image' => $UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_id()), 'original'),
-        'text' => get_the_excerpt(),
-        'link' => get_the_permalink(get_the_id())
-        );
+    $slidesContent = $this->getArrayOfData();
 
     $load = (object) $slidesContent;
 
