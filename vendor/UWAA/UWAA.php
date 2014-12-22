@@ -36,7 +36,7 @@ class UWAA
         //Custom Taxonomies
         new \UWAA\Taxonomies\Tours; //Holds custom taxonomy used for sorting tours
         new \UWAA\Taxonomies\Media;
-        new \UWAA\Taxonomies\ContentSection;
+        // new \UWAA\Taxonomies\ContentSection;
         new \UWAA\Taxonomies\ContentPromotion;
         new \UWAA\Taxonomies\Events;
         new \UWAA\Taxonomies\Benefits;
