@@ -25,6 +25,7 @@ class SidebarFeaturedPost extends \WP_Widget
   private $postExcerpt;
   private $contentPromotionDestinations;
   private $UI;
+  private $postParent;
   
 
   function __construct()
@@ -42,7 +43,30 @@ class SidebarFeaturedPost extends \WP_Widget
   }
 
   
-  private function isCustomPostType()
+  private function setCurrentPostInformation() 
+  {
+    //Parse our WordPress template formatting to get another potential match for content.
+    
+     
+
+    $this->currentPostInfo = array(
+      'id' => get_the_ID(),
+      'title' => get_the_title(),
+      'slug' => basename(get_permalink()),
+      'templateType' => ''
+      );
+
+    if (is_page_template()) 
+    {
+    $rawSlug = preg_match('/(?<=\/).*?(?=-)/', get_page_template_slug(), $matchedSlug);
+    
+    $this->currentPostInfo['templateType'] = $matchedSlug[0];
+      
+    }  
+  
+  }
+
+   private function isCustomPostType()
   {
     $postType = get_post_type($this->currentPostInfo['id']);
 
@@ -60,23 +84,16 @@ class SidebarFeaturedPost extends \WP_Widget
         return 'communities';
         break;
 
+        //return the parent's ID
       default:
-        return 'sitewide';
+        return '';
     }
 
+
+
   }
 
- 
- 
 
-  private function setCurrentPostInformation() 
-  {
-    $this->currentPostInfo = array(
-      'id' => get_the_ID(),
-      'title' => get_the_title(),
-      'slug' => basename(get_permalink())
-      );
-  }
 
 
   private function buildContentPromotionList() {
@@ -85,7 +102,7 @@ class SidebarFeaturedPost extends \WP_Widget
 
     if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
          foreach ( $terms as $term ) {
-              $this->siteContentPromotionDestinations[] = strtolower($term->name);  
+              $this->siteContentPromotionDestinations[] = strtolower($term->slug);
           }     
     endif; 
 
@@ -94,18 +111,25 @@ class SidebarFeaturedPost extends \WP_Widget
 
   private function getPromotedContent() {    
     
-    $postTitle = strtolower($this->currentPostInfo['title']);
-    $thisPostsContentSection = $this->isCustomPostType();
+    $postTitle = strtolower($this->currentPostInfo['slug']);
     $this->buildContentPromotionList();
-    
+    $thisPostsContentSection = $this->isCustomPostType();    
+
     //See if the current post is in the list of potential places we are sending content to.    
     
-    if (in_array(strtolower($postTitle), $this->siteContentPromotionDestinations)) {
+    if (in_array($postTitle, $this->siteContentPromotionDestinations)) {
+      echo "Using title match"; //debug
       return $postTitle;
+      
 
     } elseif (in_array(strtolower($thisPostsContentSection), $this->siteContentPromotionDestinations)) {
+      echo "Using post-type match";
       return $thisPostsContentSection;
-    }
+    
+    } elseif (in_array(strtolower($this->currentPostInfo['templateType']) , $this->siteContentPromotionDestinations)) {
+      echo "Using parent match";  //debug
+      return $this->currentPostInfo['templateType'];
+    } 
 
     //If the post is not explicitly targeted, check for content going toward it's section, otherwise find sitewide content.
     return 'sitewide';
@@ -115,13 +139,15 @@ class SidebarFeaturedPost extends \WP_Widget
   private function getPostsToDisplay() {
 
     $promotedContentSource = $this->getPromotedContent();
+    
     $args = array (
-      'post_type' => array(
-        'tours',
-        'events',
-        'benefits',
-        'post'
-        ),
+      // 'post_type' => array(
+      //   'tours',
+      //   'events',
+      //   'benefits',
+      //   'post'
+      //   ),
+      'post_type' => 'any',
       'posts_per_page' => 1, 
       'orderby' => 'rand',
       // 'tag' => 'Home'
@@ -135,15 +161,20 @@ class SidebarFeaturedPost extends \WP_Widget
         // ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
-          'field'    => 'name',
-          'terms'    => array( $promotedContentSource, 'sitewide')
+          'field'    => 'slug',
+          'terms'    => array( $promotedContentSource)
 
           )
       ) //End tax query    
       );
 
     $query = new \WP_Query($args);
-    $this->extractPostInformation($query);
+    if ($query) {
+      $this->extractPostInformation($query);
+    }
+
+    
+
   
   }
 
@@ -160,11 +191,9 @@ class SidebarFeaturedPost extends \WP_Widget
         $this->postURL = get_permalink();
         $this->postExcerpt = get_the_excerpt();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');        
+        $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');
         
     endwhile;
-
-
 
     wp_reset_postdata();    
   }

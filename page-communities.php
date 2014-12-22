@@ -54,9 +54,10 @@ wp_enqueue_style('mapbox');
     </div>
     
      <div class="col-md-4 uw-sidebar">
-    <?php 
+    <?php    
+        
         uw_sidebar_menu();
-
+        dynamic_sidebar( 'communities' );
         get_template_part('partials/communities-no-chapter')
 
     ?>
