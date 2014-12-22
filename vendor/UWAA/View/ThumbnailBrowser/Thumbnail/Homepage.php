@@ -95,7 +95,7 @@ $template = <<<TEMPLATE
       <span>{$this->postCalloutText}</span>
     </div>
   <div class="copy">
- <h5 class="subtitle">{$this->postSubtitle}</h5>
+ <h6 class="subtitle">{$this->postSubtitle}</h6>
  <h4 class="title">{$this->postTitle}</h4> 
  <h4 class="date">{$this->postDate}</h4>
  <p class="excerpt">{$this->postExcerpt}</p>

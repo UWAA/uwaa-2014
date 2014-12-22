@@ -323,15 +323,31 @@ a.uwaa-btn.btn-slant-right:before {
   color: #5a5a5a;
   padding: 0 0 10px 10px;
   box-shadow: -1px 2px 2px #c9c9c9, 1px 2px 2px #c9c9c9;
+  height: 255px;
+  padding-top: 5px;
 }
-.featured-post .copy h4 {
+.featured-post .copy h4.title {
+  margin: 0;
+  font-weight: 600;
+  padding-bottom: .706em;
+}
+.featured-post .copy h4.date {
+  font-size: 1em;
+  font-weight: 700;
+  padding-bottom: .059em;
   margin: 0;
 }
-.featured-post .copy h5.subtitle {
+.featured-post .copy h6.subtitle {
   text-transform: uppercase;
-  color: #85754d;
+  color: #b7a57a;
   padding: 0;
   margin: 0;
+  font-weight: 900;
+  padding-bottom: .294em;
+}
+.featured-post .copy p {
+  font-size: .94em;
+  line-height: 1.37;
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
