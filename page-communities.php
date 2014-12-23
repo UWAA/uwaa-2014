@@ -1,6 +1,6 @@
 <?php 
 get_header(); 
-wp_enqueue_script('communitiesMap');
+wp_enqueue_script(array('communitiesMap', 'superHero'));
 wp_enqueue_style('mapbox');
 
 
@@ -11,7 +11,20 @@ wp_enqueue_style('mapbox');
 <?php get_template_part( 'breadcrumbs' ); ?>
 </div>
 <div class="communities-header">
-  <?php get_template_part('partials/communities-header') ?>
+<?php
+
+if(class_exists('\UWAA\Slideshow\CommunitiesSlideshow')):
+
+$superhero = new \UWAA\Slideshow\CommunitiesSlideshow("communities-superhero");
+
+include(locate_template('content-communities-header.php'));
+
+endif;
+
+?>
+
+
+  
 </div>
 
 <div class="container uw-body">

@@ -1,11 +1,11 @@
     <div class="chapter-image-column">
         <div class="chapter-image-row">
             <div class="chapter-image"></div>
+            <div class="chapter-image slide-<?php echo $slide->id .' ' .$slide->header_text_color ?>" data-id="<?php echo $slide->id; ?>" style="background:url(<?php echo $slide->image; ?>) no-repeat center; background-size:cover;"></div>
         </div>
         <div class="row">
         <div class="chapter-logo">
-                <!-- Will become a UI Class probably.... -->
-                <?php get_template_part('logos/regionLogo', 'hong-kong.svg'); ?>
+                <?php echo $slide->logo; ?>
             </div>
             </div>
     </div>

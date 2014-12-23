@@ -46,3 +46,11 @@ return $classes;
 }
 
 add_filter( 'body_class', 'add_slug_body_class' );
+
+
+// Allow SVG for Media Uploader
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

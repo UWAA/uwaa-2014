@@ -243,6 +243,12 @@ class MetaBoxes
                         'id'=> 'chapter_map_excerpt',
                         'type'=> 'text',
                         'desc'=> "Teaser text for the communities map.  E.g. 13,813 Alumni and frields in the XYZ area."
+                        ),                    
+                    array(
+                        'name' => 'Map Position',
+                        'id'=> 'marker_position',
+                        'type'=> 'text',
+                        'desc'=> "If the chapter's location has a different name than the title (e.g. Bay Area vs. San Francisco), enter a location here to help the map place the marker in the correct spot."
                         ), 
                     array(
                         'name' => 'Chapter Leader 1',
@@ -285,6 +291,12 @@ class MetaBoxes
                         'id'=> 'chapter_linkedIn',
                         'type'=> 'text',
                         'desc'=> "URL for the chapter LinkIn page."
+                        ),
+                    array(
+                        'name' => 'Latitude/Longitude',
+                        'id'=> 'lat_long',
+                        'type'=> 'text',
+                        'desc'=> 'IF you are havingg issues getting the map marker to show up in the correct spot, then put in a lat long.'
                         ), 
 
                 )

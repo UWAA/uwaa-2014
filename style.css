@@ -575,9 +575,6 @@ h2.date {
   padding-left: 15px;
   padding-right: 15px;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-image: url('assets/FPO/NYHuskies_Photo_800x160.jpg');
 }
 @media (min-width: 768px) {
   .communities-header .chapter-image {
@@ -614,7 +611,7 @@ h2.date {
 }
 .communities-header .chapter-logo svg {
   height: 100%;
-  width: 90%;
+  width: 70%;
 }
 .communities-header .chapter-logo svg #Region path,
 .communities-header .chapter-logo svg rect {
@@ -643,18 +640,23 @@ h2.date {
     width: 50%;
   }
 }
+.communities-header .event-information-column h1,
+.communities-header .event-information-column h2,
+.communities-header .event-information-column h3 {
+  color: #ffffff;
+}
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .uwaa-chapter-header {
     height: 200px;
   }
-  .chapter-image {
+  .chapter-image-row {
     display: none !important;
   }
-  .chapter-image,
-  tr.chapter-image,
-  th.chapter-image,
-  td.chapter-image {
+  .chapter-image-row,
+  tr.chapter-image-row,
+  th.chapter-image-row,
+  td.chapter-image-row {
     display: none !important;
   }
   .chapter-logo {

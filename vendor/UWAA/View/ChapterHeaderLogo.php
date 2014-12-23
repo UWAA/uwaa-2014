@@ -76,7 +76,7 @@ class ChapterHeaderLogo {
             'taiwan',
             'thailand',
             'tri-cities',
-            'tuscon',
+            'tucson',
             'washington-dc',
             'wenatchee',
             );

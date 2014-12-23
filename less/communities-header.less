@@ -18,10 +18,7 @@
 }
 .chapter-image{
     .make-sm-column(12);
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-image: url('assets/FPO/NYHuskies_Photo_800x160.jpg');
+    height: 100%;   
 
 }
 
@@ -35,7 +32,7 @@
 
     svg {
         height:100%;
-        width: 90%;
+        width: 70%;
         
         #Region path, rect {
             fill: @darkgold;
@@ -54,6 +51,10 @@
     .make-sm-column(6);
     height:100%;
     background-color: @purple;
+
+    h1, h2, h3 {
+        color: @white;
+    }
 }
 }
 
@@ -67,7 +68,7 @@
     height: 200px;
     }
 
-    .chapter-image{
+    .chapter-image-row{
         .responsive-invisibility();
         
     }

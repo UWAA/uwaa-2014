@@ -25,7 +25,7 @@ protected function getArgs() {
         'benefits',
         'post'
         ),
-      'posts_per_page' => 5, 
+      'posts_per_page' => 1, 
       
       'orderby' => 'rand',
       // 'tag' => 'Home'
@@ -83,11 +83,11 @@ public function get_latest_slideshow()
 
     endwhile;
     endif;
-
-    
     
     wp_reset_postdata();
-     return $slides ? json_decode( json_encode( array_reverse( $slides ) ) ) : array();
+
+
+    return $slides ? json_decode( json_encode( array_reverse( $slides ) ) ) : array();
 
   }
 
