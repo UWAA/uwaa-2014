@@ -4,21 +4,21 @@ use \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 use \UWAA\View\UI;
 
 
-class Homepage extends ThumbnailBrowser implements Thumbnail 
+class Communities extends ThumbnailBrowser implements Thumbnail 
 {   
     
     protected $args;
     private $UI;
 
     //Properties Used to Build The Thumbnail For the Homepage
-    private $currentPostID;
-    private $postTitle;
-    private $postURL;
-    private $postCalloutText;
-    private $postDate;
-    private $postSubtitle;
-    private $postImageThumbnailURL;
-    private $postExcerpt;    
+    protected $currentPostID;
+    protected $postTitle;
+    protected $postURL;
+    protected $postCalloutText;
+    protected $postDate;
+    protected $postSubtitle;
+    protected $postImageThumbnailURL;
+    protected $postExcerpt;    
 
     public function __construct()
     {
@@ -35,7 +35,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 5, 
+      'posts_per_page' => 4, 
       'orderby' => 'rand',
       // 'tag' => 'Home'
       
@@ -49,7 +49,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'name',
-          'terms'    => array( 'Home')
+          'terms'    => array( 'Communities')
 
           )
       ) //End tax query    
@@ -68,10 +68,11 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
       }
 
 
+
         $this->postTitle = htmlspecialchars(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');    
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'gridViewNoSidebar');    
         $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = get_the_excerpt();
@@ -87,12 +88,14 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 
 public function buildTemplate() {
 
+$callout = $this->renderCallout();
+
 $template = <<<TEMPLATE
-<div class="featured-post five-column">
+<div class="featured-post four-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
       <img src="{$this->postImageThumbnailURL}" alt="">
-      <span>{$this->postCalloutText}</span>
+      $callout
     </div>
   <div class="copy">
  <h6 class="subtitle">{$this->postSubtitle}</h6>

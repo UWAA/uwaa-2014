@@ -200,7 +200,7 @@ class SidebarFeaturedPost extends \WP_Widget
 
    private function renderCallout(){
     if ($this->postCalloutText){
-      return '<span>'.$this->postCalloutText.'</span>';
+      return '<span class="uwaa-btn btn-slant-left btn-purple">'.$this->postCalloutText.'</span>';
     }
     return;
    }
@@ -237,6 +237,7 @@ echo <<<CONTENT
    <h4>$this->postTitle<h4>
    <h5>$this->postExcerpt</h5>
    </div>
+   </a>
    </div>
 
 CONTENT;

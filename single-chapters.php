@@ -1,8 +1,10 @@
 <?php get_header(); 
+
+use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;  
   // Start the Loop.
   while ( have_posts() ) : the_post();
   
-  
+
 ?>
 
 <div class="uwaa-chapter-header">
@@ -15,6 +17,8 @@
 
     <div class="col-md-8 uw-content" role='small'>
 
+    
+
       
 
        <?php
@@ -22,6 +26,20 @@
       // get_template_part( 'breadcrumbs' );
       echo 'TODO- Custom Post Breadcrumbs';
       ?>
+
+      <div class="row">
+       <?php
+      
+
+      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+      $thumbnailRow->makeThumbnails(new Chapters(basename(get_permalink() ) ) );
+
+
+
+      ?>
+
+    </div>
 
       <div class="uw-body-copy">
             <?php
@@ -50,9 +68,14 @@
     <div class="col-md-4 uw-sidebar">
     <?php 
         uw_sidebar_menu();
-        dynamic_sidebar( 'communities' ); 
+        echo "fix UW's Menu for Them";
+        
         endwhile;
     ?>
+      <div id="no-chapter-widget" class="widget widget_text">
+        <h2 class="widgettitle">Don't See Your Chapter?</h2>
+        <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="#">Let Us Know!</a></div>
+      </div>
     </div>
 
 

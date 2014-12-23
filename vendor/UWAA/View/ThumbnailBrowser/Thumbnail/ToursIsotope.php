@@ -82,7 +82,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 <div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
     <div class="image-frame">
-      <span>$this->postCalloutText</span>
+      <span class="uwaa-btn btn-slant-left btn-purple">$this->postCalloutText</span>
 		  <img src="$this->postImageThumbnailURL"/>
     </div>
 		<div class="copy">

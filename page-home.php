@@ -36,7 +36,7 @@ endif;
 
       <div class="uw-body-copy">
 
-  <div class="row">
+  <div class="row 5-column">
        <?php
       
 

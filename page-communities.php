@@ -3,6 +3,8 @@ get_header();
 wp_enqueue_script('communitiesMap');
 wp_enqueue_style('mapbox');
 
+use \UWAA\View\ThumbnailBrowser\Thumbnail\Communities;
+
 ?>
 
 <div class="container">
@@ -17,6 +19,20 @@ wp_enqueue_style('mapbox');
   <div class="row">
 
     <div class="col-md-8 uw-content" role='main'>
+
+    <div class="row four-column">
+       <?php
+      
+
+      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+      $thumbnailRow->makeThumbnails(new Communities);
+
+      ?>
+
+    </div>
+
+
 
       
 

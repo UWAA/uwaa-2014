@@ -12,6 +12,7 @@ class ThumbnailBrowser
   	}
 
 
+
 	protected function setCurrentPostID() 
   	{
     $this->currentPostID = get_the_ID();    
@@ -68,7 +69,14 @@ class ThumbnailBrowser
       echo $this->getSortingToolbarTemplate($toolbar);
     }
 
-    private function getSortingToolbarTemplate($typeOfToolbar)
+    protected function renderCallout(){
+    if ($this->postCalloutText){
+      return '<span class="uwaa-btn btn-slant-left btn-purple">'.$this->postCalloutText.'</span>';
+    }
+    return;
+   }
+
+    protected function getSortingToolbarTemplate($typeOfToolbar)
     {
       
       $buttons = $this->renderFilterButtons($typeOfToolbar);     
@@ -88,7 +96,7 @@ TOOLBAR;
       return $template;
     }
 
-    private function renderFilterButtons($typeOfToolbar) 
+    protected function renderFilterButtons($typeOfToolbar) 
     {
       $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All '. $typeOfToolbar .'</li>';
 

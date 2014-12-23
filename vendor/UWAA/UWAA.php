@@ -61,8 +61,9 @@ class UWAA
         new \UWAA\API\RequestHandler($this->wp);  //Sets up the UWAA API for specialized feeds
 
         //Widgets
-        new \UWAA\Widgets\SidebarFeaturedPost();
-        new \UWAA\Widgets\SidebarPullQuote();
+        new \UWAA\Widgets\SidebarFeaturedPost;
+        new \UWAA\Widgets\SidebarPullQuote;
+        new \UWAA\Widgets\SidebarSeeYourChapter;
 
         // //SuperHero Slideshow (from UW Homepage)
         // new \UWAA\Slideshow\Slideshow;
