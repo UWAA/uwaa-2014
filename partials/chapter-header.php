@@ -2,7 +2,6 @@
             <div class="chapter-logo">
                 <?php new \UWAA\View\ChapterHeaderLogo($post->post_name); ?>
                 <?php 
-                // get_template_part('assets/regionLogo', 'nyc.svg'); 
                 ?>
             </div>
         

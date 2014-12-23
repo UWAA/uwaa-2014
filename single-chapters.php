@@ -24,7 +24,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
        <?php
       // TODO Fix these breadcrumbs and have them default to the section front as opposed to the archive page for "tours"
       // get_template_part( 'breadcrumbs' );
-      echo 'TODO- Custom Post Breadcrumbs';
+      $UWAA->UI->Breadcrumbs->UWAABreadcrumbs();
       ?>
 
       <div class="row">

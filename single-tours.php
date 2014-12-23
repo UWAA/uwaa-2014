@@ -20,7 +20,7 @@
 
       <?php
       // TODO Fix these breadcrumbs and have them default to the section front as opposed to the archive page for "tours"
-      get_template_part( 'breadcrumbs' ); ?>
+      $UWAA->UI->Breadcrumbs->UWAABreadcrumbs(); ?>
 
 
       <div class="uw-body-copy">

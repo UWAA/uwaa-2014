@@ -13,7 +13,7 @@ class RegionalChapters
             $labels = array(
                 'name'                => 'Regional Chapter',
                 'singular_name'       => 'Chapter',
-                'menu_name'           => 'Regional Chapter Page',
+                'menu_name'           => 'Chapters',
                 'parent_item_colon'   => 'Parent Chapter:',
                 'all_items'           => 'All Chapters',
                 'view_item'           => 'View Chapter Details',
@@ -48,7 +48,7 @@ class RegionalChapters
                 'menu_position'       => 20,
                 'can_export'          => true,
                 'menu_icon'           => '',
-                'has_archive'         => true,
+                'has_archive'         => false,
                 'exclude_from_search' => false,
                 'publicly_queryable'  => true,
                 'query_var'           => 'chapters',

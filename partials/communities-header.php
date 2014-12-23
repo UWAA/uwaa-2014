@@ -5,7 +5,7 @@
         <div class="row">
         <div class="chapter-logo">
                 <!-- Will become a UI Class probably.... -->
-                <?php get_template_part('assets/regionLogo', 'nyc.svg'); ?>
+                <?php get_template_part('logos/regionLogo', 'hong-kong.svg'); ?>
             </div>
             </div>
     </div>

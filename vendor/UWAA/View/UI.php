@@ -3,11 +3,13 @@
 class UI
 {
 
-    //TODO  Make this not horrible.  An actual interface?  
+    public $breadcrumbs;
+
     function __construct() 
     {
         $this->initShortcodes();
         add_action( 'admin_head', array($this, 'addAdminMenuIcons'));
+        $this->Breadcrumbs = new Breadcrumbs();
     }
 
         
@@ -53,11 +55,14 @@ class UI
 
          #adminmenu .menu-icon-chapters div.wp-menu-image:before {
             content: "\f231";
-        }
-        
+        } 
+        </style>
 
-    <?php
+        <?php      
+
+    
     }
+
 
 
 } 

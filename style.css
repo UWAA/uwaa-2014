@@ -458,6 +458,10 @@ h2.date {
 .uwaa-chapter-header .chapter-logo svg #Huskies path {
   fill: #ffffff;
 }
+.uwaa-chapter-header .chapter-logo svg #Region path,
+.uwaa-chapter-header .chapter-logo svg rect {
+  fill: #b7a57a;
+}
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .uwaa-chapter-header {
@@ -610,6 +614,11 @@ h2.date {
 }
 .communities-header .chapter-logo svg {
   height: 100%;
+  width: 90%;
+}
+.communities-header .chapter-logo svg #Region path,
+.communities-header .chapter-logo svg rect {
+  fill: #85754d;
 }
 .communities-header .chapter-logo svg #Huskies path {
   fill: #4b2e83;
