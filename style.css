@@ -596,6 +596,7 @@ h2.date {
   height: 140px;
   background-color: #c9c9c9;
   text-align: center;
+  padding: 10px 0;
 }
 @media (min-width: 768px) {
   .communities-header .chapter-logo {
@@ -667,20 +668,104 @@ h2.date {
   }
 }
 div.map-logo {
-  background-size: contain;
   background-repeat: no-repeat;
   height: 40px;
-  background-position: 50% 50%;
-  margin-bottom: 10px;
+  width: 100%;
+  background-image: url(assets/Regional_Logo_Sprite_Map.png);
+  background-position: 50% 0;
 }
 div.map-logo #Huskies path {
   fill: #4b2e83;
 }
-div.map-logo.new-york-city {
-  background-image: url(assets/logos/chapters/NY-Huskies-386x87.png);
+div.map-logo.albany {
+  background-position: 50% -642px;
 }
-.leaflet-popup-content {
-  max-width: 250px;
+div.map-logo.anchorage {
+  background-position: 50% 0;
+}
+div.map-logo.atlanta {
+  background-position: 50% -240px;
+}
+div.map-logo.austin {
+  background-position: 50% -802px;
+}
+div.map-logo.bay-area {
+  background-position: 50% -80px;
+}
+div.map-logo.bellingham {
+  background-position: 50% -842px;
+}
+div.map-logo.boise {
+  background-position: 50% -321px;
+}
+div.map-logo.boston {
+  background-position: 50% -442px;
+}
+div.map-logo.chicago {
+  background-position: 50% -361px;
+}
+div.map-logo.dallas-ft-worth {
+  background-position: 50% -802px;
+}
+div.map-logo.denver {
+  background-position: 50% -120px;
+}
+div.map-logo.ft-lauderdale {
+  background-position: 50% -200px;
+}
+div.map-logo.hong-kong {
+  background-position: 50% -281px;
+}
+div.map-logo.honolulu {
+  background-position: 50% -281px;
+}
+div.map-logo.houston {
+  background-position: 50% -802px;
+}
+div.map-logo.indianapolis {
+  background-position: 50% -401px;
+}
+div.map-logo.kailua-kona {
+  background-position: 50% -281px;
+}
+div.map-logo.las-vegas {
+  background-position: 50% -602px;
+}
+div.map-logo.los-angeles {
+  background-position: 50% -80px;
+}
+div.map-logo.new-york-city {
+  background-position: 50% -642px;
+}
+div.map-logo.north-carolina {
+  background-position: 50% -522px;
+}
+div.map-logo.omaha {
+  background-position: 50% -562px;
+}
+div.map-logo.orange-county {
+  background-position: 50% -80px;
+}
+div.map-logo.palm-springs {
+  background-position: 50% -80px;
+}
+div.map-logo.phoenix {
+  background-position: 50% -42px;
+}
+div.map-logo.reno {
+  background-position: 50% -602px;
+}
+div.map-logo.sacramento {
+  background-position: 50% -80px;
+}
+div.map-logo.san-diego {
+  background-position: 50% -80px;
+}
+div.map-logo.spokane {
+  background-position: 50% -882px;
+}
+div.map-logo.tucson {
+  background-position: 50% -42px;
 }
 .fact-row {
   margin-left: -15px;
