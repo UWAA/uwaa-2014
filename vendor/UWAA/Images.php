@@ -30,6 +30,16 @@ class Images {
                 ),
             'gridViewNoSidebar' => array (
                 'name'  => 'Grid Thumbnail - No Sidebar',
+                'width'  => 768,
+                'height'  => 190,
+                'crop'  => array (
+                    'x_crop_position' => 'center',
+                    'y_crop_position' => 'center'
+                    ),
+                'show'  => false
+                ),
+            'isotopeGrid' => array (
+                'name'  => 'IsoptopeCrop',
                 'width'  => 275,
                 'height'  => 190,
                 'crop'  => array (
@@ -40,7 +50,7 @@ class Images {
                 ),
             'gridViewWithSidebar' => array (
                 'name'  => 'Grid Thumbnail - With Sidebar',
-                'width'  => 186,
+                'width'  => 768,
                 'height'  => 130,
                 'crop'  => array (
                     'x_crop_position' => 'center',

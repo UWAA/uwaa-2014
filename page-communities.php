@@ -3,7 +3,7 @@ get_header();
 wp_enqueue_script('communitiesMap');
 wp_enqueue_style('mapbox');
 
-use \UWAA\View\ThumbnailBrowser\Thumbnail\Communities;
+
 
 ?>
 
@@ -19,25 +19,6 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Communities;
   <div class="row">
 
     <div class="col-md-8 uw-content" role='main'>
-
-    <div class="row four-column">
-       <?php
-      
-
-      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-
-      $thumbnailRow->makeThumbnails(new Communities);
-
-      ?>
-
-    </div>
-
-
-
-      
-
-      
-
       <div class="uw-body-copy">
 
         <?php
@@ -74,9 +55,16 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Communities;
         
         uw_sidebar_menu();
         dynamic_sidebar( 'communities' );
-        get_template_part('partials/communities-no-chapter')
+        
 
     ?>
+
+      <div id="no-chapter-widget" class="widget widget_text">
+          <h2 class="widgettitle">Don't See Your Chapter?</h2>
+          <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="#">Let Us Know!</a></div>
+        </div>
+      </div>
+
     </div>
 
   </div>
