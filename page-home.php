@@ -49,7 +49,20 @@ endif;
 </div>
 
 
-        <?php
+        
+      </div>
+
+    </div>
+    
+    
+
+  </div>
+
+</div>
+
+<div id="message-row">
+  <div class="content">
+<?php
           // Start the Loop.
           while ( have_posts() ) : the_post();
 
@@ -69,23 +82,6 @@ endif;
 
           
         ?>
-      </div>
-
-    </div>
-    
-    
-
-  </div>
-
-</div>
-
-<div id="message-row">
-  <div class="content">
-  <h2>Possibility. Passion. Purple and Gold.</h2>
-<p>UW alumni are passionate. Passionate about possibility, passionate about community and passionate about purple and
-gold. Sharing a connection across three campuses and extending to places all over the world, UW alumni are united in
-the belief that together we will make a difference. The UW Alumni Association is proud to support the collective passion
-of so many who stand up for the University of Washington. Join us </p>
 </div>
 
   
