@@ -1,6 +1,6 @@
 <?php get_header(); 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\EventsIsotope;
-wp_enqueue_script('isotopeInit');
+wp_enqueue_script(array('isotopeInit', 'superHero'));
 
 
 
