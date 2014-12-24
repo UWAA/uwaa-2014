@@ -25,7 +25,7 @@ protected function getArgs() {
         'benefits',
         'post'
         ),
-      'posts_per_page' => 1, 
+      'posts_per_page' => 5, 
       
       'orderby' => 'rand',
       // 'tag' => 'Home'

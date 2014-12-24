@@ -1,11 +1,19 @@
 <?php get_header(); 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\EventsIsotope;
 wp_enqueue_script('isotopeInit');
+
+
+
+
+if(class_exists('\UWAA\Slideshow\EventsSlideshow')):
+
+$superhero = new \UWAA\Slideshow\EventsSlideshow("events-superhero");
+
+include(locate_template('content-slideshow.php'));
+
+endif;
+
 ?>
-
-
-
-<div class="uw-hero-image"></div>
 
 <div class="container uw-body">
 
@@ -13,7 +21,7 @@ wp_enqueue_script('isotopeInit');
 
     <div class="col-md-12 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+      
 
       <?php // TODO Fix these breadcrumbs and have them default to the section front as opposed to the archive page for "tours"
       // get_template_part( 'breadcrumbs' );

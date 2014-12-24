@@ -10,7 +10,7 @@ wp_enqueue_style('mapbox');
 <div class="container">
 <?php get_template_part( 'breadcrumbs' ); ?>
 </div>
-<div class="communities-header">
+<div class="communities-header uw-homepage-slider-container">
 <?php
 
 if(class_exists('\UWAA\Slideshow\CommunitiesSlideshow')):
