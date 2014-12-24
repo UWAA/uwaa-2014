@@ -7,7 +7,7 @@
 get_header(); 
 ?>
 
-<div class="uw-hero-image"></div>
+<div class="uw-hero-image communities"></div>
 
 <div class="container uw-body">
 
@@ -15,7 +15,8 @@ get_header();
 
     <div class="col-md-8 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+      <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
+      <h2 class="uw-site-title">Communities</h2>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 

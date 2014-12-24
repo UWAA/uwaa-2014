@@ -1250,6 +1250,18 @@ div.map-logo.tucson {
     margin-left: 0;
   }
 }
+.uw-hero-image.travel {
+  background: url(assets/headers/Page_Header_Travel.jpg) center center;
+  background-size: cover;
+}
+.uw-hero-image.membership {
+  background: url(assets/headers/Page_Header_Membership.jpg) center center;
+  background-size: cover;
+}
+.uw-hero-image.communities {
+  background: url(assets/headers/Page_Header_Communities.jpg) center center;
+  background-size: cover;
+}
 #map {
   position: absolute;
   top: 0;

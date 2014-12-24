@@ -5,7 +5,7 @@ wp_enqueue_script('isotopeInit');
 
 
 
-<div class="uw-hero-image"></div>
+<div class="uw-hero-image membership"></div>
 
 <div class="container uw-body">
 
@@ -13,12 +13,10 @@ wp_enqueue_script('isotopeInit');
 
     <div class="col-md-12 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+      <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
+      <h2 class="uw-site-title">UWAA Membership</h2>
 
-      <?php // TODO Fix these breadcrumbs and have them default to the section front as opposed to the archive page for "tours"
-      // get_template_part( 'breadcrumbs' );
-      echo 'TODO- Custom Post Breadcrumbs'; ?>
-
+      <?php $UWAA->UI->Breadcrumbs->UWAABreadcrumbs(); ?>
       <h1>Membership Benefits</h1>
 
       <div class="uw-body-copy">

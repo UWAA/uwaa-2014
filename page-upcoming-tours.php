@@ -5,7 +5,7 @@ wp_enqueue_script('isotopeInit');
 
 
 
-<div class="uw-hero-image"></div>
+<div class="uw-hero-image travel"></div>
 
 <div class="container uw-body">
 
@@ -13,7 +13,7 @@ wp_enqueue_script('isotopeInit');
 
     <div class="col-md-12 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+      <h2 class="uw-site-title">UW Alumni Tours</h2>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
