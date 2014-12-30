@@ -102,15 +102,15 @@ class Scripts
         'handlebars' => array (
         'id'      => 'handlebars',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/handlebars/handlebars.min.js',
-        'deps'    => array(''),
-        'version' => '1.0',
+        'deps'    => array(),
+        'version' => '2.0',
         'in_footer' => true,
         'admin'   => false        
       ),
         'membershipStoreInit' => array (
         'id'      => 'membershipStoreInit',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/membershipStoreInit' . $this->min_script() . '.js',
-        'deps'    => array('backbone', 'jquery-effects-fade', "handlebars"),
+        'deps'    => array('backbone', 'handlebars' ,'jquery-effects-fade'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false

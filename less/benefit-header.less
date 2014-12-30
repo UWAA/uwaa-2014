@@ -1,0 +1,45 @@
+// benefit-header.less
+@benefit-height: 438px;
+
+
+.uwaa-benefit-header{
+    .make-row();
+    
+    
+}
+
+.benefit-image{
+    .make-sm-column(6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: @benefit-height;
+    
+}
+
+
+.benefit-logo{
+    .make-sm-column(6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-position: center center;
+    height: @benefit-height;
+}
+
+
+
+@media only screen and (max-width : 767px) {
+    .benefit-logo {
+        height: (@benefit-height * .66666666);
+    }
+
+    .benefit-image {
+        .responsive-invisibility();
+    }
+
+
+
+   
+}
+

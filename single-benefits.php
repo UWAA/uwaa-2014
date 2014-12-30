@@ -5,7 +5,9 @@
   
 ?>
 
-<div class="uwaa-hero-image" style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+<div class="uwaa-benefit-header">
+<?php get_template_part('partials/benefit-header') ?>
+</div>
 
 <div class="container uw-body">
 
@@ -44,8 +46,10 @@
     </div>
 
     <div class="col-md-4 uw-sidebar">
+    <div class="login-card"></div>
+    <div class="sidebar-social"></div>
     <?php 
-        dynamic_sidebar( 'membership' ); 
+         
         endwhile;
     ?>
     </div>

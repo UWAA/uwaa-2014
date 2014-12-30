@@ -79,6 +79,8 @@
 .communities-header:after,
 .communities-header .chapter-image-row:before,
 .communities-header .chapter-image-row:after,
+.uwaa-benefit-header:before,
+.uwaa-benefit-header:after,
 .fact-row:before,
 .fact-row:after,
 #message-row:before,
@@ -106,6 +108,7 @@
 .modal-footer:after,
 .communities-header:after,
 .communities-header .chapter-image-row:after,
+.uwaa-benefit-header:after,
 .fact-row:after,
 #message-row:after,
 #message-row .content:after,
@@ -144,6 +147,8 @@
 .communities-header:after,
 .communities-header .chapter-image-row:before,
 .communities-header .chapter-image-row:after,
+.uwaa-benefit-header:before,
+.uwaa-benefit-header:after,
 .fact-row:before,
 .fact-row:after,
 #message-row:before,
@@ -171,6 +176,7 @@
 .modal-footer:after,
 .communities-header:after,
 .communities-header .chapter-image-row:after,
+.uwaa-benefit-header:after,
 .fact-row:after,
 #message-row:after,
 #message-row .content:after,
@@ -309,6 +315,11 @@ h2.date {
   font-weight: 700;
   padding-top: .588em;
   padding-bottom: .353em;
+}
+h6.intro-head {
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #b7a57a;
 }
 .uwaa-btn {
   width: auto;
@@ -672,6 +683,100 @@ h2.date {
   }
   .event-information-column {
     height: 100px;
+  }
+}
+.uwaa-benefit-header {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.uwaa-benefit-header:before,
+.uwaa-benefit-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-benefit-header:after {
+  clear: both;
+}
+.uwaa-benefit-header:before,
+.uwaa-benefit-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-benefit-header:after {
+  clear: both;
+}
+.uwaa-benefit-header:before,
+.uwaa-benefit-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-benefit-header:after {
+  clear: both;
+}
+.uwaa-benefit-header:before,
+.uwaa-benefit-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-benefit-header:after {
+  clear: both;
+}
+.benefit-image {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 438px;
+}
+@media (min-width: 768px) {
+  .benefit-image {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .benefit-image {
+    float: left;
+    width: 50%;
+  }
+}
+.benefit-logo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 438px;
+}
+@media (min-width: 768px) {
+  .benefit-logo {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .benefit-logo {
+    float: left;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .benefit-logo {
+    height: 291.99999708px;
+  }
+  .benefit-image {
+    display: none !important;
+  }
+  .benefit-image,
+  tr.benefit-image,
+  th.benefit-image,
+  td.benefit-image {
+    display: none !important;
   }
 }
 div.map-logo {

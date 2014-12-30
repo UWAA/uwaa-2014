@@ -1,4 +1,4 @@
-<h4>---Single benefit page---</h4>
+<h6 class="intro-head">Member Benefit</h6>
 
 <h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a></h1>
 

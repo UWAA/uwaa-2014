@@ -7,7 +7,7 @@ wp_enqueue_script('membershipStoreInit');
 
 
 
-<div class="uw-hero-image"></div>
+<div class="uw-hero-image membership"></div>
 
 <div class="container uw-body">
 
@@ -15,11 +15,15 @@ wp_enqueue_script('membershipStoreInit');
 
     <div class="col-md-8 uw-content" role='main'>
 
-      <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a>
+    <h2 class="uw-site-title">UWAA Membership</h2>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
       <div class="uw-body-copy">
+
+      <div id="storeApp">
+        
+      </div>
 
         <?php
           // Start the Loop.
@@ -51,14 +55,47 @@ wp_enqueue_script('membershipStoreInit');
     </div>
     
      <div class="col-md-4 uw-sidebar">
-    <?php 
+    <?php         
         uw_sidebar_menu();
         dynamic_sidebar( 'membership_sidebar' ); 
-    ?>
+    ?>   
     </div>
 
   </div>
 
 </div>
+
+<!-- Handlebars Templates -->
+
+<!-- Index View  -->
+<script id="membershipIndexTile" type="text/x-handlebars-template">
+    {{#each []}}
+    <div class="membership-option-tile">
+       <h2>{{this.title}}</h2>
+       <h2>Membership</h2>
+    <div>
+    {{/each}}
+</script>
+
+
+
+<!-- Tile View  -->
+<script id="membershipTile" type="text/x-handlebars-template">
+    {{#each []}}
+    <div class="membership-option-tile">
+       <h2>{{this.title}}</h2>
+       <h2>Membership</h2>
+    <div>
+    {{/each}}
+</script>
+
+<!-- Thumbnails -->
+<script id="membershipThumbnails" type="text/x-handlebars-template">
+    <div class="membership-option-tile">
+       <span class"thumbnail"> You have Chosen: </span>
+    <div>
+</script>
+
+
 
 <?php get_footer(); ?>
