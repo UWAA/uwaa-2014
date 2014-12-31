@@ -4,8 +4,8 @@
 class Images {
 
     /** @var [array] [description] */
-    private $imageDetails = [];
-    private $postThumbnailSize = [];
+    private $imageDetails = array();
+    private $postThumbnailSize = array();
 
     function __construct()
     {
