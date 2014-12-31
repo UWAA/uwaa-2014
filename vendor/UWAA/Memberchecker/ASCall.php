@@ -10,32 +10,43 @@ class ASCall {
 
 function __construct() {
 
-    $memberCheckSession = new NativeSessionStorage(array());
-    $memberCheckSession->setOptions(array(
-        'cookie_lifetime'=> 0,
-        'cookie_httponly'=> 1,
-        'use_strict_mode'=> 1,
-        'cookie_secure'=> 1  //Need to swap once cert is ready.
+    // $memberCheckSession = new NativeSessionStorage(array());
+    // $memberCheckSession->setOptions(array(
+    //     'cookie_lifetime'=> 0,
+    //     'cookie_httponly'=> 1,
+    //     'use_strict_mode'=> 1,
+    //     'cookie_secure'=> 1  //Need to swap once cert is ready.
 
-        )
-    );
+    //     )
+    // );
+    wp_localize_script( 'function', array($this, 'callMemberChecker'), array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+    add_action("wp_ajax_nopriv_get_my_option", array($this, 'callMemberChecker'));
+    add_action("wp_ajax_get_my_option", array($this, 'callMemberChecker'));
 
 }
 
-private function callMemberChecker() {
+public function callMemberChecker() {
 
-    $memberID = filter_var($_GET["idNumber"], FILTER_SANITIZE_NUMBER_INT);
+$memberID = filter_var($_GET["idNumber"], FILTER_SANITIZE_NUMBER_INT);
 $lastName = ucfirst(strtolower(trim(filter_var($_GET["lastName"], FILTER_SANITIZE_STRING))));
+
+if (empty($memberID)) {
+    die ('Please enter a valid Member ID Number');
+}
+
+if (empty($lastName)) {
+    die ('Please enter your last name');
+}
 
 if (!ctype_digit($memberID)) {
     die ('Please enter a valid Member ID Number');
 }
 
-$urlToHash = "?vendorID={$vendorID}&memberID={$memberID}";
-$signature = "{$privateKey}{$urlToHash}";  //No plus between variables
+$urlToHash = "?vendorID={$_ENV['$vendorID']}&memberID={$_ENV['$memberID']}";
+$signature = "{$_ENV['privateKey']}{$urlToHash}";  //No plus between variables
 
 $hashedSigniture = hash('sha512', "$signature");
-$urlToCall = "{$ENV_['MemberCheckerEndpoint']}{$vendorID}&memberID={$memberID}&signature={$hashedSigniture}";
+$urlToCall = "{$ENV_['memberCheckerEndpoint']}{$_ENV['$vendorID']}&memberID={$_ENV['$memberID']}&signature={$hashedSigniture}";
 
 
 try{
@@ -65,7 +76,7 @@ if ($lastName != $member->MemberLName) {
     //Power up a new session for the user
     $session = new Session($memberCheckSession);
     //$session->setID('UWAAMEM');
-    $session->setID(md5("{$member->MemberLName}{$sessionSalt}"));
+    $session->setID(md5("{$member->MemberLName}{$_ENV['sessionSalt']}"));
     $session->setName('UWAAMEM');
     
 

@@ -24,8 +24,9 @@ class UWAA
             
         //Front-End specific helper functions
         $this->UI = new \UWAA\View\UI;
-
+        
         $this->Memberchecker = new \UWAA\Memberchecker\Memberchecker;
+        
 
 
         //Scripts needed on all pages of the theme, and registrations for ad-hoc scripts.
@@ -70,7 +71,8 @@ class UWAA
 
         // //SuperHero Slideshow (from UW Homepage)
         // new \UWAA\Slideshow\Slideshow;
-
+        // 
+        
 
         
         

@@ -3,23 +3,23 @@ $(document).ready(function(){
 $('form#loginForm').on('submit', function(event) {
 // @TODO  Pull  canvas stuff.  Here for debugging
 var canvas = $('#output'),
-    form = $(this);
+    form = $(this);   
 
-    
-
-     $.ajax({
+     $.ajax({            
             type: form.attr('method'),
-            url: 'sti_memberservices.php',
+            action: 'callMemberChecker'            ,
+            url: callMemberCheckerAJAX.ajaxurl,
             data: form.serialize(),
-
             // Remove for prod @TODO
             success: function(data) {
+                console.log('success');
                 canvas.html(data);
                         
                     
             },
             //Remove for prod @TODO
             error: function(data){
+                console.log('error');
                 canvas.html(data);
            
             }
@@ -27,4 +27,5 @@ var canvas = $('#output'),
      event.preventDefault();
 
 });
+
 });
