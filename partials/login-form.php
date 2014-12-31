@@ -3,7 +3,7 @@ wp_enqueue_script('memberChecker');
 wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 ?>
 
-<form method="POST" id="loginForm">
+<form method="POST" id="memberloginForm">
     <fieldset>
         <legend>memberchecker</legend>
         <p><input type="text" name="idNumber"><label>Member ID Number</label></p>
@@ -11,9 +11,9 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
         <input type="hidden" name="action" value="callMemberChecker">
         <?php
         if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == false) {
-            echo 'Welcome back '.esc_html($session->get('firstName')).'';
+            echo 'Welcome back '.esc_html($UWAA->Memberchecker->session->get('firstName')).'';
         } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
-            echo 'Welcome back '.esc_html($session->get('firstName')).' Thanks for Being a Member';
+            echo 'Welcome back '.esc_html($UWAA->Memberchecker->session->get('firstName')).' Thanks for Being a Member';
         } else {
         echo '<button type="submit">Submit</button>';
         }
@@ -22,6 +22,9 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
 </form>
 
 
-<form action="logout.php"><button type="submit">Logout</button></form>
+<form id="memberlogout" method="POST">
+<input type="hidden" name="action" value="memberLogout">
+<button type="submit">Logout</button>
+</form>
 
 
