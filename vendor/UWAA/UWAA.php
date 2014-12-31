@@ -9,7 +9,8 @@ class UWAA
 {
 
     protected $wp;
-    public $UI;    
+    public $UI;
+    public $session;    
 
     function __construct($wp)
     {
@@ -23,6 +24,8 @@ class UWAA
             
         //Front-End specific helper functions
         $this->UI = new \UWAA\View\UI;
+
+        $this->Memberchecker = new \UWAA\Memberchecker\Memberchecker;
 
 
         //Scripts needed on all pages of the theme, and registrations for ad-hoc scripts.

@@ -1,4 +1,8 @@
-<?php get_header(); 
+<?php 
+$UWAA->Memberchecker->getSession();
+get_header(); 
+
+
   // Start the Loop.
   while ( have_posts() ) : the_post();
   
@@ -40,17 +44,23 @@
 
                 
             ?>
+      
+      <!-- For Debuggins -->
+      <div id="output"></div>  
 
       </div>
 
     </div>
 
     <div class="col-md-4 uw-sidebar">
-    <div class="login-card"></div>
+    <div class="login-card">
+      <?php include(locate_template( 'partials/login-form.php' )); ?>
+    </div>
+    
     <div class="sidebar-social"></div>
     <?php 
          
-        endwhile;
+        endwhile;        
     ?>
     </div>
 

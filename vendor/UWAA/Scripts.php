@@ -123,6 +123,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false,
+    ),
+        'memberChecker' => array (
+        'id'      => 'memberChecker',
+        'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/memberChecker'. $this->min_script() .'.js',
+        'deps'    => array( 'backbone' ),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false,
     )
 
     
