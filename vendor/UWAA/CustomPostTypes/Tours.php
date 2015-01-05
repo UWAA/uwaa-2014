@@ -37,7 +37,7 @@ class Tours
                 'label'               => 'tours',
                 'description'         => 'These posts correspond to individual UW Alumni Tours',
                 'labels'              => $labels,
-                'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
+                'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt',  ),
                 'taxonomies'          => array( 'destinations'),
                 'hierarchical'        => false,
                 'public'              => true,

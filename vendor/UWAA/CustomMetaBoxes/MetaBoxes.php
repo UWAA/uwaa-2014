@@ -4,10 +4,9 @@ class MetaBoxes
 {
 
     function __construct() {
+        $this->add_pullquote_meta();
         $this->add_tours_meta();
         $this->add_tours_map_meta();
-        $this->add_thumbnail_meta();
-        $this->add_pullquote_meta();
         $this->add_regional_chapter_meta();
         $this->add_benefit_meta();
         $this->add_event_meta();
@@ -144,6 +143,8 @@ class MetaBoxes
 
         }
 
+
+        //Not called, drop soon  @TODO
         protected function add_chapter_map_meta() {
             new \UWAA\CustomPostData('map_information', array(
                 'title' => 'Map-Specific Information',
@@ -210,7 +211,7 @@ class MetaBoxes
             new \UWAA\CustomPostData('pullquote_elements', array(
                 'title' => 'Post Pull Quote',
                 'pages' => array('tours', 'events' , 'benefits', 'post', 'chapters'),  //add events, regional pages as they are ready
-                'context' => 'core',
+                'context' => 'normal',
                 'priority' => 'default',
                 'fields' => array(
                     array(
