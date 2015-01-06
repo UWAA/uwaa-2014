@@ -26,6 +26,15 @@ class Breadcrumbs {
     $html = '<li><a href="http://uw.edu" title="University of Washington">Home</a></li>';
     $html .= '<li' . (is_front_page() ? ' class="current"' : '') . '><a href="' . home_url('/') . '" title="' . get_bloginfo('title') . '">' . get_bloginfo('title') . '</a><li>';
 
+
+    if (is_archive() )
+    {
+      $archiveType = post_type_archive_title('', false);
+      if ($archiveType === "Benefits") {
+        $html .=  '<li><a href="'  . home_url('/') .'membership" title="Membership">Membership</a></li><li>';
+      }
+      $html.= '<li class="current"><span>' . post_type_archive_title('', false) . '</span></li>';
+    }
    
       if ( is_single() )
       {
@@ -46,11 +55,14 @@ class Breadcrumbs {
           		$html .=  '<li><a href="'  . home_url('/') .'communities" title="Communities">Communities</a></li>';
           		break;
           	case 'tours':
-          		$html .=  '<li><a href="'  . home_url('/') .'Travel" title="Travel">Travel</a></li><li><a href="'  . home_url('/') .'upcoming-tours" title="Upcoming Tours">Upcoming Tours</a></li>';
+          		$html .=  '<li><a href="'  . home_url('/') .'travel" title="Travel">Travel</a></li><li><a href="'  . home_url('/') .'upcoming-tours" title="Upcoming Tours">Upcoming Tours</a></li>';
           		break;
           	case 'benefits':
           		$html .=  '<li><a href="'  . home_url('/') .'membership" title="Membership">Membership</a></li><li><a href="'  . home_url('/') .'membership/benefits" title="Benefits">Benefits</a></li>';
           		break;
+            case 'events':
+              $html .=  '<li><a href="'  . home_url('/') .'events" title="Events">Events</a></li>';
+              break;
           	
           	default:
           		# code...

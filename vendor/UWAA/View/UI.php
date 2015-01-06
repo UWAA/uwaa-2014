@@ -10,6 +10,12 @@ class UI
         $this->initShortcodes();
         add_action( 'admin_head', array($this, 'addAdminMenuIcons'));
         $this->Breadcrumbs = new Breadcrumbs();
+        add_filter('excerpt_length', array($this, 'setExcerptLength'), 999);
+    }
+
+    public function setExcerptLength($length) 
+    {
+        return 40;
     }
 
         
