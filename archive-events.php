@@ -30,13 +30,16 @@ endif;
       <h1>Events</h1>
 
       <div class="uw-body-copy">
+
+
         <div id="isotope-canvas">
+        
         <?php
           $eventGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-          
+          $eventGrid->renderGridListPrintIcons();
           $eventGrid->renderSearchBox('Events');
           $eventGrid->renderToolbar('Events');
-          // $tourGrid->buildSortingToolbar('destinations'); 
+          
         ?>
             <div class="isotope tile">
             <?php

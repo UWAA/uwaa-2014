@@ -126,6 +126,27 @@ TOOLBAR;
       echo $template;
     }
 
+    public function renderGridListPrintIcons() 
+    {
+      $template = '
+        <div class="grid-list-print-icons hidden-sm hidden-xs">
+          <div class="button grid-button">
+            <div class="icon grid"></div>
+            <div class="label">Overview</div>
+          </div>
+          <div class="button list-button">
+            <div class="icon list"></div>
+            <div class="label">List</div>
+          </div>
+          <div class="button print-button">
+            <div class="icon print"></div>
+            <div class="label">Print</div>
+          </div>
+        </div>';
+
+        echo $template;
+    }
+
 
 
 

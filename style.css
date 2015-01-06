@@ -252,9 +252,22 @@
   padding: 0;
   margin: 0;
 }
-.list .isotope-slide {
+.list .post-thumbnail-slide {
   width: 100%;
   height: 100px;
+  border-bottom: 1px solid #85754d;
+  height: 200px;
+  min-height: 0;
+}
+.list .image-frame img {
+  display: none;
+  visibility: hidden;
+}
+.list .image-frame span {
+  box-shadow: none;
+}
+.list .copy {
+  box-shadow: none;
 }
 .filter-row {
   margin-bottom: 20px;
@@ -1478,6 +1491,72 @@ div.map-logo.tucson {
 .uw-hero-image.communities {
   background: url(assets/headers/Page_Header_Communities.jpg) center center;
   background-size: cover;
+}
+.grid-list-print-icons {
+  position: absolute;
+  top: -70px;
+  right: 300px;
+}
+.grid-list-print-icons .button {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 0 5px;
+  text-transform: uppercase;
+  font-size: .7em;
+  text-align: center;
+  cursor: pointer;
+}
+.grid-list-print-icons .button .icon {
+  margin: 0 auto;
+  height: 34px;
+  width: 31px;
+  background: url(assets/icons/Grid_List_Print_Sprite.png) no-repeat transparent;
+}
+.grid-list-print-icons .button .icon.grid {
+  background-position: 0 0;
+}
+.grid-list-print-icons .button .icon.list {
+  background-position: -64px 0;
+}
+.grid-list-print-icons .button .icon.print {
+  background-position: -122px 0;
+  width: 36px;
+}
+.grid-list-print-icons .button:hover,
+.grid-list-print-icons .button:active,
+.grid-list-print-icons .button.current {
+  color: #4b2e83;
+}
+.grid-list-print-icons .button:hover .icon.grid,
+.grid-list-print-icons .button:active .icon.grid,
+.grid-list-print-icons .button.current .icon.grid {
+  background-position: 0 -36px;
+}
+.grid-list-print-icons .button:hover .icon.list,
+.grid-list-print-icons .button:active .icon.list,
+.grid-list-print-icons .button.current .icon.list {
+  background-position: -64px -36px;
+}
+.grid-list-print-icons .button:hover .icon.print,
+.grid-list-print-icons .button:active .icon.print,
+.grid-list-print-icons .button.current .icon.print {
+  background-position: -122px -36px;
+}
+@media print {
+  .uw-homepage-slider-container,
+  .filter-row,
+  #isotope-search,
+  .grid-list-print-icons,
+  .image-frame {
+    display: none !important;
+  }
+  .post-thumbnail-slide {
+    position: relative !important;
+    display: block !important;
+    height: auto !important;
+    min-height: 0;
+  }
 }
 #map {
   position: absolute;

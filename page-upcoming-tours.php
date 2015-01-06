@@ -21,12 +21,15 @@ wp_enqueue_script('isotopeInit');
 
       <div class="uw-body-copy">
         <div id="isotope-canvas">
+
+      
         <?php
           $tourGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
           
+          $tourGrid->renderGridListPrintIcons();
           $tourGrid->renderSearchBox('Tours');
           $tourGrid->renderToolbar('Destinations');
-          // $tourGrid->buildSortingToolbar('destinations'); 
+          
         ?>
             <div class="isotope tile">
             <?php

@@ -20,10 +20,11 @@ wp_enqueue_script('isotopeInit');
       <h1>Membership Benefits</h1>
 
       <div class="uw-body-copy">
+        
         <div id="isotope-canvas">
         <?php
           $benefitsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-          
+          $benefitsGrid->renderGridListPrintIcons();
           $benefitsGrid->renderSearchBox('Benefits');
           $benefitsGrid->renderToolbar('Benefits');
           // $benefitsGrid->buildSortingToolbar('destinations'); 

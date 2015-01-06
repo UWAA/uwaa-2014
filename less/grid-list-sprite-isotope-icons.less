@@ -1,0 +1,57 @@
+// grid-list-sprite.less
+
+
+.grid-list-print-icons{
+    position: absolute;
+    top:-70px;
+    right: 300px;
+    // width: 158px;
+    // height: 30px;
+
+
+    .button{        
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        margin: 0 5px;
+        text-transform: uppercase;
+        font-size: .7em;
+        text-align: center;
+        cursor: pointer;
+
+
+
+
+        .icon{    
+            // border: 1px solid black;
+            margin: 0 auto;
+            height: 34px;
+            width: 31px;
+            background: url(assets/icons/Grid_List_Print_Sprite.png) no-repeat transparent;
+
+
+
+            &.grid { background-position: 0 0 }
+            &.list { background-position: -64px 0 }
+            &.print {
+                    background-position: -122px 0;
+                    width: 36px;
+                    }
+
+
+
+
+        }
+
+        &:hover, &:active, &.current{
+            color:@purple;
+
+            .icon{
+               &.grid {background-position: 0 -36px}
+               &.list { background-position: -64px -36px }
+               &.print { background-position: -122px -36px }
+           }
+       }
+
+   }
+}

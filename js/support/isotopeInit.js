@@ -7,7 +7,8 @@ Isotope = Backbone.View.extend({
     "click .filter-button" : "filterByButton",
     "keyup #quicksearch" : "filterBySearch",
     "click .list-button" : "listView",
-    "click .tile-button" : "tileView"
+    "click .grid-button" : "tileView",
+    "click .print-button" : "print",
 
   },
 
@@ -59,6 +60,11 @@ Isotope = Backbone.View.extend({
     .isotope({
     layoutMode: 'fitRows'
     });    
+  },
+
+  print: function() {
+    this.listView();
+    window.print();
   }
 
 
