@@ -43,7 +43,7 @@ class ThumbnailBrowser
 
   protected function getTourDestination($post)
   {
-    $toursRegions = [
+    $toursRegions = array(
         'N. America',
         'Latin',
         'America',
@@ -52,7 +52,7 @@ class ThumbnailBrowser
         'Africa',
         'Oceania'
 
-    ];
+    );
 
     if(has_term($toursRegions, 'destinations')):
         $getTermsArgs = array(          
