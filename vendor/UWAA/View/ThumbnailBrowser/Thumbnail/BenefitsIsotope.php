@@ -12,13 +12,13 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
     private $UI;
 
     //Properties Used to Build The Thumbnail For the Homepage
-    private $postTitle;
-    private $postURL;
-    private $postCalloutText;
-    private $postDate;
-    private $postSubtitle;
-    private $postImageThumbnailURL;
-    private $postExcerpt;    
+    protected $postTitle;
+    protected $postURL;
+    protected $postCalloutText;
+    protected $postDate;
+    protected $postSubtitle;
+    protected $postImageThumbnailURL;
+    protected $postExcerpt;    
 
     public function __construct()
     {
@@ -78,11 +78,12 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
 
 
 	public function buildTemplate(){
+    $callout = $this->renderCallout();
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
     <div class="image-frame">
-      <span>$this->postCalloutText</span>
+      $callout
 		  <img src="$this->postImageThumbnailURL"/>
     </div>
 		<div class="copy">

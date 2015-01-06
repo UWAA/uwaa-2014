@@ -14,16 +14,18 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
     private $currentPostID;
     private $postTitle;
     private $postURL;
-    private $postCalloutText;
+    protected $postCalloutText;
     private $postDate;
     private $postSubtitle;
     private $postImageThumbnailURL;
-    private $postExcerpt;    
+    private $postExcerpt;
+      
 
     public function __construct()
     {
         $this->args = $this->setArguments();
         $this->UI = new UI;
+        
     }
 
   private function setArguments()
@@ -87,12 +89,13 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 
 public function buildTemplate() {
 
+$callout = $this->renderCallout();
 $template = <<<TEMPLATE
 <div class="featured-post five-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
       <img src="{$this->postImageThumbnailURL}" alt="">
-      <span>{$this->postCalloutText}</span>
+      $callout
     </div>
   <div class="copy">
  <h6 class="subtitle">{$this->postSubtitle}</h6>

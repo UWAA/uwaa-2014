@@ -324,6 +324,12 @@ class MetaBoxes
                         'id'=> 'benefit_provider_logo',
                         'type'=> 'text',
                         'desc'=> "URL for the uploaded Benefit Provider Logo"
+                        ),
+                    array(
+                        'name' => 'Thumbnail Callout Box',
+                        'id'=> 'thumbnail_callout',
+                        'type'=> 'text',
+                        'desc'=> "This text will show up in the small purple line on the thumbnail."
                         ), 
                      
 
