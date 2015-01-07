@@ -41,13 +41,13 @@ public function build($endpointData)
 
 	protected function getFeatureContents($post)
     {
-        $featureContents = [
+        $featureContents = array(
             'logo' => htmlentities($post->post_name),
             'link' => htmlentities(get_permalink($post->ID)),
             'excerpt' => htmlentities(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
             'marker-color' => '#4b2e83'
             
-        ];
+        );
 
         return $featureContents;
     }

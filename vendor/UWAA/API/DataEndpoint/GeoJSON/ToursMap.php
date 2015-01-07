@@ -43,13 +43,13 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 
 	protected function getFeatureContents($post)
     {
-        $featureContents = [
+        $featureContents = array(
             'title' => htmlspecialchars(get_the_title($post->ID)),
             'link' => get_permalink($post->ID),
             'excerpt' => htmlspecialchars(get_post_meta($post->ID, 'mb_map_excerpt', true)),
             'date' => htmlspecialchars(get_post_meta($post->ID, 'mb_cosmetic_date', true)),
             'marker-color' => '#4b2e83'
-        ];
+        );
 
         return $featureContents;
     }
