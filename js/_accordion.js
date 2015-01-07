@@ -1,6 +1,6 @@
 (function($) {
 
-var allPanels = $('#accordion > .panel > .collapse').hide();
+var allPanels = $('#accordion > .closed > .collapse').hide();
 
   $(".accordion-heading").keypress (function (event)      //using keyboard
   {

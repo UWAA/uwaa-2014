@@ -26,9 +26,9 @@ class Accordions
         ), $atts );
 
         if ($a['open'] == 'true') {
-        return "<span class=\"panel\"><div class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" ><span class=\"oi oi-minus\"></span><h2>$content</h2><span aria-expanded=\"false\" class=\"indicator\"></div>";
+        return "<div class=\"panel open\"><h3 class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" >$content<span aria-expanded=\"true\" class=\"indicator\"></span><span class=\"chevron\"></span></h3>";
         } else {
-            return "<div class=\"panel\"><div class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" ><span class=\"oi oi-plus\"></span><h2>$content</h2><span aria-expanded=\"false\" class=\"indicator\"></div>";
+            return "<div class=\"panel closed\"><h3 class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" >$content<span class=\"chevron closed\"></span><span aria-expanded=\"false\" class=\"indicator\"></span></h3>";
         }
 
     }
@@ -41,7 +41,7 @@ class Accordions
         ), $atts );
 
         if ($a['open'] == 'true') {
-            return "<div class=\"collapse in\" aria-hidden=\"true\"><p>".do_shortcode($content)."</p></div></div>";    
+            return "<div class=\"collapse in\" aria-hidden=\"false\"><p>".do_shortcode($content)."</p></div></div>";    
         } else {
             return "<div class=\"collapse\" aria-hidden=\"true\"><p>".do_shortcode($content)."</p></div></div>";
         }

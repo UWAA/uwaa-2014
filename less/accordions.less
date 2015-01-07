@@ -1,0 +1,72 @@
+// accordions.less
+
+.panel {
+    width: 100%;
+    margin-bottom: 10px;
+
+
+.accordion-heading{
+    background-color: @gray;
+    color: @purple;
+    padding-left: 5px;
+    line-height: 40px;
+    height: 40px;   
+
+
+    h3 {
+        
+
+    }
+
+     
+
+    .chevron {
+        float: right;
+        width: 40px;
+        height: 40px;
+        // content: @white;
+        background-color: @purple;
+        position: relative;
+
+        &:after {
+            // background-position: center center;
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -27px;
+            width: 100%;
+            height: 100%;
+            left: 6px;
+        }
+    }
+
+    }//heading
+
+    &.open .chevron:after {
+            background: url(assets/uwaa-sprite.svg) no-repeat -36px -475px transparent;
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            left: -6px;
+            margin-top: -10px;  
+            
+            }
+
+        
+
+    &.closed .chevron:after {
+            background: url(assets/uwaa-sprite.svg) no-repeat -36px -475px transparent;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);  
+                      
+            }
+
+
+
+}// panel
+
