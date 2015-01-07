@@ -49,6 +49,12 @@
 
     <div class="col-md-4 uw-sidebar">
     <?php 
+    $mapURL = get_post_meta(get_the_id(), 'mb_operator_map', true);    
+     if ($mapURL) {
+      echo '<div class="widget">';
+      echo '<img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" />';
+      echo '</div>';
+     }
         dynamic_sidebar( 'travel_sidebar' ); 
         endwhile;
     ?>

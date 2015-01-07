@@ -26,7 +26,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => false
+                'show'  => true
                 ),
             'gridViewNoSidebar' => array (
                 'name'  => 'Grid Thumbnail - No Sidebar',
@@ -36,7 +36,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => false
+                'show'  => true
                 ),
             'isotopeGrid' => array (
                 'name'  => 'IsoptopeCrop',
@@ -46,7 +46,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => false
+                'show'  => true
                 ),
             'gridViewWithSidebar' => array (
                 'name'  => 'Grid Thumbnail - With Sidebar',
@@ -56,7 +56,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => false
+                'show'  => true
                 ),
             'communitiesProfileHeadshot' => array (
                 'name'  => 'Communities Section Headshot',
@@ -66,7 +66,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => false
+                'show'  => true
                 ),
             'post-thumbnail' => array (
                 'name'  => 'Featured Image Thumbnail',
@@ -76,7 +76,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => false
+                'show'  => true
                 )
         );  
        

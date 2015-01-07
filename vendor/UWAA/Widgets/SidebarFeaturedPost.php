@@ -23,6 +23,7 @@ class SidebarFeaturedPost extends \WP_Widget
   private $currentPostInfo;
   private $postSidebarImage;
   private $postExcerpt;
+  private $postSubtitle;
   private $contentPromotionDestinations;
   private $UI;
   private $postParent;
@@ -187,11 +188,12 @@ class SidebarFeaturedPost extends \WP_Widget
       if ($this->currentPostInfo['id'] == get_the_ID() ) {
         continue;
       }
-        $this->postTitle = strip_tags(get_the_title());
+        $this->postTitle = esc_html(get_the_title());
         $this->postURL = get_permalink();
         $this->postExcerpt = get_the_excerpt();
-        $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
+        $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');
+        $this->postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
         
     endwhile;
 
@@ -234,8 +236,9 @@ echo <<<CONTENT
    $callout
    </div>
    <div class="copy">
-   <h4>$this->postTitle<h4>
-   <h5>$this->postExcerpt</h5>
+   <h6 class="subtitle">$this->postSubtitle</h6>
+    <h4 class="title">$this->postTitle</h4>    
+    <p>$this->postExcerpt</p>
    </div>
    </a>
    </div>
