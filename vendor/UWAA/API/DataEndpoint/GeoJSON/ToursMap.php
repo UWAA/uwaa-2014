@@ -42,8 +42,8 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 
             $this->endpointData[] = $this->buildGeometryCollection($geometry, $featureContents); 
 
-            var_dump($this->endpointData);
-            echo '<br><br>';
+            // var_dump($this->endpointData);
+            // echo '<br><br>';
 
          endforeach;
 
@@ -53,10 +53,10 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 	protected function getFeatureContents($post)
     {
         $featureContents = array(
-            'title' => esc_html(utf8_encode(get_the_title($post->ID))),
+            'title' => utf8_encode(get_the_title($post->ID)),
             'link' => get_permalink($post->ID),
-            'excerpt' => esc_html(utf8_encode(get_post_meta($post->ID, 'mb_map_excerpt', true))),
-            'date' => esc_html(utf8_encode(get_post_meta($post->ID, 'mb_cosmetic_date', true))),
+            'excerpt' => utf8_encode(get_post_meta($post->ID, 'mb_map_excerpt', true)),
+            'date' => utf8_encode(get_post_meta($post->ID, 'mb_cosmetic_date', true)),
             'marker-color' => '#4b2e83'
         );
 
