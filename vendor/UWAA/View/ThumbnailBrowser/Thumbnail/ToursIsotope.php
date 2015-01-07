@@ -87,8 +87,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 		  <img src="$this->postImageThumbnailURL"/>
     </div>
 		<div class="copy">
-		<h5 class="subtitle">$this->postSubtitle</h5>
-		<h4>$this->postTitle</h4>
+		<h6 class="subtitle">$this->postSubtitle</h6>
+		<h4 class="title">$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
 		<p>$this->postExcerpt</p>
 		</div>
