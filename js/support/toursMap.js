@@ -60,8 +60,8 @@ switch (host) {
     markerLayer.loadURL('http://local.wordpress.dev/api/tours/geojson');
     break;
 
-    case "cms.alumni.washinton.edu" :
-    markerLayer.loadURL('https://cms.alumni.washinton.edu/alumni/api/tours/geojson');
+    case "cms.alumni.washington.edu" :
+    markerLayer.loadURL('https://cms.alumni.washington.edu/alumni/api/tours/geojson');
     break;
 
     default: 
