@@ -437,11 +437,21 @@ h6.intro-head {
 }
 .featured-post.four-column {
   position: relative;
-  float: left;
-  width: 25%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .featured-post.four-column {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .featured-post.four-column {
+    float: left;
+    width: 25%;
+  }
 }
 .featured-post .copy {
   color: #5a5a5a;
