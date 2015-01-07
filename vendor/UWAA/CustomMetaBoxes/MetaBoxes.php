@@ -120,17 +120,17 @@ class MetaBoxes
                 'priority' => 'default',
                 'fields' => array(
                     array(
+                        'name' => 'Map Pin Location Name',
+                        'id'=> 'marker_position',
+                        'type'=> 'text',
+                        'desc'=> "Pin location on the map. If you omit Lat/Long, this will be used to place the marker on the tour map."
+                        ),
+                    array(
                         'name' => 'Latitude/Longitude',
                         'id'=> 'lat_long',
                         'type'=> 'text',
-                        'desc'=> 'The latitude, longitude coordinates for the trip.  Use this to precisely position the map-marker.'
-                        ),
-                    array(
-                        'name' => 'Map Title',
-                        'id'=> 'marker_position',
-                        'type'=> 'text',
-                        'desc'=> "Title For the Map. If you omit Lat/Long, this will be used to place the marker on the tour map."
-                        ),
+                        'desc'=> 'The latitude, longitude coordinates for the trip.  Use this to precisely position the map-marker if a city does not work'
+                        ),                    
                     array(
                         'name' => 'Map Excerpt',
                         'id'=> 'map_excerpt',

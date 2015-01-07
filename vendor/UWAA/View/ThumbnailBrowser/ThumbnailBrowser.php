@@ -45,8 +45,7 @@ class ThumbnailBrowser
   {
     $toursRegions = array(
         'N. America',
-        'Latin',
-        'America',
+        'Latin America',        
         'Europe',
         'Asia',
         'Africa',
