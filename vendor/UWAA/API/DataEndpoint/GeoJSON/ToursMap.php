@@ -6,7 +6,7 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 
 	public function build($endpointData)
     {
-        $payload = json_encode($this->buildFeatureCollection($endpointData), JSON_PRETTY_PRINT, 5);
+        $payload = json_encode($this->buildFeatureCollection($endpointData), 5);
         $error = json_last_error();
     //     if (!$payload) {
     //         echo 'Payload could not be generated';

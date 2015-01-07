@@ -1,5 +1,5 @@
 (function($) {
-
+//Taking pretty much verbatim, needs some work.
 var allPanels = $('#accordion > .closed > .collapse').hide();
 
   $(".accordion-heading").keypress (function (event)      //using keyboard
@@ -8,6 +8,8 @@ var allPanels = $('#accordion > .closed > .collapse').hide();
    {
     var $indicator = $(this).find(".indicator:first");
     var $content = $(this).siblings(".collapse");
+    var $parent = $(this).parent();
+    // 
 
     if ( $indicator.attr("aria-expanded") == "false")
     {
@@ -15,6 +17,8 @@ var allPanels = $('#accordion > .closed > .collapse').hide();
       $indicator.text ("Expanded");
       $indicator.css({"position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)"});
       $content.show () .attr ("aria-hidden", "false");
+      $parent.removeClass('closed').addClass('open');
+      console.log($parent);
   }
   else if ( $indicator.attr("aria-expanded") == "true")
   {
@@ -23,6 +27,7 @@ var allPanels = $('#accordion > .closed > .collapse').hide();
       $indicator.css({"position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)"});
       $content.hide()
       .attr ("aria-hidden", "true");
+      $parent.removeClass('open').addClass('closed');
 } // if
  }// if
 }) // function
@@ -30,18 +35,23 @@ var allPanels = $('#accordion > .closed > .collapse').hide();
 $(".accordion-heading").click (function () {          //using mouse
     var $indicator = $(this).find(".indicator:first");
     var $content = $(this).siblings(".collapse");
+    var $parent = $(this).parent();
 
     if ( $indicator.attr("aria-expanded") == "false") {
+        $parent.removeClass('closed').addClass('open');
         $indicator.attr ("aria-expanded", "true");
         $indicator.text ("Expanded");
         $indicator.css({"position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)"});
-        $content.show ().attr ("aria-hidden", "false");
+        $content.show ().attr("aria-hidden", "false");        
+        console.log($parent);
     } else if ( $indicator.attr("aria-expanded") == "true") {
+        $parent.removeClass('open').addClass('closed');
         $indicator.attr ("aria-expanded", "false");
         $indicator.text ("Collapsed");
         $indicator.css({"position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)"});
         $content.hide()
         .attr ("aria-hidden", "true");
+        
 } // if
 //$indicator.focus();
 }); // click .panel
