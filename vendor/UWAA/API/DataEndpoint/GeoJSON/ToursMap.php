@@ -37,7 +37,7 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
         }
         echo $payload;
         // debug
-        // var_dump($this->buildFeatureCollection($endpointData));
+        var_dump($this->buildFeatureCollection($endpointData));
     }
 
     public function load($query)
