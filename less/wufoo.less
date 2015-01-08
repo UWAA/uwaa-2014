@@ -1,0 +1,37 @@
+// wufoo.less
+
+
+
+
+
+.wufoo {
+/* Logo */
+#logo a {background-image:url('http://wufoo.com/images/themes/logos/shark.png'); min-height:0; height:40px}
+* html #logo a {/* IE6 png Support */
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://wufoo.com/images/themes/logos/shark.png", sizingMethod="crop");
+}
+
+/* Backgrounds */
+ input.text,  textarea.textarea{background:#FFFFFF url(/images/fieldbg.gif) repeat-x top}
+ .focused{background:#FFF7C0}
+ .instruct{background-color:#F5F5F5}
+
+/* Borders */
+#container{border:0 solid #cccccc}
+ .info{border-bottom:1px dotted #CCCCCC}
+ .instruct{border:1px solid #e6e6e6}
+
+/* Typography */
+ .info h2{font-size:160%;font-family:inherit;color:#000000}
+ .info div{font-size:95%;font-family:inherit;color:#444444}
+ .section h3{font-size:110%;font-family:inherit;background:#FFFFFF;color:#000000}
+ .section div{font-size:85%;font-family:inherit;color:#444444}
+ label.desc,  legend.desc{font-size:95%;font-family:inherit;color:#444444}
+ li div,  li div label,  li span label{font-family:inherit;color:#444444}
+ input.text,  textarea.textarea,  select.select,  label.choice{font-size:100%;font-family:inherit;color:#333333}
+ label.choice{color:#444444}
+ .instruct{font-size:80%;font-family:inherit;color:#444444
+}
+
+}

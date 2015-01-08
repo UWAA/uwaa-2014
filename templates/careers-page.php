@@ -16,7 +16,7 @@ get_header();
     <div class="col-md-8 uw-content" role='main'>
 
       <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
-      <h2 class="uw-site-title">Careers</h2>
+      <h2 class="uw-site-title">Career Development</h2>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
