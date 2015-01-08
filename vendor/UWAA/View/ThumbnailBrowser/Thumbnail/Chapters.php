@@ -41,12 +41,13 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
       // 'tag' => 'Home'
       
       'tax_query' => array(
-        // 'relation' => 'AND',
-        // array(
-        //   'taxonomy' => 'destinations',
-        //   'field'    => 'name',
-        //   'terms'    => array( 'asia')
-        // ),
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    => array( 'profile'),
+          'operator' => 'NOT IN'
+        ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'slug',
