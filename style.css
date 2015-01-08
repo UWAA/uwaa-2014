@@ -574,6 +574,9 @@ h6.intro-head {
     display: none !important;
   }
 }
+.single-post .uwaa-chapter-header {
+  height: 480px;
+}
 .communities-header {
   margin-left: -15px;
   margin-right: -15px;
