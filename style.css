@@ -1703,6 +1703,9 @@ div.map-logo.tucson {
   color: #3d3d3d;
   -webkit-font-smoothing: antialiased;
 }
+.wufoo li.focused {
+  background-color: #b7a57a;
+}
 .wufoo #container {
   border: 0 solid #cccccc;
 }
