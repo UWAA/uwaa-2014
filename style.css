@@ -1692,10 +1692,10 @@ div.map-logo.tucson {
 .wufoo .instruct small {
   color: #ffffff;
 }
-.wufoo .header h2 {
+.wufoo #header h2 {
   display: none;
 }
-.wufoo .header div {
+.wufoo #header div {
   font-size: 17px;
   line-height: 1.72222;
   margin: 0 0 14.5px;
