@@ -1683,15 +1683,12 @@ div.map-logo.tucson {
   /* Borders */
   /* Typography */
 }
-.wufoo input.text,
-.wufoo textarea.textarea {
-  background: #ffffff url(/images/fieldbg.gif) repeat-x top;
-}
 .wufoo .focused {
-  background: #fff7c0;
+  background: #4b2e83;
 }
 .wufoo .instruct {
-  background-color: #f5f5f5;
+  background-color: #4b2e83;
+  color: #ffffff;
 }
 .wufoo #container {
   border: 0 solid #cccccc;
