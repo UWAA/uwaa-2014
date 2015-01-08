@@ -1677,6 +1677,80 @@ div.map-logo.tucson {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+.wufoo {
+  font-family: 'Open Sans', sans-serif;
+  /* Backgrounds */
+  /* Borders */
+  /* Typography */
+}
+.wufoo input.text,
+.wufoo textarea.textarea {
+  background: #ffffff url(/images/fieldbg.gif) repeat-x top;
+}
+.wufoo .focused {
+  background: #fff7c0;
+}
+.wufoo .instruct {
+  background-color: #f5f5f5;
+}
+.wufoo #container {
+  border: 0 solid #cccccc;
+}
+.wufoo .info {
+  border-bottom: 1px dotted #cccccc;
+}
+.wufoo .instruct {
+  border: 1px solid #e6e6e6;
+}
+.wufoo .info h2 {
+  font-size: 160%;
+  font-family: 'Open Sans', sans-serif;
+  color: #000000;
+}
+.wufoo .info div {
+  font-size: 95%;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
+.wufoo .section h3 {
+  font-size: 110%;
+  font-family: 'Open Sans', sans-serif;
+  background: #FFFFFF;
+  color: #000000;
+}
+.wufoo .section div {
+  font-size: 85%;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
+.wufoo label.desc,
+.wufoo legend.desc {
+  font-size: 95%;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
+.wufoo li div,
+.wufoo li div label,
+.wufoo li span label {
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
+.wufoo input.text,
+.wufoo textarea.textarea,
+.wufoo select.select,
+.wufoo label.choice {
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+}
+.wufoo label.choice {
+  color: #444444;
+}
+.wufoo .instruct {
+  font-size: 80%;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444;
+}
 #map {
   position: absolute;
   top: 0;
