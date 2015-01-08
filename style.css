@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 0.2.0
+ Version: 0.1.0
  */
 .thumbnail > img,
 .thumbnail a > img,
@@ -1554,6 +1554,14 @@ div.map-logo.tucson {
 }
 .uw-hero-image.communities {
   background: url(assets/headers/Page_Header_Communities.jpg) center center;
+  background-size: cover;
+}
+.uw-hero-image.careers {
+  background: url(assets/headers/Page_Header_Careers.jpg) center center;
+  background-size: cover;
+}
+.uw-hero-image.services {
+  background: url(assets/headers/Page_Header_Services.jpg) center center;
   background-size: cover;
 }
 .grid-list-print-icons {

@@ -1,13 +1,13 @@
 <?php
 /*
- * Template Name: UWAA-Services
- * Description: A Page Template for Services pages.
+ * Template Name: UWAA-Careers
+ * Description: A Page Template for career pages.
  */
 
 get_header(); 
 ?>
 
-<div class="uw-hero-image services"></div>
+<div class="uw-hero-image careers"></div>
 
 <div class="container uw-body">
 
@@ -16,11 +16,11 @@ get_header();
     <div class="col-md-8 uw-content" role='main'>
 
       <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
-      <h2 class="uw-site-title">Alumni Services</h2>
+      <h2 class="uw-site-title">Careers</h2>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
-      <div class="uw-body-copy">
+      <div class="uw-body-copy">      
 
       <?php
           // Start the Loop.
@@ -51,7 +51,7 @@ get_header();
     <div class="col-md-4 uw-sidebar">
     <?php 
         uw_sidebar_menu();
-        dynamic_sidebar( 'services_sidebar' ); 
+        dynamic_sidebar( 'membership_sidebar' ); 
     ?>
     </div>
 
