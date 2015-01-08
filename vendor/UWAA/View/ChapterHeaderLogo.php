@@ -10,18 +10,8 @@ class ChapterHeaderLogo {
      function __construct($postName) 
     {
         $this->postName = $postName;
-    
-       
-        
     }
 
-    //
-    public function isCommunitiesContent($slug) 
-    {
-       if (in_array($slug, $this->chapterSlugs)) {
-       
-       } 
-    }
 
 
     public function retriveSVG() 

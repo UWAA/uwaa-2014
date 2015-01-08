@@ -1,11 +1,51 @@
 <?php get_header(); 
   // Start the Loop.
-  while ( have_posts() ) : the_post();
-  
-  
+  while ( have_posts() ) : the_post(); 
+ ?>
+
+ 
+
+
+
+ <?php
+
+
+$communitySlug = new \UWAA\View\GetCommunitySlug($post);
+$featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
+$finalSlug = $communitySlug->isCommunitiesContent();
+ // if you have a featured image, put it in
+ if ($featureImage) {
+    ?>
+  <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+    <?php    
+  } elseif ($finalSlug && !$featureImage) {
+
+    ?>
+    <div class="uwaa-chapter-header">
+    <div class="chapter-image-column" style="background-image:url('<?php $communitySlug->getCommunityBrandingImage($finalSlug);?>');"></div>
+      <?php    ?>
+     <div class="chapter-logo">
+       <?php
+       $logo = new \UWAA\View\ChapterHeaderLogo($finalSlug); 
+        $logo->retriveSVG();
+        ?>
+     </div>
+    </div>
+
+
+    <?php
+  } else {
+     get_template_part( 'header', 'image' ); 
+   }
+
+
+
+
 ?>
 
-<div class="uwaa-hero-image" style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+
+
+
 
 <div class="container uw-body">
 
