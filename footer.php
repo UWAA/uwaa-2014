@@ -3,7 +3,7 @@
         <nav role="navigation" aria-label="about uwaa and join" class="contact-links">
         <span>CONTACT UWAA: 206-543-0540 <a href="mailto:uwalumni@uw.edu">uwalumni@uw.edu</a></span>
             <ul class="footer-links">
-                <li><a href="#">About</a></li>
+                <li><a href="<?php echo home_url('/about'); ?>">About</a></li>
                 <li><a href="#">Join</a></li>
             </ul>                   
         </nav>
