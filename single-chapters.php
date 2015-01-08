@@ -40,7 +40,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
       ?>
 
     </div>
-
+      
       <div class="uw-body-copy">
             <?php
                 // // Start the Loop.
@@ -67,6 +67,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
 
     <div class="col-md-4 uw-sidebar">
     <?php 
+        
         uw_sidebar_menu();
         echo "fix UW's Menu for Them";
         

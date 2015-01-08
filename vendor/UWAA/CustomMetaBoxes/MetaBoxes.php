@@ -11,6 +11,7 @@ class MetaBoxes
         $this->add_benefit_meta();
         $this->add_event_meta();
         $this->add_header_text_toggle();
+        $this->add_major_market_toggle();
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
         add_filter('do_meta_boxes', array($this, 'renameFeaturedImage'), 0);
@@ -238,7 +239,7 @@ class MetaBoxes
                 'pages' => array('chapters'),
                 'context' => 'normal',
                 'priority' => 'high',
-                'fields' => array(
+                'fields' => array(                    
                     array(
                         'name' => 'Chapter Map Excerpt',
                         'id'=> 'chapter_map_excerpt',
@@ -407,6 +408,30 @@ class MetaBoxes
                                 'white-header-overlay' => 'White Text'
                                 ),
                         'desc'=> 'Text overlays the hero image on this post type.  Choose between Purple and White text'
+                        ),
+                    )
+            )
+            );
+
+        }
+
+         protected function add_major_market_toggle() {
+            new \UWAA\CustomPostData('header_toggle', array(
+                'title' => 'Event Post Information',
+                'pages' => array('chapters'),  //add events, regional pages as they are ready
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Major Market Toggle',
+                        'id'=> 'isMajorMarket',
+                        'type'=> 'select',
+                        'default' => 'notMajorMarket',
+                        'options' => array(
+                                'notMajorMarket' => 'Not a Major Market', 
+                                'majorMarket' => 'Is a Major Market'
+                                ),
+                        'desc'=> 'Use this to toggle between major and non/major markets.  Non-major markets will have their map link direct to the "Other Areas" page'
                         ),
                     )
             )
