@@ -13,10 +13,14 @@ Isotope = Backbone.View.extend({
   },
 
   initialize: function() {
-    this.$('.isotope').isotope({
+    $canvas = this.$('.isotope').isotope({
       itemSelector: '.post-thumbnail-slide',
       layoutMode: 'fitRows'
     });
+
+    $canvas.imagesLoaded(function() {
+      $canvas.isotope('layout');
+    })
   },
 
 
