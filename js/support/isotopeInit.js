@@ -15,7 +15,7 @@ Isotope = Backbone.View.extend({
   initialize: function() {
     this.$('.isotope').isotope({
       itemSelector: '.post-thumbnail-slide',
-      layoutMode: 'fitRows'
+      layoutMode: 'cellsByRow'
     });
   },
 
