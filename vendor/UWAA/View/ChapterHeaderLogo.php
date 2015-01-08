@@ -3,7 +3,7 @@
 class ChapterHeaderLogo {
 
     private $postName;
-    private $chapterSlugs;
+    public static $chapterSlugs;
 
 
 
@@ -12,11 +12,19 @@ class ChapterHeaderLogo {
         $this->postName = $postName;
         // var_dump($this->postName);
         $this->getChapterSlugs();
-        $this->retriveSVG();
+        
+    }
+
+    //
+    public function isCommunitiesContent($slug) 
+    {
+       if (in_array($slug, $this->chapterSlugs)) {
+       
+       } 
     }
 
 
-    private function retriveSVG() 
+    public function retriveSVG() 
     {
         if (in_array($this->postName, $this->chapterSlugs)) {
             $logoFile = $this->postName . '.svg';

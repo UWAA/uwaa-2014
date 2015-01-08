@@ -41,7 +41,7 @@ class MetaBoxes
             $boxesToRemove = array(
                 'postcustom',
                 'trackbacksdiv',
-                'categorydiv'                
+                // 'categorydiv'                
                 );
 
             foreach ($pagesToRemoveBoxesFrom as $page):
