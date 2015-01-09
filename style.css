@@ -1836,6 +1836,99 @@ div.map-logo.tucson {
   font-family: 'Open Sans', sans-serif;
   color: #3d3d3d;
 }
+ul.sidebar-social {
+  padding-left: 0;
+  margin-bottom: 14.5px;
+  margin-top: 0;
+}
+ul.sidebar-social li {
+  list-style: none;
+  display: inline-block;
+}
+ul.sidebar-social li a {
+  transition: none;
+  color: #fff;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: inline;
+  background: url(assets/uwaa-sprite.svg) no-repeat 0 -185px transparent;
+  padding: 8px 21px;
+}
+ul.sidebar-social li a.facebook {
+  background-position: 0px -185px;
+}
+ul.sidebar-social li a.twitter {
+  background-position: -46px -185px;
+}
+ul.sidebar-social li a.tumblr {
+  background-position: -366px -185px;
+}
+ul.sidebar-social li a.youtube {
+  background-position: -138px -185px;
+}
+ul.sidebar-social li a.linkedin {
+  background-position: -184px -185px;
+}
+ul.sidebar-social li a.pinterest {
+  background-position: -92px -185px;
+}
+ul.sidebar-social li a.vine {
+  background-position: -230px -185px;
+}
+ul.sidebar-social li a.google {
+  background-position: -275px -185px;
+}
+ul.sidebar-social li a.instagram {
+  background-position: -322px -185px;
+}
+ul.sidebar-social li a.email {
+  background-position: -410px -185px;
+}
+ul.sidebar-social li a:hover,
+ul.sidebar-social li a:focus {
+  transition: none;
+  border-bottom: 0;
+}
+ul.sidebar-social li a:hover.facebook,
+ul.sidebar-social li a:focus.facebook {
+  background-position: 0px -225px;
+}
+ul.sidebar-social li a:hover.twitter,
+ul.sidebar-social li a:focus.twitter {
+  background-position: -46px -225px;
+}
+ul.sidebar-social li a:hover.tumblr,
+ul.sidebar-social li a:focus.tumblr {
+  background-position: -366px -225px;
+}
+ul.sidebar-social li a:hover.youtube,
+ul.sidebar-social li a:focus.youtube {
+  background-position: -138px -225px;
+}
+ul.sidebar-social li a:hover.linkedin,
+ul.sidebar-social li a:focus.linkedin {
+  background-position: -184px -225px;
+}
+ul.sidebar-social li a:hover.pinterest,
+ul.sidebar-social li a:focus.pinterest {
+  background-position: -92px -225px;
+}
+ul.sidebar-social li a:hover.vine,
+ul.sidebar-social li a:focus.vine {
+  background-position: -230px -225px;
+}
+ul.sidebar-social li a:hover.google,
+ul.sidebar-social li a:focus.google {
+  background-position: -275px -225px;
+}
+ul.sidebar-social li a:hover.instagram,
+ul.sidebar-social li a:focus.instagram {
+  background-position: -322px -225px;
+}
+ul.sidebar-social li a:hover.email,
+ul.sidebar-social li a:focus.email {
+  background-position: -410px -225px;
+}
 #map {
   position: absolute;
   top: 0;

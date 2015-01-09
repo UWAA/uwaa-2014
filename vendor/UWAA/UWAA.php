@@ -68,6 +68,7 @@ class UWAA
         new \UWAA\Widgets\SidebarFeaturedPost;
         new \UWAA\Widgets\SidebarPullQuote;
         new \UWAA\Widgets\SidebarSeeYourChapter;
+        new \UWAA\Widgets\SocialSidebar;
 
         // //SuperHero Slideshow (from UW Homepage)
         // new \UWAA\Slideshow\Slideshow;
