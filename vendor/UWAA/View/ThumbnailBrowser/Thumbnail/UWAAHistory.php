@@ -50,8 +50,8 @@ class UWAAHistory extends ThumbnailBrowser implements Thumbnail
         // ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
-          'field'    => 'name',
-          'terms'    => array( 'uwaa-history')
+          'field'    => 'slug',
+          'terms'    => array( 'uwaa-history-row')
 
           )
       ) //End tax query    
