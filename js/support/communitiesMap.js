@@ -60,7 +60,7 @@ switch (host) {
     break;
 
     case "cms.alumni.washington.edu" :
-    markerLayer.loadURL('https://cms.alumni.washington.edu/alumni/api/tours/geojson');
+    markerLayer.loadURL('https://cms.alumni.washington.edu/alumni/api/communities/geojson');
     break;
 
     default: 
