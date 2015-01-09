@@ -86,15 +86,24 @@ class Communities extends ThumbnailBrowser implements Thumbnail
   }
 
 
-public function buildTemplate() {
+ protected function renderImage() {
+    if ($this->postImageThumbnailURL) {
+      return '<img src="' . $this->postImageThumbnailURL . '"/>';
+    } 
+    return '<img src="http://placekitten.com/g/275/190" />';
 
-$callout = $this->renderCallout();
+   }  
+
+
+  public function buildTemplate(){
+    $callout = $this->renderCallout();
+    $image = $this->renderImage();
 
 $template = <<<TEMPLATE
 <div class="featured-post four-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
-      <img src="{$this->postImageThumbnailURL}" alt="">
+      $image
       $callout
     </div>
   <div class="copy">

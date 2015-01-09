@@ -270,6 +270,9 @@
   font-size: .94em;
   line-height: 1.37;
 }
+.uw-sidebar .post-thumbnail-slide {
+  width: 302px;
+}
 .list .post-thumbnail-slide {
   width: 100%;
   border-bottom: 1px solid #b7a57a;

@@ -76,15 +76,24 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
     return $args;
   }  
 
+ protected function renderImage() {
+    if ($this->postImageThumbnailURL) {
+      return '<img src="' . $this->postImageThumbnailURL . '"/>';
+    } 
+    return '<img src="http://placekitten.com/g/275/190" />';
 
-	public function buildTemplate(){
+   }  
+
+
+  public function buildTemplate(){
     $callout = $this->renderCallout();
+    $image = $this->renderImage();
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
     <div class="image-frame">
       $callout
-		  <img src="$this->postImageThumbnailURL"/>
+		  $image
     </div>
 		<div class="copy">
 		<h5 class="subtitle">$this->postSubtitle</h5>

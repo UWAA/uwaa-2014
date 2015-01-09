@@ -11,14 +11,14 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
     private $UI;
 
     //Properties Used to Build The Thumbnail For the Homepage
-    private $currentPostID;
-    private $postTitle;
-    private $postURL;
+    protected $currentPostID;
+    protected $postTitle;
+    protected $postURL;
     protected $postCalloutText;
-    private $postDate;
-    private $postSubtitle;
-    private $postImageThumbnailURL;
-    private $postExcerpt;
+    protected $postDate;
+    protected $postSubtitle;
+    protected $postImageThumbnailURL;
+    protected $postExcerpt;
       
 
     public function __construct()
@@ -90,11 +90,12 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 public function buildTemplate() {
 
 $callout = $this->renderCallout();
+$image = $this->renderImage();
 $template = <<<TEMPLATE
 <div class="featured-post five-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
-      <img src="{$this->postImageThumbnailURL}" alt="">
+      $image
       $callout
     </div>
   <div class="copy">
