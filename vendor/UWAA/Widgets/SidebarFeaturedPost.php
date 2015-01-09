@@ -27,6 +27,7 @@ class SidebarFeaturedPost extends \WP_Widget
   private $contentPromotionDestinations;
   private $UI;
   private $postParent;
+  private $hasResults;
   
 
   function __construct()
@@ -170,9 +171,13 @@ class SidebarFeaturedPost extends \WP_Widget
       );
 
     $query = new \WP_Query($args);
+    
     if ($query) {
+
       $this->extractPostInformation($query);
     }
+
+
 
     
 
@@ -184,6 +189,8 @@ class SidebarFeaturedPost extends \WP_Widget
   private function extractPostInformation($query) 
   {
 
+    if ($query->have_posts()):
+      $this->hasResults = TRUE;
     while ( $query->have_posts() ) : $query->the_post();
       if ($this->currentPostInfo['id'] == get_the_ID() ) {
         continue;
@@ -196,6 +203,10 @@ class SidebarFeaturedPost extends \WP_Widget
         $this->postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
         
     endwhile;
+
+    endif;
+
+
 
     wp_reset_postdata();    
   }
@@ -211,6 +222,8 @@ class SidebarFeaturedPost extends \WP_Widget
   {
      $this->setCurrentPostInformation();
      $this->getPostsToDisplay();
+
+     if ($this->hasResults) {
      $callout = $this->renderCallout();
 
     // extract( $args );
@@ -246,7 +259,9 @@ echo <<<CONTENT
 CONTENT;
 
 
-echo '</div>';
+    echo '</div>';
+
+  }//endif
 }
 
 
