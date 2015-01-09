@@ -59,6 +59,10 @@ switch (host) {
     markerLayer.loadURL('http://local.wordpress.dev/api/communities/geojson');
     break;
 
+    case "cms.alumni.washington.edu" :
+    markerLayer.loadURL('https://cms.alumni.washington.edu/alumni/api/tours/geojson');
+    break;
+
     default: 
     console.log ("Error Getting GEOJSON.  Host: "+host+"");
 
