@@ -114,6 +114,7 @@ class RequestHandler
         $args = array (
         'post_type' => $postType,
         'orderby' => 'asc',
+        'posts_per_page' => '-1',
         );
         $query = new \WP_query($args);
         return $query;   
