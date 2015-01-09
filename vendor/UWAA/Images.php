@@ -30,8 +30,8 @@ class Images {
                 ),
             'gridViewNoSidebar' => array (
                 'name'  => 'Grid Thumbnail - No Sidebar',
-                'width'  => 768,
-                'height'  => 190,
+                'width'  => 377,
+                'height'  => 160,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
@@ -50,8 +50,8 @@ class Images {
                 ),
             'gridViewWithSidebar' => array (
                 'name'  => 'Grid Thumbnail - With Sidebar',
-                'width'  => 768,
-                'height'  => 130,
+                'width'  => 377,
+                'height'  => 160,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
