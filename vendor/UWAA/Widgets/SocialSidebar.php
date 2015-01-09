@@ -7,7 +7,7 @@
 
 class SocialSidebar extends \WP_Widget
 {
-    const ID    = 'uwaa-social sidebar';
+    const ID    = 'uwaa-social-sidebar';
     const TITLE = 'UWAA Share This Page';
     const DESC  = 'Adds a UWAA branded "Share This Page" box to the sidebar.';
     private $sharingLinks = array();
