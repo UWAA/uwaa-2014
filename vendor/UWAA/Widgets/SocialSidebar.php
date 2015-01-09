@@ -49,7 +49,7 @@ class SocialSidebar extends \WP_Widget
       $this->linkedin = 'http://www.linkedin.com/shareArticle?url='. $link .'';
       $this->facebook = 'http://www.facebook.com/sharer/sharer.php?u='. $link .'';
       $this->twitter = 'http://twitter.com/share?url='. $link .' &text= '. $link .' ';
-      $this->email = 'mailto:?subject=HMTL%20Share%20Buttons&body='. $link .' ';
+      $this->email = 'mailto:?subject=$this->title='. $link .' ';
       
   }
 
