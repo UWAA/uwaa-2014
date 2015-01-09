@@ -5,7 +5,7 @@
 	.make-row();
 	background:#777777;
 	height: 4.706em;
-	border-top: 5px solid #d2d2d2;
+	border-top: 7px solid #d1d1d1;	
 	color: @white;
 
 	.social-icons{
@@ -16,10 +16,30 @@
 
 	.contact-links{
 		.make-sm-column(6);
-		padding-top: 1.3em;		
+		padding-top: 1.3em;
+		
+		letter-spacing: 1px;
+
+		a {
+			padding-left: 7px;
+			text-transform: none;
+			color: @white;
+			transition: 0.25s;
+
+			&:hover, &:active {
+				color: @lightgold;
+			}
+		}
+
 
 		span, ul {
+
 			display: inline;			
+			margin-right: 7px;
+
+			a {
+				text-transform: uppercase;
+			}
 		}
 	}
 

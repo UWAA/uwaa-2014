@@ -272,6 +272,10 @@
 }
 .uw-sidebar .post-thumbnail-slide {
   width: 302px;
+  margin-right: 0;
+}
+.uw-sidebar .post-thumbnail-slide .copy {
+  height: auto;
 }
 .list .post-thumbnail-slide {
   width: 100%;
@@ -376,6 +380,35 @@ h6.intro-head {
 }
 .single-tours .uw-body-copy strong {
   color: #b7a57a;
+}
+.uwaa-pull-quote {
+  margin-bottom: 40px;
+}
+.quote-text {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 400;
+  color: #3d3d3d;
+  position: relative;
+  text-indent: 2em;
+}
+.quote-text:before {
+  content: "“";
+  font-weight: 900;
+  font-size: 4em;
+  color: #b7a57a;
+  position: absolute;
+  top: .42em;
+  left: -0.5em;
+  line-height: 0;
+}
+.quote-author {
+  font-weight: 600;
+  float: right;
+  color: #b7a57a;
+  font-size: 1em;
+  line-height: 1.1;
+  padding-top: 0.471em;
 }
 .uwaa-btn {
   width: auto;
@@ -867,6 +900,7 @@ div.map-logo {
   width: 100%;
   background-image: url(assets/Regional_Logo_Sprite_Map.png);
   background-position: 50% 0;
+  margin-bottom: 10px;
 }
 div.map-logo #Huskies path {
   fill: #4b2e83;
@@ -963,6 +997,23 @@ div.map-logo.spokane {
 }
 div.map-logo.tucson {
   background-position: 50% -42px;
+}
+.leaflet-popup .leaflet-popup-content {
+  padding: 10px 4px 10px 10px;
+}
+.leaflet-popup .leaflet-popup-content p.map-title {
+  font-family: "Encode Sans Compressed", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 7px;
+}
+.leaflet-popup .leaflet-popup-content p.map-date {
+  font-family: "Encode Sans Compressed", sans-serif;
+  font-weight: 700;
+  margin: 0 0 2px;
+}
+.leaflet-popup .leaflet-popup-content p.map-excerpt {
+  margin: 0 0 0;
 }
 .fact-row {
   margin-left: -15px;
@@ -1453,7 +1504,7 @@ div.map-logo.tucson {
   margin-right: -15px;
   background: #777777;
   height: 4.706em;
-  border-top: 5px solid #d2d2d2;
+  border-top: 7px solid #d1d1d1;
   color: #ffffff;
 }
 #uwaa-footer:before,
@@ -1512,6 +1563,7 @@ div.map-logo.tucson {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 1.3em;
+  letter-spacing: 1px;
 }
 @media (min-width: 768px) {
   #uwaa-footer .contact-links {
@@ -1524,10 +1576,25 @@ div.map-logo.tucson {
     float: left;
     width: 50%;
   }
+}
+#uwaa-footer .contact-links a {
+  padding-left: 7px;
+  text-transform: none;
+  color: #ffffff;
+  transition: 0.25s;
+}
+#uwaa-footer .contact-links a:hover,
+#uwaa-footer .contact-links a:active {
+  color: #b7a57a;
 }
 #uwaa-footer .contact-links span,
 #uwaa-footer .contact-links ul {
   display: inline;
+  margin-right: 7px;
+}
+#uwaa-footer .contact-links span a,
+#uwaa-footer .contact-links ul a {
+  text-transform: uppercase;
 }
 #uwaa-footer .uwaa-logo {
   position: relative;
