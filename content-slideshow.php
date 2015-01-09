@@ -17,12 +17,15 @@
         <div class="col-md-8">
 
           <h2><?php $subtitle = $slide->subtitle ? $slide->subtitle : ''; echo $subtitle ?></h2>
-          <h1><?php echo $slide->title; ?></h1>
+          <h1 id="<?php echo $slide->id; ?>-title"><?php echo $slide->title; ?></h1>
           <h2><?php $date = $slide->date ? $slide->date : ''; echo $date ?></h2>
 
           
 
-          <?php echo apply_filters( 'the_content', $slide->text ); ?> <?php echo $slide->link; ?>
+          <?php echo apply_filters( 'the_content', $slide->text ); ?> 
+
+          
+          <a class="uw-btn btn-sm btn-none" href="<?php echo $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
 
         </div>
 
