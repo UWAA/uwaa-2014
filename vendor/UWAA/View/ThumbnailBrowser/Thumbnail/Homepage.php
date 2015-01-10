@@ -70,13 +70,13 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
       }
 
 
-        $this->postTitle = htmlspecialchars(get_the_title(get_the_ID()));
+        $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
-        $this->postCalloutText = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
+        $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');    
-        $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
+        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 45);        
+        $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 45));        
         
         echo $this->buildTemplate();
 
