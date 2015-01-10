@@ -154,6 +154,13 @@ TOOLBAR;
         echo $template;
     }
 
+    protected function shortenExcerpt($string, $excerptLength) {
+
+      $shortenedString = substr($string, 0, $excerptLength);
+
+      return $shortenedString;
+    }
+
 
 
 

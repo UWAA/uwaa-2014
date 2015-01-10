@@ -69,8 +69,16 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => 'events',
-      'orderby' => 'rand',  //@TODO  Make this order by metadata date
-      // 'posts_per_page' => 1
+      'orderby' => 'meta_value',
+      'order' => 'DESC',
+      'meta_query' => array(
+        'key' => 'start_date',
+        'value' => date('mdY'),
+        'compare' => '>='
+      ),
+      //@TODO  Make this order by metadata date
+      'posts_per_page' => -1,
+
       );
 
     return $args;
