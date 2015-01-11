@@ -55,7 +55,9 @@
       echo '<img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" />';
       echo '</div>';
      }
-        dynamic_sidebar( 'travel_sidebar' ); 
+        dynamic_sidebar( 'travel_sidebar' );
+       
+        the_widget("UWAA\Widgets\SocialSidebar");
         endwhile;
     ?>
     </div>

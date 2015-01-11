@@ -7,7 +7,8 @@ div.map-logo{
     
     // margin-bottom: 10px;
     background-image: url(assets/Regional_Logo_Sprite_Map.png);
-    background-position: 50% 0;    
+    background-position: 50% 0;
+    margin-bottom: 10px;    
     
 
     #Huskies path{
@@ -164,17 +165,35 @@ div.map-logo{
                 
             }
 
-
-
-
-
-
-
-
-
 }
 
 
-.leaflet-popup-content{
+.leaflet-popup .leaflet-popup-content{
     // max-width: 250px;
+    padding: 10px 4px 10px 10px; 
+
+    
+    p {
+
+    &.map-title {
+        font-family: "Encode Sans Compressed" , sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 0 0 7px;
+
+    }
+
+    &.map-date {
+         font-family: "Encode Sans Compressed" , sans-serif;
+         font-weight: 700;
+         margin: 0 0 2px;
+    }
+
+    &.map-excerpt {
+        margin: 0 0 0;
+
+    }
+
+
+    }
 }

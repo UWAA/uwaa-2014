@@ -1,0 +1,60 @@
+// wufoo.less
+
+
+
+
+
+.wufoo {
+    font-family: 'Open Sans', sans-serif;
+
+
+/* Backgrounds */
+ input.text,  textarea.textarea{}
+ .focused{background:@purple}
+ .instruct{
+    background-color:@purple;
+
+    small{
+        color:@white;
+    }
+    }
+
+    #header {
+        h2{
+            display: none;
+        }
+
+        div {
+            font-size: 17px;
+            line-height: 1.72222;
+            margin: 0 0 14.5px;
+            font-weight: normal;
+            color: #3d3d3d;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    li{
+        &.focused{
+            background-color: @lightgold;
+        }
+    }
+
+/* Borders */
+#container{border:0 solid #cccccc}
+ .info{border-bottom:1px dotted #CCCCCC}
+ .instruct{border:1px solid #e6e6e6}
+
+/* Typography */
+ .info h2{font-family:'Open Sans', sans-serif;;color:#000000}
+ .info div{font-family:'Open Sans', sans-serif;;color:#3D3D3D}
+ .section h3{font-family:'Open Sans', sans-serif;;background:#FFFFFF;color:#000000}
+ .section div{font-family:'Open Sans', sans-serif;;color:#3D3D3D}
+ label.desc,  legend.desc{font-family:'Open Sans', sans-serif;;color:#3D3D3D}
+ li div,  li div label,  li span label{font-family:'Open Sans', sans-serif;;color:#3D3D3D}
+ input.text,  textarea.textarea,  select.select,  label.choice{font-family:'Open Sans', sans-serif;;color:#333333}
+ label.choice{color:#3D3D3D}
+ .instruct{font-family:'Open Sans', sans-serif;;color:#3D3D3D
+}
+
+}

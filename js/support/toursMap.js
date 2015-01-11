@@ -24,10 +24,10 @@
         var popupContent = '<a href="' + feature.properties.link + '">' +
                             '<p class="map-title">' + feature.properties.title +  '</p></a>' +
                             '<p class="map-date">' + feature.properties.date +  '</p></a>' +
-                            '<p class="map-excerpt">' + feature.properties.excerpt + '</p>' +
+                            '<p class="map-excerpt">' + feature.properties.excerpt + 
                             '<a class="map-link" href="' + feature.properties.link + '">' +
-                            'Learn More' +
-                        '</a>'; 
+                            'Lea' + '</a>' +
+                        '</p>'; 
 
         marker.bindPopup(popupContent,{
         closeButton: true,

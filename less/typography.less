@@ -35,10 +35,6 @@ h6.intro-head{
         margin-bottom: 36px;
     }
 
-
-
-
-
     h4, h3 {
         margin-bottom: 3px;
         margin-top: 14px; 
@@ -47,4 +43,44 @@ h6.intro-head{
     strong {
         color: @lightgold;
     }
+}
+
+
+//For Sidebar Pull quotes: 
+
+.uwaa-pull-quote {
+    margin-bottom: 40px;
+    // margin-right: 10px;
+}
+
+.quote-text {
+    text-transform: uppercase;    
+    letter-spacing: -1px;
+    font-weight: 400;
+    color: @janegray;
+    position: relative;
+    text-indent: 2em;
+
+    &:before {
+        content: "“";
+        font-weight: 900;
+        font-size: 4em;
+        color: @lightgold;
+        position: absolute;
+        top: .42em;
+        left: -.5em;
+        line-height: 0;
+
+    }
+
+}
+
+.quote-author {
+    font-weight: 600;
+    float: right;
+    color: @lightgold;
+    font-size: 1em;
+    line-height: 1.1;
+    padding-top: 0.471em;
+
 }

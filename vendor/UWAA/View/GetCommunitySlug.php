@@ -1,11 +1,11 @@
 <?php namespace UWAA\View;
 
+
 class GetCommunitySlug {
 
     private $postName;
     private $postID;
-    private $chapterSlugs;
-    private $finalSlug;
+    private $chapterSlugs;    
 
 
 
@@ -14,10 +14,6 @@ class GetCommunitySlug {
         $this->postName = $post->post_name;
         $this->postID = $post->ID;
         $this->getChapterSlugs();
-        // var_dump($this->postName);
-        // var_dump($this->postID);
-        
-        
         
     }
 
@@ -34,6 +30,17 @@ class GetCommunitySlug {
         $chapterSlug = array_pop($targetedChapter);
         return $chapterSlug;
         
+    }
+
+    public function getCommunityBrandingImage($slugOfChapter) 
+    {
+
+            $UI = new UI;
+        
+
+        $chapter = get_page_by_path($slugOfChapter, OBJECT, 'chapters' ); 
+        $image = $UI->getPostFeaturedImageURL(get_post_thumbnail_id($chapter->ID), 'original');
+        echo $image;
     }
 
 

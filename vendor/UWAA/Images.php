@@ -26,17 +26,17 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => true
+                'show'  => false
                 ),
             'gridViewNoSidebar' => array (
                 'name'  => 'Grid Thumbnail - No Sidebar',
-                'width'  => 768,
-                'height'  => 190,
+                'width'  => 377,
+                'height'  => 160,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => true
+                'show'  => false
                 ),
             'isotopeGrid' => array (
                 'name'  => 'IsoptopeCrop',
@@ -46,17 +46,17 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => true
+                'show'  => false
                 ),
             'gridViewWithSidebar' => array (
                 'name'  => 'Grid Thumbnail - With Sidebar',
-                'width'  => 768,
-                'height'  => 130,
+                'width'  => 377,
+                'height'  => 160,
                 'crop'  => array (
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => true
+                'show'  => false
                 ),
             'communitiesProfileHeadshot' => array (
                 'name'  => 'Communities Section Headshot',
@@ -66,7 +66,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => true
+                'show'  => false
                 ),
             'post-thumbnail' => array (
                 'name'  => 'Featured Image Thumbnail',
@@ -76,7 +76,7 @@ class Images {
                     'x_crop_position' => 'center',
                     'y_crop_position' => 'center'
                     ),
-                'show'  => true
+                'show'  => false
                 )
         );  
        

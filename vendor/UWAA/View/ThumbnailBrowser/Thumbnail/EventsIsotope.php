@@ -36,7 +36,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postTitle = strip_tags(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');    
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');        
         $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = get_the_excerpt();
@@ -69,22 +69,39 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => 'events',
-      'orderby' => 'rand',  //@TODO  Make this order by metadata date
-      // 'posts_per_page' => 1
+      'orderby' => 'meta_value',
+      'order' => 'DESC',
+      'meta_query' => array(
+        'key' => 'start_date',
+        'value' => date('mdY'),
+        'compare' => '>='
+      ),
+      //@TODO  Make this order by metadata date
+      'posts_per_page' => -1,
+
       );
 
     return $args;
-  }  
+  }
+
+   protected function renderImage() {
+    if ($this->postImageThumbnailURL) {
+      return '<img src="' . $this->postImageThumbnailURL . '"/>';
+    } 
+    return '<img src="http://placekitten.com/g/275/190" />';
+
+   }  
 
 
 	public function buildTemplate(){
   $callout = $this->renderCallout();
+  $image = $this->renderImage();
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
     <div class="image-frame">
       $callout
-		  <img src="$this->postImageThumbnailURL"/>
+		  $image
     </div>
 		<div class="copy">
 		<h6 class="subtitle">$this->postSubtitle</h6>

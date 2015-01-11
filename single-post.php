@@ -51,8 +51,10 @@ if (has_category('Profile')) {
       </div>
 
     </div>
-
-    <?php get_sidebar() ?>
+    
+    <?php get_sidebar()
+    
+    ?>
 
   </div>
 

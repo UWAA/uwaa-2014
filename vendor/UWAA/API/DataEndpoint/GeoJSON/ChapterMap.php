@@ -6,7 +6,38 @@ class ChapterMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 
 public function build($endpointData)
     {
-        echo json_encode($this->buildFeatureCollection($endpointData));
+        $payload = $this->buildFeatureCollection($endpointData);        
+        $serializedPayload = $payload->jsonSerialize();        
+        $jsonPayload = json_encode($serializedPayload);
+        $error = json_last_error();
+        if (!$payload) {
+            echo 'Payload could not be generated';
+            switch ($error) {
+        case JSON_ERROR_NONE:
+            echo ' - No errors';
+        break;
+        case JSON_ERROR_DEPTH:
+            echo ' - Maximum stack depth exceeded';
+        break;
+        case JSON_ERROR_STATE_MISMATCH:
+            echo ' - Underflow or the modes mismatch';
+        break;
+        case JSON_ERROR_CTRL_CHAR:
+            echo ' - Unexpected control character found';
+        break;
+        case JSON_ERROR_SYNTAX:
+            echo ' - Syntax error, malformed JSON';
+        break;
+        case JSON_ERROR_UTF8:
+            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+        break;
+        default:
+            echo ' - Unknown error';
+        break;
+    }
+
+        }
+        echo $jsonPayload;    
     }
 
     public function load($query)
@@ -42,9 +73,9 @@ public function build($endpointData)
 	protected function getFeatureContents($post)
     {
         $featureContents = array(
-            'logo' => htmlentities($post->post_name),
-            'link' => htmlentities(get_permalink($post->ID)),
-            'excerpt' => htmlentities(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
+            'logo' => esc_html($post->post_name),
+            'link' => esc_html(get_permalink($post->ID)),
+            'excerpt' => esc_html(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
             'marker-color' => '#4b2e83'
             
         );

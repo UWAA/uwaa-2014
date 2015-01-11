@@ -41,12 +41,13 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
       // 'tag' => 'Home'
       
       'tax_query' => array(
-        // 'relation' => 'AND',
-        // array(
-        //   'taxonomy' => 'destinations',
-        //   'field'    => 'name',
-        //   'terms'    => array( 'asia')
-        // ),
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    => array( 'profile'),
+          'operator' => 'NOT IN'
+        ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'slug',
@@ -72,14 +73,13 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
 
 
 
-        $this->postTitle = htmlspecialchars(get_the_title(get_the_ID()));
+        $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
-        $this->postCalloutText = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'gridViewNoSidebar');    
+        $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');    
         // $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'original');    
-        $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
-        $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = get_the_excerpt();
+        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));        
+        $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 90);
         
         echo $this->buildTemplate();
 
@@ -89,20 +89,27 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
 
   }
 
+ protected function renderImage() {
+    if ($this->postImageThumbnailURL) {
+      return '<img src="' . $this->postImageThumbnailURL . '"/>';
+    } 
+    return '<img src="http://placekitten.com/g/275/190" />';
 
-public function buildTemplate() {
+   }  
 
-$callout = $this->renderCallout();
+
+  public function buildTemplate(){
+    $callout = $this->renderCallout();
+    $image = $this->renderImage();
 
 $template = <<<TEMPLATE
 <div class="featured-post four-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
-      <img src="{$this->postImageThumbnailURL}" alt="">
+      $image
       $callout
     </div>
-  <div class="copy">
- <h6 class="subtitle">{$this->postSubtitle}</h6>
+  <div class="copy"> 
  <h4 class="title">{$this->postTitle}</h4> 
  <h4 class="date">{$this->postDate}</h4>
  <p class="excerpt">{$this->postExcerpt}</p>

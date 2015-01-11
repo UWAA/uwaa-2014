@@ -75,7 +75,7 @@ class Communities extends ThumbnailBrowser implements Thumbnail
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'gridViewNoSidebar');    
         $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = get_the_excerpt();
+        $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 40);
         
         echo $this->buildTemplate();
 
@@ -86,15 +86,24 @@ class Communities extends ThumbnailBrowser implements Thumbnail
   }
 
 
-public function buildTemplate() {
+ protected function renderImage() {
+    if ($this->postImageThumbnailURL) {
+      return '<img src="' . $this->postImageThumbnailURL . '"/>';
+    } 
+    return '<img src="http://placekitten.com/g/275/190" />';
 
-$callout = $this->renderCallout();
+   }  
+
+
+  public function buildTemplate(){
+    $callout = $this->renderCallout();
+    $image = $this->renderImage();
 
 $template = <<<TEMPLATE
 <div class="featured-post four-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
-      <img src="{$this->postImageThumbnailURL}" alt="">
+      $image
       $callout
     </div>
   <div class="copy">

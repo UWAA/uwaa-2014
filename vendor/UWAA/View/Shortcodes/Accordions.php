@@ -26,9 +26,9 @@ class Accordions
         ), $atts );
 
         if ($a['open'] == 'true') {
-        return "<div class=\"panel open\"><h3 class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" >$content<span aria-expanded=\"true\" class=\"indicator\"></span><span class=\"chevron\"></span></h3>";
+        return "<div class=\"panel open\"><h4 class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" >$content<span aria-expanded=\"true\" class=\"indicator\"></span><span class=\"chevron\"></span></h4>";
         } else {
-            return "<div class=\"panel closed\"><h3 class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" >$content<span class=\"chevron closed\"></span><span aria-expanded=\"false\" class=\"indicator\"></span></h3>";
+            return "<div class=\"panel closed\"><h4 class=\"accordion-heading\" aria-atomic=\"true\" aria-live=\"polite\" >$content<span class=\"chevron closed\"></span><span aria-expanded=\"false\" class=\"indicator\"></span></h4>";
         }
 
     }

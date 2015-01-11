@@ -1,14 +1,19 @@
 // social.less
 
 ul.sidebar-social {
+    padding-left: 0;
+    margin-bottom: 14.5px;
+    margin-top: 0;
+
         li {
             list-style: none;
             display: inline-block;
             a {
+                transition: none;
                 color: #fff;
                 text-indent: -9999px;
                 overflow: hidden;
-                display: inline-block;
+                display: inline;
                 background: url(assets/uwaa-sprite.svg) no-repeat 0 -185px transparent;
                 padding: 8px 21px;
                 &.facebook   { background-position: 0px -185px  }
@@ -20,8 +25,11 @@ ul.sidebar-social {
                 &.vine       { background-position: -230px -185px   }
                 &.google     { background-position: -275px -185px   }
                 &.instagram  { background-position: -322px -185px   }
+                &.email      { background-position: -410px -185px   }
                 &:hover,
                 &:focus {
+                    transition: none;
+                    border-bottom: 0;
                     &.facebook   { background-position: 0px -225px  }
                     &.twitter    { background-position: -46px -225px    }
                     &.tumblr     { background-position: -366px -225px   }
@@ -31,6 +39,7 @@ ul.sidebar-social {
                     &.vine       { background-position: -230px -225px   }
                     &.google     { background-position: -275px -225px   }
                     &.instagram  { background-position: -322px -225px   }
+                    &.email      { background-position: -410px -225px   }
                 }
             }
         }

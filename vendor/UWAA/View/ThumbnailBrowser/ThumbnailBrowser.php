@@ -75,6 +75,14 @@ class ThumbnailBrowser
     return;
    }
 
+   protected function renderImage() {
+    if ($this->postImageThumbnailURL) {
+      return '<img src="' . $this->postImageThumbnailURL . '"/>';
+    } 
+    return '<img src="http://placekitten.com/g/215/155" />';
+
+   }
+
     protected function getSortingToolbarTemplate($typeOfToolbar)
     {
       
@@ -144,6 +152,13 @@ TOOLBAR;
         </div>';
 
         echo $template;
+    }
+
+    protected function shortenExcerpt($string, $excerptLength) {
+
+      $shortenedString = substr($string, 0, $excerptLength);
+
+      return $shortenedString;
     }
 
 

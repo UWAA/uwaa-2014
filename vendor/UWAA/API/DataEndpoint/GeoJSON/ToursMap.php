@@ -6,36 +6,39 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 
 	public function build($endpointData)
     {
-        $payload = json_encode($this->buildFeatureCollection($endpointData), 5);
+        
+        $payload = $this->buildFeatureCollection($endpointData);        
+        $serializedPayload = $payload->jsonSerialize();        
+        $jsonPayload = json_encode($serializedPayload);
         $error = json_last_error();
-    //     if (!$payload) {
-    //         echo 'Payload could not be generated';
-    //         switch ($error) {
-    //     case JSON_ERROR_NONE:
-    //         echo ' - No errors';
-    //     break;
-    //     case JSON_ERROR_DEPTH:
-    //         echo ' - Maximum stack depth exceeded';
-    //     break;
-    //     case JSON_ERROR_STATE_MISMATCH:
-    //         echo ' - Underflow or the modes mismatch';
-    //     break;
-    //     case JSON_ERROR_CTRL_CHAR:
-    //         echo ' - Unexpected control character found';
-    //     break;
-    //     case JSON_ERROR_SYNTAX:
-    //         echo ' - Syntax error, malformed JSON';
-    //     break;
-    //     case JSON_ERROR_UTF8:
-    //         echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
-    //     break;
-    //     default:
-    //         echo ' - Unknown error';
-    //     break;
-    // }
+        if (!$payload) {
+            echo 'Payload could not be generated';
+            switch ($error) {
+        case JSON_ERROR_NONE:
+            echo ' - No errors';
+        break;
+        case JSON_ERROR_DEPTH:
+            echo ' - Maximum stack depth exceeded';
+        break;
+        case JSON_ERROR_STATE_MISMATCH:
+            echo ' - Underflow or the modes mismatch';
+        break;
+        case JSON_ERROR_CTRL_CHAR:
+            echo ' - Unexpected control character found';
+        break;
+        case JSON_ERROR_SYNTAX:
+            echo ' - Syntax error, malformed JSON';
+        break;
+        case JSON_ERROR_UTF8:
+            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
+        break;
+        default:
+            echo ' - Unknown error';
+        break;
+    }
 
-    //     }
-        echo $payload;
+        }
+        echo $jsonPayload;
         // debug
         // var_dump($this->buildFeatureCollection($endpointData));
     }
@@ -56,7 +59,7 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
                 continue; 
                }
             try {
-               $geometry = new \GeoJson\Geometry\Point($coordinates);
+               $geometry = new \GeoJson\Geometry\Point($coordinates);               
             
          } catch(Exception $e) {
             echo 'Caught exception: ',  $e->getMessage(), "\n"; 

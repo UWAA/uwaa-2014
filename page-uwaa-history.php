@@ -1,11 +1,10 @@
-<?php
-/*
- * Template Name: UWAA-About
- * Description: A Page Template for About/Services pages.
- */
+<?php get_header();
 
-get_header(); 
-?>
+
+use \UWAA\View\ThumbnailBrowser\Thumbnail\UWAAHistory;  
+
+ ?>
+
 
 <div class="uw-hero-image about"></div>
 
@@ -15,14 +14,14 @@ get_header();
 
     <div class="col-md-8 uw-content" role='main'>
 
-      <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
+        <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
       <h2 class="uw-site-title">About the UWAA</h2>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 
-      <div class="uw-body-copy">      
+      <div id='main_content' class="uw-body-copy">
 
-      <?php
+        <?php
           // Start the Loop.
           while ( have_posts() ) : the_post();
 
@@ -35,19 +34,34 @@ get_header();
 
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) {
-              comments_template('/comments.php');
+              comments_template();
             }
 
           endwhile;
         ?>
-         
-           
 
-         
+      
 
-      </div>
+      
 
     </div>
+
+    <div class="row">
+       <?php
+      
+
+      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+      $thumbnailRow->makeThumbnails(new UWAAHistory(basename(get_permalink() ) ) );
+
+
+
+      ?>
+
+    </div>
+
+    </div>
+
     <div class="col-md-4 uw-sidebar">
     <?php 
         uw_sidebar_menu();

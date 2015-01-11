@@ -4,7 +4,7 @@ use \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 use \UWAA\View\UI;
 
 
-class Homepage extends ThumbnailBrowser implements Thumbnail 
+class UWAAHistory extends ThumbnailBrowser implements Thumbnail 
 {   
     
     protected $args;
@@ -37,7 +37,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 5, 
+      'posts_per_page' => 4, 
       'orderby' => 'rand',
       // 'tag' => 'Home'
       
@@ -50,8 +50,8 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         // ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
-          'field'    => 'name',
-          'terms'    => array( 'Home')
+          'field'    => 'slug',
+          'terms'    => array( 'uwaa-history-row')
 
           )
       ) //End tax query    
@@ -70,13 +70,13 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
       }
 
 
-        $this->postTitle = esc_html(get_the_title(get_the_ID()));
+        $this->postTitle = htmlspecialchars(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
-        $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
+        $this->postCalloutText = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');    
-        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
+        $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 45));        
+        $this->postExcerpt = get_the_excerpt();
         
         echo $this->buildTemplate();
 
@@ -91,6 +91,7 @@ public function buildTemplate() {
 
 $callout = $this->renderCallout();
 $image = $this->renderImage();
+
 $template = <<<TEMPLATE
 <div class="featured-post five-column">
 <a href="{$this->postURL}">
