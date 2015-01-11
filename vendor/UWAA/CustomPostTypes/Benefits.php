@@ -36,7 +36,7 @@ class Benefits
                 'description'         => 'These posts correspond to individual UW Member Benefits',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
-                'taxonomies'          => array('benefits'),
+                'taxonomies'          => array('benefits', 'post_tag'),
                 'hierarchical'        => true,
                 'public'              => true,
                 'show_ui'             => true,

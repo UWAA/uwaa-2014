@@ -38,7 +38,7 @@ class SidebarSeeYourChapter extends \WP_Widget
 
   
 
-  public function widget()
+  public function widget($args, $instance )
   {
        
 
