@@ -6,15 +6,15 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 ?>
 
 <div class="container">
-  <div class="row uwaa-home-branding">
-    <div class="col-md-8">
+  <div class="row uwaa-home-branding-row">
+    <div class="col-sm-6">
       <?php get_template_part( 'breadcrumbs' ); ?>
     </div>
-    <div class="col-md-4">
-      <div class="logo hidden-xs hidden-sm">
-        <?php get_template_part('assets/uwaa', 'logo.svg');?>
-      </div>
-      <em class="visible-xs visible-sm">Produced by the Alumni Association for all UW Alumni</em>
+    <div class="col-sm-6 uwaa-home-branding">
+      <!-- <div class="logo hidden-xs hidden-sm"> -->
+        <?php //get_template_part('assets/uwaa', 'logo.svg');?>
+      <!-- </div> -->
+      <em>Produced by the Alumni Association for all UW Alumni</em>
     </div> 
   </div>
 </div>

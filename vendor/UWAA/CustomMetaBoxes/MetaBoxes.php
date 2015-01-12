@@ -12,6 +12,7 @@ class MetaBoxes
         $this->add_event_meta();
         $this->add_header_text_toggle();
         $this->add_major_market_toggle();
+        $this->add_post_custom_actions();
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
         add_filter('do_meta_boxes', array($this, 'renameFeaturedImage'), 0);
@@ -384,6 +385,12 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
                         ),
+                    array(
+                        'name' => 'Alternate Link',
+                        'id'=> 'alternate_link',
+                        'type'=> 'text',
+                        'desc'=> 'If this event should link to an external page, write the URL here. Leave this blank for any event with a landing page on our site.'
+                        ),
 
                     )
             )
@@ -416,7 +423,7 @@ class MetaBoxes
         }
 
          protected function add_major_market_toggle() {
-            new \UWAA\CustomPostData('header_toggle', array(
+            new \UWAA\CustomPostData('major_market', array(
                 'title' => 'Event Post Information',
                 'pages' => array('chapters'),  //add events, regional pages as they are ready
                 'context' => 'normal',
@@ -432,6 +439,25 @@ class MetaBoxes
                                 'majorMarket' => 'Is a Major Market'
                                 ),
                         'desc'=> 'Use this to toggle between major and non/major markets.  Non-major markets will have their map link direct to the "Other Areas" page'
+                        ),
+                    )
+            )
+            );
+
+        }
+
+        protected function add_post_custom_actions() {
+            new \UWAA\CustomPostData('post_custom_action', array(
+                'title' => 'Non-Content Post',
+                'pages' => array('post'),  
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(                    
+                        array(
+                        'name' => 'Alternate Link',
+                        'id'=> 'alternate_link',
+                        'type'=> 'text',
+                        'desc'=> 'Enter a URL here if you wish to have a superhero that and have it link to an alternate destination.  Relative URLs(/alumni/definealumni) are supported.'
                         ),
                     )
             )

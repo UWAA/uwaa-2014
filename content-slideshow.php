@@ -25,7 +25,7 @@
           <?php echo apply_filters( 'the_content', $slide->text ); ?> 
 
           
-          <a class="uw-btn btn-sm btn-none" href="<?php echo $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
+          <a class="uw-btn btn-sm btn-none" href="<?php echo $slide->alternateLink ? $slide->alternateLink : $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
 
         </div>
 

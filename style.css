@@ -1496,20 +1496,25 @@ div.map-logo.tucson {
     bottom: -58px;
   }
 }
-.uwaa-home-branding {
+.uwaa-home-branding-row {
   margin-top: 10px;
 }
-.uwaa-home-branding .uw-breadcrumbs {
+.uwaa-home-branding-row .uw-breadcrumbs {
   padding: 25px 20px 0 30px;
 }
-.uwaa-home-branding em {
+.uwaa-home-branding-row .uwaa-home-branding {
+  padding: 15px 10px 10px;
+  line-height: 1.1;
+  text-align: right;
+}
+.uwaa-home-branding-row .uwaa-home-branding em {
   font-size: 13px;
 }
-.uwaa-home-branding .logo svg {
+.uwaa-home-branding-row .logo svg {
   width: 40%;
   height: 100%;
 }
-.uwaa-home-branding .logo svg g path {
+.uwaa-home-branding-row .logo svg g path {
   fill: #4b2e83;
 }
 #message-row {
