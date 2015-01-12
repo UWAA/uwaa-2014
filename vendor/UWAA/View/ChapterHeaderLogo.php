@@ -19,9 +19,7 @@ class ChapterHeaderLogo {
       
             $logoFile = $this->postName . '.svg';
 
-            return get_template_part('logos/regionLogo', $logoFile);      
-
-        
+            return get_template_part('logos/regionLogo', $logoFile);
 
     }
 

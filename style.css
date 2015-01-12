@@ -1454,6 +1454,22 @@ div.map-logo.tucson {
     bottom: -58px;
   }
 }
+.uwaa-home-branding {
+  margin-top: 10px;
+}
+.uwaa-home-branding .uw-breadcrumbs {
+  padding: 25px 20px 0 30px;
+}
+.uwaa-home-branding em {
+  font-size: 13px;
+}
+.uwaa-home-branding .logo svg {
+  width: 50%;
+  height: 100%;
+}
+.uwaa-home-branding .logo svg g path {
+  fill: #4b2e83;
+}
 #message-row {
   margin-left: -15px;
   margin-right: -15px;
