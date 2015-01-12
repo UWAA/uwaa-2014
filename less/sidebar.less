@@ -1,0 +1,42 @@
+// sidebar.less
+
+#chapter-leader-widget, #chapter-social-widget {
+
+    a {
+        display: block;
+        line-height: 1.2;
+        position: relative;
+        padding-left: 45px;
+        margin-top: 25px;
+        color: @darkgrey;     
+
+
+        &:hover, &:active {
+            text-decoration: none;
+            border-bottom: none;
+        }
+
+        &:before {
+            background: url(assets/uwaa-sprite.svg) no-repeat 0 -185px transparent;
+            content: "";
+            position: absolute;
+            overflow: hidden;
+            width: 31px;
+            height: 39px;
+            left: 0;
+            top:-14px;            
+        }
+
+        &.facebook:before {
+            background-position: 0px -185px;
+        }
+
+        &.linkedIn:before{
+            background-position: -184px -185px;
+        }
+
+        &.email:before{
+            background-position: -410px -185px;
+        }
+    }
+}

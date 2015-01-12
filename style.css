@@ -2077,6 +2077,45 @@ ul.uwaa-social li a:hover.email,
 ul.uwaa-social li a:focus.email {
   background-position: -410px -225px;
 }
+#chapter-leader-widget a,
+#chapter-social-widget a {
+  display: block;
+  line-height: 1.2;
+  position: relative;
+  padding-left: 45px;
+  margin-top: 25px;
+  color: #595959;
+}
+#chapter-leader-widget a:hover,
+#chapter-social-widget a:hover,
+#chapter-leader-widget a:active,
+#chapter-social-widget a:active {
+  text-decoration: none;
+  border-bottom: none;
+}
+#chapter-leader-widget a:before,
+#chapter-social-widget a:before {
+  background: url(assets/uwaa-sprite.svg) no-repeat 0 -185px transparent;
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  width: 31px;
+  height: 39px;
+  left: 0;
+  top: -14px;
+}
+#chapter-leader-widget a.facebook:before,
+#chapter-social-widget a.facebook:before {
+  background-position: 0px -185px;
+}
+#chapter-leader-widget a.linkedIn:before,
+#chapter-social-widget a.linkedIn:before {
+  background-position: -184px -185px;
+}
+#chapter-leader-widget a.email:before,
+#chapter-social-widget a.email:before {
+  background-position: -410px -185px;
+}
 #map {
   position: absolute;
   top: 0;

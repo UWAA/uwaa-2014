@@ -31,10 +31,10 @@ class ChapterSidebarContent
         if ($this->leader1 OR $this->leader2) {
         $widget = '<div id="chapter-leader-widget" class="widget widget_text"><h2 class="widgettitle">Chapter Leaders</h2>';        
             if ($this->leader1) {
-            $widget .= '<a href="mailto:' . $this->leader1Email . '"> '. $this->leader1 .'</a>';
+            $widget .= '<a class="email" href="mailto:' . $this->leader1Email . '"> '. $this->leader1 .'</a>';
             } 
             if ($this->leader2) {                
-                $widget .= '<a href="mailto:' . $this->leader2Email . '"> '. $this->leader2 .'</a>';
+                $widget .= '<a class="email" href="mailto:' . $this->leader2Email . '"> '. $this->leader2 .'</a>';
             }
         $widget .= '</div>';
 
@@ -49,10 +49,10 @@ class ChapterSidebarContent
         if ($this->chapterFacebook OR $this->chapterLinkedin) {
         $widget = '<div id="chapter-social-widget" class="widget widget_text"><h2 class="widgettitle">Ways To Connect</h2>';        
             if ($this->chapterFacebook) {
-            $widget .= '<a href="'. $this->chapterFacebook . '">Facebook</a>';
+            $widget .= '<a class="facebook" href="'. $this->chapterFacebook . '">Facebook</a>';
             } 
             if ($this->chapterLinkedin) {
-                $widget .= '<a href="' . $this->chapterLinkedin . '">LinkedIn</a>';
+                $widget .= '<a class="linkedIn" href="' . $this->chapterLinkedin . '">LinkedIn</a>';
             }
         $widget .= '</div>';
 
