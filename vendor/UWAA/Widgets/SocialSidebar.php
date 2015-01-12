@@ -65,7 +65,7 @@ class SocialSidebar extends \WP_Widget
     $content =<<<CONTENT
 <div id="sidebar-share-widget" class="widget uwaa-sidebar-share">
 <h2 class="widgettitle">Share this page</h2>
-<ul class="sidebar-social">
+<ul class="uwaa-social">
   <li><a href="$this->twitter&text=$this->title&via=UWAlum" target="_blank" class="uwaa-share-btn twitter"></a></li>
   <li><a href="$this->facebook" target="_blank" class="uwaa-share-btn facebook"></a></li>
   <li><a href="$this->linkedin&title=$this->title&summary=$this->title&source=https://uw.edu/alumni" target="_blank" class="uwaa-share-btn linkedin"></a></li>

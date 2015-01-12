@@ -1664,6 +1664,7 @@ div.map-logo.tucson {
   clear: both;
 }
 #uwaa-footer .social-icons {
+  padding-top: 1em;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1969,16 +1970,16 @@ div.map-logo.tucson {
   font-family: 'Open Sans', sans-serif;
   color: #3d3d3d;
 }
-ul.sidebar-social {
+ul.uwaa-social {
   padding-left: 0;
   margin-bottom: 14.5px;
   margin-top: 0;
 }
-ul.sidebar-social li {
+ul.uwaa-social li {
   list-style: none;
   display: inline-block;
 }
-ul.sidebar-social li a {
+ul.uwaa-social li a {
   transition: none;
   color: #fff;
   text-indent: -9999px;
@@ -1987,79 +1988,79 @@ ul.sidebar-social li a {
   background: url(assets/uwaa-sprite.svg) no-repeat 0 -185px transparent;
   padding: 8px 21px;
 }
-ul.sidebar-social li a.facebook {
+ul.uwaa-social li a.facebook {
   background-position: 0px -185px;
 }
-ul.sidebar-social li a.twitter {
+ul.uwaa-social li a.twitter {
   background-position: -46px -185px;
 }
-ul.sidebar-social li a.tumblr {
+ul.uwaa-social li a.tumblr {
   background-position: -366px -185px;
 }
-ul.sidebar-social li a.youtube {
+ul.uwaa-social li a.youtube {
   background-position: -138px -185px;
 }
-ul.sidebar-social li a.linkedin {
+ul.uwaa-social li a.linkedin {
   background-position: -184px -185px;
 }
-ul.sidebar-social li a.pinterest {
+ul.uwaa-social li a.pinterest {
   background-position: -92px -185px;
 }
-ul.sidebar-social li a.vine {
+ul.uwaa-social li a.vine {
   background-position: -230px -185px;
 }
-ul.sidebar-social li a.google {
+ul.uwaa-social li a.google {
   background-position: -275px -185px;
 }
-ul.sidebar-social li a.instagram {
+ul.uwaa-social li a.instagram {
   background-position: -322px -185px;
 }
-ul.sidebar-social li a.email {
+ul.uwaa-social li a.email {
   background-position: -410px -185px;
 }
-ul.sidebar-social li a:hover,
-ul.sidebar-social li a:focus {
+ul.uwaa-social li a:hover,
+ul.uwaa-social li a:focus {
   transition: none;
   border-bottom: 0;
 }
-ul.sidebar-social li a:hover.facebook,
-ul.sidebar-social li a:focus.facebook {
+ul.uwaa-social li a:hover.facebook,
+ul.uwaa-social li a:focus.facebook {
   background-position: 0px -225px;
 }
-ul.sidebar-social li a:hover.twitter,
-ul.sidebar-social li a:focus.twitter {
+ul.uwaa-social li a:hover.twitter,
+ul.uwaa-social li a:focus.twitter {
   background-position: -46px -225px;
 }
-ul.sidebar-social li a:hover.tumblr,
-ul.sidebar-social li a:focus.tumblr {
+ul.uwaa-social li a:hover.tumblr,
+ul.uwaa-social li a:focus.tumblr {
   background-position: -366px -225px;
 }
-ul.sidebar-social li a:hover.youtube,
-ul.sidebar-social li a:focus.youtube {
+ul.uwaa-social li a:hover.youtube,
+ul.uwaa-social li a:focus.youtube {
   background-position: -138px -225px;
 }
-ul.sidebar-social li a:hover.linkedin,
-ul.sidebar-social li a:focus.linkedin {
+ul.uwaa-social li a:hover.linkedin,
+ul.uwaa-social li a:focus.linkedin {
   background-position: -184px -225px;
 }
-ul.sidebar-social li a:hover.pinterest,
-ul.sidebar-social li a:focus.pinterest {
+ul.uwaa-social li a:hover.pinterest,
+ul.uwaa-social li a:focus.pinterest {
   background-position: -92px -225px;
 }
-ul.sidebar-social li a:hover.vine,
-ul.sidebar-social li a:focus.vine {
+ul.uwaa-social li a:hover.vine,
+ul.uwaa-social li a:focus.vine {
   background-position: -230px -225px;
 }
-ul.sidebar-social li a:hover.google,
-ul.sidebar-social li a:focus.google {
+ul.uwaa-social li a:hover.google,
+ul.uwaa-social li a:focus.google {
   background-position: -275px -225px;
 }
-ul.sidebar-social li a:hover.instagram,
-ul.sidebar-social li a:focus.instagram {
+ul.uwaa-social li a:hover.instagram,
+ul.uwaa-social li a:focus.instagram {
   background-position: -322px -225px;
 }
-ul.sidebar-social li a:hover.email,
-ul.sidebar-social li a:focus.email {
+ul.uwaa-social li a:hover.email,
+ul.uwaa-social li a:focus.email {
   background-position: -410px -225px;
 }
 #map {
