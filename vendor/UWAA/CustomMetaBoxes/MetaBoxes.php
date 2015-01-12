@@ -413,7 +413,7 @@ class MetaBoxes
         protected function add_header_text_toggle() {
             new \UWAA\CustomPostData('header_toggle', array(
                 'title' => 'Event Post Information',
-                'pages' => array('events', 'tours'),  //add events, regional pages as they are ready
+                'pages' => array('events', 'tours', 'post'),  //add events, regional pages as they are ready
                 'context' => 'normal',
                 'priority' => 'high',
                 'fields' => array(
