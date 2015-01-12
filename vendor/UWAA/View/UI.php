@@ -70,6 +70,10 @@ class UI
     
     }
 
+    public function buildChapterSidebar() {
+        return new ChapterSidebarContent;
+    }
+
 
 
 } 

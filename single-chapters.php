@@ -72,7 +72,15 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
         echo "fix UW's Menu for Them";
         
         endwhile;
-    ?>      
+
+        $chapterSidebar = $UWAA->UI->buildChapterSidebar();
+
+        $chapterSidebar->renderLeaderWidget();
+
+        $chapterSidebar->renderSocialWidget();
+    ?>
+
+      
     </div>
 
 
