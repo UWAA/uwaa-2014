@@ -1682,6 +1682,20 @@ div.map-logo.tucson {
     width: 25%;
   }
 }
+#uwaa-footer .social-icons li {
+  position: relative;
+  z-index: 0;
+}
+#uwaa-footer .social-icons li:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #ffffff;
+  left: 1px;
+  bottom: -3px;
+  height: 25px;
+  width: 24px;
+}
 #uwaa-footer .contact-links {
   height: 4.706em;
   position: relative;
