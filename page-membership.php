@@ -1,13 +1,31 @@
 <?php 
 get_header(); 
-wp_enqueue_script(array('communitiesMap'));
-wp_enqueue_style('mapbox');
+wp_enqueue_script(array('superHero'));
+use \UWAA\View\ThumbnailBrowser\Thumbnail\Membership;
 
 
 
 ?>
 
-<div class="uw-hero-image communities"></div>
+<div class="container">
+<?php get_template_part( 'breadcrumbs' ); ?>
+</div>
+<div class="membership-header uw-homepage-slider-container">
+<?php
+
+if(class_exists('\UWAA\Slideshow\Slideshow')):
+
+$superhero = new \UWAA\Slideshow\Slideshow("membership-superhero");
+
+include(locate_template('content-slideshow.php'));
+
+endif;
+
+?>
+
+
+  
+</div>
 
 <div class="container uw-body">
 
@@ -49,18 +67,30 @@ wp_enqueue_style('mapbox');
     <?php    
         
         uw_sidebar_menu();
-        dynamic_sidebar( 'communities' );
+        dynamic_sidebar( 'membership' );
         
 
     ?>
 
-     
-      </div>
+      
 
     </div>
+     
 
   </div>
 
+   <div class="row 5-column">
+       <?php
+      
 
+      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+      $thumbnailRow->makeThumbnails(new Membership);
+
+      ?>
+
+  </div>
+
+</div>
 
 <?php get_footer(); ?>
