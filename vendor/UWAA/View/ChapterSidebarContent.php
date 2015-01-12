@@ -7,6 +7,8 @@ class ChapterSidebarContent
 
     private $chapterLinkedin;
     private $chapterFacebook;
+    private $chapterFacebookName;
+    private $chapterLinkedinName;
     private $leader1;
     private $leader1Email;
     private $leader2;
@@ -17,6 +19,8 @@ class ChapterSidebarContent
     {
         $this->chapterLinkedin = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_linkedIn', true));
         $this->chapterFacebook = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_facebook', true));
+        $this->chapterLinkedInName = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_linkedIn_name', true));
+        $this->chapterFacebookName = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_facebook_name', true));
         $this->leader1 = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_leader_1', true));
         $this->leader1Email = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_leader_1_email', true));
         $this->leader2 = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_leader_2', true));
@@ -49,10 +53,10 @@ class ChapterSidebarContent
         if ($this->chapterFacebook OR $this->chapterLinkedin) {
         $widget = '<div id="chapter-social-widget" class="widget widget_text"><h2 class="widgettitle">Ways To Connect</h2>';        
             if ($this->chapterFacebook) {
-            $widget .= '<a class="facebook" href="'. $this->chapterFacebook . '">Facebook</a>';
+            $widget .= '<a class="facebook" href="'. $this->chapterFacebook . '">' . ($this->chapterFacebookName ? $this->chapterFacebookName : '') . ' Facebook</a>';
             } 
             if ($this->chapterLinkedin) {
-                $widget .= '<a class="linkedIn" href="' . $this->chapterLinkedin . '">LinkedIn</a>';
+                $widget .= '<a class="linkedIn" href="' . $this->chapterLinkedin . '">' . ($this->chapterLinkedInName ? $this->chapterLinkedInName : '') . ' LinkedIn</a>';
             }
         $widget .= '</div>';
 

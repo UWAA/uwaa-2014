@@ -293,7 +293,19 @@ class MetaBoxes
                         'name' => 'Chapter LinkedIn',
                         'id'=> 'chapter_linkedIn',
                         'type'=> 'text',
-                        'desc'=> "URL for the chapter LinkIn page."
+                        'desc'=> "URL for the chapter LinkedIn page."
+                        ),
+                    array(
+                        'name' => 'Chapter Facebook Alternate Name',
+                        'id'=> 'chapter_facebook_name',
+                        'type'=> 'text',
+                        'desc'=> "Specialized name for the chapter Facebook group.  E.g. NY Huskies"
+                        ),
+                    array(
+                        'name' => 'Chapter LinkedIn Alternate Name',
+                        'id'=> 'chapter_linkedIn_name',
+                        'type'=> 'text',
+                        'desc'=> "Specialized name for the chapter LinkedIn group.  E.g. NY Huskies"
                         ),
                     array(
                         'name' => 'Latitude/Longitude',
