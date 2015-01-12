@@ -23,6 +23,8 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
     public function __construct()
     {
         $this->args = $this->setArguments();
+        
+
         $this->UI = new UI;
 
     }
@@ -69,12 +71,12 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => 'events',
-      'orderby' => 'meta_value',
-      'order' => 'DESC',
+      'orderby' => 'meta_value',      
+      'order' => 'ASC',
+      'meta_key' => 'mb_start_date',
       'meta_query' => array(
-        'key' => 'start_date',
-        'value' => date('mdY'),
-        'compare' => '>='
+        'key' => 'mb_start_date',
+        'type' => 'DATE',       
       ),
       //@TODO  Make this order by metadata date
       'posts_per_page' => -1,
@@ -96,6 +98,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
 	public function buildTemplate(){
   $callout = $this->renderCallout();
   $image = $this->renderImage();
+  // $dateDebug = $this->args['meta_query']['value'];
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
@@ -110,6 +113,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
 		<p>$this->postExcerpt</p>
 		</div>
 	</a>
+  
 </div>
 
 ISOTOPE;

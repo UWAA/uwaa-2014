@@ -50,7 +50,7 @@ class CustomPostData {
         foreach ($this->meta_box['fields'] as $field) {
             extract($field);
             $id = self::$prefix . $id;
-            $value = self::get($field['id']);          
+            $value = self::get($field['id']);                   
             
 
         // Input Type Array
@@ -68,12 +68,25 @@ class CustomPostData {
                 $value = isset($field['default']) ? $default : '';
             }
 
+           
+
                 echo '<tr>', '<th style="width:20%"><label for="', $id, '">', $name, '</label></th>', '<td>';
 
                 echo $lookup[is_array($type) ? $type[0] : $type];
                 
-                if (isset($desc)) {
+                if (isset($desc)) {                    
                 echo '&nbsp;<span class="description">' . $desc . '</span>';
+                }
+
+                if($id == 'mb_start_date') {                    
+                    $storedValue = get_post_meta(isset($post_id) ? $post_id : $post->ID, 'mb_start_date', true);
+                        if(!$storedValue) {
+                            echo '&nbsp;<span class="description" style="color:red;">The date for this event/tour has not been registered in the database yet.</span>';
+                        } elseif ($storedValue == 'Check your format') {
+                            echo '&nbsp;<span class="description" style="color:red;">There is an error with your formatting, please try again.</span>';
+                        } else {
+                    echo '&nbsp;<span class="description" style="color:green;">This date is in the database as ' . $storedValue .'</span>';
+                    }                    
                 }
                 echo '</td></tr>';
         }
@@ -111,11 +124,11 @@ class CustomPostData {
 
     foreach ($this->meta_box['fields'] as $field) {
         $name = self::$prefix . $field['id'];
-        $sanitize_callback = (isset($field['sanitize_callback'])) ? $field['sanitize_callback'] : '';
+        $sanitize_callback = (isset($field['sanitize_callback'])) ? $field['sanitize_callback'] : '';        
         if (isset($_POST[$name])) {  //LATER- Add File Uploads If Needed
             $old = self::get($field['id'], true, $post_id);
             $new = $_POST[$name];
-            if ($new != $old) {
+            if ($new != $old) {                
                 self::set($field['id'], $new, $post_id, $sanitize_callback);
             } 
         } elseif ($field['type'] == 'checkbox') {
@@ -130,6 +143,21 @@ class CustomPostData {
 
     private function get($name, $single = true, $post_id = null ) {
         global $post;
+
+        if ($name == 'start_date'){
+            $value = get_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name, $single);                
+                
+                if ($value) {
+                    $displayValue = date_create_from_format('Ymd', $value);
+                        if (!$displayValue) {
+                            return 'Error with date';
+                            } else {
+                    $value = date_format($displayValue, 'm/d/Y');
+                    return $value;
+                    }
+                }
+            }   
+
         return get_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name, $single);
     }
 
@@ -137,6 +165,15 @@ class CustomPostData {
         global $post;
 
         $id = (isset($post_id)) ? $post_id : $post->ID;
+        if ($name == 'start_date'){
+            $formattedDate = date_create($new);
+            if (!$formattedDate) {
+                $new = "Check your format";
+            } else {
+                $new = date_format( $formattedDate, 'Ymd');
+            }
+
+        }
         $meta_key = self::$prefix . $name;
         $new = ($sanitize_callback != '' && is_callable($sanitize_callback)) ? call_user_func($sanitize_callback, $new, $meta_key, $id) : $new;
         return update_post_meta($id, $meta_key, $new);
@@ -162,9 +199,3 @@ class CustomPostData {
 
 
 };  
-
-
-
-
-
-

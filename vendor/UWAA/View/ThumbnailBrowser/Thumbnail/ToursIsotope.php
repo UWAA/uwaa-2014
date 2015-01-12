@@ -69,7 +69,13 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => 'tours',
-      'orderby' => 'rand',  //@TODO  Make this order by metadata date
+      'orderby' => 'meta_value',      
+      'order' => 'ASC',
+      'meta_key' => 'mb_start_date',
+      'meta_query' => array(
+        'key' => 'mb_start_date',
+        'type' => 'DATE',       
+      ),
       'posts_per_page' => -1
       );
 
