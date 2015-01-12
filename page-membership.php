@@ -51,8 +51,7 @@ endif;
             }
 
           endwhile;
-
-          get_template_part( 'partials/map' );
+          
         ?>
          
         
