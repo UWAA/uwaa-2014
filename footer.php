@@ -7,7 +7,9 @@
                 <li><a href="#">Join</a></li>
             </ul>                   
         </nav>
-        <div class="uwaa-logo"></div>
+        <div class="uwaa-logo">
+            <?php get_template_part('assets/uwaa', 'logo.svg');?>
+        </div>
     </div>
     <div class="uw-footer">
 

@@ -3,10 +3,10 @@
 
 #uwaa-footer {
 	.make-row();
-	background:#777777;
-	height: 4.706em;
+	background:#777777;	
 	border-top: 7px solid #d1d1d1;	
 	color: @white;
+	padding:0;
 
 	.social-icons{
 		.make-sm-column(3);
@@ -15,6 +15,7 @@
 	}
 
 	.contact-links{
+		height: 4.706em;
 		.make-sm-column(6);
 		padding-top: 1.3em;
 		
@@ -44,7 +45,22 @@
 	}
 
 	.uwaa-logo{
+		height: 4.706em;		
+		padding:10px;
 		.make-sm-column(3);
+
+        svg {
+
+            width: 75%;
+            height: 100%;
+
+            g path {
+                fill: @white;
+            }
+            
+        }
+        
+    
 	}
 
 }

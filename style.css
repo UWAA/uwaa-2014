@@ -1585,9 +1585,9 @@ div.map-logo.tucson {
   margin-left: -15px;
   margin-right: -15px;
   background: #777777;
-  height: 4.706em;
   border-top: 7px solid #d1d1d1;
   color: #ffffff;
+  padding: 0;
 }
 #uwaa-footer:before,
 #uwaa-footer:after {
@@ -1640,6 +1640,7 @@ div.map-logo.tucson {
   }
 }
 #uwaa-footer .contact-links {
+  height: 4.706em;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1679,6 +1680,8 @@ div.map-logo.tucson {
   text-transform: uppercase;
 }
 #uwaa-footer .uwaa-logo {
+  height: 4.706em;
+  padding: 10px;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1695,6 +1698,13 @@ div.map-logo.tucson {
     float: left;
     width: 25%;
   }
+}
+#uwaa-footer .uwaa-logo svg {
+  width: 75%;
+  height: 100%;
+}
+#uwaa-footer .uwaa-logo svg g path {
+  fill: #ffffff;
 }
 .uw-hero-image.travel {
   background: url(assets/headers/Page_Header_Travel.jpg) center center;
