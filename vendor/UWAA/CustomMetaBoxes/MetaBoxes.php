@@ -459,7 +459,7 @@ class MetaBoxes
 
         protected function add_post_custom_actions() {
             new \UWAA\CustomPostData('post_custom_action', array(
-                'title' => 'Non-Content Post',
+                'title' => 'Post Special Fields',
                 'pages' => array('post'),  
                 'context' => 'normal',
                 'priority' => 'high',
@@ -470,6 +470,18 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> 'Enter a URL here if you wish to have a superhero that and have it link to an alternate destination.  Relative URLs(/alumni/definealumni) are supported.'
                         ),
+                        array(
+                        'name' => 'Callout Box',
+                        'id'=> 'thumbnail_callout',
+                        'type'=> 'text',
+                        'desc'=> "This text will show up in the small purple line on the thumbnail."
+                        ),
+                    array(
+                        'name' => 'Content Head',
+                        'id'=> 'thumbnail_subtitle',
+                        'type'=> 'text',
+                        'desc'=> "Small gold text that appears below the image in a featured post thumbnail.  E.g. New York Huskies, Member 101 Series."
+                        ), 
                     )
             )
             );
