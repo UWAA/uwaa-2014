@@ -946,7 +946,7 @@ h6.intro-head {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  height: 438px;
+  height: 428px;
 }
 @media (min-width: 768px) {
   .benefit-image {
@@ -968,7 +968,11 @@ h6.intro-head {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 438px;
+  height: 428px;
+  background-color: #4b2e83;
+  padding: 30px;
+  text-align: center;
+  display: table;
 }
 @media (min-width: 768px) {
   .benefit-logo {
@@ -981,10 +985,16 @@ h6.intro-head {
     float: left;
     width: 50%;
   }
+}
+.benefit-logo h1 {
+  color: #ffffff;
+  display: table-cell;
+  font-size: 3.5em;
+  vertical-align: middle;
 }
 @media only screen and (max-width: 767px) {
   .benefit-logo {
-    height: 291.99999708px;
+    height: 285.33333048px;
   }
   .benefit-image {
     display: none !important;

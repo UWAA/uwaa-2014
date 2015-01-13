@@ -1,5 +1,5 @@
 // benefit-header.less
-@benefit-height: 438px;
+@benefit-height: 428px;
 
 
 .uwaa-benefit-header{
@@ -19,12 +19,26 @@
 
 
 .benefit-logo{
-    .make-sm-column(6);
+    .make-sm-column(6);    
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;    
     background-position: center center;
     height: @benefit-height;
+    background-color: @purple;
+    padding: 30px;
+    text-align: center;
+    display: table;
+
+    h1
+    {
+        color: @white;        
+        display: table-cell;
+        font-size: 3.5em;
+        vertical-align: middle;
+
+
+
+    }
 }
 
 
