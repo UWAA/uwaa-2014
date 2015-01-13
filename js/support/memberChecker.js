@@ -1,5 +1,11 @@
 // checker.js
 $(document).ready(function(){
+
+$('input#memberCheckerLogout').on('click', function() {
+    console.log('Clicked');
+    $('form#memberloginForm').submit();
+});
+
 $('form#memberloginForm').on('submit', function(event) {
 // @TODO  Pull  canvas stuff.  Here for debugging
 var canvas = $('#output'),
@@ -16,7 +22,7 @@ var canvas = $('#output'),
                 console.log('success');
                 canvas.html(data);
                                         
-                // location.reload();
+                location.reload();
                     
             },
             //Remove for prod @TODO

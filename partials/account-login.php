@@ -3,7 +3,7 @@ wp_enqueue_script('memberChecker');
 wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 ?>
 
-    <div class="container">
+    
         <div class="row">
             <div class="<?php echo ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) ? 'col-sm-6' : 'col-sm-12' ?>">
                 <?php
@@ -22,10 +22,26 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
                     <input type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
                     <label class="screen-reader-text" for="lastName">Last Name</label>
-                    <input type="text" name="lastName" placeholder="Last Name" autocomplete="off">><label>Last Name</label>
-                    <input type="hidden" name="action" value="callMemberChecker">                     
+                    <div>
+                        <input type="text" name="lastName" placeholder="Last Name" autocomplete="off">
+                        <input id="loginSubmit" type="submit">
+                    </div>
+                    <input type="hidden" name="action" value="callMemberChecker">
+
+
                 </fieldset>
             </form>
+
+            <div id="accordion">
+                <div class="panel closed">
+                    <h4 class="accordion-heading" aria-atomic="true" aria-live="polite">Log-In Help<span class="chevron closed"></span><span aria-expanded="false" class="indicator" style="position: absolute; clip: rect(1px 1px 1px 1px);">Collapsed</span></h4>
+                    <div class="collapse" aria-hidden="true" style="display: none;">
+                        <p>
+                            Need Content to help with login here.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
         <?php        
@@ -51,7 +67,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                 ?>
             
         </div>  
-    </div>
+    
         
 
 

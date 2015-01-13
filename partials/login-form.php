@@ -8,16 +8,23 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
         if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == false) {
             echo 'Welcome back '.esc_html($UWAA->Memberchecker->session->get('firstName')).'';
         } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
-            echo 'Welcome back '.esc_html($UWAA->Memberchecker->session->get('firstName')).' Thanks for Being a Member';
+            $UWAA->Memberchecker->renderCard();
         } else {
-        ?><form method="POST" id="memberloginForm">
-        <fieldset>        
-        <p><input type="text" name="idNumber"><label>Member ID Number</label></p>
-        <p><input type="text" name="lastName"><label>Last Name</label></p>
-        <input type="hidden" name="action" value="callMemberChecker">
-        <button type="submit">Submit</button>
-        </fieldset>
-        </form>
+        ?>
+        <form method="POST" id="memberloginForm">
+                <fieldset>
+                    <label class="screen-reader-text" for="idNumber">Member Number</label>
+                    <input type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
+                    <label class="screen-reader-text" for="lastName">Last Name</label>
+                    <div>
+                        <input type="text" name="lastName" placeholder="Last Name" autocomplete="off">
+                        <input id="loginSubmit" type="submit">
+                    </div>
+                    <input type="hidden" name="action" value="callMemberChecker">
+
+
+                </fieldset>
+            </form>
 
         <?php        
         }

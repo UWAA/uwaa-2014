@@ -24,34 +24,26 @@ get_header();
           // Start the Loop.
           while ( have_posts() ) : the_post();
 
-            /*
-             * Include the post format-specific template for the content. If you want to
-             * use this in a child theme, then include a file called called content-___.php
-             * (where ___ is the post format) and that will be used instead.
-             */
-            get_template_part( 'content', 'page' );
+          ?>
+          <h1><?php the_title() ?></h1>
+          <?php
+
+          
+          include(locate_template( 'partials/account-login.php' ));
+
+          the_content();
+            
 
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) {
               comments_template('/comments.php');
             }
 
-          endwhile;
-
-
-          include(locate_template( 'partials/account-login.php' ));
+          endwhile;        
 
 
 
         ?>
-         
-        <hr>
-        <h3>Debug</h3>
-         <div id="output"></div>
-
-           
-
-         
 
       </div>
 
