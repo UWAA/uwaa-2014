@@ -16,12 +16,19 @@
 
     <div class="col-md-8 uw-content" role='small'>
 
-      
-
+      <div class="row uwaa-home-branding-row">
+    <div class="col-sm-6">
       <?php
-      // TODO Fix these breadcrumbs and have them default to the section front as opposed to the archive page for "tours"
-      $UWAA->UI->Breadcrumbs->UWAABreadcrumbs(); ?>
-
+        $UWAA->UI->Breadcrumbs->UWAABreadcrumbs();
+       ?>
+    </div>
+    <div class="col-sm-6 uwaa-home-branding">
+      <!-- <div class="logo hidden-xs hidden-sm"> -->
+        <?php //get_template_part('assets/uwaa', 'logo.svg');?>
+      <!-- </div> -->
+      <em>Produced by the Alumni Association for all UW Alumni</em>
+    </div> 
+  </div>
 
       <div class="uw-body-copy">
             <?php
