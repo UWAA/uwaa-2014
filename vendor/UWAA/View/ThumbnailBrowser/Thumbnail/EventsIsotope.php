@@ -41,7 +41,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');        
         $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
         $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = get_the_excerpt();
+        $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         
         echo $this->buildTemplate();
@@ -108,7 +108,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
     </div>
 		<div class="copy">
 		<h6 class="subtitle">$this->postSubtitle</h6>
-		<h4>$this->postTitle</h4>
+		<h4 class="title">$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
 		<p>$this->postExcerpt</p>
 		</div>

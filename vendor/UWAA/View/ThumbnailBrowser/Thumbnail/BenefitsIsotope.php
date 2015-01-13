@@ -39,7 +39,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');    
         $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
         $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = get_the_excerpt();
+        $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         
         echo $this->buildTemplate();

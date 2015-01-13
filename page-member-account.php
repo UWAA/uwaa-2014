@@ -46,6 +46,9 @@ get_header();
         ?>
 
       </div>
+      <!-- <hr>
+      <h3>Debug</h3>
+      <div id="canvas"></div> -->
 
     </div>
     <div class="col-md-4 uw-sidebar">

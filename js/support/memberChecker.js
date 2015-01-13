@@ -20,8 +20,7 @@ var canvas = $('#output'),
             success: function(data) {
 
                 console.log('success');
-                canvas.html(data);
-                                        
+                canvas.html(data);                                        
                 location.reload();
                     
             },

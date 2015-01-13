@@ -102,12 +102,25 @@ catch (exception $e)
 
 $memberDetails = json_decode($memberPayload);
 
-$memberYesOrNo = $memberDetails->UWAAMemberCheckResult;  //returns success or failure
-$member = $memberYesOrNo->ReturnedMember; 
 
-if ($lastName != $member->MemberLName) {
+
+$result = $memberDetails->UWAAMemberCheckResult;  //returns success or failure
+$callSuccess = $result->Success;
+$callError = $result->ErrorMessage;
+$member = $result->ReturnedMember; 
+
+if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even needed if the call is already made?
     die ('Please check your information and try again');
-} else {
+} elseif ($callSuccess === FALSE) {
+    $payload = array (
+        'error' => 'TRUE',
+        'message' =>'There is a problem with our Member Login service.  Please contact the UWAA For assistance'
+    );
+    echo json_encode($payload);    
+    exit;   //refine error handling further...
+}
+
+ else {
     
     //Power up a new session for the user
     $this->session = new Session($this->memberCheckSession);
@@ -125,19 +138,17 @@ if ($lastName != $member->MemberLName) {
         $this->session->set('memberStatus', $member->MemberStatus);
         $this->session->set('membershipExpiry', $member->MembershipExpiry);
         $this->session->set('membershipType', $member->MembershipType);
-        $this->session->set('loggedIn', true);
-        
+        $this->session->set('loggedIn', true);        
     }
-    }
-    echo "Welcome $member->MemberFName $member->MemberLName </br>";
-    echo "Your UWAA Member Number is $member->MemberID </br>";
-    echo "Your Member Status is $member->MemberStatus </br>";
-    echo "You are a baddass. </br>";
-    var_dump($member);
-    var_dump($this->session->get('firstName'));
+
+    // Do AJAX Debug stuff here
+
+    }     
 
     exit;
     }
+
+
 
 
  public function memberLogout() {
