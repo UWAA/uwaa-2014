@@ -1,6 +1,9 @@
 (function ($) {
 
+var path = window.location.pathname.split('/').filter(function(n){ return n !== ''; }).pop()
 
+
+console.log(path);
     L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
         tileLayer : {
@@ -9,7 +12,15 @@
                     }
        
     });
-    map.setView([39.833333, -98.583333], 4);
+    if (path === 'international-huskies') {
+        map.setView([20.539359, 114.027324], 3);
+    } else if (path === 'u-s-huskies') {
+        map.setView([39.833333, -98.583333], 4);
+    } else {
+        map.setView([39.833333, -98.583333], 4);
+    }
+
+    
 
 
 

@@ -1,5 +1,8 @@
 (function ($) {
 
+var host = window.location.hostname;
+
+
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
@@ -45,7 +48,8 @@
     // });
 
 //Janky Test Stuff, but necessary for getting this working.
-var host = window.location.hostname;
+//TODO Localize script with WP.
+
 
 switch (host) {
     case "dev.alumni.washington.edu" : 
