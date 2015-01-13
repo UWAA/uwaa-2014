@@ -2167,3 +2167,6 @@ ul.uwaa-social li a:focus.email {
 img.headshot {
   margin: 5px 24px 8px 0px;
 }
+hr {
+  border-top: 1px solid #CCCCCC;
+}
