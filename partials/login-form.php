@@ -2,7 +2,7 @@
 wp_enqueue_script('memberChecker');       
 wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 ?>
-<h2 class="widgettitle">Log In</h2>
+
 
         <?php
         if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == false) {
@@ -15,6 +15,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                     <a id="memberCheckerLogout">Logout</a>';
         } else {
         ?>
+        <h2 class="widgettitle">Log In</h2>
         <form method="POST" id="memberloginForm">
                 <fieldset>
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
