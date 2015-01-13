@@ -155,11 +155,50 @@ if ($lastName != $member->MemberLName) {
         'firstName' => $this->session->get('firstName'),
         'lastName' => $this->session->get('lastName'),
         'memberID' => $this->session->get('memberID'),
-        'memberStatus' => $this->session->get('memberStatus'),
-        'membershipExpiry' => $this->session->get('membershipExpiry'),
-        'membershipType' => $this->session->get('membershipType')
+        'memberStatus' => $this->getMembershipStatus($this->session->get('memberStatus')),
+        'membershipExpiry' => $this->session->get('membershipExpiry'),  //TODO Convert date from timestamp.
+        'membershipType' => $this->getMembershipType($this->session->get('membershipType'))
+        );
 
+        return $details;
+    }
 
-            );
+    private function getMembershipType($membershipTypeCode)
+    {
+        $annualCodes = array('AS', 'AJ');
+        $lifeCodes = array('LS', 'LJ', 'LI');
+
+        if (in_array($membershipTypeCode, $annualCodes)) {
+            return 'Annual Member';
+        }
+
+        if (in_array($membershipTypeCode, $lifeCodes)) {
+            return 'Life Member';
+        }
+        return 'UWAA Member';
+    }
+
+    private function getMembershipStatus($membershipStatusCode)
+    {
+        if ($membershipStatusCode == 'A') {
+            return "Active";
+        }
+
+        //@TODO, Figure out the rest of the status codes
+    }
+
+    public function renderDetails() {
+        $details = $this->getSessionInformation();        
+
+        
+        echo 'Name:' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
+        echo 'Member Number: ' . $details['memberID'].'</br>';
+        echo 'Membership Type: ' . $details['membershipType'] . '</br>';
+        echo 'Status: ' . $details['memberStatus'].'</br>';
+        if ($details['membershipType'] == 'Annual Member') {
+            echo 'Expires: ' . $details['membershipExpiry'].'</br>';
+        }
+        
+
     }
 }
