@@ -93,7 +93,7 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
     if ($this->postImageThumbnailURL) {
       return '<img src="' . $this->postImageThumbnailURL . '"/>';
     } 
-    return '<img src="http://placekitten.com/g/275/190" />';
+    return '<img src="https://placekitten.com/g/302/250" />';
 
    }  
 

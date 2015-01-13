@@ -79,7 +79,7 @@ class ThumbnailBrowser
     if ($this->postImageThumbnailURL) {
       return '<img src="' . $this->postImageThumbnailURL . '"/>';
     } 
-    return '<img src="http://placekitten.com/g/215/155" />';
+    return '<img src="https://placekitten.com/g/302/250" />';
 
    }
 
