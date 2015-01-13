@@ -120,16 +120,16 @@ class SidebarFeaturedPost extends \WP_Widget
     //See if the current post is in the list of potential places we are sending content to.    
     
     if (in_array($postTitle, $this->siteContentPromotionDestinations)) {
-      echo "Using title match"; //debug
+      // echo "Using title match"; //debug
       return $postTitle;
       
 
     } elseif (in_array(strtolower($thisPostsContentSection), $this->siteContentPromotionDestinations)) {
-      echo "Using post-type match";
+      // echo "Using post-type match";
       return $thisPostsContentSection;
     
     } elseif (in_array(strtolower($this->currentPostInfo['templateType']) , $this->siteContentPromotionDestinations)) {
-      echo "Using parent match";  //debug
+      // echo "Using parent match";  //debug
       return $this->currentPostInfo['templateType'];
     } 
 
