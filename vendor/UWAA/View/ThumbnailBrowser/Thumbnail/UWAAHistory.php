@@ -93,7 +93,7 @@ $callout = $this->renderCallout();
 $image = $this->renderImage();
 
 $template = <<<TEMPLATE
-<div class="featured-post five-column">
+<div class="featured-post four-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
       $image

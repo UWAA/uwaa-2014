@@ -1,8 +1,6 @@
 <?php
-/*
- * Template Name: UWAA-Membership
- * Description: A Page Template for membership pages.
- */
+
+$UWAA->Memberchecker->getSession();
 
 get_header(); 
 ?>
@@ -39,8 +37,18 @@ get_header();
             }
 
           endwhile;
+
+
+          include(locate_template( 'partials/account-login.php' ));
+
+
+
         ?>
          
+        <hr>
+        <h3>Debug</h3>
+         <div id="output"></div>
+
            
 
          

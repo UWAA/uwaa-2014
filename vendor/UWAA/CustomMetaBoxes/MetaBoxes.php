@@ -420,11 +420,10 @@ class MetaBoxes
                     array(
                         'name' => 'Header Text Color',
                         'id'=> 'header_text_color',
-                        'type'=> 'select',
-                        'default' => 'white_text',
-                        'options' => array(
-                                'purple-header-overlay' => 'Purple Text', 
-                                'white-header-overlay' => 'White Text'
+                        'type'=> 'select',                        
+                        'options' => array(                                 
+                                'white-header-overlay' => 'White Text',
+                                'purple-header-overlay' => 'Purple Text'
                                 ),
                         'desc'=> 'Text overlays the hero image on this post type.  Choose between Purple and White text'
                         ),
