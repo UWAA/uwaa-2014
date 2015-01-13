@@ -80,7 +80,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
     if ($this->postImageThumbnailURL) {
       return '<img src="' . $this->postImageThumbnailURL . '"/>';
     } 
-    return '<img src="http://placekitten.com/g/275/190" />';
+    return '<img src="http://fpoimg.com/275x190?text=FPO" />';
 
    }  
 

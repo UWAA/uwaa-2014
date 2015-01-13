@@ -90,7 +90,7 @@ class Membership extends ThumbnailBrowser implements Thumbnail
     if ($this->postImageThumbnailURL) {
       return '<img src="' . $this->postImageThumbnailURL . '"/>';
     } 
-    return '<img src="https://placekitten.com/g/215/155" />';
+    return '<img src="http://fpoimg.com/215x155?text=FPO" />';
 
    }
 
