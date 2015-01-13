@@ -14,8 +14,9 @@ var canvas = $('#output'),
             success: function(data) {
 
                 console.log('success');
+                canvas.html(data);
                                         
-                location.reload();
+                // location.reload();
                     
             },
             //Remove for prod @TODO

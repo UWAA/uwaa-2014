@@ -1159,8 +1159,8 @@ div.map-logo.tucson {
 .fact-box .fact-container {
   background-color: #4b2e83;
   width: 100%;
-  height: 150px;
-  padding: 10px;
+  height: 190px;
+  padding: 10px 7px 10px 12px;
 }
 .fact-box .fact-container h2 {
   color: #ffffff;
@@ -1170,8 +1170,8 @@ div.map-logo.tucson {
 }
 .fact-box .fact-container p {
   color: #ffffff;
-  line-height: 1;
-  font-size: .9em;
+  line-height: 1.4;
+  font-size: .85em;
 }
 .uw-homepage-slider-container {
   position: relative;
@@ -1296,10 +1296,14 @@ div.map-logo.tucson {
   z-index: 0;
 }
 .uw-homepage-slider-container .uw-homepage-slider h2 {
-  margin: 20px 0;
+  margin: 20px 0 0;
   font-weight: 900;
-  font-style: 1.4em;
+  font-size: 1.4em;
   text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.uw-homepage-slider-container .uw-homepage-slider h2.date {
+  margin-top: 10px;
 }
 .uw-homepage-slider-container .uw-homepage-slider p {
   margin-top: 15px;
@@ -1308,6 +1312,7 @@ div.map-logo.tucson {
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay h2,
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay p {
   color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay a.uw-btn:after {
   background-color: #85754d;
@@ -1320,12 +1325,15 @@ div.map-logo.tucson {
 .uw-homepage-slider-container .uw-homepage-slider.purple-header-overlay p {
   color: #4b2e83;
 }
+.uw-btn {
+  margin-top: 60px;
+}
 @media only screen and (min-width: 1401px) {
   .uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
     font-size: 50px;
     line-height: 50px;
     padding-right: 60px;
-    margin: 50px 0 0;
+    margin: 15px 0 0;
   }
   .uw-homepage-slider-container .uw-homepage-slider.slide-23 p {
     padding-right: 260px;
@@ -1360,10 +1368,10 @@ div.map-logo.tucson {
     height: 450px;
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
-    font-size: 52px;
-    line-height: 52px;
-    padding-right: 10%;
-    margin: 60px 0 0;
+    font-size: 2.3em;
+    line-height: 1.1;
+    padding-right: 0;
+    margin: 15px 0;
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container p {
     padding-right: 45%;
@@ -1382,6 +1390,9 @@ div.map-logo.tucson {
   }
 }
 @media only screen and (max-width: 767px) {
+  .uw-btn {
+    margin-top: 40px;
+  }
   .uw-homepage-slider-container {
     height: 500px;
   }
@@ -1397,18 +1408,6 @@ div.map-logo.tucson {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-  .uw-homepage-slider-container .slide-16 {
-    background-size: 1979px !important;
-    background-position: -940px 0 !important;
-  }
-  .uw-homepage-slider-container .slide-16.uw-homepage-slider .hero-container p {
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-  }
-  .uw-homepage-slider-container .slide-59.uw-homepage-slider .hero-container p {
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
-    color: #4B2E82;
   }
   .uw-homepage-slider-container .uw-homepage-slider.uw-hero-image {
     padding: 30px;
@@ -1444,13 +1443,17 @@ div.map-logo.tucson {
     padding: 0 0 140px 0;
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
-    font-size: 27px;
-    line-height: 30px;
+    font-size: 2.3em;
+    line-height: 1.1;
     padding-right: 0;
-    margin: 0;
+    margin: 15px 0;
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container h1 br {
     display: none;
+  }
+  .uw-homepage-slider-container .uw-homepage-slider .hero-container h2 {
+    margin: 0;
+    font-size: 1em;
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container p {
     padding-right: 0;
@@ -1494,6 +1497,11 @@ div.map-logo.tucson {
   }
   .uw-homepage-slider-container .slideshow-controls .uw-boundless:after {
     bottom: -58px;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
+    font-size: 1.8em;
   }
 }
 .uwaa-home-branding-row {
@@ -1722,10 +1730,25 @@ div.map-logo.tucson {
     width: 50%;
   }
 }
+@media screen and (max-width: 1200px) {
+  #uwaa-footer .contact-links {
+    line-height: 1.5;
+    padding-top: 1.1em;
+  }
+}
+@media screen and (max-width: 1400px) {
+  #uwaa-footer .contact-links {
+    line-height: 1.5;
+  }
+}
+#uwaa-footer .contact-links div {
+  display: inline-block;
+}
 #uwaa-footer .contact-links a {
   padding-left: 7px;
   text-transform: none;
   color: #ffffff;
+  font-size: .95em;
   transition: 0.25s;
 }
 #uwaa-footer .contact-links a:hover,
@@ -1762,7 +1785,7 @@ div.map-logo.tucson {
   }
 }
 #uwaa-footer .uwaa-logo svg {
-  width: 60%;
+  width: 55%;
   height: 100%;
 }
 #uwaa-footer .uwaa-logo svg g path {
@@ -2142,5 +2165,5 @@ ul.uwaa-social li a:focus.email {
   font-family: 'Open Sans';
 }
 img.headshot {
-  margin: 5px 40px 15px 0px;
+  margin: 5px 24px 8px 0px;
 }

@@ -123,6 +123,8 @@ if ($lastName != $member->MemberLName) {
         $this->session->set('lastName', $member->MemberLName);
         $this->session->set('memberID', $member->MemberID);
         $this->session->set('memberStatus', $member->MemberStatus);
+        $this->session->set('membershipExpiry', $member->MembershipExpiry);
+        $this->session->set('membershipType', $member->MembershipType);
         $this->session->set('loggedIn', true);
         
     }
@@ -144,5 +146,20 @@ if ($lastName != $member->MemberLName) {
         $session->clear();
         $session->invalidate();        
         exit;   
+    }
+
+    private function getSessionInformation()
+    {
+        $details = array(
+
+        'firstName' => $this->session->get('firstName'),
+        'lastName' => $this->session->get('lastName'),
+        'memberID' => $this->session->get('memberID'),
+        'memberStatus' => $this->session->get('memberStatus'),
+        'membershipExpiry' => $this->session->get('membershipExpiry'),
+        'membershipType' => $this->session->get('membershipType')
+
+
+            );
     }
 }

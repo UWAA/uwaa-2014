@@ -152,12 +152,19 @@
     }
 
     h2{
-       margin: 20px 0;
+       margin: 20px 0 0;
        font-weight: 900;
-       font-style: 1.4em;
+       font-size: 1.4em;
        text-transform: uppercase;
+       letter-spacing: .5px;
+       
+
+       &.date{
+        margin-top: 10px;
+       }
       }
 
+      
    
 
     p{
@@ -168,6 +175,7 @@
   &.white-header-overlay {
           h1, h2, p{
           color: @white;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
           }
 
           a.uw-btn {
@@ -194,6 +202,9 @@
 
 }
 
+.uw-btn {
+  margin-top: 60px;
+}
 
 
 
@@ -205,7 +216,7 @@
           font-size: 50px;
           line-height: 50px;
           padding-right: 60px;
-          margin: 50px 0 0;
+          margin: 15px 0 0;
         }
       }
       &.slide-23 {
@@ -264,10 +275,10 @@
       .hero-container {
         height: 450px;
         h1 {
-          font-size: 52px;
-          line-height: 52px;
-          padding-right: 10%;
-          margin: 60px 0 0;
+          font-size: 2.3em;
+           line-height: 1.1;
+           padding-right: 0;
+           margin: 15px 0; 
         }
         p {
           padding-right: 45%;
@@ -297,6 +308,10 @@
 
 
  @media only screen and (max-width : 767px) {
+
+  .uw-btn {
+    margin-top: 40px;
+  }
      .uw-homepage-slider-container {
      height: 500px;
   
@@ -313,22 +328,7 @@
       -o-background-size: cover;
       background-size: cover;
     }
-
-     .slide-16 {
-        background-size: 1979px !important;
-        background-position: -940px 0 !important;
-        &.uw-homepage-slider .hero-container p {
-          color: #fff;
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
-        }
-
-    }
-    .slide-59 {
-      &.uw-homepage-slider .hero-container p {
-          text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
-          color: #4B2E82;
-      }
-    }
+    
      .uw-homepage-slider {
        &.uw-hero-image {
           padding: 30px;
@@ -357,13 +357,17 @@
           height: auto;
           padding: 0 0 140px 0;
          h1 {
-           font-size: 27px;
-           line-height: 30px;
+           font-size: 2.3em;
+           line-height: 1.1;
            padding-right: 0;
-           margin: 0;
+           margin: 15px 0; 
            br {
             display: none;
            }
+         }
+         h2 {
+         margin: 0;
+         font-size: 1em;
          }
          p {
            padding-right: 0;
@@ -412,3 +416,12 @@
      }
    }
  }
+
+@media only screen and (max-width : 321px) {
+
+.uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
+  
+      font-size: 1.8em;
+}  
+
+}
