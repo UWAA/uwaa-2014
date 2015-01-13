@@ -4,16 +4,23 @@
 <?php 
 
 //@TODO  Make a better system for these communities headers
+$featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
 if (has_category('Profile')) {
   echo '<div class="uwaa-chapter-header">';
   get_template_part('partials/chapter-header');
   echo '</div>';
-} else {
+} elseif ($featureImage) {
+    ?>
+  <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+    <?php    
+}
+else {
+  $defaultHeader = TRUE;
   get_template_part( 'header', 'image' ); 
 }
 
-
 ?>
+
 
 <div class="container uw-body">
 
@@ -21,7 +28,7 @@ if (has_category('Profile')) {
 
     <div <?php uw_content_class(); ?> role='main'>
 
-      <?php if (!has_category('Profile')) { uw_site_title(); }; ?>
+      <?php if ($defaultHeader) { uw_site_title(); }; ?>
 
       <?php get_template_part( 'breadcrumbs' ); ?>
 

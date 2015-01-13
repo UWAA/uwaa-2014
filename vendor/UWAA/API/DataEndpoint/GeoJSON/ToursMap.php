@@ -81,10 +81,10 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 	protected function getFeatureContents($post)
     {
         $featureContents = array(
-            'title' => utf8_encode(get_the_title($post->ID)),
+            'title' => esc_html(get_the_title($post->ID)),
             'link' => get_permalink($post->ID),
-            'excerpt' => utf8_encode(get_post_meta($post->ID, 'mb_map_excerpt', true)),
-            'date' => utf8_encode(get_post_meta($post->ID, 'mb_cosmetic_date', true)),
+            'excerpt' => esc_html(get_post_meta($post->ID, 'mb_map_excerpt', true)),
+            'date' => esc_html(get_post_meta($post->ID, 'mb_cosmetic_date', true)),
             'marker-color' => '#4b2e83'
         );
 
