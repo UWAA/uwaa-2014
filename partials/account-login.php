@@ -3,32 +3,59 @@ wp_enqueue_script('memberChecker');
 wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 ?>
 
-
-        <?php
+    <div class="container">
+        <div class="row">
+            <div class="<?php echo ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) ? 'col-sm-6' : 'col-sm-12' ?>">
+                <?php
         if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == false) {
             echo 'Welcome back '.esc_html($UWAA->Memberchecker->session->get('firstName')).'';
         } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
             // $UWAA->Memberchecker->renderCard();
             $UWAA->Memberchecker->renderDetails();
+            
         } else {
-        ?><form method="POST" id="memberloginForm">
-        <fieldset>        
-        <p><input type="text" name="idNumber"><label>Member ID Number</label></p>
-        <p><input type="text" name="lastName"><label>Last Name</label></p>
-        <input type="hidden" name="action" value="callMemberChecker">
-        <button type="submit">Submit</button>
-        </fieldset>
-        </form>
+        ?>
+
+        <h2>Please log in to view your member account.</h2>
+            <form method="POST" id="memberloginForm">
+                <fieldset>
+                    <label class="screen-reader-text" for="idNumber">Member Number</label>
+                    <input type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
+                    <label class="screen-reader-text" for="lastName">Last Name</label>
+                    <input type="text" name="lastName" placeholder="Last Name" autocomplete="off">><label>Last Name</label>
+                    <input type="hidden" name="action" value="callMemberChecker">                     
+                </fieldset>
+            </form>
+
 
         <?php        
         }
         ?>
+            </div>
+            
+            <?php
+            if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
+                
+                echo '<div class="col-sm-6">';
+                $UWAA->Memberchecker->renderCard();
+
+                
+                echo '<form id="memberlogout" method="POST">
+                        <input type="hidden" name="action" value="memberLogout">                                      
+                      </form>
+                    <a id="memberCheckerLogout">Logout</a>';
+
+                echo '</div>';
+            
+                }
+                ?>
+            
+        </div>  
+    </div>
+        
 
 
 
-<form id="memberlogout" method="POST">
-<input type="hidden" name="action" value="memberLogout">
-<button type="submit">Logout</button>
-</form>
+
 
 

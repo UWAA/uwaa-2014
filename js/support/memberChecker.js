@@ -30,6 +30,11 @@ var canvas = $('#output'),
 
 });
 
+$('#memberCheckerLogout').on('click', function() {
+    console.log('Clicked');
+    $('form#memberlogout').submit();
+});
+
 $('form#memberlogout').on('submit', function(event) {
     var canvas = $('#output'),
     form = $(this);   
@@ -51,8 +56,8 @@ $('form#memberlogout').on('submit', function(event) {
         });
      event.preventDefault();
 
-
-
 });
+
+
 
 });

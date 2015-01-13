@@ -2144,6 +2144,35 @@ ul.uwaa-social li a:focus.email {
 #chapter-social-widget a.email:before {
   background-position: -410px -185px;
 }
+.membership-card {
+  position: relative;
+  width: 302px;
+  height: 192px;
+  border-radius: 10px;
+}
+.membership-card.annual {
+  background-image: url(assets/201501_member_card_annual_pic.jpg);
+}
+.membership-card.life {
+  background-image: url(assets/201501_member_card_life_pic.jpg);
+}
+.membership-card p {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 5px;
+  font-size: 14px;
+}
+.membership-card p.member-name {
+  top: 141px;
+  font-weight: 700;
+}
+.membership-card p.member-number {
+  top: 115px;
+}
+.membership-card p.renewal {
+  top: 160px;
+}
 #map {
   position: absolute;
   top: 0;

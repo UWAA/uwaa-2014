@@ -1,0 +1,40 @@
+// membership.less
+
+.membership-card{
+    position: relative;
+    width: 302px;
+    height: 192px;
+    border-radius: 10px;
+
+    &.annual{
+        background-image: url(assets/201501_member_card_annual_pic.jpg);
+    }
+
+    &.life{
+        background-image: url(assets/201501_member_card_life_pic.jpg);
+    }
+
+    p {
+        position: absolute;
+        margin:0;
+        padding: 0;
+        left: 5px;
+        font-size: 14px;
+
+
+        &.member-name {
+            top: 141px;
+            font-weight: 700;
+
+        }
+
+        &.member-number{
+            top: 115px;
+
+        }
+
+        &.renewal{
+            top: 160px;
+        }
+    }
+}

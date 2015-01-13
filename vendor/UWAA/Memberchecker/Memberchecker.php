@@ -156,8 +156,9 @@ if ($lastName != $member->MemberLName) {
         'lastName' => $this->session->get('lastName'),
         'memberID' => $this->session->get('memberID'),
         'memberStatus' => $this->getMembershipStatus($this->session->get('memberStatus')),
-        'membershipExpiry' => $this->session->get('membershipExpiry'),  //TODO Convert date from timestamp.
-        'membershipType' => $this->getMembershipType($this->session->get('membershipType'))
+        'membershipExpiry' => date('F j, Y ' , strtotime($this->session->get('membershipExpiry'))),
+        'membershipType' => $this->getMembershipType($this->session->get('membershipType')),
+
         );
 
         return $details;
@@ -184,21 +185,55 @@ if ($lastName != $member->MemberLName) {
             return "Active";
         }
 
+        return $membershipStatusCode;
+
         //@TODO, Figure out the rest of the status codes
     }
 
+    //
+    //  #TODO- Move these into a subclass or over with other view-rendering function
+
     public function renderDetails() {
         $details = $this->getSessionInformation();        
-
         
-        echo 'Name:' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
-        echo 'Member Number: ' . $details['memberID'].'</br>';
-        echo 'Membership Type: ' . $details['membershipType'] . '</br>';
-        echo 'Status: ' . $details['memberStatus'].'</br>';
+        echo '<strong>Name:</strong> ' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
+        echo '<strong>Member Number:</strong> ' . $details['memberID'].'</br>';
+        echo '<strong>Membership Type:</strong> ' . $details['membershipType'] . '</br>';
+        echo '<strong>Status:</strong> ' . $details['memberStatus'].'</br>';
         if ($details['membershipType'] == 'Annual Member') {
-            echo 'Expires: ' . $details['membershipExpiry'].'</br>';
+            echo '<strong>Expires:</strong> ' . $details['membershipExpiry'].'</br>';
         }
+
+    }
+
+    public function renderCard() {
+        $details = $this->getSessionInformation();
+        $cardClass = strtolower(str_replace('Member', '', $details['membershipType']));
+
+        if ($details['membershipType'] == 'Annual Member') {
+            $renewal = '<p class="renewal">Renew: ' . $details['membershipExpiry'].'</p>';
+        }
+
+        $name = " " . $details['firstName'] . " " . $details['lastName'] . " ";
+        $number = $details['memberID'];
+
+        $content = <<<CONTENT
+        <div class="membership-card $cardClass">
+            <p class="member-name">$name</p>
+            <p class="member-number">$number</p>
+            $renewal
+        </div>
+
+CONTENT;
+
+    echo $content;
+    }
+
+    public function renderJoinButtons() {
+        $details = $this->getSessionInformation(); 
         
 
     }
+
+    
 }
