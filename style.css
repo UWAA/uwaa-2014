@@ -991,6 +991,7 @@ h6.intro-head {
   display: table-cell;
   font-size: 3.5em;
   vertical-align: middle;
+  padding: 30px;
 }
 @media only screen and (max-width: 767px) {
   .benefit-logo {
@@ -2177,18 +2178,18 @@ ul.uwaa-social li a:focus.email {
   position: absolute;
   margin: 0;
   padding: 0;
-  left: 5px;
-  font-size: 14px;
+  left: 10px;
+  font-size: 13px;
 }
 .membership-card p.member-name {
-  top: 141px;
+  top: 147px;
   font-weight: 700;
 }
 .membership-card p.member-number {
-  top: 115px;
+  top: 123px;
 }
 .membership-card p.renewal {
-  top: 160px;
+  top: 163px;
 }
 #memberloginForm label {
   position: absolute;
