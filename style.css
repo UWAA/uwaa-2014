@@ -1416,12 +1416,6 @@ div.map-logo.washington-dc {
   .uw-homepage-slider-container .uw-homepage-slider .hero-container {
     width: 1140px;
   }
-  .uw-homepage-slider-container .uw-homepage-slider.slide-23 p {
-    padding-right: 260px;
-  }
-  .uw-homepage-slider-container .uw-homepage-slider.slide-25 .col-md-8 {
-    padding: 20px 0 0 50px;
-  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .uw-homepage-slider-container .uw-homepage-slider .hero-container {
@@ -2355,4 +2349,10 @@ hr {
 }
 .page-membership .row.5-column {
   margin-top: 20px;
+}
+.page-home .uwaa-superhero .slideshow-controls:after {
+  bottom: 20px;
+}
+.page-home .uwaa-superhero .slideshow-controls p {
+  bottom: 40px;
 }
