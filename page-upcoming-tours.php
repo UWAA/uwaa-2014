@@ -58,6 +58,8 @@ wp_enqueue_script('isotopeInit');
 
 </div>
 
-<?php get_footer(); 
+<?php 
 get_template_part('partials/tours-footer');
+get_footer(); 
+
 ?>
