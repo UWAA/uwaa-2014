@@ -17,7 +17,7 @@ wp_enqueue_style('mapbox');
       <h2 class="uw-site-title">Communities</h2>
 
       <div class="uw-body-copy">
-      
+
      <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
         <?php
@@ -46,9 +46,39 @@ wp_enqueue_style('mapbox');
     </div>
     
      <div class="col-md-4 uw-sidebar">
+
+<!-- FPO for Demo Only @TODO Remove -->
+
+<nav id="desktop-relative" role="navigation" aria-label="relative">
+<ul class="uw-sidebar-menu first-level">
+<li class="pagenav"><a href="https://cms.alumni.washington.edu/alumni" title="Home" class="homelink">Home</a>
+<ul>
+<li class="page_item page-item-52 page_item_has_children current_page_ancestor current_page_parent"><a href="https://cms.alumni.washington.edu/alumni/communities/">Communities</a>
+<ul class="children">
+    <li class="page_item page-item-68 page_item_has_children current_page_item ">
+    <span>U.S. Huskies</span>
+        <ul class="children">
+            <li class="page_item page-item-932"><a href="https://cms.alumni.washington.edu/alumni/communities/chapters/new-york-city/">New York Huskies</a></li>   
+        </ul>
+    
+    <li class="page_item page-item-70"><a href="https://cms.alumni.washington.edu/alumni/communities/international-huskies/">International Huskies</a></li>
+    <li class="page_item page-item-489"><a href="https://cms.alumni.washington.edu/alumni/communities/other-areas/">Other Areas</a></li>
+    <li class="page_item page-item-72"><a href="https://cms.alumni.washington.edu/alumni/communities/uw-schools-colleges-campuses/">UW schools, colleges &amp; campuses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></nav>
+
+<!-- FPO for Demo Only @TODO Remove -->
+
+
+
+
+
     <?php    
         
-        uw_sidebar_menu();
+        // uw_sidebar_menu();
         dynamic_sidebar( 'communities' );
         
 
