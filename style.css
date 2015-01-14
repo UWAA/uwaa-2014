@@ -1385,7 +1385,7 @@ div.map-logo.washington-dc {
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay h2,
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay p {
   color: #ffffff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay a.uw-btn:after {
   background-color: #85754d;
