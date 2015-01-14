@@ -84,22 +84,40 @@ a#memberCheckerLogout {
 }
 
 #join-renew-buttons {
-    padding: 20px 20px 20px 40px;
+    padding: 20px 20px 0 40px;
     background-color: white;
     margin-top: -80px;
 
     .uwaa-btn-wrapper {
         margin-right: 0;
+        text-align: center;
 
         &:last-child{
-            margin-left: 40px;
-            text-align: right;
+            margin-left: 23px;
+            
         }
 
     }
 
-    .uwaa-btn{
-        width: 121px;
+    .uwaa-btn{        
+        background-color: @gray;
+        color: @purple;
+
+        &.uwaa-btn-join {
+            width: 146px;
+        }
+
+        &.uwaa-btn-renew {
+            width: 126px;
+        }
+
+        &:hover, &:active {
+            background-color: @purple;
+            color: @white;
+
+        }
+
+
         
 
     }  

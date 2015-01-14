@@ -2286,19 +2286,31 @@ a#memberCheckerLogout {
   cursor: pointer;
 }
 #join-renew-buttons {
-  padding: 20px 20px 20px 40px;
+  padding: 20px 20px 0 40px;
   background-color: white;
   margin-top: -80px;
 }
 #join-renew-buttons .uwaa-btn-wrapper {
   margin-right: 0;
+  text-align: center;
 }
 #join-renew-buttons .uwaa-btn-wrapper:last-child {
-  margin-left: 40px;
-  text-align: right;
+  margin-left: 23px;
 }
 #join-renew-buttons .uwaa-btn {
-  width: 121px;
+  background-color: #c9c9c9;
+  color: #4b2e83;
+}
+#join-renew-buttons .uwaa-btn.uwaa-btn-join {
+  width: 146px;
+}
+#join-renew-buttons .uwaa-btn.uwaa-btn-renew {
+  width: 126px;
+}
+#join-renew-buttons .uwaa-btn:hover,
+#join-renew-buttons .uwaa-btn:active {
+  background-color: #4b2e83;
+  color: #ffffff;
 }
 .page-membership .uw-sidebar-menu {
   margin-top: 0;
