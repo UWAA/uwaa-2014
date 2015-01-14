@@ -14,6 +14,8 @@ wp_enqueue_style('mapbox');
   <div class="row">
 
     <div class="col-md-8 uw-content" role='main'>
+
+    <h2 class="uw-site-title">Communities</h2>
       <div class="uw-body-copy">
       <div class="row uwaa-home-branding-row">
     <div class="col-sm-10">

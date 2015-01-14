@@ -2319,7 +2319,7 @@ a#memberCheckerLogout {
   background-color: #4b2e83;
   color: #ffffff;
 }
-.page-membership,
+.page-membership .uw-sidebar-menu,
 .page-template-membership-page .uw-sidebar-menu {
   margin-top: 0;
 }
