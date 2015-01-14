@@ -2343,7 +2343,7 @@ img.headshot {
 hr {
   border-top: 1px solid #CCCCCC;
 }
-.page-home,
+.page-home .uw-body.container,
 .page-membership .uw-body.container {
   margin-bottom: 45px;
 }
