@@ -81,7 +81,7 @@ endif;
                         <input type="text" name="lastName" placeholder="Email Address" autocomplete="off">
                         <input id="loginSubmit" type="submit">
                     </div>
-                    <input type="hidden" name="action" value="callMemberChecker">
+                    
 
 
                 </fieldset>
