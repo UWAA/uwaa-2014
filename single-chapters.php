@@ -73,20 +73,8 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
 
     </div>
 
-    <div class="col-md-4 uw-sidebar">
-  <!-- FPO for Demo Only @TODO Remove -->
-    <nav id="desktop-relative" role="navigation" aria-label="relative"><ul style="margin-top: -80px;" class="uw-sidebar-menu first-level"><li class="pagenav"><a href="https://cms.alumni.washington.edu/alumni" title="Home" class="homelink">Home</a><ul><li class="page_item page-item-595 page_item_has_children current_page_ancestor current_page_parent"><a href="https://cms.alumni.washington.edu/alumni/communities/u-s-huskies/">U.S. Huskies</a>
-        <ul class="children">
-          <li class="page_item page-item-932 current_page_item"><span>New York Huskies</span></li>   
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-</nav>
-<!-- FPO for Demo Only @TODO Remove -->
-<?php 
-        
+    <div class="col-md-4 uw-sidebar">    
+    <?php        
         // uw_sidebar_menu();
         // echo "fix UW's Menu for Them";
         
@@ -99,6 +87,8 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
         $chapterSidebar->renderLeaderWidget();
 
         $chapterSidebar->renderSocialWidget();
+
+        $chapterSidebar->renderChapterContactForm();
     ?>
 
       

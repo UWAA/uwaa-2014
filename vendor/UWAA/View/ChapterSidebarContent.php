@@ -66,6 +66,10 @@ class ChapterSidebarContent
 
     }
 
+    public function renderChapterContactForm() {
+        get_template_part('partials/forms', 'communities-connect');
+    }
+
 
 
      // <div id="no-chapter-widget" class="widget widget_text">
