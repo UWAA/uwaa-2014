@@ -72,15 +72,36 @@ public function build($endpointData)
 
 	protected function getFeatureContents($post)
     {
+
+        $link = $this->determineLink($post);
+
         $featureContents = array(
             'logo' => esc_html($post->post_name),
-            'link' => esc_html(get_permalink($post->ID)),
+            'link' => esc_url($link),
             'excerpt' => esc_html(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
             'marker-color' => '#4b2e83'
             
         );
 
         return $featureContents;
+    }
+
+    private function determineLink($post) {
+
+        $linkToMajorMarket = get_permalink($post->ID);
+        $homeURL = home_url('/');
+        $linkToOtherChaptersPage = '' . $homeURL . 'communities/other-areas/?chapter=' . $post->post_name . '';
+        $isMajorMarket = get_post_meta($post->ID, 'mb_isMajorMarket', true);
+
+
+        if ($isMajorMarket == 'majorMarket') {
+            return $linkToMajorMarket;
+            
+
+        }
+
+        return $linkToOtherChaptersPage;
+
     }
 
 }
