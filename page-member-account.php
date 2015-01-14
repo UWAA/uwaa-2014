@@ -20,6 +20,8 @@ get_header();
     
     <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
+    </div>
+
       <div class="uw-body-copy">      
 
       <?php
