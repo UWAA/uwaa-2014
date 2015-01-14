@@ -5,7 +5,7 @@
 
 //@TODO  Make a better system for these communities headers
 $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
-if (has_category(array('Profile', 'Regional'))) {
+if (has_category(array('Profile', 'Communities'))) {
   echo '<div class="uwaa-chapter-header">';
   get_template_part('partials/chapter-header');
   echo '</div>';
