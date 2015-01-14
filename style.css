@@ -478,7 +478,7 @@ h6.intro-head {
   position: relative;
 }
 .featured-post .copy .excerpt:after {
-  background: url(assets/uwaa-sprite.svg) no-repeat -206px -492px;
+  background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
   opacity: .4;
   display: inline-block;
@@ -1007,6 +1007,12 @@ h6.intro-head {
     display: none !important;
   }
 }
+.uwaa-superhero .slideshow-controls:after {
+  bottom: 15px;
+}
+.uwaa-superhero .p {
+  bottom: 39px;
+}
 div.map-logo {
   background-repeat: no-repeat;
   height: 40px;
@@ -1130,6 +1136,33 @@ div.map-logo.tucson {
 }
 .leaflet-popup .leaflet-popup-content p.map-excerpt {
   margin: 0 0 0;
+}
+.leaflet-popup .leaflet-popup-content a {
+  color: #3d3d3d;
+  text-decoration: none;
+}
+.leaflet-popup .leaflet-popup-content a:hover,
+.leaflet-popup .leaflet-popup-content a:active {
+  text-decoration: none;
+  color: #3d3d3d;
+  border-bottom: none;
+}
+.leaflet-popup .leaflet-popup-content a.map-link:after {
+  background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
+  content: "";
+  opacity: .4;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 5px;
+  width: 14px;
+  height: 21px;
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.leaflet-popup .leaflet-popup-content a.map-link:after:hover {
+  border-bottom: none;
 }
 .fact-row {
   margin-left: -15px;
@@ -1522,12 +1555,13 @@ div.map-logo.tucson {
   padding: 25px 20px 0 30px;
 }
 .uwaa-home-branding-row .uwaa-home-branding {
-  padding: 15px 10px 10px;
+  padding-bottom: 8px;
   line-height: 1.1;
   text-align: right;
 }
 .uwaa-home-branding-row .uwaa-home-branding em {
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: -0.1px;
 }
 .uwaa-home-branding-row .logo svg {
   width: 40%;
@@ -1642,10 +1676,15 @@ div.map-logo.tucson {
 }
 #message-row .content h2 {
   color: #4b2e83;
+  font-size: 2.3em;
+  margin-bottom: 4px;
+  line-height: 1.1;
 }
 #message-row .content p {
-  color: #5a5a5a;
-  font-weight: 600;
+  color: #000000;
+  font-size: 1.11em;
+  padding: 0 15px 0;
+  margin: 0 0 18.5px;
 }
 #uwaa-footer {
   margin-left: -15px;
@@ -2222,6 +2261,24 @@ a#memberCheckerLogout {
   float: right;
   margin-right: 60px;
 }
+#join-renew-buttons {
+  padding: 20px 20px 20px 40px;
+  background-color: white;
+  margin-top: -80px;
+}
+#join-renew-buttons .uwaa-btn-wrapper {
+  margin-right: 0;
+}
+#join-renew-buttons .uwaa-btn-wrapper:last-child {
+  margin-left: 40px;
+  text-align: right;
+}
+#join-renew-buttons .uwaa-btn {
+  width: 121px;
+}
+.page-membership .uw-sidebar-menu {
+  margin-top: 0;
+}
 #map {
   position: absolute;
   top: 0;
@@ -2247,4 +2304,7 @@ img.headshot {
 }
 hr {
   border-top: 1px solid #CCCCCC;
+}
+.page-home .uw-body.container {
+  margin-bottom: 45px;
 }

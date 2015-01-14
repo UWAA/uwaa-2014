@@ -25,12 +25,12 @@ var host = window.location.hostname;
 
         //Template for Custom Tooltip        
         var popupContent = '<a href="' + feature.properties.link + '">' +
-                            '<p class="map-title">' + feature.properties.title +  '</p></a>' +
-                            '<p class="map-date">' + feature.properties.date +  '</p></a>' +
+                            '<p class="map-title">' + feature.properties.title +  '</p>' +
+                            '<p class="map-date">' + feature.properties.date +  '</p>' +
                             '<p class="map-excerpt">' + feature.properties.excerpt + 
                             '<a class="map-link" href="' + feature.properties.link + '">' +
-                            'Lea' + '</a>' +
-                        '</p>'; 
+                            '</a>' +
+                        '</p></a>'; 
 
         marker.bindPopup(popupContent,{
         closeButton: true,

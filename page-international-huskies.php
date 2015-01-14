@@ -16,10 +16,10 @@ wp_enqueue_style('mapbox');
     <div class="col-md-8 uw-content" role='main'>
       <div class="uw-body-copy">
       <div class="row uwaa-home-branding-row">
-    <div class="col-sm-6">
+    <div class="col-sm-10">
       <?php get_template_part( 'breadcrumbs' ); ?>
     </div>
-    <div class="col-sm-6 uwaa-home-branding">
+    <div class="col-sm-2 uwaa-home-branding">
       <!-- <div class="logo hidden-xs hidden-sm"> -->
         <?php //get_template_part('assets/uwaa', 'logo.svg');?>
       <!-- </div> -->
@@ -64,6 +64,11 @@ wp_enqueue_style('mapbox');
         
 
     ?>
+
+    <div id="no-chapter-widget" class="widget widget_text">
+          <h2 class="widgettitle">Don't See Your Chapter?</h2>
+          <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="#">Let Us Know!</a></div>
+        </div>
 
      
       </div>

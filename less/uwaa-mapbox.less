@@ -194,6 +194,38 @@ div.map-logo{
 
     }
 
-
     }
+
+    a{
+        color: @janegray;
+        text-decoration: none;
+
+        &:hover, &:active {
+            text-decoration: none;
+            color: @janegray;
+            border-bottom: none;
+        }
+    }
+
+    a.map-link {
+         &:after {
+            background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
+            content: "";
+            opacity: .4;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-left: 5px;            
+            width: 14px;
+            height: 21px;            
+            -o-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+
+            &:hover{
+                border-bottom: none;
+            }
+        }
+    }
+
 }

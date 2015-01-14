@@ -1,4 +1,5 @@
 <?php 
+$UWAA->Memberchecker->getSession();
 get_header(); 
 wp_enqueue_script(array('superHero'));
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Membership;
@@ -74,7 +75,7 @@ endif;
     
      <div class="col-md-4 uw-sidebar">
     <?php    
-        
+         include(locate_template( 'partials/join-renew.php' )); 
         uw_sidebar_menu();
         dynamic_sidebar( 'membership' );
         

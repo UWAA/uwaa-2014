@@ -34,10 +34,9 @@ console.log(path);
         //Template for Custom Tooltip        
         var popupContent = '<a href="' + feature.properties.link + '">' +
                             '<div class="map-logo '+ feature.properties.logo +'"></div>' +
-                            '<p class="map-excerpt">' + feature.properties.excerpt + '</p>' +
-                            '<a class="map-link" href="' + feature.properties.link + '">' +
-                            'Learn More' +
-                        '</a>'; 
+                            '<p class="map-excerpt">' + feature.properties.excerpt + '</a>' +
+                            '<a class="map-link" href="' + feature.properties.link + '">' +                            
+                        '</a></p>'; 
 
         marker.bindPopup(popupContent,{
         closeButton: true,

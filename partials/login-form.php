@@ -15,6 +15,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                     <a id="memberCheckerLogout">Logout</a>';
         } else {
         ?>
+        <div id="loginSidebar" class="widget">
         <h2 class="widgettitle">Log In</h2>
         <form method="POST" id="memberloginForm">
                 <fieldset>
@@ -30,6 +31,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
 
                 </fieldset>
             </form>
+            </div>
 
         <?php        
         }

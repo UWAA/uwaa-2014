@@ -1,4 +1,4 @@
-<div class="uw-homepage-slider-container">
+<div class="uw-homepage-slider-container uwaa-superhero">
 
 <!-- Move this logic to the calling page,  -->
   <?php foreach ( $superhero->get_latest_slideshow() as $slide ) :

@@ -240,11 +240,7 @@ CONTENT;
     echo $content;
     }
 
-    public function renderJoinButtons() {
-        $details = $this->getSessionInformation(); 
-        
-
-    }
+    
 
     
 }

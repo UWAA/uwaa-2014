@@ -1,4 +1,5 @@
 <?php
+$UWAA->Memberchecker->getSession();
 /*
  * Template Name: UWAA-Membership
  * Description: A Page Template for membership pages.
@@ -59,7 +60,8 @@ get_header();
 
     </div>
     <div class="col-md-4 uw-sidebar">
-    <?php 
+    <?php
+        include(locate_template( 'partials/join-renew.php' )); 
         uw_sidebar_menu();
         dynamic_sidebar( 'membership_sidebar' ); 
     ?>
