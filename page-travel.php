@@ -28,7 +28,7 @@ endif;
 
      
 
-     <?php get_template_part('partials/page', 'breadcrumbs') ?>
+     <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
       <div class="uw-body-copy">
 
