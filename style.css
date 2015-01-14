@@ -1143,6 +1143,9 @@ div.map-logo.spokane {
 div.map-logo.tucson {
   background-position: 50% -42px;
 }
+div.map-logo.washington-dc {
+  background-position: 50% -160px;
+}
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 4px 10px 10px;
 }
@@ -1864,6 +1867,10 @@ div.map-logo.tucson {
 #uwaa-footer .uwaa-logo svg g path {
   fill: #ffffff;
 }
+.tours-footer-logo {
+  padding-bottom: 20px;
+  padding-left: 40px;
+}
 .uw-hero-image.travel {
   background: url(assets/headers/Page_Header_Travel.jpg) center center;
   background-size: cover;
@@ -2312,7 +2319,8 @@ a#memberCheckerLogout {
   background-color: #4b2e83;
   color: #ffffff;
 }
-.page-membership .uw-sidebar-menu {
+.page-membership,
+.page-template-membership-page .uw-sidebar-menu {
   margin-top: 0;
 }
 #map {
