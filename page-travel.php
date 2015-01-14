@@ -64,8 +64,32 @@ endif;
      <div class="col-md-4 uw-sidebar">
     <?php 
         uw_sidebar_menu();
-        dynamic_sidebar( 'travel_sidebar' ); 
+        dynamic_sidebar( 'travel_sidebar' );
+
+
     ?>
+<!-- DEMO ONLY: REMOVB -->
+    <div id="tours-signup" class="widget">
+        <h2 class="widgettitle">Travel E-News</h2>
+        <form id="memberloginForm">
+                <fieldset>
+                    
+                    <input style="width:48%;margin-right:2%" type="text" name="idNumber" placeholder="First Name" autocomplete="off">
+                    <input style="width:48%;" type="text" name="idNumber" placeholder="Last Name" autocomplete="off">
+                    
+                    <div>
+                        <input type="text" name="lastName" placeholder="Email Address" autocomplete="off">
+                        <input id="loginSubmit" type="submit">
+                    </div>
+                    <input type="hidden" name="action" value="callMemberChecker">
+
+
+                </fieldset>
+            </form>
+            </div>
+<!-- DEMO ONLY: REMOVE -->
+
+
     </div>
 
   </div>
