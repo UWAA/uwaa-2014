@@ -21,19 +21,7 @@ endif;
 
     <div class="col-md-12 uw-content" role='main'>
     
-    <div class="row uwaa-home-branding-row">
-    <div class="col-sm-6">
-      <?php
-        $UWAA->UI->Breadcrumbs->UWAABreadcrumbs();
-       ?>
-    </div>
-    <div class="col-sm-6 uwaa-home-branding">
-      <!-- <div class="logo hidden-xs hidden-sm"> -->
-        <?php //get_template_part('assets/uwaa', 'logo.svg');?>
-      <!-- </div> -->
-      <em>Produced by the Alumni Association for all UW Alumni</em>
-    </div> 
-  </div>
+    <?php get_template_part('partials/page', 'breadcrumbs') ?>
       
 
       <h1>Events</h1>
