@@ -68,6 +68,16 @@ class Images {
                     ),
                 'show'  => false
                 ),
+            'chapterBrandingImage' => array (
+                'name'  => 'Communities Branding Image',
+                'width'  => 800,
+                'height'  => 260,
+                'crop'  => array (
+                    'x_crop_position' => 'center',
+                    'y_crop_position' => 'center'
+                    ),
+                'show'  => false
+                ),
             'post-thumbnail' => array (
                 'name'  => 'Featured Image Thumbnail',
                 'width'  => 302,
