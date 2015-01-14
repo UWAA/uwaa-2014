@@ -10,7 +10,8 @@
         <div class="row">
         <div class="chapter-logo">
                 <?php 
-                new \UWAA\View\ChapterHeaderLogo($slide->logo); 
+                $logo = new \UWAA\View\ChapterHeaderLogo($slide->logo); 
+                $logo->retriveSVG();
                 ?>
             </div>
             </div>

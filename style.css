@@ -348,6 +348,9 @@
 #isotope-search input.search {
   height: 44px;
 }
+.post-type-archive-benefits .copy {
+  height: 220px;
+}
 h3 {
   font-size: 1.5em;
 }
@@ -828,7 +831,7 @@ h6.intro-head {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 140px;
+  height: 190px;
   background-color: #c9c9c9;
   text-align: center;
   padding: 10px 0;
@@ -880,6 +883,26 @@ h6.intro-head {
 .communities-header .event-information-column h2,
 .communities-header .event-information-column h3 {
   color: #ffffff;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+.communities-header .event-information-column h1 {
+  font-size: 50px;
+}
+.communities-header .event-information-column h2 {
+  margin: 20px 0 0;
+  font-weight: 900;
+  font-size: 1.4em;
+  letter-spacing: .5px;
+}
+.communities-header .event-information-column h2.date {
+  margin-top: 10px;
+}
+.communities-header .event-information-column p {
+  margin-top: 15px;
+}
+.uwaa-communities-slider .slideshow-controls:after {
+  display: none;
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -2260,6 +2283,7 @@ ul.uwaa-social li a:focus.email {
 a#memberCheckerLogout {
   float: right;
   margin-right: 60px;
+  cursor: pointer;
 }
 #join-renew-buttons {
   padding: 20px 20px 20px 40px;
@@ -2305,6 +2329,10 @@ img.headshot {
 hr {
   border-top: 1px solid #CCCCCC;
 }
-.page-home .uw-body.container {
+.page-home,
+.page-membership .uw-body.container {
   margin-bottom: 45px;
+}
+.page-membership .5-column {
+  margin-top: 20px;
 }

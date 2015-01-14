@@ -25,7 +25,7 @@
 
 .chapter-logo {
     .make-sm-column(12);
-    height:140px;
+    height:190px;    
     background-color: @gray;
     text-align: center;
     padding: 10px 0;
@@ -55,9 +55,42 @@
 
     h1, h2, h3 {
         color: @white;
+        text-transform: uppercase;
+        padding-left: 15px;
     }
+
+    h1 {
+        font-size: 50px;
+        
+    }
+
+     h2{
+       margin: 20px 0 0;
+       font-weight: 900;
+       font-size: 1.4em;
+       
+       letter-spacing: .5px;
+       
+
+       &.date{
+        margin-top: 10px;
+       }
+      }
+
+      
+   
+
+    p{
+      margin-top: 15px;
+     }
+
+     
 }
 }
+
+.uwaa-communities-slider .slideshow-controls:after {
+        display: none;
+     }
 
 
 //Tablet range, cut height in half but keep all content

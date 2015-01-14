@@ -1,4 +1,4 @@
-<h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a></h1>
+<h1><?php the_title() ?></h1>
 <h2 class="date">
     <?php echo "".get_post_meta($post->ID, 'mb_cosmetic_date', true)."  ".get_post_meta($post->ID, 'mb_event_time', true)." " ?>
 </h2>

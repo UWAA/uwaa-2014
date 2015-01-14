@@ -97,6 +97,7 @@ $finalSlug = $communitySlug->isCommunitiesContent();
     <div class="col-md-4 uw-sidebar">
     <?php 
         dynamic_sidebar( 'events' );
+        the_widget("UWAA\Widgets\SidebarPullQuote");
         the_widget("UWAA\Widgets\SocialSidebar"); 
         endwhile;
     ?>

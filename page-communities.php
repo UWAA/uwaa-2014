@@ -8,7 +8,7 @@ wp_enqueue_style('mapbox');
 ?>
 
 
-<div class="communities-header uw-homepage-slider-container">
+<div class="communities-header uw-homepage-slider-container uwaa-communities-slider">
 <?php
 
 if(class_exists('\UWAA\Slideshow\CommunitiesSlideshow')):
