@@ -1,4 +1,4 @@
-<div class="chapter-image-column" style="background-image:url('<?php \UWAA\View\UI::getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+<div class="chapter-image-column" style="background-image:url('<?php \UWAA\View\UI::getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'chapterBrandingImage')?>');"></div>
             <div class="chapter-logo">
                 <?php                
 
