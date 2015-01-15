@@ -19,7 +19,11 @@ var host = window.location.hostname;
 
 
     //TODO Single Origin Policy, and abstract.  
-    var markerLayer = L.mapbox.featureLayer().addTo(map);
+    var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading); 
+
+    startLoading();
+    
+    markerLayer.loadURL(homeLink.endpointURL);
 
     markerLayer.on('layeradd', function(e) {
         var marker = e.layer,
@@ -41,6 +45,23 @@ var host = window.location.hostname;
 
     });
 
+
+    function startLoading() {
+    loader.className = '';
+}
+
+function finishedLoading() {
+    // first, toggle the class 'done', which makes the loading screen
+    // fade out
+    loader.className = 'done';
+    setTimeout(function() {
+        // then, after a half-second, add the class 'hide', which hides
+        // it completely and ensures that the user can interact with the
+        // map again.
+        loader.className = 'hide';
+    }, 500);
+}
+
    
     
     // markerLayer.on('mouseout', function(e) {
@@ -48,7 +69,7 @@ var host = window.location.hostname;
     // });
 
 
-markerLayer.loadURL(homeLink.endpointURL);
+
 
 
 
