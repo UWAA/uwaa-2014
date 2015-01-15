@@ -62,32 +62,8 @@ var uiMenu = $("#mapNavigation");
     // e.layer.closePopup();
     // });
 
-//Janky Test Stuff, but necessary for getting this working.
-var host = window.location.hostname;
 
-switch (host) {
-    case "dev.alumni.washington.edu" : 
-    markerLayer.loadURL('http://dev.alumni.washington.edu/wordpress/api/communities/geojson');
-    break;
-
-    case "54.69.164.216" :
-    markerLayer.loadURL('http://54.69.164.216/uwaa_test/api/communities/geojson');
-    break;
-
-    case "local.wordpress.dev" :
-    markerLayer.loadURL('http://local.wordpress.dev/api/communities/geojson');
-    break;
-
-    case "cms.alumni.washington.edu" :
-    markerLayer.loadURL('https://cms.alumni.washington.edu/alumni/api/communities/geojson');
-    break;
-
-    default: 
-    console.log ("Error Getting GEOJSON.  Host: "+host+"");
-
-}
-
-
+markerLayer.loadURL(homeLink.endpointURL);
 
 
 

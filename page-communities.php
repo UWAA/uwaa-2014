@@ -2,13 +2,13 @@
 get_header(); 
 wp_enqueue_script(array('communitiesMap', 'superHero'));
 wp_enqueue_style('mapbox');
-
+wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api/communities/geojson')  ) );
 
 
 ?>
 
 
-<div class="communities-header uw-homepage-slider-container uwaa-communities-slider">
+
 <?php
 
 if(class_exists('\UWAA\Slideshow\CommunitiesSlideshow')):
@@ -23,7 +23,7 @@ endif;
 
 
   
-</div>
+
 
 <div class="container uw-body">
 
