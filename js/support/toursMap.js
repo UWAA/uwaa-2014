@@ -9,7 +9,9 @@ var host = window.location.hostname;
         tileLayer : {
                     continuousWorld: false,        
                     noWrap: true
-                    }
+        },
+        scrollWheelZoom:false,
+        doubleClickZoom:false,
        
     });
     map.setView([40, 0], 2);
@@ -39,9 +41,7 @@ var host = window.location.hostname;
 
     });
 
-    markerLayer.on('mouseover', function(e) {
-    e.layer.openPopup();
-    });
+   
     
     // markerLayer.on('mouseout', function(e) {
     // e.layer.closePopup();
