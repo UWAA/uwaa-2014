@@ -22,6 +22,10 @@
         <h2><?php $subtitle = $slide->subtitle ? $slide->subtitle : ''; echo $subtitle ?></h2>
         <h1 class="title" id="<?php echo $slide->id; ?>-title"><?php echo $slide->title; ?></h1>
         <h2><?php $date = $slide->date ? $slide->date : ''; echo $date ?></h2>
+
+        <a class="uw-btn btn-sm btn-none" href="<?php echo $slide->alternateLink ? $slide->alternateLink : $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
+
+        
     </div>        
 </div>
             

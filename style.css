@@ -900,6 +900,11 @@ h6.intro-head {
 .communities-header .event-information-column h2.date {
   margin-top: 10px;
 }
+.communities-header .event-information-column a.uw-btn:after {
+  background-color: #85754d;
+  height: 44px;
+  margin-top: -22px;
+}
 .communities-header .event-information-column p {
   margin-top: 15px;
 }
