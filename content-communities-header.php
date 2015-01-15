@@ -1,10 +1,10 @@
  <div class="communities-header uw-homepage-slider-container uwaa-communities-slider">
- 
+
  <?php foreach ( $superhero->get_latest_slideshow() as $slide ) :
    
     ?>
 
-<div class="uw-homepage-slider slide-<?php echo $slide->id .' ' .$slide->header_text_color ?>" data-id="<?php echo $slide->id; ?>">
+<div class="uw-homepage-slider slide-<?php echo $slide->id?>" data-id="<?php echo $slide->id; ?>">
     <div class="chapter-image-column">
         <div class="chapter-image-row">            
             <div class="chapter-image" style="background:url(<?php echo $slide->image; ?>) no-repeat center; background-size:cover;"></div>
