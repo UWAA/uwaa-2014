@@ -1,6 +1,9 @@
 (function ($) {
 
 var path = window.location.pathname.split('/').filter(function(n){ return n !== ''; }).pop()
+var asiaCenter = [20.539359, 114.027324];
+var usCenter = [39.833333, -98.583333];
+var uiMenu = $("#mapNavigation");
 
 
 console.log(path);
@@ -13,18 +16,25 @@ console.log(path);
        
     });
     if (path === 'international-huskies') {
-        map.setView([20.539359, 114.027324], 3);
+        map.setView(asiaCenter, 3);
     } else if (path === 'u-s-huskies') {
-        map.setView([39.833333, -98.583333], 4);
+        map.setView(usCenter, 4);
     } else {
+        uiMenu.css('display', 'block');
         map.setView([39.833333, -98.583333], 4);
     }
 
     
+    $('#usNav').on('click', function() {
+        map.setView(usCenter, 4);
+    });
+
+    $('#asiaNav').on('click', function() {
+        map.setView(asiaCenter, 4);
+    });
 
 
-
-    //TODO Single Origin Policy, and abstract.  
+    //, and abstract.  
     var markerLayer = L.mapbox.featureLayer().addTo(map);
 
     markerLayer.on('layeradd', function(e) {
@@ -45,9 +55,9 @@ console.log(path);
     
     });
 
-    markerLayer.on('mouseover', function(e) {
-    e.layer.openPopup();
-    });
+    // markerLayer.on('mouseover', function(e) {
+    // e.layer.openPopup();
+    // });
     
     // markerLayer.on('mouseout', function(e) {
     // e.layer.closePopup();
