@@ -18,7 +18,7 @@ var allPanels = $('#accordion > .closed > .collapse').hide();
       $indicator.css({"position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)"});
       $content.show () .attr ("aria-hidden", "false");
       $parent.removeClass('closed').addClass('open');
-      console.log($parent);
+      
   }
   else if ( $indicator.attr("aria-expanded") == "true")
   {
@@ -43,7 +43,7 @@ $(".accordion-heading").click (function () {          //using mouse
         $indicator.text ("Expanded");
         $indicator.css({"position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)"});
         $content.show ().attr("aria-hidden", "false");        
-        console.log($parent);
+        
     } else if ( $indicator.attr("aria-expanded") == "true") {
         $parent.removeClass('open').addClass('closed');
         $indicator.attr ("aria-expanded", "false");

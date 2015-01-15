@@ -131,6 +131,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false,
+    ),
+         'chapterAccordionOpener' => array (
+        'id'      => 'chapterAccordionOpener',
+        'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/chapterAccordionOpener'. $this->min_script() .'.js',
+        'deps'    => array( 'backbone' ),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false,
     )
 
     

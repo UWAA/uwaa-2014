@@ -14,6 +14,7 @@ class Accordions
         add_shortcode('accordion-title', array($this, 'accordionTitle'));
         add_shortcode('accordion-content', array($this, 'accordionContent'));
         add_shortcode('accordion-wrapper', array($this, 'accordionWrapper'));
+        add_shortcode('chapter-title', array($this, 'chapterTitle'));
     }
 
 
@@ -52,6 +53,17 @@ class Accordions
     
     public  function accordionWrapper($atts, $content="" ) {
     return   '<div id="accordion">'.do_shortcode($content).'</div>';
+    }
+
+
+    public  function chapterTitle($atts) {
+        $a = shortcode_atts( array(
+            'name' => 'The name of the chapter',            
+        ), $atts );
+
+        $chapterClass = str_replace(' ', '-', strtolower($a['name']));
+
+    return   "<strong id=\"$chapterClass\">{$a['name']}</strong>";
     }
 
 }

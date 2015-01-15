@@ -4,7 +4,8 @@
  * Description: A Page Template for communities pages.
  */
 
-get_header(); 
+get_header();
+wp_enqueue_script('chapterAccordionOpener');
 ?>
 
 <div class="uw-hero-image communities"></div>
