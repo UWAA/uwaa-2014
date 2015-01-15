@@ -22,13 +22,13 @@ UW.HomepageSlider = Backbone.View.extend({
 
   nextSlide : function( e )
   {
-    this.$el.children( this.slides).last().fadeOut( this.rotateSlides )
+    this.$el.children(this.slides).last().fadeOut( this.rotateSlides )
   },
 
   rotateSlides : function()
   {
     var $this    = $( this )
-    $this.insertBefore( $this.siblings(this.slides).first() ).show()
+    $this.insertBefore( $this.siblings(this.slides).first() ).fadeIn()
     UW.homepageslider.changeNextArticle()
   },
 
@@ -44,7 +44,15 @@ UW.HomepageSlider = Backbone.View.extend({
 
   render : function()
   {
-    var slide = this.$el.children( this.slides ).eq( this.count - 2 )
+    if (this.$el.hasClass('uwaa-communities-slider')) {
+
+      var slide = this.$el.children( this.slides ).eq( this.count - 1 )  
+
+    } else {
+
+      var slide = this.$el.children( this.slides ).eq( this.count - 2 )
+
+    }
     return _.template( this.template, { title: slide.find('h1').text(), slide: slide.data().id })
   }
 

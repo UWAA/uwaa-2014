@@ -9,7 +9,7 @@ if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveM
 
         elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
             //Maybe sketchy, need to be able to have links in this
-            echo get_post_meta(get_the_ID(), 'mb_benefit_promotion', true);
+            echo esc_html(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true));
             } 
             else{
                 echo "UWAA Members, Login to see how to claim your benefit";

@@ -144,9 +144,10 @@ class CustomPostData {
     private function get($name, $single = true, $post_id = null ) {
         global $post;
 
-        if ($name == 'start_date'){
-            $value = get_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name, $single);                
-                
+        if ($name == 'start_date'){  //@TODO Very tightly coupled with the theme.  
+            $value = get_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name, $single);                               
+
+
                 if ($value) {
                     $displayValue = date_create_from_format('Ymd', $value);
                         if (!$displayValue) {

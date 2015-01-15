@@ -13,7 +13,9 @@ try {
     echo "Error Message:" . $e->getMessage();
 }
 
-//Autoloads all of the UWAA classes, as they follow autoloading standards.  Classes can be called using that \UWAA\Path\To\Class->Method syntax
+
+
+//Autoloads all of the UWAA classes, as they follow PSR-0 autoloading standards.  Classes can be called using that \UWAA\Path\To\Class->Method syntax
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
@@ -22,6 +24,9 @@ require_once(__DIR__ . '/vendor/autoload.php');
 if (!isset($UWAA)){
     $UWAA = new UWAA\UWAA($wp);
 }
+
+
+
 
 
 //Page Slug Body Class
@@ -49,8 +54,3 @@ function cc_mime_types($mimes) {
   return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
-
-
-remove_filter( 'the_content', 'wpautop' );
-        add_filter( 'the_content', 'wpautop' , 99);
-        add_filter( 'the_content', 'shortcode_unautop',100 );

@@ -718,7 +718,7 @@ h6.intro-head {
 .communities-header {
   margin-left: -15px;
   margin-right: -15px;
-  height: 400px;
+  height: 450px;
 }
 .communities-header:before,
 .communities-header:after {
@@ -757,6 +757,7 @@ h6.intro-head {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .communities-header .chapter-image-column {
@@ -864,8 +865,9 @@ h6.intro-head {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 100%;
+  height: 450px;
   background-color: #4b2e83;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .communities-header .event-information-column {
