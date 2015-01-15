@@ -2,6 +2,7 @@
 get_header(); 
 wp_enqueue_script(array('communitiesMap'));
 wp_enqueue_style('mapbox');
+wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api/communities/geojson')  ) );
 
 
 
