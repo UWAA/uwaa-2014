@@ -44,15 +44,15 @@ UW.HomepageSlider = Backbone.View.extend({
 
   render : function()
   {
-    if (this.$el.hasClass('uwaa-communities-slider')) {
+    // if (this.$el.hasClass('uwaa-communities-slider')) {
 
-      var slide = this.$el.children( this.slides ).eq( this.count - 1 )  
+    //   var slide = this.$el.children( this.slides ).eq( this.count - 1 )  
 
-    } else {
+    // } else {
 
       var slide = this.$el.children( this.slides ).eq( this.count - 2 )
 
-    }
+    // }
     return _.template( this.template, { title: slide.find('h1').text(), slide: slide.data().id })
   }
 
