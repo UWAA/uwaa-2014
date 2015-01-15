@@ -32,9 +32,12 @@ var uiMenu = $("#mapNavigation");
         map.setView(asiaCenter, 3);
     });
 
+    startLoading();
 
-    //, and abstract.  
-    var markerLayer = L.mapbox.featureLayer().addTo(map);
+    
+    var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading);
+
+    markerLayer.loadURL(homeLink.endpointURL);
 
     markerLayer.on('layeradd', function(e) {
         var marker = e.layer,
@@ -54,6 +57,21 @@ var uiMenu = $("#mapNavigation");
     
     });
 
+
+    function startLoading() {
+    loader.className = '';
+    }
+
+function finishedLoading() {    
+    loader.className = 'done';
+    setTimeout(function() {
+        // then, after a half-second, add the class 'hide', which hides
+        // it completely and ensures that the user can interact with the
+        // map again.
+        loader.className = 'hide';
+    }, 100);
+}
+
     // markerLayer.on('mouseover', function(e) {
     // e.layer.openPopup();
     // });
@@ -63,7 +81,7 @@ var uiMenu = $("#mapNavigation");
     // });
 
 
-markerLayer.loadURL(homeLink.endpointURL);
+
 
 
 
