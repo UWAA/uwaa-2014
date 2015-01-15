@@ -20,7 +20,7 @@ get_header();
 
     <div class="col-md-8 uw-content" role='small'>
 
-      <?php get_template_part('partials/sidebar', 'single-breadcrumbs') ?>
+      <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
 
 
       <div class="uw-body-copy">

@@ -30,7 +30,8 @@ else {
 
       <?php if ($defaultHeader) { uw_site_title(); }; ?>
 
-          <?php get_template_part('partials/sidebar', 'single-breadcrumbs') ?>
+          <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
+
 
       <div id='main_content' class="uw-body-copy">
 
