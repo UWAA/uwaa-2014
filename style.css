@@ -904,6 +904,9 @@ a.uwaa-btn:active {
 .communities-header .event-information-column h2.date {
   margin-top: 10px;
 }
+.communities-header .event-information-column a.uw-btn {
+  margin-left: 15px;
+}
 .communities-header .event-information-column a.uw-btn:after {
   background-color: #85754d;
   height: 44px;
