@@ -37,8 +37,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');    
-        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
-        $this->postSubtitle = parent::getPostSubtitle($query);
+        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;        
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         
@@ -95,8 +94,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
       $callout
 		  $image
     </div>
-		<div class="copy">
-		<h5 class="subtitle">$this->postSubtitle</h5>
+		<div class="copy">		
 		<h4>$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
 		<p>$this->postExcerpt</p>

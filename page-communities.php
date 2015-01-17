@@ -31,7 +31,7 @@ endif;
 
     <div class="col-md-8 uw-content" role='main'>
 
-  <?php get_template_part('partials/page', 'breadcrumbs') ?>
+  <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
   
       <div class="uw-body-copy">
 

@@ -17,10 +17,10 @@ label {
 
     input {        
         width: 100%;
-        height: 50px;
+        height: 44px;
         margin-top: 10px;
         padding-left: 15px;
-        border:1px solid @janegray;
+        border:1px solid @formgray;
 
         &.half-column{
             width: 155px;
@@ -37,11 +37,18 @@ label {
             position: absolute;
             right: 0;
             top: 0;
-            width: 50px;
-            height: 50px;            
+            width: 44px;
+            height: 44px;            
             text-indent: -99999px;            
             overflow: hidden;            
-            background: url(assets/uwaa-sprite.svg) no-repeat -36px -475px @purple;                
+            background: url(assets/uwaa-sprite.svg) no-repeat -42px -479px @purple;                
             }        
+        
+        &:focus {            
+            outline: none !important;
+            background-color: lighten(rgb(232, 227, 211), 5%)
+        }
+
+
     }
 }

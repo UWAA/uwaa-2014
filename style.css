@@ -241,7 +241,7 @@
 .post-thumbnail-slide .copy {
   color: #5a5a5a;
   padding: 6px 10px 10px 10px;
-  box-shadow: -1px 2px 2px #c9c9c9, 1px 2px 2px #c9c9c9;
+  box-shadow: -1px 2px 2px #d9d9d9, 1px 2px 2px #d9d9d9;
   height: 255px;
 }
 .post-thumbnail-slide .copy h4 {
@@ -318,14 +318,14 @@
   margin: 0;
   list-style: none;
   display: table-cell;
-  font-family: "Encode Sans Compressed", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: #3d3d3d;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 #filters ul li {
   display: inline-block;
-  padding-left: 15px;
+  padding-left: 22px;
   cursor: pointer;
 }
 #filters ul li.is-checked {
@@ -340,13 +340,14 @@
 #isotope-search form {
   float: left;
   width: 200px;
-  outline: 2px solid #ADADAD;
+  outline: 1px solid #aaaaaa;
 }
 #isotope-search form input {
   height: 44px;
 }
 #isotope-search input.search {
-  height: 44px;
+  height: 42px;
+  top: 1px;
 }
 .post-type-archive-benefits .copy {
   height: 220px;
@@ -477,7 +478,7 @@ a.uwaa-btn:active {
 .featured-post .copy {
   color: #5a5a5a;
   padding: 0 0 10px 10px;
-  box-shadow: -1px 2px 2px #c9c9c9, 1px 2px 2px #c9c9c9;
+  box-shadow: -1px 2px 2px #d9d9d9, 1px 2px 2px #d9d9d9;
   padding: 6px 10px 10px 10px;
   position: relative;
 }
@@ -837,7 +838,7 @@ a.uwaa-btn:active {
   padding-left: 15px;
   padding-right: 15px;
   height: 190px;
-  background-color: #c9c9c9;
+  background-color: #d9d9d9;
   text-align: center;
   padding: 10px 0;
 }
@@ -893,13 +894,14 @@ a.uwaa-btn:active {
   padding-left: 15px;
 }
 .communities-header .event-information-column h1 {
-  font-size: 50px;
+  font-size: 47px;
+  line-height: 1;
 }
 .communities-header .event-information-column h2 {
   margin: 20px 0 0;
   font-weight: 900;
   font-size: 1.4em;
-  letter-spacing: .5px;
+  letter-spacing: 1px;
 }
 .communities-header .event-information-column h2.date {
   margin-top: 10px;
@@ -1206,7 +1208,7 @@ div.map-logo.washington-dc {
 }
 .menu-ui {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   right: 10px;
   z-index: 1;
   display: none;
@@ -1223,7 +1225,7 @@ div.map-logo.washington-dc {
   font-family: "Encode Sans Compressed", sans-serif;
   letter-spacing: 1px;
   border-radius: 0;
-  height: 2em;
+  height: 1.95em;
   line-height: 1.3;
   text-transform: uppercase;
   padding: .412em;
@@ -1233,6 +1235,7 @@ div.map-logo.washington-dc {
 }
 .menu-ui .uwaa-btn-wrapper span:before {
   width: 40px;
+  height: 1.95em;
 }
 .menu-ui .uwaa-btn-wrapper span:hover {
   color: #85754d;
@@ -1445,7 +1448,7 @@ div.map-logo.washington-dc {
   font-weight: 900;
   font-size: 1.4em;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 1px;
 }
 .uw-homepage-slider-container .uw-homepage-slider h2.date {
   margin-top: 10px;
@@ -2082,6 +2085,18 @@ div.map-logo.washington-dc {
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+.page-member-account .panel .accordion-heading {
+  height: 44px;
+}
+.page-member-account .panel .chevron {
+  height: 44px;
+}
+.page-member-account .panel .chevron:after {
+  margin-top: -30px;
+}
+.page-member-account .accordion {
+  margin-top: 35px;
+}
 .wufoo {
   font-family: 'Open Sans', sans-serif;
   /* Backgrounds */
@@ -2337,7 +2352,7 @@ ul.uwaa-social li a:focus.email {
 }
 #memberloginForm input {
   width: 100%;
-  height: 50px;
+  height: 44px;
   margin-top: 10px;
   padding-left: 15px;
 }
@@ -2347,11 +2362,11 @@ ul.uwaa-social li a:focus.email {
   position: absolute;
   right: 0;
   top: 0;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   text-indent: -99999px;
   overflow: hidden;
-  background: url(assets/uwaa-sprite.svg) no-repeat -36px -475px #4b2e83;
+  background: url(assets/uwaa-sprite.svg) no-repeat -42px -479px #4b2e83;
 }
 a#memberCheckerLogout {
   float: right;
@@ -2371,7 +2386,7 @@ a#memberCheckerLogout {
   margin-left: 23px;
 }
 #join-renew-buttons .uwaa-btn {
-  background-color: #c9c9c9;
+  background-color: #d9d9d9;
   color: #4b2e83;
 }
 #join-renew-buttons .uwaa-btn.uwaa-btn-join {
@@ -2400,10 +2415,10 @@ a#memberCheckerLogout {
 }
 .uwaa-form input {
   width: 100%;
-  height: 50px;
+  height: 44px;
   margin-top: 10px;
   padding-left: 15px;
-  border: 1px solid #3d3d3d;
+  border: 1px solid #aaaaaa;
 }
 .uwaa-form input.half-column {
   width: 155px;
@@ -2417,11 +2432,15 @@ a#memberCheckerLogout {
   position: absolute;
   right: 0;
   top: 0;
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   text-indent: -99999px;
   overflow: hidden;
-  background: url(assets/uwaa-sprite.svg) no-repeat -36px -475px #4b2e83;
+  background: url(assets/uwaa-sprite.svg) no-repeat -42px -479px #4b2e83;
+}
+.uwaa-form input:focus {
+  outline: none !important;
+  background-color: #f1eee4;
 }
 #map {
   position: absolute;
@@ -2461,4 +2480,20 @@ hr {
 }
 .page-home .uwaa-superhero .slideshow-controls p {
   bottom: 40px;
+}
+.widget {
+  padding: 15px 0 0 40px;
+}
+ul.uw-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:before,
+ul.uw-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:before,
+ul.uw-sidebar-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:before,
+ul.uw-mobile-menu > div ul li.current_page_item ul.children li.current_page_item ul.children a:before,
+ul.uw-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before,
+ul.uw-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before,
+ul.uw-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before,
+ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before {
+  content: "&bull; ";
+}
+.uwaa-home-branding-row .uw-breadcrumbs {
+  padding: 20px 13px 0 20px;
 }
