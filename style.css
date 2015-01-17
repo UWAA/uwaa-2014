@@ -400,7 +400,7 @@ h6.intro-head {
   font-weight: 400;
   color: #3d3d3d;
   position: relative;
-  text-indent: 2em;
+  text-indent: 2.2em;
 }
 .quote-text:before {
   content: "“";
@@ -409,7 +409,7 @@ h6.intro-head {
   color: #b7a57a;
   position: absolute;
   top: .42em;
-  left: -0.5em;
+  left: -0.54em;
   line-height: 0;
 }
 .quote-author {
@@ -1805,6 +1805,7 @@ div.map-logo.washington-dc {
   border-top: 7px solid #d1d1d1;
   color: #ffffff;
   padding: 0;
+  font-size: .90em;
 }
 #uwaa-footer:before,
 #uwaa-footer:after {
@@ -1867,8 +1868,8 @@ div.map-logo.washington-dc {
   z-index: -1;
   background-color: #ffffff;
   left: 1px;
-  bottom: -3px;
-  height: 25px;
+  bottom: -5px;
+  height: 24px;
   width: 24px;
 }
 #uwaa-footer .contact-links {
@@ -1910,7 +1911,6 @@ div.map-logo.washington-dc {
   padding-left: 7px;
   text-transform: none;
   color: #ffffff;
-  font-size: .95em;
   transition: 0.25s;
 }
 #uwaa-footer .contact-links a:hover,
