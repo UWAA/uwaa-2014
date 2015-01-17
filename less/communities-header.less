@@ -86,6 +86,7 @@
    
     
       a.uw-btn {
+        margin-top: 39px;
         margin-left:15px;
             &:after {
               background-color: @darkgold;
@@ -105,9 +106,24 @@
 }
 }
 
-.uwaa-communities-slider .slideshow-controls:after {
-        display: none;
-     }
+.uwaa-communities-slider{
+
+  .slideshow-controls{
+
+    &:after {
+      bottom: 73px;
+      right: 14%;
+    }
+
+    p.next-headline {
+      width: 275px;
+      right: 12%;
+
+    } 
+
+  }
+
+}
 
 
 //Tablet range, cut height in half but keep all content
