@@ -90,7 +90,7 @@ public function build($endpointData)
 
         $linkToMajorMarket = get_permalink($post->ID);
         $homeURL = home_url('/');
-        $linkToOtherChaptersPage = '' . $homeURL . 'communities/other-areas/?chapter=' . $post->post_name . '';
+        $linkToOtherChaptersPage = '' . $homeURL . 'communities/all-regions/?chapter=' . $post->post_name . '';
         $isMajorMarket = get_post_meta($post->ID, 'mb_isMajorMarket', true);
 
 
