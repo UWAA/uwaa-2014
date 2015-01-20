@@ -1204,9 +1204,10 @@ div.map-logo.washington-dc {
   background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
   opacity: .4;
-  display: inline-block;
+  display: block;
+  float: right;
   vertical-align: bottom;
-  margin-left: 5px;
+  margin: 0 5px;
   width: 14px;
   height: 21px;
   -o-transform: rotate(90deg);
@@ -1214,7 +1215,8 @@ div.map-logo.washington-dc {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-.leaflet-popup .leaflet-popup-content a.map-link:after:hover {
+.leaflet-popup .leaflet-popup-content a.map-link:after:hover,
+.leaflet-popup .leaflet-popup-content a.map-link:after:focus {
   border-bottom: none;
 }
 .menu-ui {
