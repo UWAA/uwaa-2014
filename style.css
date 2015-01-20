@@ -1696,10 +1696,12 @@ div.map-logo.washington-dc {
     font-size: 1.8em;
   }
 }
-.page-home .uwaa-superhero .slideshow-controls:after {
+.page-home .uwaa-superhero .slideshow-controls:after,
+.page-events .uwaa-superhero .slideshow-controls:after {
   bottom: 0px;
 }
-.page-home .uwaa-superhero .slideshow-controls p {
+.page-home .uwaa-superhero .slideshow-controls p,
+.page-events .uwaa-superhero .slideshow-controls p {
   bottom: 20px;
 }
 .uwaa-home-branding-row .uw-breadcrumbs {
