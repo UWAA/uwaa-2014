@@ -1,9 +1,9 @@
 // communities-header.less
 
 
+.uw-homepage-slider-container {
 
-
-.communities-header {
+&.communities-header {
     .make-row();
     height: 450px;   
     
@@ -64,17 +64,17 @@
     }
 
     h1 {
-        font-size: 47px;
+        font-size: 40px;
         line-height: 1;
+        margin-top: 9px;
         
     }
 
      h2{
        margin: 20px 0 0;
        font-weight: 900;
-       font-size: 1.4em;
-
-       
+       font-size: 1.2em;
+       font-weight: 800;       
        letter-spacing: 1px;
        
 
@@ -106,6 +106,8 @@
 }
 }
 
+}
+
 
 
   .uw-homepage-slider-container {
@@ -114,13 +116,15 @@
       .slideshow-controls{
 
         &:after {
-          bottom: 73px;
-          right: 14%;
+         display: none;
         }
 
         p.next-headline {
           width: 275px;
           right: 12%;
+          bottom: 77px;
+          font-size: 15px;
+          font-weight: 800;
 
         } 
 

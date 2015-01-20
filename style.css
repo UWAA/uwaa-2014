@@ -75,10 +75,10 @@
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
-.communities-header:before,
-.communities-header:after,
-.communities-header .chapter-image-row:before,
-.communities-header .chapter-image-row:after,
+.uw-homepage-slider-container.communities-header:before,
+.uw-homepage-slider-container.communities-header:after,
+.uw-homepage-slider-container.communities-header .chapter-image-row:before,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after,
 .uwaa-benefit-header:before,
 .uwaa-benefit-header:after,
 .fact-row:before,
@@ -106,8 +106,8 @@
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-.communities-header:after,
-.communities-header .chapter-image-row:after,
+.uw-homepage-slider-container.communities-header:after,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after,
 .uwaa-benefit-header:after,
 .fact-row:after,
 #message-row:after,
@@ -143,10 +143,10 @@
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
-.communities-header:before,
-.communities-header:after,
-.communities-header .chapter-image-row:before,
-.communities-header .chapter-image-row:after,
+.uw-homepage-slider-container.communities-header:before,
+.uw-homepage-slider-container.communities-header:after,
+.uw-homepage-slider-container.communities-header .chapter-image-row:before,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after,
 .uwaa-benefit-header:before,
 .uwaa-benefit-header:after,
 .fact-row:before,
@@ -174,8 +174,8 @@
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-.communities-header:after,
-.communities-header .chapter-image-row:after,
+.uw-homepage-slider-container.communities-header:after,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after,
 .uwaa-benefit-header:after,
 .fact-row:after,
 #message-row:after,
@@ -725,44 +725,44 @@ a.uwaa-btn:active {
     display: none !important;
   }
 }
-.communities-header {
+.uw-homepage-slider-container.communities-header {
   margin-left: -15px;
   margin-right: -15px;
   height: 450px;
 }
-.communities-header:before,
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:before,
+.uw-homepage-slider-container.communities-header:after {
   content: " ";
   display: table;
 }
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:after {
   clear: both;
 }
-.communities-header:before,
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:before,
+.uw-homepage-slider-container.communities-header:after {
   content: " ";
   display: table;
 }
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:after {
   clear: both;
 }
-.communities-header:before,
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:before,
+.uw-homepage-slider-container.communities-header:after {
   content: " ";
   display: table;
 }
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:after {
   clear: both;
 }
-.communities-header:before,
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:before,
+.uw-homepage-slider-container.communities-header:after {
   content: " ";
   display: table;
 }
-.communities-header:after {
+.uw-homepage-slider-container.communities-header:after {
   clear: both;
 }
-.communities-header .chapter-image-column {
+.uw-homepage-slider-container.communities-header .chapter-image-column {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -770,55 +770,55 @@ a.uwaa-btn:active {
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  .communities-header .chapter-image-column {
+  .uw-homepage-slider-container.communities-header .chapter-image-column {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 768px) {
-  .communities-header .chapter-image-column {
+  .uw-homepage-slider-container.communities-header .chapter-image-column {
     float: left;
     width: 50%;
   }
 }
-.communities-header .chapter-image-row {
+.uw-homepage-slider-container.communities-header .chapter-image-row {
   margin-left: -15px;
   margin-right: -15px;
   height: 260px;
 }
-.communities-header .chapter-image-row:before,
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:before,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   content: " ";
   display: table;
 }
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   clear: both;
 }
-.communities-header .chapter-image-row:before,
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:before,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   content: " ";
   display: table;
 }
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   clear: both;
 }
-.communities-header .chapter-image-row:before,
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:before,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   content: " ";
   display: table;
 }
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   clear: both;
 }
-.communities-header .chapter-image-row:before,
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:before,
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   content: " ";
   display: table;
 }
-.communities-header .chapter-image-row:after {
+.uw-homepage-slider-container.communities-header .chapter-image-row:after {
   clear: both;
 }
-.communities-header .chapter-image {
+.uw-homepage-slider-container.communities-header .chapter-image {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -826,18 +826,18 @@ a.uwaa-btn:active {
   height: 100%;
 }
 @media (min-width: 768px) {
-  .communities-header .chapter-image {
+  .uw-homepage-slider-container.communities-header .chapter-image {
     float: left;
     width: 100%;
   }
 }
 @media (min-width: 768px) {
-  .communities-header .chapter-image {
+  .uw-homepage-slider-container.communities-header .chapter-image {
     float: left;
     width: 100%;
   }
 }
-.communities-header .chapter-logo {
+.uw-homepage-slider-container.communities-header .chapter-logo {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -848,29 +848,29 @@ a.uwaa-btn:active {
   padding: 10px 0;
 }
 @media (min-width: 768px) {
-  .communities-header .chapter-logo {
+  .uw-homepage-slider-container.communities-header .chapter-logo {
     float: left;
     width: 100%;
   }
 }
 @media (min-width: 768px) {
-  .communities-header .chapter-logo {
+  .uw-homepage-slider-container.communities-header .chapter-logo {
     float: left;
     width: 100%;
   }
 }
-.communities-header .chapter-logo svg {
+.uw-homepage-slider-container.communities-header .chapter-logo svg {
   height: 100%;
   width: 70%;
 }
-.communities-header .chapter-logo svg #Region path,
-.communities-header .chapter-logo svg rect {
+.uw-homepage-slider-container.communities-header .chapter-logo svg #Region path,
+.uw-homepage-slider-container.communities-header .chapter-logo svg rect {
   fill: #85754d;
 }
-.communities-header .chapter-logo svg #Huskies path {
+.uw-homepage-slider-container.communities-header .chapter-logo svg #Huskies path {
   fill: #4b2e83;
 }
-.communities-header .event-information-column {
+.uw-homepage-slider-container.communities-header .event-information-column {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -880,56 +880,60 @@ a.uwaa-btn:active {
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  .communities-header .event-information-column {
+  .uw-homepage-slider-container.communities-header .event-information-column {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 768px) {
-  .communities-header .event-information-column {
+  .uw-homepage-slider-container.communities-header .event-information-column {
     float: left;
     width: 50%;
   }
 }
-.communities-header .event-information-column h1,
-.communities-header .event-information-column h2,
-.communities-header .event-information-column h3 {
+.uw-homepage-slider-container.communities-header .event-information-column h1,
+.uw-homepage-slider-container.communities-header .event-information-column h2,
+.uw-homepage-slider-container.communities-header .event-information-column h3 {
   color: #ffffff;
   text-transform: uppercase;
   padding-left: 15px;
 }
-.communities-header .event-information-column h1 {
-  font-size: 47px;
+.uw-homepage-slider-container.communities-header .event-information-column h1 {
+  font-size: 40px;
   line-height: 1;
+  margin-top: 9px;
 }
-.communities-header .event-information-column h2 {
+.uw-homepage-slider-container.communities-header .event-information-column h2 {
   margin: 20px 0 0;
   font-weight: 900;
-  font-size: 1.4em;
+  font-size: 1.2em;
+  font-weight: 800;
   letter-spacing: 1px;
 }
-.communities-header .event-information-column h2.date {
+.uw-homepage-slider-container.communities-header .event-information-column h2.date {
   margin-top: 10px;
 }
-.communities-header .event-information-column a.uw-btn {
+.uw-homepage-slider-container.communities-header .event-information-column a.uw-btn {
   margin-top: 39px;
   margin-left: 15px;
 }
-.communities-header .event-information-column a.uw-btn:after {
+.uw-homepage-slider-container.communities-header .event-information-column a.uw-btn:after {
   background-color: #85754d;
   height: 44px;
   margin-top: -22px;
 }
-.communities-header .event-information-column p {
+.uw-homepage-slider-container.communities-header .event-information-column p {
   margin-top: 15px;
 }
 .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
-  bottom: 73px;
-  right: 14%;
+  display: none;
 }
 .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
   width: 275px;
   right: 12%;
+  bottom: 77px;
+  font-size: 15px;
+  font-weight: 800;
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
