@@ -15,10 +15,12 @@ class RegionalFacts
 
     function __construct()
     {
-        add_shortcode('factboxes', array($this, 'factBoxHandler'));        
+        add_shortcode('factboxes_old', array($this, 'factBoxHandler_old'));        
+        add_shortcode('factboxes-wrapper', array($this, 'factBoxWrapperHandler'));
+        add_shortcode('factbox', array($this, 'factBoxHandler'));        
     }
 
-    public function factBoxHandler($atts, $content)
+    public function factBoxHandler_old($atts, $content)
     {
         $this->attributes = (object) $atts;
 
@@ -59,6 +61,26 @@ class RegionalFacts
             $this->return .= sprintf($template, $class_string, ($key+1), $fact);
         }
     }
+
+
+     public function factBoxWrapperHandler($atts, $content)
+    {
+        return   '<div class="fact-row">'.do_shortcode($content).'</div>';        
+    }
+
+      public function factBoxHandler($atts, $content)
+    {
+        $a = shortcode_atts( array(
+            'title' => 'Title for the factbox',
+            'content' => 'Fact content'
+        ), $atts );        
+
+           $content = "<div class=\"fact-box col-sm-3\"><div class=\"fact-container\"><h2>{$a['title']}</h2><p>{$a['content']}</p></div></div>";
+
+           return $content;
+    }
+
+
 }
 
 
