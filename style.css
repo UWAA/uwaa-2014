@@ -2089,8 +2089,8 @@ div.map-logo.washington-dc {
 }
 .panel {
   width: 100%;
-  padding-left: 12px;
   margin-bottom: 10px;
+  padding: 12px 0 4px 12px;
 }
 .panel .accordion-heading {
   background-color: #dddddd;
@@ -2539,7 +2539,7 @@ ul.uw-sidebar-menu li.pagenav ul li.current_page_ancestor ul.children li.current
 ul.uw-mobile-menu li.pagenav ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before,
 ul.uw-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before,
 ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before {
-  content: "&bull; ";
+  content: "\2022  ";
 }
 .uwaa-home-branding-row .uw-breadcrumbs {
   padding: 20px 13px 0 20px;

@@ -1,7 +1,7 @@
 (function ($) {
 
 var path = window.location.pathname.split('/').filter(function(n){ return n !== ''; }).pop()
-var globalCenter = [20, 20];
+var globalCenter = [20, 15];
 var usCenter = [39.833333, -98.583333];
 var uiMenu = $("#mapNavigation");
 
