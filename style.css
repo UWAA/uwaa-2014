@@ -2090,6 +2090,8 @@ div.map-logo.washington-dc {
 .panel {
   width: 100%;
   margin-bottom: 10px;
+}
+.panel .collapse {
   padding: 12px 0 4px 12px;
 }
 .panel .accordion-heading {
