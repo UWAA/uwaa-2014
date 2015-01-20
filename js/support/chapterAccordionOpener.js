@@ -1,12 +1,13 @@
 (function($) {   
 
     var currentPage = window.location;
+    var nameOfPage = 'all-regions';
 
     var path = currentPage.pathname.split('/').filter(function(n){ return n !== ''; }).pop();
 
     
     //This function should only run on one page.
-    if (path === 'other-areas') {
+    if (path === nameOfPage) {
 
     //http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
     function parseURL(url) {
