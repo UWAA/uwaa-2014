@@ -923,11 +923,11 @@ a.uwaa-btn:active {
 .communities-header .event-information-column p {
   margin-top: 15px;
 }
-.uwaa-communities-slider .slideshow-controls:after {
+.uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
   bottom: 73px;
   right: 14%;
 }
-.uwaa-communities-slider .slideshow-controls p.next-headline {
+.uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
   width: 275px;
   right: 12%;
 }
@@ -950,6 +950,24 @@ a.uwaa-btn:active {
   }
   .event-information-column {
     height: 100px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
+    right: 6%;
+  }
+  .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
+    width: 275px;
+    right: 4%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
+    right: -3%;
+  }
+  .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
+    width: 170px;
+    right: 4%;
   }
 }
 .uwaa-benefit-header {
@@ -1111,7 +1129,7 @@ div.map-logo.ft-lauderdale {
   background-position: 50% -200px;
 }
 div.map-logo.hong-kong {
-  background-position: 50% -281px;
+  background-position: 50% -1042px;
 }
 div.map-logo.honolulu {
   background-position: 50% -281px;
@@ -1122,11 +1140,17 @@ div.map-logo.houston {
 div.map-logo.indianapolis {
   background-position: 50% -401px;
 }
+div.map-logo.indonesia {
+  background-position: 36% -1083px;
+}
 div.map-logo.japan {
   background-position: 50% -1123px;
 }
 div.map-logo.kailua-kona {
   background-position: 50% -281px;
+}
+div.map-logo.korea {
+  background-position: 50% -1164px;
 }
 div.map-logo.las-vegas {
   background-position: 50% -602px;
@@ -1164,8 +1188,17 @@ div.map-logo.sacramento {
 div.map-logo.san-diego {
   background-position: 50% -80px;
 }
+div.map-logo.singapore {
+  background-position: 36% -1204px;
+}
 div.map-logo.spokane {
   background-position: 50% -882px;
+}
+div.map-logo.taiwan {
+  background-position: 36% -1243px;
+}
+div.map-logo.thailand {
+  background-position: 36% -1284px;
 }
 div.map-logo.tucson {
   background-position: 50% -42px;
@@ -2056,6 +2089,7 @@ div.map-logo.washington-dc {
 }
 .panel {
   width: 100%;
+  padding-left: 12px;
   margin-bottom: 10px;
 }
 .panel .accordion-heading {

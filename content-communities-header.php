@@ -31,7 +31,13 @@
             
         <?php endforeach;?>
 
+
+    
       <div class="slideshow-controls">
           <p class="next-headline"></p>
       </div>
+
+    
+
+
 </div>

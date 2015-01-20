@@ -1,7 +1,7 @@
 (function ($) {
 
 var path = window.location.pathname.split('/').filter(function(n){ return n !== ''; }).pop()
-var asiaCenter = [20.539359, 114.027324];
+var globalCenter = [20, 20];
 var usCenter = [39.833333, -98.583333];
 var uiMenu = $("#mapNavigation");
 
@@ -15,7 +15,7 @@ var uiMenu = $("#mapNavigation");
         doubleClickZoom:false,
         });
     if (path === 'international-huskies') {
-        map.setView(asiaCenter, 3);
+        map.setView(globalCenter, 2);
     } else if (path === 'u-s-huskies') {
         map.setView(usCenter, 4);
     } else {
@@ -29,7 +29,7 @@ var uiMenu = $("#mapNavigation");
     });
 
     $('#asiaNav').on('click', function() {
-        map.setView(asiaCenter, 3);
+        map.setView(globalCenter, 2);
     });
 
     startLoading();
