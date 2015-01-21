@@ -65,7 +65,13 @@
             $indicator.css({"position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)"});
             $content.show ().attr("aria-hidden", "false");
 
-        console.log($accordionWithChapter);
+
+        $('html, body').animate({
+            // scrollTop: $("#"+chapterToFind+"").offset().top - 150
+            scrollTop: $content.offset().top - 100
+        }, 500);
+
+        
         
     }
 
