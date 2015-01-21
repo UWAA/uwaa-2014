@@ -24,6 +24,7 @@ class UWAA
             
         //Front-End specific helper functions
         $this->UI = new \UWAA\View\UI;
+        $this->SidebarMenuWalker = new \UWAA\SidebarMenuWalker;
         
         $this->Memberchecker = new \UWAA\Memberchecker\Memberchecker;
         
@@ -71,7 +72,7 @@ class UWAA
         new \UWAA\Widgets\SocialSidebar;
 
         // //SuperHero Slideshow (from UW Homepage)
-        // new \UWAA\Slideshow\Slideshow;
+        
         // 
         
 

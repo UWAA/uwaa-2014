@@ -65,6 +65,7 @@ endif;
      <div class="col-md-4 uw-sidebar">
     <?php 
         uw_sidebar_menu();
+        uwaa_list_pages();
         dynamic_sidebar( 'travel_sidebar' );
 
         get_template_part('partials/forms', 'travel-newsletter');
