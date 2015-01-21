@@ -58,12 +58,18 @@ class Accordions
 
     public  function chapterTitle($atts) {
         $a = shortcode_atts( array(
-            'name' => 'The name of the chapter',            
+            'name' => 'The name of the chapter',
+            'country' => NULL            
         ), $atts );
 
-        $chapterClass = str_replace(' ', '-', strtolower($a['name']));
+        $chapterID = ($a['country'] ? str_replace(' ', '-', strtolower($a['country'])) : str_replace(' ', '-', strtolower($a['name'])));
 
-    return   "<strong id=\"$chapterClass\">{$a['name']}</strong>";
+        if (empty($a['country'])) { 
+            return   "<strong id=\"$chapterID\">{$a['name']}</strong>";
+        }
+
+        return   "<strong id=\"$chapterID\">{$a['name']}</strong>";
+
     }
 
 }
