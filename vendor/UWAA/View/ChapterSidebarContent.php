@@ -70,13 +70,44 @@ class ChapterSidebarContent
         get_template_part('partials/forms', 'communities-connect');
     }
 
+    public function renderCommunitiesChapterMenu() {        
+     
+
+        echo sprintf( '<nav id="desktop-relative" role="navigation" aria-label="relative">%s</nav>', $this->uwaa_list_pages() ) ;
+
+    }
+
+    public function renderMobileCommunitiesChapterMenu() {        
+     
+
+        echo sprintf( '<nav id="mobile-relative" role="navigation" aria-label="relative">%s</nav>', $this->uwaa_list_pages($mobile = TRUE)) ;
+
+    }
+
+    private function uwaa_list_pages($mobile = FALSE)
+    {
+    global $UWAA;
+    global $post;    
+
+    $toggle = $mobile ? '<button class="uw-mobile-menu-toggle">Menu</button>' : '';
+    $class  = $mobile ? 'uw-mobile-menu' : 'uw-sidebar-menu';
+
+    $menu = wp_nav_menu( array(
+    'theme_location'  => \UW_Dropdowns::LOCATION
+    ,'container' => false    
+    ,'depth' => 3    
+    , 'sub_menu' => true
+    , 'show_parent' => true    
+    , 'container_id'    => ''
+    , 'walker'       => $UWAA->SidebarMenuWalker
+    , 'echo'        => 0
+    , 'items_wrap' => '' . $toggle . '<ul class="' . $class . ' first-level"><li class="pagenav"><a href=" ' .get_bloginfo('url') . '" title="Home" class="homelink">Home</a><ul id="%1$s" class="%2$s">%3$s</li></ul>' 
+    ));
 
 
-     // <div id="no-chapter-widget" class="widget widget_text">
-     // <h2 class="widgettitle">Don't See Your Chapter?</h2>
-     //    <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="#">Let Us Know!</a></div>
-     //  </div>
-    
+    return $menu ? $menu : '';
+
+    }
 
 	
 }

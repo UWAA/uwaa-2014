@@ -88,7 +88,9 @@
 #message-row .content:before,
 #message-row .content:after,
 #uwaa-footer:before,
-#uwaa-footer:after {
+#uwaa-footer:after,
+.page-communities .mobile-menu-row:before,
+.page-communities .mobile-menu-row:after {
   content: " ";
   display: table;
 }
@@ -112,7 +114,8 @@
 .fact-row:after,
 #message-row:after,
 #message-row .content:after,
-#uwaa-footer:after {
+#uwaa-footer:after,
+.page-communities .mobile-menu-row:after {
   clear: both;
 }
 .dl-horizontal dd:before,
@@ -156,7 +159,9 @@
 #message-row .content:before,
 #message-row .content:after,
 #uwaa-footer:before,
-#uwaa-footer:after {
+#uwaa-footer:after,
+.page-communities .mobile-menu-row:before,
+.page-communities .mobile-menu-row:after {
   content: " ";
   display: table;
 }
@@ -180,7 +185,8 @@
 .fact-row:after,
 #message-row:after,
 #message-row .content:after,
-#uwaa-footer:after {
+#uwaa-footer:after,
+.page-communities .mobile-menu-row:after {
   clear: both;
 }
 #isotope-canvas {
@@ -709,6 +715,10 @@ a.uwaa-btn:active {
 .uwaa-chapter-header .chapter-logo svg #Region path,
 .uwaa-chapter-header .chapter-logo svg rect {
   fill: #b7a57a;
+}
+.single-chapters ul.uw-sidebar-menu,
+.single-chapters ul.uw-mobile-menu {
+  margin-top: -80px;
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 767px) {
@@ -2575,4 +2585,42 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
 }
 .uwaa-home-branding-row .uw-breadcrumbs {
   padding: 20px 13px 0 20px;
+}
+.page-communities .mobile-menu-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 0;
+  margin: 0;
+}
+.page-communities .mobile-menu-row:before,
+.page-communities .mobile-menu-row:after {
+  content: " ";
+  display: table;
+}
+.page-communities .mobile-menu-row:after {
+  clear: both;
+}
+.page-communities .mobile-menu-row:before,
+.page-communities .mobile-menu-row:after {
+  content: " ";
+  display: table;
+}
+.page-communities .mobile-menu-row:after {
+  clear: both;
+}
+.page-communities .mobile-menu-row:before,
+.page-communities .mobile-menu-row:after {
+  content: " ";
+  display: table;
+}
+.page-communities .mobile-menu-row:after {
+  clear: both;
+}
+.page-communities .mobile-menu-row:before,
+.page-communities .mobile-menu-row:after {
+  content: " ";
+  display: table;
+}
+.page-communities .mobile-menu-row:after {
+  clear: both;
 }

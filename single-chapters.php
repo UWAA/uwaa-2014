@@ -1,4 +1,5 @@
 <?php get_header(); 
+$chapterSidebar = $UWAA->UI->buildCommunitySidebar();
 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;  
   // Start the Loop.
@@ -17,10 +18,21 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
 
     <div class="col-md-8 uw-content" role='small'>
 
-          <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
+          <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); 
 
 
-      <div class="row">
+          
+
+          ?>
+
+
+     
+      
+      <div class="uw-body-copy">
+
+      <?php $chapterSidebar->renderMobileCommunitiesChapterMenu();  ?>
+
+       <div class="row">
        <?php
       
 
@@ -33,8 +45,6 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
       ?>
 
     </div>
-      
-      <div class="uw-body-copy">
             <?php
                 // // Start the Loop.
                 // while ( have_posts() ) : the_post();
@@ -44,6 +54,8 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
                      * use this in a child theme, then include a file called called content-___.php
                      * (where ___ is the post format) and that will be used instead.
                      */
+                    
+
                     get_template_part( 'content-chapters' );                    
 
                     // If comments are open or we have at least one comment, load up the comment template.
@@ -60,16 +72,11 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
 
     <div class="col-md-4 uw-sidebar">    
     <?php        
-        echo '<nav id="desktop-relative" role="navigation" aria-label="relative">';
-         uwaa_list_pages();
-         echo '</nav>';
-        // echo "fix UW's Menu for Them";
-        
         endwhile;
 
+        
 
-
-        $chapterSidebar = $UWAA->UI->buildChapterSidebar();
+        $chapterSidebar->renderCommunitiesChapterMenu();        
 
         $chapterSidebar->renderLeaderWidget();
 

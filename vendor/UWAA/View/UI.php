@@ -70,7 +70,7 @@ class UI
     
     }
 
-    public function buildChapterSidebar() {
+    public function buildCommunitySidebar() {
         return new ChapterSidebarContent;
     }
 

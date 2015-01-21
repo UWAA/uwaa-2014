@@ -31,7 +31,7 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
-            get_template_part( 'content', 'page' );
+             include(locate_template( 'content-page-communities.php' ));
 
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) {
@@ -53,11 +53,12 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
     
      <div class="col-md-4 uw-sidebar">
     <?php    
+
+        $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
+
+        $communitiesSidebarMenu->renderCommunitiesChapterMenu();  
         
-        // uw_sidebar_menu();
-        echo '<nav id="desktop-relative" role="navigation" aria-label="relative">';
-         uwaa_list_pages();
-         echo '</nav>';
+      
         dynamic_sidebar( 'communities' );
         
 
