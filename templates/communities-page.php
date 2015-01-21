@@ -51,7 +51,10 @@ wp_enqueue_script('chapterAccordionOpener');
     </div>
     <div class="col-md-4 uw-sidebar">
     <?php 
-        uw_sidebar_menu();
+        // uw_sidebar_menu();
+        echo '<nav id="desktop-relative" role="navigation" aria-label="relative">';
+        uwaa_list_pages();
+        echo '</nav>';
         dynamic_sidebar( 'communities_sidebar' ); 
     ?>
     </div>
