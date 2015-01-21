@@ -32,7 +32,7 @@ class Breadcrumbs {
       $archiveType = post_type_archive_title('', false);
       if ($archiveType === "Benefits") {
         $html .=  '<li><a href="'  . home_url('/') .'membership" title="Membership">Membership</a></li><li>';
-      }
+      }     
       $html.= '<li class="current"><span>' . post_type_archive_title('', false) . '</span></li>';
     }
    

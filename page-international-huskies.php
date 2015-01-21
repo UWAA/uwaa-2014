@@ -54,7 +54,10 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
      <div class="col-md-4 uw-sidebar">
     <?php    
         
-        uw_sidebar_menu();
+        // uw_sidebar_menu();
+        echo '<nav id="desktop-relative" role="navigation" aria-label="relative">';
+         uwaa_list_pages();
+         echo '</nav>';
         dynamic_sidebar( 'communities' );
         
 

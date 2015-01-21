@@ -70,10 +70,10 @@ add_filter('upload_mimes', 'cc_mime_types');
     'theme_location'  => \UW_Dropdowns::LOCATION
     ,'container' => false
     // ,'container_class' => 'pagenav'
-    // ,'depth' => -1
+    ,'depth' => 3
     // , 'menu_class' => 'children'
     , 'sub_menu' => true
-    , 'show_parent' => true
+    , 'show_parent' => true    
     , 'container_id'    => ''
     , 'walker'       => $UWAA->SidebarMenuWalker
     , 'items_wrap' => '<ul class="uw-sidebar-menu first-level"><li class="pagenav"><a href=" ' .get_bloginfo('url') . '" title="Home" class="homelink">Home</a><ul id="%1$s" class="%2$s">%3$s</li></ul>' 
@@ -84,6 +84,8 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 // endif;
 
+
+// http://christianvarga.com/how-to-get-submenu-items-from-a-wordpress-menu-based-on-parent-or-sibling/
   // add hook
 add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
 
@@ -104,16 +106,19 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     // find the top level parent
     if ( ! isset( $args->direct_parent ) ) {
       $prev_root_id = $root_id;
-      while ( $prev_root_id != 0 ) {
-        foreach ( $sorted_menu_items as $menu_item ) {
-          if ( $menu_item->ID == $prev_root_id ) {
-            $prev_root_id = $menu_item->menu_item_parent;
-            // don't set the root_id to 0 if we've reached the top of the menu
-            if ( $prev_root_id != 0 ) $root_id = $menu_item->menu_item_parent;
-            break;
-          } 
-        }
-      }
+      // while ( $prev_root_id != 0 ) {
+        $prev_root_id = $menu_item->menu_item_parent;
+        // foreach ( $sorted_menu_items as $menu_item ) {
+        //   if ( $menu_item->ID == $prev_root_id ) {
+        //     $prev_root_id = $menu_item->menu_item_parent;
+        //     // don't set the root_id to 0 if we've reached the top of the menu
+        //     if ( $prev_root_id != 0 ) { 
+        //             $root_id = $menu_item->menu_item_parent;                   
+        //             break;
+        //     }
+        //   } 
+        // }
+      // }
     }
 
     $menu_item_parents = array();

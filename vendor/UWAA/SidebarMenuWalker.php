@@ -4,7 +4,7 @@ namespace UWAA;
 class SidebarMenuWalker extends \Walker_Nav_Menu {
 
     public function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0 ) {
-        // var_dump($args);
+        // var_dump($args->walker->has_children);
         // var_dump($page);
         if ( $depth ) {
             $indent = str_repeat( "\t", $depth );
@@ -13,6 +13,11 @@ class SidebarMenuWalker extends \Walker_Nav_Menu {
         }
 
         $css_class = array( 'pagenav', 'page-item-' . $page->ID );
+
+
+        if ( $args->walker->has_children ) {
+            $css_class[] = 'page_item_has_children';
+        }
 
 
         $is_current = false;
@@ -32,20 +37,7 @@ class SidebarMenuWalker extends \Walker_Nav_Menu {
         //     $css_class[] = 'current_page_parent';
         // }
 
-        /**  
-         * Filter the list of CSS classes to include with each page item in the list.
-         *
-         * @since 2.8.0
-         *
-         * @see wp_list_pages()
-         *
-         * @param array   $css_class    An array of CSS classes to be applied
-         *                             to each list item.
-         * @param WP_Post $page         Page data object.
-         * @param int     $depth        Depth of page, used for padding.
-         * @param array   $args         An array of arguments.
-         * @param int     $current_page ID of the current page.
-         */
+       
         $css_classes = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) ); 
 
         if ( '' === $page->title ) {
