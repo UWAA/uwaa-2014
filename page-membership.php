@@ -16,7 +16,7 @@ if(class_exists('\UWAA\Slideshow\Slideshow')):
 
 $superhero = new \UWAA\Slideshow\Slideshow("membership-superhero");
 
-include(locate_template('content-slideshow.php'));
+include(locate_template('content-membership-slideshow.php'));
 
 endif;
 

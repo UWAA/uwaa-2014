@@ -1123,6 +1123,9 @@ div.map-logo.boston {
 div.map-logo.chicago {
   background-position: 50% -361px;
 }
+div.map-logo.china {
+  background-position: 50% -1002px;
+}
 div.map-logo.dallas-ft-worth {
   background-position: 50% -802px;
 }
@@ -1177,6 +1180,9 @@ div.map-logo.orange-county {
 div.map-logo.palm-springs {
   background-position: 50% -80px;
 }
+div.map-logo.philadelphia {
+  background-position: 42% -722px;
+}
 div.map-logo.phoenix {
   background-position: 50% -42px;
 }
@@ -1189,14 +1195,26 @@ div.map-logo.reno {
 div.map-logo.sacramento {
   background-position: 50% -80px;
 }
+div.map-logo.san-antonio-south-texas {
+  background-position: 42% -802px;
+}
 div.map-logo.san-diego {
   background-position: 50% -80px;
 }
 div.map-logo.singapore {
   background-position: 36% -1204px;
 }
+div.map-logo.south-carolina {
+  background-position: 42% -762px;
+}
 div.map-logo.spokane {
   background-position: 50% -882px;
+}
+div.map-logo.st-louis {
+  background-position: 42% -482px;
+}
+div.map-logo.sun-valley {
+  background-position: 50% -321px;
 }
 div.map-logo.taiwan {
   background-position: 36% -1243px;
@@ -1204,11 +1222,17 @@ div.map-logo.taiwan {
 div.map-logo.thailand {
   background-position: 36% -1284px;
 }
+div.map-logo.tricities {
+  background-position: 42% -922px;
+}
 div.map-logo.tucson {
   background-position: 50% -42px;
 }
 div.map-logo.washington-dc {
   background-position: 50% -160px;
+}
+div.map-logo.wenatchee {
+  background-position: 41% -964px;
 }
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 4px 10px 10px;
