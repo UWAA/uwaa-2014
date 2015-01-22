@@ -68,7 +68,8 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => 'benefits',
-      'orderby' => 'ASC',  
+      'orderby' => 'title',      
+      'order' => 'ASC',  
       'posts_per_page' => -1
       );
 
