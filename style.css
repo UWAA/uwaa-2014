@@ -2105,12 +2105,12 @@ div.map-logo.wenatchee {
 .grid-list-print-icons .button:hover .icon.grid,
 .grid-list-print-icons .button:active .icon.grid,
 .grid-list-print-icons .button.current .icon.grid {
-  background-position: 0 -36px;
+  background-position: 7px -36px;
 }
 .grid-list-print-icons .button:hover .icon.list,
 .grid-list-print-icons .button:active .icon.list,
 .grid-list-print-icons .button.current .icon.list {
-  background-position: -64px -36px;
+  background-position: -58px -36px;
 }
 .grid-list-print-icons .button:hover .icon.print,
 .grid-list-print-icons .button:active .icon.print,
