@@ -73,10 +73,38 @@
 }
 
 
-img.headshot {
-    margin: 5px 24px 8px 0px;
 
+
+
+.wp-caption {
+
+    &.alignleft{
+        margin: 5px 14px 8px 0px;
+    }
+
+    &.alignright{
+        margin: 5px 0 8px 14px;
+    }
+
+    img.headshot, img.inline {
+    // margin: 0;    
 }
+
+    }
+
+.alignleft.headshot, .alignleft.inline {
+    margin: 5px 24px 8px 0px;
+}
+
+
+
+.alignright.headshot, .alignright.headshot {
+     margin: 5px 0 8px 24px;
+}
+
+
+
+
 
 hr {
     border-top: 1px solid #CCCCCC;

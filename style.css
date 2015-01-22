@@ -350,6 +350,7 @@
 }
 #isotope-search form input {
   height: 44px;
+  font-size: 17px;
 }
 #isotope-search input.search {
   height: 42px;
@@ -382,9 +383,6 @@ h6.intro-head {
 }
 .single-tours .uw-body-copy .price {
   margin-bottom: 36px;
-}
-.single-tours .uw-body-copy strong {
-  color: #b7a57a;
 }
 .uw-body-copy h4,
 .uw-body-copy h3 {
@@ -425,6 +423,13 @@ h6.intro-head {
   font-size: 1em;
   line-height: 1.1;
   padding-top: 0.471em;
+}
+.wp-caption-text {
+  font-size: 13px;
+  line-height: 1.3;
+  margin-top: -5px;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 .uwaa-btn {
   width: auto;
@@ -2066,12 +2071,12 @@ div.map-logo.wenatchee {
 }
 .grid-list-print-icons .button {
   display: inline-block;
-  width: 60px;
+  width: 70px;
   height: 60px;
   margin: 0 5px;
   text-transform: uppercase;
   letter-spacing: 1.5 px;
-  font-size: .88em;
+  font-size: .75em;
   font-weight: 500;
   text-align: center;
   cursor: pointer;
@@ -2079,14 +2084,14 @@ div.map-logo.wenatchee {
 .grid-list-print-icons .button .icon {
   margin: 0 auto;
   height: 34px;
-  width: 34px;
+  width: 44px;
   background: url(assets/icons/Grid_List_Print_Sprite.png) no-repeat transparent;
 }
 .grid-list-print-icons .button .icon.grid {
-  background-position: 0 0;
+  background-position: 7px 0;
 }
 .grid-list-print-icons .button .icon.list {
-  background-position: -64px 0;
+  background-position: -58px 0;
 }
 .grid-list-print-icons .button .icon.print {
   background-position: -122px 0;
@@ -2188,6 +2193,9 @@ div.map-logo.wenatchee {
 }
 .page-member-account .panel .chevron:after {
   margin-top: -30px;
+}
+.page-member-account .panel.open .chevron:after {
+  margin-top: -15px;
 }
 .page-member-account .accordion {
   margin-top: 35px;
@@ -2557,8 +2565,19 @@ a#memberCheckerLogout {
 .leaflet-popup-content {
   font-family: 'Open Sans';
 }
-img.headshot {
+.wp-caption.alignleft {
+  margin: 5px 14px 8px 0px;
+}
+.wp-caption.alignright {
+  margin: 5px 0 8px 14px;
+}
+.alignleft.headshot,
+.alignleft.inline {
   margin: 5px 24px 8px 0px;
+}
+.alignright.headshot,
+.alignright.headshot {
+  margin: 5px 0 8px 24px;
 }
 hr {
   border-top: 1px solid #CCCCCC;

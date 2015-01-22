@@ -68,7 +68,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => 'benefits',
-      'orderby' => 'rand',  //@TODO  Make this order by metadata date
+      'orderby' => 'ASC',  
       'posts_per_page' => -1
       );
 

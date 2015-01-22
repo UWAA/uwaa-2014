@@ -51,14 +51,14 @@ class ChapterSidebarContent
      public function renderSocialWidget()
     {
         if ($this->chapterFacebook OR $this->chapterLinkedin) {
-        $widget = '<div id="chapter-social-widget" class="widget widget_text"><h2 class="widgettitle">Ways To Connect</h2>';        
+        $widget = '<div id="chapter-social-widget" class="widget widget_text"><h2 class="widgettitle">Ways To Connect</h2><div class="textwidget">';        
             if ($this->chapterFacebook) {
             $widget .= '<a class="facebook" href="'. $this->chapterFacebook . '">' . ($this->chapterFacebookName ? $this->chapterFacebookName : '') . ' Facebook</a>';
             } 
             if ($this->chapterLinkedin) {
                 $widget .= '<a class="linkedIn" href="' . $this->chapterLinkedin . '">' . ($this->chapterLinkedInName ? $this->chapterLinkedInName : '') . ' LinkedIn</a>';
             }
-        $widget .= '</div>';
+        $widget .= '</div></div>';
 
         echo $widget;
 

@@ -68,7 +68,7 @@ endif;
     <?php    
          include(locate_template( 'partials/join-renew.php' )); 
         uw_sidebar_menu();
-        dynamic_sidebar( 'membership' );
+        
         
 
     ?>
