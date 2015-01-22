@@ -52,6 +52,7 @@ get_header();
     </div>
 
     <div class="col-md-4 uw-sidebar">
+    <?php new \UWAA\View\Pagination('benefits', get_the_ID()); ?>
     <div class="login-card">
       <?php include(locate_template( 'partials/login-form.php' )); ?>
     </div>

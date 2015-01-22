@@ -44,6 +44,9 @@
 
     <div class="col-md-4 uw-sidebar">
     <?php 
+
+    new \UWAA\View\Pagination('tours', get_the_ID());
+
     $mapURL = get_post_meta(get_the_id(), 'mb_operator_map', true);    
      if ($mapURL) {
       echo '<div class="widget">';

@@ -60,9 +60,15 @@ else {
 
     </div>
     
-    <?php get_sidebar()
+    <div class="col-md-4 uw-sidebar">
+    <?php 
+
+    new \UWAA\View\Pagination('post', get_the_ID());
     
+    the_widget("UWAA\Widgets\SocialSidebar");
+        
     ?>
+    </div>
 
   </div>
 

@@ -50,20 +50,20 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 
   }
 
-  // private function getListOfTerms()
-  //   {
+  private function getListOfTerms()
+    {
 
-  //       $terms = get_the_terms(get_the_id(), 'destinations');
-  //       $termArray = array(); 
+        $terms = get_the_terms(get_the_id(), 'destinations');
+        $termArray = array(); 
         
-  //       if ( $terms && !is_wp_error( $terms ) ) :
-  //       	foreach ( $terms as $term ) {
-  //               $termArray[] = $term->slug;
-  //               }               
-  //       endif;
+        if ( $terms && !is_wp_error( $terms ) ) :
+        	foreach ( $terms as $term ) {
+                $termArray[] = $term->slug;
+                }               
+        endif;
 
-  //    	return $termArray;
-  //    }
+     	return $termArray;
+     }
 
   private function setArguments()
   {
@@ -73,10 +73,12 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
       'order' => 'ASC',
       'meta_key' => 'mb_start_date',
       'meta_query' => array(
-        'key' => 'mb_start_date',
-        'type' => 'DATE',       
-      ),
-      'posts_per_page' => -1
+          'key' => 'mb_start_date',
+          'type' => 'DATE',
+          'value' => date("Y-m-d"), 
+          'compare' => '>=', 
+          ),      
+      'posts_per_page' => -1,
       );
 
     return $args;

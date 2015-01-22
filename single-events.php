@@ -86,7 +86,7 @@ $finalSlug = $communitySlug->isCommunitiesContent();
                         comments_template('/comments.php');
                     }
 
-            new \UWAA\View\Pagination('events', get_the_ID());
+            
             ?>
       
       </div>
@@ -95,7 +95,7 @@ $finalSlug = $communitySlug->isCommunitiesContent();
 
     <div class="col-md-4 uw-sidebar">
     <?php 
-        dynamic_sidebar( 'events' );
+        new \UWAA\View\Pagination('events', get_the_ID());
         the_widget("UWAA\Widgets\SidebarPullQuote");
         the_widget("UWAA\Widgets\SocialSidebar"); 
         endwhile;
