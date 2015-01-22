@@ -86,9 +86,9 @@ $finalSlug = $communitySlug->isCommunitiesContent();
                         comments_template('/comments.php');
                     }
 
-                
+            new \UWAA\View\Pagination('events', get_the_ID());
             ?>
-
+      
       </div>
 
     </div>
