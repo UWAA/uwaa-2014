@@ -265,7 +265,7 @@
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 15px;
 }
 .post-thumbnail-slide .copy h4 {
@@ -301,6 +301,9 @@
 .uw-sidebar .post-thumbnail-slide .copy {
   height: auto;
 }
+.post-type-archive-benefits .copy {
+  height: 220px;
+}
 .list .post-thumbnail-slide {
   width: 100%;
   border-bottom: 1px solid #b7a57a;
@@ -317,6 +320,9 @@
 .list .copy {
   box-shadow: none;
   height: auto;
+}
+.list .copy:after {
+  display: none;
 }
 .filter-row {
   margin-bottom: 20px;
@@ -373,9 +379,6 @@
 #isotope-search input.search {
   height: 42px;
   top: 1px;
-}
-.post-type-archive-benefits .copy {
-  height: 220px;
 }
 h3 {
   font-size: 1.5em;
