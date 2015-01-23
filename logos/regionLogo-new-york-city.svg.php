@@ -101,7 +101,7 @@
 	</g>
 </g>
 <g id="Layer_2">
-	<g>
+	<g id="Region">
 		<line fill="none" stroke="#85754D" stroke-width="3.5" stroke-miterlimit="10" x1="86.693" y1="0.453" x2="68.058" y2="69.999"/>
 		<g>
 			<g>

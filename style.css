@@ -756,8 +756,10 @@ a.uwaa-btn:active {
   fill: #ffffff;
 }
 .uwaa-chapter-header .chapter-logo svg #Region path,
-.uwaa-chapter-header .chapter-logo svg rect {
+.uwaa-chapter-header .chapter-logo svg rect,
+.uwaa-chapter-header .chapter-logo svg line {
   fill: #b7a57a;
+  stroke: #b7a57a;
 }
 .single-chapters ul.uw-sidebar-menu,
 .single-chapters ul.uw-mobile-menu {
