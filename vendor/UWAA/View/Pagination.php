@@ -27,8 +27,7 @@ class Pagination {
         
         $renderedPaginationControls = '<div class="pagination-buttons">';
 
-
-
+        $renderedPaginationControls .= $this->createTitle();
 
         if (!empty($this->previousID)){
             $renderedPaginationControls .= $this->createButton($this->previousID, 'Prev');
@@ -50,10 +49,10 @@ class Pagination {
 
     private function createTitle() {
 
-        $title = ($this->postType == 'post' ? 'Stories' : $this->postType);
+        $title = esc_html(($this->postType == 'post' ? 'Stories' : $this->postType));
 
         $content = <<<CONTENT
-            <div class="pagination-title">See More $title</div>
+            <div class="pagination-title">See More<br />$title</div>
 CONTENT;
 
         return $content;
@@ -65,13 +64,14 @@ CONTENT;
             
         $title = get_the_title($ID);
         $link = get_permalink($ID);
+        $class = strtolower($text);
 
         $content = <<<CONTENT
-        <a href="$link" title="$title">
-            <div class="button $text-button">
-                <div class="icon $text"></div>
+            <div class="button $class-button">
+            <a href="$link" title="$title">
+                <div class="icon $class"></div>
                 <div class="label">$text</div>
-            </div></a>
+            </a></div>
 CONTENT;
 
 
@@ -83,12 +83,13 @@ CONTENT;
         $link = $this->getOverviewButtonDestination();
 
         $content = <<<CONTENT
-        <a href="$link">        
-            <div class="button grid-button">            
+        <div class="button grid-button">            
+            <a href="$link"> 
                 <div class="icon grid"></div>
                 <div class="label">Overview</div>            
-            </div>
-        </a>
+            </a>
+        </div>
+        
 CONTENT;
 
     return $content;

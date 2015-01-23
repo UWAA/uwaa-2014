@@ -56,6 +56,8 @@
         dynamic_sidebar( 'travel_sidebar' );
        
         the_widget("UWAA\Widgets\SocialSidebar");
+
+        get_template_part('partials/forms', 'travel-newsletter');
         endwhile;
     ?>
     </div>
