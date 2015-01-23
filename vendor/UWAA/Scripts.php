@@ -110,7 +110,7 @@ class Scripts
         'membershipStoreInit' => array (
         'id'      => 'membershipStoreInit',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/membershipStoreInit' . $this->min_script() . '.js',
-        'deps'    => array('backbone', 'handlebars' ,'jquery-effects-fade'),
+        'deps'    => array('backbone', 'jquery-effects-fade'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false

@@ -1,0 +1,71 @@
+.option-set {
+    display: none;
+}
+
+#store-breadcrumbs {
+    display: none;
+
+    #reset{
+        cursor: pointer;
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        &:before {
+            background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
+            content: "";
+            opacity: .4;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;            
+            width: 14px;
+            height: 21px;            
+            -o-transform: rotate(270deg);
+            -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+            transform: rotate(270deg);            
+        }
+    }
+}
+
+.option-row{
+    .make-row();
+    display: none;
+
+    &:first-child{
+        display: block;
+    }
+
+
+    .option-box{
+        .make-sm-column(3);
+        background-color: @purple;        
+        height: 250px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px 15px;
+        border: 10px solid @white;
+        cursor: pointer;
+
+        h2, h3 {
+            margin:0;
+            padding: 0 30px;
+            color: @white;
+        }
+
+        &:hover, &:active{
+            background-color: @gray;
+            text-decoration: none;
+            -o-transition: 0.25s;
+            -webkit-transition: 0.25s;
+            transition: 0.25s;            
+            
+            h2,h3{
+                color: @purple;
+
+
+            }
+        }
+    }    
+}

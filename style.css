@@ -89,6 +89,8 @@
 #message-row .content:after,
 #uwaa-footer:before,
 #uwaa-footer:after,
+.option-row:before,
+.option-row:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -115,6 +117,7 @@
 #message-row:after,
 #message-row .content:after,
 #uwaa-footer:after,
+.option-row:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -160,6 +163,8 @@
 #message-row .content:after,
 #uwaa-footer:before,
 #uwaa-footer:after,
+.option-row:before,
+.option-row:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -186,6 +191,7 @@
 #message-row:after,
 #message-row .content:after,
 #uwaa-footer:after,
+.option-row:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -2639,6 +2645,117 @@ a#memberCheckerLogout {
 .page-membership .uw-sidebar-menu,
 .page-template-membership-page .uw-sidebar-menu {
   margin-top: 0;
+}
+.option-set {
+  display: none;
+}
+#store-breadcrumbs {
+  display: none;
+}
+#store-breadcrumbs #reset {
+  cursor: pointer;
+}
+#store-breadcrumbs #reset:hover {
+  text-decoration: underline;
+}
+#store-breadcrumbs #reset:before {
+  background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
+  content: "";
+  opacity: .4;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 14px;
+  height: 21px;
+  -o-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.option-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: none;
+}
+.option-row:before,
+.option-row:after {
+  content: " ";
+  display: table;
+}
+.option-row:after {
+  clear: both;
+}
+.option-row:before,
+.option-row:after {
+  content: " ";
+  display: table;
+}
+.option-row:after {
+  clear: both;
+}
+.option-row:before,
+.option-row:after {
+  content: " ";
+  display: table;
+}
+.option-row:after {
+  clear: both;
+}
+.option-row:before,
+.option-row:after {
+  content: " ";
+  display: table;
+}
+.option-row:after {
+  clear: both;
+}
+.option-row:first-child {
+  display: block;
+}
+.option-row .option-box {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #4b2e83;
+  height: 250px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 15px;
+  border: 10px solid #ffffff;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .option-row .option-box {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .option-row .option-box {
+    float: left;
+    width: 25%;
+  }
+}
+.option-row .option-box h2,
+.option-row .option-box h3 {
+  margin: 0;
+  padding: 0 30px;
+  color: #ffffff;
+}
+.option-row .option-box:hover,
+.option-row .option-box:active {
+  background-color: #d9d9d9;
+  text-decoration: none;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.option-row .option-box:hover h2,
+.option-row .option-box:active h2,
+.option-row .option-box:hover h3,
+.option-row .option-box:active h3 {
+  color: #4b2e83;
 }
 .uwaa-form label {
   position: absolute;
