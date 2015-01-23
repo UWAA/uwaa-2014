@@ -25,7 +25,7 @@ class Pagination {
     public function renderPaginationControls()
     {
         
-        $renderedPaginationControls = '<div class="pagination-buttons">';
+        $renderedPaginationControls = '<div class="pagination-wrapper"><div class="pagination-buttons">';
 
         $renderedPaginationControls .= $this->createTitle();
 
@@ -40,7 +40,7 @@ class Pagination {
             $renderedPaginationControls .= $this->createButton($this->nextID, 'Next');
         }
 
-        $renderedPaginationControls .= '</div>';
+        $renderedPaginationControls .= '</div></div>';
 
         echo $renderedPaginationControls;
 

@@ -2529,6 +2529,7 @@ a#memberCheckerLogout {
 #join-renew-buttons .uwaa-btn-wrapper {
   margin-right: 0;
   text-align: center;
+  margin-bottom: 0;
 }
 #join-renew-buttons .uwaa-btn-wrapper:last-child {
   margin-left: 23px;
@@ -2590,27 +2591,54 @@ a#memberCheckerLogout {
   outline: none !important;
   background-color: #f1eee4;
 }
+.pagination-wrapper {
+  position: relative;
+  z-index: 0;
+}
 .pagination-buttons {
   width: 302px;
   background-color: #dedede;
+  display: table;
+  margin-left: 40px;
+  padding: 15px 23px 10px;
+}
+.pagination-buttons:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -ms-transform: skew(20deg);
+  -o-transform: skew(20deg);
+  transform: skew(20deg);
+  background-color: #ffffff;
+  height: 85px;
+  width: 86px;
+  right: -53px;
 }
 .pagination-buttons .pagination-title {
-  display: inline-block;
+  display: table-cell;
   text-transform: uppercase;
   font-size: 14px;
   text-align: right;
+  line-height: 1;
+  padding-right: 10px;
+  width: 55px;
+  vertical-align: middle;
 }
 .pagination-buttons .button {
-  display: inline-block;
-  width: 70px;
+  display: table-cell;
+  width: 75px;
   height: 60px;
-  margin: 0 5px;
+  margin: 0 10px 0 0;
   text-transform: uppercase;
   letter-spacing: 1.5 px;
   font-size: .75em;
   font-weight: 500;
   text-align: center;
   cursor: pointer;
+  vertical-align: middle;
 }
 .pagination-buttons .button .icon {
   margin: 0 auto;
@@ -2618,35 +2646,34 @@ a#memberCheckerLogout {
   width: 44px;
   background: url(assets/icons/Prev_Overview_Next_Icons.png) no-repeat transparent;
 }
-.pagination-buttons .button .icon.grid {
+.pagination-buttons .button .icon.prev {
   background-position: 7px 0;
 }
-.pagination-buttons .button .icon.next {
-  background-position: -58px 0;
+.pagination-buttons .button .icon.grid {
+  background-position: -32px 0;
 }
-.pagination-buttons .button .icon.prev {
-  background-position: -122px 0;
-  width: 36px;
+.pagination-buttons .button .icon.next {
+  background-position: -74px 0;
 }
 .pagination-buttons .button:hover,
 .pagination-buttons .button:active,
 .pagination-buttons .button.current {
   color: #4b2e83;
 }
+.pagination-buttons .button:hover .icon.prev,
+.pagination-buttons .button:active .icon.prev,
+.pagination-buttons .button.current .icon.prev {
+  background-position: 7px -40px;
+}
 .pagination-buttons .button:hover .icon.grid,
 .pagination-buttons .button:active .icon.grid,
 .pagination-buttons .button.current .icon.grid {
-  background-position: 7px -36px;
+  background-position: -32px -40px;
 }
 .pagination-buttons .button:hover .icon.next,
 .pagination-buttons .button:active .icon.next,
 .pagination-buttons .button.current .icon.next {
-  background-position: -58px -36px;
-}
-.pagination-buttons .button:hover .icon.prev,
-.pagination-buttons .button:active .icon.prev,
-.pagination-buttons .button.current .icon.prev {
-  background-position: -122px -36px;
+  background-position: -74px -40px;
 }
 #map {
   position: absolute;
