@@ -24,7 +24,7 @@ $(document).ready(function() {
         $(this).parents(".option-row").hide(function() {
             $(this)
                 .siblings("#"+targetedOptions+"-options")
-                .fadeIn(300)
+                .fadeIn(600)
                 .data('showing', 'TRUE');
             showBreadcrumbs(selectedType);
             });

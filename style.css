@@ -2646,6 +2646,9 @@ a#memberCheckerLogout {
 .page-template-membership-page .uw-sidebar-menu {
   margin-top: 0;
 }
+#store {
+  min-height: 370px;
+}
 .option-set {
   display: none;
 }

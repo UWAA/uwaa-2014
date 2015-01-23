@@ -3,6 +3,8 @@ wp_enqueue_script('membershipStoreInit');
 
 ?>
 
+    <div id="store">
+    
     <div class="row">
         <div class="col-sm-3 col-sm-offset-9">            
             <div class="uwaa-btn-wrapper"><a class="uwaa-btn uwaa-btn-join btn-slant-right" href="?join">Join</a></div>
@@ -22,7 +24,7 @@ wp_enqueue_script('membershipStoreInit');
     
 
     
-     <div id="store">
+     
 
         
 
