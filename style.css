@@ -484,9 +484,6 @@ h6.intro-head {
   z-index: 0;
   margin: 6px 40px 18px 0;
 }
-a.uwaa-btn {
-  height: 44px;
-}
 a.uwaa-btn:hover,
 a.uwaa-btn:active {
   border-bottom: none;
