@@ -249,6 +249,24 @@
   padding: 6px 10px 10px 10px;
   box-shadow: -1px 2px 2px #d9d9d9, 1px 2px 2px #d9d9d9;
   height: 255px;
+  position: relative;
+}
+.post-thumbnail-slide .copy:after {
+  background: url(assets/uwaa-sprite.svg) no-repeat -272px -493px;
+  content: "";
+  opacity: .4;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 5px;
+  width: 14px;
+  height: 21px;
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
 }
 .post-thumbnail-slide .copy h4 {
   margin: 0;
@@ -1959,6 +1977,18 @@ div.map-logo.wenatchee {
     width: 33.33333333%;
   }
 }
+@media (min-width: 992px) {
+  #uwaa-footer .social-icons {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  #uwaa-footer .social-icons {
+    float: left;
+    width: 25%;
+  }
+}
 @media screen and (max-width: 768px) {
   #uwaa-footer .social-icons {
     padding-top: 1.8em;
@@ -1990,13 +2020,25 @@ div.map-logo.wenatchee {
 @media (min-width: 768px) {
   #uwaa-footer .contact-links {
     float: left;
-    width: 41.66666667%;
+    width: 33.33333333%;
   }
 }
 @media (min-width: 768px) {
   #uwaa-footer .contact-links {
     float: left;
-    width: 41.66666667%;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  #uwaa-footer .contact-links {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  #uwaa-footer .contact-links {
+    float: left;
+    width: 50%;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -2049,13 +2091,45 @@ div.map-logo.wenatchee {
 @media (min-width: 768px) {
   #uwaa-footer .uwaa-logo {
     float: left;
-    width: 25%;
+    width: 16.66666667%;
   }
 }
 @media (min-width: 768px) {
   #uwaa-footer .uwaa-logo {
     float: left;
+    width: 16.66666667%;
+  }
+}
+@media (min-width: 768px) {
+  #uwaa-footer .uwaa-logo {
+    margin-left: 16.66666667%;
+  }
+}
+@media (min-width: 768px) {
+  #uwaa-footer .uwaa-logo {
+    margin-left: 16.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  #uwaa-footer .uwaa-logo {
+    float: left;
     width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  #uwaa-footer .uwaa-logo {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  #uwaa-footer .uwaa-logo {
+    margin-left: 0%;
+  }
+}
+@media (min-width: 992px) {
+  #uwaa-footer .uwaa-logo {
+    margin-left: 0%;
   }
 }
 @media screen and (max-width: 768px) {
