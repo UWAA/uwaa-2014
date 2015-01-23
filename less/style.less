@@ -130,6 +130,8 @@ hr {
 
 .widget {
     padding: 15px 0 0 40px;
+
+
 }
 
 
@@ -147,4 +149,20 @@ white-space: nowrap;
     .make-row();
     padding:0;
     margin:0;
+}
+
+ @media screen and (max-width:992px){
+        
+        .widget{
+            padding-left: 0;    
+        }
+
+        .pagination-buttons
+        {
+            margin-left: 0;
+            &:before{
+                right: -14px;
+            }
+        }
+        
 }

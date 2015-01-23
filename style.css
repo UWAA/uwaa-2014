@@ -2983,3 +2983,14 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
 .mobile-menu-row:after {
   clear: both;
 }
+@media screen and (max-width: 992px) {
+  .widget {
+    padding-left: 0;
+  }
+  .pagination-buttons {
+    margin-left: 0;
+  }
+  .pagination-buttons:before {
+    right: -14px;
+  }
+}
