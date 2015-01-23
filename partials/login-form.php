@@ -11,12 +11,16 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
 
         } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
 
+            echo '<div class="widget">';
+            
             $UWAA->Memberchecker->renderCard();
 
             echo '<form id="memberlogout" method="POST">
                         <input type="hidden" name="action" value="memberLogout">                                      
                       </form>
                     <a id="memberCheckerLogout">Logout</a>';
+
+            echo '</div>';
         } else {            
         ?>
 

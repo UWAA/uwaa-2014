@@ -2611,7 +2611,7 @@ ul.uwaa-social li a:focus.email {
 }
 a#memberCheckerLogout {
   float: right;
-  margin-right: 60px;
+  margin-right: 20px;
   cursor: pointer;
 }
 #join-renew-buttons {
