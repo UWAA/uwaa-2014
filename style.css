@@ -2594,6 +2594,7 @@ a#memberCheckerLogout {
 .pagination-wrapper {
   position: relative;
   z-index: 0;
+  width: 359px;
 }
 .pagination-buttons {
   width: 302px;
@@ -2601,6 +2602,7 @@ a#memberCheckerLogout {
   display: table;
   margin-left: 40px;
   padding: 15px 23px 10px;
+  margin-bottom: 15px;
 }
 .pagination-buttons:before {
   content: "";
@@ -2734,6 +2736,7 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
 }
 .uwaa-home-branding-row .uw-breadcrumbs {
   padding: 20px 13px 0 20px;
+  white-space: nowrap;
 }
 .mobile-menu-row {
   margin-left: -15px;
