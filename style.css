@@ -576,9 +576,15 @@ a.uwaa-btn:active {
   /* Extra Small Devices, Phones */
   /* Custom, iPhone Retina */
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 993px) {
   .featured-post.five-column {
     width: 20%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .featured-post.five-column {
+    width: 244px;
+    margin-top: 15px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -590,6 +596,7 @@ a.uwaa-btn:active {
 @media only screen and (max-width: 480px) {
   .featured-post.five-column {
     width: 50%;
+    margin-top: 15px;
   }
 }
 @media only screen and (max-width: 320px) {
