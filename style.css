@@ -2221,22 +2221,22 @@ div.map-logo.wenatchee {
 }
 .grid-list-print-icons .button:hover,
 .grid-list-print-icons .button:active,
-.grid-list-print-icons .button.current {
+.grid-list-print-icons .button.is-checked {
   color: #4b2e83;
 }
 .grid-list-print-icons .button:hover .icon.grid,
 .grid-list-print-icons .button:active .icon.grid,
-.grid-list-print-icons .button.current .icon.grid {
+.grid-list-print-icons .button.is-checked .icon.grid {
   background-position: 7px -36px;
 }
 .grid-list-print-icons .button:hover .icon.list,
 .grid-list-print-icons .button:active .icon.list,
-.grid-list-print-icons .button.current .icon.list {
+.grid-list-print-icons .button.is-checked .icon.list {
   background-position: -58px -36px;
 }
 .grid-list-print-icons .button:hover .icon.print,
 .grid-list-print-icons .button:active .icon.print,
-.grid-list-print-icons .button.current .icon.print {
+.grid-list-print-icons .button.is-checked .icon.print {
   background-position: -122px -36px;
 }
 @media print {

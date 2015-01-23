@@ -33,11 +33,13 @@ Isotope = Backbone.View.extend({
   },
 
   toggleButtonClass: function(target) {
-    // this.$('.button-group').find('.is-checked').removeClass('is-checked');
     target.siblings().removeClass('is-checked');
     target.addClass('is-checked');
+  },
 
-
+  toggleParentButtonClass: function(target) {
+    target.parent().siblings().removeClass('is-checked');
+    target.parent().addClass('is-checked');
   },
 
   filterBySearch: _.debounce(function() {
@@ -50,20 +52,26 @@ Isotope = Backbone.View.extend({
     }, 200
     ),
 
-  listView: function() {
+  listView: function(e) {
+    var $target = $(e.target);    
     this.$('.isotope')
     .addClass('list').removeClass('tile')
     .isotope({
     layoutMode: 'vertical'
     });
+    this.toggleButtonClass($target);
+    this.toggleParentButtonClass($target);
   },
 
-  tileView: function() {
+  tileView: function(e) {
+    var $target = $(e.target);
     this.$('.isotope')
     .addClass('tile').removeClass('list')
     .isotope({
-    layoutMode: 'fitRows'
-    });    
+    layoutMode: 'fitRows'    
+    });
+    this.toggleButtonClass($target);
+    this.toggleParentButtonClass($target);
   },
 
   print: function() {

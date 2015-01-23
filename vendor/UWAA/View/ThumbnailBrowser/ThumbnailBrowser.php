@@ -137,7 +137,7 @@ TOOLBAR;
     {
       $template = '
         <div class="grid-list-print-icons hidden-sm hidden-xs">
-          <div class="button grid-button">
+          <div class="button grid-button is-checked">
             <div class="icon grid"></div>
             <div class="label">Overview</div>
           </div>
