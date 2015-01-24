@@ -8,13 +8,18 @@
     width: 359px;
 }
 
-.pagination-buttons{    
+.pagination-buttons{
+    margin-top: -40px;    
     width: 302px;
-    background-color: #dedede;
+    background-color: #e3e3e3;
     display: table;
     margin-left: 40px;
-    padding: 15px 23px 10px;
+    padding: 10px 23px 5px;
     margin-bottom: 15px;
+
+    a{
+        color: @janegray;
+    }
     
 
     &:before{
@@ -23,11 +28,11 @@
                 position: absolute;
                 z-index: 1;
                 top: 0;    
-                -webkit-transform: skew(20deg);    
-                -moz-transform: skew(20deg);
-                -ms-transform: skew(20deg);
-                -o-transform: skew(20deg);
-                transform: skew(20deg);
+                -webkit-transform: skew(-20deg);    
+                -moz-transform: skew(-20deg);
+                -ms-transform: skew(-20deg);
+                -o-transform: skew(-20deg);
+                transform: skew(-20deg);
                 background-color: @white;
                 height: 85px;
                 width: 86px;
@@ -45,9 +50,9 @@
         text-align: right;
         line-height: 1;
         padding-right:10px;
-        // padding:0;
+        
         width: 55px;
-        vertical-align: middle;
+        
 
 
           
@@ -75,7 +80,7 @@
             // border: 1px solid black;
             margin: 0 auto;
             height: 34px;
-            width: 44px;
+            width: 43px;
             background: url(assets/icons/Prev_Overview_Next_Icons.png) no-repeat transparent;
 
 
@@ -84,7 +89,7 @@
             &.grid { background-position: -32px 0;
                     // padding-left: 10px;
              }
-            &.next { background-position: -74px 0 }
+            &.next { background-position: -70px 0 }
 
 
 
@@ -97,7 +102,7 @@
             .icon{
                &.prev {background-position: 7px -40px}
                &.grid { background-position: -32px -40px }
-               &.next { background-position: -74px -40px }
+               &.next { background-position: -70px -40px }
            }
        }
 

@@ -250,6 +250,9 @@
   margin-bottom: 10px;
   display: block;
 }
+.post-thumbnail-slide:hover {
+  opacity: .8;
+}
 .post-thumbnail-slide .copy {
   color: #5a5a5a;
   padding: 6px 10px 10px 10px;
@@ -258,9 +261,9 @@
   position: relative;
 }
 .post-thumbnail-slide .copy:after {
-  background: url(assets/uwaa-sprite.svg) no-repeat -272px -493px;
+  background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
-  opacity: .4;
+  opacity: .6;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 5px;
@@ -518,6 +521,9 @@ a.uwaa-btn:active {
 .gallery-item {
   margin-bottom: 0px;
 }
+.featured-post:hover {
+  opacity: .8;
+}
 .featured-post .copy {
   color: #5a5a5a;
   padding: 0 0 10px 10px;
@@ -528,7 +534,7 @@ a.uwaa-btn:active {
 .featured-post .copy:after {
   background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
-  opacity: .4;
+  opacity: .6;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 5px;
@@ -2654,11 +2660,9 @@ a#memberCheckerLogout {
 .option-set {
   display: none;
 }
-#store-breadcrumbs {
-  display: none;
-}
 #store-breadcrumbs #reset {
   cursor: pointer;
+  display: none;
 }
 #store-breadcrumbs #reset:hover {
   text-decoration: underline;
@@ -2806,23 +2810,27 @@ a#memberCheckerLogout {
   width: 359px;
 }
 .pagination-buttons {
+  margin-top: -40px;
   width: 302px;
-  background-color: #dedede;
+  background-color: #e3e3e3;
   display: table;
   margin-left: 40px;
-  padding: 15px 23px 10px;
+  padding: 10px 23px 5px;
   margin-bottom: 15px;
+}
+.pagination-buttons a {
+  color: #3d3d3d;
 }
 .pagination-buttons:before {
   content: "";
   position: absolute;
   z-index: 1;
   top: 0;
-  -webkit-transform: skew(20deg);
-  -moz-transform: skew(20deg);
-  -ms-transform: skew(20deg);
-  -o-transform: skew(20deg);
-  transform: skew(20deg);
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  transform: skew(-20deg);
   background-color: #ffffff;
   height: 85px;
   width: 86px;
@@ -2836,7 +2844,6 @@ a#memberCheckerLogout {
   line-height: 1;
   padding-right: 10px;
   width: 55px;
-  vertical-align: middle;
 }
 .pagination-buttons .button {
   display: table-cell;
@@ -2854,7 +2861,7 @@ a#memberCheckerLogout {
 .pagination-buttons .button .icon {
   margin: 0 auto;
   height: 34px;
-  width: 44px;
+  width: 43px;
   background: url(assets/icons/Prev_Overview_Next_Icons.png) no-repeat transparent;
 }
 .pagination-buttons .button .icon.prev {
@@ -2864,7 +2871,7 @@ a#memberCheckerLogout {
   background-position: -32px 0;
 }
 .pagination-buttons .button .icon.next {
-  background-position: -74px 0;
+  background-position: -70px 0;
 }
 .pagination-buttons .button:hover,
 .pagination-buttons .button:active,
@@ -2884,7 +2891,7 @@ a#memberCheckerLogout {
 .pagination-buttons .button:hover .icon.next,
 .pagination-buttons .button:active .icon.next,
 .pagination-buttons .button.current .icon.next {
-  background-position: -74px -40px;
+  background-position: -70px -40px;
 }
 #map {
   position: absolute;

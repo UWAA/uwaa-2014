@@ -38,7 +38,8 @@ $(document).ready(function() {
     
     function reset() {
         $store.find('.option-row:visible').hide();
-        $breadcrumbs.hide();
+        $breadcrumbs.find('#reset').hide();
+        $breadcrumbs.find('span').html('Please select a membership option:');
         console.log('resetting');
         init();      
       
@@ -71,8 +72,8 @@ $(document).ready(function() {
     {
         var type = rawMembershiptype.charAt(0).toUpperCase() + rawMembershiptype.slice(1);
         console.log(type);
-        $breadcrumbs.show();
-        $breadcrumbs.find('span').html(''+type + ' Membership');
+        $breadcrumbs.find('#reset').show();
+        $breadcrumbs.find('span').html('You Chose: '+type + ' Membership');
     }
 
 

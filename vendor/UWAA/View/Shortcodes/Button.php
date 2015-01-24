@@ -49,8 +49,13 @@ class Button
             array_push($classes, 'btn-sm');
         }
 
+        $target = '';
+        if (property_exists($attributes, 'new')){
+            $target = "target=\"_blank\"";
+        }
+
         $class_string = implode($classes, ' ');        
-        return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s">%s</a></div>', $class_string, $color, $url, $content);
+        return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s" %s>%s</a></div>', $class_string, $color, $url, $target, $content);
     }
 }
 

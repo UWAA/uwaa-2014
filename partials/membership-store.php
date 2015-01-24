@@ -4,7 +4,7 @@ wp_enqueue_script('membershipStoreInit');
 ?>
 
     <div id="store">
-    
+
     <div class="row">
         <div class="col-sm-3 col-sm-offset-9">            
             <div class="uwaa-btn-wrapper"><a class="uwaa-btn uwaa-btn-join btn-slant-right" href="?join">Join</a></div>
@@ -14,7 +14,7 @@ wp_enqueue_script('membershipStoreInit');
 
     <div class="row" id="store-breadcrumbs">
         <div class="col-sm-4">
-            <p>You Chose:  <span></span></p>
+            <span>Please select a membership option:</span>
         </div>
         <div class="col-sm-2 col-sm-offset-1">            
             <p id="reset">Go Back</p>

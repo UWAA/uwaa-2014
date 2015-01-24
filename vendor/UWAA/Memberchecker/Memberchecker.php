@@ -32,7 +32,7 @@ class Memberchecker {
             'cookie_httponly'=> 1,
             'use_strict_mode'=> 1,
             'use_only_cookies'=> 1,
-            'cookie_secure'=> 1  //Need to swap once cert is ready.
+            'cookie_secure'=> 1  
             )
         );
 
@@ -117,14 +117,13 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
         'message' =>'There is a problem with our Member Login service.  Please contact the UWAA For assistance'
     );
     echo json_encode($payload);    
-    exit;   //refine error handling further...
+    exit;   //refine error handling further...TODO - Need feedback system on page.
 }
 
  else {
     
     //Power up a new session for the user
-    $this->session = new Session($this->memberCheckSession);
-    //$this->session->setID('UWAAMEM');
+    $this->session = new Session($this->memberCheckSession);    
     $this->session->setID(md5("{$member->MemberLName}{$_ENV['sessionSalt']}"));
     $this->session->setName('UWAAMEM');
     
