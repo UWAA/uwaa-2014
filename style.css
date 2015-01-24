@@ -310,6 +310,14 @@
 .uw-sidebar .post-thumbnail-slide .copy {
   height: auto;
 }
+@media screen and (max-width: 768px) {
+  .uw-sidebar .post-thumbnail-slide {
+    width: 100%;
+  }
+  .uw-sidebar .post-thumbnail-slide .image-frame img {
+    width: 100%;
+  }
+}
 .post-type-archive-benefits .copy {
   height: 220px;
 }
@@ -1801,6 +1809,7 @@ div.map-logo.wenatchee {
   padding: 25px 20px 0 30px;
 }
 .uwaa-home-branding-row .uwaa-home-branding {
+  padding-left: 15px;
   padding-bottom: 8px;
   line-height: 1.1;
   text-align: right;
