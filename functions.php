@@ -24,10 +24,12 @@ if (!isset($UWAA)){
 }
 
 
-//Modifies the UW Quicklinks so we keep the main stuff, and only adjust our bit on the bottom
-add_action('extend_uw_object', function($UW) {
-  new UWAA\Quicklinks;
-});
+//Sets up our custom UW Object
+
+function setup_uw_object() {
+  $UW = new UWAA\UW;
+}
+
 
 
 

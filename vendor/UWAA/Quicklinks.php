@@ -10,9 +10,9 @@ class QuickLinks
   const NAME         = 'Quick Links';
   const LOCATION     = 'quick-links';
   const ALLOWED_BLOG = 1;
- 
 
-  function __construct()
+
+   function __construct()
   {
     $this->MULTISITE = is_multisite();
 
@@ -22,8 +22,9 @@ class QuickLinks
     add_action( 'wp_ajax_quicklinks', array( $this, 'uw_quicklinks_feed') );
     add_action( 'wp_ajax_nopriv_quicklinks', array( $this, 'uw_quicklinks_feed') );
   }
+ 
 
-  function register_quick_links_menu()
+   function register_quick_links_menu()
   {
     register_nav_menu( self::LOCATION, __( self::NAME ) );
   }
@@ -45,8 +46,8 @@ class QuickLinks
 
     if ( $this->MULTISITE ) restore_current_blog();
 
-    // wp_send_json( $this->parse_menu( $info ) ) ;
-    var_dump($this->parse_menu());
+    wp_send_json( $this->parse_menu( $info ) ) ;
+    // var_dump($this->parse_menu());
   }
 
   function parse_menu()
@@ -117,7 +118,12 @@ class QuickLinks
 
       }
 
-    // return $menu ? $menu : array();
+    // return $menu;
+    if ($menu) {
+      foreach ($menu as $menuItem) {
+        $defaultMenu[] = $menuItem;
+      }
+    }
     return $defaultMenu;
   }
 
