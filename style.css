@@ -1840,6 +1840,33 @@ div.map-logo.wenatchee {
     bottom: 20px;
   }
 }
+.page-home #mobile-relative.frontpage,
+.page-communities #mobile-relative.frontpage,
+.page-membership #mobile-relative.frontpage,
+.post-type-archive-events #mobile-relative.frontpage,
+.page-travel #mobile-relative.frontpage {
+  margin-top: 0px;
+  background-color: #ffffff;
+}
+.page-home #mobile-relative.frontpage button.uw-mobile-menu-toggle,
+.page-communities #mobile-relative.frontpage button.uw-mobile-menu-toggle,
+.page-membership #mobile-relative.frontpage button.uw-mobile-menu-toggle,
+.post-type-archive-events #mobile-relative.frontpage button.uw-mobile-menu-toggle,
+.page-travel #mobile-relative.frontpage button.uw-mobile-menu-toggle {
+  right: 0;
+  margin: 0;
+}
+#spacer {
+  height: 58px;
+  margin-bottom: 2px;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (min-width: 769px) {
+  #spacer {
+    display: none;
+  }
+}
 .uwaa-home-branding-row .uw-breadcrumbs {
   padding: 25px 20px 0 30px;
 }
@@ -2705,6 +2732,12 @@ a#memberCheckerLogout {
 .page-membership .uw-sidebar-menu,
 .page-template-membership-page .uw-sidebar-menu {
   margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+  #join-renew-buttons {
+    margin-top: 0;
+    padding: 20px 20px 0 0;
+  }
 }
 #store {
   min-height: 370px;

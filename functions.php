@@ -53,13 +53,7 @@ function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
-add_filter('upload_mimes', 'cc_mime_types');
-
-
-
-
-
-  
+add_filter('upload_mimes', 'cc_mime_types');  
 
 
 
@@ -106,4 +100,13 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
   } else {
     return $sorted_menu_items;
   }
+}
+
+add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2 );
+function current_type_nav_class($classes, $item) {
+    $post_type = ucfirst(get_query_var('post_type'));    
+    if ($item->title != '' && $item->title == $post_type) {
+        array_push($classes, 'current_page_item');
+    };
+    return $classes;
 }

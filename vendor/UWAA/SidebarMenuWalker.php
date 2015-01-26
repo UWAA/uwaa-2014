@@ -20,9 +20,7 @@ class SidebarMenuWalker extends \Walker_Nav_Menu {
         }
 
 
-        $is_current = false;
-        // if ( ! empty( $current_page ) ) {
-        //     $_current_page = $page;
+        $is_current = false;     
             if ( $page->current_item_ancestor ) {
                 $css_class[] = 'current_page_ancestor';
             }
@@ -32,10 +30,7 @@ class SidebarMenuWalker extends \Walker_Nav_Menu {
             } elseif ( $page->current_item_parent ) {
                 $css_class[] = 'current_page_parent';
             }
-        // }
-        // } elseif ( $page->ID == get_option('page_for_posts') ) {
-        //     $css_class[] = 'current_page_parent';
-        // }
+     
 
        
         $css_classes = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) ); 

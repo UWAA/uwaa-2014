@@ -3,10 +3,11 @@ $UWAA->Memberchecker->getSession();
 get_header(); 
 wp_enqueue_script(array('superHero'));
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Membership;
-
-
-
 ?>
+
+<div id="spacer"></div>
+<?php uw_mobile_front_page_menu(); ?>
+
 
 
 <div class="membership-header uw-homepage-slider-container">

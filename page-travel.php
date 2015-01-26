@@ -7,6 +7,10 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
 ?>
 
 
+<div id="spacer"></div>
+<?php uw_mobile_front_page_menu(); ?>
+
+
 
 <?php 
 

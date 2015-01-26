@@ -1,9 +1,12 @@
 <?php get_header(); 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\EventsIsotope;
 wp_enqueue_script(array('isotopeInit', 'superHero'));
+?>
 
+<div id="spacer"></div>
+<?php uw_mobile_front_page_menu(); ?>
 
-
+<?php
 
 if(class_exists('\UWAA\Slideshow\EventsSlideshow')):
 
