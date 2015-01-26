@@ -715,85 +715,6 @@ a.uwaa-btn:active {
     line-height: 1.25;
   }
 }
-.uwaa-chapter-header {
-  height: 260px;
-  overflow: hidden;
-}
-.uwaa-chapter-header .chapter-image-column {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: inherit;
-  background-size: cover;
-  background-position: center;
-}
-@media (min-width: 768px) {
-  .uwaa-chapter-header .chapter-image-column {
-    float: left;
-    width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .uwaa-chapter-header .chapter-image-column {
-    float: left;
-    width: 50%;
-  }
-}
-.uwaa-chapter-header .chapter-logo {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  height: 100%;
-  background-color: #4b2e83;
-  text-align: center;
-  padding: 0;
-}
-@media (min-width: 768px) {
-  .uwaa-chapter-header .chapter-logo {
-    float: left;
-    width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .uwaa-chapter-header .chapter-logo {
-    float: left;
-    width: 50%;
-  }
-}
-.uwaa-chapter-header .chapter-logo svg {
-  height: 100%;
-  width: 70%;
-}
-.uwaa-chapter-header .chapter-logo svg #Huskies path {
-  fill: #ffffff;
-}
-.uwaa-chapter-header .chapter-logo svg #Region path,
-.uwaa-chapter-header .chapter-logo svg rect,
-.uwaa-chapter-header .chapter-logo svg line {
-  fill: #b7a57a;
-  stroke: #b7a57a;
-}
-.single-chapters ul.uw-sidebar-menu,
-.single-chapters ul.uw-mobile-menu {
-  margin-top: -80px;
-}
-/* Small Devices, Tablets */
-@media only screen and (max-width: 767px) {
-  .uwaa-chapter-header {
-    height: 200px;
-  }
-  .uwaa-chapter-header .chapter-image-column {
-    display: none !important;
-  }
-  .uwaa-chapter-header .chapter-image-column,
-  tr.uwaa-chapter-header .chapter-image-column,
-  th.uwaa-chapter-header .chapter-image-column,
-  td.uwaa-chapter-header .chapter-image-column {
-    display: none !important;
-  }
-}
 .uw-homepage-slider-container.communities-header {
   margin-left: -15px;
   margin-right: -15px;
@@ -1004,27 +925,6 @@ a.uwaa-btn:active {
   font-size: 15px;
   font-weight: 800;
 }
-/* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
-  .uwaa-chapter-header {
-    height: 200px;
-  }
-  .chapter-image-row {
-    display: none !important;
-  }
-  .chapter-image-row,
-  tr.chapter-image-row,
-  th.chapter-image-row,
-  td.chapter-image-row {
-    display: none !important;
-  }
-  .chapter-logo {
-    height: 100px;
-  }
-  .event-information-column {
-    height: 100px;
-  }
-}
 @media only screen and (max-width: 1600px) {
   .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
     right: 6%;
@@ -1041,6 +941,140 @@ a.uwaa-btn:active {
   .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
     width: 170px;
     right: 4%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
+    right: -3%;
+  }
+  .uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
+    width: 170px;
+    right: 4%;
+    bottom: 0;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  .communities-header.uw-homepage-slider-container.uwaa-communities-slider {
+    height: 500px;
+  }
+  .communities-header.uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
+    display: none;
+  }
+  .communities-header.uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
+    width: 200px;
+    left: 15px;
+    bottom: -30px;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  .communities-header.uw-homepage-slider-container .chapter-image-row {
+    display: none !important;
+  }
+  .communities-header.uw-homepage-slider-container .chapter-image-row,
+  tr.communities-header.uw-homepage-slider-container .chapter-image-row,
+  th.communities-header.uw-homepage-slider-container .chapter-image-row,
+  td.communities-header.uw-homepage-slider-container .chapter-image-row {
+    display: none !important;
+  }
+  .communities-header.uw-homepage-slider-container .chapter-logo {
+    height: 150px;
+  }
+  .communities-header.uw-homepage-slider-container .chapter-logo svg {
+    width: 54%;
+  }
+  .communities-header.uw-homepage-slider-container .event-information-column {
+    height: 350px;
+  }
+  .communities-header.uw-homepage-slider-container .event-information-column a.uw-btn {
+    margin-top: 20px;
+  }
+  .communities-header.uw-homepage-slider-container .event-information-column h1 {
+    font-size: 30px;
+  }
+}
+.uwaa-chapter-header {
+  height: 260px;
+  overflow: hidden;
+}
+.uwaa-chapter-header .chapter-image-column {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: inherit;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 768px) {
+  .uwaa-chapter-header .chapter-image-column {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .uwaa-chapter-header .chapter-image-column {
+    float: left;
+    width: 50%;
+  }
+}
+.uwaa-chapter-header .chapter-logo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100%;
+  background-color: #4b2e83;
+  text-align: center;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .uwaa-chapter-header .chapter-logo {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .uwaa-chapter-header .chapter-logo {
+    float: left;
+    width: 50%;
+  }
+}
+.uwaa-chapter-header .chapter-logo svg {
+  height: 100%;
+  width: 70%;
+}
+.uwaa-chapter-header .chapter-logo svg #Huskies path {
+  fill: #ffffff;
+}
+.uwaa-chapter-header .chapter-logo svg #Region path,
+.uwaa-chapter-header .chapter-logo svg rect,
+.uwaa-chapter-header .chapter-logo svg line {
+  fill: #b7a57a;
+  stroke: #b7a57a;
+}
+.single-chapters ul.uw-sidebar-menu,
+.single-chapters ul.uw-mobile-menu {
+  margin-top: -80px;
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  .uwaa-chapter-header {
+    height: 150px;
+  }
+  .uwaa-chapter-header .chapter-logo svg {
+    width: 54%;
+  }
+  .uwaa-chapter-header .chapter-image-column {
+    display: none !important;
+  }
+  .uwaa-chapter-header .chapter-image-column,
+  tr.uwaa-chapter-header .chapter-image-column,
+  th.uwaa-chapter-header .chapter-image-column,
+  td.uwaa-chapter-header .chapter-image-column {
+    display: none !important;
   }
 }
 .uwaa-benefit-header {
@@ -2218,6 +2252,14 @@ div.map-logo.wenatchee {
 }
 .single-post .uwaa-chapter-header {
   height: 438px;
+}
+@media only screen and (max-width: 767px) {
+  .single-post .uwaa-chapter-header {
+    height: 150px;
+  }
+  .single-post .uwaa-chapter-header .chapter-logo svg {
+    width: 54%;
+  }
 }
 .grid-list-print-icons {
   position: absolute;

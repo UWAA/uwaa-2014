@@ -134,36 +134,6 @@
 
   }
 
-
-
-//Tablet range, cut height in half but keep all content
-
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-    .uwaa-chapter-header {
-    height: 200px;
-    }
-
-    .chapter-image-row{
-        .responsive-invisibility();
-        
-    }
-
-    .chapter-logo{
-        height: 100px;
-        
-    }
-
-    .event-information-column{
-        height: 100px;
-    }
-   
-}
-
-
-
-
 @media only screen and (max-width: 1600px) {
 
   .uw-homepage-slider-container {
@@ -215,14 +185,89 @@
   }
 
 
+  @media only screen and (max-width:991px) {
+
+  .uw-homepage-slider-container {
+
+  &.uwaa-communities-slider {
+
+    .slideshow-controls {
+
+    &:after{
+      right: -3%;
+    }
+
+    p.next-headline {
+    width: 170px;
+    right: 4%;
+    bottom: 0;
+    }
+
+  }
+
+}
+}
+
+  }
+
+//Tablet range, cut height in half but keep all content
 
 
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .communities-header.uw-homepage-slider-container {
+
+    &.uwaa-communities-slider {
+    height: 500px;
 
 
+    .slideshow-controls{
 
+        &:after {
+         display: none;
+        }
 
+        p.next-headline {
+          width: 200px;
+          left: 15px;
+          bottom: -30px;
+          font-size: 15px;
+          font-weight: 800;
+          margin-bottom: 0;
+          margin-top: 10px;
 
+        } 
 
+      }
+    }
 
+    .chapter-image-row{
+        .responsive-invisibility();
+        
+    }    
 
+    .chapter-logo{
+      height: 150px;
 
+       
+      svg {
+            width: 54%;
+        }
+
+      }
+
+    .event-information-column{
+        height: 350px;
+
+        a.uw-btn{
+          margin-top: 20px;
+        }
+
+        h1{
+          font-size: 30px;
+        }
+    } 
+
+  }
+   
+}
