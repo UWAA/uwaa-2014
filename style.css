@@ -958,17 +958,18 @@ a.uwaa-btn:active {
   .communities-header.uw-homepage-slider-container.uwaa-communities-slider {
     height: 500px;
   }
+  .communities-header.uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls {
+    bottom: 20px;
+  }
   .communities-header.uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls:after {
     display: none;
   }
   .communities-header.uw-homepage-slider-container.uwaa-communities-slider .slideshow-controls p.next-headline {
     width: 200px;
     left: 15px;
-    bottom: -30px;
     font-size: 15px;
     font-weight: 800;
     margin-bottom: 0;
-    margin-top: 10px;
   }
   .communities-header.uw-homepage-slider-container .chapter-image-row {
     display: none !important;
@@ -989,7 +990,7 @@ a.uwaa-btn:active {
     height: 350px;
   }
   .communities-header.uw-homepage-slider-container .event-information-column a.uw-btn {
-    margin-top: 20px;
+    margin-top: 25px;
   }
   .communities-header.uw-homepage-slider-container .event-information-column h1 {
     font-size: 30px;
