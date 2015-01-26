@@ -69,19 +69,14 @@ class UWAA
         new \UWAA\Widgets\SidebarFeaturedPost;
         new \UWAA\Widgets\SidebarPullQuote;
         new \UWAA\Widgets\SidebarSeeYourChapter;
-        new \UWAA\Widgets\SocialSidebar;
+        new \UWAA\Widgets\SocialSidebar;  
+        
+    }
 
-        // //SuperHero Slideshow (from UW Homepage)
-        
-        // 
-        
 
-        
-        
-
-        
-
-        
-        
+    //Custom work for Quicklinks
+    
+    public function Quicklinks(){
+        new Quicklinks;
     }
 }

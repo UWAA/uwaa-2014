@@ -18,12 +18,16 @@ try {
 //Autoloads all of the UWAA classes, as they follow PSR-0 autoloading standards.  Classes can be called using that \UWAA\Path\To\Class->Method syntax
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
-
 //Instatiates site-wite classes.  
 if (!isset($UWAA)){
     $UWAA = new UWAA\UWAA($wp);
 }
+
+
+//Modifies the UW Quicklinks so we keep the main stuff, and only adjust our bit on the bottom
+add_action('extend_uw_object', function($UW) {
+  new UWAA\Quicklinks;
+});
 
 
 
