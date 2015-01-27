@@ -2014,6 +2014,11 @@ div.map-logo.wenatchee {
   }
 }
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #message-row .content h2 {
+    font-size: 2.0em;
+  }
+}
 /* Custom, iPhone Retina */
 #uwaa-footer {
   margin-left: -15px;
@@ -3018,6 +3023,12 @@ hr {
 .page-home .uw-body.container,
 .page-membership .uw-body.container {
   margin-bottom: 45px;
+}
+@media only screen and (max-width: 480px) {
+  .page-home .uw-body.container,
+  .page-membership .uw-body.container {
+    margin-bottom: 15px;
+  }
 }
 .page-membership .row.5-column {
   margin-top: 20px;
