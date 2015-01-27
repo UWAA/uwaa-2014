@@ -74,9 +74,15 @@ Isotope = Backbone.View.extend({
     this.toggleParentButtonClass($target);
   },
 
-  print: function() {
-    this.listView();
+  print: function(e) {    
+    $listButton = $('.list-button');
+    this.listView(e);    
     window.print();
+    //@TODO- Pull out this toggle code to its own function
+    this.toggleButtonClass($listButton);
+    this.toggleParentButtonClass($listButton);
+
+
   }
 
 
