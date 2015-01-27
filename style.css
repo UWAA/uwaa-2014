@@ -355,6 +355,11 @@
   font-weight: 800;
   font-size: 1.5em;
 }
+@media only screen and (max-width: 480px) {
+  .filter-row h2.filter-head {
+    font-size: 1.2em;
+  }
+}
 #filters {
   display: table-cell;
   vertical-align: middle;
@@ -2017,6 +2022,7 @@ div.map-logo.wenatchee {
 @media only screen and (max-width: 480px) {
   #message-row .content h2 {
     font-size: 2.0em;
+    margin-top: 20px;
   }
 }
 /* Custom, iPhone Retina */
@@ -2119,6 +2125,7 @@ div.map-logo.wenatchee {
   padding-right: 15px;
   padding-top: 1.3em;
   letter-spacing: 1px;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   #uwaa-footer .contact-links {
@@ -2190,6 +2197,7 @@ div.map-logo.wenatchee {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  z-index: 0;
 }
 @media (min-width: 768px) {
   #uwaa-footer .uwaa-logo {
@@ -2246,6 +2254,12 @@ div.map-logo.wenatchee {
     height: 5.3em;
     margin-top: -23px;
     margin-bottom: 9px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #uwaa-footer .uwaa-logo {
+    margin-top: 10px;
+    height: 5em;
   }
 }
 #uwaa-footer .uwaa-logo svg {
