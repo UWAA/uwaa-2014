@@ -48,6 +48,7 @@ $finalSlug = $communitySlug->isCommunitiesContent();
     <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
     <?php
   } else {
+    $defaultHeader = TRUE;
      get_template_part( 'header', 'image' ); 
    }
 
@@ -65,6 +66,8 @@ $finalSlug = $communitySlug->isCommunitiesContent();
   <div class="row">
 
     <div class="col-md-8 uw-content" role='small'>
+
+    <?php if ($defaultHeader) { uw_site_title(); }; ?>
 
       <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
 
