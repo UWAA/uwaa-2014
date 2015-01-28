@@ -2590,10 +2590,10 @@ div.map-logo.wenatchee {
 }
 .wufoo .uwaa-name span {
   width: 48%;
-  float: right;
+  float: left;
 }
 .wufoo .uwaa-name span:first-child {
-  float: left;
+  float: right;
 }
 .wufoo .uwaa-name span input {
   width: 100%;
