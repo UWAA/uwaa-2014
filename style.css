@@ -2589,7 +2589,11 @@ div.map-logo.wenatchee {
   transition: 0.25s;
 }
 .wufoo .uwaa-name span {
-  width: 50%;
+  width: 48%;
+  float: right;
+}
+.wufoo .uwaa-name span:first-child {
+  float: left;
 }
 .wufoo .uwaa-name span input {
   width: 100%;
