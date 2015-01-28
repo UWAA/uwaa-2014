@@ -2303,6 +2303,11 @@ div.map-logo.wenatchee {
   padding-bottom: 20px;
   padding-left: 40px;
 }
+@media only screen and (max-width: 991px) {
+  .tours-footer-logo {
+    padding-left: 0;
+  }
+}
 .uw-hero-image.travel {
   background: url(assets/headers/Page_Header_Travel.jpg) center center;
   background-size: cover;
