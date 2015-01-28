@@ -2506,7 +2506,7 @@ div.map-logo.wenatchee {
   -webkit-font-smoothing: antialiased;
 }
 .wufoo li.focused {
-  background-color: #dddddd;
+  background-color: #eeeeee;
 }
 .wufoo #container {
   border: 0 solid #cccccc;
@@ -2534,7 +2534,8 @@ div.map-logo.wenatchee {
 }
 .wufoo .section div {
   font-family: 'Open Sans', sans-serif;
-  color: #3d3d3d;
+  color: #3D3D3D;
+  font-size: 100%;
 }
 .wufoo label.desc,
 .wufoo legend.desc {
@@ -2560,6 +2561,31 @@ div.map-logo.wenatchee {
 .wufoo .instruct {
   font-family: 'Open Sans', sans-serif;
   color: #3D3D3D;
+}
+.wufoo input.btTxt {
+  font-size: 1.5em;
+  width: auto;
+  background-color: #4b2e83;
+  color: white;
+  font-weight: 900;
+  font-family: "Encode Sans Compressed", sans-serif;
+  letter-spacing: 1px;
+  border-radius: 0;
+  height: 2em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  padding: .412em;
+  padding-top: .32em;
+  display: inline-block;
+  border: 0;
+}
+.wufoo input.btTxt:hover,
+.wufoo input.btTxt:active {
+  background-color: #b7a57a;
+  color: #4b2e83;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 ul.uwaa-social {
   padding-left: 0;
