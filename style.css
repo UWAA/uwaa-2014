@@ -1373,6 +1373,7 @@ div.map-logo.wenatchee {
   background-position: 41% -964px;
 }
 .leaflet-popup .leaflet-popup-content {
+  position: relative;
   padding: 10px 4px 10px 10px;
 }
 .leaflet-popup .leaflet-popup-content p.map-title {
@@ -1388,6 +1389,7 @@ div.map-logo.wenatchee {
 }
 .leaflet-popup .leaflet-popup-content p.map-excerpt {
   margin: 0 0 0;
+  padding-right: 12px;
 }
 .leaflet-popup .leaflet-popup-content a {
   color: #3d3d3d;
@@ -1400,13 +1402,13 @@ div.map-logo.wenatchee {
   border-bottom: none;
 }
 .leaflet-popup .leaflet-popup-content a.map-link:after {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
   background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
   opacity: .4;
   display: block;
-  float: right;
-  vertical-align: bottom;
-  margin: 5px;
   width: 14px;
   height: 21px;
   -o-transform: rotate(90deg);
