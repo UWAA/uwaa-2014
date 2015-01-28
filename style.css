@@ -2501,7 +2501,7 @@ div.map-logo.wenatchee {
   -webkit-font-smoothing: antialiased;
 }
 .wufoo li.focused {
-  background-color: #b7a57a;
+  background-color: #dddddd;
 }
 .wufoo #container {
   border: 0 solid #cccccc;
@@ -2514,7 +2514,7 @@ div.map-logo.wenatchee {
 }
 .wufoo .info h2 {
   font-family: 'Open Sans', sans-serif;
-  color: #000000;
+  color: #3d3d3d;
 }
 .wufoo .info div {
   font-family: 'Open Sans', sans-serif;
@@ -2523,7 +2523,9 @@ div.map-logo.wenatchee {
 .wufoo .section h3 {
   font-family: 'Open Sans', sans-serif;
   background: #FFFFFF;
-  color: #000000;
+  color: #3d3d3d;
+  font-weight: bold;
+  padding-top: 30px;
 }
 .wufoo .section div {
   font-family: 'Open Sans', sans-serif;
@@ -2548,11 +2550,11 @@ div.map-logo.wenatchee {
   color: #333333;
 }
 .wufoo label.choice {
-  color: #3d3d3d;
+  color: #3D3D3D;
 }
 .wufoo .instruct {
   font-family: 'Open Sans', sans-serif;
-  color: #3d3d3d;
+  color: #3D3D3D;
 }
 ul.uwaa-social {
   padding-left: 0;
@@ -2777,6 +2779,14 @@ a#memberCheckerLogout {
 #join-renew-buttons .uwaa-btn:active {
   background-color: #4b2e83;
   color: #ffffff;
+}
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+  #join-renew-buttons .uwaa-btn.uwaa-btn-join {
+    width: 115px;
+  }
+  #join-renew-buttons .uwaa-btn.uwaa-btn-renew {
+    width: 90px;
+  }
 }
 @media only screen and (max-width: 991px) {
   #join-renew-buttons {

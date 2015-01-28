@@ -104,7 +104,8 @@ a#memberCheckerLogout {
 
     .uwaa-btn{        
         background-color: @gray;
-        color: @purple;
+        color: @purple;        
+        
 
         &.uwaa-btn-join {
             width: 146px;
@@ -117,6 +118,21 @@ a#memberCheckerLogout {
         &:hover, &:active {
             background-color: @purple;
             color: @white;
+
+        }
+
+
+        @media only screen and (min-width: 993px) and (max-width: 1199px) {
+
+             &.uwaa-btn-join {
+            width: 115px;
+        }
+
+        &.uwaa-btn-renew {
+            width: 90px;
+        }
+
+
 
         }
 
