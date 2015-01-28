@@ -153,13 +153,27 @@
         }
 
 
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 1200px){
+            width: 233px;
+
+            .image-frame img{
+                width: 100%;
+            }
+
+            .copy{
+                &:after{
+                    bottom: 3px;
+                }
+            }
+        }
+
+         @media screen and (max-width: 992px){
             width: 100%;
 
             .image-frame img{
                 width: 100%;
             }
-        }
+         }
     }
 
     .post-type-archive-benefits {
