@@ -474,6 +474,24 @@ h6.intro-head {
   font-weight: 600;
   margin-bottom: 0;
 }
+a.read-more-link:hover,
+a.read-more-link:active {
+  border-bottom: 0;
+}
+a.read-more-link:after {
+  background: url(assets/uwaa-sprite.svg) no-repeat -206px -493px;
+  content: "";
+  opacity: .6;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  width: 14px;
+  height: 21px;
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
 .uwaa-btn {
   width: auto;
   background-color: #4b2e83;
