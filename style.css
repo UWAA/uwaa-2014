@@ -2578,6 +2578,7 @@ div.map-logo.wenatchee {
   padding-top: .32em;
   display: inline-block;
   border: 0;
+  cursor: pointer;
 }
 .wufoo input.btTxt:hover,
 .wufoo input.btTxt:active {
@@ -2586,6 +2587,12 @@ div.map-logo.wenatchee {
   -o-transition: 0.25s;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+}
+.wufoo .uwaa-name span {
+  width: 50%;
+}
+.wufoo .uwaa-name span input {
+  width: 100%;
 }
 ul.uwaa-social {
   padding-left: 0;
