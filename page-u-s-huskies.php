@@ -32,7 +32,7 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
              */
             // get_template_part( 'content', 'page' );
             // 
-             include(locate_template( 'content-page-communities.php' ));
+             include(locate_template( 'content-page-superhero.php' ));
 
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) {

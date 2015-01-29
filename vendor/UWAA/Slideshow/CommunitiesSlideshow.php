@@ -32,7 +32,7 @@ class CommunitiesSlideshow extends Slideshow
         'id' => get_the_id(),
         'title' => get_the_title(),
         //needs to be the feature image for the chapter
-        'image' => $UI->getPostFeaturedImageURL(get_post_thumbnail_id($chapter->ID), 'original'),
+        'image' => $UI->returnPostFeaturedImageURL(get_post_thumbnail_id($chapter->ID), 'original'),
         //needs to the logo for the chapter
         'logo' => $chapterSlug,
         'text'  => get_the_excerpt(),
