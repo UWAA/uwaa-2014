@@ -7,7 +7,7 @@
 <div class="uw-homepage-slider slide-<?php echo $slide->id?>" data-id="<?php echo $slide->id; ?>">
     <div class="chapter-image-column">
         <div class="chapter-image-row">            
-            <div class="chapter-image" style="background:url(<?php $slide->image; ?>) no-repeat center; background-size:cover;"></div>
+            <div class="chapter-image" style="background:url(<?php echo $slide->image; ?>) no-repeat center; background-size:cover;"></div>
         </div>
         <div class="row">
         <div class="chapter-logo">
