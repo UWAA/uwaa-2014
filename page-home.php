@@ -56,6 +56,8 @@ endif;
 
 </div>
 
+<div class="container-fluid">
+
 <div id="message-row">
   <div class="content">
 <?php
@@ -81,6 +83,8 @@ endif;
 </div>
 
   
+</div>
+
 </div>
 
 <?php get_footer(); ?>

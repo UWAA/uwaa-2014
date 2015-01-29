@@ -1,23 +1,25 @@
-    <div id="uwaa-footer" class="uw-footer">
-        <nav role="navigation" aria-label="uwaa social networking" class="social-icons">
-            <ul class="uwaa-social">
-                <li><a href="https://www.twitter.com/UWalum" target="_blank" class=" twitter"></a></li>
-                <li><a href="https://www.facebook.com/UWalum" target="_blank" class=" facebook"></a></li>
-                <li><a href="https://www.linkedin.com/groups?gid=40422" target="_blank" class=" linkedin"></a></li>
-                <li><a href="http://instagram.com/uwalum" class="instagram"></a></li>
-            </ul>
-        </nav>
-        <nav role="navigation" aria-label="about uwaa and join" class="contact-links">
-        <span>CONTACT UWAA: 206-543-0540 <a href="mailto:uwalumni@uw.edu">uwalumni@uw.edu</a></span>
-        <div>
-            <ul class="footer-links">
-                <li><a href="<?php echo home_url('/about'); ?>">About</a></li>
-                <li><a href="#">Join</a></li>
-            </ul>                   
-        </div>
-        </nav>
-        <div class="uwaa-logo">
-            <?php get_template_part('assets/uwaa', 'logo.svg');?>
+    <div class="container-fluid">
+        <div id="uwaa-footer" class="uw-footer">
+            <nav role="navigation" aria-label="uwaa social networking" class="social-icons">
+                <ul class="uwaa-social">
+                    <li><a href="https://www.twitter.com/UWalum" target="_blank" class=" twitter"></a></li>
+                    <li><a href="https://www.facebook.com/UWalum" target="_blank" class=" facebook"></a></li>
+                    <li><a href="https://www.linkedin.com/groups?gid=40422" target="_blank" class=" linkedin"></a></li>
+                    <li><a href="http://instagram.com/uwalum" class="instagram"></a></li>
+                </ul>
+            </nav>
+            <nav role="navigation" aria-label="about uwaa and join" class="contact-links">
+            <span>CONTACT UWAA: 206-543-0540 <a href="mailto:uwalumni@uw.edu">uwalumni@uw.edu</a></span>
+            <div>
+                <ul class="footer-links">
+                    <li><a href="<?php echo home_url('/about'); ?>">About</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>                   
+            </div>
+            </nav>
+            <div class="uwaa-logo">
+                <?php get_template_part('assets/uwaa', 'logo.svg');?>
+            </div>
         </div>
     </div>
     <div class="uw-footer">

@@ -58,6 +58,10 @@ class Memberchecker {
 
     }
 
+    private function setSessionName() {
+
+    }
+
     public function callMemberChecker() {
       
 
@@ -124,7 +128,7 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
     
     //Power up a new session for the user
     $this->session = new Session($this->memberCheckSession);    
-    $this->session->setID(md5("{$member->MemberLName}{$_ENV['sessionSalt']}"));
+    $this->session->setID(hash("sha512", "{$member->MemberLName}{$_ENV['sessionSalt']}"));
     $this->session->setName('UWAAMEM');
     
 
