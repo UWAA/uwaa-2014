@@ -3106,12 +3106,13 @@ a#memberCheckerLogout {
 .uwaa-convio-wrapper .uwaa-wordmark {
   display: block;
   position: absolute;
-  top: 12px;
+  top: 0px;
   left: 150px;
   text-indent: -9999px;
-  width: 330px;
-  height: 24px;
+  width: 150px;
+  height: 56px;
   background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/logos/uwaa-logo-convio.svg) no-repeat 0 0 transparent;
+  background-size: 90% 100%;
 }
 .uwaa-convio-wrapper .event-registration-header {
   margin-left: -15px;
@@ -3223,6 +3224,13 @@ a#memberCheckerLogout {
 }
 .uwaa-convio-wrapper .convio-footer:after {
   clear: both;
+}
+@media only screen and (max-width: 767px) {
+  .uwaa-convio-wrapper .uwaa-wordmark {
+    top: 5px;
+    left: 58px;
+    height: 34px;
+  }
 }
 #map {
   position: absolute;

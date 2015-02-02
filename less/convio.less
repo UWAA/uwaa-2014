@@ -3,14 +3,15 @@
 
   .uwaa-wordmark{
     display: block;
-    position: absolute;
-    top: 12px;
-    left: 150px;
-    text-indent: -9999px;
-    width: 330px;
-    height: 24px;
-    background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/logos/uwaa-logo-convio.svg) no-repeat 0 0 transparent;
-  }
+position: absolute;
+top: 0px;
+left: 150px;
+text-indent: -9999px;
+width: 150px;
+height: 56px;
+background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/logos/uwaa-logo-convio.svg) no-repeat 0 0 transparent;
+background-size: 90% 100%;
+}
   
 
   .event-registration-header{
@@ -27,6 +28,17 @@
     .make-row();
     background-color: @purple;
     height: 100px;
+  }
+
+
+
+  @media only screen and (max-width:767px){
+    .uwaa-wordmark{
+      top:5px;
+      left: 58px;
+      height: 34px;
+
+    }
   }
 
 
