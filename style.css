@@ -3225,6 +3225,11 @@ a#memberCheckerLogout {
 .uwaa-convio-wrapper .convio-footer:after {
   clear: both;
 }
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .uwaa-convio-wrapper .uw-thinstrip {
+    height: 90px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .uwaa-convio-wrapper .uwaa-wordmark {
     top: 5px;
