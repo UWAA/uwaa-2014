@@ -3184,6 +3184,7 @@ a#memberCheckerLogout {
 .uwaa-convio-wrapper .convio-content {
   margin-left: -15px;
   margin-right: -15px;
+  padding: 50px 0 20px;
 }
 .uwaa-convio-wrapper .convio-content:before,
 .uwaa-convio-wrapper .convio-content:after {
