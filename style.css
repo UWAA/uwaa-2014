@@ -3085,6 +3085,57 @@ a#memberCheckerLogout {
 .pagination-buttons .button.current .icon.next {
   background-position: -70px -40px;
 }
+.uwaa-convio-wrapper {
+  background-color: #4b2e83;
+}
+@font-face {
+  font-family: 'Encode Sans Compressed';
+  src: url('assets/fonts/encodesanscondensed-400-regular-webfont.eot');
+  src: url('assets/fonts/encodesanscondensed-400-regular-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscondensed-400-regular-webfont.woff') format('woff'), url('assets/fonts/encodesanscondensed-400-regular-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscondensed-400-regular-webfont.svg#encodesanscondensed-400-regular-webfont') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Encode Sans Compressed';
+  src: url('assets/fonts/encodesanscondensed-500-medium-webfont.eot');
+  src: url('assets/fonts/encodesanscondensed-500-medium-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscondensed-500-medium-webfont.woff') format('woff'), url('assets/fonts/encodesanscondensed-500-medium-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscondensed-500-medium-webfont.svg#encodesanscondensed-500-medium-webfont') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Encode Sans Compressed';
+  src: url('assets/fonts/encodesanscompressed-600-semibold-webfont.eot');
+  src: url('assets/fonts/encodesanscompressed-600-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-600-semibold-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-600-semibold-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-600-semibold-webfont.svg#encodesanscompressed-600-semibold-webfont') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Encode Sans Compressed';
+  src: url('assets/fonts/encodesanscompressed-700-bold-webfont.eot');
+  src: url('assets/fonts/encodesanscompressed-700-bold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-700-bold-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-700-bold-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-700-bold-webfont.svg#encodesanscompressed-700-bold-webfont') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Encode Sans Compressed';
+  src: url('assets/fonts/encodesanscompressed-800-extrabold-webfont.eot');
+  src: url('assets/fonts/encodesanscompressed-800-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-800-extrabold-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-800-extrabold-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-800-extrabold-webfont.svg#encodesanscompressed-800-extrabold-webfont') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Encode Sans Compressed';
+  src: url('assets/fonts/encodesanscompressed-900-black-webfont.eot');
+  src: url('assets/fonts/encodesanscompressed-900-black-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-900-black-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-900-black-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-900-black-webfont.svg#encodesanscompressed-900-black-webfont') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+.uwaa-convio-wrapper h1,
+.uwaa-convio-wrapper h2,
+.uwaa-convio-wrapper h3 {
+  color: #ffffff;
+  font-family: "Encode Sans Compressed", sans-serif;
+}
 #map {
   position: absolute;
   top: 0;
@@ -3200,13 +3251,4 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
   .pagination-buttons:before {
     right: -14px;
   }
-}
-.uwaa-convio-wrapper {
-  background-color: #4b2e83;
-}
-.uwaa-convio-wrapper h1,
-.uwaa-convio-wrapper h2,
-.uwaa-convio-wrapper h3 {
-  color: #ffffff;
-  font-family: "Encode Sans Compressed", sans-serif;
 }
