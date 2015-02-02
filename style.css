@@ -3201,3 +3201,11 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
     right: -14px;
   }
 }
+.uwaa-convio-wrapper {
+  background-color: #4b2e83;
+}
+.uwaa-convio-wrapper h1,
+.uwaa-convio-wrapper h2,
+.uwaa-convio-wrapper h3 {
+  color: #ffffff;
+}
