@@ -3117,7 +3117,7 @@ a#memberCheckerLogout {
 .uwaa-convio-wrapper .event-registration-header {
   margin-left: -15px;
   margin-right: -15px;
-  height: 150px;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
 }
 .uwaa-convio-wrapper .event-registration-header:before,
 .uwaa-convio-wrapper .event-registration-header:after {
@@ -3150,6 +3150,31 @@ a#memberCheckerLogout {
 }
 .uwaa-convio-wrapper .event-registration-header:after {
   clear: both;
+}
+.uwaa-convio-wrapper .event-registration-header div {
+  height: 80px;
+}
+.uwaa-convio-wrapper .event-registration-header div a.back-to-events {
+  color: #4b2e83;
+  text-transform: uppercase;
+  position: relative;
+}
+.uwaa-convio-wrapper .event-registration-header div a.back-to-events:before {
+  background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/uwaa-sprite.svg) no-repeat -228px -493px;
+  content: "";
+  opacity: .6;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 5px;
+  width: 14px;
+  height: 21px;
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 .uwaa-convio-wrapper .convio-content {
   margin-left: -15px;

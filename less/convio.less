@@ -17,8 +17,43 @@ background-size: 90% 100%;
   
 
   .event-registration-header{
-    .make-row();
-    height: 150px;
+    .make-row();    
+    box-shadow: 0 1px 3px rgba(34,25,25,.4);
+
+    div{
+      height: 80px;
+
+      &.wrapper-title{
+
+      }
+
+      a.back-to-events{
+        color: @purple;
+        text-transform: uppercase;
+        position: relative;
+
+          &:before {
+            background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/uwaa-sprite.svg) no-repeat -228px -493px;
+            content: "";
+            opacity: .6;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-left: 5px;            
+            width: 14px;
+            height: 21px;            
+            -o-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+      }
+    }
+
+
 
   }
 
