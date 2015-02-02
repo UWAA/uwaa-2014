@@ -3113,6 +3113,17 @@ a#memberCheckerLogout {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+.uwaa-convio-wrapper .uwaa-thinstrip .uw-patch {
+  display: block;
+  text-indent: -9999px;
+  width: 163px;
+  height: 110px;
+  background: url(https://www.washington.edu/static/home/wp-content/themes/uw-2014/assets/svg/uw-sprite.svg) no-repeat 0 0 transparent;
+  position: absolute;
+  top: -22px;
+  left: 0;
+  z-index: 1;
+}
 .uwaa-convio-wrapper .event-registration-header {
   margin-left: -15px;
   margin-right: -15px;
