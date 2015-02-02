@@ -3151,10 +3151,10 @@ a#memberCheckerLogout {
 .uwaa-convio-wrapper .event-registration-header:after {
   clear: both;
 }
-.uwaa-convio-wrapper .event-registration-header div {
+.uwaa-convio-wrapper .event-registration-header .wrapper-title {
   height: 80px;
 }
-.uwaa-convio-wrapper .event-registration-header div a.back-to-events {
+.uwaa-convio-wrapper .event-registration-header a.back-to-events {
   color: #4b2e83;
   text-transform: uppercase;
   font-family: 'Open Sans';
@@ -3164,7 +3164,7 @@ a#memberCheckerLogout {
   margin-bottom: 14.5px;
   display: block;
 }
-.uwaa-convio-wrapper .event-registration-header div a.back-to-events:before {
+.uwaa-convio-wrapper .event-registration-header a.back-to-events:before {
   background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
   opacity: .8;
