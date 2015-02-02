@@ -3151,6 +3151,9 @@ a#memberCheckerLogout {
 .uwaa-convio-wrapper .event-registration-header:after {
   clear: both;
 }
+.uwaa-convio-wrapper .event-registration-header h2 {
+  color: #cecece;
+}
 .uwaa-convio-wrapper .event-registration-header .back-to-events-container {
   text-align: right;
 }
