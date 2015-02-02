@@ -1,0 +1,103 @@
+
+#header {
+	// margin-top:30px;
+.make-row();	
+
+	height:@header-row-height;
+	position: relative;
+	
+
+#header-fore {
+		background: url(https://www.uw.edu/alumni/images/membership/gradpack/GradPack_Slide0_1200x498.jpg) transparent no-repeat;
+		background-size: cover;
+		position:absolute;
+		display:block;
+		height:100%;
+		width:100%;
+		
+	}
+#header-bg {
+		background: url(https://www.uw.edu/alumni/images/membership/gradpack/GradPack_Slide1_1200x498.jpg) transparent no-repeat;
+		background-size: cover;
+		position:absolute;
+		display:block;
+		height:100%;
+		width:100%;
+		
+	}
+	
+
+}
+
+
+
+
+
+.header-fixed {
+	.make-row();	
+	background: url(https://www.uw.edu/alumni/images/membership/gradpack/GradPack_FixedHeader_1200x70.jpg);
+	//background-size: cover;
+    background-color: @white;
+	height:70px;
+	position:fixed;
+	width:100%;
+	margin:0;
+}
+
+#conGRADulations {
+		position: absolute;
+		left:0;
+		top:10%;
+		background-color: @dark-purple;
+		padding:10px 10px 12px 10px;
+
+		h1{
+		font-size: (@font-size-h1 *1.01);
+		line-height: 1.2;
+		color:@white;
+		white-space: normal;
+		margin:0;
+	
+	.bold{
+		font-weight:700;
+	}
+
+	}
+	}
+
+		#yellow-dot {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		margin-left: 10%;
+		top: 14%;
+		display: block;
+		border-radius: 50%;
+		background-color: #e0ba53;
+		color: #ffffff;
+		text-align: center;
+		line-height: 1.1;
+		padding-top: 10px;
+				
+
+		&:hover{
+			cursor:pointer;
+			background-color: #cda205;
+		}
+
+		span{
+		background: url(https://www.uw.edu/alumni/images/membership/gradpack/ArrowDown.png);
+		background-size: contain;
+		position: absolute;
+		left: 40px;
+		bottom: 10px;
+		height: 14px;
+		width: 20px;
+		}
+
+	}
+
+	@media (min-width:1500px){
+#yellow-dot {margin-left: 22%;}
+}
+

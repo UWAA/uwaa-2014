@@ -1,0 +1,55 @@
+
+#header {
+
+	height:@header-row-height * @tablet-resize * .7;
+#header-fore {
+		background-position: 65% 0;
+	}
+#header-bg {
+		background-position: 65% 0;
+	}
+}
+
+
+#conGRADulations {
+		position: absolute;
+		right:0;
+		top:280px;
+		background-color: @dark-purple;
+		padding:10px;
+		
+		h1{
+
+		font-size: ((@font-size-h1)*.5);
+	}
+}
+
+#yellow-dot {
+	width: 64px;
+    height: 64px;
+    top: 325px;
+    font-size: 11px;
+    margin-left:0;
+		
+		span{
+		 bottom: 6px;
+    height: 10px;
+    width: 14px;
+    left: 26px;
+		}
+}
+
+.join-mobile-header{
+	background: url(https://www.uw.edu/alumni/images/membership/gradpack/BTN-JoinNow-Top-Sprite.png) no-repeat 0 0 transparent;
+	height:44px;
+	width:70px;
+	float:right;
+	margin-top: 23px;
+	margin-right:-4px;
+
+	&:hover{
+		background-position: 0 -48px;
+		cursor: pointer;
+	}
+	
+}

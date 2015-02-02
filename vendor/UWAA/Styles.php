@@ -17,7 +17,14 @@ class Styles
           'deps'    => array(),
           'version' => '2.1.2',
           'admin'   => false
-      ),      
+      ),
+      'gradpack' => array(
+          'id'      => 'gradpack',
+          'url'     => get_bloginfo('stylesheet_directory') . '/gradpack.css',
+          'deps'    => array(),
+          'version' => '',
+          'admin'   => false
+      ),       
 
     );
 

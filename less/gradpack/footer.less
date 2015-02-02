@@ -1,0 +1,82 @@
+//footer
+
+#footer {
+	.make-row();
+height:120px;
+position:relative;
+text-align: center;
+overflow:hidden;
+background-color: @purple;	
+
+
+}
+
+#footer-content{
+	.container();
+  
+	position: relative;
+	
+} 
+
+.footer-copy {
+  position: relative;
+  max-width: 65%;
+  text-align: left;
+  height: 120px;
+  overflow: hidden;
+  display: table-cell;
+  vertical-align: middle;
+	
+	p{
+		color:@white;
+		vertical-align: middle;
+		display: table-cell;
+		font-size: ceil((@font-size-base * 0.75));
+		line-height: 1.1;
+	}
+
+	a {
+		color:#ffffff;
+
+		&:hover{
+			color:@dark-gold;
+		}
+
+		&:active{
+			color:@brighter-gold;
+		}
+	}
+
+
+}
+
+.social-buttons {
+  display: table-cell;
+  height: 31px;
+  width: 120px;
+  position: relative;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+
+
+.uw-facebook a, .uw-twitter a, .uw-youtube a, .uw-itunes a, .uw-muw a, .uw-linkedin a, .uw-instagram a {	
+    background: url(../../../images/soc-med.gif) no-repeat 0 0 transparent;
+    padding: 13px 0 13px 34px;
+    margin-bottom: 3px;
+    display: inline;
+    font-size:62.5%;    
+    -ms-text-size-adjust: 100%; // 2
+  	-webkit-text-size-adjust: 100%; // 2
+  	float:left;
+  	height:26px;
+
+
+}	
+.uw-twitter a 	{	background-position: 0 -92px	}
+.uw-youtube	a	{	background-position: 0 -29px	}
+.uw-itunes a	{	background-position: 0 -60px	}
+//.uw-muw a		{	background-position: 0 -123px	}
+.uw-linkedin a  {	background-position: 0 -154px	}
+//.uw-instagram a {	background-position: 0 -186px	}

@@ -1,0 +1,136 @@
+
+//To get things working with our theme.
+.gradpack{
+	// .make-row();
+	.container-fluid();
+}
+
+
+@import (reference) "../../bower_components/bootstrap/less/bootstrap.less";
+@import (reference) "../../../uw-2014/less/flat/variables.less";
+@import (reference) "../../../uw-2014/less/uw.variables.less";
+@import (reference) "../../../uw-2014/less/flat/mixins.less";
+
+// Bootstrap
+@import "dimensions.less";
+@import "colors.less";
+
+
+//UW Web Thinstrip
+// @import "widgets-ALL.less";
+
+
+//UWAA Components
+//@import "timeline.less";
+// @import "typography.less";
+// @import "footer.less";
+@import "uw-patch.less";
+@import "thinstrip-DESK.less";
+@import "patch.less";  //Has Media Query Embedded
+@import "header-ALL.less";
+@import "join-row.less";
+@import "content-row.less";
+@import "join-button.less";
+
+
+
+//
+// Responsive: Wide Desktop Breakpoint
+//------------------------------------------------------
+
+@media (min-width:961px) AND (max-width:1199px) {
+@import "typography-DESK.less";
+@import "content-row-DESK.less";
+}
+
+
+//
+// Responsive: Tablet Breakpoint to Wide Desktop
+//------------------------------------------------------
+@media (min-width:768px) AND (max-width:960px) {
+	@import "thinstrip-TAB.less";
+	@import "typography-TAB.less";
+	@import "content-row-TAB.less";
+	@import "join-row-TAB.less";
+	@import "header-TAB.less";
+	@import "join-button-TAB.less";
+
+}	
+
+
+//
+// Responsive: Tablet Breakpoint to Wide Desktop
+//------------------------------------------------------
+@media (min-width:321px) AND (max-width:767px) {
+	// body {padding-top: 60px;}
+	@import "content-row-MOB.less";
+	@import "header-MOB.less";
+	@import "typography-MOB.less";
+	@import "join-button-MOB.less";
+	@import "join-row-MOB.less";
+
+}
+
+
+
+//
+// Responsive: Mobile Only
+//------------------------------------------------------
+@media (max-width:320px) {
+// body {padding-top: 90px;}
+@import "content-row-PHONE.less";
+@import "header-PHONE.less";
+@import "join-row-PHONE.less";
+@import "typography-PHONE.less";
+@import "join-button-PHONE.less";
+
+
+
+
+}
+
+	 
+
+//
+//Fixes for MS Viewport
+//------------------------------------------------------
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+
+.navbar-brand{
+	background: url(https://www.uw.edu/alumni/images/uwaa-patch-horizontal.png) no-repeat 0 0 transparent;
+	width:168px;
+	height:90px;
+}
+
+
+
+.navbar-nav > li > a {
+	border-bottom: 1px #666666 solid;
+	font-size: 14px;
+	padding-top: 6px;
+	padding-bottom:6px;
+	font-weight: normal;
+}
+
+#uwalert-alert-message{
+position: fixed;
+  width: 100%;
+  top: 90px;
+}
+
+a.anchor{
+	display:block;
+	position: relative;
+	top: -190px; 
+	visibility: hidden;
+}
+
+.container-fluid{
+	overflow:hidden;
+}
+

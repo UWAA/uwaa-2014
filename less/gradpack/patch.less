@@ -1,0 +1,38 @@
+//patch
+
+
+
+#patch {
+	position:absolute;
+	top:0;
+	//margin-left: (((@container-lg)*.05-50px));
+	margin-left: 10px;
+	background: url(https://www.uw.edu/alumni/images/uwaa-patch-desktop.png) no-repeat 0 0 transparent;
+	box-shadow: 0 0 5px 1px #000000;
+	width:142px;
+	height:190px;
+	z-index:4;
+	overflow-y:visible;
+}
+
+#patch.fixed {
+	position:fixed;
+	top:0;
+	margin-left: 10%;
+	background: url(https://www.uw.edu/alumni/images/uwaa-patch-horizontal.png) no-repeat 0 0 transparent;
+	box-shadow: 0 0 5px 1px #000000;
+	width:168px;
+	height:90px;
+	z-index:4;
+	overflow-y:visible;
+}
+
+@media (min-width:1500px){
+#patch.fixed {margin-left: 15%px;}
+}
+
+
+
+
+
+

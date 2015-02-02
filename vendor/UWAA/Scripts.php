@@ -139,6 +139,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false,
+    ),
+             'gradpack' => array (
+        'id'      => 'gradpack',
+        'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/gradpack'. $this->min_script() .'.js',
+        'deps'    => array(),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false,
     )
 
     

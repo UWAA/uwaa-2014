@@ -85,7 +85,15 @@ gulp.task('less', function () {
      .pipe(header(banner, { pkg : pkg } ))
     .pipe(less())
     .on('error', catchErrors)     
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./'));
+
+    gulp.src('./less/gradpack/gradpack.less')
+     .pipe(header(banner, { pkg : pkg } ))
+    .pipe(less())
+    .on('error', catchErrors)     
+    .pipe(gulp.dest('./'));
+
+
   });
 
 gulp.task('watch', function () {
