@@ -91,6 +91,16 @@
 #uwaa-footer:after,
 .option-row:before,
 .option-row:after,
+.uwaa-convio-wrapper:before,
+.uwaa-convio-wrapper:after,
+.uwaa-convio-wrapper .branding-header:before,
+.uwaa-convio-wrapper .branding-header:after,
+.uwaa-convio-wrapper .event-registration-header:before,
+.uwaa-convio-wrapper .event-registration-header:after,
+.uwaa-convio-wrapper .convio-content:before,
+.uwaa-convio-wrapper .convio-content:after,
+.uwaa-convio-wrapper .convio-footer:before,
+.uwaa-convio-wrapper .convio-footer:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -118,6 +128,11 @@
 #message-row .content:after,
 #uwaa-footer:after,
 .option-row:after,
+.uwaa-convio-wrapper:after,
+.uwaa-convio-wrapper .branding-header:after,
+.uwaa-convio-wrapper .event-registration-header:after,
+.uwaa-convio-wrapper .convio-content:after,
+.uwaa-convio-wrapper .convio-footer:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -165,6 +180,16 @@
 #uwaa-footer:after,
 .option-row:before,
 .option-row:after,
+.uwaa-convio-wrapper:before,
+.uwaa-convio-wrapper:after,
+.uwaa-convio-wrapper .branding-header:before,
+.uwaa-convio-wrapper .branding-header:after,
+.uwaa-convio-wrapper .event-registration-header:before,
+.uwaa-convio-wrapper .event-registration-header:after,
+.uwaa-convio-wrapper .convio-content:before,
+.uwaa-convio-wrapper .convio-content:after,
+.uwaa-convio-wrapper .convio-footer:before,
+.uwaa-convio-wrapper .convio-footer:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -192,6 +217,11 @@
 #message-row .content:after,
 #uwaa-footer:after,
 .option-row:after,
+.uwaa-convio-wrapper:after,
+.uwaa-convio-wrapper .branding-header:after,
+.uwaa-convio-wrapper .event-registration-header:after,
+.uwaa-convio-wrapper .convio-content:after,
+.uwaa-convio-wrapper .convio-footer:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -3086,55 +3116,203 @@ a#memberCheckerLogout {
   background-position: -70px -40px;
 }
 .uwaa-convio-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.uwaa-convio-wrapper:before,
+.uwaa-convio-wrapper:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper:after {
+  clear: both;
+}
+.uwaa-convio-wrapper:before,
+.uwaa-convio-wrapper:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper:after {
+  clear: both;
+}
+.uwaa-convio-wrapper:before,
+.uwaa-convio-wrapper:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper:after {
+  clear: both;
+}
+.uwaa-convio-wrapper:before,
+.uwaa-convio-wrapper:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper:after {
+  clear: both;
+}
+.uwaa-convio-wrapper > .navbar-header,
+.uwaa-convio-wrapper > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .uwaa-convio-wrapper > .navbar-header,
+  .uwaa-convio-wrapper > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.uwaa-convio-wrapper .branding-header {
+  margin-left: -15px;
+  margin-right: -15px;
   background-color: #4b2e83;
+  height: 150px;
 }
-@font-face {
-  font-family: 'Encode Sans Compressed';
-  src: url('assets/fonts/encodesanscondensed-400-regular-webfont.eot');
-  src: url('assets/fonts/encodesanscondensed-400-regular-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscondensed-400-regular-webfont.woff') format('woff'), url('assets/fonts/encodesanscondensed-400-regular-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscondensed-400-regular-webfont.svg#encodesanscondensed-400-regular-webfont') format('svg');
-  font-weight: 400;
-  font-style: normal;
+.uwaa-convio-wrapper .branding-header:before,
+.uwaa-convio-wrapper .branding-header:after {
+  content: " ";
+  display: table;
 }
-@font-face {
-  font-family: 'Encode Sans Compressed';
-  src: url('assets/fonts/encodesanscondensed-500-medium-webfont.eot');
-  src: url('assets/fonts/encodesanscondensed-500-medium-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscondensed-500-medium-webfont.woff') format('woff'), url('assets/fonts/encodesanscondensed-500-medium-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscondensed-500-medium-webfont.svg#encodesanscondensed-500-medium-webfont') format('svg');
-  font-weight: 500;
-  font-style: normal;
+.uwaa-convio-wrapper .branding-header:after {
+  clear: both;
 }
-@font-face {
-  font-family: 'Encode Sans Compressed';
-  src: url('assets/fonts/encodesanscompressed-600-semibold-webfont.eot');
-  src: url('assets/fonts/encodesanscompressed-600-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-600-semibold-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-600-semibold-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-600-semibold-webfont.svg#encodesanscompressed-600-semibold-webfont') format('svg');
-  font-weight: 600;
-  font-style: normal;
+.uwaa-convio-wrapper .branding-header:before,
+.uwaa-convio-wrapper .branding-header:after {
+  content: " ";
+  display: table;
 }
-@font-face {
-  font-family: 'Encode Sans Compressed';
-  src: url('assets/fonts/encodesanscompressed-700-bold-webfont.eot');
-  src: url('assets/fonts/encodesanscompressed-700-bold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-700-bold-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-700-bold-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-700-bold-webfont.svg#encodesanscompressed-700-bold-webfont') format('svg');
-  font-weight: 700;
-  font-style: normal;
+.uwaa-convio-wrapper .branding-header:after {
+  clear: both;
 }
-@font-face {
-  font-family: 'Encode Sans Compressed';
-  src: url('assets/fonts/encodesanscompressed-800-extrabold-webfont.eot');
-  src: url('assets/fonts/encodesanscompressed-800-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-800-extrabold-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-800-extrabold-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-800-extrabold-webfont.svg#encodesanscompressed-800-extrabold-webfont') format('svg');
-  font-weight: 800;
-  font-style: normal;
+.uwaa-convio-wrapper .branding-header:before,
+.uwaa-convio-wrapper .branding-header:after {
+  content: " ";
+  display: table;
 }
-@font-face {
-  font-family: 'Encode Sans Compressed';
-  src: url('assets/fonts/encodesanscompressed-900-black-webfont.eot');
-  src: url('assets/fonts/encodesanscompressed-900-black-webfont.eot?#iefix') format('embedded-opentype'), url('assets/fonts/encodesanscompressed-900-black-webfont.woff') format('woff'), url('assets/fonts/encodesanscompressed-900-black-webfont.ttf') format('truetype'), url('assets/fonts/encodesanscompressed-900-black-webfont.svg#encodesanscompressed-900-black-webfont') format('svg');
-  font-weight: 900;
-  font-style: normal;
+.uwaa-convio-wrapper .branding-header:after {
+  clear: both;
 }
-.uwaa-convio-wrapper h1,
-.uwaa-convio-wrapper h2,
-.uwaa-convio-wrapper h3 {
-  color: #ffffff;
-  font-family: "Encode Sans Compressed", sans-serif;
+.uwaa-convio-wrapper .branding-header:before,
+.uwaa-convio-wrapper .branding-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .branding-header:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .event-registration-header {
+  margin-left: -15px;
+  margin-right: -15px;
+  height: 150px;
+}
+.uwaa-convio-wrapper .event-registration-header:before,
+.uwaa-convio-wrapper .event-registration-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .event-registration-header:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .event-registration-header:before,
+.uwaa-convio-wrapper .event-registration-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .event-registration-header:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .event-registration-header:before,
+.uwaa-convio-wrapper .event-registration-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .event-registration-header:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .event-registration-header:before,
+.uwaa-convio-wrapper .event-registration-header:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .event-registration-header:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-content {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.uwaa-convio-wrapper .convio-content:before,
+.uwaa-convio-wrapper .convio-content:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-content:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-content:before,
+.uwaa-convio-wrapper .convio-content:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-content:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-content:before,
+.uwaa-convio-wrapper .convio-content:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-content:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-content:before,
+.uwaa-convio-wrapper .convio-content:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-content:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-footer {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #4b2e83;
+  height: 100px;
+}
+.uwaa-convio-wrapper .convio-footer:before,
+.uwaa-convio-wrapper .convio-footer:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-footer:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-footer:before,
+.uwaa-convio-wrapper .convio-footer:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-footer:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-footer:before,
+.uwaa-convio-wrapper .convio-footer:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-footer:after {
+  clear: both;
+}
+.uwaa-convio-wrapper .convio-footer:before,
+.uwaa-convio-wrapper .convio-footer:after {
+  content: " ";
+  display: table;
+}
+.uwaa-convio-wrapper .convio-footer:after {
+  clear: both;
 }
 #map {
   position: absolute;
