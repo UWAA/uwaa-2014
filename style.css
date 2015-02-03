@@ -2821,9 +2821,11 @@ a#memberCheckerLogout {
   cursor: pointer;
 }
 #join-renew-buttons {
-  padding: 20px 20px 20px 40px;
+  padding: 14px 0 2px 20px;
   background-color: white;
   margin-top: -124px;
+  margin-left: 20px;
+  line-height: 1.2;
 }
 #join-renew-buttons .uwaa-btn-wrapper {
   margin-right: 0;
@@ -2860,6 +2862,7 @@ a#memberCheckerLogout {
   #join-renew-buttons {
     margin-top: 0;
     padding: 20px 0 40px 0;
+    margin-left: 0;
   }
 }
 .page-membership .uw-sidebar-menu,
@@ -2870,6 +2873,7 @@ a#memberCheckerLogout {
   #join-renew-buttons {
     margin-top: 0;
     padding: 20px 20px 0 0;
+    margin-left: 0;
   }
 }
 #store {
