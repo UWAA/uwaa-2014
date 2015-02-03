@@ -3,7 +3,11 @@
 class MetaBoxes
 {
 
+    protected $post;
+
     function __construct() {
+
+        $this->post = $post;
         $this->add_pullquote_meta();
         $this->add_tours_meta();
         $this->add_tours_map_meta();
@@ -13,6 +17,7 @@ class MetaBoxes
         $this->add_header_text_toggle();
         $this->add_major_market_toggle();
         $this->add_post_custom_actions();
+        // $this->add_gradpack_content_meta();
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
         add_filter('do_meta_boxes', array($this, 'renameFeaturedImage'), 0);
@@ -56,6 +61,9 @@ class MetaBoxes
             // remove_meta_box('tagsdiv-post_tag', 'post', 'normal');
             
         }
+
+
+       
 
         protected function add_tours_meta() {
             new \UWAA\CustomPostData('tours', array(
@@ -486,6 +494,138 @@ class MetaBoxes
             )
             );
 
+        }
+
+         protected function add_gradpack_content_meta()
+        {
+            
+
+            var_dump($post);
+
+            $dump = get_post_meta($post->ID, '_wp_page_template', true);
+
+            // echo $dump;
+
+            if(!empty($post))   {
+                $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
+                echo $pageTemplate;
+
+                if($pageTemplate == 'page-gradpack.php')
+                {
+
+                    new \UWAA\CustomPostData('gradpack', array(
+                'title' => 'Tour Information',
+                'pages' => array('page'),
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Row One Title',
+                        'id'=> 'row_one_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the first row.'
+                        ),
+                     array(
+                        'name' => 'Row One Content',
+                        'id'=> 'row_one_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the first row.'
+                        ),
+                      array(
+                        'name' => 'Row Two Title',
+                        'id'=> 'row_two_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the second row.'
+                        ),
+                     array(
+                        'name' => 'Row Two Content',
+                        'id'=> 'row_two_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the second row.'
+                        ),
+                      array(
+                        'name' => 'Row Three Title',
+                        'id'=> 'row_three_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the third row.'
+                        ),
+                     array(
+                        'name' => 'Row Three Content',
+                        'id'=> 'row_three_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the third row.'
+                        ),
+                      array(
+                        'name' => 'Row Four Title',
+                        'id'=> 'row_four_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the fourth row.'
+                        ),
+                     array(
+                        'name' => 'Row Four Content',
+                        'id'=> 'row_four_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the fourth row.'
+                        ),
+                      array(
+                        'name' => 'Row Five Title',
+                        'id'=> 'row_five_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the fifth row.'
+                        ),
+                     array(
+                        'name' => 'Row Five Content',
+                        'id'=> 'row_five_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the fifth row.'
+                        ),
+                      array(
+                        'name' => 'Row Six Title',
+                        'id'=> 'row_six_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the sixth row.'
+                        ),
+                     array(
+                        'name' => 'Row Six Content',
+                        'id'=> 'row_six_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the sixth row.'
+                        ),
+                      array(
+                        'name' => 'Row Seven Title',
+                        'id'=> 'row_seven_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the seventh row.'
+                        ),
+                     array(
+                        'name' => 'Row Seven Content',
+                        'id'=> 'row_seven_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the seventh row.'
+                        ),
+                      array(
+                        'name' => 'Row Eight Title',
+                        'id'=> 'row_eight_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the eighth row.'
+                        ),
+                     array(
+                        'name' => 'Row Eight Content',
+                        'id'=> 'row_eight_content',
+                        'type'=> 'text',
+                        'desc'=> 'The content text for the eighth row.'
+                        ),
+                                       
+
+                )
+            )
+            );
+
+
+
+                }
+
+            }
         }
 
 
