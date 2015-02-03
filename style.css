@@ -521,6 +521,9 @@ a.read-more-link:after {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+.uw-body-copy li {
+  margin-bottom: 15px;
+}
 .uwaa-btn {
   width: auto;
   background-color: #4b2e83;
