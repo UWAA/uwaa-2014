@@ -47,17 +47,22 @@
     .option-box{
         .make-sm-column(3);
         background-color: @purple;        
-        height: 250px;
+        height: 200px;
         text-transform: uppercase;
         text-align: center;
-        padding: 20px 15px;
+        padding: 20px 0px;
         border: 10px solid @white;
         cursor: pointer;
 
         h2, h3 {
             margin:0;
-            padding: 0 30px;
+            padding: 0 10px;
             color: @white;
+        }
+
+        h3{
+            font-size: 1.1em;
+            letter-spacing: 1.5px;
         }
 
         &:hover, &:active{
@@ -75,3 +80,12 @@
         }
     }    
 }
+
+
+@media (max-width: 767px) {
+    
+    .option-box{
+        height: 150px;
+    }
+
+    }

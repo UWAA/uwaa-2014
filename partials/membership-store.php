@@ -6,7 +6,13 @@ wp_enqueue_script('membershipStoreInit');
     <div id="store">
 
     <div class="row">
-        <div class="col-sm-3 col-sm-offset-9">            
+        <div class="col-sm-12">
+            <p>Would you like to join or renew your membership?</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">                        
             <div class="uwaa-btn-wrapper"><a class="uwaa-btn uwaa-btn-join btn-slant-right" href="?join">Join</a></div>
             <div class="uwaa-btn-wrapper"><a class="uwaa-btn uwaa-btn-renew btn-slant-left btn-gold" href="?renew">Renew</a></div>
         </div>
