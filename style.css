@@ -1199,7 +1199,7 @@ a.uwaa-btn:active {
   padding-left: 15px;
   padding-right: 15px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   height: 428px;
   background-color: #4b2e83;
