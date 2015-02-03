@@ -605,7 +605,7 @@ a.uwaa-btn:active {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   right: 10px;
 }
 .featured-post .copy .excerpt {
@@ -702,7 +702,7 @@ a.uwaa-btn:active {
     line-height: 1.1;
   }
   .featured-post.five-column .copy p.excerpt {
-    font-size: .8em;
+    font-size: .85em;
     line-height: 1.25;
   }
 }
