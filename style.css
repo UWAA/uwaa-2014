@@ -2888,6 +2888,38 @@ a#memberCheckerLogout {
     margin-left: 0;
   }
 }
+#membership-option-table {
+  border: none;
+}
+#membership-option-table a {
+  color: #5a5a5a;
+}
+#membership-option-table thead {
+  font-weight: 800;
+  height: 30px;
+  font-family: 'Encode Sans Compressed', sans-serif;
+  text-transform: uppercase;
+  background-color: #4b2e83;
+  color: #ffffff;
+}
+#membership-option-table thead td {
+  padding: 2px 5px;
+}
+#membership-option-table .subhead {
+  color: #4b2e83;
+  font-weight: 800;
+  height: 30px;
+  font-family: 'Encode Sans Compressed', sans-serif;
+  border-top: 15px solid #ffffff;
+}
+#membership-option-table tbody tr {
+  border-top: 1px solid #dddddd;
+}
+#membership-option-table tbody tr:nth-child(even) td,
+#membership-option-table tbody tr:nth-child(odd) td {
+  background-color: #ffffff;
+  padding: 2px 5px;
+}
 #store {
   min-height: 370px;
 }

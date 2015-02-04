@@ -128,14 +128,12 @@ a#memberCheckerLogout {
 
              &.uwaa-btn-join {
             width: 115px;
-        }
+              }
 
-        &.uwaa-btn-renew {
-            width: 90px;
-        }
-
-
-
+            &.uwaa-btn-renew {
+                width: 90px;
+            }
+    
         }
 
 
@@ -163,4 +161,54 @@ a#memberCheckerLogout {
         padding: 20px 20px 0 0;
         margin-left: 0;
     }
+}
+
+//Membership Option Table 
+
+#membership-option-table{
+    border: none;
+
+    a{
+        color: @darkgray;
+    }
+
+   
+    
+    thead {        
+        
+        font-weight: 800;
+        height: 30px;
+        font-family: 'Encode Sans Compressed', sans-serif;
+        text-transform: uppercase;
+        background-color: @purple;
+        color: @white;
+           
+    
+        td{
+            padding: 2px 5px;            
+        }    
+    
+    }
+
+    .subhead{        
+        color: @purple;
+        font-weight: 800;
+        height: 30px;
+        font-family: 'Encode Sans Compressed', sans-serif;
+        border-top: 15px solid @white;
+        
+
+    }
+    
+    tbody{
+
+        tr{
+            border-top: 1px solid @lightgray;
+        }
+         tr:nth-child(even) td, tr:nth-child(odd) td{
+            background-color: @white;
+            padding: 2px 5px;
+        }
+    }
+    
 }
