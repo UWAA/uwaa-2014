@@ -1198,11 +1198,13 @@ a.uwaa-btn:active {
 }
 .benefit-logo {
   position: relative;
+  float: left;
+  width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   height: 428px;
   background-color: #4b2e83;
@@ -1228,6 +1230,28 @@ a.uwaa-btn:active {
   font-size: 3.5em;
   vertical-align: middle;
   padding: 30px;
+}
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+  .benefit-logo {
+    height: 285.33333048px;
+  }
+  .benefit-logo h1 {
+    font-size: 3.2em;
+  }
+  .benefit-image {
+    height: 285.33333048px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .benefit-logo {
+    height: 235.4px;
+  }
+  .benefit-logo h1 {
+    font-size: 2.6em;
+  }
+  .benefit-image {
+    height: 235.4px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .benefit-logo {

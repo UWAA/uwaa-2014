@@ -19,9 +19,10 @@
 
 
 .benefit-logo{
-    .make-sm-column(6);    
+    .make-sm-column(6);
+    .make-xs-column(12)    ;
     background-repeat: no-repeat;
-    background-size: contain;    
+    background-size: cover;    
     background-position: center center;
     height: @benefit-height;
     background-color: @purple;
@@ -37,6 +38,35 @@
         vertical-align: middle;
         padding: 30px;
     }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .benefit-logo {
+        height: (@benefit-height * .66666666);
+         
+        h1 {        
+            font-size: 3.2em;
+        }
+    }
+
+    .benefit-image {
+         height: (@benefit-height * .66666666);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .benefit-logo {
+        height: (@benefit-height * .55);
+        h1 {        
+            font-size: 2.6em;
+        }
+    }
+
+    .benefit-image {
+         height: (@benefit-height * .55);
+    }
+
 }
 
 
