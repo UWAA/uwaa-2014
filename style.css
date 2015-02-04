@@ -1573,7 +1573,7 @@ div.map-logo.wenatchee {
   }
 }
 @media (max-width: 767px) {
-  .fact-box .fact-box {
+  .fact-box {
     text-align: center;
   }
 }
