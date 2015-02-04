@@ -5,13 +5,13 @@ $(document).ready(function() {
     var currentPage = parseURL(currentPage);
 
     //Caching Rows
+    var $baseSet = $('#join-renew-option-set');
     var $joinSet = $('#join-option-set');    
-    var $renewSet = $('#renewal-option-set');
+    var $renewSet = $('#renew-option-set');
     var $store = $('#store');
     var $breadcrumbs = $('#store-breadcrumbs');
     var $reset = $('#reset');
-    // var join-options = document.getElementByID(join);
-    // var join-options = document.getElementByID(join);
+    var $goback = $('#go-back');
 
 
     init();
@@ -20,60 +20,123 @@ $(document).ready(function() {
     $('.has-options').click(function(){
         var targetedOptions = this.id;
         var selectedType = $(this).find('h2').html();
-        console.log(selectedType);
-        $(this).parents(".option-row").hide(function() {
+        $(this).parents(".option-row").fadeOut(200, function() {
             $(this)
                 .siblings("#"+targetedOptions+"-options")
                 .fadeIn(600)
-                .data('showing', 'TRUE');
-            showBreadcrumbs(selectedType);
+                .data('showing', 'TRUE');            
+            $goback.show();
+            replaceBreadcrumbs(selectedType);
+
             });
     });
 
-    $reset.click(function(){
+
+    $reset.on('click', function(event){        
         reset();
+    })
+
+    $goback.on('click', function(event){        
+        goBack();
+    })
+
+    $('.main-options').click(function(){
+        var targetedOptions = this.id;
+        var selectedType = $(this).find('h2').html();
+         $(this).parents(".option-row").fadeOut(200, function() {
+            $store
+                .find("#"+targetedOptions+"-option-set")
+                .fadeIn(600)
+                .data('showing', 'TRUE');
+            $reset.show();
+            showBreadcrumbs(selectedType);
+        });
     })
   
 
+    function hideNonPrimaryRows() {
+        $store.find('.option-row').not('.primary').fadeOut(200);
+    }
+
+    function goBack() {
+
+        $store.find(".option-row:visible").fadeOut(200, function() {
+            $(this)
+                .siblings(".primary")
+                .fadeIn(600)
+                .data('showing', 'TRUE');
+            $goback.fadeOut('200');
+        });
+
+
+    }
+
+
+
     
     function reset() {
-        $store.find('.option-row:visible').hide();
-        $breadcrumbs.find('#reset').hide();
-        $breadcrumbs.find('span').html('Please select a membership option:');
-        console.log('resetting');
-        init();      
+        $store.find('.option-set:visible').fadeOut(200, function(event) {
+        $reset.fadeOut(200);
+        $goback.fadeOut('200');
+        $breadcrumbs.find('span').html('Would you like to join UWAA, or renew your current membership?');
+        hideNonPrimaryRows();  
+        init();
+        });       
+         
       
     }
 
     function init() {
-          if (currentPage.params.hasOwnProperty('renew')) {
+          if (currentPage.params.hasOwnProperty('renew')) {            
         $renewSet
             .find('.primary').show(function() {
-                $renewSet.fadeIn(600);    
+                $renewSet.fadeIn(600);
+                $breadcrumbs.find('span').html('Renew your membership');
+            })
+            
+        } else if (currentPage.params.hasOwnProperty('join'))  {
+        $joinSet
+            .find('.primary').show(function() {
+                $joinSet.fadeIn(600);
+                $breadcrumbs.find('span').html('Join UWAA');
             })
             
         } else {
-        $joinSet
-            .find('.primary').show(function() {
-                $joinSet.fadeIn(600);    
-            })
-            
+            $store
+            .find('.primary').show(function() {                
+                $baseSet.fadeIn(600);                
+            })  
         }
-    }
+    }    
 
-    $('.uwaa-btn-wrapper').click(function() {
-        init();
-    });
+    function replaceBreadcrumbs(rawMembershiptype){
+        var type = rawMembershiptype.charAt(0).toUpperCase() + rawMembershiptype.slice(1);
+        $breadcrumbs.find('span').html('You chose: ' + type + ' Membership');
+
+    }
     
+    function showGoBackButton(){
+        $goback.show();
+    }
 
     
 
     function showBreadcrumbs(rawMembershiptype)
     {
-        var type = rawMembershiptype.charAt(0).toUpperCase() + rawMembershiptype.slice(1);
-        console.log(type);
-        $breadcrumbs.find('#reset').show();
-        $breadcrumbs.find('span').html('You Chose: '+type + ' Membership');
+        var type = rawMembershiptype.charAt(0).toUpperCase() + rawMembershiptype.slice(1);        
+        switch(type){
+            case 'Join':
+                $breadcrumbs.find('span').html('Join UWAA');
+            break;
+
+            case 'Renew':
+                $breadcrumbs.find('span').html('Renew your membership');
+            break;
+
+            default:
+                ""
+        }
+        
     }
 
 

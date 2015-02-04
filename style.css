@@ -2894,14 +2894,17 @@ a#memberCheckerLogout {
 .option-set {
   display: none;
 }
-#store-breadcrumbs #reset {
+#store-breadcrumbs #reset,
+#store-breadcrumbs #go-back {
   cursor: pointer;
   display: none;
 }
-#store-breadcrumbs #reset:hover {
+#store-breadcrumbs #reset:hover,
+#store-breadcrumbs #go-back:hover {
   text-decoration: underline;
 }
-#store-breadcrumbs #reset:before {
+#store-breadcrumbs #reset:before,
+#store-breadcrumbs #go-back:before {
   background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
   opacity: .4;

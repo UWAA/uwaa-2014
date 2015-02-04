@@ -3,27 +3,19 @@ wp_enqueue_script('membershipStoreInit');
 
 ?>
 
-    <div id="store">
-
-    <div class="row">
-        <div class="col-sm-12">
-            <p>Would you like to join or renew your membership?</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">                        
-            <div class="uwaa-btn-wrapper"><a class="uwaa-btn uwaa-btn-join btn-slant-right" href="?join">Join</a></div>
-            <div class="uwaa-btn-wrapper"><a class="uwaa-btn uwaa-btn-renew btn-slant-left btn-gold" href="?renew">Renew</a></div>
-        </div>
-    </div>
+    <div id="store">    
 
     <div class="row" id="store-breadcrumbs">
         <div class="col-sm-4">
-            <span>Please select a membership option:</span>
+            <span>Would you like to join UWAA, or renew your current membership?</span>
         </div>
-        <div class="col-sm-2 col-sm-offset-1">            
-            <p id="reset">Go Back</p>
+        
+        <div class="col-sm-2 text-right col-sm-offset-3">
+            <p id="go-back">Go Back</p> 
+        </div>
+
+        <div class="col-sm-3  text-right">            
+            <p id="reset">Start Over</p>            
         </div>
         
     </div>
@@ -31,11 +23,28 @@ wp_enqueue_script('membershipStoreInit');
 
     
      
+    <div id="join-renew-option-set" class="option-set">
+        
+        <div class="option-row primary" id="join-renew">             
+
+                <div class="option-box main-options" id="join">
+                <h2>join</h2>
+                <h3>UWAA</h3>
+                </div>
+
+                <div class="option-box main-options" id="renew">
+                <h2>renew</h2>
+                <h3>Your Membership</h3>
+                </div>
+
+            </div>        
+
+    </div>
 
         
 
         <div id="join-option-set" class="option-set">
-             <div class="option-row primary" id="join">
+             <div class="option-row primary" id="join-options">
 
                 <div class="option-box has-options" id="annual-join">
                 <h2>annual</h2>
@@ -89,8 +98,8 @@ wp_enqueue_script('membershipStoreInit');
 
 
          <!-- Renewal -->
-         <div id="renewal-option-set" class="option-set">             
-             <div class="option-row primary" id="renew">
+         <div id="renew-option-set" class="option-set">             
+             <div class="option-row primary" id="renew-options">
 
                 <div class="option-box renew" id="annual-single-renew">
                 <h2>Annual Single</h2>
@@ -100,23 +109,15 @@ wp_enqueue_script('membershipStoreInit');
                 <div class="option-box renew" id="annual-joint-renew">
                 <h2>Annual Joint</h2>
                 <h3>Membership</h3>
-                </div>
-                
-                <div class="option-box upgrade" id="life-single-upgrade">
-                <h2>Life Single</h2>
-                <h3>Membership</h3>
-                </div>
-                
-                <div class="option-box upgrade" id="life-joint-upgrade">
-                <h2>Life Joint</h2>
-                <h3>Membership</h3>
-                </div>
+                </div>               
+               
                  
              </div>
          </div>
 
      </div>    
-        
+    
+
 
 
 
