@@ -1542,6 +1542,8 @@ div.map-logo.wenatchee {
 }
 .fact-box {
   margin-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .fact-box .fact-container {
   background-color: #4b2e83;
@@ -1554,6 +1556,8 @@ div.map-logo.wenatchee {
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 0 5px;
+  text-align: center;
+  font-size: 27px;
 }
 .fact-box .fact-container p {
   color: #ffffff;
