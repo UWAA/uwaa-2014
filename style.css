@@ -2898,6 +2898,7 @@ a#memberCheckerLogout {
 #store-breadcrumbs #go-back {
   cursor: pointer;
   display: none;
+  margin-left: 15px;
 }
 #store-breadcrumbs #reset:hover,
 #store-breadcrumbs #go-back:hover {

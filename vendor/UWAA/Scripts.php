@@ -99,9 +99,9 @@ class Scripts
         'admin'   => false
         
       ),
-        'handlebars' => array (
-        'id'      => 'handlebars',
-        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/handlebars/handlebars.min.js',
+        'velocity' => array (
+        'id'      => 'velocity',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/velocity/velocity.min.js',
         'deps'    => array(),
         'version' => '2.0',
         'in_footer' => true,
@@ -110,7 +110,7 @@ class Scripts
         'membershipStoreInit' => array (
         'id'      => 'membershipStoreInit',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/membershipStoreInit' . $this->min_script() . '.js',
-        'deps'    => array('backbone', 'jquery-effects-fade'),
+        'deps'    => array('velocity'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false

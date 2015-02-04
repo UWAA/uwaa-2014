@@ -20,12 +20,12 @@ $(document).ready(function() {
     $('.has-options').click(function(){
         var targetedOptions = this.id;
         var selectedType = $(this).find('h2').html();
-        $(this).parents(".option-row").fadeOut(200, function() {
+        $(this).parents(".option-row").fadeOut(300, function() {
             $(this)
                 .siblings("#"+targetedOptions+"-options")
-                .fadeIn(600)
+                .fadeIn(300)
                 .data('showing', 'TRUE');            
-            $goback.show();
+            $goback.fadeIn().css("display","inline-block");
             replaceBreadcrumbs(selectedType);
 
             });
@@ -43,29 +43,31 @@ $(document).ready(function() {
     $('.main-options').click(function(){
         var targetedOptions = this.id;
         var selectedType = $(this).find('h2').html();
-         $(this).parents(".option-row").fadeOut(200, function() {
+         $(this).parents(".option-row").fadeOut(300, function() {
             $store
                 .find("#"+targetedOptions+"-option-set")
-                .fadeIn(600)
+                .fadeIn(300)
                 .data('showing', 'TRUE');
-            $reset.show();
+            $reset.fadeIn().css("display","inline-block");
             showBreadcrumbs(selectedType);
         });
     })
   
 
     function hideNonPrimaryRows() {
-        $store.find('.option-row').not('.primary').fadeOut(200);
+        $store.find('.option-row').not('.primary').fadeOut(300);
     }
 
     function goBack() {
 
-        $store.find(".option-row:visible").fadeOut(200, function() {
+        $store.find(".option-row:visible").fadeOut(300, function() {
             $(this)
                 .siblings(".primary")
-                .fadeIn(600)
+                .fadeIn(300)
                 .data('showing', 'TRUE');
-            $goback.fadeOut('200');
+            $goback.fadeOut('300').css({
+                display: 'inline-block'
+            });
         });
 
 
@@ -75,9 +77,9 @@ $(document).ready(function() {
 
     
     function reset() {
-        $store.find('.option-set:visible').fadeOut(200, function(event) {
-        $reset.fadeOut(200);
-        $goback.fadeOut('200');
+        $store.find('.option-set:visible').fadeOut(300, function(event) {
+        $reset.fadeOut(300);
+        $goback.fadeOut('300');
         $breadcrumbs.find('span').html('Would you like to join UWAA, or renew your current membership?');
         hideNonPrimaryRows();  
         init();
@@ -90,21 +92,21 @@ $(document).ready(function() {
           if (currentPage.params.hasOwnProperty('renew')) {            
         $renewSet
             .find('.primary').show(function() {
-                $renewSet.fadeIn(600);
+                $renewSet.fadeIn(300);
                 $breadcrumbs.find('span').html('Renew your membership');
             })
             
         } else if (currentPage.params.hasOwnProperty('join'))  {
         $joinSet
             .find('.primary').show(function() {
-                $joinSet.fadeIn(600);
+                $joinSet.fadeIn(300);
                 $breadcrumbs.find('span').html('Join UWAA');
             })
             
         } else {
             $store
             .find('.primary').show(function() {                
-                $baseSet.fadeIn(600);                
+                $baseSet.fadeIn(300);                
             })  
         }
     }    
@@ -116,7 +118,7 @@ $(document).ready(function() {
     }
     
     function showGoBackButton(){
-        $goback.show();
+        $goback.fadeIn().css("display","inline-block");
     }
 
     

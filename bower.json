@@ -4,7 +4,8 @@
   "description": "A child theme built on the 2014 boundless UW theme",
   "dependencies": {
     "isotope": "latest",
-    "handlebars" : "latest"
+    "handlebars" : "latest",
+    "velocity" : "latest"
   },
   "overrides": {
     "isotope": {
@@ -14,6 +15,10 @@
     "handlebars": {
       "dependencies": "handlebars",
       "main": "handlebars.min.js"
+    },
+    "velocity" : {
+      "dependencies": "null",
+      "main": "velocity.min.js"
     }
   },
   "devDependencies": {
