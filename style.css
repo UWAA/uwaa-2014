@@ -1572,6 +1572,11 @@ div.map-logo.wenatchee {
     font-size: .80em;
   }
 }
+@media (max-width: 767px) {
+  .fact-box .fact-container .fact-box {
+    text-align: center;
+  }
+}
 .uw-homepage-slider-container {
   position: relative;
   height: 450px;
@@ -2921,7 +2926,7 @@ a#memberCheckerLogout {
   padding: 2px 5px;
 }
 #store {
-  min-height: 370px;
+  min-height: 270px;
 }
 .option-set {
   display: none;
