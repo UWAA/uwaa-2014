@@ -1565,7 +1565,7 @@ div.map-logo.wenatchee {
   font-size: .85em;
 }
 @media only screen and (min-width: 993px) and (max-width: 1199px) {
-  .fact-box .fact-container h1 {
+  .fact-box .fact-container h2 {
     font-size: 24px;
   }
   .fact-box .fact-container p {
