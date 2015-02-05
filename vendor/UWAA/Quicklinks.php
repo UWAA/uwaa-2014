@@ -56,56 +56,56 @@ class QuickLinks
     $defaultMenu = array(
          array(
          "title" => "MyUW",
-         "url" => "http:\/\/myuw.washington.edu",
+         "url" => "http://myuw.washington.edu",
          "classes" => array(
             "icon-myuw"
                  )
           ),
           array(
               "title" => "Calendar",
-              "url" => "http:\/\/uw.edu\/calendar",
+              "url" => "http://uw.edu/calendar",
               "classes" => array(
                  "icon-calendar"
                  )
           ),
           array(
               "title" => "Directories",
-              "url" => "http:\/\/uw.edu\/directory\/",
+              "url" => "http://uw.edu/directory/",
               "classes" => array(
                  "icon-directories"
                  )
           ),
           array(
               "title" => "Libraries",
-              "url" => "http:\/\/www.lib.washington.edu\/",
+              "url" => "http://www.lib.washington.edu/",
               "classes" => array(
                  "icon-libraries"
                  )
           ),
           array(
               "title" => "UW Medicine",
-              "url" => "http:\/\/www.uwmedicine.org",
+              "url" => "http://www.uwmedicine.org",
               "classes" => array(
                  'icon-medicine'
                  )
           ),
           array(
               "title" => "Maps",
-              "url" => "http:\/\/uw.edu\/maps",
+              "url" => "http://uw.edu/maps",
               "classes" => array(
                  "icon-maps"
                  )
           ),
           array(
               "title" => "UW Today",
-              "url" => "http:\/\/www.uw.edu\/news",
+              "url" => "http://www.uw.edu/news",
               "classes" => array(
                  "icon-uwtoday"
                  )
           ),
           array(
               "title" => "Columns",
-              "url" => "http:\/\/www.uw.edu\/alumni\/columns",
+              "url" => "http://www.uw.edu/alumni/columns",
               "classes" => array(
                  "icon-columns"
                  )

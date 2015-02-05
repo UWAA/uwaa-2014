@@ -20,7 +20,19 @@
 
 <ul>
 <li class="hide">
-<label for="comment">Do Not Fill This Out</label>
+<label class="desc" id="title5" for="Field5">
+Title of Tour Being Viewed
+</label>
+
+<input id="Field5" name="Field5" type="text" class="field text medium" value="<?php the_title(); ?>" maxlength="255" tabindex="4" onkeyup="" />
+    <label class="desc" id="title6" for="Field6">
+        URL of Page Being Viewed
+    </label>
+
+<input id="Field6" name="Field6" type="text" class="field text medium" value="<?php the_permalink(); ?>" maxlength="255" tabindex="5" onkeyup=""/>
+    <label for="comment">
+        Do Not Fill This Out
+    </label>
 <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
 <input type="hidden" id="idstamp" name="idstamp" value="jY5QxUwXh+yRvWD2B3vyJT7WN5w5N90yj/KwMm9RJ/w=" />
 </li>
