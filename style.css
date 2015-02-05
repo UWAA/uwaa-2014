@@ -3502,3 +3502,11 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
     right: -14px;
   }
 }
+#uw-container #quicklinks ul#big-links li span.icon-columns {
+  display: block;
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: url(assets/uwaa-sprite.svg) no-repeat 0 0;
+  background-position: -284px -303px;
+}

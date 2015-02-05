@@ -102,6 +102,13 @@ class QuickLinks
               "classes" => array(
                  "icon-uwtoday"
                  )
+          ),
+          array(
+              "title" => "Columns",
+              "url" => "http:\/\/www.uw.edu\/alumni\/columns",
+              "classes" => array(
+                 "icon-columns"
+                 )
           ),  
     );
 
