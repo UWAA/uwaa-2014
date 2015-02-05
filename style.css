@@ -1588,6 +1588,14 @@ div.map-logo.wenatchee {
   line-height: 1.4;
   font-size: .85em;
 }
+@media only screen and (min-width: 1201px) {
+  .fact-box .fact-container {
+    height: 170px;
+  }
+  .fact-box .fact-container p {
+    font-size: .95em;
+  }
+}
 @media only screen and (min-width: 993px) and (max-width: 1199px) {
   .fact-box .fact-container h2 {
     font-size: 24px;
