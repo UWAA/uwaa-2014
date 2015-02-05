@@ -1600,11 +1600,11 @@ div.map-logo.wenatchee {
   }
 }
 @media (max-width: 767px) {
-  .fact-box {
+  .fact-box .fact-container {
     height: 140px;
     text-align: center;
   }
-  .fact-box p {
+  .fact-box .fact-container p {
     font-size: .95em;
   }
 }
