@@ -1060,6 +1060,9 @@ a.uwaa-btn:active {
   height: 260px;
   overflow: hidden;
 }
+.uwaa-chapter-header.profile {
+  height: 428px;
+}
 .uwaa-chapter-header .chapter-image-column {
   position: relative;
   min-height: 1px;
@@ -2406,9 +2409,6 @@ div.map-logo.wenatchee {
 .uw-hero-image.about {
   background: url(assets/headers/Page_Header_About.jpg) center center;
   background-size: cover;
-}
-.single-post .uwaa-chapter-header {
-  height: 438px;
 }
 @media only screen and (max-width: 767px) {
   .single-post .uwaa-chapter-header {
