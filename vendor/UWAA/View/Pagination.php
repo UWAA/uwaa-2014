@@ -111,9 +111,9 @@ CONTENT;
             case 'benefits':              
                 return ''. $homeURL .'membership/benefits';
             break;
-                return ''. $homeURL .'stories';
-            default:
                 
+            default:
+                return ''. $homeURL .'stories';
                
             break;
         }       
