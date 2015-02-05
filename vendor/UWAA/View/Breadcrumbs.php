@@ -41,7 +41,8 @@ class Breadcrumbs {
         if ( has_category() )
         {
           $category = array_shift( get_the_category( $post->ID  ) ) ;
-          $html .=  '<li><a href="'  . get_category_link( $category->term_id ) .'" title="'. get_cat_name( $category->term_id ).'">'. get_cat_name($category->term_id ) . '</a>';
+          $html .= '<li><a href="'  . home_url('/') .'stories" title="Stories">Stories</a></li>';
+          // $html .=  '<li><a href="'  . get_category_link( $category->term_id ) .'" title="'. get_cat_name( $category->term_id ).'">'. get_cat_name($category->term_id ) . '</a>';
         }
         if ( $this->UWAAIsCustomPostType() )
         {
@@ -65,7 +66,7 @@ class Breadcrumbs {
               break;
           	
           	default:
-          		# code...
+          		
           		break;
           }
           
