@@ -5,11 +5,16 @@
 
 //@TODO  Make a better system for these communities headers
 $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
-if (has_category(array('Profile', 'Communities'))) {
+if (has_category('Profile')) {
+  echo '<div class="uwaa-chapter-header">';
+  get_template_part('partials/profile-header');
+  echo '</div>';
+} elseif (has_category('Communities')) {
   echo '<div class="uwaa-chapter-header">';
   get_template_part('partials/chapter-header');
   echo '</div>';
-} elseif ($featureImage) {
+}
+ elseif ($featureImage) {
     ?>
   <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
     <?php    
