@@ -38,7 +38,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');    
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
-        $this->postSubtitle = parent::getPostSubtitle($query);
+        $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         
@@ -48,6 +48,21 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 
     wp_reset_postdata();    
 
+  }
+
+
+   protected function getPostSubtitle($post)
+  {
+
+   $postSubtitle = $this->getTourDestination($post);
+
+   if (!empty($postSubtitle)):
+    return $postSubtitle;
+  endif;
+    
+  $postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
+    return $postSubtitle;
+      
   }
 
   private function getListOfTerms()
@@ -90,8 +105,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     } 
     return '<img src="http://fpoimg.com/275x190?text=FPO" />';
 
-   }  
-
+   }
 
 	public function buildTemplate(){
     $callout = $this->renderCallout();
