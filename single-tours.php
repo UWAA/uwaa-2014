@@ -20,6 +20,9 @@
 
       <div class="uw-body-copy">
             <?php
+
+
+            new \UWAA\View\Pagination('tours', get_the_ID());
                 // // Start the Loop.
                 // while ( have_posts() ) : the_post();
 
