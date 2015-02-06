@@ -3,7 +3,7 @@ get_header();
 wp_enqueue_script(array('communitiesMap'));
 wp_enqueue_style('mapbox');
 wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api/communities/geojson')  ) );
-
+$communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
 
 ?>
@@ -54,7 +54,7 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
      <div class="col-md-4 uw-sidebar">
     <?php    
 
-        $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
+       
 
         $communitiesSidebarMenu->renderCommunitiesChapterMenu();  
         

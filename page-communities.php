@@ -3,7 +3,7 @@ get_header();
 wp_enqueue_script(array('communitiesMap', 'superHero'));
 wp_enqueue_style('mapbox');
 wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api/communities/geojson')  ) );
-
+$communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
 ?>
 
@@ -38,9 +38,9 @@ endif;
 
   <?php
 
-$communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
-$communitiesSidebarMenu->renderMobileCommunitiesChapterMenu(); 
+
+
  ?>
 
   

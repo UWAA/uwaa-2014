@@ -3,7 +3,7 @@ get_header();
 wp_enqueue_script(array('communitiesMap'));
 wp_enqueue_style('mapbox');
 wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api/communities/geojson')  ) );
-
+$communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
 
 ?>
@@ -32,7 +32,7 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
              */
             // get_template_part( 'content', 'page' );
             // 
-             include(locate_template( 'content-page-superhero.php' ));
+             include(locate_template( 'content-page-communities.php' ));
 
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) {
@@ -58,7 +58,7 @@ wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api
 
     <?php    
 
-       $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
+       
 
         $communitiesSidebarMenu->renderCommunitiesChapterMenu();  
         
