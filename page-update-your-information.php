@@ -1,8 +1,5 @@
 <?php 
 get_header(); 
-wp_enqueue_script('membershipStoreInit');
-
-
 ?>
 
 
@@ -17,13 +14,10 @@ wp_enqueue_script('membershipStoreInit');
 
     <h2 class="uw-site-title">UWAA Membership</h2>
 
-  <?php get_template_part('partials/page', 'breadcrumbs') ?>
+  <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
       <div class="uw-body-copy">
-
-      <div id="storeApp">
-        
-      </div>
+      
 
         <?php
           // Start the Loop.
@@ -35,6 +29,13 @@ wp_enqueue_script('membershipStoreInit');
              * (where ___ is the post format) and that will be used instead.
              */
             get_template_part( 'content', 'page' );
+
+            $headers = "?reference=UWAA&hideComments=yes&personOrOrg=P";
+            ?>
+            
+            <iframe id="givingFrame" width="520" scrolling="no" height="2900" frameborder="0" src="https://online.gifts.washington.edu/bioupdate<?php echo $headers;?>"> … </iframe>
+            
+            <?php
 
             // If comments are open or we have at least one comment, load up the comment template.
             if ( comments_open() || get_comments_number() ) {
@@ -57,7 +58,7 @@ wp_enqueue_script('membershipStoreInit');
      <div class="col-md-4 uw-sidebar">
     <?php         
         uw_sidebar_menu();
-        dynamic_sidebar( 'membership_sidebar' ); 
+        dynamic_sidebar( 'services_sidebar' ); 
     ?>   
     </div>
 
