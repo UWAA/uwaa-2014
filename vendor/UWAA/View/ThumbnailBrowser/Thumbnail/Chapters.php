@@ -79,7 +79,7 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');    
         // $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'original');    
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));        
-        $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 90);
+        $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 80));
         
         echo $this->buildTemplate();
 

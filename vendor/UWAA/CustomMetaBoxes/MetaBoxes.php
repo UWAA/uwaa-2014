@@ -114,6 +114,12 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "Provide the URL for the Tour Map you have uploaded to WordPress (via the Media Gallery or this page)."
                         ),
+                     array(
+                        'name' => '80 Character Excerpt',
+                        'id'=> '80_character_excerpt',
+                        'type'=> 'textarea',
+                        'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
+                        ),
                                        
 
                 )
@@ -352,7 +358,14 @@ class MetaBoxes
                         'id'=> 'thumbnail_callout',
                         'type'=> 'text',
                         'desc'=> "This text will show up in the small purple line on the thumbnail."
-                        ), 
+                        ),
+                    array(
+                        'name' => '80 Character Excerpt',
+                        'id'=> '80_character_excerpt',
+                        'type'=> 'textarea',
+                        'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
+                        ),
+                            
                      
 
                 )
@@ -411,6 +424,13 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> 'If this event should link to an external page, write the URL here. Leave this blank for any event with a landing page on our site.'
                         ),
+                    array(
+                        'name' => '80 Character Excerpt',
+                        'id'=> '80_character_excerpt',
+                        'type'=> 'textarea',
+                        'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
+                        ),
+                           
 
                     )
             )
@@ -484,12 +504,19 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "This text will show up in the small purple line on the thumbnail."
                         ),
-                    array(
+                        array(
                         'name' => 'Content Head',
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
                         'desc'=> "Small gold text that appears below the image in a featured post thumbnail.  E.g. New York Huskies, Member 101 Series."
-                        ), 
+                        ),
+                        array(
+                        'name' => '80 Character Excerpt',
+                        'id'=> '80_character_excerpt',
+                        'type'=> 'textarea',
+                        'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
+                        ),
+                            
                     )
             )
             );
