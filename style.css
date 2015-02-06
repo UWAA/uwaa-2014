@@ -3149,17 +3149,17 @@ a#memberCheckerLogout {
 .pagination-buttons:before {
   content: "";
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   top: 0;
   -webkit-transform: skew(-20deg);
   -moz-transform: skew(-20deg);
   -ms-transform: skew(-20deg);
   -o-transform: skew(-20deg);
   transform: skew(-20deg);
-  background-color: #ffffff;
-  height: 85px;
+  background-color: #e3e3e3;
+  height: 75px;
   width: 86px;
-  right: -53px;
+  right: 0px;
 }
 .pagination-buttons .pagination-title {
   display: table-cell;
@@ -3509,7 +3509,7 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
     margin-left: 0;
   }
   .pagination-buttons:before {
-    right: -14px;
+    right: 42px;
   }
 }
 #uw-container #quicklinks ul#big-links li span.icon-columns {
