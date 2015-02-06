@@ -28,6 +28,7 @@ if (!isset($UWAA)){
 
 function setup_uw_object() {
   $UW = new UWAA\UW;
+  return $UW;
 }
 
 
