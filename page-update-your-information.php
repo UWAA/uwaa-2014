@@ -31,9 +31,11 @@ get_header();
             get_template_part( 'content', 'page' );
 
             $headers = "?reference=UWAA&hideComments=yes&personOrOrg=P";
-            ?>
             
-            <iframe id="givingFrame" width="520" scrolling="no" height="2900" frameborder="0" src="https://online.gifts.washington.edu/bioupdate<?php echo $headers;?>"> … </iframe>
+            ?>
+            <div class="text-center">
+              <iframe id="givingFrame" width="520" scrolling="no" height="1725" frameborder="0" src="https://online.gifts.washington.edu/bioupdate<?php echo $headers;?>"> … </iframe>
+            </div>
             
             <?php
 
