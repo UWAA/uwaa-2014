@@ -42,8 +42,8 @@ else {
 
             <?php
 
-            new \UWAA\View\Pagination('tours', get_the_ID());
-            
+            new \UWAA\View\Pagination('post', get_the_ID());
+
                 // Start the Loop.
                 while ( have_posts() ) : the_post();
 
