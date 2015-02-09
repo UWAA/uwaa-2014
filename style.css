@@ -491,8 +491,9 @@ h6.intro-head {
 .quote-author {
   font-weight: 600;
   float: right;
+  text-align: right;
   color: #b7a57a;
-  font-size: 1em;
+  font-size: .95em;
   line-height: 1.1;
   padding-top: 0.471em;
 }
@@ -3452,7 +3453,7 @@ hr {
   margin-top: 20px;
 }
 .widget {
-  padding: 15px 0 0 40px;
+  padding: 25px 0 0 40px;
 }
 ul.uw-sidebar-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:before,
 ul.uw-mobile-menu li.pagenav ul li.current_page_item ul.children li.current_page_item ul.children a:before,

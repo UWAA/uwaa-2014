@@ -56,11 +56,13 @@
       echo '<img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" />';
       echo '</div>';
      }
+        get_template_part('partials/forms', 'travel-newsletter');
+
         dynamic_sidebar( 'travel_sidebar' );
        
         the_widget("UWAA\Widgets\SocialSidebar");
 
-        get_template_part('partials/forms', 'travel-newsletter');
+        
         endwhile;
     ?>
     </div>
