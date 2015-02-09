@@ -63,7 +63,7 @@ CONTENT;
     private function createButton($ID, $text = '') {
             
         $title = get_the_title($ID);
-        $link = get_permalink($ID);
+        $link = "" . get_permalink($ID) ."#pagination-top";
         $class = strtolower($text);
 
         $content = <<<CONTENT

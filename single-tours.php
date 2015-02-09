@@ -5,7 +5,7 @@
   
 
 ?>
-
+<a name="pagination-top"></a>
 
 
 <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>

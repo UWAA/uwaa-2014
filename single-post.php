@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<a name="pagination-top"></a>
 
 <?php 
 
@@ -30,8 +30,8 @@ else {
 <div class="container uw-body">
 
   <div class="row">
-
-    <div <?php uw_content_class(); ?> role='main'>
+    
+    <div <?php uw_content_class(); ?> role='main' >
 
       <?php if ($defaultHeader) { uw_site_title(); }; ?>
 
