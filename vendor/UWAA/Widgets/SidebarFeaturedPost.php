@@ -184,6 +184,13 @@ class SidebarFeaturedPost extends \WP_Widget
   
   }
 
+  private function shortenExcerpt($string, $excerptLength) {
+
+      $shortenedString = substr($string, 0, $excerptLength);
+
+      return $shortenedString;
+    }
+
 
 
   private function extractPostInformation($query) 

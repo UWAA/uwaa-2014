@@ -1,5 +1,5 @@
 <div id="tours-signup" class="widget">
-<h2 class="widgettitle">Travel E-News</h2>
+<h2 class="widgettitle">Sign up for Travel Updates</h2>
 <form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
       action="https://uwalum.wufoo.com/forms/q1vws8101tef77m/#public">
 
