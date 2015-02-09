@@ -375,7 +375,7 @@
   display: table;
   border-top: solid 1px #b7a57a;
   border-bottom: solid 1px #b7a57a;
-  width: 75%;
+  width: 100%;
 }
 .filter-row h2.filter-head {
   display: table-cell;
