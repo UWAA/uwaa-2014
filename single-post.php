@@ -50,7 +50,7 @@ else {
                 ?>
 
                 <h1>
-                  <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a>
+                  <a href="main_content" title="Main Content"><?php the_title() ?></a>
                 </h1>
               
 
