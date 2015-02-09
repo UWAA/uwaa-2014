@@ -70,7 +70,21 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
       'post_type' => 'post',
       'orderby' => 'title',      
       'order' => 'ASC',  
-      'posts_per_page' => -1
+      'posts_per_page' => -1,
+      'tax_query' => array(
+        'relation' => 'AND',
+        // array(
+        //   'taxonomy' => 'destinations',
+        //   'field'    => 'name',
+        //   'terms'    => array( 'asia')
+        // ),
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    => array( 'exclude-from-search'),
+          'operator'  => 'NOT IN'
+          )
+      ) //End tax query 
       );
 
     return $args;
@@ -95,8 +109,9 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
       $callout
 		  $image
     </div>
-		<div class="copy">		
-		<h4>$this->postTitle</h4>
+		<div class="copy">
+    <h6 class="subtitle">$this->postSubtitle</h6>
+		<h4 class="title">$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
 		<p>$this->postExcerpt</p>
 		</div>
