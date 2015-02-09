@@ -12,21 +12,24 @@ wp_enqueue_style('gradpack');
 <div class="gradpack">
 
       <div id="header">
-      <div id="header-bg"></div>  
-      <div id="header-fore"></div>        
+        <div id="header-bg"></div>  
+        <div id="header-fore"></div>
+  
+         
+            <h1>Con<strong>grad</strong>ulations<br/> Class of 2014!</h1>
+        
     </div>
 
       <a href="#flickr"><div id="yellow-dot">Find<br/>Your Free<br/>Photo<span></span></div></a>
       <div class="join-row">
         <div class="wrapper loveUW">
             <h1>Love the UW? You&#8217;ve got to be a UWAA&nbsp;member!</h1>
-            <div class="uwaa-btn-wrapper join-row"><a class="uwaa-btn btn-slant-left btn-purple" href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" target="_blank">Join Now</a></div>
+            <div class="uwaa-btn-wrapper join-row"><a class="uwaa-btn btn-slant-left btn-purple" href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" target="_blank">Join Now</a></div>            
+      </div>
         </div>
       </div>
     
-      <div id="conGRADulations">
-          <h1>Con<strong>grad</strong>ulations<br/> Class of 2014!</h1>
-      </div>
+     
 
  
 

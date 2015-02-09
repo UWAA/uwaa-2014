@@ -35,6 +35,8 @@ get_header();
           
           get_template_part('partials/membership', 'store');
 
+          echo "<a name=\"pricing\"></a>";
+
           the_content();
             
 

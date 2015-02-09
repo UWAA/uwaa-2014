@@ -376,7 +376,7 @@ Color Pallette
   height: 100px;
   position: absolute;
   margin-left: 10%;
-  top: 14%;
+  top: 18.5%;
   display: block;
   border-radius: 50%;
   background-color: #e0ba53;
@@ -401,6 +401,7 @@ Color Pallette
 @media (min-width: 1500px) {
   #yellow-dot {
     margin-left: 22%;
+    top: 16%;
   }
 }
 .join-row {
@@ -1064,7 +1065,7 @@ Color Pallette
   #yellow-dot {
     width: 80px;
     height: 80px;
-    top: 290px;
+    top: 18.2%;
     font-size: 15px;
   }
   #yellow-dot span {
@@ -1141,7 +1142,7 @@ Color Pallette
   #yellow-dot {
     width: 64px;
     height: 64px;
-    top: 325px;
+    top: 316px;
     font-size: 11px;
     margin-left: 0;
   }
@@ -1350,7 +1351,7 @@ Color Pallette
     height: 64px;
     width: 64px;
     margin: 0;
-    top: 190px;
+    top: 178px;
     font-size: 11px;
   }
   #yellow-dot span {
@@ -1538,5 +1539,14 @@ a.anchor {
   left: 0;
   padding-left: 20px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#header h1 {
+  position: absolute;
+  color: #ffffff;
+  top: 20px;
+  left: 15%;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 7px 0 0;
 }
