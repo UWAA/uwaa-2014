@@ -20,7 +20,7 @@ wp_enqueue_style('gradpack');
       <div class="join-row">
         <div class="wrapper loveUW">
             <h1>Love the UW? You&#8217;ve got to be a UWAA&nbsp;member!</h1>
-            <!-- <a href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" title="Join the UW Alumni Association"class="join-button"></a > -->
+            <div class="uwaa-btn-wrapper join-row"><a class="uwaa-btn btn-slant-left btn-purple" href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" target="_blank">Join Now</a></div>
         </div>
       </div>
     
@@ -151,7 +151,7 @@ wp_enqueue_style('gradpack');
         <div class="copy">
         <h2>Join the UW Alumni Association today!</h2>
         <p>Join the UWAA for just $30 (or become a life member for $500) and get a bonus Grad Pack.  This is a limited time offer just for new graduates and a fantastic opportunity to get your alumni experience off to a great start! Your Grad Pack contains a UW alumni license plate frame and more goodies just for new grads.</p>
-        <a href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" title="Join the UW Alumni Association"class="join-button"></a >
+        <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-left btn-purple" href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" target="_blank">Join Now</a></div>
       </div>
            
       </div>
@@ -183,17 +183,16 @@ wp_enqueue_style('gradpack');
         <div class="copy">
         <h2>Links for graduating seniors</h2>
         <p>Graduation is a busy time&#8212;make sure you’ve got what you need to shine on your big day!</p>
-        <ul>
+       
 
-          <li>Information about commencement:<br/>
-          
-           UW&nbsp;<a href="http://www.washington.edu/graduation/" target="_blank">Seattle</a>&nbsp;&nbsp;UW&nbsp;<a href="http://www.uwb.edu/commencement" target="_blank">Bothell</a>&nbsp;&nbsp;UW&nbsp;<a href="http://www.tacoma.uw.edu/events/content/commencement" target="_blank">Tacoma</a>
-          </li>
+          <h4>Information about commencement:</h4>
 
-          <li>Support your <a href="https://www.washington.edu/giving/senior-class-gift/" target="_blank">class gift</a> (all campuses)</li>
+          <p>UW&nbsp;<a href="http://www.washington.edu/graduation/" target="_blank">Seattle</a>&nbsp;&nbsp;UW&nbsp;<a href="http://www.uwb.edu/commencement" target="_blank">Bothell</a>&nbsp;&nbsp;UW&nbsp;<a href="http://www.tacoma.uw.edu/events/content/commencement" target="_blank">Tacoma</a></p>
+
+          <p>Support your <a href="https://www.washington.edu/giving/senior-class-gift/" target="_blank">class gift</a> (all campuses)</p>
          
-          <li>Keep in touch&#8212;<a href="https://www.washington.edu/alumni/subscribe/address-change.html" target="_blank">Update your contact info</a></li>
-        </ul>
+          <p>Keep in touch&#8212;<a href="https://www.washington.edu/alumni/subscribe/address-change.html" target="_blank">Update your contact info</a></p>
+        
       </div>
         
            

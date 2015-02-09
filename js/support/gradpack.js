@@ -13,6 +13,13 @@ var slideSizer = function(w) {
 }
 }
 
+$(window).load(function(){
+
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+
+    slideSizer(w);
+
+});
 
 $(document).ready(function(){
  
@@ -37,7 +44,7 @@ var numberOfSlides = 6;
 
 
 
-slideSizer(w);
+
 
 
 
