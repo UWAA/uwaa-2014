@@ -360,6 +360,12 @@ class MetaBoxes
                         'desc'=> "This text will show up in the small purple line on the thumbnail."
                         ),
                     array(
+                        'name' => 'Content Head',
+                        'id'=> 'thumbnail_subtitle',
+                        'type'=> 'text',
+                        'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour, or can be overwritten with this field.  Homepage featured posts should have this."
+                        ), 
+                    array(
                         'name' => '80 Character Excerpt',
                         'id'=> '80_character_excerpt',
                         'type'=> 'textarea',
