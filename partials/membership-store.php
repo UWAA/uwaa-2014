@@ -9,7 +9,7 @@ wp_enqueue_script('membershipStoreInit');
         <div class="col-sm-6">
             <span>Would you like to join UWAA, or renew your current membership?</span>
             <br/>
-            <span>See all membership <a href="#pricing">pricing options.</a></span>
+            <p>See all membership <a href="#pricing">pricing options.</a></p>
         </div>
 
         <div class="col-sm-4 col-sm-offset-2  text-right">
