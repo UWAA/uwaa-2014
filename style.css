@@ -3116,6 +3116,11 @@ a#memberCheckerLogout {
   outline: none !important;
   background-color: #f1eee4;
 }
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+  .uwaa-form input.half-column {
+    width: 100%;
+  }
+}
 .pagination-wrapper {
   position: relative;
   z-index: 0;
