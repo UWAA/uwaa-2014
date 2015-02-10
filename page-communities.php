@@ -57,7 +57,7 @@ endif;
              */
             
             echo '<div class="mobile-menu-row">';
-            include(locate_template( 'content-page-superhero.php' ));
+            include(locate_template( 'content-page-communities.php' ));
             echo '</div>';
 
             // If comments are open or we have at least one comment, load up the comment template.
