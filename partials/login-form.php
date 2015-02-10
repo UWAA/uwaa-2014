@@ -38,7 +38,9 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                     <input type="hidden" name="action" value="callMemberChecker">
                 </fieldset>
             </form>
+            <div id="form-message"></div>
             </div>
+
 
         <?php        
         }

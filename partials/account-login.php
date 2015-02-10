@@ -32,6 +32,8 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                 </fieldset>
             </form>
 
+            <div id="form-message"></div>
+
             <div class="accordion">
                 <div class="panel closed">
                     <h4 class="accordion-heading" aria-atomic="true" aria-live="polite">Log-In Help<span class="chevron closed"></span><span aria-expanded="false" class="indicator" style="position: absolute; clip: rect(1px 1px 1px 1px);">Collapsed</span></h4>

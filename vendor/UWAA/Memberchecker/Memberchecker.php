@@ -71,15 +71,30 @@ $memberID = filter_var($_POST["idNumber"], FILTER_SANITIZE_NUMBER_INT);
 $lastName = ucfirst(strtolower(trim(filter_var($_POST["lastName"], FILTER_SANITIZE_STRING))));
 
 if (empty($memberID)) {
-    die ('Please enter a valid Member ID Number');
+     $payload = array (
+        'error' => 'TRUE',
+        'message' =>'Please enter a valid Member ID Number'
+    );
+    echo json_encode($payload);
+    exit;    
 }
 
 if (empty($lastName)) {
-    die ('Please enter your last name');
+     $payload = array (
+        'error' => 'TRUE',
+        'message' =>'Please enter your last name'
+    );
+    echo json_encode($payload);
+    exit;    
 }
 
 if (!ctype_digit($memberID)) {
-    die ('Please enter a valid Member ID Number');
+     $payload = array (
+        'error' => 'TRUE',
+        'message' =>'Please enter a valid Member ID Number'
+    );
+    echo json_encode($payload);
+    exit;
 }
 
 $urlToHash = "?vendorID={$_ENV['vendorID']}&memberID={$memberID}";
@@ -114,13 +129,19 @@ $callError = $result->ErrorMessage;
 $member = $result->ReturnedMember; 
 
 if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even needed if the call is already made?
-    die ('Please check your information and try again');
+    $payload = array (
+        'error' => 'TRUE',
+        'message' =>'Please check your information and try again'
+    );
+    echo json_encode($payload);
+    exit;
+
 } elseif ($callSuccess === FALSE) {
     $payload = array (
         'error' => 'TRUE',
         'message' =>'There is a problem with our Member Login service.  Please contact the UWAA For assistance'
     );
-    echo json_encode($payload);    
+    echo json_encode($payload);
     exit;   //refine error handling further...TODO - Need feedback system on page.
 }
 
@@ -144,7 +165,7 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
         $this->session->set('loggedIn', true);        
     }
 
-    // Do AJAX Debug stuff here
+    echo json_encode($callSuccess);
 
     }     
 

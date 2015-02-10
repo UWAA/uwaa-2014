@@ -8,7 +8,7 @@ $('input#memberCheckerLogout').on('click', function() {
 
 $('form#memberloginForm').on('submit', function(event) {
 // @TODO  Pull  canvas stuff.  Here for debugging
-var canvas = $('#output'),
+var canvas = $('#form-message'),
     form = $(this);   
 
      $.ajax({            
@@ -16,12 +16,14 @@ var canvas = $('#output'),
             // action: 'callMemberChecker'            ,
             url: callMemberCheckerAJAX.ajaxurl,
             data: form.serialize(),
+            dataType: 'json',
             // Remove for prod @TODO
             success: function(data) {
 
-                console.log('success');
-                canvas.html(data);                                        
-                location.reload();
+                if(!data.error) {
+                    location.reload();
+                } 
+                canvas.html(data.message);
                     
             },
             //Remove for prod @TODO

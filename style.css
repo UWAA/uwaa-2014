@@ -3117,6 +3117,9 @@ a#memberCheckerLogout {
   outline: none !important;
   background-color: #f1eee4;
 }
+#form-message {
+  color: red;
+}
 @media only screen and (min-width: 993px) and (max-width: 1199px) {
   .uwaa-form input.half-column {
     width: 100%;
