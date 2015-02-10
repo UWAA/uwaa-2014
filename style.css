@@ -1731,6 +1731,9 @@ div.map-logo.wenatchee {
   position: relative;
   z-index: 0;
 }
+.uw-homepage-slider-container .uw-homepage-slider .hero-container a.uw-btn:after {
+  height: 43px;
+}
 .uw-homepage-slider-container .uw-homepage-slider h2 {
   margin: 20px 0 0;
   font-weight: 900;
