@@ -22,10 +22,12 @@
 
           
 
+          <div class="membership-superhero-excerpt">
           <?php echo apply_filters( 'the_content', $slide->text ); ?> 
+          </div>
 
           
-          <a class="uw-btn btn-sm btn-gold" href="<?php echo $slide->alternateLink ? $slide->alternateLink : $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
+          <a class="uw-btn btn-sm btn-gold membership-superhero-btn" href="<?php echo $slide->alternateLink ? $slide->alternateLink : $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
 
         </div>
 

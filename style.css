@@ -1768,6 +1768,9 @@ div.map-logo.wenatchee {
 .uw-btn {
   margin-top: 60px;
 }
+.membership-superhero-btn {
+  margin-top: 20px;
+}
 @media only screen and (min-width: 1401px) {
   .uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
     font-size: 50px;
