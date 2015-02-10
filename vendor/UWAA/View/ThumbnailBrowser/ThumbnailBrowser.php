@@ -105,12 +105,24 @@ TOOLBAR;
 
     protected function renderFilterButtons($typeOfToolbar) 
     {
+      //Included because Posts are filtered by categories
       $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All '. $typeOfToolbar .'</li>';
 
+      if ($typeOfToolbar == 'category') {
+        $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All Stories</li>';  
+      }      
+      
+
       $terms = get_terms(strtolower($typeOfToolbar));
+
+      
+      $terms = wp_list_filter($terms, array('slug'=>'exclude-from-search'),'NOT');
+
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
-                $template .= sprintf('<li class="filter-button" data-filter=".%s">%s</li>', strtolower($term->slug), $term->name);
+                
+                  $template .= sprintf('<li class="filter-button" data-filter=".%s">%s</li>', strtolower($term->slug), $term->name);
+                
         }     
         
         endif;

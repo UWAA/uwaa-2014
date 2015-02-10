@@ -64,6 +64,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
      	return $termArray;
      }
 
+
   private function setArguments()
   {
     $args = array (
