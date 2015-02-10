@@ -12,7 +12,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
             echo esc_html($UWAA->Memberchecker->session->get('firstName')).' , thank you for your support!';
             echo '</div>';
         } else {
-          $joinPage = $UWAA->Utilities->get_permalink_by_title("Join or Renew");          
+          $joinPage = $UWAA->Utilities->get_permalink_by_title("Join or Renew");
           $joinLink = ($joinPage ? $joinPage . "?join" : '#');
           $renewLink = ($joinPage ? $joinPage . "?renew" : '#');          
         ?>

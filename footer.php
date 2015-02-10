@@ -12,8 +12,8 @@
             <span>CONTACT UWAA: 206-543-0540 <a href="mailto:uwalumni@uw.edu">uwalumni@uw.edu</a></span>
             <div>
                 <ul class="footer-links">
-                    <li><a href="<?php echo home_url('/about'); ?>">About</a></li>
-                    <li><a href="#">Join</a></li>
+                    <li><a href="<?php echo home_url('/about'); ?>">About</a></li>                    
+                    <li><a href="<?php echo home_url('/join-or-renew'); ?>">Join</a></li>
                 </ul>                   
             </div>
             </nav>
