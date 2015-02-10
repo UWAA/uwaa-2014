@@ -116,7 +116,7 @@ TOOLBAR;
       $terms = get_terms(strtolower($typeOfToolbar));
 
 
-      $terms = wp_list_filter($terms, array('slug'=>'exclude-from-search', 'slug'=>'uncategorized'),'NOT');
+      $terms = wp_list_filter($terms, array('slug'=>'exclude-from-search'),'NOT');
 
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
