@@ -78,8 +78,7 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');    
         // $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'original');    
-        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
-        $this->postSubtitle = parent::getPostSubtitle($query);
+        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));        
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 80));
         
         echo $this->buildTemplate();
@@ -110,8 +109,7 @@ $template = <<<TEMPLATE
       $image
       $callout
     </div>
-  <div class="copy"> 
- <h6 class="subtitle">$this->postSubtitle</h6>
+  <div class="copy">  
  <h4 class="title">{$this->postTitle}</h4> 
  <h4 class="date">{$this->postDate}</h4>
  <p class="excerpt">{$this->postExcerpt}</p>
