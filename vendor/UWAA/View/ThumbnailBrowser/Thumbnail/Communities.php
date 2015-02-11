@@ -75,7 +75,7 @@ class Communities extends ThumbnailBrowser implements Thumbnail
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'gridViewNoSidebar');    
         $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 80);
+        $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 100);
         
         echo $this->buildTemplate();
 

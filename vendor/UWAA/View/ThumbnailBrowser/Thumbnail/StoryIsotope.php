@@ -40,6 +40,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;        
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
+        $this->postSubtitle = $this->getPostSubtitle($query);
         
         echo $this->buildTemplate();
 

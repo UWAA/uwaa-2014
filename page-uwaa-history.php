@@ -17,7 +17,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\UWAAHistory;
         <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
       <h2 class="uw-site-title">About the UWAA</h2>
 
-       <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
+       <?php include(locate_template( 'partials/sidebar-page-breadcrumbs.php')); ?>
 
       <div id='main_content' class="uw-body-copy">
 

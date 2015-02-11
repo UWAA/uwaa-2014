@@ -204,7 +204,7 @@ class SidebarFeaturedPost extends \WP_Widget
       }
         $this->postTitle = esc_html(get_the_title());
         $this->postURL = get_permalink();
-        $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 80));
+        $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');
         $this->postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
