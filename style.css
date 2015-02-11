@@ -3543,3 +3543,8 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
   background: url(assets/uwaa-sprite.svg) no-repeat 0 0;
   background-position: -311px -303px;
 }
+.page-board-of-trustees .wp-caption {
+  min-height: 305px;
+  width: auto !important;
+  float: left !important;
+}
