@@ -408,6 +408,7 @@
   display: inline-block;
   padding-left: 22px;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 #filters ul li.is-checked {
   color: #b7a57a;
@@ -1988,7 +1989,8 @@ div.map-logo.wenatchee {
   padding: 25px 20px 0 30px;
 }
 .uwaa-home-branding-row .uwaa-home-branding {
-  padding-left: 35px;
+  padding-right: 0;
+  padding-left: 75px;
   padding-bottom: 8px;
   line-height: 1.1;
   text-align: right;
