@@ -3081,6 +3081,10 @@ a#memberCheckerLogout {
 .option-row .option-box:active h3 {
   color: #4b2e83;
 }
+.option-row .option-box.upgrade {
+  background-color: #85754d;
+  color: #000000;
+}
 @media (max-width: 767px) {
   .option-row .option-box {
     height: 150px;

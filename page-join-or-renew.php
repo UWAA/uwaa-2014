@@ -18,7 +18,7 @@ get_header();
 
       <div class="row uwaa-home-branding-row">
     
-    <?php get_template_part('partials/single', 'page-breadcrumbs') ?>
+     <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
 
     </div>
 

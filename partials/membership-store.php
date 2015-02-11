@@ -108,6 +108,16 @@ wp_enqueue_script('membershipStoreInit');
                 <div class="option-box renew" id="annual-joint-renew">
                 <h2>Annual Joint</h2>
                 <h3>Membership</h3>
+                </div>
+
+                <div class="option-box upgrade" id="single-life-upgrade">
+                <h2>Life Single</h2>
+                <h3>Membership Upgrade</h3>
+                </div> 
+
+                <div class="option-box upgrade" id="joint-life-upgrade">
+                <h2>Life Joint</h2>
+                <h3>Membership Upgrade</h3>
                 </div>               
                
                  
