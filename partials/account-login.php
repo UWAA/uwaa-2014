@@ -16,7 +16,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
         } else {
         ?>
 
-        <h2>Please log in to view your member account.</h2>
+        <h3>Please log in to view your member account.</h3>
             <form method="POST" id="memberloginForm" class="uwaa-form">
                 <fieldset>
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
