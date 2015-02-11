@@ -718,7 +718,7 @@ a.uwaa-btn:active {
   padding-right: 15px;
   margin-top: 15px;
   padding-left: 7px;
-  padding-right: 7px;
+  padding-right: 0px;
 }
 @media (min-width: 768px) {
   .featured-post.four-column {
