@@ -3545,6 +3545,6 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
 }
 .page-board-of-trustees .wp-caption {
   min-height: 305px;
-  width: 160px;
+  width: 160px !important;
   float: left;
 }
