@@ -63,7 +63,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
         $communitiesSidebarMenu->renderCommunitiesChapterMenu();  
         
       
-        dynamic_sidebar( 'communities' );
+       dynamic_sidebar( 'communities_sidebar' );
         
 
     ?>

@@ -7,9 +7,10 @@
 $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
 if (has_category('Tall Regional Branding')) {
   echo '<div class="uwaa-chapter-header profile">';
+  //TODO rename the profile class so the LESS matches the category
   get_template_part('partials/profile-header');
   echo '</div>';
-} elseif (has_category('Communities')) {
+} elseif (has_category('Short Regional Branding')) {
   echo '<div class="uwaa-chapter-header">';
   get_template_part('partials/chapter-header');
   echo '</div>';
