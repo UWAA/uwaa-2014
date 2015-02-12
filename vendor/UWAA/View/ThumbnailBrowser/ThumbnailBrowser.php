@@ -117,6 +117,8 @@ TOOLBAR;
 
 
       $terms = wp_list_filter($terms, array('slug'=>'exclude-from-search'),'NOT');
+      $terms = wp_list_filter($terms, array('slug'=>'uncategorized'),'NOT');
+      $terms = wp_list_filter($terms, array('slug'=>'tall-regional-branding'),'NOT');
 
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
