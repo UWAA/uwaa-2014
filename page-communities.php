@@ -1,31 +1,12 @@
 <?php 
 get_header(); 
-wp_enqueue_script(array('communitiesMap', 'superHero'));
 wp_enqueue_style('mapbox');
 wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => home_url('/api/communities/geojson')  ) );
 $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
 ?>
 
-<div id="spacer"></div>
-<?php uw_mobile_front_page_menu(); ?>
-
-
-
-<?php
-
-if(class_exists('\UWAA\Slideshow\CommunitiesSlideshow')):
-
-$superhero = new \UWAA\Slideshow\CommunitiesSlideshow("communities-superhero");
-
-include(locate_template('content-communities-header.php'));
-
-endif;
-
-?>
-
-
-  
+<div class="uw-hero-image communities"></div>
 
 
 <div class="container uw-body">
@@ -35,13 +16,6 @@ endif;
     <div class="col-md-8 uw-content" role='main'>
 
   <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
-
-  <?php
-
-
-
-
- ?>
 
   
       <div class="uw-body-copy">
