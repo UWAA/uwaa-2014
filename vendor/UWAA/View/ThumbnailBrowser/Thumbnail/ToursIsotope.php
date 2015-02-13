@@ -103,7 +103,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     if ($this->postImageThumbnailURL) {
       return '<img src="' . $this->postImageThumbnailURL . '"/>';
     } 
-    return '<img src="http://fpoimg.com/275x190?text=FPO" />';
+    return '<img src=" ' . get_stylesheet_directory() . '/assets/Travel_Generic_Thumb_275x190.png" />';
 
    }
 
