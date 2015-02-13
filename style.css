@@ -2016,6 +2016,11 @@ div.map-logo.uae {
   line-height: 1.1;
   text-align: right;
 }
+@media only screen and (max-width: 320px) {
+  .uwaa-home-branding-row .uwaa-home-branding {
+    text-align: left;
+  }
+}
 .uwaa-home-branding-row .uwaa-home-branding em {
   font-size: 12px;
   letter-spacing: -0.1px;
@@ -2901,7 +2906,7 @@ ul.uwaa-social li a:focus.email {
 }
 a#memberCheckerLogout {
   float: right;
-  margin-right: 60px;
+  margin-right: 20px;
   cursor: pointer;
 }
 #join-renew-buttons {
@@ -3581,4 +3586,7 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
   min-height: 305px;
   width: 160px !important;
   float: left;
+}
+.logo {
+  width: auto !important;
 }
