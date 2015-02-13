@@ -2670,6 +2670,9 @@ div.map-logo.uae {
   font-family: 'Open Sans', sans-serif;
   color: #3D3D3D;
 }
+.wufoo .instruct input.file {
+  font-size: 120%;
+}
 .wufoo input.btTxt {
   font-size: 17px;
   width: auto;
