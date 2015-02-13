@@ -2,6 +2,8 @@
 get_header(); 
 wp_enqueue_script(array('gradpack'));
 wp_enqueue_style('gradpack');
+
+while ( have_posts() ) : the_post();
 ?>
 
 <div id="spacer"></div>
@@ -40,8 +42,15 @@ wp_enqueue_style('gradpack');
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_LoveUW_600x397.jpg" id="careers_image" alt="placeholder">
           </div> 
         <div class="copy">
-          <h2>Membership is kind of a big deal</h2>
-          <p>With 55,000 members, the UWAA is one of the largest alumni associations in the country. Members are people who want to stay connected and stand together in support of their university, no matter where they live. As the UW’s most loyal community, members also get dozens of great Husky benefits. Read about some below!</p>
+          <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_one_title', true)) ?></h2>
+          <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_one_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>
       </div>          
       </div>
     </div>
@@ -54,8 +63,15 @@ wp_enqueue_style('gradpack');
           <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Careers_600x397.jpg" id="careers_image" alt="placeholder">
       </div>
         <div class="copy">
-        <h2>Career Services</h2>
-        <p>Whether you’ve landed your dream job or are still looking, the UWAA can help you navigate your next steps through events and seminars. Husky Career Network gets you connected with alumni volunteers who are eager to share career advice.</p>
+        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_two_title', true)) ?></h2>
+        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_two_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>
       </div>
 
       </div>
@@ -69,8 +85,15 @@ wp_enqueue_style('gradpack');
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Libraries_600x397.jpg" id="careers_image" alt="placeholder">
           </div> 
         <div class="copy">
-        <h2>Access to UW libraries and online journals</h2>
-        <p>Members continue to get access to UW libraries at Seattle, Bothell and Tacoma campuses, one of the largest troves of knowledge in the Northwest. Plus, keep up with the latest journals online through EBSCO’s Academic Search Alumni Edition.</p>
+        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_three_title', true)) ?></h2>
+        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_three_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>
       </div>
           
       </div>
@@ -111,8 +134,15 @@ wp_enqueue_style('gradpack');
           </div>
       </div> 
         <div class="copy">
-        <h2>Fun Husky events</h2>
-        <p>Whether it’s catching the latest blockbuster movie or waving your exclusive game scarf at a Sounders match, UWAA member nights bring Huskies together for fun and camaraderie. Regional groups, away-game tailgates and summer BBQs around the country help you stay connected wherever your adventures take you.</p>
+        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_four_title', true)) ?></h2>
+        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_four_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>
       </div>
        
       </div>
@@ -137,8 +167,15 @@ wp_enqueue_style('gradpack');
           </div>
           </div> 
         <div class="copy">
-        <h2>The UWAA has a mission</h2>
-        <p>UWAA members stand together to support the UW and higher education. Your dues support UW Impact, which provides resources for UW alums and friends to take legislative action. Member dues also support student scholarships, campus events and the award-winning <em>Columns</em> magazine.</p>
+        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_five_title', true)) ?></h2>
+        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_five_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>
       </div>
           
       </div>
@@ -152,9 +189,15 @@ wp_enqueue_style('gradpack');
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_LicensePlate-Membership_600x460.jpg" id="careers_image" alt="placeholder">
           </div>
         <div class="copy">
-        <h2>Join the UW Alumni Association today!</h2>
-        <p>Join the UWAA for just $30 (or become a life member for $500) and get a bonus Grad Pack.  This is a limited time offer just for new graduates and a fantastic opportunity to get your alumni experience off to a great start! Your Grad Pack contains a UW alumni license plate frame and more goodies just for new grads.</p>
-        <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-left btn-purple" href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" target="_blank">Join Now</a></div>
+        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_six_title', true)) ?></h2>
+        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_six_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>       
       </div>
            
       </div>
@@ -169,8 +212,15 @@ wp_enqueue_style('gradpack');
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_StudentCollage_600x397.jpg" id="careers_image" alt="placeholder">
           </div> 
         <div class="copy">
-        <h2>Find your free photo on Flickr</h2>
-        <p>Capture the moment! Get your picture taken with Harry the Husky on Thursday, April 17 3:45–4:45 p.m. in front of the big W on 45th Ave. and Memorial Way, then come back here to download your photo for free from Flickr. Pictures are now available! <a href="https://www.flickr.com/photos/uwalumniassociation/sets/72157644070707791/" target="_blank">Download your photo from Flickr</a>.</p>
+        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_seven_title', true)) ?></h2>
+        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_seven_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>
       </div>
           
       </div>
@@ -184,17 +234,17 @@ wp_enqueue_style('gradpack');
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Graduation_600x397.jpg" id="careers_image" alt="placeholder">
           </div>
         <div class="copy">
-        <h2>Links for graduating seniors</h2>
-        <p>Graduation is a busy time&#8212;make sure you’ve got what you need to shine on your big day!</p>
-       
+        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_eight_title', true)) ?></h2>
+        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_eight_content', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))); ?>
+        </p>   
 
-          <h4>Information about commencement:</h4>
-
-          <p>UW&nbsp;<a href="http://www.washington.edu/graduation/" target="_blank">Seattle</a>&nbsp;&nbsp;UW&nbsp;<a href="http://www.uwb.edu/commencement" target="_blank">Bothell</a>&nbsp;&nbsp;UW&nbsp;<a href="http://www.tacoma.uw.edu/events/content/commencement" target="_blank">Tacoma</a></p>
-
-          <p>Support your <a href="https://www.washington.edu/giving/senior-class-gift/" target="_blank">class gift</a> (all campuses)</p>
-         
-          <p>Keep in touch&#8212;<a href="https://www.washington.edu/alumni/subscribe/address-change.html" target="_blank">Update your contact info</a></p>
+        
         
       </div>
         
@@ -204,4 +254,7 @@ wp_enqueue_style('gradpack');
 
 </div>
 
-<?php get_footer(); ?>
+<?php 
+ endwhile;
+
+ get_footer(); ?>

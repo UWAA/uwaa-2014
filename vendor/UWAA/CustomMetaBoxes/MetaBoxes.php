@@ -16,12 +16,12 @@ class MetaBoxes
         $this->add_event_meta();
         $this->add_header_text_toggle();
         $this->add_major_market_toggle();
-        $this->add_post_custom_actions();
-        // $this->add_gradpack_content_meta();
+        $this->add_post_custom_actions(); 
+           
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
         add_filter('do_meta_boxes', array($this, 'renameFeaturedImage'), 0);
-
+        add_action('pre_get_posts', array($this, 'add_gradpack_content_meta'), 0);        
     }
 
         public function renameFeaturedImage() {
@@ -529,27 +529,20 @@ class MetaBoxes
 
         }
 
-         protected function add_gradpack_content_meta()
+         public function add_gradpack_content_meta()
         {
-            
+                        
 
-            var_dump($post);
+            global $post;
 
-            $dump = get_post_meta($post->ID, '_wp_page_template', true);
 
-            // echo $dump;
 
-            if(!empty($post))   {
-                $pageTemplate = get_post_meta($post->ID, '_wp_page_template', true);
-                echo $pageTemplate;
+            if(!empty($post) && $post->post_name == 'gradpack')  {                                
 
-                if($pageTemplate == 'page-gradpack.php')
-                {
-
-                    new \UWAA\CustomPostData('gradpack', array(
-                'title' => 'Tour Information',
+                new \UWAA\CustomPostData('gradpack_content_meta', array(
+                'title' => 'Gradpack Content',
                 'pages' => array('page'),
-                'context' => 'normal',
+                'context' => 'advanced',
                 'priority' => 'high',
                 'fields' => array(
                     array(
@@ -561,7 +554,7 @@ class MetaBoxes
                      array(
                         'name' => 'Row One Content',
                         'id'=> 'row_one_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the first row.'
                         ),
                       array(
@@ -573,7 +566,7 @@ class MetaBoxes
                      array(
                         'name' => 'Row Two Content',
                         'id'=> 'row_two_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the second row.'
                         ),
                       array(
@@ -585,7 +578,7 @@ class MetaBoxes
                      array(
                         'name' => 'Row Three Content',
                         'id'=> 'row_three_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the third row.'
                         ),
                       array(
@@ -597,7 +590,7 @@ class MetaBoxes
                      array(
                         'name' => 'Row Four Content',
                         'id'=> 'row_four_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the fourth row.'
                         ),
                       array(
@@ -609,7 +602,7 @@ class MetaBoxes
                      array(
                         'name' => 'Row Five Content',
                         'id'=> 'row_five_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the fifth row.'
                         ),
                       array(
@@ -621,7 +614,7 @@ class MetaBoxes
                      array(
                         'name' => 'Row Six Content',
                         'id'=> 'row_six_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the sixth row.'
                         ),
                       array(
@@ -633,7 +626,7 @@ class MetaBoxes
                      array(
                         'name' => 'Row Seven Content',
                         'id'=> 'row_seven_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the seventh row.'
                         ),
                       array(
@@ -645,18 +638,11 @@ class MetaBoxes
                      array(
                         'name' => 'Row Eight Content',
                         'id'=> 'row_eight_content',
-                        'type'=> 'text',
+                        'type'=> 'textarea',
                         'desc'=> 'The content text for the eighth row.'
-                        ),
-                                       
-
-                )
-            )
-            );
-
-
-
-                }
+                        ),                                      
+                    )
+                ));
 
             }
         }
