@@ -79,7 +79,7 @@ class ThumbnailBrowser
     if ($this->postImageThumbnailURL) {
       return '<img src="' . $this->postImageThumbnailURL . '"/>';
     } 
-    return '<img src="http://fpoimg.com/302x250?text=FPO" />';
+    return '<img src=" ' . get_stylesheet_uri() . '/assets/Generic_Thumb_275x190.png" />';
 
    }
 
