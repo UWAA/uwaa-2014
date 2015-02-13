@@ -53,10 +53,10 @@ class ChapterSidebarContent
         if ($this->chapterFacebook OR $this->chapterLinkedin) {
         $widget = '<div id="chapter-social-widget" class="widget widget_text"><h2 class="widgettitle">Ways To Connect</h2><div class="textwidget">';        
             if ($this->chapterFacebook) {
-            $widget .= '<a class="facebook" href="'. $this->chapterFacebook . '">' . ($this->chapterFacebookName ? $this->chapterFacebookName : '') . ' Facebook</a>';
+            $widget .= '<a target="_blank" class="facebook" href="'. $this->chapterFacebook . '">' . ($this->chapterFacebookName ? $this->chapterFacebookName : '') . ' Facebook</a>';
             } 
             if ($this->chapterLinkedin) {
-                $widget .= '<a class="linkedIn" href="' . $this->chapterLinkedin . '">' . ($this->chapterLinkedInName ? $this->chapterLinkedInName : '') . ' LinkedIn</a>';
+                $widget .= '<a target="_blank" class="linkedIn" href="' . $this->chapterLinkedin . '">' . ($this->chapterLinkedInName ? $this->chapterLinkedInName : '') . ' LinkedIn</a>';
             }
         $widget .= '</div></div>';
 
