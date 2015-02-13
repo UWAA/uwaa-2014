@@ -8,7 +8,7 @@ var host = window.location.hostname;
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
         tileLayer : {
                     continuousWorld: false,        
-                    noWrap: true
+                    noWrap: false
         },
         scrollWheelZoom:false,
         doubleClickZoom:false,
