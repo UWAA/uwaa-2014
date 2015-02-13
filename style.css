@@ -2646,7 +2646,7 @@ div.map-logo.wenatchee {
   color: #3D3D3D;
 }
 .wufoo input.btTxt {
-  font-size: 1.5em;
+  font-size: 17px;
   width: auto;
   background-color: #4b2e83;
   color: white;
@@ -2654,7 +2654,6 @@ div.map-logo.wenatchee {
   font-family: "Encode Sans Compressed", sans-serif;
   letter-spacing: 1px;
   border-radius: 0;
-  height: 2em;
   line-height: 1.3;
   text-transform: uppercase;
   padding: .412em;
