@@ -2504,7 +2504,8 @@ div.map-logo.uae {
   #isotope-search,
   .grid-list-print-icons,
   .image-frame,
-  .image-frame img {
+  .image-frame img,
+  .tours-footer-logo {
     display: none !important;
     visibility: hidden !important;
   }
@@ -2512,6 +2513,7 @@ div.map-logo.uae {
     display: block !important;
     height: auto !important;
     min-height: 0;
+    margin-left: 0;
   }
 }
 .panel {
