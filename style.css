@@ -3533,10 +3533,6 @@ ul.uw-sidebar-menu > div ul li.current_page_ancestor ul.children li.current_page
 ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_item ul.children a:before {
   content: "\2022  ";
 }
-.uwaa-home-branding-row .uw-breadcrumbs {
-  padding: 20px 13px 0 20px;
-  white-space: nowrap;
-}
 .mobile-menu-row {
   margin-left: -15px;
   margin-right: -15px;
