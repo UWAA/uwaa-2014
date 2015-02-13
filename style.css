@@ -2505,6 +2505,7 @@ div.map-logo.uae {
   .grid-list-print-icons,
   .image-frame,
   .image-frame img,
+  .image-frame span,
   .tours-footer-logo {
     display: none !important;
     visibility: hidden !important;
