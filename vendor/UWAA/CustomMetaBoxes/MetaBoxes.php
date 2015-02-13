@@ -469,7 +469,7 @@ class MetaBoxes
 
          protected function add_major_market_toggle() {
             new \UWAA\CustomPostData('major_market', array(
-                'title' => 'Event Post Information',
+                'title' => 'Major Market Toggle',
                 'pages' => array('chapters'),  //add events, regional pages as they are ready
                 'context' => 'normal',
                 'priority' => 'high',
@@ -484,6 +484,30 @@ class MetaBoxes
                                 'majorMarket' => 'Is a Major Market'
                                 ),
                         'desc'=> 'Use this to toggle between major and non/major markets.  Non-major markets will have their map link direct to the "Other Areas" page'
+                        ),
+                    )
+            )
+            );
+
+        }
+
+         protected function add_prelim_tour_toggle() {
+            new \UWAA\CustomPostData('prelim_tour', array(
+                'title' => 'Preliminary Tour',
+                'pages' => array('tours'),  //add events, regional pages as they are ready
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                        'name' => 'Preliminary tour toggle',
+                        'id'=> 'isPreliminaryTour',
+                        'type'=> 'select',
+                        'default' => 'preliminary',
+                        'options' => array(
+                                'preliminary_tour' => 'Preliminary Tour', 
+                                'ready_to_publish_tour' => 'Ready to Publish'
+                                ),
+                        'desc'=> 'Use this to determine if the tour should be landable from the updoming tour page.'
                         ),
                     )
             )

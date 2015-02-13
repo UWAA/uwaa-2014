@@ -418,11 +418,12 @@
   position: absolute;
   right: 0;
   top: -70px;
+  overflow: hidden;
+  outline: 1px solid #aaaaaa;
 }
 #isotope-search form {
   float: left;
   width: 200px;
-  outline: 1px solid #aaaaaa;
 }
 #isotope-search form input {
   height: 44px;
@@ -2502,11 +2503,12 @@ div.map-logo.uae {
   .filter-row,
   #isotope-search,
   .grid-list-print-icons,
-  .image-frame {
+  .image-frame,
+  .image-frame img {
     display: none !important;
+    visibility: hidden !important;
   }
   .post-thumbnail-slide {
-    position: relative !important;
     display: block !important;
     height: auto !important;
     min-height: 0;
