@@ -2019,7 +2019,7 @@ div.map-logo.uae {
 @media only screen and (max-width: 320px) {
   .uwaa-home-branding-row .uwaa-home-branding {
     text-align: left;
-    padding-left: 75px;
+    padding-left: 0;
   }
 }
 .uwaa-home-branding-row .uwaa-home-branding em {
