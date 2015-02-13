@@ -1428,6 +1428,24 @@ div.map-logo.washington-dc {
 div.map-logo.wenatchee {
   background-position: 41% -964px;
 }
+div.map-logo.brazil {
+  background-position: 50% -1323px;
+}
+div.map-logo.india {
+  background-position: 50% -1365px;
+}
+div.map-logo.peru {
+  background-position: 50% -1403px;
+}
+div.map-logo.spain {
+  background-position: 50% -1445px;
+}
+div.map-logo.uk {
+  background-position: 50% -1523px;
+}
+div.map-logo.uae {
+  background-position: 50% -1484px;
+}
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 4px 10px 10px;
 }
