@@ -2020,11 +2020,17 @@ div.map-logo.uae {
   .uwaa-home-branding-row .uwaa-home-branding {
     text-align: left;
     padding-left: 15px;
+    padding-bottom: 5px;
   }
 }
 .uwaa-home-branding-row .uwaa-home-branding em {
   font-size: 12px;
   letter-spacing: -0.1px;
+}
+@media only screen and (max-width: 320px) {
+  .uwaa-home-branding-row .uwaa-home-branding em {
+    font-size: 11px;
+  }
 }
 .uwaa-home-branding-row .logo svg {
   width: 40%;
