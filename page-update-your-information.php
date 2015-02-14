@@ -4,7 +4,7 @@ get_header();
 
 
 
-<div class="uw-hero-image membership"></div>
+<div class="uw-hero-image services"></div>
 
 <div class="container uw-body">
 
@@ -12,7 +12,7 @@ get_header();
 
     <div class="col-md-8 uw-content" role='main'>
 
-    <h2 class="uw-site-title">UWAA Membership</h2>
+    <h2 class="uw-site-title">Alumni Services</h2>
 
   <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
