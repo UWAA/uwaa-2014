@@ -602,6 +602,9 @@ a.uwaa-btn:active {
   .uwaa-btn-wrapper {
     margin-right: 26px;
   }
+  .uwaa-btn-wrapper a.uwaa-btn {
+    font-size: 15px;
+  }
 }
 .gallery-item {
   margin-bottom: 0px;
