@@ -271,11 +271,6 @@
 .post-thumbnail-slide:hover {
   opacity: .8;
 }
-@media only screen and (max-width: 480px) {
-  .post-thumbnail-slide {
-    width: 200px;
-  }
-}
 .post-thumbnail-slide .copy {
   color: #5a5a5a;
   padding: 6px 10px 10px 10px;
