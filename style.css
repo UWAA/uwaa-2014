@@ -2993,7 +2993,7 @@ a#memberCheckerLogout {
 }
 @media only screen and (max-width: 320px) {
   #join-renew-buttons {
-    padding: 14px 0 2px 20px;
+    padding: 14px 0 2px 0;
   }
   #join-renew-buttons .uwaa-btn:before {
     top: 0;
