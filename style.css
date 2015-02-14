@@ -3543,6 +3543,12 @@ a#memberCheckerLogout {
 .alignright.inline {
   margin: 5px 0 8px 24px;
 }
+@media only screen and (max-width: 320px) {
+  .alignright.headshot,
+  .alignright.inline {
+    margin-right: 0;
+  }
+}
 hr {
   border-top: 1px solid #CCCCCC;
 }
