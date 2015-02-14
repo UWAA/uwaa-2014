@@ -529,18 +529,18 @@ a.read-more-link:after {
   margin-bottom: 15px;
 }
 @media only screen and (max-width: 320px) {
-  .single-events h1,
+  .single-events .uw-body-copy h1,
   .single-tours .uw-body-copy h1 {
     margin: 10px 10px 20px 0;
     font-size: 27px;
     line-height: 1;
     margin-bottom: 0;
   }
-  .single-events h2.date,
+  .single-events .uw-body-copy h2.date,
   .single-tours .uw-body-copy h2.date {
     font-size: 19px;
   }
-  .single-events p.location,
+  .single-events .uw-body-copy p.location,
   .single-tours .uw-body-copy p.location {
     margin-bottom: 18px;
   }
