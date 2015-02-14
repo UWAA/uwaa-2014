@@ -2991,6 +2991,20 @@ a#memberCheckerLogout {
     margin-left: 0;
   }
 }
+@media only screen and (max-width: 320px) {
+  #join-renew-buttons {
+    padding: 14px 0 2px 20px;
+  }
+  #join-renew-buttons .uwaa-btn:before {
+    top: 0;
+  }
+  #join-renew-buttons .uwaa-btn.uwaa-btn-join {
+    width: 123px;
+  }
+  #join-renew-buttons .uwaa-btn.uwaa-btn-renew {
+    width: 104px;
+  }
+}
 .page-membership .uw-sidebar-menu,
 .page-template-membership-page .uw-sidebar-menu {
   margin-top: 0;
