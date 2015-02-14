@@ -2991,6 +2991,13 @@ a#memberCheckerLogout {
     margin-left: 0;
   }
 }
+@media screen and (max-width: 767px) {
+  #join-renew-buttons {
+    margin-top: 0;
+    padding: 20px 20px 0 0;
+    margin-left: 0;
+  }
+}
 @media only screen and (max-width: 320px) {
   #join-renew-buttons {
     padding: 14px 0 2px 0;
@@ -3008,13 +3015,6 @@ a#memberCheckerLogout {
 .page-membership .uw-sidebar-menu,
 .page-template-membership-page .uw-sidebar-menu {
   margin-top: 0;
-}
-@media screen and (max-width: 767px) {
-  #join-renew-buttons {
-    margin-top: 0;
-    padding: 20px 20px 0 0;
-    margin-left: 0;
-  }
 }
 #membership-option-table {
   border: none;
