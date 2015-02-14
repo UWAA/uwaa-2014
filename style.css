@@ -598,6 +598,11 @@ a.uwaa-btn:hover,
 a.uwaa-btn:active {
   border-bottom: none;
 }
+@media only screen and (max-width: 320px) {
+  .uwaa-btn-wrapper {
+    margin-right: 26px;
+  }
+}
 .gallery-item {
   margin-bottom: 0px;
 }
