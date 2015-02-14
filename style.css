@@ -3546,7 +3546,7 @@ a#memberCheckerLogout {
 @media only screen and (max-width: 320px) {
   .alignright.headshot,
   .alignright.inline {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 hr {
