@@ -605,6 +605,9 @@ a.uwaa-btn:active {
   .uwaa-btn-wrapper a.uwaa-btn {
     font-size: 15px;
   }
+  .uwaa-btn-wrapper a.uwaa-btn:before {
+    top: 1px;
+  }
 }
 .gallery-item {
   margin-bottom: 0px;
