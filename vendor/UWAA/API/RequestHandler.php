@@ -56,7 +56,7 @@ class RequestHandler
       case 'tours':
         switch ($dataType) {
           case 'geojson':
-            $query = $this->getWPObject('tours');
+            $query = $this->getWPObjectTours('tours');
             $endpoint = new API;
             $endpoint->buildEndpoint($query, new DataEndpoint\GeoJSON\ToursMap);            
             break;
@@ -127,6 +127,27 @@ class RequestHandler
         return $query;   
 
     }
+
+
+    private function getWPObjectTours($postType) {
+        
+        $args = array (
+        'post_type' => $postType,
+        'orderby' => 'asc',
+        'posts_per_page' => '-1',
+        'meta_key' => 'mb_start_date',
+      'meta_query' => array(
+          'key' => 'mb_start_date',
+          'type' => 'DATE',
+          'value' => date("Y-m-d"), 
+          'compare' => '>=', 
+          ),      
+        );
+        $query = new \WP_query($args);
+        return $query;   
+
+    }
+
 
     
 
