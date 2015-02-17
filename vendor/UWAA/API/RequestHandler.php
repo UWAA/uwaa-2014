@@ -116,12 +116,12 @@ class RequestHandler
         'orderby' => 'asc',
         'posts_per_page' => '-1',
         'meta_key' => 'mb_start_date',
-      'meta_query' => array(
-          'key' => 'mb_start_date',
-          'type' => 'DATE',
-          'value' => date("Y-m-d"), 
-          'compare' => '>=', 
-          ),      
+      // 'meta_query' => array(
+      //     'key' => 'mb_start_date',
+      //     'type' => 'DATE',
+      //     'value' => date("Y-m-d"), 
+      //     'compare' => '>=', 
+      //     ),      
         );
         $query = new \WP_query($args);
         return $query;   
