@@ -73,6 +73,17 @@ class MetaBoxes
                 'priority' => 'high',
                 'fields' => array(
                     array(
+                        'name' => 'Preliminary tour toggle',
+                        'id'=> 'isPreliminaryTour',
+                        'type'=> 'select',
+                        'default' => 'preliminary',
+                        'options' => array(
+                                'preliminary' => 'Preliminary Tour', 
+                                'ready_to_publish_tour' => 'Ready to Publish'
+                                ),
+                        'desc'=> 'Use this to determine if the tour should be landable from the updoming tour page.'
+                    ),                    
+                    array(
                         'name' => 'Start Date',
                         'id'=> 'start_date',
                         'type'=> 'text',
@@ -491,29 +502,7 @@ class MetaBoxes
 
         }
 
-         protected function add_prelim_tour_toggle() {
-            new \UWAA\CustomPostData('prelim_tour', array(
-                'title' => 'Preliminary Tour',
-                'pages' => array('tours'),  //add events, regional pages as they are ready
-                'context' => 'normal',
-                'priority' => 'high',
-                'fields' => array(
-                    array(
-                        'name' => 'Preliminary tour toggle',
-                        'id'=> 'isPreliminaryTour',
-                        'type'=> 'select',
-                        'default' => 'preliminary',
-                        'options' => array(
-                                'preliminary_tour' => 'Preliminary Tour', 
-                                'ready_to_publish_tour' => 'Ready to Publish'
-                                ),
-                        'desc'=> 'Use this to determine if the tour should be landable from the updoming tour page.'
-                        ),
-                    )
-            )
-            );
-
-        }
+     
 
         protected function add_post_custom_actions() {
             new \UWAA\CustomPostData('post_custom_action', array(

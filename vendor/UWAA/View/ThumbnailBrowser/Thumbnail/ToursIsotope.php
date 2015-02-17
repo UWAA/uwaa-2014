@@ -18,7 +18,9 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
-    protected $postExcerpt;    
+    protected $postExcerpt;
+    protected $postTerms;
+    protected $isPreliminary;
 
     public function __construct()
     {
@@ -37,10 +39,12 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postURL = get_permalink();
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');    
-        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
+        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
+        $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);        
+        
         
         echo $this->buildTemplate();
 
@@ -110,25 +114,53 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 	public function buildTemplate(){
     $callout = $this->renderCallout();
     $image = $this->renderImage();
-	$template = <<<ISOTOPE
-<div class="post-thumbnail-slide $this->postTerms">
-	<a href="$this->postURL" title="$this->postTitle">
+
+
+    if ($this->isPreliminary == 'preliminary')
+    {
+            $prelimTemplate = <<<PRELIMISOTOPE
+      <div class="post-thumbnail-slide preliminary $this->postTerms">  
     <div class="image-frame">
       $callout
-		  $image
+      $image
     </div>
-		<div class="copy">
-		<h6 class="subtitle">$this->postSubtitle</h6>
-		<h4 class="title">$this->postTitle</h4>
-		<h4 class="date">$this->postDate</h4>
-		<p>$this->postExcerpt</p>
-		</div>
-	</a>
+    <div class="copy">
+    <h6 class="subtitle">$this->postSubtitle</h6>
+    <h4 class="title">$this->postTitle</h4>
+    <h4 class="date">$this->postDate</h4>
+    <p>$this->postExcerpt</p>
+    </div>
+  
+</div>
+PRELIMISOTOPE;
+
+ 
+return $prelimTemplate;
+}
+
+
+        $template = <<<ISOTOPE
+<div class="post-thumbnail-slide $this->postTerms">
+  <a href="$this->postURL" title="$this->postTitle">
+    <div class="image-frame">
+      $callout
+      $image
+    </div>
+    <div class="copy">
+    <h6 class="subtitle">$this->postSubtitle</h6>
+    <h4 class="title">$this->postTitle</h4>
+    <h4 class="date">$this->postDate</h4>
+    <p>$this->postExcerpt</p>
+    </div>
+  </a>
 </div>
 
 ISOTOPE;
 return $template;
+
+
 }
+
 
 
 }

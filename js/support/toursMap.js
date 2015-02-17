@@ -8,7 +8,7 @@ var host = window.location.hostname;
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
         tileLayer : {
                     continuousWorld: false,        
-                    noWrap: false
+                    noWrap: true
         },
         scrollWheelZoom:false,
         doubleClickZoom:false,
@@ -30,13 +30,22 @@ var host = window.location.hostname;
             feature = marker.feature;
 
         //Template for Custom Tooltip        
+        //
+        if (feature.properties.preliminary === 'preliminary') {
+            var popupContent = '<p class="map-title">' + feature.properties.title +  '</p>' +
+                               '<p class="map-date">' + feature.properties.date +  '</p>' +
+                               '<p class="map-excerpt">' + feature.properties.excerpt +                             
+                               '</p>'; 
+
+        } else {        
         var popupContent = '<a href="' + feature.properties.link + '">' +
-                            '<p class="map-title">' + feature.properties.title +  '</p>' +
+                            '<p class="map-title">' + feature.properties.title +  '</p>' +                            
                             '<p class="map-date">' + feature.properties.date +  '</p>' +
                             '<p class="map-excerpt">' + feature.properties.excerpt + 
                             '<a class="map-link" href="' + feature.properties.link + '">' +
                             '</a>' +
                         '</p></a>'; 
+        }
 
         marker.bindPopup(popupContent,{
         closeButton: true,

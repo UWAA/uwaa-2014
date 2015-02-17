@@ -39,8 +39,6 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 
         }
         echo $jsonPayload;
-        // debug
-        // var_dump($this->buildFeatureCollection($endpointData));
     }
 
     public function load($query)
@@ -70,8 +68,6 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
 
             $this->endpointData[] = $this->buildGeometryCollection($geometry, $featureContents); 
 
-            // var_dump($this->endpointData);
-            // echo '<br><br>';
 
          endforeach;
 
@@ -82,6 +78,7 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
     {
         $featureContents = array(
             'title' => esc_html(get_the_title($post->ID)),
+            'preliminary' => get_post_meta($post->ID, 'mb_isPreliminaryTour', true),
             'link' => get_permalink($post->ID),
             'excerpt' => esc_html(get_post_meta($post->ID, 'mb_map_excerpt', true)),
             'date' => esc_html(get_post_meta($post->ID, 'mb_cosmetic_date', true)),

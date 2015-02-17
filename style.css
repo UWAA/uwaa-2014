@@ -271,6 +271,9 @@
 .post-thumbnail-slide:hover {
   opacity: .8;
 }
+.post-thumbnail-slide:hover.preliminary:hover {
+  opacity: 1;
+}
 .post-thumbnail-slide .copy {
   color: #5a5a5a;
   padding: 6px 10px 10px 10px;
