@@ -216,6 +216,9 @@
 #isotope-canvas {
   position: relative;
 }
+.post-type-archive-events #isotope-canvas {
+  margin-top: 70px;
+}
 .image-frame {
   position: relative;
   z-index: 0;
