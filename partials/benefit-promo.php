@@ -22,7 +22,7 @@ if (!empty($promoText)) {
             )));
                 } 
                 else{
-                    echo "UWAA Members, Login to see how to claim your benefit";
+                    echo "UWAA members, login to see how to claim your benefit.";
                 }
 }
 ?>
