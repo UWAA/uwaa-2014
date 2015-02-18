@@ -2486,6 +2486,7 @@ div.map-logo.uae {
   background-size: cover;
 }
 .uw-hero-image.events {
+  background: url(assets/headers/Page_Header_Events.jpg) center center;
   background-size: cover;
 }
 @media only screen and (max-width: 767px) {
