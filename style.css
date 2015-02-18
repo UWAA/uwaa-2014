@@ -2482,6 +2482,9 @@ div.map-logo.uae {
   background: url(assets/headers/Page_Header_About.jpg) center center;
   background-size: cover;
 }
+.uw-hero-image.events {
+  background-size: cover;
+}
 @media only screen and (max-width: 767px) {
   .single-post .uwaa-chapter-header {
     height: 150px;

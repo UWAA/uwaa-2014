@@ -1,28 +1,17 @@
 <?php get_header(); 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\EventsIsotope;
-wp_enqueue_script(array('isotopeInit', 'superHero'));
+wp_enqueue_script(array('isotopeInit'));
 ?>
 
-<div id="spacer"></div>
-<?php uw_mobile_front_page_menu(); ?>
-
-<?php
-
-if(class_exists('\UWAA\Slideshow\EventsSlideshow')):
-
-$superhero = new \UWAA\Slideshow\EventsSlideshow("events-superhero");
-
-include(locate_template('content-slideshow.php'));
-
-endif;
-
-?>
+<div class="uw-hero-image events"></div>
 
 <div class="container uw-body">
 
   <div class="row">
 
     <div class="col-md-12 uw-content" role='main'>
+
+    <h2 class="uw-site-title">Events</h2>
     
      <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
       
