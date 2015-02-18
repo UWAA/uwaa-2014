@@ -4,6 +4,10 @@ var host = window.location.hostname;
 
     startLoading();
 
+    var southWest = L.latLng(-90, 180),
+    northEast = L.latLng(90, -180),
+    bounds = L.latLngBounds(southWest, northEast);
+
     L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
         tileLayer : {
@@ -12,6 +16,8 @@ var host = window.location.hostname;
         },
         scrollWheelZoom:false,
         doubleClickZoom:false,
+        maxBounds: bounds,
+        minZoom: 2 
        
     });
     map.setView([40, 0], 2);

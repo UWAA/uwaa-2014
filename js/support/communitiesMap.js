@@ -5,6 +5,11 @@ var globalCenter = [20, 15];
 var usCenter = [39.833333, -98.583333];
 var uiMenu = $("#mapNavigation");
 
+//bounding work
+var southWest = L.latLng(-90, 180),
+    northEast = L.latLng(90, -180),
+    bounds = L.latLngBounds(southWest, northEast);
+
     L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
         tileLayer : {
@@ -13,6 +18,7 @@ var uiMenu = $("#mapNavigation");
                 },
         scrollWheelZoom:false,
         doubleClickZoom:false,
+        maxBounds: bounds,
         });
     if (path === 'international-huskies') {
         map.setView(globalCenter, 2);
