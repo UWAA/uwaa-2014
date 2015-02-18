@@ -202,7 +202,7 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
     private function getMembershipType($membershipTypeCode)
     {
         $annualCodes = array('AS', 'AJ');
-        $lifeCodes = array('LS', 'LJ', 'LI');
+        $lifeCodes = array('LS', 'LJ', 'LI', 'IS', 'IJ');
 
         if (in_array($membershipTypeCode, $annualCodes)) {
             return 'Annual Member';
