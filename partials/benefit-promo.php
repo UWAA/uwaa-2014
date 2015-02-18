@@ -12,12 +12,17 @@ if (!empty($promoText)) {
             } 
     
             elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
-                //Maybe sketchy, need to be able to have links in this
-                echo esc_html(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true));
+                
+                echo wp_kses(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            )));
                 } 
                 else{
                     echo "UWAA Members, Login to see how to claim your benefit";
                 }
 }
 ?>
-
