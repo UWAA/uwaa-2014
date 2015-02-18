@@ -7,14 +7,17 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
 ?>
 
-<div class="uw-hero-image communities"></div>
 
+
+<div class="uw-hero-image communities"></div>
 
 <div class="container uw-body">
 
   <div class="row">
 
     <div class="col-md-8 uw-content" role='main'>
+
+    <h2 class="uw-site-title">Communities</h2>
 
   <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
