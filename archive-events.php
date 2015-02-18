@@ -14,9 +14,6 @@ wp_enqueue_script(array('isotopeInit'));
     <h2 class="uw-site-title">Events</h2>
     
      <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
-      
-
-      <h1>Events</h1>
 
       <div class="uw-body-copy">
 
