@@ -3974,3 +3974,6 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
 .logo {
   width: auto !important;
 }
+.uw-thinstrip .uw-thin-links li:nth-child(4) a {
+  color: #b7a57a;
+}

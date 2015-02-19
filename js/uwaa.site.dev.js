@@ -60,6 +60,16 @@ $(".accordion-heading").click (function () {          //using mouse
 
 
 })(jQuery);
+(function($) {
+
+var $alumniLink = $('.uw-thinstrip .uw-thin-links li:nth-child(4) a');
+$('.uw-thinstrip .uw-thin-links li a').not($alumniLink).hover(function() {
+  $alumniLink.css('color', '#FFFFFF');
+}, function() {
+  $alumniLink.css('color', '#b7a57a');
+});  
+  
+})(jQuery);
 addEvent(window, 'load', initForm);
 
 var highlight_array = new Array();
