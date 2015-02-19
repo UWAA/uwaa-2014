@@ -19,7 +19,9 @@ while ( have_posts() ) : the_post();
   
          
             <div class="container">
-            <h1>Con<strong>grad</strong>ulations<br/> Class of 2015!</h1>
+            <div id="congradulations">
+              <h1>Con<span class="bold">grad</bold>ulations<br/> Class of 2015!</h1>
+            </div>
             </div>
         
     </div>
