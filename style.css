@@ -3375,7 +3375,8 @@ Typography
 .uwaa-convio-wrapper h4,
 .uwaa-convio-wrapper h5,
 .uwaa-convio-wrapper h6 {
-  color: #000;
+  color: #000000;
+  font-family: "Encode Sans Compressed", 'Open Sans', sans-serif;
 }
 .uwaa-convio-wrapper div.responsive div.ErrorMessage.page-error > span.field-error-text {
   width: 100%
@@ -3442,12 +3443,11 @@ Typography
   background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat -9999px -9999px;
 }
 .uwaa-convio-wrapper div.donation-level-container.selected {
-  color: #000;
   vertical-align: middle;
   font-size: 1.2em;
   margin: 10px 0;
   padding: 10px 30px 10px 10px;
-  background: #d7a900;
+  background: #4b2e83;
   /* Old browsers */
   background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, -moz-linear-gradient(-45deg, #ffd800 1%, #ffffff 76%);
   /* FF3.6+ */
@@ -3461,6 +3461,9 @@ Typography
   /* IE10+ */
   background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, linear-gradient(135deg, #ffd800 1%, #ffffff 76%);
   /* W3C */
+}
+.uwaa-convio-wrapper div.donation-level-container.selected div.donation-level-expanded-label p {
+  color: #000000;
 }
 .uwaa-convio-wrapper div.donation-form-container.responsive {
   margin: 10px 0;

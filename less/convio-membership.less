@@ -37,7 +37,8 @@ Typography
 */
     
 h1, h2, h3, h4, h5, h6 {
-    color:#000;
+    color:#000000;
+    font-family: "Encode Sans Compressed",'Open Sans', sans-serif;
 }
 
 div.responsive div.ErrorMessage.page-error>span.field-error-text {
@@ -107,12 +108,16 @@ div#checkboxload {
 }
 
 div.donation-level-container.selected{
-color:#000;
+    div.donation-level-expanded-label{
+        p{
+            color: #000000;
+        }
+    }
 vertical-align:middle;
 font-size:1.2em;
 margin: 10px 0;
 padding:10px 30px 10px 10px;
-background: rgb(215,169,0); /* Old browsers */
+background: @purple; /* Old browsers */
 background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -moz-linear-gradient(-45deg,  @brightgold 1%, rgba(255,255,255,1) 76%); /* FF3.6+ */
 background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -webkit-gradient(linear, left top, right bottom, color-stop(1%,@brightgold), color-stop(76%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
 background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -webkit-linear-gradient(-45deg,  @brightgold 1%,rgba(255,255,255,1) 76%); /* Chrome10+,Safari5.1+ */
