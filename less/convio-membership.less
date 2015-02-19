@@ -213,7 +213,6 @@ div.responsive button.next-step {
     background-image: none; 
     color: #FFF;
     min-width:132px;
-    border-radius: 0;
 }
 
 
@@ -224,7 +223,7 @@ div.responsive a.next-step:focus,
 div.responsive button.next-step:focus {
     color: #FFF;
     text-decoration: none;
-    background: @lightgold; /* Old browsers */
+background: @lightgold; /* Old browsers */
 
 
     
@@ -240,7 +239,6 @@ div.responsive a.previous-step,
 div.responsive button.previous-step {
     color:#000;
     text-decoration:none;
-    border-radius: 0;
     
 }
 
@@ -257,7 +255,9 @@ color:#FFF;
 border:1px solid #000;
 padding: 10px 7px;
 min-width:132px;
-border-radius: 0;
+    border-radius: 3px; 
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 background: rgb(178,5,5); 
 background: -moz-linear-gradient(top, rgba(178,5,5,1) 0%, rgba(236,7,7,1) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,5,5,1)), color-stop(100%,rgba(236,7,7,1))); /* Chrome,Safari4+ */

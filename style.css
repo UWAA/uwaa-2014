@@ -3524,7 +3524,6 @@ Typography
   background-image: none;
   color: #FFF;
   min-width: 132px;
-  border-radius: 0;
 }
 .uwaa-convio-wrapper div.responsive a.next-step:hover,
 .uwaa-convio-wrapper div.responsive button.next-step:hover,
@@ -3543,7 +3542,6 @@ Typography
 .uwaa-convio-wrapper div.responsive button.previous-step {
   color: #000;
   text-decoration: none;
-  border-radius: 0;
 }
 .uwaa-convio-wrapper div.responsive a.previous-step,
 .uwaa-convio-wrapper div.responsive button.previous-step {
@@ -3556,7 +3554,9 @@ Typography
   border: 1px solid #000;
   padding: 10px 7px;
   min-width: 132px;
-  border-radius: 0;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
   background: #b20505;
   background: -moz-linear-gradient(top, #b20505 0%, #ec0707 100%);
   /* FF3.6+ */
