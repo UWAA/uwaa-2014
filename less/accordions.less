@@ -3,6 +3,8 @@
 .panel {
     width: 100%;
     margin-bottom: 10px;
+    position: relative;
+
 
 
     .collapse {
@@ -13,9 +15,8 @@
 .accordion-heading{
     background-color: @lightgray;
     color: @purple;
-    padding-left: 12px;
-    line-height: 40px;
-    height: 40px;
+    min-height: 40px;
+    padding: 6px 45px 6px 15px;
     
    @media only screen and (max-width : 480px) {   
         font-size:18px;
@@ -26,12 +27,12 @@
      
 
     .chevron {
-        float: right;
         width: 40px;
         height: 40px;
-        // content: @white;
         background-color: @purple;
-        position: relative;
+        position: absolute;
+        right: 0;
+        top: 0;
 
         &:after {
             // background-position: center center;

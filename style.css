@@ -2574,6 +2574,7 @@ div.map-logo.uae {
 .panel {
   width: 100%;
   margin-bottom: 10px;
+  position: relative;
 }
 .panel .collapse {
   padding: 12px 0 4px 12px;
@@ -2581,9 +2582,8 @@ div.map-logo.uae {
 .panel .accordion-heading {
   background-color: #dddddd;
   color: #4b2e83;
-  padding-left: 12px;
-  line-height: 40px;
-  height: 40px;
+  min-height: 40px;
+  padding: 6px 45px 6px 15px;
 }
 @media only screen and (max-width: 480px) {
   .panel .accordion-heading {
@@ -2591,11 +2591,12 @@ div.map-logo.uae {
   }
 }
 .panel .accordion-heading .chevron {
-  float: right;
   width: 40px;
   height: 40px;
   background-color: #4b2e83;
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .panel .accordion-heading .chevron:after {
   content: "";
