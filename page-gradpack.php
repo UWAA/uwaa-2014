@@ -25,7 +25,7 @@ while ( have_posts() ) : the_post();
       <a href="#flickr"><div id="yellow-dot">Find<br/>Your Free<br/>Photo<span></span></div></a>
       <div class="join-row">
         <div class="wrapper loveUW">
-            <h1>Love the UW? You&#8217;ve got to be a UWAA&nbsp;member!</h1>
+            <h3>You&rsquo;re one of us now.  Discover what UWAA Membership Means.</h3>
             <div class="uwaa-btn-wrapper join-row"><a class="uwaa-btn btn-slant-left btn-purple" href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" target="_blank">Join Now</a></div>            
       </div>
         </div>
@@ -63,7 +63,7 @@ while ( have_posts() ) : the_post();
           <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Careers_600x397.jpg" id="careers_image" alt="placeholder">
       </div>
         <div class="copy">
-        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_two_title', true)) ?></h2>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_two_title', true)) ?></h3>
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_two_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
@@ -85,7 +85,7 @@ while ( have_posts() ) : the_post();
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Libraries_600x397.jpg" id="careers_image" alt="placeholder">
           </div> 
         <div class="copy">
-        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_three_title', true)) ?></h2>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_three_title', true)) ?></h3>
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_three_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
@@ -134,7 +134,7 @@ while ( have_posts() ) : the_post();
           </div>
       </div> 
         <div class="copy">
-        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_four_title', true)) ?></h2>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_four_title', true)) ?></h3>
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_four_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
@@ -167,7 +167,7 @@ while ( have_posts() ) : the_post();
           </div>
           </div> 
         <div class="copy">
-        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_five_title', true)) ?></h2>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_five_title', true)) ?></h3>
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_five_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
@@ -189,7 +189,7 @@ while ( have_posts() ) : the_post();
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_LicensePlate-Membership_600x460.jpg" id="careers_image" alt="placeholder">
           </div>
         <div class="copy">
-        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_six_title', true)) ?></h2>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_six_title', true)) ?></h3>
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_six_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
@@ -212,7 +212,7 @@ while ( have_posts() ) : the_post();
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_StudentCollage_600x397.jpg" id="careers_image" alt="placeholder">
           </div> 
         <div class="copy">
-        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_seven_title', true)) ?></h2>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_seven_title', true)) ?></h3>
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_seven_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
@@ -234,7 +234,7 @@ while ( have_posts() ) : the_post();
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Graduation_600x397.jpg" id="careers_image" alt="placeholder">
           </div>
         <div class="copy">
-        <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_eight_title', true)) ?></h2>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_eight_title', true)) ?></h3>
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_eight_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
