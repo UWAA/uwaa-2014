@@ -3443,6 +3443,7 @@ Typography
   background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat -9999px -9999px;
 }
 .uwaa-convio-wrapper div.donation-level-container.selected {
+  color: #000000;
   vertical-align: middle;
   font-size: 1.2em;
   margin: 10px 0;
