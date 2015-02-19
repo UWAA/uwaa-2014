@@ -310,7 +310,7 @@ Color Pallette
   text-transform: uppercase;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-#conGRADulations h1 bold {
+#conGRADulations h1 .bold {
   font-weight: 700;
   color: #b7a57a;
 }
