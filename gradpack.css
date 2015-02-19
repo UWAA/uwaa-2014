@@ -935,7 +935,7 @@ Color Pallette
 .copy .join-button {
   margin: 10px 0 0 0;
 }
-@media (min-width: 961px) {
+@media (min-width: 993px) {
   .loveUW h1 {
     font-size: 26.64px;
   }
@@ -981,7 +981,7 @@ Color Pallette
     height: 16px;
   }
 }
-@media (min-width: 768px) AND (max-width: 960px) {
+@media (min-width: 768px) AND (max-width: 991px) {
   .header-weather,
   .header-forcast {
     display: none;
