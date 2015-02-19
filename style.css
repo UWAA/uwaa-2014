@@ -3931,10 +3931,12 @@ Typography
 .alignleft.headshot,
 .alignleft.inline {
   margin: 5px 24px 8px 0px;
+  float: left !important;
 }
 .alignright.headshot,
 .alignright.inline {
   margin: 5px 0 8px 24px;
+  float: right !important;
 }
 @media only screen and (max-width: 320px) {
   .alignright.headshot,
