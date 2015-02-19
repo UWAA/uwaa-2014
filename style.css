@@ -3366,6 +3366,9 @@ Typography
 .uwaa-convio-wrapper div.responsive label {
   white-space: normal;
 }
+.uwaa-convio-wrapper div.donation-level-expanded-label p {
+  color: #ffffff;
+}
 .uwaa-convio-wrapper h1,
 .uwaa-convio-wrapper h2,
 .uwaa-convio-wrapper h3,
