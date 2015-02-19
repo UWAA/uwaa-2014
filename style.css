@@ -3198,7 +3198,7 @@ a#memberCheckerLogout {
   color: #4b2e83;
 }
 .option-row .option-box.upgrade {
-  background-color: #85754d;
+  background-color: #b7a57a;
   color: #000000;
 }
 @media (max-width: 767px) {
@@ -3443,6 +3443,10 @@ Typography
   margin: 10px 0;
   padding: 10px 30px 10px 10px;
   background: #b7a57a;
+  /* Old browsers */
+  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, #b7a57a;
+  border: none;
+  border-color: none;
 }
 .uwaa-convio-wrapper div.donation-level-container.selected div.donation-level-expanded-label p {
   color: #000000;
