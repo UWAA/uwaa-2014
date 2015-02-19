@@ -937,8 +937,7 @@ Color Pallette
   .loveUW h1 {
     font-size: 26.64px;
   }
-  .content-row .copy h1 {
-    font-size: 33.3px;
+  .content-row .copy h3 {
     margin: 0;
     margin-bottom: 10px;
   }
@@ -1175,29 +1174,28 @@ Color Pallette
   .loveUW {
     padding: 0;
   }
-  .loveUW h1 {
-    font-size: 19.98px;
+  .loveUW h3 {
     margin-top: .5em;
   }
-  .loveUW h1 .break {
+  .loveUW h3 .break {
     display: block !important;
     line-height: 0;
   }
-  table.loveUW h1 .break {
+  table.loveUW h3 .break {
     display: table;
   }
-  tr.loveUW h1 .break {
+  tr.loveUW h3 .break {
     display: table-row !important;
   }
-  th.loveUW h1 .break,
-  td.loveUW h1 .break {
+  th.loveUW h3 .break,
+  td.loveUW h3 .break {
     display: table-cell !important;
   }
-  tr.loveUW h1 .break {
+  tr.loveUW h3 .break {
     display: table-row !important;
   }
-  th.loveUW h1 .break,
-  td.loveUW h1 .break {
+  th.loveUW h3 .break,
+  td.loveUW h3 .break {
     display: table-cell !important;
   }
   .caption {
@@ -1428,7 +1426,7 @@ Color Pallette
   .footer-copy p {
     font-size: 12px;
   }
-  .content-row h1 {
+  .content-row h3 {
     margin-top: 0;
     margin-bottom: 7px;
   }
