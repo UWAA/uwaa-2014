@@ -42,7 +42,7 @@ while ( have_posts() ) : the_post();
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_LoveUW_600x397.jpg" id="careers_image" alt="placeholder">
           </div> 
         <div class="copy">
-          <h2><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_one_title', true)) ?></h2>
+          <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_one_title', true)) ?></h3>
           <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_one_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),

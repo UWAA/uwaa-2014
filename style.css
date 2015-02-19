@@ -3524,6 +3524,7 @@ Typography
   background-image: none;
   color: #FFF;
   min-width: 132px;
+  border-radius: 0;
 }
 .uwaa-convio-wrapper div.responsive a.next-step:hover,
 .uwaa-convio-wrapper div.responsive button.next-step:hover,
@@ -3542,16 +3543,17 @@ Typography
 .uwaa-convio-wrapper div.responsive button.previous-step {
   color: #000;
   text-decoration: none;
+  border-radius: 0;
 }
 .uwaa-convio-wrapper div.responsive a.previous-step,
 .uwaa-convio-wrapper div.responsive button.previous-step {
   min-width: 132px;
 }
 .uwaa-convio-wrapper div.responsive button.cancel-step {
+  border-radius: 0;
   text-decoration: none;
   clear: both;
   color: #FFF;
-  border: 1px solid #000;
   padding: 10px 7px;
   min-width: 132px;
   border-radius: 3px;
