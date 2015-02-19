@@ -130,8 +130,6 @@
 .modal-footer:after,
 #header:before,
 #header:after,
-.header-fixed:before,
-.header-fixed:after,
 .join-row:before,
 .join-row:after,
 .join-row .wrapper:before,
@@ -165,7 +163,6 @@
 .panel-body:after,
 .modal-footer:after,
 #header:after,
-.header-fixed:after,
 .join-row:after,
 .join-row .wrapper:after,
 .join-row-fixed .wrapper:after,
@@ -207,8 +204,6 @@
 .modal-footer:after,
 #header:before,
 #header:after,
-.header-fixed:before,
-.header-fixed:after,
 .join-row:before,
 .join-row:after,
 .join-row .wrapper:before,
@@ -242,7 +237,6 @@
 .panel-body:after,
 .modal-footer:after,
 #header:after,
-.header-fixed:after,
 .join-row:after,
 .join-row .wrapper:after,
 .join-row-fixed .wrapper:after,
@@ -312,64 +306,11 @@ Color Pallette
   height: 100%;
   width: 100%;
 }
-.header-fixed {
-  margin-left: -15px;
-  margin-right: -15px;
-  background: url(https://www.uw.edu/alumni/images/membership/gradpack/GradPack_FixedHeader_1200x70.jpg);
-  background-color: #ffffff;
-  height: 70px;
-  position: fixed;
-  width: 100%;
-  margin: 0;
-}
-.header-fixed:before,
-.header-fixed:after {
-  content: " ";
-  display: table;
-}
-.header-fixed:after {
-  clear: both;
-}
-.header-fixed:before,
-.header-fixed:after {
-  content: " ";
-  display: table;
-}
-.header-fixed:after {
-  clear: both;
-}
-.header-fixed:before,
-.header-fixed:after {
-  content: " ";
-  display: table;
-}
-.header-fixed:after {
-  clear: both;
-}
-.header-fixed:before,
-.header-fixed:after {
-  content: " ";
-  display: table;
-}
-.header-fixed:after {
-  clear: both;
-}
-#conGRADulations {
-  position: absolute;
-  left: 0;
-  top: 10%;
-  background-color: rgba(23, 8, 49, 0.7);
-  padding: 10px 10px 12px 10px;
-}
 #conGRADulations h1 {
-  font-size: 37.37px;
-  line-height: 1.2;
-  color: #ffffff;
-  white-space: normal;
-  margin: 0;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-#conGRADulations h1 strong {
+#conGRADulations h1 bold {
   font-weight: 700;
   color: #b7a57a;
 }
@@ -1053,16 +994,6 @@ Color Pallette
   #header {
     height: 318.72px;
   }
-  #conGRADulations {
-    position: absolute;
-    right: 0;
-    top: 235px;
-    background-color: rgba(23, 8, 49, 0.7);
-    padding: 10px;
-  }
-  #conGRADulations h1 {
-    font-size: 25.9px;
-  }
   #yellow-dot {
     width: 80px;
     height: 80px;
@@ -1129,16 +1060,6 @@ Color Pallette
   }
   #header #header-bg {
     background-position: 65% 0;
-  }
-  #conGRADulations {
-    position: absolute;
-    right: 0;
-    top: 280px;
-    background-color: rgba(23, 8, 49, 0.7);
-    padding: 10px;
-  }
-  #conGRADulations h1 {
-    font-size: 18.5px;
   }
   #yellow-dot {
     width: 64px;
