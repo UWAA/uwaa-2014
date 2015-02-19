@@ -47,9 +47,10 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
           get_template_part( 'partials/map' );
         ?>
-         
-        
 
+        <h3 style="margin-top:60px;">Is Your Contact Information Up to Date?</h3>
+        <p>Don't miss out on all the Husky happenings around the world.. Please take a moment to update your information.</p>
+        <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="https://cms.alumni.washington.edu/alumni/services/update-your-information/" target="_blank">Update your information</a></div>
          
 
       </div>

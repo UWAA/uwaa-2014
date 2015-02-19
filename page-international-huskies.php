@@ -64,10 +64,10 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
     ?>
 
-    <div id="no-chapter-widget" class="widget widget_text">
+      <div id="no-chapter-widget" class="widget widget_text">
           <h2 class="widgettitle">Don&rsquo;t See Your Chapter?</h2>
           <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="mailto:jdotson@uw.edu&subject=Online%20Chapter%20Inquiry">Let Us Know!</a></div>
-        </div>
+        
       </div>
 
      
