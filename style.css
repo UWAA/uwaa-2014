@@ -3520,7 +3520,7 @@ Typography
 .uwaa-convio-wrapper div.responsive a.next-step,
 .uwaa-convio-wrapper div.responsive button.next-step {
   border: 1px solid #000;
-  background-color: #4b2e83;
+  background-color: #4b2e83 !important;
   color: #FFF;
   min-width: 132px;
 }
