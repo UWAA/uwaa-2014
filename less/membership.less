@@ -1,6 +1,7 @@
 // membership.less
 
 .membership-card{
+    margin-left: 60px;
     position: relative;
     width: 302px;
     height: 192px;
@@ -43,6 +44,16 @@
     }
 }
 
+.uw-sidebar {
+     .membership-card {
+        margin-left: 0;
+    }
+
+    a#memberCheckerLogout {
+        margin-right: 20px;
+    }
+}
+
 #memberloginForm {
     label {
         position: absolute;
@@ -79,7 +90,7 @@
 
 a#memberCheckerLogout {
     float: right;
-    margin-right: 20px;
+    margin-right: 0;
     cursor: pointer;
 }
 

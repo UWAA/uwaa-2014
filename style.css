@@ -2904,6 +2904,7 @@ ul.uwaa-social li a:focus.email {
   background-position: -410px -185px;
 }
 .membership-card {
+  margin-left: 60px;
   position: relative;
   width: 302px;
   height: 192px;
@@ -2935,6 +2936,12 @@ ul.uwaa-social li a:focus.email {
 .membership-card p.renewal {
   top: 163px;
 }
+.uw-sidebar .membership-card {
+  margin-left: 0;
+}
+.uw-sidebar a#memberCheckerLogout {
+  margin-right: 20px;
+}
 #memberloginForm label {
   position: absolute;
   top: 10px;
@@ -2964,7 +2971,7 @@ ul.uwaa-social li a:focus.email {
 }
 a#memberCheckerLogout {
   float: right;
-  margin-right: 20px;
+  margin-right: 0;
   cursor: pointer;
 }
 #join-renew-buttons {
