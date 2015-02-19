@@ -18,7 +18,9 @@ while ( have_posts() ) : the_post();
         <div id="header-fore"></div>
   
          
-            <h1>Con<strong>grad</strong>ulations<br/> Class of 2014!</h1>
+            <div class="container">
+            <h1>Con<strong>grad</strong>ulations<br/> Class of 2015!</h1>
+            </div>
         
     </div>
 

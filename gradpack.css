@@ -367,9 +367,11 @@ Color Pallette
   color: #ffffff;
   white-space: normal;
   margin: 0;
+  text-transform: uppercase;
 }
-#conGRADulations h1 .bold {
+#conGRADulations h1 strong {
   font-weight: 700;
+  color: #b7a57a;
 }
 #yellow-dot {
   width: 100px;
@@ -401,7 +403,7 @@ Color Pallette
 @media (min-width: 1500px) {
   #yellow-dot {
     margin-left: 22%;
-    top: 16%;
+    top: 14.25%;
   }
 }
 .join-row {
@@ -1064,7 +1066,7 @@ Color Pallette
   #yellow-dot {
     width: 80px;
     height: 80px;
-    top: 18.2%;
+    top: 14.25%;
     font-size: 15px;
   }
   #yellow-dot span {
