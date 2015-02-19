@@ -1,0 +1,466 @@
+// Basic Features
+   
+div.responsive {
+    color: rgb(60,60,60);
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif; 
+    font-size: 1em;
+    width: auto;
+    margin: auto;
+} 
+  
+div.form-input-choose-block,
+div.donation-level-label-input-container {
+    vertical-align:middle;
+    margin: 0 10px;
+    display:none;
+}  
+
+div.donation-level-amount-container+div.donation-level-label-container {
+    margin-left:0;
+    
+}  
+
+div.responsive label {
+    white-space: normal;
+    
+}
+  
+/*
+Typography
+*/
+    
+h1, h2, h3, h4, h5, h6 {
+    color:#000;
+}
+
+div.responsive div.ErrorMessage.page-error>span.field-error-text {
+    width: 100%
+    ;
+}
+/*Adjusts Form Length to move with box size */
+div.form-row div.form-content>select,
+div.form-row div.form-content input.ui-autocomplete-input,
+div.form-row div.form-content>textarea,
+div.form-row div.form-content>button {
+width: 100%;
+}
+
+div.form-row div.form-content>input[type="text"] {
+
+width:auto;
+}
+
+/* Overwriting existing main_convio.css */
+#rightcolumn {
+width: auto; /*Width of right column, was 240*/
+margin-top: 6px;
+margin-bottom: 20px; /*Add spacing before footer*/
+
+}
+
+.widgetimage {
+    margin-bottom:0;
+    margin-top:10px;
+    margin-left:10px;
+    float:right;
+
+}
+
+#footer {
+width:970px;
+}
+
+#footerleft {
+margin-left:130px;
+}
+
+#employer_street_row input,
+#billing_addr_street1_row input,
+#billing_addr_street2_row input,
+#billing_addr_street3_row input,
+#billing_addr_country_row input.ui-autocomplete-input,
+#donor_addr_street1_row input,
+#donor_addr_street2_row input,
+#donor_addr_street3_row input,
+#donor_addr_country_row input.ui-autocomplete-input,
+#shipping_addr_street1_row input,
+#shipping_addr_street2_row input,
+#shipping_addr_street3_row input,
+#shipping_addr_country_row input.ui-autocomplete-input,
+#tribute_notify_recip_street1_row input,
+#tribute_notify_recip_street2_row input,
+#tribute_notify_recip_street3_row input,
+#tribute_notify_recip_country_row input.ui-autocomplete-input,
+#tribute_signature_row input,
+#tribute_message_closing_row input,
+div.employer-address-container input#employer_street {
+    max-width: 260px;
+}
+
+#donor_email_addressname{
+    min-width:260px;
+}
+
+
+
+/* Mobile Header Basic Styles */
+
+
+.mobile-header-bg {
+ /* Old browsers */
+background: #3927fb;
+background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#39275b)); /* Chrome,Safari4+ */
+background:  -webkit-linear-gradient(top, #000000 0%,#39275b 100%); /* Chrome10+,Safari5.1+ */
+background:  -o-linear-gradient(top, #000000 0%,#39275b 100%); /* Opera 11.10+ */
+background:  -ms-linear-gradient(top, #000000 0%,#39275b 100%); /* IE10+ */
+background: linear-gradient(to bottom, #000000 0%,#39275b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#39275b',GradientType=0 ); /* IE6-9 */
+height:90px;
+}
+
+.mobile-header-logo {
+position:relative;
+top:25%;
+left:2.5%;
+}
+
+
+/* Donation Category Graphical Styling */
+    
+h2.section-header-container {
+border-top:none;
+padding-top:0px;
+margin:0;
+}
+
+h2.section-header-container ~ h2.section-header-container {
+border-top: 1px solid #CCCCCC;
+padding-top: 20px;
+}
+    
+div.donation-level-container {
+background: #39275b; /* Old browsers */
+background: -moz-linear-gradient(top, #000000 0%, #39275b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#39275b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #000000 0%,#39275b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #000000 0%,#39275b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #000000 0%,#39275b 100%); /* IE10+ */
+background: linear-gradient(to bottom, #000000 0%,#39275b 100%); /* W3C */
+color:#fff;
+vertical-align:middle;
+font-size:1.2em;
+margin: 10px 0;
+padding:5px 30px 5px 10px;
+box-shadow: 1px 1px 5px #808080;
+}
+
+
+div.donation-level-container.hover{
+background: #39275b; /* Old browsers */
+background: -moz-linear-gradient(top,  #39275b 0%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#39275b), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #39275b 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #39275b 0%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #39275b 0%,#000000 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #39275b 0%,#000000 100%); /* W3C */
+box-shadow: 3px 3px 5px #D7a900;
+
+}
+
+div#checkboxload {
+    background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat -9999px -9999px;
+}
+
+div.donation-level-container.selected{
+color:#000;
+vertical-align:middle;
+font-size:1.2em;
+margin: 10px 0;
+padding:10px 30px 10px 10px;
+background: rgb(215,169,0); /* Old browsers */
+background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -moz-linear-gradient(-45deg,  rgba(215,169,0,1) 1%, rgba(255,255,255,1) 76%); /* FF3.6+ */
+background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -webkit-gradient(linear, left top, right bottom, color-stop(1%,rgba(215,169,0,1)), color-stop(76%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -webkit-linear-gradient(-45deg,  rgba(215,169,0,1) 1%,rgba(255,255,255,1) 76%); /* Chrome10+,Safari5.1+ */
+background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -o-linear-gradient(-45deg,  rgba(215,169,0,1) 1%,rgba(255,255,255,1) 76%); /* Opera 11.10+ */
+background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  -ms-linear-gradient(-45deg,  rgba(215,169,0,1) 1%,rgba(255,255,255,1) 76%); /* IE10+ */
+background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%,  linear-gradient(135deg,  rgba(215,169,0,1) 1%,rgba(255,255,255,1) 76%); /* W3C */
+}
+
+div.donation-form-container.responsive {
+    margin: 10px 0;
+
+}
+div.responsive div.form-content  {
+    margin: 0;
+    padding: 5px;
+}
+
+div.donation-level-input-container,
+div.generic-repeat-label-checkbox-container {
+    padding:0;
+    margin:0;
+}
+
+
+label+div.donation-level-expanded-label,
+div.donation-level-user-entered+div.donation-level-expanded-label  {
+    margin: 0px 5px 0px 0px;
+
+}
+
+input[type="radio"] {
+    vertical-align:middle;
+    margin:0;
+}
+
+input[type="text"] {
+    width:100%;
+
+}
+
+#searchinputbox{
+    width:auto;
+}
+
+div.donation-form-container.responsive {
+    padding: 25px;
+    background: #FFF;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    border:none;
+}
+
+
+.FormSectionHeader {
+    font-family: 'Open Sans' ,Arial, Helvetica, sans-serif;
+    font-size:1.3em;
+    border-top:1px solid #dddddd;
+    background-color:#fff;
+    border:none;
+    margin:0;
+}
+
+h5.FormSectionHeader {
+padding: 3px 5px;
+text-decoration:underline;
+}
+
+
+div.responsive textarea, 
+div.responsive input,
+div.responsive select,
+div.responsive option {
+    font-family: inherit;
+    font-size: inherit;
+    vertical-align: top;
+}
+
+h2.section-header-container {
+border-top:none;
+padding-top:0px;
+margin:0;
+}
+
+h2.section-header-container ~ h2.section-header-container {
+ border-top: 1px solid #CCCCCC;
+    padding-top: 20px;
+}
+
+label {
+display:inline;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+div.responsive a.next-step,
+div.responsive button.next-step {
+    border: 1px solid #000;
+    background-color: #39275b;
+    background-image: -ms-linear-gradient(bottom right, #39275B 0%, #000000 100%);
+    background-image: -moz-linear-gradient(bottom right, #39275B 0%, #000000 100%);
+    background-image: -o-linear-gradient(bottom right, #39275B 0%, #000000 100%);
+    background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0, #39275B), color-stop(1, #000000));
+    background-image: -webkit-linear-gradient(bottom right, #39275B 0%, #000000 100%);
+    background-image: linear-gradient(to top left, #39275B 0%, #000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39275b', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    color: #FFF;
+    min-width:132px;
+}
+
+
+
+div.responsive a.next-step:hover,
+div.responsive button.next-step:hover,
+div.responsive a.next-step:focus,
+div.responsive button.next-step:focus {
+    color: #FFF;
+    text-decoration: none;
+background: #000000; /* Old browsers */
+background: -moz-linear-gradient(top, #000000 0%, #39275b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#39275b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #000000 0%,#39275b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #000000 0%,#39275b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #000000 0%,#39275b 100%); /* IE10+ */
+background: linear-gradient(to bottom, #000000 0%,#39275b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#39275b',GradientType=0 ); /* IE6-9 */
+box-shadow: 0 0 5px #39275b;
+
+
+    
+}
+.btn:active,
+.btn.active {
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+div.responsive a.previous-step,
+div.responsive button.previous-step {
+    color:#000;
+    text-decoration:none;
+    
+}
+
+div.responsive a.previous-step,
+div.responsive button.previous-step {
+min-width:132px;
+}
+
+
+div.responsive button.cancel-step {
+text-decoration:none;
+clear:both;
+color:#FFF;
+border:1px solid #000;
+padding: 10px 7px;
+min-width:132px;
+    border-radius: 3px; 
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+background: rgb(178,5,5); 
+background: -moz-linear-gradient(top, rgba(178,5,5,1) 0%, rgba(236,7,7,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(178,5,5,1)), color-stop(100%,rgba(236,7,7,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(178,5,5,1) 0%,rgba(236,7,7,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(178,5,5,1) 0%,rgba(236,7,7,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(178,5,5,1) 0%,rgba(236,7,7,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(178,5,5,1) 0%,rgba(236,7,7,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b20505', endColorstr='#ec0707',GradientType=0 ); /* IE6-9 */
+}
+
+div.responsive button.cancel-step:hover,
+div.responsive button.cancel-step:focus,
+div.responsive button.cancel-step:active {
+clear:both;
+color:#FFF;
+background: rgb(236,7,7); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(236,7,7,1) 0%, rgba(178,5,5,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,7,7,1)), color-stop(100%,rgba(178,5,5,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(236,7,7,1) 0%,rgba(178,5,5,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(236,7,7,1) 0%,rgba(178,5,5,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(236,7,7,1) 0%,rgba(178,5,5,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(236,7,7,1) 0%,rgba(178,5,5,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec0707', endColorstr='#b20505',GradientType=0 ); /* IE6-9 */
+}
+
+div.responsive button.finish-step {
+}
+
+
+// Premium Selectors
+
+
+div.responsive div.premium-selector-radio-container,
+div.responsive div.premium-selector-select-option-container {
+    padding: 5px 0px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border:none;
+}
+
+div.responsive div.premium-selector-radio-container input {
+display:none;
+}
+
+
+div.responsive div.premium-selector-radio-option-description-img-and-text label {
+display: block;
+}
+
+.premium-selector-option-image {
+margin:10px;
+}
+
+
+div.responsive span.premium-selector-radio-option-short-description {
+display:table-cell;
+}
+
+div.responsive div.premium-selector-radio-option-description {
+color:#000;
+font-size:1.1em;
+padding: 5px 40px 5px 10px;
+box-shadow: 1px 1px 5px #808080;
+border:2px solid #808080;
+border-radius: 6px;
+width:100%;
+
+}
+
+
+
+div.responsive div.premium-selector-radio-option-description.hover {
+box-shadow: 3px 3px 5px #39275b;
+border:2px solid #39275b;
+border-radius: 6px;
+width:100%;
+
+}
+div.responsive div.premium-selector-radio-option-description.selected{
+background:url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%;
+border:2px solid #d7a900;
+}
+
+
+
+div.responsive div.premium-selector-radio-option-row, div.responsive div.premium-selector-option-row{
+padding:0;
+margin:10px;
+}
+
+div.responsive div.premium-selector-radio-option-row.premium-separator {
+border:none;
+}
+
+div.premium-selector-radio-option-description-img-and-text {
+max-width:100%;
+
+}
+
+
+
+
+@-ms-viewport { width:device-width;}
+@media screen and (max-width: 400px) {
+
+    div.responsive a.previous-step,
+    div.responsive button.previous-step,
+    div.responsive a.next-step,
+    div.responsive button.next-step,
+    div.responsive button.cancel-step {
+        min-width:100px;
+}
+
+    div.donation-form-container.responsive {
+        padding: 5px 0 0 0;
+
+}
+
+}
+
+
