@@ -2001,6 +2001,16 @@ div.map-logo.uae {
 .post-type-archive-events .uwaa-superhero .slideshow-controls p {
   bottom: 20px;
 }
+@media only screen and (max-width: 991px) {
+  .page-travel .uwaa-superhero .slideshow-controls:after,
+  .page-membership .uwaa-superhero .slideshow-controls:after {
+    bottom: 0px;
+  }
+  .page-travel .uwaa-superhero .slideshow-controls p,
+  .page-membership .uwaa-superhero .slideshow-controls p {
+    bottom: 20px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .uw-homepage-slider-container.uwaa-superhero .slideshow-controls:after {
     bottom: 0px;
@@ -3688,7 +3698,7 @@ Typography
 @-ms-viewport {
   width: device-width;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .uwaa-convio-wrapper div.responsive a.previous-step,
   .uwaa-convio-wrapper div.responsive button.previous-step,
   .uwaa-convio-wrapper div.responsive a.next-step,
