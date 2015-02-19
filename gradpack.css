@@ -933,7 +933,7 @@ Color Pallette
 .copy .join-button {
   margin: 10px 0 0 0;
 }
-@media (min-width: 961px) AND (max-width: 1199px) {
+@media (min-width: 961px) {
   .loveUW h1 {
     font-size: 26.64px;
   }
