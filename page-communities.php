@@ -49,7 +49,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
         ?>
 
         <h3 style="margin-top:60px;">Is Your Contact Information Up to Date?</h3>
-        <p>Don't miss out on all the Husky happenings around the world.. Please take a moment to update your information.</p>
+        <p>Don't miss out on all the Husky happenings around the world. Please take a moment to update your information.</p>
         <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="https://cms.alumni.washington.edu/alumni/services/update-your-information/" target="_blank">Update your information</a></div>
          
 
@@ -70,7 +70,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
       <div id="no-chapter-widget" class="widget widget_text">
           <h2 class="widgettitle">Don&rsquo;t See Your Chapter?</h2>
-          <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="mailto:jdotson@uw.edu&subject=Online%20Chapter%20Inquiry">Let Us Know!</a></div>
+          <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="mailto:jdotson@uw.edu?subject=Online%20Chapter%20Inquiry">Let Us Know!</a></div>
         </div>
       </div>
 
