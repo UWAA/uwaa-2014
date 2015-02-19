@@ -3442,20 +3442,7 @@ Typography
   font-size: 1.2em;
   margin: 10px 0;
   padding: 10px 30px 10px 10px;
-  background: #4b2e83;
-  /* Old browsers */
-  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, -moz-linear-gradient(-45deg, #ffd800 1%, #ffffff 76%);
-  /* FF3.6+ */
-  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, -webkit-gradient(linear, left top, right bottom, color-stop(1%, #ffd800), color-stop(76%, #ffffff));
-  /* Chrome,Safari4+ */
-  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, -webkit-linear-gradient(-45deg, #ffd800 1%, #ffffff 76%);
-  /* Chrome10+,Safari5.1+ */
-  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, -o-linear-gradient(-45deg, #ffd800 1%, #ffffff 76%);
-  /* Opera 11.10+ */
-  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, -ms-linear-gradient(-45deg, #ffd800 1%, #ffffff 76%);
-  /* IE10+ */
-  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, linear-gradient(135deg, #ffd800 1%, #ffffff 76%);
-  /* W3C */
+  background: #b7a57a;
 }
 .uwaa-convio-wrapper div.donation-level-container.selected div.donation-level-expanded-label p {
   color: #000000;
