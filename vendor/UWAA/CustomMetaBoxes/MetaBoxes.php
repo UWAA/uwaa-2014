@@ -6,6 +6,8 @@ class MetaBoxes
     protected $post;
 
     function __construct() {
+        
+        global $post;
 
         $this->post = $post;
         $this->add_pullquote_meta();
