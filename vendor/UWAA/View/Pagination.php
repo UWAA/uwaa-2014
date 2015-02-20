@@ -156,8 +156,8 @@ CONTENT;
                             ),
                         array(
                             'key' => 'mb_isPreliminaryTour',
-                            'value' => 'preliminary',
-                            'compare' => 'NOT LIKE'
+                            'value' => 'ready_to_publish_tour',
+                            'compare' => 'LIKE'
                             ),
                     ),      
                     'posts_per_page' => -1,
