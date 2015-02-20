@@ -155,9 +155,17 @@ CONTENT;
                             'compare' => '>='
                             ),
                         array(
-                            'key' => 'mb_isPreliminaryTour',
-                            'value' => 'ready_to_publish_tour',
-                            'compare' => 'LIKE'
+                            'relation' => 'or',
+                            array(
+                                'key' => 'mb_isPreliminaryTour',
+                                'value' => 'preliminary',
+                                'compare' => '='
+                                ),
+                            array(
+                                'key' => 'mb_isPreliminaryTour',                                
+                                'compare' => 'NOT EXISTS'
+                                ),
+                            
                             ),
                     ),      
                     'posts_per_page' => -1,
