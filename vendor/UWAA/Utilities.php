@@ -53,7 +53,7 @@ class Utilities
             array(
                 'key' => 'mb_isPreliminaryTour',
                 'value' => 'preliminary',
-                'compare' => '!='
+                'compare' => '='
             ),
         )
     );
