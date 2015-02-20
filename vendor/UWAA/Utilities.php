@@ -14,6 +14,7 @@ class Utilities
     function __construct()
     {
         add_filter('pre_get_posts',array($this,'SearchFilter'));
+        add_action( 'admin_menu', array($this, 'renameStoryPosts'));
         
         
     }   
@@ -37,7 +38,9 @@ class Utilities
     } // end theme_get_permalink_by_title
 
 
-    public function SearchFilter($query) {
+    public function SearchFilter($query)
+
+    {
     if ( !$query->is_search )
         return $query;
 
@@ -69,7 +72,17 @@ class Utilities
     // $query->set( 'meta_query', $meta_query );
     // var_dump($meta_query);
     return $query;
-}
+
+    }
+
+    public function renameStoryPosts() 
+    {
+    
+    global $menu;     
+    $menu[5][0] = 'Story Posts'; // Change Posts to Recipes
+
+    }
+
  
 
 
