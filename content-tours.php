@@ -14,4 +14,4 @@
  ?>
 
 
- <p>Please consider purchasing travel insurance to protect your trip.  <a href="#" class="read-more-link">Learn More.</a></p>
+ <p>Please consider purchasing travel insurance to protect your trip.  <a href="#" class="read-more-link">Learn more.</a></p>
