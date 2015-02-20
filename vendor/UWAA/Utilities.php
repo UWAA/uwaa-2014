@@ -13,6 +13,7 @@ class Utilities
 
     function __construct()
     {
+        add_filter('pre_get_posts',array($this,'SearchFilter'));
         
         
     }   
@@ -34,6 +35,34 @@ class Utilities
     return $permalink;
 
     } // end theme_get_permalink_by_title
+
+
+    public function SearchFilter($query) {
+    if ( !$query->is_search )
+        return $query;
+
+    $taxquery = array(
+        array(
+            'relation' => 'OR',
+            array(
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => array( 'exclude-from-search'),
+                'operator'  => 'NOT IN'
+            ),
+            array(
+                'key' => 'mb_isPreliminaryTour',
+                'value' => 'preliminary',
+                'compare' => '!='
+            ),
+        )
+    );
+
+    $query->set( 'tax_query', $taxquery );    
+    return $query;
+}
+ 
+
 
     
 }
