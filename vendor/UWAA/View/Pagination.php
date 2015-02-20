@@ -187,11 +187,18 @@ CONTENT;
             default:
                 $args = array (
                     'post_type' => $this->postType,
-                    'category' => '-187',
-                    'posts_per_page' => -1,
+                    'category' => '-187',                    
                     'orderby' => 'title',      
                     'order' => 'ASC',                    
                     'posts_per_page' => -1,
+                    'tax_query' => array(       
+                        array(
+                          'taxonomy' => 'category',
+                          'field'    => 'slug',
+                          'terms'    => array( 'exclude-from-search'),
+                          'operator'  => 'NOT IN'
+                        )
+                    ) //End tax query 
                 );
                 break;
         }       
