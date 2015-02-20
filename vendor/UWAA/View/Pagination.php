@@ -144,19 +144,27 @@ CONTENT;
             case 'tours':
                 $args = array (
                     'post_type' => $this->postType,
-                    'orderby' => 'meta_value',      
+                    'orderby' => 'meta_value',     
                     'order' => 'ASC',
                     'meta_key' => 'mb_start_date',
                     'meta_query' => array(
-                        
-                        'key' => 'mb_start_date',
-                        'type' => 'DATE',
-                        'value' => date("Y-m-d"), 
-                        'compare' => '>=', 
+                        array(
+                            'key' => 'mb_start_date',
+                            'type' => 'DATE',
+                            'value' => date("Y-m-d"), 
+                            'compare' => '>='
+                            ),
+                        array(
+                            'key' => 'mb_isPreliminaryTour',
+                            'value' => 'preliminary',
+                            'compare' => 'NOT LIKE'
+                            ),
                     ),      
                     'posts_per_page' => -1,
                   );
             break;
+
+            // 'preliminary' => get_post_meta($post->ID, 'mb_isPreliminaryTour', true),
             
             case 'benefits':
                 $args = array (
@@ -169,7 +177,8 @@ CONTENT;
             
             default:
                 $args = array (
-                    'post_type' => $this->postType,                  
+                    'post_type' => $this->postType,
+                    'category' => '-187',
                     'posts_per_page' => -1,
                     'orderby' => 'title',      
                     'order' => 'ASC',                    
