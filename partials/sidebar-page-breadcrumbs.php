@@ -6,6 +6,6 @@
       <!-- <div class="logo hidden-xs hidden-sm"> -->
         <?php //get_template_part('assets/uwaa', 'logo.svg');?>
       <!-- </div> -->
-      <em>Produced by the Alumni Association for all UW Alumni</em>
+      <em>Produced by the Alumni Association for all UW alumni</em>
     </div> 
   </div>
