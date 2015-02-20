@@ -171,6 +171,9 @@ CONTENT;
                 $args = array (
                     'post_type' => $this->postType,                  
                     'posts_per_page' => -1,
+                    'orderby' => 'title',      
+                    'order' => 'ASC',                    
+                    'posts_per_page' => -1,
                 );
                 break;
         }       

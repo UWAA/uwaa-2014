@@ -3,9 +3,9 @@
 ?>
 <h6 class="intro-head">Member Benefit</h6>
 
-<?php if($benefitLogo) { ?>    
-        <h1><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a></h1>
-<?php } ?>
+
+        <h1><?php the_title() ?></h1>
+
 
 
 
