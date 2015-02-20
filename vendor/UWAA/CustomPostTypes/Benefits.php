@@ -12,7 +12,7 @@ class Benefits
             $labels = array(
                 'name'                => 'Benefits',
                 'singular_name'       => 'Benefit',
-                'menu_name'           => 'Benefit Post',
+                'menu_name'           => 'Benefits',
                 'parent_item_colon'   => 'Parent Item:',
                 'all_items'           => 'All Benefits',
                 'view_item'           => 'View Benefit Details',

@@ -12,7 +12,7 @@ class Events
             $labels = array(
                 'name'                => 'Events',
                 'singular_name'       => 'Event',
-                'menu_name'           => 'Event Post',
+                'menu_name'           => 'Events',
                 'parent_item_colon'   => 'Parent Item:',
                 'all_items'           => 'All Events',
                 'view_item'           => 'View Event Details',
