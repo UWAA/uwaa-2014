@@ -148,6 +148,7 @@ CONTENT;
                     'order' => 'ASC',
                     'meta_key' => 'mb_start_date',
                     'meta_query' => array(
+                        'relation' => 'AND',
                         array(
                             'key' => 'mb_start_date',
                             'type' => 'DATE',
@@ -155,11 +156,11 @@ CONTENT;
                             'compare' => '>='
                             ),
                         array(
-                            'relation' => 'or',
+                            'relation' => 'OR',
                             array(
                                 'key' => 'mb_isPreliminaryTour',
                                 'value' => 'preliminary',
-                                'compare' => '='
+                                'compare' => '!='
                                 ),
                             array(
                                 'key' => 'mb_isPreliminaryTour',                                
