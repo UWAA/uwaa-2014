@@ -41,6 +41,8 @@ class Utilities
     if ( !$query->is_search )
         return $query;
 
+    // $meta_query = $query->get('meta_query');
+
     $taxquery = array(
         array(            
             array(
@@ -53,15 +55,19 @@ class Utilities
         )
     );
 
-    $metaquery = array (
-        array(
-                'key' => 'mb_isPreliminaryTour',
-                'value' => 'preliminary',
-                'compare' => '!='
-            ),
-    );
+    // $excludeSearchMetaQuery = array(
+    //     // 'relation' => 'OR',
+    //     array(
+    //             'key' => 'mb_isPreliminaryTour',
+    //             'value' => 'preliminary',
+    //             'compare' => '!='
+    //         ),
+    // );
+
+    $meta_query = $excludeSearchMetaQuery;
     $query->set( 'tax_query', $taxquery );
-    $query->set( 'meta_query', $metaquery );
+    // $query->set( 'meta_query', $meta_query );
+    // var_dump($meta_query);
     return $query;
 }
  
