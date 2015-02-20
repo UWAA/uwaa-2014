@@ -42,23 +42,26 @@ class Utilities
         return $query;
 
     $taxquery = array(
-        array(
-            'relation' => 'OR',
+        array(            
             array(
                 'taxonomy' => 'category',
                 'field'    => 'slug',
                 'terms'    => array( 'exclude-from-search'),
                 'operator'  => 'NOT IN'
             ),
-            array(
-                'key' => 'mb_isPreliminaryTour',
-                'value' => 'preliminary',
-                'compare' => '='
-            ),
+            
         )
     );
 
-    $query->set( 'tax_query', $taxquery );    
+    $metaquery = array (
+        array(
+                'key' => 'mb_isPreliminaryTour',
+                'value' => 'preliminary',
+                'compare' => '!='
+            ),
+    );
+    $query->set( 'tax_query', $taxquery );
+    $query->set( 'meta_query', $metaquery );
     return $query;
 }
  
