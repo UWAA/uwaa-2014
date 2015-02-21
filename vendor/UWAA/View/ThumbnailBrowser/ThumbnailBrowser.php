@@ -3,6 +3,16 @@
 class ThumbnailBrowser
 {
 
+  protected $allowedHTMLTags = array(
+          'a' => array(
+            'href' => array(),
+            'title' => array()
+          ),
+          'br' => array(),
+          'em' => array(),
+          'strong' => array(),          
+  );
+
 
 	
 

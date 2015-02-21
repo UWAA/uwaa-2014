@@ -34,6 +34,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 
         while ( $query->have_posts() ) : $query->the_post();
 
+        
+
 
         $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
@@ -41,7 +43,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');    
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = $this->getPostSubtitle($query);
-        $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
+        $this->postExcerpt = wp_kses($this->shortenExcerpt(get_the_excerpt(), 220), $this->allowedHTMLTags);
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);        
         
