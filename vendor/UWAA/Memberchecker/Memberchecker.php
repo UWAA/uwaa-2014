@@ -58,9 +58,15 @@ class Memberchecker {
 
     }
 
-    private function setSessionName() {
-
+     public function memberLogout() {
+        $session = new Session();
+        $session->setName('UWAAMEM');
+        $session->clear();
+        $session->invalidate();        
+        exit;   
     }
+
+    
 
     public function callMemberChecker() {
       
@@ -172,16 +178,56 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
     exit;
     }
 
+     public function renderDetails() {
+        $details = $this->getSessionInformation();        
+        
+        echo '<strong>Name:</strong> ' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
+        echo '<strong>Member Number:</strong> ' . $details['memberID'].'</br>';
+        echo '<strong>Membership Type:</strong> ' . $details['membershipType'] . '</br>';
+        echo '<strong>Status:</strong> ' . $details['memberStatus'].'</br>';
+        if ($details['membershipType'] == 'Annual Member') {
+            echo '<strong>Expires:</strong> ' . $details['membershipExpiry'].'</br>';
+        }
 
-
-
- public function memberLogout() {
-        $session = new Session();
-        $session->setName('UWAAMEM');
-        $session->clear();
-        $session->invalidate();        
-        exit;   
     }
+
+    public function renderCard() {
+        $details = $this->getSessionInformation();
+        $cardClass = strtolower(str_replace('Member', '', $details['membershipType']));
+
+        if ($details['membershipType'] == 'Annual Member') {
+            $renewal = '<p class="renewal">Renew: ' . $details['membershipExpiry'].'</p>';
+        }
+
+        $name = " " . $details['firstName'] . " " . $details['lastName'] . " ";
+        $number = $details['memberID'];
+
+        $content = <<<CONTENT
+        <div class="membership-card $cardClass">
+            <p class="member-name">$name</p>
+            <p class="member-number">$number</p>
+            $renewal
+        </div>
+
+CONTENT;
+
+    echo $content;
+    }
+
+    public function getMemberIDNumber() {
+        
+        $details = $this->getSessionInformation();
+
+        $memberNumber = $details['memberID'];
+
+        return $memberNumber;
+        
+    }
+
+
+
+
+
 
     private function getSessionInformation()
     {
@@ -228,41 +274,7 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
     //
     //  #TODO- Move these into a subclass or over with other view-rendering function
 
-    public function renderDetails() {
-        $details = $this->getSessionInformation();        
-        
-        echo '<strong>Name:</strong> ' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
-        echo '<strong>Member Number:</strong> ' . $details['memberID'].'</br>';
-        echo '<strong>Membership Type:</strong> ' . $details['membershipType'] . '</br>';
-        echo '<strong>Status:</strong> ' . $details['memberStatus'].'</br>';
-        if ($details['membershipType'] == 'Annual Member') {
-            echo '<strong>Expires:</strong> ' . $details['membershipExpiry'].'</br>';
-        }
-
-    }
-
-    public function renderCard() {
-        $details = $this->getSessionInformation();
-        $cardClass = strtolower(str_replace('Member', '', $details['membershipType']));
-
-        if ($details['membershipType'] == 'Annual Member') {
-            $renewal = '<p class="renewal">Renew: ' . $details['membershipExpiry'].'</p>';
-        }
-
-        $name = " " . $details['firstName'] . " " . $details['lastName'] . " ";
-        $number = $details['memberID'];
-
-        $content = <<<CONTENT
-        <div class="membership-card $cardClass">
-            <p class="member-name">$name</p>
-            <p class="member-number">$number</p>
-            $renewal
-        </div>
-
-CONTENT;
-
-    echo $content;
-    }
+   
 
     
 
