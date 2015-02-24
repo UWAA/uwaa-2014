@@ -30,7 +30,7 @@ class Memberchecker {
         $this->memberCheckSession->setOptions(array(
             'cookie_lifetime'=> 0,
             'cookie_httponly'=> 1,
-            'use_strict_mode'=> 0,
+            'use_strict_mode'=> 1,
             'use_only_cookies'=> 1,
             'cookie_secure'=> 1  
             )
@@ -40,7 +40,10 @@ class Memberchecker {
         
         if ($this->session->isStarted() != true) {
             $this->session->setName('UWAAMEM');
-            $this->session->start();
+
+            if ($this->session->get('active') == false) {
+                $this->session->start();
+            }
         }
     // $this->session->invalidate();
 
@@ -68,7 +71,7 @@ class Memberchecker {
 
     
 
-    public function callMemberChecker() {
+    public function callMemberChecker() {        
       
 
         
@@ -168,7 +171,8 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
         $this->session->set('memberStatus', $member->MemberStatus);
         $this->session->set('membershipExpiry', $member->MembershipExpiry);
         $this->session->set('membershipType', $member->MembershipType);
-        $this->session->set('loggedIn', true);        
+        $this->session->set('loggedIn', true);
+        $this->session->set('active', true);
     }
 
     echo json_encode($callSuccess);
