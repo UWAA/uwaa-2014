@@ -78,8 +78,8 @@ class Memberchecker {
 
         
 
-$memberID = filter_var($_POST["idNumber"], FILTER_SANITIZE_NUMBER_INT);
-$lastName = ucfirst(strtolower(trim(filter_var($_POST["lastName"], FILTER_SANITIZE_STRING))));
+$memberID = filter_var($_GET["idNumber"], FILTER_SANITIZE_NUMBER_INT);
+$lastName = ucfirst(strtolower(trim(filter_var($_GET["lastName"], FILTER_SANITIZE_STRING))));
 
 if (empty($memberID)) {
      $payload = array (
