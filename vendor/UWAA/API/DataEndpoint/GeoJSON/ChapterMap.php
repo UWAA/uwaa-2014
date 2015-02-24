@@ -88,7 +88,7 @@ public function build($endpointData)
 
     private function determineLink($post) {
 
-        $linkToMajorMarket = get_permalink($post->ID);
+        $linkToMajorMarket = apply_filters('remove_cms' ,get_permalink($post->ID));        
         $homeURL = home_url('/');
         $linkToOtherChaptersPage = '' . $homeURL . 'communities/all-regions/?chapter=' . $post->post_name . '';
         $isMajorMarket = get_post_meta($post->ID, 'mb_isMajorMarket', true);
