@@ -1,6 +1,6 @@
 <?php
 wp_enqueue_script('memberChecker');       
-wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => apply_filters('remove_cms', admin_url( 'admin-ajax.php' ) ) ) );
+wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 ?>
 
     
@@ -17,7 +17,9 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
         ?>
 
         <h3>Please log in to view your member account.</h3>
-            <form method="POST" id="memberloginForm" class="uwaa-form">
+
+
+           <!--  <form method="POST" id="memberloginForm" class="uwaa-form">
                 <fieldset>
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
                     <input type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
@@ -30,11 +32,11 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
 
 
                 </fieldset>
-            </form>
+            </form> -->
 
-            <div id="form-message"></div>
+            <div id="form-message">Coming soon</div>
 
-            <div class="accordion">
+            <!-- <div class="accordion">
                 <div class="panel closed">
                     <h4 class="accordion-heading" aria-atomic="true" aria-live="polite">Log-In Help<span class="chevron closed"></span><span aria-expanded="false" class="indicator" style="position: absolute; clip: rect(1px 1px 1px 1px);">Collapsed</span></h4>
                     <div class="collapse" aria-hidden="true" style="display: none;">
@@ -43,7 +45,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
         <?php        
