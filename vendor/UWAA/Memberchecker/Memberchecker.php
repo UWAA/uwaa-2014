@@ -32,7 +32,8 @@ class Memberchecker {
             'cookie_httponly'=> 1,
             'use_strict_mode'=> 1,
             'use_only_cookies'=> 1,
-            'cookie_secure'=> 1  
+            'cookie_secure'=> 1,
+            'cookie_domain'  => 'washington.edu'
             )
         );
 
