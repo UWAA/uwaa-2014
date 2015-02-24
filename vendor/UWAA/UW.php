@@ -63,7 +63,7 @@ class UW
         $this->SidebarMenuWalker = new \UW_Sidebar_Menu_Walker;
         $this->Dropdowns         = new \UW_Dropdowns;
 
-        $this->Quicklinks        = new \Quicklinks;
+        $this->Quicklinks        = new \UW_QuickLinks;
 
         $this->Shortcodes        = new \UW_Shortcodes;
         $this->MediaCredit       = new \UW_Media_Credit;
