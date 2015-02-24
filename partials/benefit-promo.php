@@ -22,7 +22,7 @@ if (!empty($promoText)) {
             )));
                 } 
                 else{
-                    echo "UWAA members, login to see how to claim your benefit.";
+                    echo "UWAA members, please contact UWAA at 206-543-0540 for benefit information.";
                 }
 }
 ?>
