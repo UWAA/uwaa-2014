@@ -41,10 +41,11 @@ class Memberchecker {
         
         if ($this->session->isStarted() != true) {
             $this->session->setName('UWAAMEM');
+            $this->session->start();
 
-            if ($this->session->get('active') == false) {
-                $this->session->start();
-            }
+            // if ($this->session->get('active') == false) {
+            //     $this->session->start();
+            // }
         }
     // $this->session->invalidate();
 
@@ -77,8 +78,8 @@ class Memberchecker {
 
         
 
-$memberID = filter_var($_GET["idNumber"], FILTER_SANITIZE_NUMBER_INT);
-$lastName = ucfirst(strtolower(trim(filter_var($_GET["lastName"], FILTER_SANITIZE_STRING))));
+$memberID = filter_var($_POST["idNumber"], FILTER_SANITIZE_NUMBER_INT);
+$lastName = ucfirst(strtolower(trim(filter_var($_POST["lastName"], FILTER_SANITIZE_STRING))));
 
 if (empty($memberID)) {
      $payload = array (
@@ -157,10 +158,12 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
 
  else {
     
-    //Power up a new session for the user
-    $this->session = new Session($this->memberCheckSession);    
+    //Power up a new session for the user    
+    $this->session = new Session($this->memberCheckSession);
+    // $this->session->regenerate();
     $this->session->setID(hash("sha512", "{$member->MemberLName}{$_ENV['sessionSalt']}"));
     $this->session->setName('UWAAMEM');
+    $this->session->save();
     
 
     

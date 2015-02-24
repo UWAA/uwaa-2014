@@ -17,10 +17,10 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
         } else {
         ?>
 
-        <h3>Please log in to view your member account.</h3>
+        <!-- <h3>Please log in to view your member account.</h3> -->
 
 
-            <form method="GET" id="memberloginForm" class="uwaa-form">
+            <form method="POST" id="memberloginForm" class="uwaa-form">
                 <fieldset>
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
                     <input type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
