@@ -34,7 +34,7 @@ class UW
         require_once($parent . 'class.uw-sidebar-menu-walker.php');  // sidebar menu will initialize for us
 
         //UWAA Custom
-        // require_once($parent . 'class.uw-quicklinks.php' );
+        require_once($parent . 'class.uw-quicklinks.php' );
 
 
         require_once($parent . 'class.uw-iframes.php');
@@ -63,7 +63,7 @@ class UW
         $this->SidebarMenuWalker = new \UW_Sidebar_Menu_Walker;
         $this->Dropdowns         = new \UW_Dropdowns;
 
-        $this->Quicklinks        = new Quicklinks;
+        $this->Quicklinks        = new \Quicklinks;
 
         $this->Shortcodes        = new \UW_Shortcodes;
         $this->MediaCredit       = new \UW_Media_Credit;
