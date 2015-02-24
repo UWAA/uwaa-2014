@@ -111,7 +111,7 @@ $urlToCall = "{$_ENV['memberCheckerEndpoint']}{$_ENV['vendorID']}&memberID={$mem
 
 
 try{
-$memberPayload = file_get_contents(apply_filters('remove_cms', $urlToCall));
+$memberPayload = file_get_contents($urlToCall);
 }
 catch (exception $e)
 {
