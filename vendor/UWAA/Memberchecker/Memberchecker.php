@@ -41,11 +41,11 @@ class Memberchecker {
         
         if ($this->session->isStarted() != true) {
             $this->session->setName('UWAAMEM');
-            $this->session->start();
+            // $this->session->start();
 
-            // if ($this->session->get('active') == false) {
-            //     $this->session->start();
-            // }
+            if ($this->session->get('active') == false) {
+                $this->session->start();
+            }
         }
     // $this->session->invalidate();
 
