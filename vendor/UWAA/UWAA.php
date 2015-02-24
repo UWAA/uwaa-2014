@@ -65,7 +65,7 @@ class UWAA
         new \UWAA\CustomMetaBoxes\MetaBoxes; //Holds custom taxonomies
 
         //API
-        new \UWAA\API\RequestHandler($this->wp);  //Sets up the UWAA API for specialized feeds
+        new \UWAA\API\RequestHandler($this->wp, $this->Memberchecker);  //Sets up the UWAA API for specialized feeds
 
         //Widgets
         new \UWAA\Widgets\SidebarFeaturedPost;

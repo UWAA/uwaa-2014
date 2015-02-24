@@ -11,14 +11,16 @@ class RequestHandler
 {
 
   private $wp = null;
+  private $memberChecker = null;
   
 
-  function __construct($wp)
+  function __construct($wp, $memberChecker)
   {
    add_action( 'init', array($this, 'addRequestEndpoints'), 0 );
    add_filter( 'query_vars', array($this, 'createRequestQueryVars'), 0 );
    add_action( 'parse_request', array($this, 'detectAPIQueryRequest'), 0 );
    $this->wp = $wp;
+   $this->memberChecker = $memberChecker;
    
  } 
 
@@ -93,14 +95,13 @@ class RequestHandler
 
       case 'memberValidator':
         // echo 'Memberchecker';
-        $memberChecker = new \UWAA\Memberchecker\Memberchecker;
           switch ($dataType) {
             case 'login':
-              $memberChecker->callMemberChecker();
+              $this->memberChecker->callMemberChecker();
               break;
 
             case 'logout':
-              $memberChecker->memberLogout();
+              $this->memberChecker->memberLogout();
               break;
             
             default:
