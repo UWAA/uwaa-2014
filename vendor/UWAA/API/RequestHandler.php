@@ -35,7 +35,7 @@ class RequestHandler
   }
 
   public function addRequestEndpoints() {
-      add_rewrite_rule('^api/?(tours|benefits|communities)?/?(geojson|json)?/?','index.php?api=1&contentSection=$matches[1]&dataType=$matches[2]','top');
+      add_rewrite_rule('^api/?(tours|benefits|communities|memberValidator)?/?(geojson|json|login|logout)?/?','index.php?api=1&contentSection=$matches[1]&dataType=$matches[2]','top');
   }
 
   //Only thing about doing this is api is in the query string
@@ -89,6 +89,25 @@ class RequestHandler
 
       case 'benefits':
         echo 'Benefits Request';
+        break;
+
+      case 'memberValidator':
+        // echo 'Memberchecker';
+        $memberChecker = new \UWAA\Memberchecker\Memberchecker;
+          switch ($dataType) {
+            case 'login':
+              $memberChecker->callMemberChecker();
+              break;
+
+            case 'logout':
+              $memberChecker->memberLogout();
+              break;
+            
+            default:
+              # code...
+              break;
+          }       
+        // 
         break;
       //TODO - Make this return to regular WP 404 Page
       default:

@@ -14,10 +14,10 @@ class Memberchecker {
 
         $this->isLoggedIn = false;
         $this->hasActiveMembership = false;
-        add_action('wp_ajax_callMemberChecker', array($this, 'callMemberChecker'));
-        add_action('wp_ajax_nopriv_callMemberChecker', array($this, 'callMemberChecker'));
-        add_action('wp_ajax_memberLogout', array($this, 'memberLogout'));
-        add_action('wp_ajax_nopriv_memberLogout', array($this, 'memberLogout'));
+        // add_action('wp_ajax_callMemberChecker', array($this, 'callMemberChecker'));
+        // add_action('wp_ajax_nopriv_callMemberChecker', array($this, 'callMemberChecker'));
+        // add_action('wp_ajax_memberLogout', array($this, 'memberLogout'));
+        // add_action('wp_ajax_nopriv_memberLogout', array($this, 'memberLogout'));
     }
 
     public function addAJAXActions() {

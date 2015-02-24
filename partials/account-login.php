@@ -1,6 +1,6 @@
 <?php
-wp_enqueue_script('memberChecker');       
-wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+wp_enqueue_script('memberChecker');
+wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => apply_filters('remove_cms', home_url('/api/memberValidator'))  ) );
 ?>
 
     
@@ -9,8 +9,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                 <?php
         if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == false) {
             echo 'Welcome back '.esc_html($UWAA->Memberchecker->session->get('firstName')).'';
-        } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
-            // $UWAA->Memberchecker->renderCard();
+        } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {            
             $UWAA->Memberchecker->renderDetails();
             
         } else {
@@ -19,7 +18,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
         <h3>Please log in to view your member account.</h3>
 
 
-           <!--  <form method="POST" id="memberloginForm" class="uwaa-form">
+            <form method="POST" id="memberloginForm" class="uwaa-form">
                 <fieldset>
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
                     <input type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
@@ -28,11 +27,11 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                         <input type="text" name="lastName" placeholder="Last Name" autocomplete="off">
                         <input id="loginSubmit" type="submit">
                     </div>
-                    <input type="hidden" name="action" value="callMemberChecker">
+                    <!-- <input type="hidden" name="action" value="callMemberChecker"> -->
 
 
                 </fieldset>
-            </form> -->
+            </form>
 
             <div id="form-message">Coming soon</div>
 
@@ -60,8 +59,10 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                 $UWAA->Memberchecker->renderCard();
 
                 
+                //keeping here temporarily 
+                // echo <input type="hidden" name="action" value="memberLogout">
                 echo '<form id="memberlogout" method="POST">
-                        <input type="hidden" name="action" value="memberLogout">                                      
+                        
                       </form>
                     <a id="memberCheckerLogout">Logout</a>';
 

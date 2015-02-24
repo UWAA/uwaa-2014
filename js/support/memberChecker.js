@@ -13,8 +13,8 @@ var canvas = $('#form-message'),
 
      $.ajax({            
             type: form.attr('method'),
-            // action: 'callMemberChecker'            ,
-            url: callMemberCheckerAJAX.ajaxurl,
+            // action: 'callMemberChecker',
+            url: callMemberCheckerAJAX.ajaxurl +'/login',
             data: form.serialize(),
             dataType: 'json',
             // Remove for prod @TODO
@@ -48,7 +48,7 @@ $('form#memberlogout').on('submit', function(event) {
 
      $.ajax({            
             type: form.attr('method'),
-            url: callMemberCheckerAJAX.ajaxurl,
+            url: callMemberCheckerAJAX.ajaxurl +'/logout',
             data: form.serialize(),
 
             success: function(data) {
