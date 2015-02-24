@@ -30,20 +30,18 @@ class Memberchecker {
         $this->memberCheckSession->setOptions(array(
             'cookie_lifetime'=> 0,
             'cookie_httponly'=> 1,
-            'use_strict_mode'=> 0,
+            'use_strict_mode'=> 1,
             'use_only_cookies'=> 1,
-            'cookie_secure'=> 0,
-            'cookie_domain'  => 'washington.edu'
+            'cookie_secure'=> 1,
+            'cookie_domain'  => 'washington.edu/cms'
             )
         );
 
         $this->session = new Session($this->memberCheckSession);
         
         if ($this->session->isStarted() != true) {
-            $this->session->setName('UWAAMEM');
-            // $this->session->start();
-
-            if ($this->session->get('active') == false) {
+            if ($this->session->getName('UWAAMEM') != 'UWAAMEM') {
+                $this->session->setName('UWAAMEM');
                 $this->session->start();
             }
         }
