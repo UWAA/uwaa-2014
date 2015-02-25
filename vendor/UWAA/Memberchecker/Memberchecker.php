@@ -31,11 +31,11 @@ class Memberchecker {
 
     private function setMemberCheckCookie($values) {
         $this->memberCheckerCookie = new Cookie(
-            'UWAAMEM',
+            'UWAAMEM',  //name
             $values,  //Put the values from the MemberChecker into the cookie.
             0,  //Session cookie, die with browser close
-            '/',
-            null,  //Cookie Domain
+            '/',  //paht
+            'washington.edu',  //Cookie Domain
             true, //HTTPS
             true //HTTPOnly
             );        
