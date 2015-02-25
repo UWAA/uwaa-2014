@@ -180,8 +180,7 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
             );       
     }
 
-    $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));
-    // var_dump(json_encode($this->memberDetails, JSON_FORCE_OBJECT));
+    $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));    
     $this->memberCheckerResponse->headers->set('Content-Type', 'application/json');    
     $this->memberCheckerResponse->setData($callSuccess);
     $this->memberCheckerResponse->setCharset('UTF-8');        
@@ -238,6 +237,22 @@ CONTENT;
 // 
         return $memberNumber;
         
+    }
+
+    public function renderThankYouText()
+    {
+        $details = $this->getCookieInformation();
+
+        $name = $details['firstName'];
+
+        $content = <<<CONTENT
+        <div id="join-renew-buttons" class="">
+        $name, thank you for being a member!
+        </div>
+CONTENT;
+
+    echo $content;
+
     }
 
 
