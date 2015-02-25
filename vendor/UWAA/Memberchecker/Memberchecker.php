@@ -3,6 +3,7 @@
 
 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Cookie;
 class Memberchecker {
@@ -44,9 +45,20 @@ class Memberchecker {
 
 
     public function getSession() {
+
+        
+        
         $this->memberCheckerRequest = Request::createFromGlobals();
 
+
         $this->memberCheckerCookieValues = json_decode(stripslashes($this->memberCheckerRequest->cookies->get('UWAAMEM')));
+
+        if (!$this->memberCheckerRequest->cookies->has('UWAAMEM')) {
+            $this->memberCheckerResponse = new Response();
+            $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(hash(sha512, 'UWAAMEM')));
+            $this->memberCheckerResponse->sendHeaders();
+        }
+        
         
 
         if ($this->memberCheckerCookieValues->loggedIn) {
@@ -71,7 +83,7 @@ class Memberchecker {
 
     public function callMemberChecker() {     
 
-
+        
         $this->memberCheckerResponse = new JsonResponse();
 
 $memberID = filter_var($_GET["idNumber"], FILTER_SANITIZE_NUMBER_INT);
