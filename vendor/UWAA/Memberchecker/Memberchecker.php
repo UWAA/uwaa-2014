@@ -1,80 +1,78 @@
 <?php namespace UWAA\Memberchecker;
 
 
-use Symfony\Component\HttpFoundation\Session\Session;
-use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
+
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Cookie;
 class Memberchecker {
 
     public $isLoggedIn;
-    public $hasActiveMembership;
-    public $memberCheckSession;
-    public $session;
+    public $hasActiveMembership;       
+    public $memberCheckerRequest;
+    public $memberCheckerCookie;
+    public $memberCheckerCookieValues;
+    public $memberCheckerResponse;
+    
+    
+
+    private $memberValues;
     
     function __construct() {
 
         $this->isLoggedIn = false;
-        $this->hasActiveMembership = false;
-        // add_action('wp_ajax_callMemberChecker', array($this, 'callMemberChecker'));
-        // add_action('wp_ajax_nopriv_callMemberChecker', array($this, 'callMemberChecker'));
-        // add_action('wp_ajax_memberLogout', array($this, 'memberLogout'));
-        // add_action('wp_ajax_nopriv_memberLogout', array($this, 'memberLogout'));
+        $this->hasActiveMembership = false;      
+       
     }
 
     public function addAJAXActions() {
         
     }
 
+    private function setMemberCheckCookie($values) {
+        $this->memberCheckerCookie = new Cookie(
+            'UWAAMEM',
+            $values,  //Put the values from the MemberChecker into the cookie.
+            0,  //Session cookie, die with browser close
+            '/',
+            null,  //Cookie Domain
+            false, //HTTPS
+            true //HTTPOnly
+            );        
+        return $this->memberCheckerCookie;
+    }
+
 
     public function getSession() {
-        $this->memberCheckSession = new NativeSessionStorage(array());
-        $this->memberCheckSession->setOptions(array(
-            'cookie_lifetime'=> 0,
-            'cookie_httponly'=> 1,
-            'use_strict_mode'=> 1,
-            'use_only_cookies'=> 1,
-            'cookie_secure'=> 1,
-            'cookie_domain'  => 'washington.edu/cms'
-            )
-        );
+        $this->memberCheckerRequest = Request::createFromGlobals();
 
-        $this->session = new Session($this->memberCheckSession);
+        $this->memberCheckerCookieValues = json_decode(stripslashes($this->memberCheckerRequest->cookies->get('UWAAMEM')));
         
-        if ($this->session->isStarted() != true) {
-            if ($this->session->getName('UWAAMEM') != 'UWAAMEM') {
-                $this->session->setName('UWAAMEM');
-                $this->session->start();
-            }
-        }
-    // $this->session->invalidate();
 
-
-        $activeSession = $this->session->isStarted();
-
-
-        if ($this->session->get('loggedIn')) {
+        if ($this->memberCheckerCookieValues->loggedIn) {
             $this->isLoggedIn = true;
         }
         
-        if ($this->session->get('memberStatus') == 'A') {
+        if ($this->memberCheckerCookieValues->memberStatus == 'A') {
             $this->hasActiveMembership = true;
         }
+        
 
     }
 
      public function memberLogout() {
-        $session = new Session();
-        $session->setName('UWAAMEM');
-        $session->clear();
-        $session->invalidate();        
+        $this->memberCheckerResponse = new JsonResponse();        
+        $this->memberCheckerResponse->headers->clearCookie('UWAAMEM');
+        $this->memberCheckerResponse->send();
         exit;   
     }
 
     
 
-    public function callMemberChecker() {        
-      
+    public function callMemberChecker() {     
 
-        
+
+        $this->memberCheckerResponse = new JsonResponse();
 
 $memberID = filter_var($_GET["idNumber"], FILTER_SANITIZE_NUMBER_INT);
 $lastName = ucfirst(strtolower(trim(filter_var($_GET["lastName"], FILTER_SANITIZE_STRING))));
@@ -156,36 +154,36 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
 
  else {
     
-    //Power up a new session for the user    
-    $this->session = new Session($this->memberCheckSession);
-    // $this->session->regenerate();
-    $this->session->setID(hash("sha512", "{$member->MemberLName}{$_ENV['sessionSalt']}"));
-    $this->session->setName('UWAAMEM');
-    $this->session->save();
-    
-
-    
     // //Set some key information we want to persist why they browse.
     if($member->MemberStatus == 'A') {
-        $this->session->set('firstName', $member->MemberFName);
-        $this->session->set('lastName', $member->MemberLName);
-        $this->session->set('memberID', $member->MemberID);
-        $this->session->set('memberStatus', $member->MemberStatus);
-        $this->session->set('membershipExpiry', $member->MembershipExpiry);
-        $this->session->set('membershipType', $member->MembershipType);
-        $this->session->set('loggedIn', true);
-        $this->session->set('active', true);
+        $this->memberDetails = array(
+            "firstName" => "$member->MemberFName",
+            "lastName" => "$member->MemberLName",
+            "memberID" => "$member->MemberID",
+            "memberStatus" => "$member->MemberStatus",
+            "membershipExpiry" => "$member->MembershipExpiry",
+            "membershipType" => "$member->MembershipType",
+            "loggedIn" => (bool) true,
+            "active" => (bool) true
+            );       
     }
 
-    echo json_encode($callSuccess);
-
+    $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));
+    // var_dump(json_encode($this->memberDetails, JSON_FORCE_OBJECT));
+    $this->memberCheckerResponse->headers->set('Content-Type', 'application/json');    
+    $this->memberCheckerResponse->setData($callSuccess);
+    $this->memberCheckerResponse->setCharset('UTF-8');        
+    $this->memberCheckerResponse->send();
     }     
 
     exit;
+
+
+
     }
 
      public function renderDetails() {
-        $details = $this->getSessionInformation();        
+        $details = $this->getCookieInformation();        
         
         echo '<strong>Name:</strong> ' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
         echo '<strong>Member Number:</strong> ' . $details['memberID'].'</br>';
@@ -198,7 +196,7 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
     }
 
     public function renderCard() {
-        $details = $this->getSessionInformation();
+        $details = $this->getCookieInformation();
         $cardClass = strtolower(str_replace('Member', '', $details['membershipType']));
 
         if ($details['membershipType'] == 'Annual Member') {
@@ -222,10 +220,10 @@ CONTENT;
 
     public function getMemberIDNumber() {
         
-        $details = $this->getSessionInformation();
+        $details = $this->getCookieInformation();
 
         $memberNumber = $details['memberID'];
-
+// 
         return $memberNumber;
         
     }
@@ -235,16 +233,21 @@ CONTENT;
 
 
 
-    private function getSessionInformation()
+    private function getCookieInformation()
     {
+
+        $this->memberCheckerRequest = Request::createFromGlobals();
+
+        $this->memberCheckerCookieValues = json_decode(stripslashes($this->memberCheckerRequest->cookies->get('UWAAMEM')));
+
         $details = array(
 
-        'firstName' => $this->session->get('firstName'),
-        'lastName' => $this->session->get('lastName'),
-        'memberID' => $this->session->get('memberID'),
-        'memberStatus' => $this->getMembershipStatus($this->session->get('memberStatus')),
-        'membershipExpiry' => date('F j, Y ' , strtotime($this->session->get('membershipExpiry'))),
-        'membershipType' => $this->getMembershipType($this->session->get('membershipType')),
+        'firstName' => $this->memberCheckerCookieValues->firstName,
+        'lastName' => $this->memberCheckerCookieValues->lastName,
+        'memberID' => $this->memberCheckerCookieValues->memberID,
+        'memberStatus' => $this->getMembershipStatus($this->memberCheckerCookieValues->memberStatus),
+        'membershipExpiry' => date('F j, Y ' , strtotime($this->memberCheckerCookieValues->membershipExpiry)),
+        'membershipType' => $this->getMembershipType($this->memberCheckerCookieValues->membershipType),
 
         );
 
