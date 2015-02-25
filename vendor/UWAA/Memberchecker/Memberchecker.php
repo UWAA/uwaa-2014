@@ -181,7 +181,8 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
     }
 
     $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));
-    $this->memberCheckerResponse->headers->set('Content-Type', 'application/json');    
+    $this->memberCheckerResponse->headers->set('Content-Type', 'application/json');
+    $this->memberCheckerResponse->headers->set('Access-Control-Allow-Origin', '*.washington.edu');
     $this->memberCheckerResponse->setData($callSuccess);
     $this->memberCheckerResponse->setCharset('UTF-8');        
     $this->memberCheckerResponse->send();
