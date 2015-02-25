@@ -53,7 +53,7 @@ class Memberchecker {
 
         $this->memberCheckerCookieValues = json_decode(stripslashes($this->memberCheckerRequest->cookies->get('UWAAMEM')));
 
-        if (!$this->memberCheckerRequest->cookies->has('UWAAMEM')) {
+        if (!$this->memberCheckerRequest->cookies->get('UWAAMEM') == hash(sha512, 'UWAAMEM')) {
             $this->memberCheckerResponse = new Response();
             $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(hash(sha512, 'UWAAMEM')));
             $this->memberCheckerResponse->sendHeaders();
