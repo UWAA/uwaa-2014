@@ -1,8 +1,9 @@
 <?php
 
-$UWAA->Memberchecker->getSession();
+
 
 get_header(); 
+$UWAA->Memberchecker->getSession();
 ?>
 
 <div class="uw-hero-image membership"></div>
