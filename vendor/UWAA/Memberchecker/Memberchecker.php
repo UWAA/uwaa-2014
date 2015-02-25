@@ -34,9 +34,9 @@ class Memberchecker {
             'UWAAMEM',  //name
             $values,  //Put the values from the MemberChecker into the cookie.
             0,  //Session cookie, die with browser close
-            '/',  //paht
-            'washington.edu',  //Cookie Domain
-            true, //HTTPS
+            '/',  //path
+            null,  //Cookie Domain
+            false, //HTTPS
             true //HTTPOnly
             );        
         return $this->memberCheckerCookie;
