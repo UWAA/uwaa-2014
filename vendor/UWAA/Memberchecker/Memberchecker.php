@@ -53,7 +53,7 @@ class Memberchecker {
 
         $this->memberCheckerCookieValues = json_decode(stripslashes($this->memberCheckerRequest->cookies->get('UWAAMEM')));
 
-        if (!$this->memberCheckerRequest->cookies->get('UWAAMEM') == hash(sha512, 'UWAAMEM')) {
+        if ($this->memberCheckerRequest->cookies->get('UWAAMEM') != hash(sha512, 'UWAAMEM')) {
             $this->memberCheckerResponse = new Response();
             $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(hash(sha512, 'UWAAMEM')));
             $this->memberCheckerResponse->sendHeaders();
@@ -181,10 +181,6 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
     }
 
     $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));
-    
-    //hack for CMS
-    $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails), 'cdn.washington.edu'));
-
     $this->memberCheckerResponse->headers->set('Content-Type', 'application/json');    
     $this->memberCheckerResponse->setData($callSuccess);
     $this->memberCheckerResponse->setCharset('UTF-8');        
