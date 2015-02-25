@@ -36,7 +36,7 @@ class Memberchecker {
             0,  //Session cookie, die with browser close
             '/',
             null,  //Cookie Domain
-            false, //HTTPS
+            true, //HTTPS
             true //HTTPOnly
             );        
         return $this->memberCheckerCookie;
