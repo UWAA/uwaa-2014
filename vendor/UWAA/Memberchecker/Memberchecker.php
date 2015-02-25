@@ -30,15 +30,15 @@ class Memberchecker {
         
     }
 
-    private function setMemberCheckCookie($values) {
+    private function setMemberCheckCookie($values, $domain=null) {
         $this->memberCheckerCookie = new Cookie(
             'UWAAMEM',  //name
             $values,  //Put the values from the MemberChecker into the cookie.
             0,  //Session cookie, die with browser close
             '/',  //path
-            'washington.edu',  //Cookie Domain
+            $domain,  //Cookie Domain
             false, //HTTPS
-            true //HTTPOnly
+            false //HTTPOnly
             );        
         return $this->memberCheckerCookie;
     }
@@ -180,7 +180,11 @@ if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even ne
             );       
     }
 
-    $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));    
+    $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));
+    
+    //hack for CMS
+    $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails), 'cdn.washington.edu'));
+
     $this->memberCheckerResponse->headers->set('Content-Type', 'application/json');    
     $this->memberCheckerResponse->setData($callSuccess);
     $this->memberCheckerResponse->setCharset('UTF-8');        
