@@ -35,7 +35,7 @@ class Memberchecker {
             $values,  //Put the values from the MemberChecker into the cookie.
             0,  //Session cookie, die with browser close
             '/',
-            null,  //Cookie Domain
+            'washington.edu',  //Cookie Domain
             false, //HTTPS
             true //HTTPOnly
             );        
