@@ -1,6 +1,8 @@
 <?php
-wp_enqueue_script('memberChecker');       
-wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => home_url('/api/memberValidator')) );
+wp_enqueue_script('memberChecker');
+wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => str_replace('http:','https:',home_url('/api/memberValidator'))) );
+
+// wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => home_url('/api/memberValidator')) );
 ?>
 
 
