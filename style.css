@@ -3362,7 +3362,7 @@ a#memberCheckerLogout {
   text-indent: -9999px;
   width: 150px;
   height: 56px;
-  background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/logos/uwaa-logo-convio.svg) no-repeat transparent;
+  background: url(assets/logos/uwaa-logo-convio.svg) no-repeat transparent;
   background-position: 50% 50%;
   background-size: contain;
 }
@@ -3423,7 +3423,7 @@ a#memberCheckerLogout {
   display: block;
 }
 .uwaa-convio-wrapper .event-registration-header a.back-to-events:before {
-  background: url(https://cms.alumni.washington.edu/alumni/wp-content/themes/uwaa-2014/assets/uwaa-sprite.svg) no-repeat -228px -493px;
+  background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
   opacity: .8;
   display: inline-block;
