@@ -26,7 +26,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
 
         <div id="loginSidebar" class="widget">
         <h2 class="widgettitle">Log In</h2>
-        <!-- <form method="POST" id="memberloginForm">
+        <form method="GET" id="memberloginForm">
                 <fieldset>
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
                         <input type="text" name="idNumber" placeholder="Member Number" autocomplete="off">                    
@@ -37,7 +37,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                     </div>
                     <input type="hidden" name="action" value="callMemberChecker">
                 </fieldset>
-            </form> -->
+            </form>
             <div id="form-message"></div>
             </div>
 
