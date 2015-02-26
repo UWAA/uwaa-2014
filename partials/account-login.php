@@ -37,7 +37,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                 </fieldset>
             </form>
 
-            <div id="form-message">Coming soon</div>
+            <div id="form-message"></div>
 
             <!-- <div class="accordion">
                 <div class="panel closed">
