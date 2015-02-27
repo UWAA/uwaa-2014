@@ -88,7 +88,7 @@ class Utilities
 
     public function modify_sitewide_plugins($value) 
     {
-    unset($value['uw-analytics/uw-analytics.php']);
+    unset($value['uw-analytics/analytics.php']);
     return $value;
     }
 
