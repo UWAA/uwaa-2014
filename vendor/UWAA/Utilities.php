@@ -15,7 +15,7 @@ class Utilities
     {
         add_filter('pre_get_posts',array($this,'SearchFilter'));
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
-        add_filter('site_option_active_sitewide_plugins', array($this, 'modify_sitewide_plugins'));
+        add_action('wp_head', array($this, 'removeUWAnalytics'));
         
         
     }   
@@ -86,11 +86,12 @@ class Utilities
 
 
 
-    public function modify_sitewide_plugins($value) 
+    public function removeUWAnalytics() 
     {
-    unset($value['uw-analytics/analytics.php']);
-    unset($value['analytics/analytics.php']);
-    return $value;
+        
+    global $UW_Analytics;
+        remove_action('wp_head', array($UW_Analytics, 'loadscript'));
+        remove_action('wp_enqueue_scripts', array($UW_Analytics, 'loadscript'));
     }
 
  
