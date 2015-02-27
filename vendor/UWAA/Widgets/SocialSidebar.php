@@ -42,7 +42,7 @@ class SocialSidebar extends \WP_Widget
   {
 
     $this->title = urlencode(get_the_title());
-    $link = urlencode((get_permalink()));
+    $link = urlencode(apply_filters('remove_cms' , get_permalink()));
 
 
     
