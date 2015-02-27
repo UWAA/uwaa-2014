@@ -18,4 +18,4 @@ var AlumniGoogleAnalyticsTracking = (function($) {
 
 })(jQuery);
 
-AlumniGoogleAnalyticsTracking.init()
+AlumniGoogleAnalyticsTracking.init();

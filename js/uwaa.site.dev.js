@@ -80,7 +80,7 @@ var AlumniGoogleAnalyticsTracking = (function($) {
 
 })(jQuery);
 
-AlumniGoogleAnalyticsTracking.init()
+AlumniGoogleAnalyticsTracking.init();
 (function($) {
 
 var $alumniLink = $('.uw-thinstrip .uw-thin-links li:nth-child(4) a');
