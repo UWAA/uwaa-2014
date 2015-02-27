@@ -88,10 +88,10 @@ class Utilities
 
     public function removeUWAnalytics() 
     {
-        
+
     global $UW_Analytics;
-        remove_action('wp_head', array($UW_Analytics, 'loadscript'));
-        remove_action('wp_enqueue_scripts', array($UW_Analytics, 'loadscript'));
+        remove_action('wp_head', array($UW_Analytics, 'loadscript'), 20);
+        remove_action('wp_enqueue_scripts', array($UW_Analytics, 'loadscript'), 20);
     }
 
  
