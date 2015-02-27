@@ -15,12 +15,14 @@ class Utilities
     {
         add_filter('pre_get_posts',array($this,'SearchFilter'));
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
+        add_filter('site_option_active_sitewide_plugins', array($this, 'modify_sitewide_plugins'));
         
         
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
-    public function get_permalink_by_title( $title ) {
+    public function get_permalink_by_title( $title )
+    {
 
     // Initialize the permalink value
     $permalink = null;
@@ -44,8 +46,6 @@ class Utilities
     if ( !$query->is_search )
         return $query;
 
-    // $meta_query = $query->get('meta_query');
-
     $taxquery = array(
         array(            
             array(
@@ -57,7 +57,7 @@ class Utilities
             
         )
     );
-
+    // @TODO Get this working!  Need to exclude prelim tours from site search...
     // $excludeSearchMetaQuery = array(
     //     // 'relation' => 'OR',
     //     array(
@@ -81,6 +81,15 @@ class Utilities
     global $menu;     
     $menu[5][0] = 'Story Posts'; // Change Posts to Recipes
 
+    }
+
+
+
+
+    public function modify_sitewide_plugins($value) 
+    {
+    unset($value['uw-analytics/uw-analytics.php']);
+    return $value;
     }
 
  
