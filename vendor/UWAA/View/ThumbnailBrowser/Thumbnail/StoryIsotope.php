@@ -86,7 +86,8 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
           'terms'    => array( 'exclude-from-search'),
           'operator'  => 'NOT IN'
           )
-      ) //End tax query 
+      ), //End tax query 
+      'has_password' => false
       );
 
     return $args;

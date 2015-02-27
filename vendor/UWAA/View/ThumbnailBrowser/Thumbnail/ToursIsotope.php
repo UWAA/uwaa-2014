@@ -100,6 +100,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
           'compare' => '>=', 
           ),      
       'posts_per_page' => -1,
+      'has_password' => false
       );
 
     return $args;

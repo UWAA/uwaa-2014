@@ -55,6 +55,8 @@ class Utilities
             
         )
     );
+
+
     // @TODO Get this working!  Need to exclude prelim tours from site search...
     // $excludeSearchMetaQuery = array(
     //     // 'relation' => 'OR',
@@ -67,7 +69,7 @@ class Utilities
 
     $meta_query = $excludeSearchMetaQuery;
     $query->set( 'tax_query', $taxquery );
-    // $query->set( 'has_password' , 'false');
+    $query->set( 'has_password' , false);
     // $query->set( 'meta_query', $meta_query );
     // var_dump($meta_query);
     return $query;

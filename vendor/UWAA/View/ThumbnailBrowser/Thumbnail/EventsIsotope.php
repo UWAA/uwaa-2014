@@ -81,7 +81,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         'compare' => '>=', // Return the ones greater than today's date
       ),      
       'posts_per_page' => -1,
-
+      'has_password' => false
       );
 
     return $args;
