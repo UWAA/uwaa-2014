@@ -15,7 +15,7 @@ class Utilities
     {
         add_filter('pre_get_posts',array($this,'SearchFilter'));
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
-        // add_filter('site_option_active_sitewide_plugins', array($this, 'modify_sitewide_plugins'));
+        add_filter('site_option_active_sitewide_plugins', array($this, 'modify_sitewide_plugins'));
         
         
     }   
@@ -89,6 +89,7 @@ class Utilities
     public function modify_sitewide_plugins($value) 
     {
     unset($value['uw-analytics/analytics.php']);
+    unset($value['analytics/analytics.php']);
     return $value;
     }
 

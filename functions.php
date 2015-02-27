@@ -118,15 +118,3 @@ function current_type_nav_class($classes, $item) {
     return $classes;
 }
 
-
-add_filter('site_option_active_sitewide_plugins', 'modify_sitewide_plugins');
-
-function modify_sitewide_plugins($value) {
-global $current_blog;
-
-if( $current_blog->blog_id == 94 ) {
-unset($value['akismet/akismet.php']);
-}
-
-return $value;
-}
