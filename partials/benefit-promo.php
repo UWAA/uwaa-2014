@@ -13,13 +13,13 @@ if (!empty($promoText)) {
     
             elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
                 
-                echo wp_kses(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true), array('a' => array(
+                echo do_shortcode(wp_kses(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true), array('a' => array(
             'href' => array(),
             'title' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            )));
+            ))));
                 } 
                 else{
                     echo "UWAA members, please contact UWAA at 206-543-0540 for benefit information.";

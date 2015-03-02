@@ -74,15 +74,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
       );
 
     return $args;
-  }  
-
- protected function renderImage() {
-    if ($this->postImageThumbnailURL) {
-      return '<img src="' . $this->postImageThumbnailURL . '"/>';
-    } 
-    return '<img src="http://fpoimg.com/275x190?text=FPO" />';
-
-   }  
+  }   
 
 
   public function buildTemplate(){
