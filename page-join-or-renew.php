@@ -2,6 +2,8 @@
 
 $UWAA->Memberchecker->getSession();
 
+// @TODO Make booleans for store state (join vs. renew)
+
 get_header(); 
 ?>
 
@@ -30,6 +32,10 @@ get_header();
 
           ?>
           <h1><?php the_title() ?></h1>
+
+          <h3>Spring Membership Drive</h3>
+          <h5>Become a new member by March 31, 2015 and get a UW alumni license plate frame FREE!</h5>
+
           <?php
 
           

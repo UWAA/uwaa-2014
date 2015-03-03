@@ -3079,6 +3079,7 @@ a#memberCheckerLogout {
 }
 #store {
   min-height: 270px;
+  margin-top: 15px;
 }
 .option-set {
   display: none;
