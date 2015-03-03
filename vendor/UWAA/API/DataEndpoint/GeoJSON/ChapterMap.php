@@ -77,7 +77,7 @@ public function build($endpointData)
 
         $featureContents = array(
             'logo' => esc_html($post->post_name),
-            'link' => esc_url($link),
+            'link' => esc_url(apply_filters('remove_cms' , $link)),
             'excerpt' => esc_html(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
             'marker-color' => '#4b2e83'
             
