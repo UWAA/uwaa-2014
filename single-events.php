@@ -100,9 +100,10 @@ $finalSlug = $communitySlug->isCommunitiesContent();
 
     <div class="col-md-4 uw-sidebar">
     <?php 
-        new \UWAA\View\Pagination('events', get_the_ID());
-        the_widget("UWAA\Widgets\SidebarPullQuote");
-        the_widget("UWAA\Widgets\SocialSidebar"); 
+        new \UWAA\View\Pagination('events', get_the_ID());        
+        the_widget("UWAA\Widgets\SidebarPullQuote");        
+        the_widget("UWAA\Widgets\SocialSidebar");
+        the_widget("UWAA\Widgets\SidebarFeaturedPost");
         endwhile;
     ?>
     </div>

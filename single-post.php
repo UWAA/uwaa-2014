@@ -92,6 +92,8 @@ else {
     the_widget("UWAA\Widgets\SidebarPullQuote");
     
     the_widget("UWAA\Widgets\SocialSidebar");
+
+    the_widget("UWAA\Widgets\SidebarFeaturedPost");
         
     ?>
     </div>

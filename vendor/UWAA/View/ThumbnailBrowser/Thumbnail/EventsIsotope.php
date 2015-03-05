@@ -77,12 +77,13 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
       'meta_query' => array(
         'key' => 'mb_start_date',
         'type' => 'DATE',
-        'value' => date("Y-m-d"), // Set today's date (note the similar format)
+        'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
         'compare' => '>=', // Return the ones greater than today's date
       ),      
       'posts_per_page' => -1,
 
       );
+    echo $args['meta_query']['value'];
 
     return $args;
   }  

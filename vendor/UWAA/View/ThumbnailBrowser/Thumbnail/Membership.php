@@ -50,7 +50,7 @@ class Membership extends ThumbnailBrowser implements Thumbnail
         // ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
-          'field'    => 'name',
+          'field'    => 'slug',
           'terms'    => array( 'membership-row')
 
           )

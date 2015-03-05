@@ -62,7 +62,7 @@ class SidebarFeaturedPost extends \WP_Widget
     {
     $rawSlug = preg_match('/(?<=\/).*?(?=-)/', get_page_template_slug(), $matchedSlug);
     
-    $this->currentPostInfo['templateType'] = $matchedSlug[0];
+    $this->currentPostInfo['templateType'] = $matchedSlug[0] . "-section-sidebar";
       
     }  
   
@@ -75,15 +75,19 @@ class SidebarFeaturedPost extends \WP_Widget
     switch($postType) {
       
       case 'tours':
-        return 'travel';
+        return 'travel-section-sidebar';
         break;
       
       case 'benefits':
-        return 'membership';
+        return 'membership-section-sidebar';
         break;
       
       case 'chapters':
-        return 'communities';
+        return 'communities-section-sidebar';
+        break;
+
+      case 'events':
+        return 'events-section-sidebar';
         break;
 
         //return the parent's ID
