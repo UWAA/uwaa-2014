@@ -460,6 +460,13 @@ h6.intro-head {
 .single-tours .uw-body-copy .price {
   margin-bottom: 36px;
 }
+.single-tours .uw-body-copy h6 {
+  color: #a99360;
+  font-size: .98em;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 0 6px 0;
+}
 .uw-body-copy h5,
 .uw-body-copy h4,
 .uw-body-copy h3 {
@@ -2437,7 +2444,7 @@ div.map-logo.uae {
     margin-left: 0%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   #uwaa-footer .uwaa-logo {
     height: 5.7em;
     padding-top: 1.8em;
@@ -2470,6 +2477,31 @@ div.map-logo.uae {
 @media only screen and (max-width: 991px) {
   .tours-footer-logo {
     padding-left: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  #uwaa-footer .social-icons {
+    padding-top: 1.8em;
+  }
+  #uwaa-footer .uwaa-logo {
+    padding-top: 1em;
+  }
+  #uwaa-footer .uwaa-logo svg {
+    width: 96%;
+  }
+  #uwaa-footer .contact-links {
+    padding-top: .9em;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #uwaa-footer .contact-links ul,
+  #uwaa-footer .contact-links li,
+  #uwaa-footer .contact-links a {
+    padding: 0;
+    margin-right: 3px;
+  }
+  #uwaa-footer .contact-links li:nth-child(2) {
+    margin-left: 12px;
   }
 }
 .uw-hero-image.travel {
@@ -3977,4 +4009,13 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
 }
 .uw-thinstrip .uw-thin-links li:nth-child(4) a {
   color: #b7a57a;
+}
+.mice {
+  font-size: .7em;
+  margin-top: 0;
+  font-style: italic;
+}
+.red {
+  color: #e86b27;
+  font-weight: bold;
 }
