@@ -5,7 +5,8 @@
   "dependencies": {
     "isotope": "latest",
     "handlebars" : "latest",
-    "velocity" : "latest"
+    "velocity" : "latest",
+    "jquery-placeholder" : "latest"
   },
   "overrides": {
     "isotope": {
