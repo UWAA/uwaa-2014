@@ -53,7 +53,7 @@ class RegionalChapters
                 'publicly_queryable'  => true,
                 'query_var'           => 'chapters',
                 'rewrite'             => $rewrite,
-                'capability_type'     => 'page',
+                'capability_type'     => 'post',
             );
             register_post_type( 'chapters', $args );
         }
