@@ -79,16 +79,39 @@ var AlumniGoogleAnalyticsTracking = (function($) {
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-1576494-1', 'auto');
-      ga('send', 'pageview');
+      ga('send', 'pageview');    
 
+    },
+
+    podcastPlay: function(label) {
+      ga('send',
+        'event',
+        'Media Action',
+        'Podcast Play',
+        label
+        )
+    },
+
+
+    bindAnalyticsEvents: function() {
+      $(document).ready(function() {
+
+      
+           $('audio').bind('play', function(){
+            AlumniGoogleAnalyticsTracking.podcastPlay(this.currentSrc);      
+            });  
+
+      });
     }
-    //end GA
 
-  };
+};
+    
+
 
 })(jQuery);
 
 AlumniGoogleAnalyticsTracking.init();
+AlumniGoogleAnalyticsTracking.bindAnalyticsEvents();
 (function($) {
 
 var $alumniLink = $('.uw-thinstrip .uw-thin-links li:nth-child(4) a');
