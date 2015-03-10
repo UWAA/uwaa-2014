@@ -45,7 +45,7 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
         array(
           'taxonomy' => 'category',
           'field'    => 'slug',
-          'terms'    => array( 'tall-regional-branding'),
+          'terms'    => array( 'exclude-from-community-row'),
           'operator' => 'NOT IN'
         ),
         array(
