@@ -83,7 +83,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
       'posts_per_page' => -1,
 
       );
-    echo $args['meta_query']['value'];
+    
 
     return $args;
   }  
