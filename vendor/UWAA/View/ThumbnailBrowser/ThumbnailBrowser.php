@@ -127,6 +127,7 @@ TOOLBAR;
 
 
       $terms = wp_list_filter($terms, array('slug'=>'exclude-from-search'),'NOT');
+      $terms = wp_list_filter($terms, array('slug'=>'exclude-from-community-row'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'uncategorized'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'tall-regional-branding'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'short-regional-branding'),'NOT');
