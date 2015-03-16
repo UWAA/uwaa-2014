@@ -100,8 +100,7 @@ class Utilities
 
     $meta_query = $excludeSearchMetaQuery;
     $query->set( 'tax_query', $taxquery );    
-    $query->set( 'meta_query', $meta_query );
-    var_dump($query);
+    $query->set( 'meta_query', $meta_query );    
     return $query;
 
     }
