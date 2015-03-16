@@ -56,20 +56,52 @@ class Utilities
         )
     );
     // @TODO Get this working!  Need to exclude prelim tours from site search...
-    // $excludeSearchMetaQuery = array(
-    //     // 'relation' => 'OR',
-    //     array(
-    //             'key' => 'mb_isPreliminaryTour',
-    //             'value' => 'preliminary',
-    //             'compare' => '!='
-    //         ),
-    // );
+    $excludeSearchMetaQuery = 
+            array(
+                'relation' => 'OR',                
+                array(
+                    'relation' => 'AND',
+                    array(
+                        'key' => 'mb_isPreliminaryTour',                    
+                        'compare' => 'EXISTS'
+                    ),                
+                    array(
+                        'key' => 'mb_isPreliminaryTour',
+                        'value' => 'ready_to_publish_tour',
+                        'compare' => '='
+                        ),
+                    ),
+                array(
+                    'relation' => 'AND',    
+                    array(
+                        'key' => 'mb_isMajorMarket',                    
+                        'compare' => 'EXISTS'
+                    ),
+                    array(
+                        'key' => 'mb_isMajorMarket',
+                        'value' => 'MajorMarket',
+                        'compare' => '='
+                        ),
+                    ),
+                array(
+                    'relation' => 'AND',
+                    array(
+                        'key' => 'mb_isPreliminaryTour',                    
+                        'compare' => 'NOT EXISTS'
+                    ),
+                    array(
+                        'key' => 'mb_isMajorMarket',                    
+                        'compare' => 'NOT EXISTS'
+                    ),
+
+                   )
+            
+    );
 
     $meta_query = $excludeSearchMetaQuery;
-    $query->set( 'tax_query', $taxquery );
-    // $query->set( 'has_password' , 'false');
-    // $query->set( 'meta_query', $meta_query );
-    // var_dump($meta_query);
+    $query->set( 'tax_query', $taxquery );    
+    $query->set( 'meta_query', $meta_query );
+    var_dump($query);
     return $query;
 
     }
@@ -78,7 +110,7 @@ class Utilities
     {
     
     global $menu;     
-    $menu[5][0] = 'Story Posts'; // Change Posts to Recipes
+    $menu[5][0] = 'Story Posts'; // Change Posts to Story Posts
 
     }
 
