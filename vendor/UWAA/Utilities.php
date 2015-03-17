@@ -56,51 +56,51 @@ class Utilities
         )
     );
     // @TODO Get this working!  Need to exclude prelim tours from site search...
-    $excludeSearchMetaQuery = 
-            array(
-                'relation' => 'OR',                
-                array(
-                    'relation' => 'AND',
-                    array(
-                        'key' => 'mb_isPreliminaryTour',                    
-                        'compare' => 'EXISTS'
-                    ),                
-                    array(
-                        'key' => 'mb_isPreliminaryTour',
-                        'value' => 'ready_to_publish_tour',
-                        'compare' => '='
-                        ),
-                    ),
-                array(
-                    'relation' => 'AND',    
-                    array(
-                        'key' => 'mb_isMajorMarket',                    
-                        'compare' => 'EXISTS'
-                    ),
-                    array(
-                        'key' => 'mb_isMajorMarket',
-                        'value' => 'MajorMarket',
-                        'compare' => '='
-                        ),
-                    ),
-                array(
-                    'relation' => 'AND',
-                    array(
-                        'key' => 'mb_isPreliminaryTour',                    
-                        'compare' => 'NOT EXISTS'
-                    ),
-                    array(
-                        'key' => 'mb_isMajorMarket',                    
-                        'compare' => 'NOT EXISTS'
-                    ),
+    // $excludeSearchMetaQuery = 
+    //         array(
+    //             'relation' => 'OR',                
+    //             array(
+    //                 'relation' => 'AND',
+    //                 array(
+    //                     'key' => 'mb_isPreliminaryTour',                    
+    //                     'compare' => 'EXISTS'
+    //                 ),                
+    //                 array(
+    //                     'key' => 'mb_isPreliminaryTour',
+    //                     'value' => 'ready_to_publish_tour',
+    //                     'compare' => '='
+    //                     ),
+    //                 ),
+    //             array(
+    //                 'relation' => 'AND',    
+    //                 array(
+    //                     'key' => 'mb_isMajorMarket',                    
+    //                     'compare' => 'EXISTS'
+    //                 ),
+    //                 array(
+    //                     'key' => 'mb_isMajorMarket',
+    //                     'value' => 'MajorMarket',
+    //                     'compare' => '='
+    //                     ),
+    //                 ),
+    //             array(
+    //                 'relation' => 'AND',
+    //                 array(
+    //                     'key' => 'mb_isPreliminaryTour',                    
+    //                     'compare' => 'NOT EXISTS'
+    //                 ),
+    //                 array(
+    //                     'key' => 'mb_isMajorMarket',                    
+    //                     'compare' => 'NOT EXISTS'
+    //                 ),
 
-                   )
+    //                )
             
-    );
+    // );
 
-    $meta_query = $excludeSearchMetaQuery;
+    // $meta_query = $excludeSearchMetaQuery;
     $query->set( 'tax_query', $taxquery );    
-    $query->set( 'meta_query', $meta_query );    
+    // $query->set( 'meta_query', $meta_query );    
     return $query;
 
     }
