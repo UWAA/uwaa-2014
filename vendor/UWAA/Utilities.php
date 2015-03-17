@@ -16,6 +16,7 @@ class Utilities
         add_filter('pre_get_posts',array($this,'SearchFilter'));
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
         add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
+        add_action( 'save_post', array($this, 'excludePreliminaryandMinorFromSearch'), 20 );
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -98,10 +99,32 @@ class Utilities
             
     // );
 
-    // $meta_query = $excludeSearchMetaQuery;
-    $query->set( 'tax_query', $taxquery );    
-    // $query->set( 'meta_query', $meta_query );    
+    
+    $query->set( 'tax_query', $taxquery );        
     return $query;
+    }
+
+    public function excludePreliminaryandMinorFromSearch($post_id)
+    {
+
+        // only do this for TOURS or CHAPTERS        
+        $post = get_post($post_id);
+
+        $post_type = $post->post_type;
+
+        if ($post_type == 'tours' OR $post_type == 'chapters' )  {
+            
+        
+        //nonce checks for the meta boxes have already occured...
+        if( get_post_meta( $post_id, 'mb_isPreliminaryTour', true ) != 'ready_to_publish_tour' OR get_post_meta( $post_id, 'mb_isMajorMarket', true ) != 'majorMarket'  ) {
+        wp_set_object_terms( $post_id, 'exclude-from-search', 'category', true );
+        }
+
+        if( get_post_meta( $post_id, 'mb_isPreliminaryTour', true ) == 'ready_to_publish_tour' OR get_post_meta( $post_id, 'mb_isMajorMarket', true ) == 'majorMarket'  ) {
+        wp_remove_object_terms( $post_id, 'exclude-from-search', 'category', true );
+        }
+
+        }
 
     }
 

@@ -38,7 +38,7 @@ class RegionalChapters
                 'description'         => 'These posts correspond to UW Regional Advancment Chapters',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields', 'excerpt' ),
-                'taxonomies'          => array( 'uwaa_content_taxonomy' ),
+                'taxonomies'          => array( 'uwaa_content_taxonomy' , 'category' ),
                 'hierarchical'        => false,
                 'public'              => true,
                 'show_ui'             => true,
