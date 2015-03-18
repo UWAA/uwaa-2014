@@ -315,8 +315,8 @@ Color Pallette
   color: #b7a57a;
 }
 #yellow-dot {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   position: absolute;
   margin-left: 10%;
   top: 18.5%;
@@ -327,6 +327,8 @@ Color Pallette
   text-align: center;
   line-height: 1.1;
   padding-top: 14px;
+  font-family: 'Encode Sans', sans-serif;
+  text-transform: uppercase;
 }
 #yellow-dot:hover {
   cursor: pointer;
@@ -953,7 +955,7 @@ Color Pallette
     line-height: 1.7;
     font-size: 13.6px;
   }
-  .loveUW h1 {
+  .loveUW h3 {
     font-size: 22.1112px;
   }
   .caption {
