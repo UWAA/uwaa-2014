@@ -290,6 +290,15 @@ Color Pallette
 #header:after {
   clear: both;
 }
+#header h1 {
+  position: absolute;
+  color: #ffffff;
+  top: 20px;
+  left: 15%;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 7px 0 0;
+}
 #header #header-fore {
   background: url(https://www.uw.edu/alumni/images/membership/gradpack/GradPack_Slide0_1200x498.jpg) transparent no-repeat;
   background-size: cover;
@@ -882,16 +891,17 @@ Color Pallette
 @media (min-width: 993px) {
   .loveUW h3 {
     font-size: 26.64px;
-    color: #3d3d3d;
-    font-weight: 700;
   }
   .content-row .copy h3 {
+    color: #3d3d3d;
+    font-weight: 700;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
+    margin-top: 20px;
   }
   .content-row .copy p {
-    font-size: 15.3px;
-    margin-bottom: 0;
+    font-size: 17px;
+    margin-bottom: 20px;
   }
   .content-row .caption {
     min-height: 0;
@@ -936,10 +946,11 @@ Color Pallette
     width: 768px;
     background: 0;
   }
-  .content-row h1 {
-    font-size: 22.2px;
+  .content-row h3 {
     margin: 0;
     margin-bottom: 10px;
+    color: #3d3d3d;
+    font-weight: 700;
   }
   .content-row p {
     font-size: 13.6px;
@@ -1090,6 +1101,11 @@ Color Pallette
   .join-mobile-header:hover {
     background-position: 0 -48px;
     cursor: pointer;
+  }
+  #header h1 {
+    font-size: 38px;
+    line-height: 1;
+    left: 5%;
   }
   .content-row h1 {
     font-size: 23.68px;
@@ -1470,13 +1486,4 @@ a.anchor {
   padding-left: 20px;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
-}
-#header h1 {
-  position: absolute;
-  color: #ffffff;
-  top: 20px;
-  left: 15%;
-  font-size: 50px;
-  line-height: 50px;
-  margin: 7px 0 0;
 }
