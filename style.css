@@ -460,6 +460,10 @@ h6.intro-head {
 .single-tours .uw-body-copy .price {
   margin-bottom: 36px;
 }
+.single-tours .uw-body-copy .note {
+  margin: 12px 0 30px;
+  font-style: italic;
+}
 .single-tours .uw-body-copy h6 {
   color: #a99360;
   font-size: .95em;
