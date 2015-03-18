@@ -329,6 +329,7 @@ Color Pallette
   padding-top: 14px;
   font-family: 'Encode Sans', sans-serif;
   text-transform: uppercase;
+  font-weight: 800;
 }
 #yellow-dot:hover {
   cursor: pointer;
@@ -338,7 +339,7 @@ Color Pallette
   background: url(https://www.uw.edu/alumni/images/membership/gradpack/ArrowDown.png);
   background-size: contain;
   position: absolute;
-  left: 40px;
+  left: 50px;
   bottom: 10px;
   height: 14px;
   width: 20px;
@@ -1318,6 +1319,7 @@ Color Pallette
     width: 100%;
     margin-top: .63em;
     margin-bottom: 0;
+    color: #3d3d3d;
   }
   .loveUW h3 .break {
     display: block !important;
