@@ -1,7 +1,7 @@
 (function($) {   
 
     var currentPage = window.location;
-    var nameOfPage = 'all-regions';
+    var nameOfPage = 'all-communities';
 
     var path = currentPage.pathname.split('/').filter(function(n){ return n !== ''; }).pop();
 
