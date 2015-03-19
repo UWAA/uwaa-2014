@@ -457,6 +457,9 @@ h6.intro-head {
 .single-tours .uw-body-copy .date {
   margin: 0;
 }
+.single-tours .uw-body-copy .operator {
+  margin-bottom: 40px;
+}
 .single-tours .uw-body-copy .price {
   margin-bottom: 36px;
 }
