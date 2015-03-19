@@ -49,13 +49,13 @@ class GetCommunitySlug {
     {
         $this->chapterSlugs = array (
             'new-york-city',
-            'los-angeles',
+            'southern-california',
             'anchorage',
             'albany',
             'anchorage',
             'atlanta',
             'austin',
-            'bay-area',
+            'northern-california',
             'bellingham',
             'boise',
             'boston',

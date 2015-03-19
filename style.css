@@ -1355,7 +1355,7 @@ div.map-logo.atlanta {
 div.map-logo.austin {
   background-position: 50% -802px;
 }
-div.map-logo.bay-area {
+div.map-logo.northern-california {
   background-position: 50% -80px;
 }
 div.map-logo.bellingham {
@@ -1409,7 +1409,7 @@ div.map-logo.korea {
 div.map-logo.las-vegas {
   background-position: 50% -602px;
 }
-div.map-logo.los-angeles {
+div.map-logo.southern-california {
   background-position: 50% -80px;
 }
 div.map-logo.new-york-city {
@@ -1516,6 +1516,7 @@ div.map-logo.uae {
 .leaflet-popup .leaflet-popup-content p.map-excerpt {
   margin: 0 0 0;
   padding-right: 12px;
+  text-align: center;
 }
 .leaflet-popup .leaflet-popup-content a {
   color: #3d3d3d;
