@@ -401,6 +401,17 @@ class MetaBoxes
                 'context' => 'advanced',
                 'priority' => 'high',
                 'fields' => array(
+                     array(
+                        'name' => 'Partner Event Toggle',
+                        'id'=> 'isPartnerEvent',
+                        'type'=> 'select',
+                        'default' => false,
+                        'options' => array(
+                                false => 'Alumni/UWAA Event', 
+                                true => 'Partner Event'
+                                ),
+                        'desc'=> 'Use this to make a limited event that will only show up on the calendar, but doesn\'t need a full event page buildout.'
+                    ),                   
                     array(
                         'name' => 'Start Date',
                         'id'=> 'start_date',
@@ -424,19 +435,7 @@ class MetaBoxes
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
                         'desc'=> "Small gold text that appears below the image in a featured post thumbnail.  E.g. New York Huskies, Member 101 Series."
-                        ),                                     
-                    array(
-                     'name' => 'Location',
-                     'id'=> 'event_location',
-                     'type'=> 'text',
-                     'desc'=> "H5 - Where the event will be held - e.g. Kane Hall 120, UW Seattle Campus"
-                    ), 
-                    array(
-                        'name' => 'Event Time',
-                        'id'=> 'event_time',
-                        'type'=> 'text',
-                        'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
-                        ),
+                        ),                                                         
                     array(
                         'name' => 'Alternate Link',
                         'id'=> 'alternate_link',
@@ -448,6 +447,18 @@ class MetaBoxes
                         'id'=> '80_character_excerpt',
                         'type'=> 'textarea',
                         'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
+                        ),
+                    array(
+                     'name' => 'Location',
+                     'id'=> 'event_location',
+                     'type'=> 'text',
+                     'desc'=> "H5 - Where the event will be held - e.g. Kane Hall 120, UW Seattle Campus"
+                    ), 
+                    array(
+                        'name' => 'Event Time',
+                        'id'=> 'event_time',
+                        'type'=> 'text',
+                        'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
                         ),
                            
 

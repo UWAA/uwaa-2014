@@ -56,49 +56,6 @@ class Utilities
             
         )
     );
-    // @TODO Get this working!  Need to exclude prelim tours from site search...
-    // $excludeSearchMetaQuery = 
-    //         array(
-    //             'relation' => 'OR',                
-    //             array(
-    //                 'relation' => 'AND',
-    //                 array(
-    //                     'key' => 'mb_isPreliminaryTour',                    
-    //                     'compare' => 'EXISTS'
-    //                 ),                
-    //                 array(
-    //                     'key' => 'mb_isPreliminaryTour',
-    //                     'value' => 'ready_to_publish_tour',
-    //                     'compare' => '='
-    //                     ),
-    //                 ),
-    //             array(
-    //                 'relation' => 'AND',    
-    //                 array(
-    //                     'key' => 'mb_isMajorMarket',                    
-    //                     'compare' => 'EXISTS'
-    //                 ),
-    //                 array(
-    //                     'key' => 'mb_isMajorMarket',
-    //                     'value' => 'MajorMarket',
-    //                     'compare' => '='
-    //                     ),
-    //                 ),
-    //             array(
-    //                 'relation' => 'AND',
-    //                 array(
-    //                     'key' => 'mb_isPreliminaryTour',                    
-    //                     'compare' => 'NOT EXISTS'
-    //                 ),
-    //                 array(
-    //                     'key' => 'mb_isMajorMarket',                    
-    //                     'compare' => 'NOT EXISTS'
-    //                 ),
-
-    //                )
-            
-    // );
-
     
     $query->set( 'tax_query', $taxquery );        
     return $query;
@@ -116,11 +73,11 @@ class Utilities
             
         
         //nonce checks for the meta boxes have already occured...
-        if( get_post_meta( $post_id, 'mb_isPreliminaryTour', true ) != 'ready_to_publish_tour' OR get_post_meta( $post_id, 'mb_isMajorMarket', true ) != 'majorMarket'  ) {
+        if( get_post_meta( $post_id, 'mb_isPreliminaryTour', true ) != 'ready_to_publish_tour' OR get_post_meta( $post_id, 'mb_isMajorMarket', true ) != 'majorMarket' OR get_post_meta( $post_id, 'mb_isPartnerEvent', true ) != true   ) {
         wp_set_object_terms( $post_id, 'exclude-from-search', 'category', true );
         }
 
-        if( get_post_meta( $post_id, 'mb_isPreliminaryTour', true ) == 'ready_to_publish_tour' OR get_post_meta( $post_id, 'mb_isMajorMarket', true ) == 'majorMarket'  ) {
+        if( get_post_meta( $post_id, 'mb_isPreliminaryTour', true ) == 'ready_to_publish_tour' OR get_post_meta( $post_id, 'mb_isMajorMarket', true ) == 'majorMarket' OR get_post_meta( $post_id, 'mb_isPartnerEvent', true ) == false  ) {
         wp_remove_object_terms( $post_id, 'exclude-from-search', 'category', true );
         }
 

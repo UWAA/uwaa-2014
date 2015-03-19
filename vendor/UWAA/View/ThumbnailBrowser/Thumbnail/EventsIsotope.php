@@ -18,7 +18,9 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
-    protected $postExcerpt;    
+    protected $postExcerpt;
+    protected $alternateLink;
+    protected $isPartnerEvent;    
 
     public function __construct()
     {
@@ -39,10 +41,12 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');        
-        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
+        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = wp_kses($this->shortenExcerpt(get_the_excerpt(), 180), $this->allowedHTMLTags);
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
+        $this->alternateLink = esc_url(get_post_meta(get_the_ID(), 'mb_alternate_link', true));
+        $this->isPartnerEvent = get_post_meta(get_the_ID(), 'mb_isPartnerEvent', true);
         
         echo $this->buildTemplate();
 
@@ -86,16 +90,26 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
     
 
     return $args;
+  }
+
+  private function determineAlternateLink() {
+    if($this->isPartnerEvent == 1) {
+      return $this->alternateLink;
+    }
+    return $this->postURL;
   }  
 
 
 	public function buildTemplate(){
   $callout = $this->renderCallout();
   $image = $this->renderImage();
+  $link = $this->determineAlternateLink();
   // $dateDebug = $this->args['meta_query']['value'];
+  // 
+  
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
-	<a href="$this->postURL" title="$this->postTitle">
+	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
       $callout
 		  $image
@@ -105,6 +119,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
 		<h4 class="title">$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
 		<p>$this->postExcerpt</p>
+    $this->isPartnerEvent    
 		</div>
 	</a>
   
