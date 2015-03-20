@@ -151,6 +151,7 @@ class Utilities
     if (isset($qv['feed']) && !isset($qv['post_type']))
         $qv['post_type'] = array(
             'post',
+            'page',
             'tours',
             'chapters',
             'benefits',
