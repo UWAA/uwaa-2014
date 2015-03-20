@@ -14,6 +14,7 @@ class Utilities
     function __construct()
     {
         add_filter('pre_get_posts',array($this,'SearchFilter'));
+        add_filter('request', array($this, 'addUWAACustomPostsToFeed'));
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
         add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
         add_action( 'save_post', array($this, 'excludePreliminaryandMinorFromSearch'), 20 );
@@ -144,6 +145,22 @@ class Utilities
         remove_anonymous_object_filter('wp_enqueue_scripts', 'UW_Analytics', 'script');
 
     }
+
+    public function addUWAACustomPostsToFeed($qv) 
+    {
+    if (isset($qv['feed']) && !isset($qv['post_type']))
+        $qv['post_type'] = array(
+            'post',
+            'tours',
+            'chapters',
+            'benefits',
+            'events',
+            'public' => true
+            );
+        // $qv['post_type'] = get_post_types();
+    return $qv;
+    }
+
 
  
 
