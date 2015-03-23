@@ -43,24 +43,29 @@ class Utilities
     public function SearchFilter($query)
 
     {
+        $isAdmin = is_admin();
     if ( !$query->is_search )
         return $query;
 
-    $taxquery = array(
-        array(            
-            array(
-                'taxonomy' => 'category',
-                'field'    => 'slug',
-                'terms'    => array( 'exclude-from-search'),
-                'operator'  => 'NOT IN'
-            ),
-            
-        )
-    );
-    
-    $query->set( 'tax_query', $taxquery );        
-    return $query;
+    if (!$isAdmin) {
+
+        $taxquery = array(
+            array(            
+                array(
+                    'taxonomy' => 'category',
+                    'field'    => 'slug',
+                    'terms'    => array( 'exclude-from-search'),
+                    'operator'  => 'NOT IN'
+                ),
+                
+            )
+        );
+        
+        $query->set( 'tax_query', $taxquery );        
+        return $query;
+        }
     }
+
 
     public function excludePreliminaryandMinorFromSearch($post_id)
     {
