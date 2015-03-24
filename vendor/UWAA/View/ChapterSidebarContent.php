@@ -19,8 +19,10 @@ class ChapterSidebarContent
     {
         $this->chapterLinkedin = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_linkedIn', true));
         $this->chapterFacebook = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_facebook', true));
+        $this->chapterTwitter = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_twitter', true));
         $this->chapterLinkedInName = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_linkedIn_name', true));
         $this->chapterFacebookName = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_facebook_name', true));
+        $this->chapterTwitterName = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_twitter_name', true));
         $this->leader1 = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_leader_1', true));
         $this->leader1Email = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_leader_1_email', true));
         $this->leader2 = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_leader_2', true));
@@ -57,6 +59,9 @@ class ChapterSidebarContent
             } 
             if ($this->chapterLinkedin) {
                 $widget .= '<a target="_blank" class="linkedIn" href="' . $this->chapterLinkedin . '">' . ($this->chapterLinkedInName ? $this->chapterLinkedInName : '') . ' LinkedIn</a>';
+            }
+            if ($this->chapterTwitter) {
+                $widget .= '<a target="_blank" class="twitter" href="' . $this->chapterTwitter . '">' . ($this->chapterTwitterName ? $this->chapterTwitterName : '') . ' Twitter</a>';
             }
         $widget .= '</div></div>';
 

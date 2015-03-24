@@ -323,6 +323,12 @@ class MetaBoxes
                         'desc'=> "URL for the chapter LinkedIn page."
                         ),
                     array(
+                        'name' => 'Chapter Twitter',
+                        'id'=> 'chapter_twitter',
+                        'type'=> 'text',
+                        'desc'=> "URL for the chapter Twitter feed."
+                        ),
+                    array(
                         'name' => 'Chapter Facebook Alternate Name',
                         'id'=> 'chapter_facebook_name',
                         'type'=> 'text',
@@ -334,6 +340,12 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "Specialized name for the chapter LinkedIn group.  E.g. NY Huskies"
                         ),
+                    array(
+                        'name' => 'Chapter Twitter Alternate Name',
+                        'id'=> 'chapter_twitter_name',
+                        'type'=> 'text',
+                        'desc'=> "Specialized name for the chapter Twitter feed.  E.g. NY Huskies"
+                        ),                    
                     array(
                         'name' => 'Latitude/Longitude',
                         'id'=> 'lat_long',

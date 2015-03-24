@@ -2950,6 +2950,10 @@ ul.uwaa-social li a:focus.email {
 #chapter-social-widget a.linkedIn:before {
   background-position: -184px -185px;
 }
+#chapter-leader-widget a.twitter:before,
+#chapter-social-widget a.twitter:before {
+  background-position: -44px -185px;
+}
 #chapter-leader-widget a.email:before,
 #chapter-social-widget a.email:before {
   background-position: -410px -185px;
