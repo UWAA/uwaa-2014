@@ -321,7 +321,7 @@ Color Pallette
   height: 120px;
   position: absolute;
   margin-left: 15px;
-  bottom: -5px;
+  bottom: -15px;
   display: block;
   border-radius: 50%;
   background-color: #e0ba53;
@@ -851,6 +851,11 @@ Color Pallette
     height: 16px;
   }
 }
+@media (min-width: 993px) and (min-width: 1200px) {
+  .loveUW h3 {
+    font-size: 33.3px;
+  }
+}
 @media (min-width: 768px) AND (max-width: 991px) {
   .header-weather,
   .header-forcast {
@@ -887,7 +892,7 @@ Color Pallette
     min-height: 22px;
   }
   .loveUW h3 {
-    font-size: 23.976px;
+    font-size: 25.308px;
   }
   .content-row {
     min-height: 254px;
@@ -1028,9 +1033,11 @@ Color Pallette
     padding: 0;
   }
   .loveUW h3 {
-    margin-top: .5em;
+    margin-top: .7em;
+    padding: 0 10px;
     color: #3d3d3d;
     font-weight: 700;
+    margin-bottom: 0;
   }
   .loveUW h3 .break {
     display: block !important;
@@ -1072,14 +1079,9 @@ Color Pallette
   .join-row .loveUW {
     padding-left: 0;
     padding-right: 0;
-    /*h1{
-		margin-top:.5em;
-		font-size: 28px;
-		
-	}*/
   }
-  .join-row-fixed {
-    text-align: center;
+  .join-row .loveUW .uwaa-btn-wrapper {
+    margin-top: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -1214,6 +1216,9 @@ Color Pallette
     background-position: 0 -48px;
     cursor: pointer;
   }
+  .join-row.join-row .uwaa-btn-wrapper {
+    margin-top: 0;
+  }
   .join-row {
     height: 58px;
   }
@@ -1238,6 +1243,11 @@ Color Pallette
   .content-row h3 {
     margin-top: 0;
     margin-bottom: 7px;
+    font-weight: 700;
+  }
+  .content-row p {
+    font-size: 13px;
+    padding: 0 10px;
   }
   .content-row ul {
     margin-top: 10px;
@@ -1254,12 +1264,13 @@ Color Pallette
   }
   .loveUW h3 {
     text-align: center;
-    font-size: 14.1192px;
+    font-size: 25px;
     width: 100%;
-    margin-top: .63em;
+    margin-top: .43em;
     margin-bottom: 0;
     color: #3d3d3d;
     font-weight: 700;
+    padding-top: 15px;
   }
   .loveUW h3 .break {
     display: block !important;
