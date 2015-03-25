@@ -110,31 +110,31 @@ while ( have_posts() ) : the_post();
          <div class="image events" id="slideshow1">
             <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Movie-Nights_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Movie Nights</p>
+            <p class="caption">Movie nights</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Game-Warm-Up-Party_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Washington Warm Ups</p>
+            <p class="caption">Washington warm ups</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-BBQs_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Salmon Barbeques</p>
+            <p class="caption">Salmon barbeques</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Mariners-Night_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Husky Night at the Mariners</p>
+            <p class="caption">Husky night at the Mariners</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Networking_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Networking Happy Hour</p>
+            <p class="caption">Networking happy hour</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Science-Twist_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Science with a Twist</p>
+            <p class="caption">Science with a twist</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Trivia_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Trivia Night</p>
+            <p class="caption">Trivia night</p>
           </div>
       </div> 
         <div class="copy">
@@ -159,15 +159,15 @@ while ( have_posts() ) : the_post();
         <div class="image support" id="slideshow2">
             <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Seattle-Campus_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">UW Seattle Campus</p>
+            <p class="caption">UW Seattle campus</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Bothell-Campus_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">UW Bothell Campus</p>
+            <p class="caption">UW Bothell campus</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Tacoma-Campus_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">UW Tacoma Campus</p>
+            <p class="caption">UW Tacoma campus</p>
           </div>
           </div> 
         <div class="copy">
