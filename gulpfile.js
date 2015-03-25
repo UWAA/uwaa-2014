@@ -97,8 +97,8 @@ gulp.task('less', function () {
   });
 
 gulp.task('watch', function () {
-    gulp.watch('less/*.less', ['less']);
-    gulp.watch('js/**/*.js', ['scripts']);
+    gulp.watch('less/**/*.less', ['less']);
+    gulp.watch(['js/_*.js', 'js/support/*.js', '!js/support/*.min.js'], ['scripts']);
 });
 
 

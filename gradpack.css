@@ -134,8 +134,6 @@
 .join-row:after,
 .join-row .wrapper:before,
 .join-row .wrapper:after,
-.join-row-fixed .wrapper:before,
-.join-row-fixed .wrapper:after,
 .content-row:before,
 .content-row:after,
 .content-row .image-right:before,
@@ -165,7 +163,6 @@
 #header:after,
 .join-row:after,
 .join-row .wrapper:after,
-.join-row-fixed .wrapper:after,
 .content-row:after,
 .content-row .image-right:after,
 .content-row .image-left:after,
@@ -208,8 +205,6 @@
 .join-row:after,
 .join-row .wrapper:before,
 .join-row .wrapper:after,
-.join-row-fixed .wrapper:before,
-.join-row-fixed .wrapper:after,
 .content-row:before,
 .content-row:after,
 .content-row .image-right:before,
@@ -239,7 +234,6 @@
 #header:after,
 .join-row:after,
 .join-row .wrapper:after,
-.join-row-fixed .wrapper:after,
 .content-row:after,
 .content-row .image-right:after,
 .content-row .image-left:after,
@@ -294,7 +288,6 @@ Color Pallette
   position: absolute;
   color: #ffffff;
   top: 20px;
-  left: 15%;
   font-size: 50px;
   line-height: 50px;
   margin: 7px 0 0;
@@ -327,8 +320,8 @@ Color Pallette
   width: 120px;
   height: 120px;
   position: absolute;
-  margin-left: 10%;
-  top: 18.5%;
+  margin-left: 15px;
+  bottom: -5px;
   display: block;
   border-radius: 50%;
   background-color: #e0ba53;
@@ -352,12 +345,6 @@ Color Pallette
   bottom: 10px;
   height: 14px;
   width: 20px;
-}
-@media (min-width: 1500px) {
-  #yellow-dot {
-    margin-left: 22%;
-    top: 13.9%;
-  }
 }
 .join-row {
   margin-left: -15px;
@@ -463,81 +450,8 @@ Color Pallette
     margin-left: 0;
   }
 }
-.join-row-fixed {
-  background-color: #ffffff;
-  height: 90px;
-  position: fixed;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  -webkit-box-shadow: inset 0px -5px 5px -4px #000000;
-  -moz-box-shadow: inset 0px -5px 5px -4px #000000;
-  box-shadow: inset 0px -5px 5px -4px #000000;
-}
-.join-row-fixed .wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.join-row-fixed .wrapper:before,
-.join-row-fixed .wrapper:after {
-  content: " ";
-  display: table;
-}
-.join-row-fixed .wrapper:after {
-  clear: both;
-}
-.join-row-fixed .wrapper:before,
-.join-row-fixed .wrapper:after {
-  content: " ";
-  display: table;
-}
-.join-row-fixed .wrapper:after {
-  clear: both;
-}
-.join-row-fixed .wrapper:before,
-.join-row-fixed .wrapper:after {
-  content: " ";
-  display: table;
-}
-.join-row-fixed .wrapper:after {
-  clear: both;
-}
-.join-row-fixed .wrapper:before,
-.join-row-fixed .wrapper:after {
-  content: " ";
-  display: table;
-}
-.join-row-fixed .wrapper:after {
-  clear: both;
-}
-@media (min-width: 768px) {
-  .join-row-fixed .wrapper {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .join-row-fixed .wrapper {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .join-row-fixed .wrapper {
-    width: 1170px;
-  }
-}
-.join-row-fixed .wrapper > .navbar-header,
-.join-row-fixed .wrapper > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 768px) {
-  .join-row-fixed .wrapper > .navbar-header,
-  .join-row-fixed .wrapper > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
+.join-row .wrapper h3 {
+  display: inline-block;
 }
 .content-row {
   margin-left: -15px;
@@ -889,9 +803,6 @@ Color Pallette
   margin: 10px 0 0 0;
 }
 @media (min-width: 993px) {
-  .loveUW h3 {
-    font-size: 26.64px;
-  }
   .content-row .copy h3 {
     color: #3d3d3d;
     font-weight: 700;
@@ -907,6 +818,9 @@ Color Pallette
     min-height: 0;
     line-height: 1.5;
     font-size: 23px;
+  }
+  .loveUW h3 {
+    font-size: 26.64px;
   }
   .content-row {
     min-height: 318px;
@@ -969,11 +883,11 @@ Color Pallette
     line-height: 1.7;
     font-size: 13.6px;
   }
-  .loveUW h3 {
-    font-size: 22.1112px;
-  }
   .caption {
     min-height: 22px;
+  }
+  .loveUW h3 {
+    font-size: 23.976px;
   }
   .content-row {
     min-height: 254px;
@@ -1004,23 +918,8 @@ Color Pallette
   .join-row {
     height: 72px;
   }
-  .join-row-fixed {
-    height: 72px;
-  }
   #header {
     height: 318.72px;
-  }
-  #yellow-dot {
-    width: 80px;
-    height: 80px;
-    top: 14.25%;
-    font-size: 15px;
-  }
-  #yellow-dot span {
-    bottom: 7px;
-    height: 11px;
-    width: 16px;
-    left: 32px;
   }
   .join-button {
     background: url(https://www.uw.edu/alumni/images/membership/gradpack/BTN-JoinNow-Med-Sprite.png) no-repeat;
@@ -1078,17 +977,16 @@ Color Pallette
     background-position: 65% 0;
   }
   #yellow-dot {
-    width: 120px;
-    height: 120px;
-    top: 316px;
-    font-size: 11px;
-    margin-left: 0;
+    width: 80px;
+    height: 80px;
+    font-size: 12px;
+    padding-top: 7px;
   }
   #yellow-dot span {
-    bottom: 15px;
-    height: 10px;
-    width: 14px;
-    left: 50px;
+    bottom: 7px;
+    height: 11px;
+    width: 16px;
+    left: 32px;
   }
   .join-mobile-header {
     background: url(https://www.uw.edu/alumni/images/membership/gradpack/BTN-JoinNow-Top-Sprite.png) no-repeat 0 0 transparent;
@@ -1107,13 +1005,24 @@ Color Pallette
     line-height: 1;
     left: 5%;
   }
-  .content-row h1 {
+  .content-row h3 {
     font-size: 23.68px;
     margin: 0;
   }
   .content-row p {
     font-size: 13.6px;
     margin: 0;
+  }
+  .caption {
+    min-height: 22px;
+  }
+  .footer-copy {
+    margin-left: 130px;
+    margin-right: 10px;
+  }
+  .footer-copy p {
+    font-size: 13px;
+    line-height: 1.2;
   }
   .loveUW {
     padding: 0;
@@ -1143,17 +1052,6 @@ Color Pallette
   th.loveUW h3 .break,
   td.loveUW h3 .break {
     display: table-cell !important;
-  }
-  .caption {
-    min-height: 22px;
-  }
-  .footer-copy {
-    margin-left: 130px;
-    margin-right: 10px;
-  }
-  .footer-copy p {
-    font-size: 13px;
-    line-height: 1.2;
   }
   .join-row .join-button {
     display: none !important;
@@ -1295,14 +1193,14 @@ Color Pallette
     height: 64px;
     width: 64px;
     margin: 0;
-    top: 178px;
-    font-size: 11px;
+    font-size: 10px;
+    padding-top: 4px;
   }
   #yellow-dot span {
-    bottom: 10px;
+    bottom: 3px;
     height: 10px;
     width: 14px;
-    left: 50px;
+    left: 26px;
   }
   .join-mobile-header {
     background: url(https://www.uw.edu/alumni/images/membership/gradpack/BTN-JoinNow-Top-Sprite.png) no-repeat 0 0 transparent;
@@ -1323,15 +1221,36 @@ Color Pallette
     padding: 0;
     cursor: default;
   }
-  .join-row-fixed {
-    display: none !important;
-    height: 72px;
+  .join-row .uwaa-btn-wrapper a.uwaa-btn:before {
+    top: 7px;
   }
-  .join-row-fixed,
-  tr.join-row-fixed,
-  th.join-row-fixed,
-  td.join-row-fixed {
-    display: none !important;
+  h1 {
+    font-size: 18.5px;
+  }
+  p {
+    font-size: 10.03px;
+    line-height: 1.46;
+    margin-bottom: 0;
+  }
+  .footer-copy p {
+    font-size: 12px;
+  }
+  .content-row h3 {
+    margin-top: 0;
+    margin-bottom: 7px;
+  }
+  .content-row ul {
+    margin-top: 10px;
+  }
+  .content-row ul ul {
+    margin-top: 0;
+  }
+  .content-row ul ul li {
+    line-height: 1.5;
+  }
+  .content-row ul li {
+    line-height: 1.7;
+    font-size: 10.03px;
   }
   .loveUW h3 {
     text-align: center;
@@ -1362,34 +1281,6 @@ Color Pallette
   th.loveUW h3 .break,
   td.loveUW h3 .break {
     display: table-cell !important;
-  }
-  h1 {
-    font-size: 18.5px;
-  }
-  p {
-    font-size: 10.03px;
-    line-height: 1.46;
-    margin-bottom: 0;
-  }
-  .footer-copy p {
-    font-size: 12px;
-  }
-  .content-row h3 {
-    margin-top: 0;
-    margin-bottom: 7px;
-  }
-  .content-row ul {
-    margin-top: 10px;
-  }
-  .content-row ul ul {
-    margin-top: 0;
-  }
-  .content-row ul ul li {
-    line-height: 1.5;
-  }
-  .content-row ul li {
-    line-height: 1.7;
-    font-size: 10.03px;
   }
   .join-row .join-button {
     display: none !important;
@@ -1486,4 +1377,10 @@ a.anchor {
   padding-left: 20px;
   color: white;
   background-color: rgba(0, 0, 0, 0.4);
+}
+nav#mobile-relative.frontpage {
+  margin-top: 0;
+}
+nav#mobile-relative.frontpage button.uw-mobile-menu-toggle {
+  right: 0;
 }

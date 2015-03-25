@@ -10,7 +10,6 @@ while ( have_posts() ) : the_post();
 <?php uw_mobile_front_page_menu(); ?>
 
 
-
 <div class="gradpack">
 
       <div id="header">
@@ -22,11 +21,14 @@ while ( have_posts() ) : the_post();
             <div id="conGRADulations">
               <h1>Con<span class="bold">grad</span>ulations<br/> Class of 2015!</h1>
             </div>
+              <a href="#flickr"><div id="yellow-dot">Find<br/>Your <br> Free<br/>Photo<span></span></div></a>
             </div>
-        
+
+
+          
     </div>
 
-      <a href="#flickr"><div id="yellow-dot">Find<br/>Your <br> Free<br/>Photo<span></span></div></a>
+      
       <div class="join-row">
         <div class="wrapper loveUW">
             <h3>You&rsquo;re one of us now. Discover what UWAA membership means.</h3>
@@ -35,8 +37,6 @@ while ( have_posts() ) : the_post();
         </div>
       </div>
     
-     
-
  
 
    
