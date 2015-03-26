@@ -26,10 +26,10 @@ $(document).ready(function(){
 var imgRes = {
     sm: "_320x146.jpg",
 //  md:"768x398",
-    lg:"_1200x498.jpg"
+    lg:"_1600x498.jpg"
 };
 
-var ImgUrl = "https://www.uw.edu/alumni/images/membership/gradpack/GradPack_Slide";
+var ImgUrl = "https://depts.washington.edu/alumni/images/membership/gradpack/GradPack_Slide_";
 
 
 

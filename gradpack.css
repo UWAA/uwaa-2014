@@ -293,7 +293,7 @@ Color Pallette
   margin: 7px 0 0;
 }
 #header #header-fore {
-  background: url(https://www.uw.edu/alumni/images/membership/gradpack/GradPack_Slide0_1200x498.jpg) transparent no-repeat;
+  background: url(http://depts.washington.edu/alumni/images/membership/gradpack/GradPack_Slide_0_1600x498.jpg) transparent no-repeat;
   background-size: cover;
   position: absolute;
   display: block;
@@ -301,7 +301,7 @@ Color Pallette
   width: 100%;
 }
 #header #header-bg {
-  background: url(https://www.uw.edu/alumni/images/membership/gradpack/GradPack_Slide1_1200x498.jpg) transparent no-repeat;
+  background: url(http://depts.washington.edu/alumni/images/membership/gradpack/GradPack_Slide_1_1600x498.jpg) transparent no-repeat;
   background-size: cover;
   position: absolute;
   display: block;
