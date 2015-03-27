@@ -53,7 +53,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>
       </div>          
       </div>
@@ -74,7 +77,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>
       </div>
 
@@ -96,7 +102,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>
       </div>
           
@@ -145,7 +154,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>
       </div>
        
@@ -178,7 +190,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>
       </div>
           
@@ -200,7 +215,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>       
       </div>
            
@@ -223,7 +241,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>
       </div>
           
@@ -245,7 +266,10 @@ while ( have_posts() ) : the_post();
             'class' => array()
         ), 'div' => array(
             'class' => array()
-            ))); ?>
+            ),
+            'strong' => array(),
+            'em' => array()
+            )); ?>
         </p>   
 
         
