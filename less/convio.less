@@ -68,7 +68,7 @@ background-size: contain;
   }
 
   .convio-content{
-    .make-row();
+    .make-row();    
     padding: 50px 0 20px;
 
 
@@ -82,10 +82,40 @@ background-size: contain;
       margin-bottom: 14.5px;
     }
 
-    .survey-textarea-container textarea {
-      min-width: 315px;
+    #lo-attendeeContainer {
+      .smaller {
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 0;
+        font-weight: normal;
+
+
+      }
     }
-    
+
+    .survey-question-container {
+
+      label {
+        max-width: 95%;
+        vertical-align: top;
+      }
+
+    }
+
+    .input-label {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: normal;
+    }
+
+    .survey-textarea-container textarea {
+      min-width: 50%;
+    }
+
+
+    .AutoOptInWarningMessage {
+      color: rgb(60, 60, 60);
+      font-size: 17px;
+    }
+
   }
 
   .convio-footer{

@@ -3537,8 +3537,25 @@ a#memberCheckerLogout {
   margin-top: 29px;
   margin-bottom: 14.5px;
 }
+.uwaa-convio-wrapper .convio-content #lo-attendeeContainer .smaller {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+.uwaa-convio-wrapper .convio-content .survey-question-container label {
+  max-width: 95%;
+  vertical-align: top;
+}
+.uwaa-convio-wrapper .convio-content .input-label {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
 .uwaa-convio-wrapper .convio-content .survey-textarea-container textarea {
-  min-width: 315px;
+  min-width: 50%;
+}
+.uwaa-convio-wrapper .convio-content .AutoOptInWarningMessage {
+  color: #3c3c3c;
+  font-size: 17px;
 }
 .uwaa-convio-wrapper .convio-footer {
   margin-left: -15px;
