@@ -3537,6 +3537,9 @@ a#memberCheckerLogout {
   margin-top: 29px;
   margin-bottom: 14.5px;
 }
+.uwaa-convio-wrapper .convio-content .survey-textarea-container textarea {
+  min-width: 315px;
+}
 .uwaa-convio-wrapper .convio-footer {
   margin-left: -15px;
   margin-right: -15px;
