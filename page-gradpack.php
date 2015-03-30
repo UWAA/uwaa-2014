@@ -55,7 +55,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>
       </div>          
@@ -79,7 +80,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>
       </div>
@@ -104,7 +106,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>
       </div>
@@ -156,7 +159,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>
       </div>
@@ -192,7 +196,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>
       </div>
@@ -217,7 +222,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>       
       </div>
@@ -243,7 +249,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>
       </div>
@@ -268,7 +275,8 @@ while ( have_posts() ) : the_post();
             'class' => array()
             ),
             'strong' => array(),
-            'em' => array()
+            'em' => array(),
+            'br' => array()
             )); ?>
         </p>   
 
