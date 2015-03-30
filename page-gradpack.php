@@ -267,7 +267,7 @@ while ( have_posts() ) : the_post();
           </div>
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_eight_title', true)) ?></h3>
-        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_eight_content', true), array('a' => array(
+        <p class="noWidowEnder"><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_eight_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
             'class' => array()

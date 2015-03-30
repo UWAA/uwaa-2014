@@ -1344,6 +1344,11 @@ Color Pallette
   width: 168px;
   height: 90px;
 }
+a:hover,
+a:focus {
+  color: #85754d;
+  text-decoration: none;
+}
 .navbar-nav > li > a {
   border-bottom: 1px #666666 solid;
   font-size: 14px;
