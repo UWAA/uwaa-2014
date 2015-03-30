@@ -895,10 +895,10 @@ Color Pallette
     font-size: 25.308px;
   }
   .content-row {
-    min-height: 254px;
+    min-height: 248px;
   }
   .content-row .image-right .copy {
-    padding: 15px 20px 0px 20px;
+    padding: 15px 20px 0px 10px;
   }
   .content-row .image-right .copy h1 {
     line-height: 1;
@@ -943,11 +943,11 @@ Color Pallette
 }
 @media (min-width: 321px) AND (max-width: 767px) {
   .content-row {
-    min-height: 254px;
+    min-height: 248px;
   }
   .content-row .image-right .copy {
     text-align: center;
-    padding: 15px 20px 15px 20px;
+    padding: 15px 20px 15px 10px;
   }
   .content-row .image-right .image img {
     width: 100%;
@@ -1014,6 +1014,7 @@ Color Pallette
     font-size: 23.68px;
     margin: 0;
     font-weight: 700;
+    color: #3d3d3d;
   }
   .content-row p {
     font-size: 13.6px;
@@ -1245,6 +1246,7 @@ Color Pallette
     margin-top: 0;
     margin-bottom: 7px;
     font-weight: 700;
+    color: #3d3d3d;
   }
   .content-row p {
     font-size: 13px;
