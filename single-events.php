@@ -5,7 +5,7 @@
   $isPartnerEvent = get_post_meta($post->ID, 'mb_isPartnerEvent', true);
 
 if ($isPartnerEvent) {
-  $url = get_post_meta($post->ID, 'mb_alternate_link', true);
+  $url = apply_filters('remove_cms', get_post_meta($post->ID, 'mb_alternate_link', true));
   $UWAA->Utilities->Redirect($url, true);
 }
 

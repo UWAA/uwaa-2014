@@ -6,7 +6,7 @@ $chapterSidebar = $UWAA->UI->buildCommunitySidebar();
 $isMajorMarket = get_post_meta($post->ID, 'mb_isMajorMarket', true);
 
 if ($isMajorMarket == 'notMajorMarket') {
-  $url = get_site_url() . '/communities/all-communities/?chapter=' . $post->post_name;
+  $url = apply_filters('remove_cms', get_site_url() . '/communities/all-communities/?chapter=' . $post->post_name);
   $UWAA->Utilities->Redirect($url, true);
 }
 
