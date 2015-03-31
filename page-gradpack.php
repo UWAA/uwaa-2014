@@ -50,6 +50,7 @@ while ( have_posts() ) : the_post();
           <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_one_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
@@ -75,6 +76,7 @@ while ( have_posts() ) : the_post();
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_two_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
@@ -101,6 +103,7 @@ while ( have_posts() ) : the_post();
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_three_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
@@ -154,6 +157,7 @@ while ( have_posts() ) : the_post();
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_four_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
@@ -191,6 +195,7 @@ while ( have_posts() ) : the_post();
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_five_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
@@ -217,6 +222,7 @@ while ( have_posts() ) : the_post();
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_six_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
@@ -244,6 +250,7 @@ while ( have_posts() ) : the_post();
         <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_seven_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
@@ -270,6 +277,7 @@ while ( have_posts() ) : the_post();
         <p class="noWidowEnder"><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_eight_content', true), array('a' => array(
             'href' => array(),
             'title' => array(),
+            'target' => array(),
             'class' => array()
         ), 'div' => array(
             'class' => array()
