@@ -79,7 +79,7 @@ class GetCommunitySlug {
             'palm-springs',
             'philadelphia',
             'phoenix',
-            'portland',
+            'oregon',
             'reno',
             'sacramento',
             'san-antonio-south-texas',
