@@ -1,10 +1,17 @@
-<?php get_header(); 
+<?php 
 $chapterSidebar = $UWAA->UI->buildCommunitySidebar();
-
-
   // Start the Loop.
   while ( have_posts() ) : the_post();
   
+$isMajorMarket = get_post_meta($post->ID, 'mb_isMajorMarket', true);
+
+if ($isMajorMarket == 'notMajorMarket') {
+  $url = get_site_url() . '/communities/all-communities/?chapter=' . $post->post_name;
+  $UWAA->Utilities->Redirect($url, true);
+}
+
+get_header();
+
 
 ?>
 
@@ -29,7 +36,7 @@ $chapterSidebar = $UWAA->UI->buildCommunitySidebar();
 
       
             <?php
-        
+                    
 
                     include(locate_template( 'content-chapters.php' ));                    
 

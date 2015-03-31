@@ -1,6 +1,16 @@
-<?php get_header(); 
+<?php
   // Start the Loop.
   while ( have_posts() ) : the_post(); 
+
+  $isPartnerEvent = get_post_meta($post->ID, 'mb_isPartnerEvent', true);
+
+if ($isPartnerEvent) {
+  $url = get_post_meta($post->ID, 'mb_alternate_link', true);
+  $UWAA->Utilities->Redirect($url, true);
+}
+
+
+   get_header(); 
  ?>
 <a name="pagination-top"></a>
  
@@ -8,7 +18,6 @@
 
 
  <?php
-
 
 $communitySlug = new \UWAA\View\GetCommunitySlug($post);
 $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
