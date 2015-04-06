@@ -1339,171 +1339,169 @@ div.map-logo {
   background-repeat: no-repeat;
   height: 40px;
   width: 100%;
-  background-image: url(assets/Regional_Logo_Sprite_Map.png);
-  background-position: 50% 0;
+  background-image: url(assets/Communities_Map_Sprite.png);
+  background-position: 0 0;
   margin-bottom: 10px;
 }
 div.map-logo #Huskies path {
   fill: #4b2e83;
 }
-div.map-logo.albany {
-  background-position: 50% -642px;
-}
 div.map-logo.anchorage {
-  background-position: 50% 0;
+  background-position: 50% -3px;
 }
-div.map-logo.atlanta {
-  background-position: 50% -240px;
-}
-div.map-logo.austin {
-  background-position: 50% -802px;
-}
-div.map-logo.northern-california {
-  background-position: 50% -80px;
+div.map-logo.tucson,
+div.map-logo.phoenix,
+div.map-logo.arizona {
+  background-position: 50% -47px;
 }
 div.map-logo.bellingham {
-  background-position: 50% -842px;
-}
-div.map-logo.boise {
-  background-position: 50% -321px;
-}
-div.map-logo.boston {
-  background-position: 50% -442px;
-}
-div.map-logo.chicago {
-  background-position: 50% -361px;
-}
-div.map-logo.china {
-  background-position: 50% -1002px;
-}
-div.map-logo.dallas-ft-worth {
-  background-position: 50% -802px;
-}
-div.map-logo.denver {
-  background-position: 50% -120px;
-}
-div.map-logo.ft-lauderdale {
-  background-position: 50% -200px;
-}
-div.map-logo.hong-kong {
-  background-position: 50% -1042px;
-}
-div.map-logo.honolulu {
-  background-position: 50% -281px;
-}
-div.map-logo.houston {
-  background-position: 50% -802px;
-}
-div.map-logo.indianapolis {
-  background-position: 50% -401px;
-}
-div.map-logo.indonesia {
-  background-position: 36% -1083px;
-}
-div.map-logo.japan {
-  background-position: 50% -1123px;
-}
-div.map-logo.kailua-kona {
-  background-position: 50% -281px;
-}
-div.map-logo.korea {
-  background-position: 50% -1164px;
-}
-div.map-logo.las-vegas {
-  background-position: 50% -602px;
-}
-div.map-logo.southern-california {
-  background-position: 50% -80px;
-}
-div.map-logo.new-york-city {
-  background-position: 50% -642px;
-}
-div.map-logo.north-carolina {
-  background-position: 50% -522px;
-}
-div.map-logo.omaha {
-  background-position: 50% -562px;
-}
-div.map-logo.orange-county {
-  background-position: 50% -80px;
-}
-div.map-logo.palm-springs {
-  background-position: 50% -80px;
-}
-div.map-logo.philadelphia {
-  background-position: 42% -722px;
-}
-div.map-logo.phoenix {
-  background-position: 50% -42px;
-}
-div.map-logo.portland {
-  background-position: 50% -682px;
-}
-div.map-logo.reno {
-  background-position: 50% -602px;
-}
-div.map-logo.sacramento {
-  background-position: 50% -80px;
-}
-div.map-logo.san-antonio-south-texas {
-  background-position: 42% -802px;
-}
-div.map-logo.san-diego {
-  background-position: 50% -80px;
-}
-div.map-logo.singapore {
-  background-position: 36% -1204px;
-}
-div.map-logo.south-carolina {
-  background-position: 42% -762px;
-}
-div.map-logo.spokane {
-  background-position: 50% -882px;
-}
-div.map-logo.st-louis {
-  background-position: 42% -482px;
-}
-div.map-logo.sun-valley {
-  background-position: 50% -321px;
-}
-div.map-logo.taiwan {
-  background-position: 36% -1243px;
-}
-div.map-logo.thailand {
-  background-position: 36% -1284px;
-}
-div.map-logo.tricities {
-  background-position: 42% -922px;
-}
-div.map-logo.tucson {
-  background-position: 50% -42px;
-}
-div.map-logo.washington-dc {
-  background-position: 50% -160px;
-}
-div.map-logo.wenatchee {
-  background-position: 41% -964px;
+  background-position: 50% -91px;
 }
 div.map-logo.brazil {
-  background-position: 50% -1323px;
+  background-position: 50% -135px;
+}
+div.map-logo.san-diego,
+div.map-logo.sacramento,
+div.map-logo.orange-county,
+div.map-logo.palm-springs,
+div.map-logo.southern-california,
+div.map-logo.northern-california {
+  background-position: 50% -179px;
+}
+div.map-logo.china {
+  background-position: 50% -223px;
+}
+div.map-logo.denver {
+  background-position: 50% -267px;
+}
+div.map-logo.washington-dc {
+  background-position: 50% -311px;
+}
+div.map-logo.ft-lauderdale,
+div.map-logo.miami,
+div.map-logo.florida {
+  background-position: 50% -355px;
+}
+div.map-logo.georgia,
+div.map-logo.atlanta {
+  background-position: 50% -399px;
+}
+div.map-logo.kailua-kona,
+div.map-logo.hawaii,
+div.map-logo.honolulu {
+  background-position: 50% -443px;
+}
+div.map-logo.hong-kong {
+  background-position: 50% -487px;
+}
+div.map-logo.boise,
+div.map-logo.idaho {
+  background-position: 50% -531px;
+}
+div.map-logo.chicago,
+div.map-logo.illinois {
+  background-position: 50% -575px;
 }
 div.map-logo.india {
-  background-position: 50% -1365px;
+  background-position: 50% -619px;
+}
+div.map-logo.indonesia,
+div.map-logo.jakarta {
+  background-position: 50% -663px;
+}
+div.map-logo.indiana,
+div.map-logo.indianapolis {
+  background-position: 50% -707px;
+}
+div.map-logo.japan,
+div.map-logo.tokyo {
+  background-position: 50% -751px;
+}
+div.map-logo.korea,
+div.map-logo.seoul {
+  background-position: 50% -795px;
+}
+div.map-logo.massachusetts,
+div.map-logo.boston {
+  background-position: 50% -839px;
+}
+div.map-logo.st-louis,
+div.map-logo.missouri {
+  background-position: 50% -883px;
+}
+div.map-logo.north-carolina {
+  background-position: 50% -927px;
+}
+div.map-logo.omaha,
+div.map-logo.nebraska {
+  background-position: 50% -971px;
+}
+div.map-logo.las-vegas,
+div.map-logo.reno,
+div.map-logo.nevada {
+  background-position: 50% -1015px;
+}
+div.map-logo.new-york,
+div.map-logo.new-york-city {
+  background-position: 50% -1059px;
+}
+div.map-logo.oregon,
+div.map-logo.portland {
+  background-position: 50% -1103px;
+}
+div.map-logo.pennslyvania,
+div.map-logo.pittsburgh,
+div.map-logo.philadelphia {
+  background-position: 50% -1147px;
 }
 div.map-logo.peru {
-  background-position: 50% -1403px;
+  background-position: 50% -1191px;
+}
+div.map-logo.south-carolina {
+  background-position: 50% -1235px;
+}
+div.map-logo.singapore {
+  background-position: 50% -1279px;
 }
 div.map-logo.spain {
-  background-position: 50% -1445px;
+  background-position: 50% -1323px;
 }
-div.map-logo.uk {
-  background-position: 50% -1523px;
+div.map-logo.spokane {
+  background-position: 50% -1367px;
+}
+div.map-logo.taiwan,
+div.map-logo.taipei {
+  background-position: 50% -1411px;
+}
+div.map-logo.thailand,
+div.map-logo.bangkok {
+  background-position: 50% -1455px;
+}
+div.map-logo.tri-cities,
+div.map-logo.tricities {
+  background-position: 50% -1499px;
+}
+div.map-logo.austin,
+div.map-logo.san-antonio,
+div.map-logo.san-antonio-south-texas,
+div.map-logo.texas,
+div.map-logo.dallas,
+div.map-logo.dallas-ft-worth,
+div.map-logo.houston {
+  background-position: 50% -1543px;
 }
 div.map-logo.uae {
-  background-position: 50% -1484px;
+  background-position: 50% -1587px;
+}
+div.map-logo.london,
+div.map-logo.uk {
+  background-position: 50% -1631px;
 }
 div.map-logo.vancouver {
-  background-position: 50% -1500px;
+  background-position: 50% -1675px;
+}
+div.map-logo.wenatchee {
+  background-position: 50% -1719px;
 }
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 4px 10px 10px;
