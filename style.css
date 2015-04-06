@@ -1504,7 +1504,8 @@ div.map-logo.wenatchee {
   background-position: 50% -1719px;
 }
 .leaflet-popup .leaflet-popup-content {
-  padding: 10px;
+  padding: 10px 5px;
+  min-width: 330px;
 }
 .leaflet-popup .leaflet-popup-content p.map-title {
   font-family: "Encode Sans Compressed", sans-serif;
