@@ -1339,7 +1339,7 @@ div.map-logo {
   background-repeat: no-repeat;
   height: 40px;
   width: 100%;
-  background-image: url(assets/Communities_Map_Sprite.png);
+  background-image: url(assets/Comm_Map_Sprite.png);
   background-position: 0 0;
   margin-bottom: 10px;
 }
@@ -1505,7 +1505,6 @@ div.map-logo.wenatchee {
 }
 .leaflet-popup .leaflet-popup-content {
   padding: 10px;
-  min-width: 350px;
 }
 .leaflet-popup .leaflet-popup-content p.map-title {
   font-family: "Encode Sans Compressed", sans-serif;
