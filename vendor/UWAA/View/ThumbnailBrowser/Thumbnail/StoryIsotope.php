@@ -71,7 +71,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     $args = array (
       'post_type' => 'post',
       'orderby' => 'date',      
-      'order' => 'ASC',  
+      'order' => 'DESC',  
       'posts_per_page' => -1,
       'tax_query' => array(
         'relation' => 'AND',
