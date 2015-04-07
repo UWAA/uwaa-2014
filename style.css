@@ -1395,6 +1395,7 @@ div.map-logo.hong-kong {
   background-position: 50% -487px;
 }
 div.map-logo.boise,
+div.map-logo.sun-valley,
 div.map-logo.idaho {
   background-position: 50% -531px;
 }
@@ -1442,7 +1443,8 @@ div.map-logo.nevada {
   background-position: 50% -1015px;
 }
 div.map-logo.new-york,
-div.map-logo.new-york-city {
+div.map-logo.new-york-city,
+div.map-logo.albany {
   background-position: 50% -1059px;
 }
 div.map-logo.oregon,
