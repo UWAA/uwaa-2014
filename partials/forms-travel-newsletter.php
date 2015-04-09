@@ -3,18 +3,18 @@
 <form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
       action="https://uwalum.wufoo.com/forms/q1vws8101tef77m/#public">
 
-<input id="Field2" name="Field2" type="text" class="field text fn half-column" placeholder="First" value="" size="8" tabindex="1"/>
+<input id="Field2" name="Field2" type="text" class="field text fn half-column" placeholder="First" value="" size="8" tabindex="1" required/>
 <label class="screen-reader-text" for="Field2">First Name</label>
 
 <label class="screen-reader-text" for="Field3">Last Name</label>
-<input id="Field3" name="Field3" type="text" class="field text ln half-column" placeholder="Last" value="" size="14" tabindex="2" />
+<input id="Field3" name="Field3" type="text" class="field text ln half-column" placeholder="Last" value="" size="14" tabindex="2" required />
 
 
 
 
 <div>
 <label class="screen-reader-text" for="Field1">E-Mail</label>
-<input id="Field1" placeholder="E-mail" name="Field1" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3"/>
+<input id="Field1" placeholder="E-mail" name="Field1" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required/>
 <input id="saveForm" name="saveForm" class="inlineSubmit" type="submit" value="Submit" />
  </div>
 

@@ -43,7 +43,7 @@ class UW
         require_once($parent . 'class.uw-media-caption.php' );
         require_once($parent . 'class.uw-replace-media.php' );
         require_once($parent . 'class.uw-tinymce.php' );
-        require_once($parent . 'class.uw-documentation.php' );
+        require_once($parent . 'class.uw-documentation-dashboard-widget.php' );
         require_once($parent . 'class.uw-enclosure.php' );
         require_once($parent . 'class.uw-carousel.php' );
         require_once($parent . 'class.uw-settings.php' );
