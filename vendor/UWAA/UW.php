@@ -70,7 +70,7 @@ class UW
         $this->MediaCaption      = new \UW_Media_Caption;
         $this->ReplaceMedia      = new \UW_Replace_Media;
         $this->TinyMCE           = new \UW_TinyMCE;
-        $this->Documentation     = new \UW_Documentation;
+        $this->Documentation     = new \UW_Documentation_Dashboard_Widget;
         $this->IFrames           = new \UW_Iframes;
         $this->GoogleApps        = new \UW_GoogleApps;
         $this->Enclosure         = new \UW_Enclosure;
