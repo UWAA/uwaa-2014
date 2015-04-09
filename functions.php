@@ -24,18 +24,6 @@ if (!isset($UWAA)){
 }
 
 
-//Sets up our custom UW Object
-
-function setup_uw_object() {
-  $UW = new UWAA\UW;
-  return $UW;
-}
-
-
-
-
-
-
 //Page Slug Body Class
 
 function add_slug_body_class( $classes ) {
