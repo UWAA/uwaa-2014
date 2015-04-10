@@ -50,6 +50,11 @@ gulp.task('scripts', function() {
     .on('error', catchErrors)
     .pipe(gulp.dest('./js'));
 
+  gulp.src([ './js/admin/_*.js'])
+      .pipe(concat('admin.dev.js'))
+      .on('error', catchErrors)
+      .pipe(gulp.dest('./js/admin'));
+
  gulp.src(paths.scripts.support)
  .pipe(foreach(function(stream, file){
     return stream
@@ -76,6 +81,16 @@ gulp.task('scripts', function() {
     }))
     .on('error', catchErrors)
     .pipe(gulp.dest('./js'));
+
+gulp.src(['./js/admin/_*.js'])
+    .pipe(uglify('admin.js', {
+      mangle: true,
+      output: {
+        beautify: false
+      }
+    }))
+    .on('error', catchErrors)
+    .pipe(gulp.dest('./js/admin'));
 });
 
 
@@ -98,7 +113,7 @@ gulp.task('less', function () {
 
 gulp.task('watch', function () {
     gulp.watch('less/**/*.less', ['less']);
-    gulp.watch(['js/_*.js', 'js/support/*.js', '!js/support/*.min.js'], ['scripts']);
+    gulp.watch(['js/_*.js', 'js/admin/_*.js', 'js/support/*.js', '!js/support/*.min.js'], ['scripts']);
 });
 
 

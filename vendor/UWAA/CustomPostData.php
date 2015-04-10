@@ -56,7 +56,7 @@ class CustomPostData {
         // Input Type Array
         $lookup = array(
         "text" => "<input type=\"text\" name=\"$id\" value=\"$value\" class=\"widefat\" />",
-        "textarea" => "<textarea name='$id' class='widefat' rows='10'>$value</textarea>",
+        "textarea" => "<textarea name='$id' class='widefat' rows='5'>$value</textarea>",
         "checkbox" => "<input type='checkbox' name='$id' value='$name' />",
         "select" => $type == 'select' ? $this->renderSelect($id, $options, $value) : '' ,
         "file" => "<input type='file' name='$id' id='$id' />"
@@ -73,6 +73,12 @@ class CustomPostData {
                 echo '<tr>', '<th style="width:20%"><label for="', $id, '">', $name, '</label></th>', '<td>';
 
                 echo $lookup[is_array($type) ? $type[0] : $type];
+
+                if($id =='mb_80_character_excerpt'){
+                    echo '&nbsp;<span id="text-area-limit"></span><br/>';
+                }
+
+
                 
                 if (isset($desc)) {                    
                 echo '&nbsp;<span class="description">' . $desc . '</span>';
