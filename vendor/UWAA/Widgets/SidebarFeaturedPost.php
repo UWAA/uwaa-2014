@@ -206,7 +206,7 @@ class SidebarFeaturedPost extends \WP_Widget
       if ($this->currentPostInfo['id'] == get_the_ID() ) {
         continue;
       }
-        $this->postTitle = esc_html(get_the_title());
+        $this->postTitle = get_the_title();
         $this->postURL = get_permalink();
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
