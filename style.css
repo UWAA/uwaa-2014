@@ -3303,6 +3303,12 @@ a#memberCheckerLogout {
   outline: none !important;
   background-color: #f1eee4;
 }
+.uwaa-form input:focus:invalid {
+  border: 1px solid red;
+}
+.uwaa-form input:focus:valid {
+  border: 1px solid green;
+}
 #form-message {
   color: red;
 }

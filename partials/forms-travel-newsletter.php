@@ -1,8 +1,9 @@
 <div id="tours-signup" class="widget">
 <h2 class="widgettitle">Sign up for Travel Updates</h2>
-<form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+<form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate
       action="https://uwalum.wufoo.com/forms/q1vws8101tef77m/#public">
 
+ 
 <input id="Field2" name="Field2" type="text" class="field text fn half-column" placeholder="First" value="" size="8" tabindex="1" required/>
 <label class="screen-reader-text" for="Field2">First Name</label>
 
@@ -34,7 +35,8 @@ Title of Tour Being Viewed
         Do Not Fill This Out
     </label>
 <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-<input type="hidden" id="idstamp" name="idstamp" value="jY5QxUwXh+yRvWD2B3vyJT7WN5w5N90yj/KwMm9RJ/w=" />
+<input type="hidden" id="idstamp" name="idstamp" value="jY5QxUwXh+yRvWD2B3vyJT7WN5w5N90yj/KwMm9RJ/w=" /> 
+
 </li>
 </ul>
 </form>

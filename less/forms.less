@@ -49,13 +49,16 @@ label {
             background-color: lighten(rgb(232, 227, 211), 5%)
         }
 
-        // &:invalid {
-        //  border: 1px solid red;   
-        // }
 
-        // &:valid {
-        //  border: 1px solid red;   
-        // }
+        &:focus:invalid {
+         border: 1px solid red;   
+        }
+
+        &:focus:valid {
+         border: 1px solid green;   
+        }
+        
+
 
 
     }
