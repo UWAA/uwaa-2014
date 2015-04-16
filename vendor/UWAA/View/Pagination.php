@@ -131,11 +131,26 @@ CONTENT;
                     'order' => 'ASC',
                     'meta_key' => 'mb_start_date',
                     'meta_query' => array(
-                        
-                        'key' => 'mb_start_date',
-                        'type' => 'DATE',
-                        'value' => date("Y-m-d"), 
-                        'compare' => '>=', 
+                        'relation' => 'AND',
+                        array(
+                            'key' => 'mb_start_date',
+                            'type' => 'DATE',
+                            'value' => date("Y-m-d"), 
+                            'compare' => '>=', 
+                        ), 
+                        array(
+                            'relation' => 'OR',
+                             array(
+                                'key' => 'mb_isPartnerEvent',
+                                'type' => 'NUMERIC',
+                                'value' => '0',
+                                'compare' => '='
+                                ), 
+                             array(
+                                'key' => 'mb_isPartnerEvent',                                
+                                'compare' => 'NOT EXISTS'
+                                )
+                            ),                       
                     ),      
                     'posts_per_page' => -1,
                 );
