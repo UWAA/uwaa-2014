@@ -132,7 +132,7 @@ class Scripts
         'in_footer' => true,
         'admin'   => false,
     ),
-         'chapterAccordionOpener' => array (
+        'chapterAccordionOpener' => array (
         'id'      => 'chapterAccordionOpener',
         'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/chapterAccordionOpener'. $this->min_script() .'.js',
         'deps'    => array( 'backbone' ),
@@ -140,7 +140,7 @@ class Scripts
         'in_footer' => true,
         'admin'   => false,
     ),
-             'gradpack' => array (
+        'gradpack' => array (
         'id'      => 'gradpack',
         'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/gradpack'. $this->min_script() .'.js',
         'deps'    => array(),

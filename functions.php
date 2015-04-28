@@ -105,6 +105,3 @@ function current_type_nav_class($classes, $item) {
     };
     return $classes;
 }
-
-
-
