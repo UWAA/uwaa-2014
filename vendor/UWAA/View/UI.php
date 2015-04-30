@@ -25,6 +25,7 @@ class UI
         new Shortcodes\Button;
         new Shortcodes\RegionalFacts;
         new Shortcodes\Accordions;
+        new Shortcodes\OdysseySignupButton;
     }
 
     public static function getPostFeaturedImageURL($id, $size)
