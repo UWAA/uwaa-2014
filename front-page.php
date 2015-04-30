@@ -69,8 +69,8 @@ endif;
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
-            the_content();
-         
+            the_content();          
+          
 
           endwhile;
 

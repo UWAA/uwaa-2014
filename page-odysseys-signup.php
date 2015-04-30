@@ -1,6 +1,17 @@
 <?php
+
+//TODO -refactor Do we want this logic here? 
 $tourName = esc_js($_GET['tourName']);
 $tourURL = esc_js($_GET['tourURL']);
+$tourDeparture = esc_js($_GET['tourDepartureDate']);
+
+$rawDate = str_split($tourDeparture, 4);
+$rawDayAndYear = str_split($rawDate['1'] , 2);
+
+$tourDepartureDay = esc_js($rawDayAndYear['0']);
+$tourDepartureMonth = esc_js($rawDayAndYear['1']);
+$tourDepartureYear = $rawDate['0'];
+
 get_header();
 
 ?>
@@ -35,7 +46,7 @@ var s = d.createElement(t), options = {
 'ssl':true,
 
 //Prepopulate Tour Name
-'defaultValues' : 'Field1=<?php echo $tourName; ?>&Field431=<?php echo $tourURL; ?>'
+'defaultValues' : 'Field1=<?php echo $tourName; ?>&Field431=<?php echo $tourURL; ?>&Field3-1=<?php echo $tourDepartureDay; ?>&Field3-2=<?php echo $tourDepartureMonth; ?>&Field3=<?php echo $tourDepartureYear; ?>'
 
 
 
