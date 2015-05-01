@@ -30,6 +30,8 @@ get_header();
      <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
       <div class="uw-body-copy"> 
+
+      <h1><?php the_title() ?></h1>
         
         <div id="wufoo-ze6o0mb04ys2e8">
 Fill out my <a href="https://uwalum.wufoo.com/forms/ze6o0mb04ys2e8">online form</a>.
