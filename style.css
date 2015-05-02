@@ -3274,20 +3274,35 @@ a#memberCheckerLogout {
 .uwaa-form div {
   position: relative;
 }
-.uwaa-form input {
+.uwaa-form .desc {
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: .68em;
+  font-size: 1em;
+}
+.uwaa-form .radio-label {
+  display: block;
+  visibility: visible;
+  position: relative;
+}
+.uwaa-form input,
+.uwaa-form select {
   width: 100%;
   height: 44px;
   margin-top: 10px;
   padding-left: 15px;
   border: 1px solid #aaaaaa;
 }
-.uwaa-form input.half-column {
+.uwaa-form input.half-column,
+.uwaa-form select.half-column {
   width: 48%;
 }
-.uwaa-form input.half-column:first-child {
+.uwaa-form input.half-column.left,
+.uwaa-form select.half-column.left {
   margin-right: 6.5px;
 }
-.uwaa-form input.inlineSubmit {
+.uwaa-form input.inlineSubmit,
+.uwaa-form select.inlineSubmit {
   border: none;
   display: block;
   position: absolute;
@@ -3299,15 +3314,29 @@ a#memberCheckerLogout {
   overflow: hidden;
   background: url(assets/uwaa-sprite.svg) no-repeat -42px -479px #4b2e83;
 }
-.uwaa-form input:focus {
+.uwaa-form input:focus,
+.uwaa-form select:focus {
   outline: none !important;
   background-color: #f1eee4;
 }
-.uwaa-form input:focus:invalid {
+.uwaa-form input:focus:invalid,
+.uwaa-form select:focus:invalid {
   border: 1px solid red;
 }
-.uwaa-form input:focus:valid {
+.uwaa-form input:focus:valid,
+.uwaa-form select:focus:valid {
   border: 1px solid green;
+}
+.uwaa-form input.radio,
+.uwaa-form select.radio {
+  width: auto;
+  height: auto;
+  margin-top: auto;
+  padding-left: 0;
+}
+.uwaa-form input option:disabled,
+.uwaa-form select option:disabled {
+  color: red;
 }
 #form-message {
   color: red;
