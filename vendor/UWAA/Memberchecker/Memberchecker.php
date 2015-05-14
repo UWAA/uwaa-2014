@@ -147,16 +147,6 @@ $callSuccess = $result->Success;
 $callError = $result->ErrorMessage;
 $member = $result->ReturnedMember; 
 
-// if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even needed if the call is already made?
-//     $payload = array (
-//         'error' => 'TRUE',
-//         'message' =>'Please check your information and try again'
-//     );
-//     echo json_encode($payload);
-//     exit;
-
-// } else
-
 if ($callSuccess === FALSE) {
     $payload = array (
         'error' => 'TRUE',
