@@ -147,15 +147,17 @@ $callSuccess = $result->Success;
 $callError = $result->ErrorMessage;
 $member = $result->ReturnedMember; 
 
-if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even needed if the call is already made?
-    $payload = array (
-        'error' => 'TRUE',
-        'message' =>'Please check your information and try again'
-    );
-    echo json_encode($payload);
-    exit;
+// if ($lastName != ucfirst(strtolower($member->MemberLName))) {  //is this even needed if the call is already made?
+//     $payload = array (
+//         'error' => 'TRUE',
+//         'message' =>'Please check your information and try again'
+//     );
+//     echo json_encode($payload);
+//     exit;
 
-} elseif ($callSuccess === FALSE) {
+// } else
+
+if ($callSuccess === FALSE) {
     $payload = array (
         'error' => 'TRUE',
         'message' =>'There is a problem with our Member Login service.  Please contact the UWAA For assistance'
