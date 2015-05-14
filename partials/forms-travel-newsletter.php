@@ -1,7 +1,8 @@
 <div id="tours-signup" class="widget">
 <h2 class="widgettitle">Sign up for Travel Updates</h2>
-<form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate
-      action="https://uwalum.wufoo.com/forms/q1vws8101tef77m/#public">
+<!-- <form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate action="https://uwalum.wufoo.com/forms/q1vws8101tef77m/#public"> Production -->
+<form id="form13" name="form13" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate action="https://uwalum.wufoo.com/forms/z1adplro16m49gy/#public">
+
 
  
 <input id="Field2" name="Field2" type="text" class="field text left half-column" placeholder="First" value="" size="8" tabindex="1" required/>
@@ -26,19 +27,19 @@ How would you like to get updates from UW Alumni tours?
 <span>
 
 <label class="radio radio-label" for="Field8_0" >
-<input id="Field8_0" name="Field8" type="radio" class="radio" data-toggle="radio" value="E-News" tabindex="3" checked  />
+<input id="Field8_0" name="Field8" type="radio" class="radio tours-form-enews" data-toggle="radio" value="E-News" tabindex="3" checked  />
 E-News</label>
 </span>
 <span>
 
 <label class="radio radio-label" for="Field8_1" >
-<input id="Field8_1" name="Field8" type="radio" class="radio" data-toggle="radio" value="Print Catalog" tabindex="4"     />
+<input id="Field8_1" name="Field8" type="radio" class="radio tours-form-print" data-toggle="radio" value="Print Catalog" tabindex="4"     />
 Print Catalog</label>
 </span>
 </div>
 </fieldset>
 
-<div class="address-block">
+<div class="address-block tours-address-fields">
 <label class="desc" id="title9" for="Field9">
 Address
 </label>
@@ -283,15 +284,19 @@ Address
 <label class="screen-reader-text" for="Field14">Country</label>
 
 </div>
+
+
+
+
 </div>
 
 
 
-<div>
+<div class="tours-enews-fields">
 <label class="screen-reader-text" for="Field1">E-Mail</label>
 <input id="Field1" placeholder="E-mail" name="Field1" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required/>
-<input id="saveForm" name="saveForm" class="inlineSubmit" type="submit" value="Submit" />
- </div>
+<!-- <input id="saveForm" name="saveForm" class="inlineSubmit" type="submit" value="Submit" /> -->
+</div>
 
 <ul>
 <li class="hide">
@@ -309,10 +314,13 @@ Title of Tour Being Viewed
         Do Not Fill This Out
     </label>
 <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-<input type="hidden" id="idstamp" name="idstamp" value="jY5QxUwXh+yRvWD2B3vyJT7WN5w5N90yj/KwMm9RJ/w=" /> 
+<!-- <input type="hidden" id="idstamp" name="idstamp" value="jY5QxUwXh+yRvWD2B3vyJT7WN5w5N90yj/KwMm9RJ/w=" />  production -->
+<input type="hidden" id="idstamp" name="idstamp" value="zComjpY8SuoAprOobz2YBlWQMEi5tqOXc08m1dk4gnk=">
 
 </li>
 </ul>
+
+<div class="uwaa-btn-wrapper submit-button"><a class="uwaa-btn btn-slant-right btn-purple">Submit</a></div>
 </form>
 
 </div>
