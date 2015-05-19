@@ -3281,7 +3281,8 @@ a#memberCheckerLogout {
   font-size: .93em;
   padding-top: 12px;
 }
-.uwaa-form .radio-label {
+.uwaa-form .radio-label,
+.uwaa-form .checkbox-label {
   display: block;
   visibility: visible;
   position: relative;

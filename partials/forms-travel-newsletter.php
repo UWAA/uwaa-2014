@@ -26,14 +26,14 @@ How would you like to get updates from UW Alumni tours?
 <input id="radioDefault_8" name="Field8" type="hidden" value="" />
 <span>
 
-<label class="radio radio-label" for="Field8_0" >
-<input id="Field8_0" name="Field8" type="radio" class="radio tours-form-enews" data-toggle="radio" value="E-News" tabindex="3" checked  />
+<label class="checkbox checkbox-label" for="Field8_0" >
+<input id="Field8_0" name="Field8" type="checkbox" class="checkbox tours-form-enews" data-toggle="checkbox" value="E-News" tabindex="3" checked  />
 E-News</label>
 </span>
 <span>
 
-<label class="radio radio-label" for="Field8_1" >
-<input id="Field8_1" name="Field8" type="radio" class="radio tours-form-print" data-toggle="radio" value="Print Catalog" tabindex="4"     />
+<label class="checkbox checkbox-label" for="Field8_1" >
+<input id="Field8_1" name="Field8" type="checkbox" class="checkbox tours-form-print" data-toggle="checkbox" value="Print Catalog" tabindex="4"     />
 Print Catalog</label>
 </span>
 </div>
