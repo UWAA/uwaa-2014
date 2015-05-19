@@ -22,8 +22,7 @@ if (!empty($promoText)) {
             ))));
                 } 
                 else{
-                    // echo "Log in or <a href=\" " . get_site_url() . "/membership/join-or-renew/?join\">join the UWAA</a>";
-                    echo "UWAA members, please contact UWAA at 206-543-0540 for benefit information.";
+                    echo "Log in or <a href=\" " . get_site_url() . "/membership/join-or-renew/?join\">join the UWAA</a>";
                 }
 }
 ?>

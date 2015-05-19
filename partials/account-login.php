@@ -37,7 +37,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                 </fieldset>
             </form>
 
-            <div id="form-message">We are experiencing technical difficulties with our member login service.  Please contact us if you have questions pertaining to your membership.  We are sorry for the inconvenience.</div>
+            <div id="form-message"></div>
 
             <!-- <div class="accordion">
                 <div class="panel closed">
