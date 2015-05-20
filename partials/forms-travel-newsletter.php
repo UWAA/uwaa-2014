@@ -11,30 +11,28 @@
 <label class="screen-reader-text" for="Field3">Last Name</label>
 <input id="Field3" name="Field3" type="text" class="field text half-column" placeholder="Last" value="" size="14" tabindex="2" required />
 
+
 <fieldset>
 <![if !IE | (gte IE 8)]>
-<legend id="title8" class="desc">
+<legend id="title17" class="desc">
 How would you like to get updates from UW Alumni tours?
 </legend>
 <![endif]>
 <!--[if lt IE 8]>
-<label id="title8" class="desc">
+<label id="title17" class="desc">
 How would you like to get updates from UW Alumni tours?
 </label>
 <![endif]-->
 <div>
-<input id="radioDefault_8" name="Field8" type="hidden" value="" />
 <span>
-
-<label class="checkbox checkbox-label" for="Field8_0" >
-<input id="Field8_0" name="Field8" type="checkbox" class="checkbox tours-form-enews" data-toggle="checkbox" value="E-News" tabindex="3" checked  />
-E-News</label>
+<label class="checkbox checkbox-label" for="Field17">E-News
+<input id="Field17" name="Field17" type="checkbox" class="checkbox tours-form-enews" value="E-News" data-toggle="checkbox" tabindex="3"     />
+</label>
 </span>
 <span>
-
-<label class="checkbox checkbox-label" for="Field8_1" >
-<input id="Field8_1" name="Field8" type="checkbox" class="checkbox tours-form-print" data-toggle="checkbox" value="Print Catalog" tabindex="4"     />
-Print Catalog</label>
+<label class="checkbox checkbox-label" for="Field18">Print Catalog
+<input id="Field18" name="Field18" type="checkbox" class="checkbox tours-form-print" value="Print Catalog" data-toggle="checkbox" tabindex="4"     />
+</label>
 </span>
 </div>
 </fieldset>

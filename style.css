@@ -3100,7 +3100,8 @@ a#memberCheckerLogout {
   }
 }
 .page-membership .uw-sidebar-menu,
-.page-template-membership-page .uw-sidebar-menu {
+.page-template-membership-page .uw-sidebar-menu,
+.page-member-account .uw-sidebar-menu {
   margin-top: 0;
 }
 #membership-option-table {
