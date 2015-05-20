@@ -1,8 +1,3 @@
-<?php
-wp_enqueue_script('memberChecker');       
-wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => apply_filters('remove_cms', admin_url( 'admin-ajax.php' ) ) ) );
-?>
-
 
         <?php
         if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == false) {
