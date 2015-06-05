@@ -37,7 +37,7 @@ class OdysseySignupButton
             }
         }
 
-        $url = get_bloginfo('url') . '/travel/odysseys-signup?tourName=' . get_the_title() . '&tourURL=' . get_permalink() . '&tourDepartureDate=' . get_post_meta(get_the_id(), 'mb_start_date', true); ;
+        $url = esc_url(get_bloginfo('url') . '/travel/odysseys-signup?tourName=' . get_the_title() . '&tourURL=' . get_permalink() . '&tourDepartureDate=' . get_post_meta(get_the_id(), 'mb_start_date', true));
 
         if (property_exists($attributes, 'small')){
             array_push($classes, 'btn-sm');

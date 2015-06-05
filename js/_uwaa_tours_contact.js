@@ -1,22 +1,36 @@
 (function($) {
 
-    $('.tours-form-print').click(function() {
-        if($('.tours-form-print').is(':checked')) {
-            $('.tours-address-fields').show();
+    var $addressCheckBox = $('.tours-form-print');
+    var $enewsCheckBox = $('.tours-form-enews');
+    var $addressFields = $('.tours-address-fields');
+    var $emailField = $('.tours-email-field');
+    var $submitButton = $('#tours-signup .submit-button');
+
+    $addressCheckBox.click(function() {
+        if($addressCheckBox.is(':checked')) {
+            $addressFields.show();
+            $submitButton.css('display', 'inline-block');
         } else {
-            $('.tours-address-fields').hide();
+            if($enewsCheckBox.prop('checked') === false) {
+                $submitButton.hide();
+            }
+            $addressFields.hide();
         }
     });
 
-    $('.tours-form-enews').click(function() {
-        if($('.tours-form-enews').is(':checked')) {            
-            $('.tours-enews-fields').show();
+    $enewsCheckBox.click(function() {
+        if($enewsCheckBox.is(':checked')) {            
+            $emailField.show();
+            $submitButton.css('display', 'inline-block');        
         } else {
-            $('.tours-enews-fields').hide();
+            if($addressCheckBox.prop('checked') === false) {
+                $submitButton.hide();
+            }
+            $emailField.hide();
         }
     });
 
-    $('#tours-signup .submit-button').click(function() {
+    $submitButton.click(function() {
         $('#form13').submit();
     });
 

@@ -3288,7 +3288,9 @@ a#memberCheckerLogout {
   visibility: visible;
   position: relative;
 }
-.uwaa-form .tours-address-fields {
+.uwaa-form .tours-address-fields,
+.uwaa-form .tours-email-field,
+.uwaa-form .tours-newsletter-submit {
   display: none;
 }
 .uwaa-form input,

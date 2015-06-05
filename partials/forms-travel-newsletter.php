@@ -290,7 +290,7 @@ Address
 
 
 
-<div class="tours-enews-fields">
+<div class="tours-email-field">
 <label class="screen-reader-text" for="Field1">E-Mail</label>
 <input id="Field1" placeholder="E-mail" name="Field1" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required/>
 <!-- <input id="saveForm" name="saveForm" class="inlineSubmit" type="submit" value="Submit" /> -->
@@ -318,7 +318,7 @@ Title of Tour Being Viewed
 </li>
 </ul>
 
-<div class="uwaa-btn-wrapper submit-button"><a class="uwaa-btn btn-slant-right btn-purple">Submit</a></div>
+<div class="uwaa-btn-wrapper submit-button tours-newsletter-submit"><a class="uwaa-btn btn-slant-right btn-purple">Submit</a></div>
 </form>
 
 </div>
