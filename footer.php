@@ -2,10 +2,10 @@
         <div id="uwaa-footer" class="uw-footer">
             <nav role="navigation" aria-label="uwaa social networking" class="social-icons">
                 <ul class="uwaa-social">
-                    <li><a href="https://www.facebook.com/UWalum" target="_blank" class=" facebook"></a></li>
-                    <li><a href="https://www.twitter.com/UWalum" target="_blank" class=" twitter"></a></li>
-                    <li><a href="http://instagram.com/uwalum" class="instagram"></a></li>
-                    <li><a href="https://www.linkedin.com/groups?gid=40422" target="_blank" class=" linkedin"></a></li>
+                    <li><a href="https://www.facebook.com/UWalum" class="facebook"><span class="offscreen">UW Alumni Facebook</span></a></li>
+                    <li><a href="https://www.twitter.com/UWalum" class="twitter"><span class="offscreen">UW Alumni Twitter</span></a></li>
+                    <li><a href="http://instagram.com/uwalum" class="instagram"><span class="offscreen">UW Alumni Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/groups?gid=40422" class="linkedin"><span class="offscreen">UW Alumni LinkedIn</span></a></li>
                 </ul>
             </nav>
             <nav role="navigation" aria-label="about uwaa and join" class="contact-links">

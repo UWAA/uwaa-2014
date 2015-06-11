@@ -2398,6 +2398,7 @@ div.map-logo.wenatchee {
   padding-left: 7px;
   text-transform: none;
   color: #ffffff;
+  text-decoration: underline;
   transition: 0.25s;
 }
 #uwaa-footer .contact-links a:hover,
