@@ -91,6 +91,7 @@ public function buildTemplate() {
 
 $callout = $this->renderCallout();
 $image = $this->renderImage();
+$date = $this->renderDate();
 
 $template = <<<TEMPLATE
 <div class="featured-post four-column">
@@ -102,7 +103,7 @@ $template = <<<TEMPLATE
   <div class="copy">
  <h6 class="subtitle">{$this->postSubtitle}</h6>
  <h4 class="title">{$this->postTitle}</h4> 
- <h4 class="date">{$this->postDate}</h4>
+ $date
  <p class="excerpt">{$this->postExcerpt}</p>
  </div>
  </a>

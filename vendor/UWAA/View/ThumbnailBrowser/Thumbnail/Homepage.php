@@ -76,7 +76,8 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');    
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
-        $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));        
+        $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
+        $this->alternateLink = get_post_meta(get_the_ID(), 'mb_alternate_link', true);
         
         echo $this->buildTemplate();
 
@@ -99,6 +100,7 @@ public function buildTemplate() {
 
 $callout = $this->renderCallout();
 $image = $this->renderImage();
+$date = $this->renderDate();
 $template = <<<TEMPLATE
 <div class="featured-post five-column">
 <a href="{$this->postURL}">
@@ -109,7 +111,7 @@ $template = <<<TEMPLATE
   <div class="copy">
  <h6 class="subtitle">{$this->postSubtitle}</h6>
  <h4 class="title">{$this->postTitle}</h4> 
- <h4 class="date">{$this->postDate}</h4>
+  $date
  <p class="excerpt">{$this->postExcerpt}</p>
  </div>
  </a>

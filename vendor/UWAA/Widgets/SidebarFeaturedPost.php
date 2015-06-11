@@ -74,7 +74,7 @@ class SidebarFeaturedPost extends \WP_Widget
 
     switch($postType) {
       
-      case 'tours':
+      case 'travel':
         return 'travel-section-sidebar';
         break;
       
