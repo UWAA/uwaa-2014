@@ -19,17 +19,22 @@ Isotope = Backbone.View.extend({
     });
 
     var isotopeQueryFilter = this.getURLParameterByName('filterPostTiles');
+    var filterValue = '.' + isotopeQueryFilter.toLowerCase();
+
+    if (isotopeQueryFilter != '') {
+      var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');
+      console.log(buttonToToggleFromParam);
+      this.toggleButtonClass(buttonToToggleFromParam);
+    }
+
     
     
     $canvas.imagesLoaded(function() {
     if (isotopeQueryFilter != '') {      
-      
-
-      var filterValue = '.' + isotopeQueryFilter.toLowerCase();
       console.log(filterValue);
-      $canvas.isotope('layout');
-      $canvas.isotope({filter: filterValue});         
-      
+      $canvas.isotope('layout');      
+      $canvas.isotope({filter: filterValue});
+
     } else {
       $canvas.isotope('layout');
     }
@@ -49,6 +54,7 @@ Isotope = Backbone.View.extend({
   },
 
   toggleButtonClass: function(target) {
+    console.log(target);
     target.siblings().removeClass('is-checked');
     target.addClass('is-checked');
   },
