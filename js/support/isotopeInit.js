@@ -18,7 +18,7 @@ Isotope = Backbone.View.extend({
       layoutMode: 'fitRows'
     });
 
-    var isotopeQueryFilter = this.getURLParameterByName('filterTiles');
+    var isotopeQueryFilter = this.getURLParameterByName('filter');
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
     var ButtonToggle = this.toggleButtonClass;
     
