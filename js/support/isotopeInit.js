@@ -20,20 +20,17 @@ Isotope = Backbone.View.extend({
 
     var isotopeQueryFilter = this.getURLParameterByName('filterPostTiles');
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
-
-    if (isotopeQueryFilter != '') {
-      var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');
-      console.log(buttonToToggleFromParam);
-      this.toggleButtonClass(buttonToToggleFromParam);
-    }
-
+    var ButtonToggle = this.toggleButtonClass;
     
     
     $canvas.imagesLoaded(function() {
-    if (isotopeQueryFilter != '') {      
-      console.log(filterValue);
+    if (isotopeQueryFilter != '') {            
       $canvas.isotope('layout');      
       $canvas.isotope({filter: filterValue});
+      
+      var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');
+      buttonToToggleFromParam.siblings().removeClass('is-checked');
+      buttonToToggleFromParam.addClass('is-checked');
 
     } else {
       $canvas.isotope('layout');
@@ -53,8 +50,7 @@ Isotope = Backbone.View.extend({
     this.toggleButtonClass($target);
   },
 
-  toggleButtonClass: function(target) {
-    console.log(target);
+  toggleButtonClass: function(target) {    
     target.siblings().removeClass('is-checked');
     target.addClass('is-checked');
   },
