@@ -18,16 +18,32 @@ Isotope = Backbone.View.extend({
       layoutMode: 'fitRows'
     });
 
+    var isotopeQueryFilter = this.getURLParameterByName('filterPostTiles');
+    
+    
     $canvas.imagesLoaded(function() {
+    if (isotopeQueryFilter != '') {      
+      
+
+      var filterValue = '.' + isotopeQueryFilter.toLowerCase();
+      console.log(filterValue);
       $canvas.isotope('layout');
+      $canvas.isotope({filter: filterValue});         
+      
+    } else {
+      $canvas.isotope('layout');
+    }
+
     })
+
+    
   },
 
 
   filterByButton: function(e) {
     var $target = $(e.target);
     this.$('#quicksearch').val('');
-    var filterValue = $target.attr('data-filter'); 
+    var filterValue = $target.attr('data-filter');     
     this.$('.isotope').isotope({filter: filterValue});    
     this.toggleButtonClass($target);
   },
@@ -85,6 +101,13 @@ Isotope = Backbone.View.extend({
     this.toggleParentButtonClass($listButton);
 
 
+  },
+
+  getURLParameterByName: function(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 
 
