@@ -53,7 +53,7 @@ class RSSFeed
             {
                 
                 $element = str_replace('mb_', '', $field);
-                echo "<{$element}>{$value}</{$element}>\n";
+                echo "<{$element}><![CDATA[{$value}]]></{$element}>\n";
                 
             }
         }
