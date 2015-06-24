@@ -21,12 +21,22 @@ class RSSFeed
                 )
             );
 
+        $this->eventFields = array(
+            'fields' => array(
+                'mb_start_date',
+                'mb_event_time',
+                'mb_event_location'
+                ),
+            'hasTaxonomy' => false,            
+            );
+
         add_action('rss2_item', array($this, 'addFeedAugmentations'));
     
     }
 
     public function addFeedAugmentations() {        
         $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName']);
+        $this->augmentFeed('events', $this->eventFields['fields']);
     }
 
     private function augmentFeed($postType, $metaValues, $hasTaxonomy = false, $taxonomyName = null)
