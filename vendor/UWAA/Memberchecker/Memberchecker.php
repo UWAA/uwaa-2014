@@ -150,7 +150,7 @@ $member = $result->ReturnedMember;
 if ($callSuccess === FALSE) {
     $payload = array (
         'error' => 'TRUE',
-        'message' =>'There is a problem with our Member Login service.  Please contact the UWAA For assistance'
+        'message' =>'Hmmm. There seems to be something wrong. Why don&rsquo;t you try again or call us and we’ll help you get it straightened out – 1-800-289-2586'
     );
     echo json_encode($payload);
     exit;   //refine error handling further...TODO - Need feedback system on page.
