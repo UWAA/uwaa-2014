@@ -47,6 +47,7 @@ class UWAA
         new \UWAA\Taxonomies\ContentPromotion;
         new \UWAA\Taxonomies\Events;
         new \UWAA\Taxonomies\Benefits;
+        new \UWAA\Taxonomies\AppRegionalTag;
         
         //Relabels Tags
         new \UWAA\Taxonomies\RenameTags;

@@ -17,7 +17,8 @@ class RSSFeed
                 ),
             'hasTaxonomy' => true,
             'taxonomyName' => array(
-                'benefits'          
+                'benefits',
+                'app_geotag'          
                 )
             );
 
