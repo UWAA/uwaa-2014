@@ -17,9 +17,9 @@ class RSSFeed
                 ),
             'hasTaxonomy' => true,
             'taxonomyName' => array(
-                'benefits',
-                'app_geotag'          
-                )
+                'benefits'                          
+                ),
+            'geotag' => true
             );
 
         $this->eventFields = array(
@@ -28,19 +28,26 @@ class RSSFeed
                 'mb_event_time',
                 'mb_event_location'
                 ),
-            'hasTaxonomy' => false,            
+            'hasTaxonomy' => false,
+            'geotag' => true            
             );
 
         add_action('rss2_item', array($this, 'addFeedAugmentations'));
+        add_action('rss2_ns', array($this, 'addUWAANamespaceTFeed'));
     
     }
 
     public function addFeedAugmentations() {        
-        $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName']);
+        $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['geotag']);
         $this->augmentFeed('events', $this->eventFields['fields']);
     }
 
-    private function augmentFeed($postType, $metaValues, $hasTaxonomy = false, $taxonomyName = null)
+    public function addUWAANamespaceTFeed()
+    {
+        echo "xmlns:uwaaapp=\"http://depts.washington.edu/alumni/appfeed/namespace/\"\n";
+    }
+
+    private function augmentFeed($postType, $metaValues, $hasTaxonomy = false, $taxonomyName = null, $geotag = false)
     {        
         if ($this->isPostType($postType) == true)
         {            
@@ -49,6 +56,10 @@ class RSSFeed
 
         if ($hasTaxonomy == true) {
             $this->addTaxonomyValuesToFeed($taxonomyName);
+        }
+
+        if ($geotag == true) {
+            $this->addGeoTagsToFeed();
         }
         return;
     }
@@ -92,6 +103,22 @@ class RSSFeed
         }
 
     }
+
+    private function addGeoTagsToFeed() {
+
+        
+            $terms = get_the_terms(get_the_id(), 'app_geotag');
+
+            if(is_array($terms)) {
+                foreach ($terms as $term) {
+                    echo "<uwaa:geotag><![CDATA[{$term->name}]]></uwaa:geotag>\n";    
+                }
+            }
+    }
+
+    
+
+
 
 
 
