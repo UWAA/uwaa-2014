@@ -2,7 +2,7 @@
             <div class="chapter-logo">
                 <?php                
 
-                    $communitySlug = new \UWAA\View\GetCommunitySlug($post);
+                    $communitySlug = new \UWAA\View\GetCommunitySlug($post, $UWAA->regionalTags);
                     $finalSlug = $communitySlug->isCommunitiesContent();
                     $logo = new \UWAA\View\ChapterHeaderLogo($finalSlug); 
                     // $logo = new \UWAA\View\ChapterHeaderLogo(); 

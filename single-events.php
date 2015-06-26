@@ -18,8 +18,8 @@ if ($isPartnerEvent) {
 
 
  <?php
-
-$communitySlug = new \UWAA\View\GetCommunitySlug($post);
+$regionalTagList = $UWAA->RegionalTags->getRegionalTags();
+$communitySlug = new \UWAA\View\GetCommunitySlug($post, $regionalTagList);
 $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
 $finalSlug = $communitySlug->isCommunitiesContent();
  // if you have a featured image, put it in

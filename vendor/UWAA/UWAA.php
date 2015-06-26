@@ -13,6 +13,7 @@ class UWAA
     public $SidebarMenuWalker;
     public $Memberchecker;
     public $Utilities;
+    public $RegionalTags;
     public $session;    
 
     function __construct($wp)
@@ -29,7 +30,9 @@ class UWAA
         $this->UI = new \UWAA\View\UI;
         $this->SidebarMenuWalker = new \UWAA\SidebarMenuWalker;        
         $this->Memberchecker = new \UWAA\Memberchecker\Memberchecker;
-        $this->Utilities = new \UWAA\Utilities;        
+        $this->Utilities = new \UWAA\Utilities;
+        $this->RegionalTags = new \UWAA\RegionalTags;       
+
 
 
         //Scripts needed on all pages of the theme, and registrations for ad-hoc scripts.
@@ -37,7 +40,7 @@ class UWAA
         new \UWAA\Scripts;  //Loads UWAA child-theme specific scripts
         new \UWAA\Styles;
         new \UWAA\Sidebars;
-        new \UWAA\Images;
+        new \UWAA\Images;  
 
 
         //Custom Taxonomies

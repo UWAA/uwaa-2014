@@ -19,7 +19,7 @@ class RSSFeed
             'taxonomyName' => array(
                 'benefits'                          
                 ),
-            'geotag' => true
+            'hasGeotag' => true
             );
 
         $this->eventFields = array(
@@ -29,7 +29,7 @@ class RSSFeed
                 'mb_event_location'
                 ),
             'hasTaxonomy' => false,
-            'geotag' => true            
+            'hasGeotag' => true            
             );
 
         add_action('rss2_item', array($this, 'addFeedAugmentations'));
@@ -38,13 +38,13 @@ class RSSFeed
     }
 
     public function addFeedAugmentations() {        
-        $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['geotag']);
-        $this->augmentFeed('events', $this->eventFields['fields']);
+        $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
+        $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], $this->eventFields['taxonomyName'], $this->eventFields['hasGeotag'] );
     }
 
     public function addUWAANamespaceTFeed()
     {
-        echo "xmlns:uwaaapp=\"http://depts.washington.edu/alumni/appfeed/namespace/\"\n";
+        echo "xmlns:uwaa_app=\"http://depts.washington.edu/alumni/appfeed/namespace/\"\n";
     }
 
     private function augmentFeed($postType, $metaValues, $hasTaxonomy = false, $taxonomyName = null, $geotag = false)
@@ -85,7 +85,7 @@ class RSSFeed
             {
                 
                 $element = str_replace('mb_', '', $field);
-                echo "<{$element}><![CDATA[{$value}]]></{$element}>\n";
+                echo "<uwaa_app:{$element}><![CDATA[{$value}]]></uwaa_app:{$element}>\n";
                 
             }
         }
@@ -111,7 +111,7 @@ class RSSFeed
 
             if(is_array($terms)) {
                 foreach ($terms as $term) {
-                    echo "<uwaa:geotag><![CDATA[{$term->name}]]></uwaa:geotag>\n";    
+                    echo "<uwaa_app:geotag><![CDATA[{$term->name}]]></uwaa_app:geotag>\n";    
                 }
             }
     }

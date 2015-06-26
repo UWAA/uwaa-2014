@@ -8,11 +8,11 @@ $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($pos
 if (has_category('Tall Regional Branding')) {
   echo '<div class="uwaa-chapter-header profile">';
   //TODO rename the profile class so the LESS matches the category
-  get_template_part('partials/profile-header');
+  include(locate_template('partials/profile-header.php'));
   echo '</div>';
 } elseif (has_category('Short Regional Branding')) {
   echo '<div class="uwaa-chapter-header">';
-  get_template_part('partials/chapter-header');
+  include(locate_template('partials/chapter-header.php'));
   echo '</div>';
 }
  elseif ($featureImage) {

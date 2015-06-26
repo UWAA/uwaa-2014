@@ -1,6 +1,7 @@
 <?php namespace UWAA\View;
 
 
+
 class GetCommunitySlug {
 
     private $postName;
@@ -9,11 +10,12 @@ class GetCommunitySlug {
 
 
 
-     function __construct($post) 
+     function __construct($post, $regionalTags) 
     {
         $this->postName = $post->post_name;
         $this->postID = $post->ID;
-        $this->getChapterSlugs();
+        $this->chapterSlugs = $regionalTags;
+
         
     }
 
@@ -41,63 +43,7 @@ class GetCommunitySlug {
         $chapter = get_page_by_path($slugOfChapter, OBJECT, 'chapters' ); 
         $image = $UI->getPostFeaturedImageURL(get_post_thumbnail_id($chapter->ID), 'original');
         echo $image;
-    }
-
-
-
-    private function getChapterSlugs()
-    {
-        $this->chapterSlugs = array (
-            'new-york-city',
-            'southern-california',
-            'anchorage',
-            'albany',
-            'anchorage',
-            'atlanta',
-            'austin',
-            'northern-california',
-            'bellingham',
-            'boise',
-            'boston',
-            'chicago',
-            'china',
-            'dallas-ft-worth',
-            'denver',
-            'ft-lauderdale',
-            'hong-kong',
-            'honolulu',
-            'houston',
-            'indianapolis',
-            'indonesia',
-            'japan',
-            'kailua-kona',
-            'korea',
-            'las-vegas',
-            'north-carolina',
-            'omaha',
-            'orange-county',
-            'palm-springs',
-            'philadelphia',
-            'phoenix',
-            'oregon',
-            'reno',
-            'sacramento',
-            'san-antonio-south-texas',
-            'san-diego',
-            'singapore',
-            'south-carolina',
-            'spokane',
-            'st-louis',
-            'sun-valley',
-            'taiwan',
-            'thailand',
-            'tri-cities',
-            'tucson',
-            'washington-dc',
-            'wenatchee',
-            );
-    }
-
+    }   
 
 
 }

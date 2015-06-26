@@ -12,11 +12,10 @@ if ($isMajorMarket == 'notMajorMarket') {
 
 get_header();
 
-
 ?>
 
 <div class="uwaa-chapter-header">
-<?php get_template_part('partials/chapter-header') ?>
+<?php include(locate_template('partials/chapter-header.php')) ?>
 </div>
 
 <div class="container uw-body">
