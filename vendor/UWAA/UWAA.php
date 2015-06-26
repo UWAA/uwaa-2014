@@ -70,7 +70,7 @@ class UWAA
 
         //API
         new \UWAA\API\RequestHandler($this->wp, $this->Memberchecker);  //Sets up the UWAA API for specialized feeds
-        new \UWAA\API\RSSFeed; // Customized RSS Feeds 
+        new \UWAA\API\RSSFeed($this->RegionalTags, $this->UI); // Customized RSS Feeds 
 
         //Widgets
         new \UWAA\Widgets\SidebarFeaturedPost;
