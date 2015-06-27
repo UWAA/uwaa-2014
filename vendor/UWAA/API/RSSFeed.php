@@ -6,7 +6,7 @@ class RSSFeed
 
     private $eventFields;
     private $benefitFields;
-    private $newsFields;
+    private $newsFields;    
     private $regionalTagList;
     private $UI;
 
@@ -19,26 +19,36 @@ class RSSFeed
 
         $this->benefitFields = array(
             'fields' => array(
-                'mb_benefit_promotion'
-                ),
+                'mb_benefit_promotion',                
+            ),
             'hasTaxonomy' => true,
             'taxonomyName' => array(
                 'benefits'                          
-                ),
+            ),
             'hasGeotag' => true
-            );
+        );
 
         $this->eventFields = array(
             'fields' => array(
                 'mb_start_date',
                 'mb_event_time',
-                'mb_event_location'
+                'mb_event_location',
+                'mb_80_character_excerpt'
                 ),
             'hasTaxonomy' => false,
             'hasGeotag' => true            
-            );
+        );
 
-        // add_action('rss2_item', array($this, 'addFeedAugmentations'));
+        $this->newsFields = array(
+            'fields' => array(
+                'mb_thumbnail_subtitle',  //Known as a content head.
+                'mb_80_character_excerpt'
+                ),
+            'hasTaxonomy' => false,
+            'hasGeotag' => false            
+        );
+
+        add_action('rss2_item', array($this, 'addFeedAugmentations'));
         add_action('rss2_item', array($this, 'addFeaturedPostThumbnailToFeed'));
         add_action('rss2_ns', array($this, 'addUWAANamespaceToFeed'));
     
@@ -47,6 +57,7 @@ class RSSFeed
     public function addFeedAugmentations() {        
         $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
         $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], null , $this->eventFields['hasGeotag'] );
+        $this->augmentFeed('post', $this->newsFields['fields']);
     }
 
     public function addUWAANamespaceToFeed()
@@ -57,9 +68,8 @@ class RSSFeed
     private function augmentFeed($postType, $metaValues, $hasTaxonomy = false, $taxonomyName = null, $hasGeotag = false)
     {        
 
-        
-
-        if ($this->isPostType($postType) == true)
+        $postType = $this->isPostType($postType);        
+        if ($postType == true)
         {            
             $this->addMetaValuesToFeed($metaValues);
                
@@ -96,12 +106,11 @@ class RSSFeed
     }
 
     private function isPostType($postType) {
-
         
-
-        if (get_post_type() == $postType) {            
+        // echo "This is" . "$postType";  Wierd...
+        if (get_post_type(get_the_id()) == $postType) {                        
             
-            return true;
+            return TRUE;
         }
 
         return false;
@@ -109,14 +118,20 @@ class RSSFeed
 
 
     private function addMetaValuesToFeed($metaValues) {
-        foreach($metaValues as $field) 
+        
+        foreach($metaValues as $value) 
         {
             
-            if ($value = get_post_meta(get_the_id() , $field,true))
+            if ($content = get_post_meta(get_the_id() , $value, true))
             {
                 
-                $element = str_replace('mb_', '', $field);
-                echo "<uwaa_app:{$element}><![CDATA[{$value}]]></uwaa_app:{$element}>\n";
+                $element = htmlspecialchars(trim(str_replace('mb_', ' ', $value)));
+
+                if ($element == '80_character_excerpt') {
+                    $element = 'excerpt';
+                }
+                
+                echo "<uwaa_app:{$element}><![CDATA[{$content}]]></uwaa_app:{$element}>\n";
                 
             }
         }
@@ -142,9 +157,10 @@ class RSSFeed
 
         if(!in_array($geoTags[0]->slug, $this->regionalTagList)){
             $this->addDefaultRegionalThumbnail();   
+            return;
         }
 
-        if(is_array($geoTags) && count($geoTags === 1)) {                              
+        if(is_array($geoTags) && count($geoTags == 1)) {                              
             $imageURL = "http://depts.washington.edu/alumni/appfeed/images/regionallogos/" . $geoTags[0]->slug . "-app-thumbnail.jpg";
             $imageTitle = ucfirst($geoTags[0]->name) . " Huskies Logo";    
                       
@@ -187,7 +203,7 @@ ITEM;
                     echo "<uwaa_app:geotag><![CDATA[{$term->name}]]></uwaa_app:geotag>\n";    
                 }
             }
-        
+        return;
            
     }
 
