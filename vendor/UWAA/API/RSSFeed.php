@@ -8,13 +8,13 @@ class RSSFeed
     private $benefitFields;
     private $newsFields;    
     private $regionalTagList;
-    private $UI;
+    
 
 
-    public function __construct($regionalTags, $UI) {
+    public function __construct($regionalTags) {
 
         $this->regionalTagList = $regionalTags->getRegionalTags();
-        $this->UI = $UI;
+        
 
 
         $this->benefitFields = array(
@@ -33,7 +33,8 @@ class RSSFeed
                 'mb_start_date',
                 'mb_event_time',
                 'mb_event_location',
-                'mb_80_character_excerpt'
+                'mb_80_character_excerpt',
+                'mb_thumbnail_subtitle',
                 ),
             'hasTaxonomy' => false,
             'hasGeotag' => true            
@@ -130,6 +131,10 @@ class RSSFeed
                 if ($element == '80_character_excerpt') {
                     $element = 'excerpt';
                 }
+
+                if ($element == 'thumbnail_subtitle') {
+                    $element = 'content_head';
+                }
                 
                 echo "<uwaa_app:{$element}><![CDATA[{$content}]]></uwaa_app:{$element}>\n";
                 
@@ -155,13 +160,13 @@ class RSSFeed
     private function addRegionalLogoToFeed($geoTags) {
 
 
-        if(!in_array($geoTags[0]->slug, $this->regionalTagList)){
+        if(!in_array($geoTags[0]->slug, $this->regionalTagList) && is_array($geoTags)){
             $this->addDefaultRegionalThumbnail();   
             return;
         }
 
         if(is_array($geoTags) && count($geoTags == 1)) {                              
-            $imageURL = "http://depts.washington.edu/alumni/appfeed/images/regionallogos/" . $geoTags[0]->slug . "-app-thumbnail.jpg";
+            $imageURL = "http://depts.washington.edu/alumni/appfeed/images/regionallogos/" . $geoTags[0]->slug . "-app-thumbnail.png";
             $imageTitle = ucfirst($geoTags[0]->name) . " Huskies Logo";    
                       
             $imageItem = <<<ITEM
@@ -179,7 +184,7 @@ ITEM;
 
     private function addDefaultRegionalThumbnail() {
 
-        $defaultImageURL = "http://depts.washington.edu/alumni/appfeed/images/regionallogos/default-app-thumbnail.jpg";
+        $defaultImageURL = "http://depts.washington.edu/alumni/appfeed/images/regionallogos/default-app-thumbnail.png";
         $defaultImageTitle = ucfirst($geoTags[0]->name) . " Huskies Logo";    
                                
 
