@@ -205,7 +205,7 @@ ITEM;
             
             if(is_array($terms)) {                                
                 foreach ($terms as $term) {                    
-                    echo "<uwaa_app:geotag><![CDATA[{$term->name}]]></uwaa_app:geotag>\n";    
+                    echo "<uwaa_app:geotag><![CDATA[{$term->slug}]]></uwaa_app:geotag>\n";    
                 }
             }
         return;
