@@ -410,7 +410,7 @@ class MetaBoxes
             new \UWAA\CustomPostData('events', array(
                 'title' => 'Event Post Information',
                 'pages' => array('events'),  //add events, regional pages as they are ready
-                'context' => 'advanced',
+                'context' => 'normal',
                 'priority' => 'high',
                 'fields' => array(
                      array(

@@ -23,10 +23,11 @@ $communitySlug = new \UWAA\View\GetCommunitySlug($post, $regionalTagList);
 $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
 $finalSlug = $communitySlug->isCommunitiesContent();
 $noRegionalBranding = has_category('No Regional Branding');
+
  // if you have a featured image, put it in
  // 
  // 
- if ($finalSlug && $featureImage) {
+ if ($finalSlug && $featureImage && !$noRegionalBranding) {
   ?>
   <div class="uwaa-chapter-header">
     <div class="chapter-image-column" style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'chapterBrandingImage')?>');"></div>        
@@ -38,7 +39,7 @@ $noRegionalBranding = has_category('No Regional Branding');
      </div>
     </div>
 <?php
- }else if ($finalSlug && !$featureImage) {
+ }elseif ($finalSlug && !$featureImage) {
     ?>
     <div class="uwaa-chapter-header">
     <div class="chapter-image-column" style="background-image:url('<?php $communitySlug->getCommunityBrandingImage($finalSlug);?>');"></div>
@@ -58,7 +59,7 @@ $noRegionalBranding = has_category('No Regional Branding');
     <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
     <?php
 
-  } elseif ($finalSlug && $noRegionalBranding)
+  } elseif ($finalSlug && $noRegionalBranding) {
   ?>
     <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
     <?php
