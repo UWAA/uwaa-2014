@@ -19,6 +19,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
     protected $postSubtitle;
     protected $postImageThumbnailURL;
     protected $postExcerpt;
+    protected $postImageAltText;
       
 
     public function __construct()
@@ -78,6 +79,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
         $this->alternateLink = get_post_meta(get_the_ID(), 'mb_alternate_link', true);
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_post_thumbnail_id(get_the_ID()));
         
         echo $this->buildTemplate();
 
@@ -87,13 +89,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 
   }
 
-  protected function renderImage() {
-    if ($this->postImageThumbnailURL) {
-      return '<img src="' . $this->postImageThumbnailURL . '"/>';
-    } 
-    return '<img src="http://fpoimg.com/215x155?text=FPO" />';
-
-   }
+ 
 
 
 public function buildTemplate() {

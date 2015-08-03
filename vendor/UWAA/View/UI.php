@@ -40,7 +40,12 @@ class UI
         
         $url = wp_get_attachment_image_src($id, $size);
         return($url[0]);
-    }   
+    } 
+
+    public function returnImageAltTag($id) {
+        $altText = get_post_meta($id, '_wp_attachment_image_alt', true);               
+        return $altText;
+    }
 
 
 
