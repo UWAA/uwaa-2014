@@ -7,6 +7,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 
 
 <div id="spacer"></div>
+<h1 class="offscreen">Alumni - University Of Washington</h1>
 <?php if ( ! is_front_page() ) :uw_mobile_menu(); else : uw_mobile_front_page_menu(); endif; ?>
 
 <?php 
