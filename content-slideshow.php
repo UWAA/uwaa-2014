@@ -16,9 +16,9 @@
       <div class="row">
         <div class="col-md-8">
 
-          <h2><?php $subtitle = $slide->subtitle ? $slide->subtitle : ''; echo $subtitle ?></h2>
-          <h1 class="title" id="<?php echo $slide->id; ?>-title"><?php echo $slide->title; ?></h1>
-          <h2 class="date"><?php $date = $slide->date ? $slide->date : ''; echo $date ?></h2>
+          <span class="subtitle"><?php $subtitle = $slide->subtitle ? $slide->subtitle : ''; echo $subtitle ?></span>
+          <h2 class="title" id="<?php echo $slide->id; ?>-title"><?php echo $slide->title; ?></h2>
+          <span class="subtitle date"><?php $date = $slide->date ? $slide->date : ''; echo $date ?></span>
 
           
 

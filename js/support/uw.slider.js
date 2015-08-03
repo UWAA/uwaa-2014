@@ -53,7 +53,7 @@ UW.HomepageSlider = Backbone.View.extend({
       var slide = this.$el.children( this.slides ).eq( this.count - 2 )
 
     }
-    return _.template( this.template, { title: slide.find('h1').text(), slide: slide.data().id })
+    return _.template( this.template, { title: slide.find('h2').text(), slide: slide.data().id })
   }
 
 })

@@ -87,10 +87,9 @@
       padding: 10px 0;
       height: 450px;
       position: relative;
-      h1 {
+      .title {
         font-size: 50px;
-        line-height: 50px;
-        color: @purple;
+        line-height: 50px;        
         font-weight: @ultra-font-weight;
         text-transform: uppercase;
         padding-right: 60px;
@@ -143,12 +142,16 @@
 
     }
 
-    h2{
+    .subtitle {
+      font-family: "Encode Sans Compressed",sans-serif;
+      font-weight: 800;
+      line-height: 1.3;
        margin: 20px 0 0;
        font-weight: 900;
        font-size: 1.4em;
        text-transform: uppercase;
        letter-spacing: 1px;
+       display: block;
        
 
        &.date{
@@ -165,7 +168,7 @@
 
 
   &.white-header-overlay {
-          h1, h2, p{
+          h2, .subtitle, p{
           color: @white;
           text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
           margin-bottom: 0;
@@ -186,7 +189,7 @@
         }
 
   &.purple-header-overlay {
-          h1, h2, p{
+          h2, .subtitle, p{
           color: @purple;
           }
         }

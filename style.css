@@ -1764,10 +1764,9 @@ div.map-logo.wenatchee {
   height: 450px;
   position: relative;
 }
-.uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
+.uw-homepage-slider-container .uw-homepage-slider .hero-container .title {
   font-size: 50px;
   line-height: 50px;
-  color: #4b2e83;
   font-weight: 900;
   text-transform: uppercase;
   padding-right: 60px;
@@ -1816,21 +1815,25 @@ div.map-logo.wenatchee {
 .uw-homepage-slider-container .uw-homepage-slider .hero-container a.uw-btn:after {
   height: 43px;
 }
-.uw-homepage-slider-container .uw-homepage-slider h2 {
+.uw-homepage-slider-container .uw-homepage-slider .subtitle {
+  font-family: "Encode Sans Compressed", sans-serif;
+  font-weight: 800;
+  line-height: 1.3;
   margin: 20px 0 0;
   font-weight: 900;
   font-size: 1.4em;
   text-transform: uppercase;
   letter-spacing: 1px;
+  display: block;
 }
-.uw-homepage-slider-container .uw-homepage-slider h2.date {
+.uw-homepage-slider-container .uw-homepage-slider .subtitle.date {
   margin-top: 10px;
 }
 .uw-homepage-slider-container .uw-homepage-slider p {
   margin-top: 15px;
 }
-.uw-homepage-slider-container .uw-homepage-slider.white-header-overlay h1,
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay h2,
+.uw-homepage-slider-container .uw-homepage-slider.white-header-overlay .subtitle,
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay p {
   color: #ffffff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -1842,8 +1845,8 @@ div.map-logo.wenatchee {
 .uw-homepage-slider-container .uw-homepage-slider.white-header-overlay a.uw-btn:before {
   color: #85754d;
 }
-.uw-homepage-slider-container .uw-homepage-slider.purple-header-overlay h1,
 .uw-homepage-slider-container .uw-homepage-slider.purple-header-overlay h2,
+.uw-homepage-slider-container .uw-homepage-slider.purple-header-overlay .subtitle,
 .uw-homepage-slider-container .uw-homepage-slider.purple-header-overlay p {
   color: #4b2e83;
 }
