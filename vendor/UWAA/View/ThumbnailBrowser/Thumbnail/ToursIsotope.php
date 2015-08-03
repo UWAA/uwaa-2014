@@ -106,6 +106,13 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 
     return $args;
   }  
+
+   protected function renderImage() {
+    if ($this->postImageThumbnailURL) {
+      return '<img src="' . $this->postImageThumbnailURL . '" "alt="'. $this->postImageAltText.'"/>';
+    } 
+    return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Travel_Generic_Thumb_275x190.jpg" />';
+   }
  
 
 	public function buildTemplate(){
