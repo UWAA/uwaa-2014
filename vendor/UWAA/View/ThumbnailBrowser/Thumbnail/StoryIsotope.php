@@ -18,7 +18,8 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
-    protected $postExcerpt;    
+    protected $postExcerpt;
+    protected $postImageAltText;
 
     public function __construct()
     {
@@ -41,6 +42,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->postSubtitle = $this->getPostSubtitle($query);
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 

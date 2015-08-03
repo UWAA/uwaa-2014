@@ -20,7 +20,8 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postImageThumbnailURL;
     protected $postExcerpt;
     protected $alternateLink;
-    protected $isPartnerEvent;    
+    protected $isPartnerEvent;
+    protected $postImageAltText;
 
     public function __construct()
     {
@@ -47,6 +48,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->alternateLink = esc_url(get_post_meta(get_the_ID(), 'mb_alternate_link', true));
         $this->isPartnerEvent = get_post_meta(get_the_ID(), 'mb_isPartnerEvent', true);
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 

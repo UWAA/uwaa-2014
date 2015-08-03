@@ -19,6 +19,7 @@ class UWAAHistory extends ThumbnailBrowser implements Thumbnail
     protected $postSubtitle;
     protected $postImageThumbnailURL;
     protected $postExcerpt;
+    protected $postImageAltText;
       
 
     public function __construct()
@@ -77,6 +78,7 @@ class UWAAHistory extends ThumbnailBrowser implements Thumbnail
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = esc_html(parent::getPostSubtitle($query));
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 

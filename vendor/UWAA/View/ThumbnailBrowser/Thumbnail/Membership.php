@@ -19,6 +19,7 @@ class Membership extends ThumbnailBrowser implements Thumbnail
     protected $postSubtitle;
     protected $postImageThumbnailURL;
     protected $postExcerpt;
+    protected $postImageAltText;
       
 
     public function __construct()
@@ -77,6 +78,7 @@ class Membership extends ThumbnailBrowser implements Thumbnail
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 
@@ -84,15 +86,7 @@ class Membership extends ThumbnailBrowser implements Thumbnail
 
     wp_reset_postdata();    
 
-  }
-
-  protected function renderImage() {
-    if ($this->postImageThumbnailURL) {
-      return '<img src="' . $this->postImageThumbnailURL . '"/>';
-    } 
-    return '<img src="http://fpoimg.com/215x155?text=FPO" />';
-
-   }
+  } 
 
 
 public function buildTemplate() {

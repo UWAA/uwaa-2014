@@ -21,6 +21,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postExcerpt;
     protected $postTerms;
     protected $isPreliminary;
+    protected $postImageAltText;
 
     public function __construct()
     {
@@ -45,7 +46,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postExcerpt = wp_kses($this->shortenExcerpt(get_the_excerpt(), 220), $this->allowedHTMLTags);
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
-        $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);        
+        $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         
         echo $this->buildTemplate();
@@ -104,14 +106,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 
     return $args;
   }  
-
-  protected function renderImage() {
-    if ($this->postImageThumbnailURL) {
-      return '<img src="' . $this->postImageThumbnailURL . '"/>';
-    } 
-    return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Travel_Generic_Thumb_275x190.jpg" />';
-
-   }
+ 
 
 	public function buildTemplate(){
     $callout = $this->renderCallout();

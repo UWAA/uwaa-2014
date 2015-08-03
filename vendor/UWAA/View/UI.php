@@ -43,7 +43,11 @@ class UI
     } 
 
     public function returnImageAltTag($id) {
-        $altText = get_post_meta($id, '_wp_attachment_image_alt', true);               
+        $attachmentID = get_post_thumbnail_id($id);        
+        $altText = get_post_meta($attachmentID, '_wp_attachment_image_alt', true);        
+        if (!$altText) {
+                    return "Alt Text Missing";
+                }        
         return $altText;
     }
 

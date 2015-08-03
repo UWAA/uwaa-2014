@@ -18,7 +18,8 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
     protected $postDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
-    protected $postExcerpt;    
+    protected $postExcerpt;
+    protected $postImageAltText;
 
     public function __construct($chapterSlug)
     {
@@ -80,6 +81,7 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
         // $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'original');    
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));        
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 
@@ -88,14 +90,6 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
     wp_reset_postdata();    
 
   }
-
- protected function renderImage() {
-    if ($this->postImageThumbnailURL) {
-      return '<img src="' . $this->postImageThumbnailURL . '"/>';
-    } 
-    return '<img src="http://fpoimg.com/302x250?text=FPO" />';
-
-   }  
 
 
   public function buildTemplate(){

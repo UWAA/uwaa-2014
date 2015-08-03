@@ -19,6 +19,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postSubtitle;
     protected $postImageThumbnailURL;
     protected $postExcerpt;    
+    protected $postImageAltText;
 
     public function __construct()
     {
@@ -40,6 +41,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;        
         $this->postExcerpt = wp_kses($this->shortenExcerpt(get_the_excerpt(), 220), $this->allowedHTMLTags);
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 

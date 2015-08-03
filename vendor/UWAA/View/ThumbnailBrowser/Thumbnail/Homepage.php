@@ -79,7 +79,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
         $this->alternateLink = get_post_meta(get_the_ID(), 'mb_alternate_link', true);
-        $this->postImageAltText = $this->UI->returnImageAltTag(get_post_thumbnail_id(get_the_ID()));
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 

@@ -94,7 +94,7 @@ class ThumbnailBrowser
 
     protected function renderImage() {
     if ($this->postImageThumbnailURL) {
-      return '<img src="' . $this->postImageThumbnailURL . '" alt="'. $this->postImageAltText.'"/>';
+      return '<img src="' . $this->postImageThumbnailURL . '" "alt="'. $this->postImageAltText.'"/>';
     } 
     return '<img src="http://fpoimg.com/215x155?text=FPO" />';
 

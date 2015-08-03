@@ -18,7 +18,8 @@ class Communities extends ThumbnailBrowser implements Thumbnail
     protected $postDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
-    protected $postExcerpt;    
+    protected $postExcerpt;
+    protected $postImageAltText;
 
     public function __construct()
     {
@@ -76,6 +77,7 @@ class Communities extends ThumbnailBrowser implements Thumbnail
         $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 100);
+        $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
         echo $this->buildTemplate();
 
@@ -85,14 +87,7 @@ class Communities extends ThumbnailBrowser implements Thumbnail
 
   }
 
-
- protected function renderImage() {
-    if ($this->postImageThumbnailURL) {
-      return '<img src="' . $this->postImageThumbnailURL . '"/>';
-    } 
-    return '<img src="http://fpoimg.com/275x190?text=FPO" />';
-
-   }  
+ 
 
 
   public function buildTemplate(){

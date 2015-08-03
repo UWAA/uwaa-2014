@@ -28,6 +28,7 @@ class SidebarFeaturedPost extends \WP_Widget
   private $UI;
   private $postParent;
   private $hasResults;
+  private $postThumbnailAltText;
   
 
   function __construct()
@@ -212,6 +213,7 @@ class SidebarFeaturedPost extends \WP_Widget
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');
         $this->postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
+        $this->postThumbnailAltText = $this->UI->returnImageAltTag(get_the_ID());
         
     endwhile;
 
@@ -256,7 +258,7 @@ echo <<<CONTENT
    <div class="post-thumbnail-slide">
    <a href="$this->postURL">
     <div class="image-frame">   
-   <img src="$this->postSidebarImage" />
+   <img src="$this->postSidebarImage" alt="$this->postThumbnailAltText" />
    $callout
    </div>
    <div class="copy">
