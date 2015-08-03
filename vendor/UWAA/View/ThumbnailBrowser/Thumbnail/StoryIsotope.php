@@ -97,7 +97,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
 
   public function buildTemplate(){
     $callout = $this->renderCallout();
-    $image = $this->renderImage();
+    $image = $this->renderImage(true);
     $date = $this->renderDate();
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">

@@ -104,7 +104,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
 
 	public function buildTemplate(){
   $callout = $this->renderCallout();
-  $image = $this->renderImage();
+  $image = $this->renderImage(true);
   $link = $this->determineAlternateLink();
   $date = $this->renderDate();
   // 
