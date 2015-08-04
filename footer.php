@@ -66,6 +66,6 @@
     </div><!-- #uw-container -->
 
 <?php wp_footer(); ?>
-
+<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/clear.png" id="flag">
 </body>
 </html>

@@ -220,6 +220,8 @@ content: "\2022  ";
   font-weight: bold;
 }
 
+// Accessibility Updates
+
 
 .visually-hidden {
 position: absolute !important;
@@ -230,4 +232,20 @@ border:0 !important;
 height: 1px !important;
 width: 1px !important;
 overflow: hidden;
+}
+
+#flag {
+  position: fixed;
+  top: 0;
+  left: 0;  
+}
+
+.no-images {
+
+  .visually-hidden {
+    height: auto;
+    width: auto;
+    overflow: visible;
+    clip: auto;    
+  }
 }
