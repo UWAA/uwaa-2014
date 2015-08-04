@@ -1,4 +1,4 @@
-//Style for the thumbnails generated for tile-based sorting pages (Member Benefits and Tours)
+//Style for the thumbnails generated for tile-based sorting pages (Member Benefits, Events and Tours)
 
 #isotope-canvas{
     position: relative;
@@ -98,27 +98,36 @@
         box-shadow: -1px 2px 2px @gray, 1px 2px 2px @gray;
         height: 255px;
         position: relative;
+        
 
-        &:after {
-            background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
-            content: "";
-            opacity: .6;
-            display: inline-block;
-            vertical-align: bottom;
-            margin-left: 5px;
-            width: 14px;
-            height: 21px;
-            -o-transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
-            -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-            position: absolute;
-            bottom: 5px;
-            right: 15px;
+        
+
+        img.link-arrow {
+           
+                
+            
         }
 
 
         a {
+
+            &.link-arrow {
+                position: absolute;
+                bottom: 5px;
+                right: 15px;                               
+                background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
+                content: "";            
+                -o-transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+                opacity: .6;
+                display: inline-block;
+                vertical-align: bottom;
+                margin-left: 5px;
+                width: 14px;
+                height: 21px;                
+            }
 
         }
 
@@ -129,12 +138,14 @@
                 line-height: 1.1;
                 font-weight: 600;
                 margin-bottom: .68em;
+                color: @darkgray;
             }
 
             &.date{
                 font-weight: 700;
                 font-size: 1em;
                 padding-bottom: 0.059em;
+                color: @darkgray;
             }
             margin: 0;
         }

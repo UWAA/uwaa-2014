@@ -108,6 +108,9 @@ $template = <<<TEMPLATE
  <h4 class="title">{$this->postTitle}</h4> 
  $date
  <p class="excerpt">{$this->postExcerpt}</p>
+ <a class="link-arrow" href="$link">
+      <span class="visually-hidden">Link</span>
+    </a>
  </div>
  </a>
   

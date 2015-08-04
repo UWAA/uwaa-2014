@@ -284,22 +284,22 @@
   height: 255px;
   position: relative;
 }
-.post-thumbnail-slide .copy:after {
+.post-thumbnail-slide .copy a.link-arrow {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
   background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
   content: "";
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
   opacity: .6;
   display: inline-block;
   vertical-align: bottom;
   margin-left: 5px;
   width: 14px;
   height: 21px;
-  -o-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  bottom: 5px;
-  right: 15px;
 }
 .post-thumbnail-slide .copy h4 {
   margin: 0;
@@ -308,11 +308,13 @@
   line-height: 1.1;
   font-weight: 600;
   margin-bottom: .68em;
+  color: #5a5a5a;
 }
 .post-thumbnail-slide .copy h4.date {
   font-weight: 700;
   font-size: 1em;
   padding-bottom: 0.059em;
+  color: #5a5a5a;
 }
 .post-thumbnail-slide .copy h6.subtitle {
   text-transform: uppercase;
@@ -680,11 +682,13 @@ a.uwaa-btn:active {
   line-height: 1.1;
   font-weight: 600;
   margin-bottom: .68em;
+  color: #5a5a5a;
 }
 .featured-post .copy h4.date {
   font-weight: 700;
   font-size: 1em;
   padding-bottom: 0.059em;
+  color: #5a5a5a;
 }
 .featured-post .copy h6.subtitle {
   text-transform: uppercase;
@@ -4114,4 +4118,15 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
 .red {
   color: #e86b27;
   font-weight: bold;
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }

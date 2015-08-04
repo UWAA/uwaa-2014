@@ -111,6 +111,9 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
 		<h4 class="title">$this->postTitle</h4>
 		$date
 		<p>$this->postExcerpt</p>
+    <a class="link-arrow" href="$link">
+      <span class="visually-hidden">Link</span>
+    </a>
 		</div>
 	</a>
 </div>

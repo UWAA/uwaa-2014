@@ -155,6 +155,9 @@ return $prelimTemplate;
     <h4 class="title">$this->postTitle</h4>
     <h4 class="date">$this->postDate</h4>
     <p>$this->postExcerpt</p>
+    <a class="link-arrow" href="$link">
+      <span class="visually-hidden">Link</span>
+    </a>
     </div>
   </a>
 </div>
