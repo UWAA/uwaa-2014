@@ -4135,9 +4135,3 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
   top: 0;
   left: 0;
 }
-.no-images .visually-hidden {
-  height: auto;
-  width: auto;
-  overflow: visible;
-  clip: auto;
-}
