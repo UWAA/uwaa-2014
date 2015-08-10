@@ -6,6 +6,7 @@ uglify = require('gulp-uglifyjs'),
 header = require('gulp-header'),
 concat = require('gulp-concat'),
 foreach = require('gulp-foreach'),
+minifyCss = require('gulp-minify-css'),
 mainBowerFiles = require('main-bower-files');
 
 
@@ -96,9 +97,17 @@ gulp.src(['./js/admin/_*.js'])
 
 
 gulp.task('less', function () {
-     gulp.src('./less/style.less')
-     .pipe(header(banner, { pkg : pkg } ))
+     gulp.src('./less/style.less')     
     .pipe(less())
+    .pipe(minifyCss())
+    .pipe(header(banner, { pkg : pkg } ))
+    .on('error', catchErrors)     
+    .pipe(gulp.dest('./'));
+
+    gulp.src('./less/style.less')    
+    .pipe(header(banner, { pkg : pkg } ))
+    .pipe(less())
+    .pipe(rename("style.dev.css"))    
     .on('error', catchErrors)     
     .pipe(gulp.dest('./'));
 
