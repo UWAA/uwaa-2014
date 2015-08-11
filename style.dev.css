@@ -3658,6 +3658,12 @@ a#memberCheckerLogout {
   border: 0;
   font-size: 100%;
 }
+.uwaa-convio-wrapper .convio-content form[name="RSVPForm"] p {
+  margin: 0;
+}
+.uwaa-convio-wrapper .convio-content form[name="RSVPForm"] td {
+  padding: 5px 0;
+}
 .uwaa-convio-wrapper .convio-footer {
   margin-left: -15px;
   margin-right: -15px;
