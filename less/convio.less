@@ -16,7 +16,7 @@
   .NetscapeFix {
    font-family: Arial, Helvetica, sans-serif;   
  }
- 
+
 
  .event-registration-header{
   .make-row();    
@@ -31,8 +31,8 @@
     text-align: right;
   }
 
-  
-  
+
+
 
   .wrapper-title{
     height: 80px;
@@ -65,7 +65,7 @@
     }
 
   }
-  
+
 
 
 
@@ -155,6 +155,7 @@
     color: @janegray;
     border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC;
+    margin-top: 14px 0;
     
     td {
       font-size: 17px;
@@ -191,16 +192,25 @@
 
    // RSVP Form alignment tweaks
    form[name="RSVPForm"] {
-    
+
     p {
       margin: 0;
     }
-    
+
     td {
       padding: 5px 0;
     }
-    
+
   }
+
+
+// Removing details from RSVP confirmation pages
+
+  table[summary="layout table"] {
+    display: none;
+    visibility:hidden;
+  }
+
 
   }  //End Convio Content
 
@@ -234,5 +244,5 @@
   }
 
 
-  
+
 }

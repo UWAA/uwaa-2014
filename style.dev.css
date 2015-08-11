@@ -3634,6 +3634,7 @@ a#memberCheckerLogout {
   color: #3d3d3d;
   border-top: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
+  margin-top: 14px 0;
 }
 .uwaa-convio-wrapper .convio-content .uwaa-details-table td {
   font-size: 17px;
@@ -3663,6 +3664,10 @@ a#memberCheckerLogout {
 }
 .uwaa-convio-wrapper .convio-content form[name="RSVPForm"] td {
   padding: 5px 0;
+}
+.uwaa-convio-wrapper .convio-content table[summary="layout table"] {
+  display: none;
+  visibility: hidden;
 }
 .uwaa-convio-wrapper .convio-footer {
   margin-left: -15px;
