@@ -120,12 +120,72 @@ background-size: contain;
       font-size: 17px;
     }
 
-    .old-school input[type=radio] {
+    .old-school {
+
+
+      input[type=radio] {
       display: inline-block;
       padding: 0;
       top: 9px;
       margin-right: 10px;
     }
+
+    input[type=checkbox] {
+      margin-right: 10px;
+      top: -8px;
+    }
+
+
+  }
+
+
+  // Typography Changes
+  
+  .explicit {
+
+    p {
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: @janegray;
+    }
+  } 
+
+
+  .uwaa-details-table {
+    color: @janegray;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    
+    td {
+      font-size: 17px;
+    }
+
+    td:nth-child(1) {
+      padding-right: 20px;
+    }
+
+    tr:nth-child(1) td {
+      padding-top:10px;
+    }
+  }
+  
+
+  div.convio-content > div > div > div > table:nth-child(2) > tbody > tr > td > span > p:nth-child(1) > img {
+    margin-left:25px;
+  }
+
+  .Button {
+
+    padding: 9px 15px; 
+    background-color:@purple ; 
+    color:@white; 
+    text-transform:uppercase; 
+    font-weight:bold; 
+    letter-spacing:1px;
+    border:0;
+    font-size:100%;
+
+  }
 
 
   }  //End Convio Content
