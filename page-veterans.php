@@ -1,10 +1,11 @@
-<?php get_header(); 
+<?php
+
+include(locate_template( 'partials/vets-header.php'));
+
 use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
 use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
 wp_enqueue_script('isotopeInit');
 ?>
-
-
 
 <div class="uw-hero-image"></div>
 

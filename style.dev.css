@@ -3464,6 +3464,14 @@ a#memberCheckerLogout {
 .pagination-buttons .button.current .icon.next {
   background-position: -70px -40px;
 }
+.video-header {
+  width: 100%;
+  height: 340px;
+}
+.video-header video {
+  height: 100%;
+  width: 100%;
+}
 .uwaa-convio-wrapper .uwaa-wordmark {
   display: block;
   position: absolute;
