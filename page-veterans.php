@@ -5,9 +5,16 @@ include(locate_template( 'partials/vets-header.php'));
 use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
 use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
 wp_enqueue_script('isotopeInit');
+wp_enqueue_script('covervid');
 ?>
 
-<div class="uw-hero-image"></div>
+<div class="uw-hero-image vets-video-wrapper">  
+  <div class="covervid-wrapper">
+    <video class="covervid-video" autoplay loop>        
+        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/intro.mp4" type="video/mp4">
+    </video>
+</div>
+</div>
 
 <div class="container uw-body">
 

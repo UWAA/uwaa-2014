@@ -34,9 +34,3 @@
 
     <?php get_template_part('thinstrip');   ?>
 
-<div class="video-header">
-    <video preload="auto" autoplay>  
-      <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/intro.mp4" type="video/mp4">
-      Your browser does not support the <code>video</code> element.
-    </video>
-</div>

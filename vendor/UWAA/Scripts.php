@@ -147,7 +147,15 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false,
-    )
+    ),
+        'covervid' => array (
+        'id'      => 'covervid',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/covervid/covervid.js',
+        'deps'    => array(),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false        
+      ),
 
     
 

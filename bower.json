@@ -6,7 +6,8 @@
     "isotope": "latest",
     "handlebars" : "latest",
     "velocity" : "latest",
-    "jquery-placeholder" : "latest"
+    "jquery-placeholder" : "latest",
+    "covervid" : "latest"
   },
   "overrides": {
     "isotope": {
