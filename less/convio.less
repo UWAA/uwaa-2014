@@ -1,131 +1,215 @@
 .uwaa-convio-wrapper{
 
-.uwaa-wordmark{
-display: block;
-position: absolute;
-top: 0px;
-left: 150px;
-text-indent: -9999px;
-width: 150px;
-height: 56px;
-background: url(assets/logos/uwaa-logo-convio.svg) no-repeat transparent;
-background-position: 50% 50%; 
-background-size: contain;
-}
+  .uwaa-wordmark{
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    text-indent: -9999px;
+    width: 150px;
+    height: 56px;
+    background: url(assets/logos/uwaa-logo-convio.svg) no-repeat transparent;
+    background-position: 50% 50%; 
+    background-size: contain;
+  }
 
-.NetscapeFix {
+  .NetscapeFix {
    font-family: Arial, Helvetica, sans-serif;   
-}
-  
-
-  .event-registration-header{
-    .make-row();    
-    box-shadow: 0 1px 3px rgba(34,25,25,.4);
+ }
 
 
-    h2{
-      color: #cecece;
-    }
-
-    .back-to-events-container{
-      text-align: right;
-    }
-
-    
-      
-
-      .wrapper-title{
-        height: 80px;
-
-      }
-
-      a.back-to-events{
-        color: @purple;
-        text-transform: uppercase;
-        font-family: 'Open Sans';
-        font-weight: 800;
-        text-decoration: none;
-        margin-top: 38px;
-        margin-bottom: 14.5px;
-        display: block;
-
-          &:before {
-            background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
-            content: "";
-            opacity: .8;
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 5px;            
-            width: 14px;
-            height: 21px;            
-            -o-transform: rotate(270deg);
-            -webkit-transform: rotate(270deg);
-            -ms-transform: rotate(270deg);
-            transform: rotate(270deg);            
-        }
-
-      }
-    
+ .event-registration-header{
+  .make-row();    
+  box-shadow: 0 1px 3px rgba(34,25,25,.4);
 
 
+  h2{
+    color: #cecece;
+  }
+
+  .back-to-events-container{
+    text-align: right;
+  }
+
+
+
+
+  .wrapper-title{
+    height: 80px;
 
   }
 
-  .convio-content{
-    .make-row();    
-    padding: 50px 0 20px;
+  a.back-to-events{
+    color: @purple;
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-weight: 800;
+    text-decoration: none;
+    margin-top: 38px;
+    margin-bottom: 14.5px;
+    display: block;
 
-
-    .eventtitle{
-      color: @purple;
-      font-family: "Encode Sans Compressed",sans-serif;
-      font-weight: 800;
-      line-height: 1.3;
-      font-size: 37px;
-      margin-top: 29px;
-      margin-bottom: 14.5px;
+    &:before {
+      background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
+      content: "";
+      opacity: .8;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 5px;            
+      width: 14px;
+      height: 21px;            
+      -o-transform: rotate(270deg);
+      -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);            
     }
 
-    #lo-attendeeContainer {
-      .smaller {
-        font-family: 'Open Sans', sans-serif;
-        margin-bottom: 0;
-        font-weight: normal;
+  }
 
 
-      }
-    }
 
-    .survey-question-container {
 
-      label {
-        max-width: 95%;
-        vertical-align: top;
-      }
+}
 
-    }
+.convio-content{
+  .make-row();    
+  padding: 50px 0 20px;
 
-    .input-label {
+
+  .eventtitle{
+    color: @purple;
+    font-family: "Encode Sans Compressed",sans-serif;
+    font-weight: 800;
+    line-height: 1.3;
+    font-size: 37px;
+    margin-top: 29px;
+    margin-bottom: 14.5px;
+  }
+
+  #lo-attendeeContainer {
+    .smaller {
       font-family: 'Open Sans', sans-serif;
+      margin-bottom: 0;
       font-weight: normal;
+
+
+    }
+  }
+
+  .survey-question-container {
+
+    label {
+      max-width: 95%;
+      vertical-align: top;
     }
 
-    .survey-textarea-container textarea {
-      min-width: 50%;
-    }
+  }
+
+  .input-label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+  }
+
+  .survey-textarea-container textarea {
+    min-width: 50%;
+  }
 
 
-    .AutoOptInWarningMessage {
-      color: rgb(60, 60, 60);
-      font-size: 17px;
-    }
+  .AutoOptInWarningMessage {
+    color: rgb(60, 60, 60);
+    font-size: 17px;
+  }
 
-    .old-school input[type=radio] {
+  .old-school {
+
+
+    input[type=radio] {
       display: inline-block;
       padding: 0;
       top: 9px;
       margin-right: 10px;
     }
+
+    input[type=checkbox] {
+      margin-right: 10px;
+      top: -8px;
+    }
+
+
+  }
+
+
+  // Typography Changes
+  
+  .explicit {
+
+    p {
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      color: @janegray;
+    }
+  } 
+
+
+  .uwaa-details-table {
+    color: @janegray;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    margin-top: 14px 0;
+    
+    td {
+      font-size: 17px;
+      padding-bottom: 14px;
+    }
+
+    td:nth-child(1) {
+      padding-right: 20px;
+    }
+
+    tr:nth-child(1) td {
+      padding-top:10px;
+    }
+  }
+  
+
+  div.convio-content > div > div > div > table:nth-child(2) > tbody > tr > td > span > p:nth-child(1) > img {
+    margin-left:25px;
+  }
+
+  .Button {
+
+    padding: 9px 15px; 
+    background-color:@purple ; 
+    color:@white; 
+    text-transform:uppercase; 
+    font-weight:bold; 
+    letter-spacing:1px;
+    border:0;
+    font-size:100%;
+
+  }
+
+
+   // RSVP Form alignment tweaks
+   form[name="RSVPForm"] {
+
+    p {
+      margin: 0;
+    }
+
+    td {
+      padding: 5px 0;
+    }
+
+  }
+
+
+// Removing details from RSVP confirmation pages
+
+  table[summary="layout table"] {
+    display: none;
+    visibility:hidden;
+  }
 
 
   }  //End Convio Content
@@ -139,13 +223,13 @@ background-size: contain;
 
 
 
-@media only screen and (max-width: 991px) and (min-width: 768px) {
+  @media only screen and (max-width: 991px) and (min-width: 768px) {
 
-.uw-thinstrip {
-  height: 90px;
+    .uw-thinstrip {
+      height: 90px;
+    }
+
   }
-
-}
   
 
 
@@ -160,5 +244,5 @@ background-size: contain;
   }
 
 
-    
+
 }
