@@ -62,16 +62,7 @@ class VeteransStoriesIsotope extends ThumbnailBrowser implements Thumbnail
   private function getListOfTerms()
     {
 
-        $terms = get_the_terms(get_the_id(), 'events');
-        $termArray = array(); 
-        
-        if ( $terms && !is_wp_error( $terms ) ) :
-        	foreach ( $terms as $term ) {
-                $termArray[] = $term->slug;
-                }               
-        endif;
-
-     	return $termArray;
+       return array("Veterans Stories");
      }
 
   private function setArguments()
@@ -110,14 +101,13 @@ class VeteransStoriesIsotope extends ThumbnailBrowser implements Thumbnail
   // 
   
 	$template = <<<ISOTOPE
-<div class="post-thumbnail-slide $this->postTerms">
+<div class="post-thumbnail-slide veterans-stories">
 	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
       $callout
 		  $image
     </div>
-		<div class="copy">
-		<h6 class="subtitle">$this->postSubtitle</h6>
+		<div class="copy">		
 		<h4 class="title">$this->postTitle</h4>
 		$date
 		<p>$this->postExcerpt</p>    

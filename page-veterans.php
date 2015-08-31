@@ -60,9 +60,9 @@ wp_enqueue_style('google-font-cinzel');
         <div id="isotope-canvas">
         <?php
           $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-          $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;          
-          $veteransEventsGrid->renderToolbar('Veterans');
-          // $benefitsGrid->buildSortingToolbar('destinations'); 
+          $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+          // $veteransEventsGrid->renderToolbar('Veterans');          
+          $veteransEventsGrid->renderVeteransFilterToolbar();
         ?>
             <div class="isotope tile">
             <?php

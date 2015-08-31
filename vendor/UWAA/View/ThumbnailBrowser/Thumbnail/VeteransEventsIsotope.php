@@ -120,14 +120,13 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
   // 
   
 	$template = <<<ISOTOPE
-<div class="post-thumbnail-slide $this->postTerms">
+<div class="post-thumbnail-slide veterans-events">
 	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
       $callout
 		  $image
     </div>
-		<div class="copy">
-		<h6 class="subtitle">$this->postSubtitle</h6>
+		<div class="copy">		
 		<h4 class="title">$this->postTitle</h4>
 		$date
 		<p>$this->postExcerpt</p>    
@@ -141,6 +140,5 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
 ISOTOPE;
 return $template;
 }
-
 
 }

@@ -201,7 +201,51 @@ TOOLBAR;
       return $shortenedString;
     }
 
+    // Hardcoded grossness for Vets Week Page
+
+     public function renderVeteransFilterToolbar()
+    {
+      
+      $buttons = $this->renderFilterButtons($typeOfToolbar);   
+      $sortingOptions = array(
+        array(
+        "name" => "Veterans Events",
+        "slug" => "veterans-events"
+        ),
+        array(
+        "name" => "Veterans Stories",
+        "slug" => "veterans-stories"
+        ),
+
+      );
+    
+      //Included because Posts are filtered by categories
+      $buttons = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All</li>';
+        
+      foreach ($sortingOptions as $option) {
+                
+                  $buttons .= sprintf('<li class="filter-button" data-filter=".%s">%s</li>', strtolower($option['slug']), $option['name']);
+                
+        }
+
+        $buttons .= '</ul>';     
+
+       $template = <<<TOOLBAR
+      <div class="filter-row">
+      <div id="filters">
+      <h2 class="filter-head">FILTER:</h2>
+        $buttons
+      
 
 
+      </div>
+      </div>
 
+TOOLBAR;
+        
+        
+
+      $template .= '</ul>';
+      echo $template;
+    }
 }
