@@ -20,7 +20,7 @@
     </head>
     <!--[if lt IE 9]> <body <?php body_class('lt-ie9'); ?>> <![endif]-->
     <!--[if gt IE 8]><!-->
-    <body <?php body_class(); ?> >
+    <body <?php body_class('vets2015'); ?> >
     <!--<![endif]-->
 
     <div id="uwsearcharea" aria-hidden="true" class="uw-search-bar-container"></div>

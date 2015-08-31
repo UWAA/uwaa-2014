@@ -24,7 +24,15 @@ class Styles
           'deps'    => array(),
           'version' => '',
           'admin'   => false
-      ),       
+      ),
+
+      'google-font-open' => array(
+          'id'      => 'google-font-cinzel',
+          'url'     => 'https://fonts.googleapis.com/css?family=Cinzel',
+          'deps'    => array(),
+          'version' => '',
+          'admin'   => true
+      ),
 
     );
 

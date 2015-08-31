@@ -3464,15 +3464,65 @@ a#memberCheckerLogout {
 .pagination-buttons .button.current .icon.next {
   background-position: -70px -40px;
 }
-.vets-video-wrapper {
+.vets2015 .vets-video-wrapper {
   height: 450px;
+  text-align: center;
 }
-.covervid-wrapper {
+.vets2015 .vets-video-wrapper:before {
+  position: absolute;
+  top: 0;
+  height: 30px;
+  background-repeat: repeat-x;
+  background-image: url(assets/vet-star-large.svg);
+  background-size: 31px 30px;
+  z-index: 1;
+  opacity: 66%;
+}
+.vets2015 .covervid-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+.vets2015 h1.page-title {
+  text-align: center;
+}
+.vets2015 .homelink {
+  display: block;
+  position: relative;
+  text-align: center;
+  background-color: #4b2e83;
+  color: #ffffff;
+  margin: -115px auto 0;
+  z-index: 1;
+  width: 320px;
+  padding: 10px 20px;
+}
+@media (max-width: 767px) {
+  .vets2015 .homelink {
+    margin: 0 auto;
+  }
+}
+.vets2015 .homelink a {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 1.1;
+  font-size: 1.6em;
+}
+.vets2015 .homelink a div {
+  font-size: .8em;
+}
+.vets2015 .homelink .star-line {
+  height: 130px;
+}
+.vets2015 .homelink .star-line path,
+.vets2015 .homelink .star-line rect,
+.vets2015 .homelink .star-line line {
+  fill: #4b2e83;
 }
 .uwaa-convio-wrapper .uwaa-wordmark {
   display: block;

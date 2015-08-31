@@ -61,11 +61,14 @@ $(".accordion-heading").click (function () {          //using mouse
 
 })(jQuery);
 
-$( document ).ready(function() {
-    $('.covervid-video').coverVid(670, 380);    
-});
+    
+    var lazyVid = function() {
+        $('.covervid-video').coverVid(670, 380);
+    }
 
+        _.delay(lazyVid, 2000);  
 
+    
 
 /* HTML5 Placeholder jQuery Plugin - v2.1.1
  * Copyright (c)2015 Mathias Bynens

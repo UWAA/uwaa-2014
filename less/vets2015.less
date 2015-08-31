@@ -2,9 +2,26 @@
 // 
 // 
 // 
+// 
+.vets2015 {
+
+
+
 
 .vets-video-wrapper {
     height: 450px;
+    text-align: center;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        height: 30px;        
+        background-repeat: repeat-x;
+        background-image: url(assets/vet-star-large.svg);
+        background-size: 31px 30px;
+        z-index: 1;
+        opacity: 66%;
+    }
 }
 
 .covervid-wrapper {
@@ -13,4 +30,72 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+
+h1.page-title {
+    text-align: center;
+}
+
+
+
+
+.homelink{     
+    
+    display: block;
+    position: relative;    
+    text-align: center;
+    background-color: @purple;
+    color: @white;
+    margin: -115px auto 0;
+    z-index: 1;
+    width: 320px;
+    padding: 10px 20px;
+
+    @media (max-width: @screen-xs-max) 
+    {
+        margin: 0 auto;
+    };
+
+
+    a {
+        
+        
+        font-family: 'Cinzel', serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: @white;
+        text-decoration: none;
+        line-height: 1.1;
+        font-size: 1.6em;
+
+        div {
+        font-size: .8em;
+        }
+
+    }
+
+    .star-line 
+    {
+        path, rect, line {
+            fill: @purple;
+        }
+        height: 130px;
+    }
+
+    
+    
+
+    // @media (min-width: @screen-xs-min) {line-height: 1.1;};
+    
+    // @media (min-width: @screen-md-min) {};
+    // @media (min-width: @screen-lg-min) {line-height: 1.0;};
+
+    
+    
+
+}
+
+
+
 }
