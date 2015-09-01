@@ -27,8 +27,7 @@ var canvas = $('#form-message'),
                     
             },
             //Remove for prod @TODO
-            error: function(data){
-                console.log('error');
+            error: function(data){                
                 canvas.html(data);
            
             }
