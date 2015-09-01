@@ -156,6 +156,15 @@ if ($callSuccess === FALSE) {
     exit;   //refine error handling further...TODO - Need feedback system on page.
 }
 
+if ($callSuccess && $lastName != ucfirst(strtolower($member->MemberLName))) {
+    $payload = array (
+        'error' => 'TRUE',        
+        'message' =>'We\'re sorry, that doesn\'t match what we have in our database. Why don&rsquo;t you try again or call us and we’ll help you get it straightened out – 1-800-289-2586'
+    );
+    echo json_encode($payload);
+    exit;   //refine error handling further...TODO - Need feedback system on page.
+}
+
  else {
     
     // //Set some key information we want to persist why they browse.

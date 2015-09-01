@@ -2979,6 +2979,7 @@ ul.uwaa-social li a:focus.email {
 }
 .membership-card.annual {
   background-image: url(assets/member_card_annual.jpg);
+  border: 1px solid #CCCCCC;
 }
 .membership-card.life {
   background-image: url(assets/member_card_life.jpg);
