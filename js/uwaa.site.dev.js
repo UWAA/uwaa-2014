@@ -60,13 +60,16 @@ $(".accordion-heading").click (function () {          //using mouse
 
 
 })(jQuery);
+jQuery(document).ready(function($) {
 
-    
     var lazyVid = function() {
         $('.covervid-video').coverVid(670, 380);
     }
+    lazyVid();
+        // _.delay(lazyVid, 2000);  
 
-        _.delay(lazyVid, 2000);  
+    
+});
 
     
 

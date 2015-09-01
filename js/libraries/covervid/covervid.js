@@ -1,7 +1,7 @@
 var coverVid = function (elem, width, height) {
 
 	// call sizeVideo on load
-	document.addEventListener('DOMContentLoaded', sizeVideo);
+	sizeVideo();
 
 	// debounce for resize function
 	function debounce(fn, delay) {
@@ -37,12 +37,13 @@ var coverVid = function (elem, width, height) {
 
 
 	// Define the attached selector
-	function sizeVideo() {
-		
-		if (!elem.parentNode) { return; }
+	function sizeVideo() {		
+		if (!elem.parentNode) { 			
+			return;
+		 }
 		
 		// Get parent element height and width
-		var parentHeight = elem.parentNode.offsetHeight;
+		var parentHeight = elem.parentNode.offsetHeight;		
 		var parentWidth = elem.parentNode.offsetWidth;
 
 		// Get native video width and height

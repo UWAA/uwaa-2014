@@ -13,7 +13,7 @@ wp_enqueue_style('google-font-cinzel');
 <div class="uw-hero-image vets-video-wrapper">  
   <div class="covervid-wrapper">
     <video class="covervid-video" autoplay loop>        
-        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/intro.mp4" type="video/mp4">
+        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/intro.mp4" type="video/mp4" poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Veterans.jpg">
     </video>
 </div>
 </div>
