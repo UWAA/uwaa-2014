@@ -3481,6 +3481,16 @@ a#memberCheckerLogout {
   z-index: 1;
   opacity: 66%;
 }
+.vets2015 .vets-video-wrapper:after {
+  left: 0;
+  height: 60px;
+}
+@media only screen and (max-width: 767px) {
+  .vets2015 .vets-video-wrapper {
+    display: block;
+    height: 250px;
+  }
+}
 .vets2015 .covervid-wrapper {
   position: absolute;
   top: 0;
@@ -3488,8 +3498,18 @@ a#memberCheckerLogout {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 810px) {
+  .vets2015 .covervid-wrapper video {
+    display: none;
+  }
+}
 .vets2015 h1.page-title {
   text-align: center;
+}
+@media only screen and (max-width: 767px) {
+  .vets2015 h1.page-title {
+    margin: 10px 0 20px;
+  }
 }
 .vets2015 .homelink {
   display: block;
@@ -3501,11 +3521,6 @@ a#memberCheckerLogout {
   z-index: 1;
   width: 320px;
   padding: 10px 20px;
-}
-@media (max-width: 767px) {
-  .vets2015 .homelink {
-    margin: 0 auto;
-  }
 }
 .vets2015 .homelink a {
   font-family: 'Cinzel', serif;
@@ -3519,13 +3534,14 @@ a#memberCheckerLogout {
 .vets2015 .homelink a div {
   font-size: .8em;
 }
-.vets2015 .homelink .star-line {
-  height: 130px;
-}
-.vets2015 .homelink .star-line path,
-.vets2015 .homelink .star-line rect,
-.vets2015 .homelink .star-line line {
-  fill: #4b2e83;
+.vets2015 .star-line {
+  background-image: url(assets/vet_star_line_cs6.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
+  background-clip: border-box;
+  height: 30px;
+  width: 100%;
 }
 .uwaa-convio-wrapper .uwaa-wordmark {
   display: block;

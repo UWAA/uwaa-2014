@@ -24,6 +24,19 @@
         z-index: 1;
         opacity: 66%;
     }
+
+    &:after {
+        left:0;
+        height: 60px;
+
+    }
+
+
+     @media only screen and (max-width: @screen-xs-max) {
+        display: block;
+        height: 250px;
+
+    }
 }
 
 .covervid-wrapper {
@@ -32,11 +45,26 @@
     left: 0;
     width: 100%;
     height: 100%;
+
+    // Removes the video with the ratio of width to height is such that it loses its cover effect.
+    @media only screen and (max-width: 810px) {
+        video {
+            display: none;
+        }
+    }
+
+
 }
 
 
 h1.page-title {
     text-align: center;
+
+    @media only screen and (max-width: @screen-xs-max) {
+        margin: 10px 0 20px;
+
+    }
+
 }
 
 
@@ -56,7 +84,7 @@ h1.page-title {
 
     @media (max-width: @screen-xs-max) 
     {
-        margin: 0 auto;
+        // margin: 0 auto;
     };
 
 
@@ -75,17 +103,7 @@ h1.page-title {
         font-size: .8em;
         }
 
-    }
-
-    .star-line 
-    {
-        path, rect, line {
-            fill: @purple;
-        }
-        height: 130px;
-    }
-
-    
+    }    
     
 
     // @media (min-width: @screen-xs-min) {line-height: 1.1;};
@@ -97,6 +115,19 @@ h1.page-title {
     
 
 }
+
+  .star-line 
+    {
+
+        background-image: url(assets/vet_star_line_cs6.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+        background-clip: border-box;
+        height: 30px;
+        width: 100%;
+    }
+
 
 
 

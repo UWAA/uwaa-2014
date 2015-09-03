@@ -34,7 +34,7 @@ wp_enqueue_style('google-font-cinzel');
     <!-- Stuff for Purple Star Bit -->
 
     <div class="star-line">
-      <?php get_template_part('assets/vet-star', 'line.svg');?>
+      
     </div>
 
       <div class="uw-body-copy">
