@@ -2,9 +2,11 @@
 
 include(locate_template( 'partials/vets-header.php'));
 
-use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
-use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
-wp_enqueue_script('isotopeInit');
+
+// use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
+// use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
+// 
+// wp_enqueue_script('isotopeInit');
 wp_enqueue_script('covervid');
 
 wp_enqueue_style('google-font-cinzel');
@@ -13,7 +15,7 @@ wp_enqueue_style('google-font-cinzel');
 <div class="uw-hero-image vets-video-wrapper">  
   <div class="covervid-wrapper">
     <video class="covervid-video" autoplay loop>        
-        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/intro.mp4" type="video/mp4" poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Veterans.jpg">
+        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.mp4" type="video/mp4" poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Veterans.jpg">
     </video>
 </div>
 </div>
@@ -57,26 +59,24 @@ wp_enqueue_style('google-font-cinzel');
           
         ?>
         
-        <div id="isotope-canvas">
+        <!-- <div id="isotope-canvas"> -->
         <?php
-          $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-          $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-          // $veteransEventsGrid->renderToolbar('Veterans');          
-          $veteransEventsGrid->renderVeteransFilterToolbar();
+          // $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+          // $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+         
+          // $veteransEventsGrid->renderVeteransFilterToolbar();
         ?>
-            <div class="isotope tile">
+            <!-- <div class="isotope tile"> -->
             <?php
-            
-
-            $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
-            $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
+            // $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
+            // $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
             ?>
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
 
       </div>
 
-     --></div>   
+     </div>   
 
   </div>
 
