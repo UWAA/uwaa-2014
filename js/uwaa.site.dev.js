@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
     var currentPage = window.location.pathname;    
     var currentSearch = window.location.search;
     var isPreview = currentSearch.match(/preview/);
-    var path = '/veterans/';
+    var path = '/alumni/veterans/';
 
     if (currentPage === path || Array.isArray(isPreview)) {        
 
