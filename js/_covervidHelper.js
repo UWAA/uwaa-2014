@@ -1,11 +1,19 @@
 jQuery(document).ready(function($) {
 
-    var currentPage = window.location.pathname;
-    var path = '/veterans/';    
+    if(!$.isFunction($.fn.coverVid) ) {        
+        return;        
+    }
 
-    if (currentPage === path) {        
+    var currentPage = window.location.pathname;    
+    var currentSearch = window.location.search;
+    var isPreview = currentSearch.match(/preview/);
+    var path = '/veterans/';
+
+    if (currentPage === path || Array.isArray(isPreview)) {        
+
+
         $('.covervid-video').coverVid(670, 380);
-    }    
+    }
     
 });  
 
