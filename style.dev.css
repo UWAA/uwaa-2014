@@ -3532,7 +3532,9 @@ a#memberCheckerLogout {
   font-size: 1.6em;
 }
 .vets2015 .homelink a div {
-  font-size: .8em;
+  font-size: 28px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin-top: 15px;
 }
 .vets2015 .star-line {
   background-image: url(assets/vet_star_line_cs6.png);
