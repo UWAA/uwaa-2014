@@ -151,7 +151,7 @@ class Scripts
         'covervid' => array (
         'id'      => 'covervid',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/covervid/covervid.js',
-        'deps'    => array(),
+        'deps'    => array('jquery', 'uwaa.site'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false        

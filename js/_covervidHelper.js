@@ -1,12 +1,16 @@
 jQuery(document).ready(function($) {
 
-    var lazyVid = function() {
+    var currentPage = window.location.pathname;
+    var path = '/veterans/';    
+
+    if (currentPage === path) {        
         $('.covervid-video').coverVid(670, 380);
-    }
-    lazyVid();
-        // _.delay(lazyVid, 2000);  
+    }    
+    
+});  
 
     
-});
+    
+
 
     
