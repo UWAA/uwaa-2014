@@ -3,10 +3,10 @@
 include(locate_template( 'partials/vets-header.php'));
 
 
-use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
-use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
+// use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
+// use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
 // 
-wp_enqueue_script('isotopeInit');
+// wp_enqueue_script('isotopeInit');
 wp_enqueue_script('covervid');
 
 wp_enqueue_style('google-font-cinzel');
@@ -59,20 +59,20 @@ wp_enqueue_style('google-font-cinzel');
           
         ?>
         
-        <div id="isotope-canvas">
+        <!-- <div id="isotope-canvas"> -->
         <?php
-          $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-          $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+          // $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+          // $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
          
-          $veteransEventsGrid->renderVeteransFilterToolbar();
+          // $veteransEventsGrid->renderVeteransFilterToolbar();
         ?>
-            <div class="isotope tile">
+            <!-- <div class="isotope tile"> -->
             <?php
-            $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
-            $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
+            // $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
+            // $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
             ?>
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
 
       </div>
 
