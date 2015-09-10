@@ -109,22 +109,57 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
       return $this->alternateLink;
     }
     return $this->postURL;
-  }  
+  }
+
+  private function renderAbbreviatedMonth($date) {
+    $monthPattern = "/(nov|dec|oct)/i";
+    preg_match($monthPattern, $date, $monthMatch);
+    if(is_string($monthMatch[1])) {
+      return $monthMatch[1];
+    }   
+  }
+
+  private function renderDateNumerals($date) {    
+    $dayPattern = "/\b\d{1,2}(?=st|nd|rd|th|\b)/i";
+    preg_match($dayPattern, $date, $dayMatch);        
+    if(is_string($dayMatch[0])) {
+      return $dayMatch[0];
+    }
+  }
+
+  private function renderVetsDateCallout($vetsCalloutMonth, $vetsCalloutDateNumerals) {
+    if (is_string($vetsCalloutMonth)){
+      return '
+      <div class="uwaa-btn btn-slant-left btn-gold">
+        <div class="vets-callout-month">'.$vetsCalloutMonth.'</div>
+        <div class="vets-callout-date-numerals">'.$vetsCalloutDateNumerals.'</div>
+      </div>';
+    }
+    return;
+  }
 
 
-	public function buildTemplate(){
+	public function
+   buildTemplate(){
   $callout = $this->renderCallout();
   $image = $this->renderImage(true);
   $link = $this->determineAlternateLink();
   $date = $this->renderDate();
+
+  $vetsCalloutMonth = $this->renderAbbreviatedMonth($this->postDate);
+  $vetsCalloutDateNumerals = $this->renderDateNumerals($this->postDate);
+
+  // $dateCallout = $this->renderVetsDateCallout($vetsCalloutMonth, $vetsCalloutDateNumerals);
+
   // 
   
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide veterans-events">
 	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
-      $callout
+      $callout      
 		  $image
+      $dateCallout
     </div>
 		<div class="copy">		
 		<h4 class="title">$this->postTitle</h4>
