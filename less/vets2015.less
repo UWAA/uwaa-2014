@@ -125,10 +125,37 @@ h1.page-title {
         background-image: url(assets/vet_star_line_cs6.png);
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        background-size: 100%;
+        background-size: cover;
         background-clip: border-box;
         height: 30px;
         width: 100%;
+    }
+
+    .vets-callout-container{
+        top: auto;
+        right: auto;
+        left: 0;
+        bottom: 0;
+        text-transform: uppercase;
+        height: 57px;
+        box-shadow: none;
+        line-height: 1;
+        font-weight: 800;
+        width: 47px;
+
+        &:before {
+            height: 57px;
+            width: 20px;
+        }
+
+        .vets-callout-month {
+            font-size: 17px;
+        }
+
+        .vets-callout-date-numerals {
+            font-size: 37px;
+        }
+
     }
 
 

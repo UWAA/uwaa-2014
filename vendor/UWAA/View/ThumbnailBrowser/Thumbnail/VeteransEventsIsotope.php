@@ -130,10 +130,10 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
   private function renderVetsDateCallout($vetsCalloutMonth, $vetsCalloutDateNumerals) {
     if (is_string($vetsCalloutMonth)){
       return '
-      <div class="uwaa-btn btn-slant-left btn-gold">
+      <span class="uwaa-btn btn-slant-right btn-gold vets-callout-container">
         <div class="vets-callout-month">'.$vetsCalloutMonth.'</div>
         <div class="vets-callout-date-numerals">'.$vetsCalloutDateNumerals.'</div>
-      </div>';
+      </span>';
     }
     return;
   }
@@ -149,7 +149,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
   $vetsCalloutMonth = $this->renderAbbreviatedMonth($this->postDate);
   $vetsCalloutDateNumerals = $this->renderDateNumerals($this->postDate);
 
-  // $dateCallout = $this->renderVetsDateCallout($vetsCalloutMonth, $vetsCalloutDateNumerals);
+  $dateCallout = $this->renderVetsDateCallout($vetsCalloutMonth, $vetsCalloutDateNumerals);
 
   // 
   

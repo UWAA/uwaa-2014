@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
     if (Array.isArray(isVetsPage) || Array.isArray(isPreview)) {        
 
 
-        $('.covervid-video').coverVid(670, 380);
+        $('.covervid-video').coverVid(854, 480);
     }
     
 });  
