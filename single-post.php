@@ -15,6 +15,7 @@ if (has_category('Tall Regional Branding')) {
     include(locate_template('partials/chapter-header.php'));
   echo '</div>';
   } elseif (has_category('Veterans Week')) {
+    $vetsHome = get_site_url("/veterans/");
     wp_enqueue_style('google-font-cinzel');  
     include(locate_template('partials/vets-single-header.php'));
   }
@@ -79,6 +80,12 @@ else {
                     }
 
                 endwhile;
+
+              if (has_category('Veterans Week')) {
+                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-stories" color="purple" type="slant-right"]More Vets Stories[/uwaa-button]');
+                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-events" color="gold" type="slant-left"]More Vets Events[/uwaa-button]');
+              }
+              
             ?>
 
             <span class="next-page"><?php next_posts_link( 'Next page', '' ); ?></span>

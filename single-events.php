@@ -26,8 +26,12 @@ $noRegionalBranding = has_category('No Regional Branding');
 
  // if you have a featured image, put it in
  // 
- // 
- if ($finalSlug && $featureImage && !$noRegionalBranding) {
+if (has_category('Veterans Week')) {
+    $vetsHome = get_site_url("/veterans/");
+    wp_enqueue_style('google-font-cinzel');  
+    include(locate_template('partials/vets-single-header.php'));
+  }
+ elseif ($finalSlug && $featureImage && !$noRegionalBranding) {
   ?>
   <div class="uwaa-chapter-header">
     <div class="chapter-image-column" style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'chapterBrandingImage')?>');"></div>        
@@ -63,7 +67,8 @@ $noRegionalBranding = has_category('No Regional Branding');
   ?>
     <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
     <?php
-  } else {
+  } 
+  else {
     $defaultHeader = TRUE;
      get_template_part( 'header', 'image' ); 
    }
@@ -106,6 +111,11 @@ $noRegionalBranding = has_category('No Regional Branding');
                     if ( comments_open() || get_comments_number() ) {
                         comments_template('/comments.php');
                     }
+
+               if (has_category('Veterans Week')) {
+                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-stories" color="purple" type="slant-right"]More Vets Stories[/uwaa-button]');
+                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-events" color="gold" type="slant-left"]More Vets Events[/uwaa-button]');
+              }
 
             
             ?>
