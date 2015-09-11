@@ -3479,7 +3479,9 @@ a#memberCheckerLogout {
   background-image: url(assets/vet-star-large.svg);
   background-size: 31px 30px;
   z-index: 1;
-  opacity: 66%;
+  opacity: .6;
+  content: "";
+  width: 100%;
 }
 .vets2015 .vets-video-wrapper:after {
   left: 0;
@@ -3511,7 +3513,8 @@ a#memberCheckerLogout {
     margin: 10px 0 20px;
   }
 }
-.vets2015 .homelink {
+.vets2015 .homelink,
+.uwaa-vets-single-header .homelink {
   display: block;
   position: relative;
   text-align: center;
@@ -3522,7 +3525,8 @@ a#memberCheckerLogout {
   width: 320px;
   padding: 10px 20px;
 }
-.vets2015 .homelink a {
+.vets2015 .homelink a,
+.uwaa-vets-single-header .homelink a {
   font-family: 'Cinzel', serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -3531,7 +3535,8 @@ a#memberCheckerLogout {
   line-height: 1.1;
   font-size: 1.6em;
 }
-.vets2015 .homelink a div {
+.vets2015 .homelink a div,
+.uwaa-vets-single-header .homelink a div {
   font-size: 28px;
   font-family: 'Open Sans', Arial, sans-serif;
   margin-top: 15px;
@@ -3566,6 +3571,26 @@ a#memberCheckerLogout {
 }
 .vets2015 .vets-callout-container .vets-callout-date-numerals {
   font-size: 37px;
+}
+.uwaa-vets-single-header {
+  position: relative;
+}
+.uwaa-vets-single-header:before {
+  position: absolute;
+  top: 0;
+  height: 30px;
+  background-repeat: repeat-x;
+  background-image: url(assets/vet-star-large.svg);
+  background-size: 31px 30px;
+  z-index: 1;
+  opacity: .6;
+  content: "";
+  width: 100%;
+}
+.uwaa-vets-single-header .homelink {
+  position: absolute;
+  right: 0;
+  margin: 194px 0;
 }
 .uwaa-convio-wrapper .uwaa-wordmark {
   display: block;

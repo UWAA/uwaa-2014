@@ -6,15 +6,18 @@
 //@TODO  Make a better system for these communities headers
 $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
 if (has_category('Tall Regional Branding')) {
-  echo '<div class="uwaa-chapter-header profile">';
+    echo '<div class="uwaa-chapter-header profile">';
   //TODO rename the profile class so the LESS matches the category
-  include(locate_template('partials/profile-header.php'));
+    include(locate_template('partials/profile-header.php'));
+    echo '</div>';
+  } elseif (has_category('Short Regional Branding')) {
+    echo '<div class="uwaa-chapter-header">';
+    include(locate_template('partials/chapter-header.php'));
   echo '</div>';
-} elseif (has_category('Short Regional Branding')) {
-  echo '<div class="uwaa-chapter-header">';
-  include(locate_template('partials/chapter-header.php'));
-  echo '</div>';
-}
+  } elseif (has_category('Veterans Week')) {
+    wp_enqueue_style('google-font-cinzel');  
+    include(locate_template('partials/vets-single-header.php'));
+  }
  elseif ($featureImage) {
     ?>
   <div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
