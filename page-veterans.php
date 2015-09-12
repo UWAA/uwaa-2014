@@ -33,9 +33,7 @@ wp_enqueue_style('google-font-cinzel');
     
     <!-- Stuff for Purple Star Bit -->
 
-    <div class="star-line">
-      
-    </div>
+    <div class="star-line"></div>
 
       <div class="uw-body-copy">
 

@@ -113,8 +113,8 @@ if (has_category('Veterans Week')) {
                     }
 
                if (has_category('Veterans Week')) {
-                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-stories" color="purple" type="slant-right"]More Vets Stories[/uwaa-button]');
-                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-events" color="gold" type="slant-left"]More Vets Events[/uwaa-button]');
+                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-stories" color="purple" type="slant-right"]More Vet Stories[/uwaa-button]');
+                echo do_shortcode('[uwaa-button url="/veterans?filter=veterans-events" color="gold" type="slant-left"]More Vet Events[/uwaa-button]');
               }
 
             
@@ -134,8 +134,16 @@ if (has_category('Veterans Week')) {
     ?>
     </div>
 
-
   </div>
+
+  <?php
+    if (has_category('Veterans Week')) {
+    ?>
+      <div class="star-line"></div>
+    <?php
+    } 
+    ?>
+
 
 </div>
 

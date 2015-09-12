@@ -3493,6 +3493,9 @@ a#memberCheckerLogout {
     height: 250px;
   }
 }
+.vets2015 #isotope-canvas {
+  margin-top: 50px;
+}
 .vets2015 .covervid-wrapper {
   position: absolute;
   top: 0;
@@ -3537,18 +3540,25 @@ a#memberCheckerLogout {
 }
 .vets2015 .homelink a div,
 .uwaa-vets-single-header .homelink a div {
-  font-size: 28px;
+  font-size: 25px;
   font-family: 'Open Sans', Arial, sans-serif;
   margin-top: 15px;
 }
-.vets2015 .star-line {
-  background-image: url(assets/vet_star_line_cs6.png);
+.vets2015 .star-line,
+.single .star-line {
+  background-image: url(assets/vets-star-line.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: cover;
+  background-size: 100%;
   background-clip: border-box;
   height: 30px;
   width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .vets2015 .star-line,
+  .single .star-line {
+    background-size: 175%;
+  }
 }
 .vets2015 .vets-callout-container {
   top: auto;
