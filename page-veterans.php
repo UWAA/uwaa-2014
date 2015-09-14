@@ -14,8 +14,9 @@ wp_enqueue_style('google-font-cinzel');
 
 <div class="uw-hero-image vets-video-wrapper">  
   <div class="covervid-wrapper">
-    <video class="covervid-video" autoplay loop>        
-        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.mp4" type="video/mp4" poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Veterans.jpg">
+    <video class="covervid-video" autoplay muted poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Veterans.jpg">
+        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.webm" type="video/webm" >
+        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.mp4" type="video/mp4" >
     </video>
 </div>
 </div>
