@@ -3,8 +3,8 @@
 include(locate_template( 'partials/vets-header.php'));
 
 
-use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
-use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
+// use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
+// use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
 
 wp_enqueue_script('isotopeInit');
 wp_enqueue_script('covervid');
@@ -14,13 +14,13 @@ wp_enqueue_style('google-font-cinzel');
 
 <div class="uw-hero-image vets-video-wrapper">  
   <div class="covervid-wrapper">
-    <video class="covervid-video" autoplay muted poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Veterans.jpg">
+    <video class="covervid-video" id="waving-flag-video" muted poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Veterans.jpg">
         <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.webm" type="video/webm" >
         <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.mp4" type="video/mp4" >
     </video>
 </div>
 </div>
-<a href="#"><div class="homelink"><a href="#">Veterans<br>Appreciation<br>Week<br><div>nov. 3-11, 2015</div></a></div></a>
+<a href="#"><div class="homelink"><a href="#">Veterans<br>Appreciation<br>Week<br><div>nov. 1-11, 2015</div></a></div></a>
 
 <div class="container uw-body">
 
@@ -58,20 +58,20 @@ wp_enqueue_style('google-font-cinzel');
           
         ?>
         
-        <div id="isotope-canvas">
+        <!-- <div id="isotope-canvas"> -->
         <?php
-          $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-          $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+          // $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+          // $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
          
-          $veteransEventsGrid->renderVeteransFilterToolbar();
+          // $veteransEventsGrid->renderVeteransFilterToolbar();
         ?>
-            <div class="isotope tile">
+            <!-- <div class="isotope tile"> -->
             <?php
-            $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
-            $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
+            // $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
+            // $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
             ?>
-            </div>
-        </div>
+            <!-- </div> -->
+        <!-- </div> -->
 
       </div>
 

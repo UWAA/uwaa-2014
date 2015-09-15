@@ -3479,7 +3479,7 @@ a#memberCheckerLogout {
   background-image: url(assets/vet-star-large.svg);
   background-size: 31px 30px;
   z-index: 1;
-  opacity: .6;
+  opacity: .5;
   content: "";
   width: 100%;
 }
@@ -3502,6 +3502,9 @@ a#memberCheckerLogout {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.vets2015 .covervid-wrapper #waving-flag-video {
+  display: none;
 }
 @media only screen and (max-width: 810px) {
   .vets2015 .covervid-wrapper video {
@@ -3593,7 +3596,7 @@ a#memberCheckerLogout {
   background-image: url(assets/vet-star-large.svg);
   background-size: 31px 30px;
   z-index: 1;
-  opacity: .6;
+  opacity: .5;
   content: "";
   width: 100%;
 }
