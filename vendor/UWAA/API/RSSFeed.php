@@ -161,7 +161,7 @@ class RSSFeed
 
 
         if(!in_array($geoTags[0]->slug, $this->regionalTagList) && is_array($geoTags)){
-            $this->addDefaultRegionalThumbnail();   
+            $this->addFeaturedPostThumbnailToFeed();
             return;
         }
 
