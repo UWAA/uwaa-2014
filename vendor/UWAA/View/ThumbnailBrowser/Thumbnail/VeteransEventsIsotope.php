@@ -23,13 +23,12 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $isPartnerEvent;
     protected $postImageAltText;
 
-    public function __construct()
+    public function __construct($isTest = false)
     {
         $this->args = $this->setArguments();
-        
+        $this->isTest = $isTest;
 
         $this->UI = new UI;
-
     }
 
       public function extractPostInformation($query) 
@@ -87,7 +86,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
           'terms'    => array( 'veterans-week'),
           'operator'  => 'IN'
           )
-      ), //End tax query 
+      ), //End tax query      
       'posts_per_page' => -1,
       'meta_key' => 'mb_start_date',
       'meta_query' => array(      
@@ -99,6 +98,11 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
           )
       ),
       );
+
+    if ($this->isTest = true) {         
+      $testPostStatusArray = array( 'pending', 'draft', 'future', 'publish' );
+      $args['post_status'] = $testPostStatusArray;      
+    }
     
     // var_dump($args);
     return $args;

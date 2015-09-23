@@ -67,8 +67,8 @@ wp_enqueue_style('google-font-cinzel');
         ?>
             <div class="isotope tile">
             <?php
-            $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
-            $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
+            $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope(true));
+            $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope(true));
             ?>
             </div>
         </div>

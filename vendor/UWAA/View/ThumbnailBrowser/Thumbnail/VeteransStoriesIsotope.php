@@ -23,10 +23,10 @@ class VeteransStoriesIsotope extends ThumbnailBrowser implements Thumbnail
     protected $isPartnerEvent;
     protected $postImageAltText;
 
-    public function __construct()
+    public function __construct($istTest = false)
     {
         $this->args = $this->setArguments();
-        
+        $this->isTest = $istTest;
 
         $this->UI = new UI;
 
@@ -81,7 +81,12 @@ class VeteransStoriesIsotope extends ThumbnailBrowser implements Thumbnail
       'posts_per_page' => -1,
       );
     
-    // var_dump($args);
+    
+  if ($this->isTest = true) {         
+      $testPostStatusArray = array( 'pending', 'draft', 'future', 'publish' );
+      $args['post_status'] = $testPostStatusArray;      
+    }
+
     return $args;
   }
 
