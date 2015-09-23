@@ -43,6 +43,7 @@ class RegionalTags
             'orange-county',
             'palm-springs',
             'philadelphia',
+            'puget-sound',
             'phoenix',
             'oregon',
             'reno',
@@ -51,6 +52,7 @@ class RegionalTags
             'san-diego',
             'singapore',
             'south-carolina',
+            'spain',
             'spokane',
             'st-louis',
             'sun-valley',
@@ -58,6 +60,7 @@ class RegionalTags
             'thailand',
             'tri-cities',
             'tucson',
+            'uk',
             'washington-dc',
             'wenatchee'
             );    
