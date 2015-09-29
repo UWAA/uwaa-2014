@@ -29,6 +29,7 @@ class RegionalTags
             'china',
             'dallas-ft-worth',
             'denver',
+            'eastern-washington',
             'ft-lauderdale',
             'hong-kong',
             'honolulu',
