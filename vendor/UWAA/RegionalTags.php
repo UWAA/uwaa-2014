@@ -66,6 +66,7 @@ class RegionalTags
             'tucson',
             'uae',
             'uk',
+            'vancouver',
             'washington',
             'washington-dc',
             'wenatchee'
