@@ -2,7 +2,7 @@
   // Start the Loop.
   while ( have_posts() ) : the_post(); 
 
-  $isPartnerEvent = get_post_meta($post->ID, 'mb_isPartnerEvent', true);
+$isPartnerEvent = get_post_meta($post->ID, 'mb_isPartnerEvent', true);
 
 if ($isPartnerEvent) {
   $url = apply_filters('remove_cms', get_post_meta($post->ID, 'mb_alternate_link', true));

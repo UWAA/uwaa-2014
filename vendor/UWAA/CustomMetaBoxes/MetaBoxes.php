@@ -560,7 +560,23 @@ class MetaBoxes
                         'type'=> 'textarea',
                         'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
                         ),
-                            
+                        array(
+                        'name' => 'Partner Content Toggle',
+                        'id'=> 'isPartnerEvent',
+                        'type'=> 'select',
+                        'default' => false,
+                        'options' => array(
+                                false => 'Alumni/UWAA Content', 
+                                true => 'Partner Content'
+                                ),
+                        'desc'=> 'Use this to make a limited story post that will only show up on the story page, but doesn\'t need a full buildout.'
+                    ),
+                    array(
+                        'name' => 'Alternate Link',
+                        'id'=> 'alternate_link',
+                        'type'=> 'text',
+                        'desc'=> 'If this content should link to an external page, write the URL here. Leave this blank for any content/story that stays on our site.'
+                        )                            
                     )
             )
             );
