@@ -24,6 +24,7 @@ class RegionalTags
             'bellingham',
             'boise',
             'boston',
+            'brazil',
             'chicago',
             'china',
             'dallas-ft-worth',
@@ -33,6 +34,7 @@ class RegionalTags
             'honolulu',
             'houston',
             'indianapolis',
+            'india',
             'indonesia',
             'japan',
             'kailua-kona',
@@ -43,6 +45,7 @@ class RegionalTags
             'orange-county',
             'palm-springs',
             'philadelphia',
+            'peru',
             'puget-sound',
             'phoenix',
             'oregon',
@@ -60,7 +63,9 @@ class RegionalTags
             'thailand',
             'tri-cities',
             'tucson',
+            'uae',
             'uk',
+            'washington',
             'washington-dc',
             'wenatchee'
             );    
