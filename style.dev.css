@@ -3950,7 +3950,7 @@ Typography
   padding: 10px 30px 10px 10px;
   background: #b7a57a;
   /* Old browsers */
-  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50%, #b7a57a;
+  background: url(https://depts.washington.edu/alumni/convio_assets/check.png) no-repeat 100% 50% #b7a57a;
   border: none;
   border-color: none;
 }
