@@ -33,8 +33,8 @@ get_header();
           ?>
           <h1><?php the_title() ?></h1>
 
-          <!-- <h3>Spring Membership Drive</h3>
-          <h5>Become a new member by March 31, 2015 to be part of the excitement!</h5> -->
+          <h3>Fall Membership Drive</h3>
+          <h5>Become a new member by October 31, 2015 to be part of the excitement!</h5>
 
           <?php
 

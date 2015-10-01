@@ -535,13 +535,7 @@ class MetaBoxes
                 'pages' => array('post'),  
                 'context' => 'normal',
                 'priority' => 'high',
-                'fields' => array(                    
-                        array(
-                        'name' => 'Alternate Link',
-                        'id'=> 'alternate_link',
-                        'type'=> 'text',
-                        'desc'=> 'Enter a URL here if you wish to have a superhero that and have it link to an alternate destination.  Relative URLs(/alumni/definealumni) are supported.'
-                        ),
+                'fields' => array(                                           
                         array(
                         'name' => 'Callout Box',
                         'id'=> 'thumbnail_callout',
@@ -575,7 +569,7 @@ class MetaBoxes
                         'name' => 'Alternate Link',
                         'id'=> 'alternate_link',
                         'type'=> 'text',
-                        'desc'=> 'If this content should link to an external page, write the URL here. Leave this blank for any content/story that stays on our site.'
+                        'desc'=> 'If this content should link to an external page, write the URL here. Leave this blank for any content/story that stays on our site.  This is also used for superhero redirects. Relative URLs(/alumni/definealumni) are supported.'
                         )                            
                     )
             )
