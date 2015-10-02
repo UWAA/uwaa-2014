@@ -22,6 +22,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $alternateLink;
     protected $isPartnerEvent;
     protected $postImageAltText;
+    protected $isTest;
 
     public function __construct($isTest = false)
     {
@@ -99,7 +100,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
       ),
       );
 
-    if ($this->isTest = true) {         
+    if ($this->isTest == true) {         
       $testPostStatusArray = array( 'pending', 'draft', 'future', 'publish' );
       $args['post_status'] = $testPostStatusArray;      
     }
