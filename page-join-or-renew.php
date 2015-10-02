@@ -34,7 +34,7 @@ get_header();
           <h1><?php the_title() ?></h1>
 
           <h3>Fall Membership Drive</h3>
-          <h5>Become a new member by October 31, 2015 to be part of the excitement!</h5>
+          <h5>Become a new member by October 31, 2015 to be part of the excitement! Through the end of October, our long-time partner BECU has pledged to match your member dues with a gift in support of student scholarships and higher education in the state of Washington.</h5>
 
           <?php
 
