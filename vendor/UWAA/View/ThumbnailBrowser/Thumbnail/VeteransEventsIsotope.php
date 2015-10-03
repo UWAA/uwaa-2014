@@ -10,6 +10,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
     
 
     private $UI;
+    private $isTest;
 
     //Properties Used to Build The Thumbnail For the Homepage
     protected $postTitle;
@@ -22,15 +23,17 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $alternateLink;
     protected $isPartnerEvent;
     protected $postImageAltText;
-    protected $isTest;
+    
 
-    public function __construct($isTest = false)
+    public function __construct($isTest=FALSE)
     {
-        $this->args = $this->setArguments();
+        
         $this->isTest = $isTest;
-
+        $this->args = $this->setArguments();             
         $this->UI = new UI;
     }
+   
+
 
       public function extractPostInformation($query) 
   {
@@ -74,7 +77,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
      	return $termArray;
      }
 
-  private function setArguments()
+  protected function setArguments()
   {
     $args = array (
       'post_type' => array('events'),
@@ -100,12 +103,12 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
       ),
       );
 
-    if ($this->isTest == true) {         
+    
+    if ($this->isTest == TRUE) {         
       $testPostStatusArray = array( 'pending', 'draft', 'future', 'publish' );
       $args['post_status'] = $testPostStatusArray;      
-    }
+    }   
     
-    // var_dump($args);
     return $args;
   }
 

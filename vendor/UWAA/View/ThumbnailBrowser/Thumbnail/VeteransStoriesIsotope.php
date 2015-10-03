@@ -24,10 +24,11 @@ class VeteransStoriesIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postImageAltText;
     protected $isTest;
 
-    public function __construct($istTest = false)
+    public function __construct($isTest = false)
     {
-        $this->args = $this->setArguments();
         $this->isTest = $isTest;
+        $this->args = $this->setArguments();
+        
 
         $this->UI = new UI;
 
@@ -83,7 +84,7 @@ class VeteransStoriesIsotope extends ThumbnailBrowser implements Thumbnail
       );
     
     
-  if ($this->isTest == true) {         
+  if ($this->isTest == TRUE) {         
       $testPostStatusArray = array( 'pending', 'draft', 'future', 'publish' );
       $args['post_status'] = $testPostStatusArray;      
     }
