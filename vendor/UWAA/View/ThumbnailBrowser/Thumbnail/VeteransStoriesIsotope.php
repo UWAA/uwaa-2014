@@ -71,7 +71,7 @@ class VeteransStoriesIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => array('post'),      
-      'order' => 'ASC',            
+      'order' => 'DESC',            
       'tax_query' => array(                
         array(
           'taxonomy' => 'category',
