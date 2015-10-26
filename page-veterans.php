@@ -20,7 +20,7 @@ wp_enqueue_style('google-font-cinzel');
     </video>
 </div>
 </div>
-<a href="#"><div class="homelink"><a href="#">Veterans<br>Appreciation<br>Week<br><div>nov. 1-11, 2015</div></a></div></a>
+<a href="#"><div class="homelink"><a href="#">Veterans<br>Appreciation<br>Week<br><div>nov. 1-12, 2015</div></a></div></a>
 
 <div class="container uw-body">
 
