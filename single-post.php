@@ -108,6 +108,7 @@ else {
     <div class="col-md-4 uw-sidebar">
     <?php 
 
+    if (!is_single("uw-impact-higher-education-survey")) {
     new \UWAA\View\Pagination('post', get_the_ID());
 
     the_widget("UWAA\Widgets\SidebarPullQuote");
@@ -115,6 +116,7 @@ else {
     the_widget("UWAA\Widgets\SocialSidebar");
 
     the_widget("UWAA\Widgets\SidebarFeaturedPost");
+    }    
         
     ?>
     </div>
