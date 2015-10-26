@@ -108,7 +108,7 @@ else {
     <div class="col-md-4 uw-sidebar">
     <?php 
 
-    if (!is_single("uw-impact-higher-education-survey")) {
+    if (!is_single(array('UW Impact higher education survey', 'uw-impact-higher-education-survey', '938', '9502'))) {
     new \UWAA\View\Pagination('post', get_the_ID());
 
     the_widget("UWAA\Widgets\SidebarPullQuote");
