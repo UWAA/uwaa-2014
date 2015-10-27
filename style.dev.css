@@ -1372,7 +1372,9 @@ div.map-logo.southern-california,
 div.map-logo.northern-california {
   background-position: 50% -179px;
 }
-div.map-logo.china {
+div.map-logo.china,
+div.map-logo.shanghai,
+div.map-logo.beijing {
   background-position: 50% -223px;
 }
 div.map-logo.denver {
@@ -1508,6 +1510,10 @@ div.map-logo.vancouver {
 }
 div.map-logo.wenatchee {
   background-position: 50% -1719px;
+}
+div.map-logo.switzerland,
+div.map-logo.zurich {
+  background-position: 50% -1763px;
 }
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 5px;
