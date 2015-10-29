@@ -3611,6 +3611,13 @@ a#memberCheckerLogout {
   right: 0;
   margin: 194px 0;
 }
+.postid-9553 .uw-breadcrumbs li.current span {
+  white-space: normal;
+  position: relative;
+  top: 7px;
+  padding-right: 70px;
+  line-height: 1.2;
+}
 .uwaa-convio-wrapper .uwaa-wordmark {
   display: block;
   position: absolute;
