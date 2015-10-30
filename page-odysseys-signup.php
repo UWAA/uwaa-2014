@@ -1,7 +1,7 @@
 <?php
 
 //TODO -refactor Do we want this logic here? 
-$tourName = $_GET['tourName'];
+$tourName = preg_replace('/%2526%25238217%253B/', "%27", esc_js($_GET['tourName'])); // Fix for URL encoding issues
 $tourURL = esc_js($_GET['tourURL']);
 $tourDeparture = esc_js($_GET['tourDepartureDate']);
 
