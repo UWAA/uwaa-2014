@@ -1,7 +1,7 @@
 <?php
 
 //TODO -refactor Do we want this logic here? 
-$tourName = preg_replace('/%2526%25238217%253B/', "%27", esc_js($_GET['tourName'])); // Fix for URL encoding issues
+$tourName = preg_replace('/%26%238217%3B/', "%27", esc_js($_GET['tourName'])); // Fix for URL encoding issues
 $tourURL = esc_js($_GET['tourURL']);
 $tourDeparture = esc_js($_GET['tourDepartureDate']);
 
@@ -61,7 +61,7 @@ var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s
 })(document, 'script');</script>
      
 
-     
+   
 
          
 
