@@ -37,7 +37,9 @@ class OdysseySignupButton
             }
         }
 
-        $url = get_bloginfo('url') . '/travel/odysseys-signup?tourName=' . urlencode(preg_replace("/'/", "%27", get_the_title()) ) . '&tourURL=' . get_permalink() . '&tourDepartureDate=' . get_post_meta(get_the_id(), 'mb_start_date', true);
+        // Production is double-encoding the URL... 
+        // $url = get_bloginfo('url') . '/travel/odysseys-signup?tourName=' . urlencode(preg_replace("/'/", "%27", get_the_title()) ) . '&tourURL=' . get_permalink() . '&tourDepartureDate=' . get_post_meta(get_the_id(), 'mb_start_date', true);
+        $url = get_bloginfo('url') . '/travel/odysseys-signup?tourName=' . get_the_title() . '&tourURL=' . get_permalink() . '&tourDepartureDate=' . get_post_meta(get_the_id(), 'mb_start_date', true);
 
         if (property_exists($attributes, 'small')){
             array_push($classes, 'btn-sm');
@@ -51,7 +53,7 @@ class OdysseySignupButton
         $class_string = implode($classes, ' ');        
 
          if(empty($content)){
-            return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s" %s>book trip</a></div>', $class_string, $color, $url, $target);            
+            return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s" %s>book trip</a></div>', $class_string, $color, $url, $target);
             return;
         } 
         return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s" %s>%s</a></div>', $class_string, $color, $url, $target, $content);
