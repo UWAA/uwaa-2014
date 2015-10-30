@@ -1,7 +1,7 @@
 <?php
 
 //TODO -refactor Do we want this logic here? 
-$tourName = esc_js($_GET['tourName']);
+$tourName = $_GET['tourName'];
 $tourURL = esc_js($_GET['tourURL']);
 $tourDeparture = esc_js($_GET['tourDepartureDate']);
 
