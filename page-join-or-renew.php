@@ -33,8 +33,8 @@ get_header();
           ?>
           <h1><?php the_title() ?></h1>
 
-          <h3>Fall Membership Drive</h3>
-          <h5>Right now is the best time to join! Become a member by October 31, 2015 and get a free gift -- a UW alumni license plate frame!</h5>
+          <!-- <h3>Fall Membership Drive</h3> -->
+          <!-- <h5>Right now is the best time to join! Become a member by October 31, 2015 and get a free gift -- a UW alumni license plate frame!</h5> -->
 
           <?php
 
