@@ -18,6 +18,7 @@ class Utilities
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
         add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
         add_action( 'save_post', array($this, 'excludePreliminaryandMinorFromSearch'), 20 );
+        add_filter('pre_get_shortlink', array($this, 'returnUWFriendlyLink'), 10, 4);
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -174,7 +175,23 @@ class Utilities
     exit();
 }
 
+public function returnUWFriendlyLink($shortlink, $id, $context) {
+    
+    if ( 'query' == $context && is_singular( 'tours' ) || is_singular( 'events' ) || is_singular( 'chapters' ) || is_singular( 'benefits' ) ) {
+ 
+        
+        $post_id = get_queried_object_id();
+ 
+    }
+    elseif ( 'post' == $context ) {
+ 
+        // If context is post use the passed $id
+        $post_id = $id;
+ 
+    }
 
+    return preg_replace('/\/cms\//', '/', $shorlink);
+}
  
 
 
