@@ -33,10 +33,20 @@ class Styles
           'version' => '',
           'admin'   => true
       ),
+       'uwaa_admin' => array(
+          'id'      => 'uwaa_admin',
+          'url'     => get_bloginfo('stylesheet_directory') . '/admin.css',
+          'deps'    => array(),
+          'version' => '',
+          'admin'   => true
+      ),
 
     );
 
+    
+
     add_action( 'wp_enqueue_scripts', array( $this, 'uw_register_default_styles' ) );
+    add_action( 'admin_head', array( $this, 'uw_enqueue_admin_styles' ) );
 
   }
 
@@ -46,7 +56,7 @@ class Styles
       {
         $style = (object) $style;
 
-        wp_register_style(
+        wp_enqueue_style(
           $style->id,
           $style->url,
           $style->deps,
@@ -54,6 +64,33 @@ class Styles
         );
 
       }
+
+  }
+
+  function uw_enqueue_admin_styles()
+  {
+    if ( ! is_admin() )
+      return;
+
+    foreach ( $this->STYLES as $style )
+    {
+
+      $style = (object) $style;
+
+      if ( array_key_exists( 'admin', $style)
+            && $style->admin )
+      {
+        wp_register_style(
+          $style->id,
+          $style->url,
+          $style->deps,
+          $style->version
+        );
+
+        wp_enqueue_style( $style->id );
+      }
+
+    }
 
   }
 

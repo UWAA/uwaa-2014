@@ -75,7 +75,8 @@ class CustomPostData {
                 echo $lookup[is_array($type) ? $type[0] : $type];
 
                 if($id =='mb_80_character_excerpt'){
-                    echo '&nbsp;<span id="text-area-limit"></span><br/>';
+                    echo '&nbsp;<span id="text-area-limit"></span>';
+                    echo "<a href=\"#\" class=\"button button-small\" id=\"copy-to-excerpt\">Copy to Excerpt</a></br>";
                 }
 
 

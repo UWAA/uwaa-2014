@@ -111,9 +111,15 @@ gulp.task('less', function () {
     .on('error', catchErrors)     
     .pipe(gulp.dest('./'));
 
-    gulp.src('./less/gradpack/gradpack.less')
-     .pipe(header(banner, { pkg : pkg } ))
+    gulp.src('./less/gradpack/gradpack.less')     
     .pipe(less())
+    .pipe(minifyCss())
+    .on('error', catchErrors)     
+    .pipe(gulp.dest('./'));
+
+    gulp.src('./less/admin/admin.less')     
+    .pipe(less())
+    .pipe(minifyCss())
     .on('error', catchErrors)     
     .pipe(gulp.dest('./'));
 

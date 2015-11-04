@@ -31,14 +31,28 @@
                 $('#text-area-limit').css({
                     color: 'green'                    
                 });
+            };
+
+            if (text_remaining < 10 && text_remaining > 0) {
+                $('#text-area-limit').css({
+                    color: 'green'                    
+                });
+                $('#text-area-limit').html(text_remaining + ' characters remaining.' + ' Careful there... Getting pretty close.'); 
             }
 
 
             if (text_remaining < -10) {
                 $('#text-area-limit').html(text_remaining + ' characters remaining.' + '  Are you serious?  COME ON!'); 
             }
-      });
+        });
+        
+        $("#copy-to-excerpt").click(function() {
+            var $currentExcerpt = $("textarea[name='mb_80_character_excerpt']").val()
+            $("#excerpt").val($currentExcerpt);            
+            return false;
+
+        });
 
     });
-  
+
 })(jQuery);
