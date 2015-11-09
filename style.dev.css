@@ -3537,6 +3537,12 @@ a#memberCheckerLogout {
   width: 320px;
   padding: 10px 20px;
 }
+@media (max-width: 767px) {
+  .vets2015 .homelink,
+  .uwaa-vets-single-header .homelink {
+    display: none;
+  }
+}
 .vets2015 .homelink a,
 .uwaa-vets-single-header .homelink a {
   font-family: 'Cinzel', serif;
