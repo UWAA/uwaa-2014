@@ -19,6 +19,7 @@ class Utilities
         add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
         add_action( 'save_post', array($this, 'excludePreliminaryandMinorFromSearch'), 20 );
         add_filter('get_shortlink', array($this, 'returnUWFriendlyLink'), 10, 4);
+        add_filter('get_sample_permalink_html', array($this, 'addGetPermalinkButton'), 5, 2);
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -193,8 +194,26 @@ public function returnUWFriendlyLink($shortlink, $id, $context) {
     }
 
 
-    $shortlink = preg_replace('/\/cms\//', '/', $shortlink);   
+    $shortlink = FALSE;
     return $shortlink;
+}
+
+public function addGetPermalinkButton($arg, $post_id) {
+
+    if(!is_admin()) {
+        return;
+
+    }
+
+    $script = "prompt(&#39;URL:&#39;, jQuery('#no-cms-permalink').val()); return false;";
+
+    $arg .= "<input id=\"no-cms-permalink\" type=\"hidden\" value=\"".preg_replace('/\/cms\//', '/', get_permalink())."\" />";
+
+    $arg .= "<a href=\"#\" id='get-permalink-btn'  class='button button-small' onclick=\"".$script."\">Get Permalink</a>\n";
+
+    return $arg;
+
+
 }
  
 
