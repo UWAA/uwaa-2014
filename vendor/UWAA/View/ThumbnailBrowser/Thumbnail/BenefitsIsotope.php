@@ -90,7 +90,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
 		  $image
     </div>
 		<div class="copy">		
-		<h4>$this->postTitle</h4>
+		<h4 class="title">$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
 		<p>$this->postExcerpt</p>
     <a class="link-arrow" href="$link">

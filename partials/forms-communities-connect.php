@@ -1,6 +1,6 @@
 
 <div id="communities-signup" class="widget">
-<h2 class="widgettitle">Get Chapter Updates</h2>
+<h2 class="widgettitle">Join email list</h2>
 <form id="form5" name="form5" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
       action="https://uwalum.wufoo.com/forms/s1f7nurb1vdx5bp/#public">
 
