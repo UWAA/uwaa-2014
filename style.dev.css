@@ -3879,6 +3879,9 @@ a#memberCheckerLogout {
     height: 34px;
   }
 }
+.uwra-convio-wrapper a.uwaa-wordmark {
+  background: url(https://depts.washington.edu/alumni/convio_assets/UWRA_Logo_RegPage.svg) 50% 50% no-repeat;
+}
 .uwaa-convio-membership {
   /*
 Typography
