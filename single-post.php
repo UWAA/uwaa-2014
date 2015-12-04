@@ -68,7 +68,7 @@ else {
                 <h6 class="intro-head"> <?php echo get_post_meta($post->ID, 'mb_thumbnail_subtitle', true) ?></h6>
 
                 <h1>
-                  <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title() ?></a>
+                  <?php the_title() ?>
                 </h1>
 
 
