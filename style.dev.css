@@ -3624,6 +3624,9 @@ a#memberCheckerLogout {
   padding-right: 70px;
   line-height: 1.2;
 }
+.uwaa-convio-wrapper A:link {
+  color: #0088dd;
+}
 .uwaa-convio-wrapper .uwaa-wordmark {
   display: block;
   position: absolute;
