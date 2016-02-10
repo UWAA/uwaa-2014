@@ -39,6 +39,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
                 </fieldset>
             </form>
             <div id="form-message"></div>
+            <div id="error-message"></div>
             </div>
 
 

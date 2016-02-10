@@ -8,7 +8,8 @@ $('input#memberCheckerLogout').on('click', function() {
 
 $('form#memberloginForm').on('submit', function(event) {
 // @TODO  Pull  canvas stuff.  Here for debugging
-var canvas = $('#form-message'),
+    var canvas = $('#form-message'),
+    errorMessage = $('#error-message'),
     form = $(this);   
 
      $.ajax({            
@@ -24,11 +25,12 @@ var canvas = $('#form-message'),
                     location.reload();
                 } 
                 canvas.html(data.message);
+                errorMessage.html(data.errorMessage);
                     
             },
             //Remove for prod @TODO
             error: function(data){                
-                canvas.html(data);
+                canvas.html(data.error);
            
             }
         });

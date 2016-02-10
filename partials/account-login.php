@@ -10,7 +10,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
         if ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == false) {
             echo 'Welcome back '.esc_html($UWAA->Memberchecker->session->get('firstName')).'';
         } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {            
-            $UWAA->Memberchecker->renderDetails();
+            $UWAA->Memberchecker->renderDetails();  
             
         } else {
         ?>
@@ -34,6 +34,7 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
             </form>
 
             <div id="form-message"></div>
+            <div id="error-message"></div>
 
             <!-- <div class="accordion">
                 <div class="panel closed">
