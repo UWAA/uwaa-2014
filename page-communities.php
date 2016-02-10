@@ -64,14 +64,13 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
         $communitiesSidebarMenu->renderCommunitiesChapterMenu(); 
         dynamic_sidebar( 'communities' );
+
+        the_widget("UWAA\Widgets\SidebarSeeYourChapter");
         
 
     ?>
 
-      <div id="no-chapter-widget" class="widget widget_text">
-          <h2 class="widgettitle">Don&rsquo;t See Your Chapter?</h2>
-          <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="mailto:alumni2@uw.edu?subject=Online%20Chapter%20Inquiry">Let Us Know!</a></div>
-        </div>
+     
       </div>
 
     </div>
