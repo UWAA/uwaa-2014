@@ -57,8 +57,8 @@ class RequestHandler
     switch ($contentSection) {
       case 'tours':
         switch ($dataType) {
-          case 'geojson':
-            $query = $this->getWPObjectTours('tours');
+          case 'geojson':             
+            $query = $this->getWPObject('tours');
             $endpoint = new API;
             $endpoint->buildEndpoint($query, new DataEndpoint\GeoJSON\ToursMap);            
             break;
@@ -74,7 +74,7 @@ class RequestHandler
 
       case 'communities':
         switch ($dataType) {
-          case 'geojson':
+          case 'geojson':            
             $query = $this->getWPObject('chapters');
             $endpoint = new API;
             $endpoint->buildEndpoint($query, new DataEndpoint\GeoJSON\ChapterMap);            
@@ -93,8 +93,7 @@ class RequestHandler
         echo 'Benefits Request';
         break;
 
-      case 'memberValidator':
-        // echo 'Memberchecker';
+      case 'memberValidator':        
           switch ($dataType) {
             case 'login':
               $this->memberChecker->callMemberChecker();
@@ -123,51 +122,52 @@ class RequestHandler
 
 
 
-//TODO- Investigate whether or not there should be a cache check here or if we don't need to worry about it.
-//TODO- Not Random, add more args to pass through.
-// * Get a WordPress Object and 
+
+
+// * Get a WordP
 //   * @param string $postType List of current public query vars
 //   * @return array $arrayToMakeIntoJSON 
   
-    private function getWPObject($postType) {
+    private function getWPObject($postType) {              
+        $transientName = $postType . "TransientQuery";
         
-        $args = array (
-        'post_type' => $postType,
-        'orderby' => 'asc',
-        'posts_per_page' => '-1',
-        // 'meta_key' => 'mb_start_date',
-      // 'meta_query' => array(
-      //     'key' => 'mb_start_date',
-      //     'type' => 'DATE',
-      //     'value' => date("Y-m-d"), 
-      //     'compare' => '>=', 
-      //     ),      
-        );
-        $query = new \WP_query($args);
+        if ($this->checkTransient($postType) === false) {
+          $args = array (
+            'post_type' => $postType,
+            'orderby' => 'asc',
+            'posts_per_page' => '-1',        
+            );
+
+        if ($postType === 'tours') {
+          $args[] = array (
+            'meta_key' => 'mb_start_date',
+            'meta_query' => array(
+              'key' => 'mb_start_date',
+              'type' => 'DATE',
+              'value' => date("Y-m-d"), 
+              'compare' => '>=', 
+            )
+          );
+        }
+
+        $query = new \WP_query($args);        
+        set_transient($transientName, $query, 6 * HOURS_IN_SECONDS);        
         return $query;   
+        }     
+
+        $activeTransient= get_transient($transientName);        
+        return $activeTransient;       
 
     }
-
-
-    private function getWPObjectTours($postType) {
-        
-        $args = array (
-        'post_type' => $postType,
-        'orderby' => 'asc',
-        'posts_per_page' => '-1',
-        'meta_key' => 'mb_start_date',
-      'meta_query' => array(
-          'key' => 'mb_start_date',
-          'type' => 'DATE',
-          'value' => date("Y-m-d"), 
-          'compare' => '>=', 
-          ),      
-        );
-        $query = new \WP_query($args);
-        return $query;   
-
+   
+    // Checks to see if there is a transient query stored. Returns true if object.  If not, false.
+    private function checkTransient($postType) {
+      $queryName = $postType . "TransientQuery";          
+      if (is_object(get_transient($queryName)) == FALSE) {                  
+        return false;
+      }      
+      return true;
     }
-
 
     
 
