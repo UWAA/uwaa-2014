@@ -13,10 +13,7 @@ Isotope = Backbone.View.extend({
   },
 
   initialize: function() {
-    $canvas = this.$('.isotope').isotope({
-      itemSelector: '.post-thumbnail-slide',
-      layoutMode: 'fitRows'
-    });
+    
 
 
 
@@ -28,10 +25,15 @@ Isotope = Backbone.View.extend({
      history.pushState("UWAAFILTER", "", "?filter=" + isotopeQueryFilter);
     }    
 
+    $canvas = this.$('.isotope').isotope({
+      itemSelector: '.post-thumbnail-slide',
+      layoutMode: 'fitRows'
+    });
+
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
     var ButtonToggle = this.toggleButtonClass;
 
-    console.log(this.getCookie('UWAA_' + document.location.pathname));
+    
 
 
     
@@ -65,8 +67,7 @@ Isotope = Backbone.View.extend({
 
     if(filterValue === '') {
       this.eraseCookie('UWAA_' + document.location.pathname);
-      history.pushState("UWAAFILTER", "", document.location.pathname);
-      console.log("no filter");
+      history.pushState("UWAAFILTER", "", document.location.pathname);      
       return;
     }
 
