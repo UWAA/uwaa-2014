@@ -18,9 +18,22 @@ Isotope = Backbone.View.extend({
       layoutMode: 'fitRows'
     });
 
+
+
     var isotopeQueryFilter = this.getURLParameterByName('filter');
+    var isotopeQueryCookie = this.getCookie('UWAA_' + document.location.pathname);
+
+    if (isotopeQueryFilter.length === 0 && isotopeQueryCookie != null) {
+     var isotopeQueryFilter = isotopeQueryCookie;
+     history.pushState("UWAAFILTER", "", "?filter=" + isotopeQueryFilter);
+    }    
+
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
     var ButtonToggle = this.toggleButtonClass;
+
+    console.log(this.getCookie('UWAA_' + document.location.pathname));
+
+
     
     
     $canvas.imagesLoaded(function() {
@@ -45,9 +58,21 @@ Isotope = Backbone.View.extend({
   filterByButton: function(e) {
     var $target = $(e.target);
     this.$('#quicksearch').val('');
-    var filterValue = $target.attr('data-filter');     
+    var filterValue = $target.attr('data-filter');         
     this.$('.isotope').isotope({filter: filterValue});    
+    history.pushState("UWAAFILTER", "", "?filter=" + filterValue.replace(/\./gi, ''));
     this.toggleButtonClass($target);
+
+    if(filterValue === '') {
+      this.eraseCookie('UWAA_' + document.location.pathname);
+      history.pushState("UWAAFILTER", "", document.location.pathname);
+      console.log("no filter");
+      return;
+    }
+
+    this.createCookie('UWAA_' + document.location.pathname, filterValue.replace(/\./gi, ''), 1);
+
+
   },
 
   toggleButtonClass: function(target) {    
@@ -110,6 +135,27 @@ Isotope = Backbone.View.extend({
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  },
+
+  createCookie: function (name, value, days) {
+     if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toUTCString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+  },
+
+  getCookie: function(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();    
+    return null;
+  },
+
+  eraseCookie: function(name) {
+    this.createCookie(name, "", -1);
   }
 
 
