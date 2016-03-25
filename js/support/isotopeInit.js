@@ -18,9 +18,13 @@ Isotope = Backbone.View.extend({
       layoutMode: 'fitRows'
     });
 
+
+
     var isotopeQueryFilter = this.getURLParameterByName('filter');
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
     var ButtonToggle = this.toggleButtonClass;
+
+    console.log(this.getCookie('UWAA_' + document.location.pathname));
     
     
     $canvas.imagesLoaded(function() {
@@ -48,6 +52,10 @@ Isotope = Backbone.View.extend({
     var filterValue = $target.attr('data-filter');     
     this.$('.isotope').isotope({filter: filterValue});    
     this.toggleButtonClass($target);
+
+    document.cookie = 'UWAA_' + document.location.pathname + '=' + filterValue.replace(/\./gi, '');
+
+
   },
 
   toggleButtonClass: function(target) {    
@@ -110,6 +118,12 @@ Isotope = Backbone.View.extend({
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
         results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  },
+
+  getCookie: function(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
   }
 
 
