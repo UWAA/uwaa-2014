@@ -67,7 +67,7 @@ while ( have_posts() ) : the_post();
   <div class="white-spacer"></div>
 
      <div class="content-row">
-      <div class="image-right">
+      <div class="image-left">
         <div class="image HCN">
           <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Careers_600x397.jpg" id="careers_image" alt="placeholder">
       </div>
@@ -121,7 +121,7 @@ while ( have_posts() ) : the_post();
   <div class="white-spacer"></div>
 
      <div class="content-row">
-      <div class="image-right">
+      <div class="image-left">
          <div class="image events" id="slideshow1">
             <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Movie-Nights_600x397.jpg" id="careers_image" alt="placeholder">
@@ -213,7 +213,7 @@ while ( have_posts() ) : the_post();
   <div class="white-spacer"></div>
 
      <div class="content-row">
-      <div class="image-right">
+      <div class="image-left">
         <div class="image join">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_LicensePlate-Membership_600x460.jpg" id="careers_image" alt="placeholder">
           </div>
@@ -268,7 +268,7 @@ while ( have_posts() ) : the_post();
   <div class="white-spacer"></div>
 
      <div class="content-row">
-      <div class="image-right">
+      <div class="image-left">
         <div class="image gradLinks">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Graduation_600x397.jpg" id="careers_image" alt="placeholder">
           </div>
