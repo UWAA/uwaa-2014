@@ -47,18 +47,8 @@ while ( have_posts() ) : the_post();
           </div> 
         <div class="copy">
           <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_one_title', true)) ?></h3>
-          <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_one_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+          <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_one_content', true)
+            ); ?>
         </p>
       </div>          
       </div>
@@ -73,18 +63,7 @@ while ( have_posts() ) : the_post();
       </div>
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_two_title', true)) ?></h3>
-        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_two_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_two_content', true)); ?>
         </p>
       </div>
 
@@ -100,18 +79,7 @@ while ( have_posts() ) : the_post();
           </div> 
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_three_title', true)) ?></h3>
-        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_three_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_three_content', true)); ?>
         </p>
       </div>
           
@@ -154,18 +122,7 @@ while ( have_posts() ) : the_post();
       </div> 
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_four_title', true)) ?></h3>
-        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_four_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_four_content', true)); ?>
         </p>
       </div>
        
@@ -192,18 +149,7 @@ while ( have_posts() ) : the_post();
           </div> 
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_five_title', true)) ?></h3>
-        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_five_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_five_content', true)); ?>
         </p>
       </div>
           
@@ -219,18 +165,7 @@ while ( have_posts() ) : the_post();
           </div>
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_six_title', true)) ?></h3>
-        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_six_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_six_content', true)); ?>
         </p>       
       </div>
            
@@ -247,18 +182,7 @@ while ( have_posts() ) : the_post();
           </div> 
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_seven_title', true)) ?></h3>
-        <p><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_seven_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_seven_content', true)); ?>
         </p>
       </div>
           
@@ -274,18 +198,7 @@ while ( have_posts() ) : the_post();
           </div>
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_eight_title', true)) ?></h3>
-        <p class="noWidowEnder"><?php echo wp_kses(get_post_meta(get_the_ID(), 'mb_row_eight_content', true), array('a' => array(
-            'href' => array(),
-            'title' => array(),
-            'target' => array(),
-            'class' => array()
-        ), 'div' => array(
-            'class' => array()
-            ),
-            'strong' => array(),
-            'em' => array(),
-            'br' => array()
-            )); ?>
+        <p class="noWidowEnder"><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_eight_content', true)); ?>
         </p>   
 
         
