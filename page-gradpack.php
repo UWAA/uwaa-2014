@@ -45,32 +45,24 @@ while ( have_posts() ) : the_post();
          <div class="image events" id="slideshow1">
             <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Movie-Nights_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Movie nights</p>
+            <p class="caption">Movie Nights</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Game-Warm-Up-Party_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Washington warm ups</p>
+            <p class="caption">Washington Warm Ups</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-BBQs_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Salmon barbeques</p>
+            <p class="caption">Salmon BBQs</p>
           </div>
           <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Mariners-Night_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Husky night at the Mariners</p>
+            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Sounders_600x397.jpg" id="careers_image" alt="placeholder">
+            <p class="caption">UW Day at the Sounders</p>
           </div>
           <div class="slide">
             <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Networking_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Networking happy hour</p>
-          </div>
-          <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Science-Twist_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Science with a twist</p>
-          </div>
-          <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Trivia_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Trivia night</p>
-          </div>
+            <p class="caption">Career and Networking Events</p>
+          </div>        
       </div>
         
         <div class="copy">
