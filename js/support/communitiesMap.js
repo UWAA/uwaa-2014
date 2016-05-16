@@ -58,7 +58,7 @@ var southWest = L.latLng(-90, 180),
 
         marker.bindPopup(popupContent,{
         closeButton: true,
-        minWidth: 280
+        minWidth: 320
     });
     
     });
