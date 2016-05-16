@@ -55,7 +55,7 @@ var host = window.location.hostname;
 
         marker.bindPopup(popupContent,{
         closeButton: true,
-        minWidth: 320
+        minWidth: 280
     });
 
     });

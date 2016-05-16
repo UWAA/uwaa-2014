@@ -13,7 +13,7 @@ var southWest = L.latLng(-90, 180),
     L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
     var map = L.mapbox.map('map', 'bperick.d9650d93', {
         tileLayer : {
-                    continuousWorld: false,        
+                    continuousWorld: true,        
                     noWrap: true
                 },
         scrollWheelZoom:false,
@@ -58,7 +58,7 @@ var southWest = L.latLng(-90, 180),
 
         marker.bindPopup(popupContent,{
         closeButton: true,
-        minWidth: 320
+        minWidth: 280
     });
     
     });
