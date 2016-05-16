@@ -1341,7 +1341,7 @@ a.uwaa-btn:active {
 }
 div.map-logo {
   background-repeat: no-repeat;
-  height: 40px;
+  height: 33px;
   width: 100%;
   background-image: url(assets/Comm_Map_Sprite.png);
   background-position: 0 0;
@@ -1351,18 +1351,18 @@ div.map-logo #Huskies path {
   fill: #4b2e83;
 }
 div.map-logo.anchorage {
-  background-position: 50% -3px;
+  background-position: 50% -4px;
 }
 div.map-logo.tucson,
 div.map-logo.phoenix,
 div.map-logo.arizona {
-  background-position: 50% -47px;
+  background-position: 50% -36.25px;
 }
 div.map-logo.bellingham {
-  background-position: 50% -91px;
+  background-position: 50% -69.25px;
 }
 div.map-logo.brazil {
-  background-position: 50% -135px;
+  background-position: 50% -102.25px;
 }
 div.map-logo.san-diego,
 div.map-logo.sacramento,
@@ -1370,124 +1370,124 @@ div.map-logo.orange-county,
 div.map-logo.palm-springs,
 div.map-logo.southern-california,
 div.map-logo.northern-california {
-  background-position: 50% -179px;
+  background-position: 50% -135.25px;
 }
 div.map-logo.china,
 div.map-logo.shanghai,
 div.map-logo.beijing {
-  background-position: 50% -223px;
+  background-position: 50% -168.25px;
 }
 div.map-logo.denver {
-  background-position: 50% -267px;
+  background-position: 50% -201.25px;
 }
 div.map-logo.washington-dc {
-  background-position: 50% -311px;
+  background-position: 50% -234.25px;
 }
 div.map-logo.ft-lauderdale,
 div.map-logo.miami,
 div.map-logo.florida {
-  background-position: 50% -355px;
+  background-position: 50% -267.25px;
 }
 div.map-logo.georgia,
 div.map-logo.atlanta {
-  background-position: 50% -399px;
+  background-position: 50% -300.25px;
 }
 div.map-logo.kailua-kona,
 div.map-logo.hawaii,
 div.map-logo.honolulu {
-  background-position: 50% -443px;
+  background-position: 50% -333.25px;
 }
 div.map-logo.hong-kong {
-  background-position: 50% -487px;
+  background-position: 50% -366.25px;
 }
 div.map-logo.boise,
 div.map-logo.sun-valley,
 div.map-logo.idaho {
-  background-position: 50% -531px;
+  background-position: 50% -399.25px;
 }
 div.map-logo.chicago,
 div.map-logo.illinois {
-  background-position: 50% -575px;
+  background-position: 50% -432.25px;
 }
 div.map-logo.india {
-  background-position: 50% -619px;
+  background-position: 50% -465.25px;
 }
 div.map-logo.indonesia,
 div.map-logo.jakarta {
-  background-position: 50% -663px;
+  background-position: 50% -498.25px;
 }
 div.map-logo.indiana,
 div.map-logo.indianapolis {
-  background-position: 50% -707px;
+  background-position: 50% -531.25px;
 }
 div.map-logo.japan,
 div.map-logo.tokyo {
-  background-position: 50% -751px;
+  background-position: 50% -564.25px;
 }
 div.map-logo.korea,
 div.map-logo.seoul {
-  background-position: 50% -795px;
+  background-position: 50% -597.25px;
 }
 div.map-logo.massachusetts,
 div.map-logo.boston {
-  background-position: 50% -839px;
+  background-position: 50% -630.25px;
 }
 div.map-logo.st-louis,
 div.map-logo.missouri {
-  background-position: 50% -883px;
+  background-position: 50% -663.25px;
 }
 div.map-logo.north-carolina {
-  background-position: 50% -927px;
+  background-position: 50% -696.25px;
 }
 div.map-logo.omaha,
 div.map-logo.nebraska {
-  background-position: 50% -971px;
+  background-position: 50% -729.25px;
 }
 div.map-logo.las-vegas,
 div.map-logo.reno,
 div.map-logo.nevada {
-  background-position: 50% -1015px;
+  background-position: 50% -762.25px;
 }
 div.map-logo.new-york,
 div.map-logo.new-york-city,
 div.map-logo.albany {
-  background-position: 50% -1059px;
+  background-position: 50% -795.25px;
 }
 div.map-logo.oregon,
 div.map-logo.portland {
-  background-position: 50% -1103px;
+  background-position: 50% -828.25px;
 }
 div.map-logo.pennslyvania,
 div.map-logo.pittsburgh,
 div.map-logo.philadelphia {
-  background-position: 50% -1147px;
+  background-position: 50% -861.25px;
 }
 div.map-logo.peru {
-  background-position: 50% -1191px;
+  background-position: 50% -894.25px;
 }
 div.map-logo.south-carolina {
-  background-position: 50% -1235px;
+  background-position: 50% -927.25px;
 }
 div.map-logo.singapore {
-  background-position: 50% -1279px;
+  background-position: 50% -960.25px;
 }
 div.map-logo.spain {
-  background-position: 50% -1323px;
+  background-position: 50% -993.25px;
 }
 div.map-logo.spokane {
-  background-position: 50% -1367px;
+  background-position: 50% -1026.25px;
 }
 div.map-logo.taiwan,
 div.map-logo.taipei {
-  background-position: 50% -1411px;
+  background-position: 50% -1059.25px;
 }
 div.map-logo.thailand,
 div.map-logo.bangkok {
-  background-position: 50% -1455px;
+  background-position: 50% -1092.25px;
 }
 div.map-logo.tri-cities,
 div.map-logo.tricities {
-  background-position: 50% -1499px;
+  background-position: 50% -1125.25px;
 }
 div.map-logo.austin,
 div.map-logo.san-antonio,
@@ -1496,28 +1496,31 @@ div.map-logo.texas,
 div.map-logo.dallas,
 div.map-logo.dallas-ft-worth,
 div.map-logo.houston {
-  background-position: 50% -1543px;
+  background-position: 50% -1158.25px;
 }
 div.map-logo.uae {
-  background-position: 50% -1587px;
+  background-position: 50% -1191.25px;
 }
 div.map-logo.london,
 div.map-logo.uk {
-  background-position: 50% -1631px;
+  background-position: 50% -1224.25px;
 }
 div.map-logo.vancouver {
-  background-position: 50% -1675px;
+  background-position: 50% -1257.25px;
 }
 div.map-logo.wenatchee {
-  background-position: 50% -1719px;
+  background-position: 50% -1290.25px;
 }
 div.map-logo.switzerland,
 div.map-logo.zurich {
-  background-position: 50% -1763px;
+  background-position: 50% -1323.25px;
+}
+div.map-logo.the-netherlands {
+  background-position: 50% -1356.25px;
+  background-size: 80%;
 }
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 5px;
-  min-width: 330px;
 }
 .leaflet-popup .leaflet-popup-content p.map-title {
   font-family: "Encode Sans Compressed", sans-serif;

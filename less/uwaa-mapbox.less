@@ -2,7 +2,7 @@
 
 div.map-logo{    
     background-repeat: no-repeat;
-    height: 40px;
+    height: 33px;
     width: 100%;
     
     // margin-bottom: 10px;
@@ -15,128 +15,143 @@ div.map-logo{
         fill:@purple;
     }
 
+    
+
+    .sprite-position(@vertical-delimiter, @initial-value) {
+      @vertical-position: (@initial-value - @vertical-delimiter);
+      background-position: 50% @vertical-position;
+    }
+
+    @vertical-delimiter: 1px;   
+
+
+
         &.anchorage {
-           background-position: 50% -3px;
+           .sprite-position(@vertical-delimiter, -3px);
         }
         &.tucson, &.phoenix, &.arizona {
-           background-position: 50% -47px;
+           .sprite-position(@vertical-delimiter, (.75*-47px));
         }
         &.bellingham {
-           background-position: 50% -91px;
+           .sprite-position(@vertical-delimiter, (.75*-91px));
         }
         &.brazil {
-           background-position: 50% -135px;
+           .sprite-position(@vertical-delimiter, (.75*-135px));
         }
         &.san-diego, &.sacramento, &.orange-county, &.palm-springs, &.southern-california, &.northern-california {
-           background-position: 50% -179px;
+           .sprite-position(@vertical-delimiter, (.75*-179px));
         }
         &.china, &.shanghai, &.beijing {
-           background-position: 50% -223px;
+           .sprite-position(@vertical-delimiter, (.75*-223px));
         }
         &.denver {
-           background-position: 50% -267px;
+           .sprite-position(@vertical-delimiter, (.75*-267px));
         }
         &.washington-dc {
-           background-position: 50% -311px;
+           .sprite-position(@vertical-delimiter, (.75*-311px));
         }
         &.ft-lauderdale, &.miami, &.florida {
-           background-position: 50% -355px;
+           .sprite-position(@vertical-delimiter, (.75*-355px));
         }
         &.georgia, &.atlanta {
-           background-position: 50% -399px;
+           .sprite-position(@vertical-delimiter, (.75*-399px));
         }
         &.kailua-kona, &.hawaii, &.honolulu {
-           background-position: 50% -443px;
+           .sprite-position(@vertical-delimiter, (.75*-443px));
         }
         &.hong-kong {
-           background-position: 50% -487px;
+           .sprite-position(@vertical-delimiter, (.75*-487px));
         }
         &.boise, &.sun-valley, &.idaho {
-           background-position: 50% -531px;
+           .sprite-position(@vertical-delimiter, (.75*-531px));
         }
         &.chicago, &.illinois {
-           background-position: 50% -575px;
+           .sprite-position(@vertical-delimiter, (.75*-575px));
         }
         &.india {
-           background-position: 50% -619px;
+           .sprite-position(@vertical-delimiter, (.75*-619px));
         }
         &.indonesia, &.jakarta {
-           background-position: 50% -663px;
+           .sprite-position(@vertical-delimiter, (.75*-663px));
         }
         &.indiana, &.indianapolis {
-           background-position: 50% -707px;
+           .sprite-position(@vertical-delimiter, (.75*-707px));
         }
         &.japan, &.tokyo {
-           background-position: 50% -751px;
+           .sprite-position(@vertical-delimiter, (.75*-751px));
         }
         &.korea, &.seoul {
-           background-position: 50% -795px;
+           .sprite-position(@vertical-delimiter, (.75*-795px));
         }
         &.massachusetts, &.boston {
-           background-position: 50% -839px;
+           .sprite-position(@vertical-delimiter, (.75*-839px));
         }
         &.st-louis, &.missouri {
-           background-position: 50% -883px;
+           .sprite-position(@vertical-delimiter, (.75*-883px));
         }
         &.north-carolina {
-           background-position: 50% -927px;
+           .sprite-position(@vertical-delimiter, (.75*-927px));
         }
         &.omaha, &.nebraska {
-           background-position: 50% -971px;
+           .sprite-position(@vertical-delimiter, (.75*-971px));
         }
         &.las-vegas, &.reno, &.nevada {
-           background-position: 50% -1015px;
+           .sprite-position(@vertical-delimiter, (.75*-1015px));
         }
         &.new-york, &.new-york-city, &.albany {
-           background-position: 50% -1059px;
+           .sprite-position(@vertical-delimiter, (.75*-1059px));
         }
         &.oregon, &.portland {
-           background-position: 50% -1103px;
+           .sprite-position(@vertical-delimiter, (.75*-1103px));
         }
         &.pennslyvania, &.pittsburgh, &.philadelphia {
-           background-position: 50% -1147px;
+           .sprite-position(@vertical-delimiter, (.75*-1147px));
         }
         &.peru {
-           background-position: 50% -1191px;
+           .sprite-position(@vertical-delimiter, (.75*-1191px));
         }
         &.south-carolina {
-           background-position: 50% -1235px;
+           .sprite-position(@vertical-delimiter, (.75*-1235px));
         }
         &.singapore {
-           background-position: 50% -1279px;
+           .sprite-position(@vertical-delimiter, (.75*-1279px));
         }
         &.spain {
-           background-position: 50% -1323px;
+           .sprite-position(@vertical-delimiter, (.75*-1323px));
         }
         &.spokane {
-           background-position: 50% -1367px;
+           .sprite-position(@vertical-delimiter, (.75*-1367px));
         }
         &.taiwan, &.taipei {
-           background-position: 50% -1411px;
+           .sprite-position(@vertical-delimiter, (.75*-1411px));
         }
         &.thailand, &.bangkok {
-           background-position: 50% -1455px;
+           .sprite-position(@vertical-delimiter, (.75*-1455px));
         }
         &.tri-cities, &.tricities {
-           background-position: 50% -1499px;
+           .sprite-position(@vertical-delimiter, (.75*-1499px));
         }
         &.austin, &.san-antonio, &.san-antonio-south-texas, &.texas, &.dallas, &.dallas-ft-worth, &.houston {
-           background-position: 50% -1543px;
+           .sprite-position(@vertical-delimiter, (.75*-1543px));
         }
         &.uae {
-           background-position: 50% -1587px;
+           .sprite-position(@vertical-delimiter, (.75*-1587px));
         }
         &.london, &.uk {
-           background-position: 50% -1631px;
+           .sprite-position(@vertical-delimiter, (.75*-1631px));
         }
         &.vancouver {
-           background-position: 50% -1675px;
+           .sprite-position(@vertical-delimiter, (.75*-1675px));
         }
         &.wenatchee {
-           background-position: 50% -1719px;
+           .sprite-position(@vertical-delimiter, (.75*-1719px));
         }
         &.switzerland, &.zurich {
-          background-position: 50% -1763px; 
+          .sprite-position(@vertical-delimiter, (.75*-1763px));
+        }
+        &.the-netherlands {
+          .sprite-position(@vertical-delimiter, (.75*-1807px));
+          background-size: 80%;
         }
 }
 
@@ -146,7 +161,7 @@ div.map-logo{
 .leaflet-popup .leaflet-popup-content{
     // position: relative;
     padding: 10px 5px;
-    min-width: 330px;
+    // min-width: 330px;
 
     
     p {
