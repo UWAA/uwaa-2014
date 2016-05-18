@@ -2,7 +2,7 @@
 
 
 use \UWAA\View\UI as UI;
-class FutureAlumniSlideshow extends Slideshow
+class TravelSlideshow extends Slideshow
 {
 
     protected function getArrayOfData() {
