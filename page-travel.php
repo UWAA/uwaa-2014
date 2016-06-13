@@ -2,7 +2,7 @@
 get_header(); 
 wp_enqueue_script(array('toursMap', 'superHero'));
 wp_enqueue_style('mapbox');
-wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/tours'))  ) );
+wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => apply_filters('remove_cms', home_url('/api/tours/geojson'))  ) );
 
 
 ?>
