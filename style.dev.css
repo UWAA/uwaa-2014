@@ -2574,6 +2574,10 @@ div.map-logo.netherlands {
   background: url(assets/headers/Page_Header_Events.jpg) center center;
   background-size: cover;
 }
+.uw-hero-image.future-alumni {
+  background: url(assets/headers/Page_Header_Future-Alumni.jpg) center center;
+  background-size: cover;
+}
 @media only screen and (max-width: 767px) {
   .single-post .uwaa-chapter-header {
     height: 150px;
