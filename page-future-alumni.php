@@ -9,22 +9,8 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\FutureAlumni;
 
 
 
-<div class="future-alumni-header uw-homepage-slider-container">
-<?php
+<div class="uw-hero-image future-alumni"></div>
 
-if(class_exists('\UWAA\Slideshow\Slideshow')):
-
-$superhero = new \UWAA\Slideshow\Slideshow("future-alumni-superhero");
-
-include(locate_template('content-slideshow.php'));
-
-endif;
-
-?>
-
-
-  
-</div>
 
 <div class="container uw-body">
 
