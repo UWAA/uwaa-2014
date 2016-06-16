@@ -33,9 +33,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\FutureAlumni;
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
-            
-            // Removing the title from displaying on the page.  
-            the_content();
+            get_template_part( 'content', 'page' );
 
            
 
