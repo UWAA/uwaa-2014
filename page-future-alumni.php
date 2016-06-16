@@ -18,6 +18,8 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\FutureAlumni;
 
     <div class="col-md-8 uw-content" role='main'>
 
+    <h2 class="uw-site-title">Future Alumni</h2>
+
    <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
    
       <div class="uw-body-copy">
