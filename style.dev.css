@@ -3544,7 +3544,7 @@ a#memberCheckerLogout {
   color: #ffffff;
   margin: -115px auto 0;
   z-index: 1;
-  width: 320px;
+  width: 500px;
   padding: 10px 20px;
 }
 @media (max-width: 767px) {

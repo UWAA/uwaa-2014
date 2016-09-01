@@ -81,6 +81,16 @@ class Scripts
         
       ),
 
+      'isotopeVetsInit' => array (
+        'id'      => 'isotopeInitVets',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/isotopeInitVets' . $this->min_script() . '.js',
+        'deps'    => array('isotope'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+        
+      ),
+
        'toursMap' => array (
         'id'      => 'toursMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/toursMap' . $this->min_script() . '.js',

@@ -7,6 +7,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransEventsIsotope;
 use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
 
 wp_enqueue_script('isotopeInit');
+wp_enqueue_script('isotopeInitVets');
 wp_enqueue_script('covervid');
 
 wp_enqueue_style('google-font-cinzel');
@@ -20,17 +21,15 @@ wp_enqueue_style('google-font-cinzel');
     </video>
 </div>
 </div>
-<a href="#"><div class="homelink"><a href="#">Veterans<br>Appreciation<br>Week<br><div>nov. 1-12, 2015</div></a></div></a>
+<a href="#"><div class="homelink"><a href="#">Veterans<br>Appreciation<br>Days<br>Seattle | Bothell | Tacoma</a></div>
 
 <div class="container uw-body">
 
   <div class="row">
 
-    <div class="col-md-12 uw-content" role='main'><!-- 
+    <div class="col-md-12 uw-content" role='main'>
 
-      <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
-
-    <nav class="uw-breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li><a href="http://uw.edu" title="University of Washington">Home</a></li><li><a href="<?php site_url();?>" title="Alumni">Alumni</a></li><li></li><li class="current"><span>Veterans Appreciation Week</span></li></ul></nav>
+    <nav class="uw-breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li><a href="http://uw.edu" title="University of Washington">Home</a></li><li><a href="<?php site_url();?>" title="Alumni">Alumni</a></li><li></li><li class="current"><span>Veterans Appreciation Days</span></li></ul></nav>
     
     <!-- Stuff for Purple Star Bit -->
 
@@ -57,6 +56,8 @@ wp_enqueue_style('google-font-cinzel');
           endwhile;
           
         ?>
+
+        <h2>Veterans Events</h2>
         
         <div id="isotope-canvas">
         <?php
@@ -68,9 +69,23 @@ wp_enqueue_style('google-font-cinzel');
             <div class="isotope tile">
             <?php
             $veteransEventsGrid->makeThumbnails(new VeteransEventsIsotope);
-            $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
+            
             ?>
             </div>
+        </div>
+
+
+        <h2>Veterans Stories</h2>
+        <div id="isotope-canvas-vets-events">
+
+        <div class="isotope tile">
+
+        <?php $veteransStoriesGrid->makeThumbnails(new VeteransStoriesIsotope);
+        ?>
+          
+        </div>
+          
+
         </div>
 
       </div>
