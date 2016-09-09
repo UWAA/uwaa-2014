@@ -80,8 +80,14 @@ h1.page-title {
     color: @white;
     margin: -115px auto 0;
     z-index: 1;
-    width: 500px;
+    width: 375px;
     padding: 10px 20px;
+
+    div {
+        font-size: .7em;
+        margin-top: 10px;
+        font-family: inherit;
+    }
 
     @media (max-width: @screen-xs-max) 
     {
@@ -126,6 +132,10 @@ h1.page-title {
         background-clip: border-box;
         height: 30px;
         width: 100%;
+
+        &.isotope {
+            margin-top: 14px;
+        }
 
         @media only screen and (max-width: @screen-xs-min) {
         background-size: 175%;

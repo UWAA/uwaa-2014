@@ -23,6 +23,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $alternateLink;
     protected $isPartnerEvent;
     protected $postImageAltText;
+    protected $postTerms;
     
 
     public function __construct($isTest=FALSE)
