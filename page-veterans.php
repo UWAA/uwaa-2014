@@ -21,7 +21,15 @@ wp_enqueue_style('google-font-cinzel');
     </video>
 </div>
 </div>
-<a href="#"><div class="homelink"><a href="#">Veterans<br>Appreciation<br>Days<br>Seattle | Bothell | Tacoma</a></div>
+<a href="#" class="homelink">
+  
+    Veterans<br>Appreciation<br>
+      <div class="subtitle">
+         Seattle <span style="color:#b7a57a;">|</span> Bothell <span style="color:#b7a57a;">|</span> Tacoma
+     </div> 
+  
+</a>
+     
 
 <div class="container uw-body">
 
@@ -29,7 +37,7 @@ wp_enqueue_style('google-font-cinzel');
 
     <div class="col-md-12 uw-content" role='main'>
 
-    <nav class="uw-breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li><a href="http://uw.edu" title="University of Washington">Home</a></li><li><a href="<?php site_url();?>" title="Alumni">Alumni</a></li><li></li><li class="current"><span>Veterans Appreciation Days</span></li></ul></nav>
+    <nav class="uw-breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li><a href="http://uw.edu" title="University of Washington">Home</a></li><li><a href="<?php site_url();?>" title="Alumni">Alumni</a></li><li></li><li class="current"><span>Veterans Appreciation</span></li></ul></nav>
     
     <!-- Stuff for Purple Star Bit -->
 

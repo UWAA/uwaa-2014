@@ -82,11 +82,21 @@ h1.page-title {
     z-index: 1;
     width: 375px;
     padding: 10px 20px;
+    font-family: "Encode Sans Compressed", sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1;
+   
+
 
     div {
-        font-size: .7em;
-        margin-top: 10px;
-        font-family: inherit;
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: .4em;  //targets 50px
+        margin-top: 10px;        
+        font-weight: 600;       
+        line-height: 2;
+
     }
 
     @media (max-width: @screen-xs-max) 
@@ -95,32 +105,13 @@ h1.page-title {
     };
 
 
-    a {
-        
-        
-        font-family: 'Cinzel', serif;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: @white;
-        text-decoration: none;
-        line-height: 1.1;
-        font-size: 1.6em;
-
-        div {
-        font-size: 25px;
-        font-family: 'Open Sans', Arial, sans-serif;
-        margin-top: 15px;
-
-        }
-
     }    
     
 
     // @media (min-width: @screen-xs-min) {line-height: 1.1;};
     
     // @media (min-width: @screen-md-min) {};
-    // @media (min-width: @screen-lg-min) {line-height: 1.0;};
-}
+    // @media (min-width: @screen-lg-min) {line-height: 1.0;}
 
   .star-line 
     {
@@ -169,8 +160,25 @@ h1.page-title {
 
     }
 
+
+@media only screen and (max-width: @screen-sm-min) {
+
+.uw-breadcrumbs{ 
+ 
+        padding: 20px 20px 0 30px;
+    
+        }
 }
 
+
+
+
+}
+
+
+
+
+// Vets Posts/Events
 .uwaa-vets-single-header {
     position: relative;
 
