@@ -23,6 +23,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $alternateLink;
     protected $isPartnerEvent;
     protected $postImageAltText;
+    protected $postTerms;
     
 
     public function __construct($isTest=FALSE)
@@ -96,11 +97,11 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
       'meta_query' => array(      
         array(
           'key' => 'mb_start_date',
-          'type' => 'DATE',
-          'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
+          'type' => 'DATE',          
+          'value' => date(Y), '1101',  // Update to make events stay 
           'compare' => '>=', // Return the ones greater than today's date          
           )
-      ),
+        ),
       );
 
     
@@ -162,7 +163,7 @@ class VeteransEventsIsotope extends ThumbnailBrowser implements Thumbnail
   // 
   
 	$template = <<<ISOTOPE
-<div class="post-thumbnail-slide veterans-events">
+<div class="post-thumbnail-slide $this->postTerms">
 	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
       $callout      

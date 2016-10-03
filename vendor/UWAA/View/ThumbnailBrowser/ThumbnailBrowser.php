@@ -209,12 +209,20 @@ TOOLBAR;
       $buttons = $this->renderFilterButtons($typeOfToolbar);   
       $sortingOptions = array(
         array(
-        "name" => "Veterans Events",
-        "slug" => "veterans-events"
+        "name" => "Alumni Veterans",
+        "slug" => "alumni-veterans"
         ),
         array(
-        "name" => "Veterans Stories",
-        "slug" => "veterans-stories"
+        "name" => "Student Veterans",
+        "slug" => "student-veterans"
+        ),
+         array(
+        "name" => "General Public",
+        "slug" => "general-public"
+        ),
+        array(
+        "name" => "Faculty/Staff",
+        "slug" => "faculty-staff"
         ),
 
       );
