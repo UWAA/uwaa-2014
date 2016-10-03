@@ -64,7 +64,7 @@ wp_enqueue_style('google-font-cinzel');
           
         ?>
 
-        <h2>Veterans Events</h2>
+        <h2>Event Schedule</h2>
         
         <div id="isotope-canvas-vets-events">
         <?php
