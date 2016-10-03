@@ -46,9 +46,11 @@ IsotopeVets = Backbone.View.extend({
       var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');
       buttonToToggleFromParam.siblings().removeClass('is-checked');
       buttonToToggleFromParam.addClass('is-checked');
+      $('#isotope-canvas').isotope('layout');
 
     } else {
       $canvas.isotope('layout');
+      $('#isotope-canvas').isotope('layout');
     }
 
     })
