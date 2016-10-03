@@ -144,7 +144,11 @@ TOOLBAR;
       $terms = wp_list_filter($terms, array('slug'=>'tall-regional-branding'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'short-regional-branding'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'content-for-app'),'NOT');
-      $terms = wp_list_filter($terms, array('slug'=>'no-regional-branding'),'NOT');      
+      $terms = wp_list_filter($terms, array('slug'=>'no-regional-branding'),'NOT');
+      $terms = wp_list_filter($terms, array('slug'=>'alumni-veterans'),'NOT');
+      $terms = wp_list_filter($terms, array('slug'=>'student-veterans'),'NOT'); 
+      $terms = wp_list_filter($terms, array('slug'=>'general-public'),'NOT');
+      $terms = wp_list_filter($terms, array('slug'=>'facultystaff'),'NOT'); 
 
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
@@ -222,7 +226,7 @@ TOOLBAR;
         ),
         array(
         "name" => "Faculty/Staff",
-        "slug" => "faculty-staff"
+        "slug" => "facultystaff"
         ),
 
       );
