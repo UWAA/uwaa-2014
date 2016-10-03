@@ -9,7 +9,6 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\VeteransStoriesIsotope;
 wp_enqueue_script('isotopeInit');
 wp_enqueue_script('isotopeInitVets');
 wp_enqueue_script('covervid');
-
 wp_enqueue_style('google-font-cinzel');
 ?>
 
@@ -67,7 +66,7 @@ wp_enqueue_style('google-font-cinzel');
 
         <h2>Veterans Events</h2>
         
-        <div id="isotope-canvas">
+        <div id="isotope-canvas-vets-events">
         <?php
           $veteransEventsGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
           $veteransStoriesGrid = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
@@ -84,7 +83,7 @@ wp_enqueue_style('google-font-cinzel');
 
 
         <h2>Veterans Stories</h2>
-        <div id="isotope-canvas-vets-events">
+        <div id="isotope-canvas">
 
         <div class="isotope tile">
 

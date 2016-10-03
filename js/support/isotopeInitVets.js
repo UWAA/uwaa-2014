@@ -1,5 +1,5 @@
 //TODO Make a UWAA object and clear bind this there?.
-Isotope = Backbone.View.extend({
+IsotopeVets = Backbone.View.extend({
     el: '#isotope-canvas-vets-events',
 
 
@@ -84,52 +84,7 @@ Isotope = Backbone.View.extend({
   toggleParentButtonClass: function(target) {
     target.parent().siblings().removeClass('is-checked');
     target.parent().addClass('is-checked');
-  },
-
-  filterBySearch: _.debounce(function() {
-        var qsRegex = new RegExp( this.$('#quicksearch').val(), 'gi' );
-        this.$('.isotope').isotope({
-          filter: function() {
-          return qsRegex ? $(this).text().match( qsRegex ) : true;
-          }
-         });
-    }, 200
-    ),
-
-  listView: function(e) {
-    var $target = $(e.target);    
-    this.$('.isotope')
-    .addClass('list').removeClass('tile')
-    .isotope({
-    layoutMode: 'vertical'
-    });
-    this.toggleButtonClass($target);
-    this.toggleParentButtonClass($target);
-  },
-
-  tileView: function(e) {
-    var $target = $(e.target);
-    this.$('.isotope')
-    .addClass('tile').removeClass('list')
-    .isotope({
-    layoutMode: 'fitRows'    
-    });
-    this.toggleButtonClass($target);
-    this.toggleParentButtonClass($target);
-  },
-
-  print: function(e) {    
-    $listButton = $('.list-button');
-    this.listView(e);
-    _.delay(function(){window.print();},  500);
-    
-
-    //@TODO- Pull out this toggle code to its own function
-    this.toggleButtonClass($listButton);
-    this.toggleParentButtonClass($listButton);
-
-
-  },
+  }, 
 
   getURLParameterByName: function(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
@@ -162,5 +117,5 @@ Isotope = Backbone.View.extend({
 
 });
 
-isotopeInit = new Isotope();
+isotopeInit = new IsotopeVets();
 
