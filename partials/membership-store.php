@@ -6,7 +6,7 @@ wp_enqueue_script('membershipStoreInit');
     <div id="store">    
 
     <div class="row" id="store-breadcrumbs">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <span>Would you like to join UWAA, or renew your current membership?</span>
             <br/>
             <p>See all <a href="#pricing">pricing options.</a></p>
