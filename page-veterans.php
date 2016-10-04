@@ -81,7 +81,7 @@ wp_enqueue_style('google-font-cinzel');
             </div>
         </div>
 
-
+        <div class="clearfix"></div>
         <h2>Veterans Stories</h2>
         <div id="isotope-canvas">
 

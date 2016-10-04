@@ -30,6 +30,8 @@ IsotopeVets = Backbone.View.extend({
       layoutMode: 'fitRows'
     });
 
+
+
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
     var ButtonToggle = this.toggleButtonClass;
 
@@ -41,16 +43,16 @@ IsotopeVets = Backbone.View.extend({
     $canvas.imagesLoaded(function() {
     if (isotopeQueryFilter != '') {            
       $canvas.isotope('layout');      
-      $canvas.isotope({filter: filterValue});
+      $canvas.isotope({filter: filterValue});      
       
       var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');
       buttonToToggleFromParam.siblings().removeClass('is-checked');
       buttonToToggleFromParam.addClass('is-checked');
-      $('#isotope-canvas').isotope('layout');
+      
 
-    } else {
+    } else {      
       $canvas.isotope('layout');
-      $('#isotope-canvas').isotope('layout');
+      
     }
 
     })

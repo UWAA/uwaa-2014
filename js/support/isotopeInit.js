@@ -42,13 +42,13 @@ Isotope = Backbone.View.extend({
     if (isotopeQueryFilter != '') {            
       $canvas.isotope('layout');      
       $canvas.isotope({filter: filterValue});
-      
+
       var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');
       buttonToToggleFromParam.siblings().removeClass('is-checked');
       buttonToToggleFromParam.addClass('is-checked');
 
-    } else {
-      $canvas.isotope('layout');
+    } else {      
+      $canvas.isotope('layout');      
     }
 
     })

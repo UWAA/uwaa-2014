@@ -3512,6 +3512,9 @@ a#memberCheckerLogout {
 .vets2015 #isotope-canvas {
   margin-top: 50px;
 }
+.vets2015 #isotope-canvas .post-thumbnail-slide {
+  min-height: 445px;
+}
 .vets2015 .covervid-wrapper {
   position: absolute;
   top: 0;
