@@ -69,7 +69,8 @@ class RegionalTags
             'vancouver',
             'washington',
             'washington-dc',
-            'wenatchee'
+            'wenatchee',
+            'vietnam'
             );    
     
     }
