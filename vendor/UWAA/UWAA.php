@@ -78,6 +78,7 @@ class UWAA
         new \UWAA\Widgets\SidebarSeeYourChapter;
         new \UWAA\Widgets\SocialSidebar;  
         
+        new \UWAA\ContentExperiments;
     }
 
 
