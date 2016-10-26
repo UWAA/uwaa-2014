@@ -157,7 +157,8 @@ if ($callSuccess === FALSE) {
     exit;   //refine error handling further...TODO - Need feedback system on page.
 }
 
-if ($callSuccess && ucfirst(strtolower(trim($lastName))) != ucfirst(strtolower(trim($member->MemberLName)))) {
+if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfirst(remove_accents(strtolower(trim($member->MemberLName))))) {   
+
     $payload = array (
         'error' => 'TRUE',        
         'message' =>'We\'re sorry, that doesn\'t match what we have in our database. Why don&rsquo;t you try again or call us and we’ll help you get it straightened out – 1-800-289-2586',
