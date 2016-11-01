@@ -93,14 +93,14 @@ $(document).ready(function() {
         $renewSet
             .find('.primary').show(function() {
                 $renewSet.fadeIn(300);
-                $breadcrumbs.find('span').html('Welcome back! Through the end of October, <a href="https://www.washington.edu/alumni/uwaa-and-becu-partner-for-students/">our long-time partner BECU has pledged to match renewed member dues with a gift</a> in support of student scholarships and higher education in Washington.* Don’t miss this opportunity to double the impact of your membership! <br /><br /> <em>*BECU, Washington’s leading credit union, will match up to $50 per new or renewing membership through October 31, 2016, to a maximum amount of $50,000.</em>');
+                $breadcrumbs.find('span').html('Renew your membership');                
             })
             
         } else if (currentPage.params.hasOwnProperty('join'))  {
         $joinSet
             .find('.primary').show(function() {
                 $joinSet.fadeIn(300);
-                $breadcrumbs.find('span').html('Through the end of October, our long-time partner <a href="https://www.washington.edu/alumni/uwaa-and-becu-partner-for-students/">BECU has pledged to match new member dues with a gift</a> in support of student scholarships and higher education in Washington.* Don’t miss this opportunity to double the impact of your membership! <br /><br /> Need another reason to join? Sign up for a UWAA membership now and receive an official UW alumni license plate frame as a special thank-you. <br /><br /> <em>*BECU, Washington’s leading credit union, will match up to $50 per new or renewing membership through October 31, 2016, to a maximum amount of $50,000.</em> ');
+                $breadcrumbs.find('span').html('Join UWAA');
             })
             
         } else {
