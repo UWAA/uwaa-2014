@@ -65,7 +65,7 @@ class Memberchecker {
             $this->isLoggedIn = true;
         }
         
-        if ($this->memberCheckerCookieValues->memberStatus == 'A') {
+        if(preg_match('(A|G)', $this->memberCheckerCookieValues->memberStatus) === 1) {
             $this->hasActiveMembership = true;
         }
         
@@ -172,7 +172,7 @@ if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfi
  else {
     
     // //Set some key information we want to persist why they browse.
-    if($member->MemberStatus == 'A') {
+    if(preg_match('(A|G)', $member->MemberStatus) === 1) {
         $this->memberDetails = array(
             "firstName" => "$member->MemberFName",
             "lastName" => "$member->MemberLName",
@@ -305,7 +305,7 @@ CONTENT;
 
     private function getMembershipStatus($membershipStatusCode)
     {
-        if ($membershipStatusCode == 'A') {
+        if(preg_match('(A|G)', $member->MemberStatus) === 1) {
             return "Active";
         }
 
