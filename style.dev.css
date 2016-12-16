@@ -2853,6 +2853,9 @@ div.map-logo.vietnam {
 .wufoo .uwaa-name span input {
   width: 100%;
 }
+.wufoo pre {
+  white-space: pre-wrap;
+}
 ul.uwaa-social {
   padding-left: 0;
   margin-bottom: 14.5px;
