@@ -21,10 +21,10 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
             <form method="GET" id="memberloginForm" class="uwaa-form">
                 <fieldset>
                     <label class="screen-reader-text" for="idNumber">Member Number</label>
-                    <input disabled type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
+                    <input  type="text" name="idNumber" placeholder="Member Number" autocomplete="off">
                     <label class="screen-reader-text" for="lastName">Last Name</label>
                     <div>
-                        <input disabled type="text" name="lastName" placeholder="Last Name" autocomplete="off">
+                        <input  type="text" name="lastName" placeholder="Last Name" autocomplete="off">
                         <input id="loginSubmit" type="submit">
                     </div>
                     <!-- <input type="hidden" name="action" value="callMemberChecker"> -->
@@ -34,7 +34,9 @@ wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' =
             </form>
 
             <div id="form-message"></div>
-            <div id="error-message"> <span style="color:red">We are currenly experiencing an outage of our member verifcation service. Please call if you have specific questions about your benefits.</span></div>
+            <div id="error-message">
+             <!-- <span style="color:red">We are currenly experiencing an outage of our member verifcation service. Please call if you have specific questions about your benefits.</span> -->
+             </div>
 
             <!-- <div class="accordion">
                 <div class="panel closed">
