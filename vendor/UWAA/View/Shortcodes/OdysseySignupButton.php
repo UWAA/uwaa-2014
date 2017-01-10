@@ -38,7 +38,7 @@ class OdysseySignupButton
         }
 
         // Production is double-encoding the URL... 
-        $url = get_bloginfo('url') . '/travel/odysseys-signup?tourName=' . urlencode(get_the_title()) . '&tourURL=' . get_permalink() . '&tourDepartureDate=' . get_post_meta(get_the_id(), 'mb_start_date', true);
+        $url = get_bloginfo('url') . '/travel/odysseys-signup?tourName=' . urlencode(get_the_title()) . '&tourURL=' . urlencode(get_permalink()) . '&tourDepartureDate=' . get_post_meta(get_the_id(), 'mb_start_date', true);
         
 
         if (property_exists($attributes, 'small')){
