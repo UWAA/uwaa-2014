@@ -2,7 +2,7 @@
 
 //TODO -refactor Do we want this logic here? 
 $tourName = preg_replace('/%26%238217%3B/', "%27", esc_js($_GET['tourName'])); // Fix for URL encoding issues
-$tourURL = esc_js($_GET['tourURL']);
+$tourURL = $_GET['tourURL'];
 $tourDeparture = esc_js($_GET['tourDepartureDate']);
 
 $rawDate = str_split($tourDeparture, 4);
