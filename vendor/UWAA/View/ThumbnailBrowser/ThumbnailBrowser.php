@@ -102,7 +102,7 @@ class ThumbnailBrowser
     if ($isotope) {
         return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Generic_Thumb_275x190.jpg" />';
     }
-    return '<img src="http://fpoimg.com/215x155?text=FPO" />';
+    return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Generic_Thumb_275x190.jpg" />';
    }
 
     protected function getSortingToolbarTemplate($typeOfToolbar)
