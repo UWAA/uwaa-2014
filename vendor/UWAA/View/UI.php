@@ -23,6 +23,7 @@ class UI
 
     private function initShortcodes(){
         new Shortcodes\Button;
+        new Shortcodes\FevoButton;
         new Shortcodes\RegionalFacts;
         new Shortcodes\Accordions;
         new Shortcodes\OdysseySignupButton;

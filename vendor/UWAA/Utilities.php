@@ -19,8 +19,7 @@ class Utilities
         add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
         add_action( 'save_post', array($this, 'excludePreliminaryandMinorFromSearch'), 20 );
         add_filter('get_shortlink', array($this, 'returnUWFriendlyLink'), 10, 4);
-        add_filter('get_sample_permalink_html', array($this, 'addGetPermalinkButton'), 5, 2);
-        // add_filter('wp_kses_allowed_html', array($this, 'allowFevoDataTag'));
+        add_filter('get_sample_permalink_html', array($this, 'addGetPermalinkButton'), 5, 2);        
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -216,12 +215,5 @@ public function addGetPermalinkButton($arg, $post_id) {
 
 
 }
-
-//public function allowFevoDataTag() {
-    // $allowedFevoDataTag['div'] = array(
-        // 'data-event-fevo' => TRUE
-        // );
-    // return $allowedFevoDataTag;
-// }
 
 }
