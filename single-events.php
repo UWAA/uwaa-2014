@@ -1,7 +1,6 @@
 <?php
   // Start the Loop.
   while ( have_posts() ) : the_post(); 
-
 $isPartnerEvent = get_post_meta($post->ID, 'mb_isPartnerEvent', true);
 
 if ($isPartnerEvent) {

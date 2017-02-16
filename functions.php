@@ -115,9 +115,7 @@ function load_page_specific_scripts() {
       'fevoEventKey' => ($_ENV['fevoEventKey']),
       );
 
-    wp_localize_script('uwaa_fevo', 'uwaaFevoProperties', $fevoValues);
-    
-    
+    wp_localize_script('uwaa_fevo', 'uwaaFevoProperties', $fevoValues);    
 
     if( is_page() || is_single() )
     {
