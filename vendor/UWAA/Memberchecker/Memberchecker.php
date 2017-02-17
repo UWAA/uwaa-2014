@@ -153,7 +153,7 @@ if ($callSuccess === FALSE) {
         'error' => 'TRUE',
         'message' =>'Hmmm. There seems to be something wrong. Why don&rsquo;t you try again or call us and we’ll help you get it straightened out – 1-800-289-2586',
         'errorMessage' => 'Technical Information: '. $callError,
-        'lastName' => $lastName                
+        'lastName' => urldecode($lastName)
     );
     echo json_encode($payload);
     exit;   //refine error handling further...TODO - Need feedback system on page.
@@ -166,7 +166,7 @@ if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfi
         'message' =>'We\'re sorry, that doesn\'t match what we have in our database. Why don&rsquo;t you try again or call us and we’ll help you get it straightened out – 1-800-289-2586',
         // 'message' => $result,
         'errorMessage' => 'Technical Information: ' . $callError,
-        'lastName' => $lastName
+        'lastName' => urldecode($lastName)
     );
     echo json_encode($payload);
     exit;   //refine error handling further...TODO - Need feedback system on page.
