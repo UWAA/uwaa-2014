@@ -2,7 +2,7 @@
 
      Fevo.init({
         publisherKey: uwaaFevoProperties.fevoPublisherKey,
-        env:'sandbox'
+        env:'prod'
     });
 Fevo.purchase('.fevo-button');
      
