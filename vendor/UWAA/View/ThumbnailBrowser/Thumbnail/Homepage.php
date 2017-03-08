@@ -12,14 +12,15 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 
     //Properties Used to Build The Thumbnail For the Homepage
     protected $currentPostID;
-    protected $postTitle;
-    protected $postURL;
+    protected $postTitle;    
     protected $postCalloutText;
     protected $postDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
     protected $postExcerpt;
-    protected $postImageAltText;
+    protected $postImageAltText;    
+    protected $liveURL;
+
       
 
     public function __construct()
@@ -71,16 +72,20 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
       }
 
 
-        $this->postTitle = esc_html(get_the_title(get_the_ID()));
-        $this->postURL = get_permalink();
+        $this->postTitle = esc_html(get_the_title(get_the_ID()));        
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');    
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
-        $this->alternateLink = get_post_meta(get_the_ID(), 'mb_alternate_link', true);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
-        
+
+        $this->liveURL = get_permalink();
+
+        if(get_post_meta(get_the_ID(), 'mb_isPartnerEvent', true)) {
+          $this->liveURL = get_post_meta(get_the_ID(), 'mb_alternate_link', true);
+        }
+
         echo $this->buildTemplate();
 
     endwhile;
@@ -99,7 +104,7 @@ $image = $this->renderImage();
 $date = $this->renderDate();
 $template = <<<TEMPLATE
 <div class="featured-post five-column">
-<a href="{$this->postURL}">
+<a href="{$this->liveURL}">
     <div class="image-frame">
       $image
       $callout
