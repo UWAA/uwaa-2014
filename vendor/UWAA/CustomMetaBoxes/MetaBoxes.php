@@ -688,7 +688,19 @@ class MetaBoxes
                         'id'=> 'row_eight_content',
                         'type'=> 'textarea',
                         'desc'=> 'The content text for the eighth row.'
-                        ),                                      
+                        ),
+                     array(
+                        'name' => 'Row Nine Title',
+                        'id'=> 'row_nine_title',
+                        'type'=> 'text',
+                        'desc'=> 'The title text for the ninth row.'
+                        ),
+                     array(
+                        'name' => 'Row Nine Content',
+                        'id'=> 'row_nine_content',
+                        'type'=> 'textarea',
+                        'desc'=> 'The content text for the ninth row.'
+                        ),
                     )
                 ));
 
