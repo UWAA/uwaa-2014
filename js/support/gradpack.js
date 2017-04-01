@@ -3,7 +3,7 @@
 var $slideShows = $('#slideshow1, #slideshow2');
 
 var slideSizer = function(w) {
-    var $slideHeight = $('.membersLove').height();  
+    var $slideHeight = $('.be-together img').height();  
     if (w <= 320) {
         $slideShows.height(100);
         $slideShows.children().height(100);
@@ -42,41 +42,6 @@ var imgArr = [];
 var preloadArr = [];
 var numberOfSlides = 6;
 
-
-
-
-
-
-
-//Based on initial viewport size, change which set of stuff is loaded.
-function chooseImageSet(w) {
-    for (var i=0; i < numberOfSlides; i++) {
-        if (w <= 320) {
-            imgArr[i] = ImgUrl+i+imgRes.sm;         
-     
-        
-    } else {
-            imgArr[i] = ImgUrl+i+imgRes.lg;         
-        }
-    }
-}
-
-function preloadImages(){ 
-     
-     for(i=0; i < imgArr.length; i++){
-        preloadArr[i] = new Image();
-        preloadArr[i].src = imgArr[i];
-     }
-     return preloadArr;
-}
-
-
-chooseImageSet(w);
-preloadImages();
-
- 
- 
- 
  
  var currImg = 2;
 
@@ -156,7 +121,7 @@ $(window).resize(function(){
 
  $(window).resize(function(){
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
-    var $slideHeight = $('.membersLove').height();
+    var $slideHeight = $('be-together img').height();
     
     slideSizer(w);
 
