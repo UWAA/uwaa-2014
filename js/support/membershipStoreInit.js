@@ -100,7 +100,7 @@ $(document).ready(function() {
         $joinSet
             .find('.primary').show(function() {
                 $joinSet.fadeIn(300);
-                $breadcrumbs.find('span').html('Spring membership drive: Join by March 31 to get your FREE UW alumni license plate frame!');
+                $breadcrumbs.find('span').html('Join UWAA');
             })
             
         } else {
@@ -128,7 +128,7 @@ $(document).ready(function() {
         var type = rawMembershiptype.charAt(0).toUpperCase() + rawMembershiptype.slice(1);        
         switch(type){
             case 'Join':
-                $breadcrumbs.find('span').html('Spring membership drive: Join by March 31 to get your FREE UW alumni license plate frame!');
+                $breadcrumbs.find('span').html('Join UWAA');
             break;
 
             case 'Renew':
