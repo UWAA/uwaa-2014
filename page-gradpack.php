@@ -40,28 +40,31 @@ while ( have_posts() ) : the_post();
  
 
    
-    <div class="content-row">
+    <div class="content-row be-together">
       <div class="image-left">      
          <div class="image events" id="slideshow1">
             <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Movie-Nights_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Movie Nights</p>
+            <!-- slide -->
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Events-DawgDash_600x397.jpg"  alt="Dawg Dash participants">
+            <p class="caption">Dawg Dash</p>
           </div>
           <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Game-Warm-Up-Party_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Washington Warm Ups</p>
-          </div>
+            <img src="https://www.washington.edu/alumni/images/membership/gradpack/GradPack_Events-Movie-Nights_600x397.jpg"  alt="placeholder">
+            <p class="caption">Member Movie Nights</p>
+          </div>         
           <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-BBQs_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Salmon BBQs</p>
-          </div>
-          <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Sounders_600x397.jpg" id="careers_image" alt="placeholder">
+            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Sounders_600x397.jpg"  alt="Two UW Alumni fans at the Sounder Game with UW Alumni Scarves">
             <p class="caption">UW Day at the Sounders</p>
           </div>
           <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Events-Networking_600x397.jpg" id="careers_image" alt="placeholder">
-            <p class="caption">Career and Networking Events</p>
+          <!-- updated -->
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Events-Toast_600x397.jpg"  alt="placeholder">
+            <p class="caption">Grad Toast</p>
+          </div>
+           <div class="slide">
+          <!-- updated -->
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Events-BBQ2_600x397.jpg"  alt="placeholder">
+            <p class="caption">Salmon BBQs</p>
           </div>        
       </div>
         
@@ -78,8 +81,8 @@ while ( have_posts() ) : the_post();
 
      <div class="content-row">
       <div class="image-left">
-        <div class="image libraries">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Libraries_600x397.jpg" id="careers_image" alt="placeholder">
+        <div class="image in-the-know">
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_In-the-Know_600x397.jpg"  alt="UW alumni seated in an audience ">
           </div> 
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_two_title', true)) ?></h3>
@@ -94,8 +97,8 @@ while ( have_posts() ) : the_post();
 
     <div class="content-row">
       <div class="image-left">
-      <div class="image HCN">
-          <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_Careers_600x397.jpg" id="careers_image" alt="placeholder">
+      <div class="image connected">
+          <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Connected_600x397.jpg"  alt="UW Alumni at a networking event">
       </div>
         
         <div class="copy">
@@ -111,8 +114,8 @@ while ( have_posts() ) : the_post();
 
      <div class="content-row">
      <div class="image-left">
-     <div class="image membersLove">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_LoveUW_600x397.jpg" id="careers_image" alt="placeholder">
+     <div class="image connected">
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Champion_600x397.jpg"  alt="UW student with alumni mentor">
           </div> 
        
         <div class="copy">
@@ -124,15 +127,32 @@ while ( have_posts() ) : the_post();
       </div>
     </div>
 
-<div class="white-spacer"></div>
-    <div class="content-row">
-      <div class="image-left">
-        <div class="image join">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_LicensePlate-Membership_600x460.jpg" id="careers_image" alt="placeholder">
-          </div>
+    <div class="white-spacer"></div>
+
+     <div class="content-row">
+     <div class="image-left">
+     <div class="image proud">
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Proud_600x397.jpg"  alt="UW student with alumni mentor">
+          </div> 
+       
         <div class="copy">
         <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_five_title', true)) ?></h3>
         <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_five_content', true)); ?>
+        </p>
+      </div>
+       
+      </div>
+    </div>
+
+<div class="white-spacer"></div>
+    <div class="content-row">
+      <div class="image-left">
+        <div class="image gradpack">
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_LicPlateCar_Swag_600x397.jpg"  alt="UW student with alumni mentor">
+          </div>
+        <div class="copy">
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_six_title', true)) ?></h3>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_six_content', true)); ?>
         </p>
       </div>
           
@@ -145,22 +165,28 @@ while ( have_posts() ) : the_post();
       <div class="image-left">
       <div class="image support" id="slideshow2">
             <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Seattle-Campus_600x397.jpg" id="careers_image" alt="placeholder">
+            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Seattle-Campus_600x397.jpg"  alt="placeholder">
             <p class="caption">UW Seattle campus</p>
           </div>
           <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Bothell-Campus_600x397.jpg" id="careers_image" alt="placeholder">
+            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Bothell-Campus_600x397.jpg"  alt="placeholder">
             <p class="caption">UW Bothell campus</p>
           </div>
           <div class="slide">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Tacoma-Campus_600x397.jpg" id="careers_image" alt="placeholder">
+            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Tacoma-Campus_600x397.jpg"  alt="placeholder">
             <p class="caption">UW Tacoma campus</p>
           </div>
+          <div class="slide">
+            <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_ClassAct_600x397.jpg"  alt="placeholder">
+            <p class="caption">The W on Stevens Way</p>
+          </div>
+
+          
           </div> 
         
         <div class="copy">
-        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_six_title', true)) ?></h3>
-        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_six_content', true)); ?>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_seven_title', true)) ?></h3>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_seven_content', true)); ?>
         </p>       
       </div>
            
@@ -168,16 +194,16 @@ while ( have_posts() ) : the_post();
     </div>
 
 <div class="white-spacer"></div>
-
+<!-- same -->
     <div class="content-row">
       <a class="anchor" name='flickr'></a>
       <div class="image-left">
         <div class="image flickr">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_StudentCollage_600x397.jpg" id="careers_image" alt="placeholder">
+            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_StudentCollage_600x397.jpg"  alt="placeholder">
           </div> 
         <div class="copy">
-        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_seven_title', true)) ?></h3>
-        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_seven_content', true)); ?>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_eight_title', true)) ?></h3>
+        <p><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_eight_content', true)); ?>
         </p>
       </div>
           
@@ -185,15 +211,15 @@ while ( have_posts() ) : the_post();
     </div>
 
   <div class="white-spacer"></div>
-
+<!-- same -->
      <div class="content-row">
       <div class="image-left">
         <div class="image gradLinks">
-            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Graduation_600x397.jpg" id="careers_image" alt="placeholder">
+            <img src="https://uw.edu/alumni/images/membership/gradpack/GradPack_UW-Graduation_600x397.jpg"  alt="placeholder">
           </div>
         <div class="copy">
-        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_eight_title', true)) ?></h3>
-        <p class="noWidowEnder"><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_eight_content', true)); ?>
+        <h3><?php echo esc_html(get_post_meta(get_the_ID(), 'mb_row_nine_title', true)) ?></h3>
+        <p class="noWidowEnder"><?php echo apply_filters('the_content', get_post_meta(get_the_ID(), 'mb_row_nine_content', true)); ?>
         </p>   
 
         
