@@ -31,7 +31,7 @@ while ( have_posts() ) : the_post();
       
       <div class="join-row">
         <div class="wrapper loveUW">
-            <h3>As a UW alum, you are a Husky for life. UWAA keeps you&nbsp;connected.</h3>
+            <h3>From GRAD to GOLD, UWAA membership keeps you connected.</h3>
             <div class="uwaa-btn-wrapper join-row"><a class="uwaa-btn btn-slant-left btn-purple" href="https://secure3.convio.net/uw/site/Donation2?df_id=4220&4220.donation=form1" target="_blank">Join Now</a></div>            
       </div>
         </div>
