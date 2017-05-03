@@ -36,22 +36,16 @@ get_header();
 
           <?php
 
-          
-          get_template_part('partials/membership', 'store');
-
-          echo "<a name=\"pricing\"></a>";
-
-          the_content();
-            
+          the_content();            
 
 
-          endwhile;        
-
-
+          endwhile;     
 
         ?>
 
       </div>
+
+      <iframe src="https://secure.gifts.washington.edu/membership/uwaa" width="100%" frameborder="0" height="3150px" scrolling="no"></iframe>
      
 
     </div>
