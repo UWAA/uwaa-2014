@@ -5,6 +5,7 @@ $UWAA->Memberchecker->getSession();
 // @TODO Make booleans for store state (join vs. renew)
 
 get_header(); 
+
 ?>
 
 <div class="uw-hero-image membership"></div>
@@ -45,7 +46,20 @@ get_header();
 
       </div>
 
-      <iframe src="https://secure.gifts.washington.edu/membership/uwaa" width="100%" frameborder="0" height="3150px" scrolling="no"></iframe>
+      <?php 
+      if (isset($_GET['join'])) {
+        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?join"  ;
+      } elseif (isset($_GET['renew'])) {
+         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?renew"  ;
+      } elseif (isset($_GET['newgrad'])) {
+         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?newgrad"  ;
+      } else {
+         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa"  ;
+      }
+
+      ?>
+  
+      <iframe src="<?php echo $frameURL; ?>" width="100%" frameborder="0" height="3150px" scrolling="no"></iframe>
      
 
     </div>
