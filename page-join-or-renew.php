@@ -47,15 +47,15 @@ get_header();
       </div>
 
       <?php 
-      if (isset($_GET['join'])) {
-        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?join"  ;
-      } elseif (isset($_GET['renew'])) {
-         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?renew"  ;
-      } elseif (isset($_GET['newgrad'])) {
-         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?newgrad"  ;
-      } else {
+      // if (isset($_GET['join'])) {
+      //   $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?join"  ;
+      // } elseif (isset($_GET['renew'])) {
+      //    $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?renew"  ;
+      // } elseif (isset($_GET['newgrad'])) {
+      //    $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?newgrad"  ;
+      // } else {
          $frameURL = "https://secure.gifts.washington.edu/membership/uwaa"  ;
-      }
+      // }
 
       ?>
   
