@@ -24,7 +24,7 @@
     },
     "responsiveiframe" : {
       "dependencies": "null",
-      "main": "jquery.responsiveiframe.min.js"
+      "main": "dist/jquery.responsiveiframe.min.js"
     }
   },
   "devDependencies": {
