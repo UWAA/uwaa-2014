@@ -1,5 +1,5 @@
 (function($){          
       $(function(){
-        $('#MembershipStoreFrame').responsiveIframe({ xdomain: 'gifts.washington.edu'});
+        $('#MembershipStoreFrame').responsiveIframe({ xdomain: 'washington.edu'});
       });        
   })(jQuery);
