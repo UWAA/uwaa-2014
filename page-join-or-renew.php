@@ -47,11 +47,11 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
       </div>
 
       <?php       
-      $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/UWAA/ "  ;
+      $frameURL = "https://secure.gifts.washington.edu/membership/uwaa"  ;
       if ($_GET['join'] == TRUE) {
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?join=true";
       } elseif ($_GET['renew'] == TRUE){
-         $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/UWAA/?renew=true";
+         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?renew=true";
       } elseif ($_GET['newgrad'] == TRUE) {
          $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?newgrad=true";
       } 

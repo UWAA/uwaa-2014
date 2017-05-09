@@ -54,7 +54,7 @@ class Scripts
     $this->SUPPORT_SCRIPTS = array_merge( array(
       'responsiveFrame'   => array (
         'id'      => 'responsiveFrame',
-        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/responsiveiframe/dist/jquery.responsiveiframe.js',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/responsiveiframe/dist/jquery.responsiveiframe' . $this->min_script() . '.js',
         'deps'    => array('jquery'),
         'version' => '2.0.1',
         'in_footer' => false,
