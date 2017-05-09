@@ -2856,6 +2856,14 @@ div.map-logo.vietnam {
 .wufoo pre {
   white-space: pre-wrap;
 }
+@media (max-width: 550px) {
+  .wufoo li {
+    width: 100%;
+  }
+  .wufoo input.test {
+    padding: 6px 0;
+  }
+}
 ul.uwaa-social {
   padding-left: 0;
   margin-bottom: 14.5px;
