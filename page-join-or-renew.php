@@ -58,7 +58,7 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
       ?>
   
-      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" frameborder="0" scrolling="no"></iframe>
+      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no"></iframe>
      
 
     </div>
