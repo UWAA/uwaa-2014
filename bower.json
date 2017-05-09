@@ -21,6 +21,10 @@
     "velocity" : {
       "dependencies": "null",
       "main": "velocity.min.js"
+    },
+    "responsiveiframe" : {
+      "dependencies": "null",
+      "main": "jquery.responsiveiframe.min.js"
     }
   },
   "devDependencies": {
