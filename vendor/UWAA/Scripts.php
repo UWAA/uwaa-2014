@@ -52,7 +52,21 @@ class Scripts
     );
 
     $this->SUPPORT_SCRIPTS = array_merge( array(
-      
+      'responsiveFrame'   => array (
+        'id'      => 'responsiveFrame',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/responsiveiframe/dist/jquery.responsiveiframe' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => '2.0.1',
+        'in_footer' => false,
+        'admin'   => false
+      ),           
+      'responsiveFrameHelper'   => array (
+        'id'      => 'responsiveFrameHelper',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/responsiveFrameHelper' . $this->min_script() . '.js',                
+        'deps'    => array('responsiveFrame'),
+        'in_footer' => true,
+        'admin'   => false
+      ),
       'isotope'   => array (
         'id'      => 'isotope',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/isotope/dist/isotope.pkgd.js',

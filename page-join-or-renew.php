@@ -1,10 +1,10 @@
 <?php
 
 $UWAA->Memberchecker->getSession();
-
 // @TODO Make booleans for store state (join vs. renew)
 
 get_header(); 
+wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 ?>
 
@@ -58,7 +58,7 @@ get_header();
 
       ?>
   
-      <iframe src="<?php echo $frameURL; ?>" width="100%" frameborder="0" height="3150px" scrolling="no"></iframe>
+      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" frameborder="0" scrolling="no"></iframe>
      
 
     </div>
