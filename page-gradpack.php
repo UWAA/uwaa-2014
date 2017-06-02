@@ -40,7 +40,7 @@ while ( have_posts() ) : the_post();
  
 
    
-    <div class="content-row be-together">
+    <div class="content-row be-together events">
       <div class="image-left">      
          <div class="image events" id="slideshow1">
             <div class="slide">
@@ -81,7 +81,7 @@ while ( have_posts() ) : the_post();
 
      <div class="content-row">
       <div class="image-left">
-        <div class="image in-the-know">
+        <div class="image in-the-know libraries">
             <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_In-the-Know_600x397.jpg"  alt="UW alumni seated in an audience ">
           </div> 
         <div class="copy">
@@ -97,7 +97,7 @@ while ( have_posts() ) : the_post();
 
     <div class="content-row">
       <div class="image-left">
-      <div class="image connected">
+      <div class="image connected hcn">
           <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Connected_600x397.jpg"  alt="UW Alumni at a networking event">
       </div>
         
@@ -114,7 +114,7 @@ while ( have_posts() ) : the_post();
 
      <div class="content-row">
      <div class="image-left">
-     <div class="image connected">
+     <div class="image connected ">
             <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Champion_600x397.jpg"  alt="UW student with alumni mentor">
           </div> 
        
@@ -131,7 +131,7 @@ while ( have_posts() ) : the_post();
 
      <div class="content-row">
      <div class="image-left">
-     <div class="image proud">
+     <div class="image proud support">
             <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Proud_600x397.jpg"  alt="UW student with alumni mentor">
           </div> 
        
