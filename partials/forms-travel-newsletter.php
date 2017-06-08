@@ -25,13 +25,13 @@ How would you like to get updates from UW Alumni tours?
 <![endif]-->
 <div>
 <span>
-<label class="checkbox checkbox-label" for="Field17">E-News
-<input id="Field17" name="Field17" type="checkbox" class="checkbox tours-form-enews" value="E-News" data-toggle="checkbox" tabindex="3"     />
+<label class="checkbox checkbox-label" for="Field17">Email
+<input id="Field17" name="Field17" type="checkbox" class="checkbox tours-form-enews" value="Email" data-toggle="checkbox" tabindex="3"     />
 </label>
 </span>
 <span>
-<label class="checkbox checkbox-label" for="Field18">Print Catalog
-<input id="Field18" name="Field18" type="checkbox" class="checkbox tours-form-print" value="Print Catalog" data-toggle="checkbox" tabindex="4"     />
+<label class="checkbox checkbox-label" for="Field18">Print Materials
+<input id="Field18" name="Field18" type="checkbox" class="checkbox tours-form-print" value="Print Materials" data-toggle="checkbox" tabindex="4"     />
 </label>
 </span>
 </div>

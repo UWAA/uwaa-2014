@@ -114,7 +114,7 @@ while ( have_posts() ) : the_post();
 
      <div class="content-row">
      <div class="image-left">
-     <div class="image connected ">
+     <div class="image connected HCN ">
             <img src="https://depts.washington.edu/alumni/assets/images/membership/GradPack_Champion_600x397.jpg"  alt="UW student with alumni mentor">
           </div> 
        
