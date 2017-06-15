@@ -63,6 +63,8 @@ class UWAA
         new \UWAA\CustomPostTypes\RegionalChapters; //Holds UWAA Custom Posts Types
 
 
+        //OpenGraph Tagging
+        new \UWAA\OpenGraph;  //Facebook and Twitter Card Generator
        
 
         //Custom Meta Boxes
@@ -76,8 +78,7 @@ class UWAA
         new \UWAA\Widgets\SidebarFeaturedPost;
         new \UWAA\Widgets\SidebarPullQuote;
         new \UWAA\Widgets\SidebarSeeYourChapter;
-        new \UWAA\Widgets\SocialSidebar;  
-        
+        new \UWAA\Widgets\SocialSidebar;        
         new \UWAA\ContentExperiments;
     }
 
