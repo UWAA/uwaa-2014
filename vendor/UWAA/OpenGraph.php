@@ -19,7 +19,7 @@ class OpenGraph
  
     if(is_single()) {
         if(has_post_thumbnail($post->ID)) {                                     
-            $feature = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID, 'original'));
+            $feature = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'original');
             $img_src = $feature['0'];            
             $img_dimensions = "
                  <meta property=\"og:image:width\"      content=\" ". $feature['1'] ." \">
