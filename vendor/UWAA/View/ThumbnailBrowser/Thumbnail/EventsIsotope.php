@@ -85,7 +85,21 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         'type' => 'DATE',
         'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
         'compare' => '>=', // Return the ones greater than today's date
-      ),      
+      ),
+      'tax_query' => array(
+        'relation' => 'AND',
+        // array(
+        //   'taxonomy' => 'destinations',
+        //   'field'    => 'name',
+        //   'terms'    => array( 'asia')
+        // ),
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    => array( 'exclude-from-search'),
+          'operator'  => 'NOT IN'
+          )
+      ), //End tax query
       'posts_per_page' => -1,
 
       );
