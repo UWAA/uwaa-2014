@@ -164,6 +164,14 @@ class Scripts
         'in_footer' => true,
         'admin'   => false,
     ),
+        'footballScheduleOpener' => array (
+        'id'      => 'footballScheduleOpener',
+        'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/footballScheduleOpener'. $this->min_script() .'.js',
+        'deps'    => array( 'backbone' ),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false,
+    ),
         'gradpack' => array (
         'id'      => 'gradpack',
         'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/gradpack'. $this->min_script() .'.js',

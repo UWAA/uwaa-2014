@@ -6,3 +6,6 @@ assets/fonts/heron.*
 bower_components
 vendor/*
 !vendor/uwaa
+.vs
+*.phpproj*
+project/*

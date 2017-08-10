@@ -3,13 +3,18 @@
 
 $isPartnerEvent = get_post_meta($post->ID, 'mb_isPartnerEvent', true);
 
+
+
 if ($isPartnerEvent) {
   $url = apply_filters('remove_cms', get_post_meta($post->ID, 'mb_alternate_link', true));
   $UWAA->Utilities->Redirect($url, true);
 }
 
 
-get_header(); ?>
+get_header(); 
+wp_enqueue_script('footballScheduleOpener');
+
+?>
 <a name="pagination-top"></a>
 
 <?php 
