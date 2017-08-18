@@ -57,7 +57,10 @@
                      'mb_start_date',
                      'mb_end_date',
                      ),
-                 'hasTaxonomy' => false,
+                 'hasTaxonomy' => true,
+                 'taxonomyName' => array(
+                      'destinations'
+                  ),
                  'hasGeotag' => false
              );
 
@@ -71,7 +74,7 @@
               $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
               $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], null , $this->eventFields['hasGeotag'] );
               $this->augmentFeed('post', $this->newsFields['fields']);
-              $this->augmentFeed('tours', $this->toursFields['fields']);
+              $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);
           }
 
           public function addUWAANamespaceToFeed()
