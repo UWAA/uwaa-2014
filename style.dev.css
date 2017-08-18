@@ -2098,6 +2098,33 @@ div.map-logo.vietnam {
     display: none;
   }
 }
+.home-thumbnail-row {
+  margin-bottom: 20px;
+}
+.home-thumbnail-row .row-title-row {
+  text-align: center;
+  padding: 10px 0;
+  width: auto;
+}
+.home-thumbnail-row .row-title-row .row-title-text {
+  width: 244px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+.home-thumbnail-row .row-title-row .row-title-text.news {
+  width: 104px;
+}
+.home-thumbnail-row .row-title-row .row-title-text h2 {
+  font-family: 'Encode Sans Compressed', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  text-transform: uppercase;
+  background: #ffffff;
+}
+.home-thumbnail-row .row-hr {
+  border-bottom: 3px solid #dddddd;
+  margin-bottom: -44px;
+}
 .uwaa-home-branding-row .uw-breadcrumbs {
   padding: 20px 13px 0 20px;
   white-space: nowrap;
@@ -4392,4 +4419,30 @@ ul.uw-mobile-menu > div ul li.current_page_ancestor ul.children li.current_page_
   position: fixed;
   top: 0;
   left: 0;
+}
+ul#menu-alumni {
+  margin: 0 0 0 150px;
+}
+.dawgdrops-inner {
+  position: relative;
+}
+.dawgdrops-inner:before {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: url(assets/logos/uwaa-logo-purple.svg) no-repeat 0 0;
+  background-size: 132px;
+  left: -7px;
+}
+@media only screen and (max-width: 991px) {
+  .dawgdrops-inner:before {
+    top: 25%;
+    left: -4px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .dawgdrops-inner:before {
+    display: none;
+    visibility: hidden;
+  }
 }

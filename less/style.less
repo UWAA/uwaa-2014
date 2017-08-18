@@ -249,3 +249,36 @@ overflow: hidden;
   //   clip: auto;    
   // }
 }
+
+ul#menu-alumni {
+    margin: 0 0 0 150px;    
+}
+
+
+
+.dawgdrops-inner{
+    position: relative;
+
+
+    &:before {
+        position:absolute;
+        height: 150px;
+        width: 150px;
+        background: url(assets/logos/uwaa-logo-purple.svg) no-repeat 0 0;
+        background-size: 132px;
+        left: -7px;
+
+        @media only screen and (max-width : 991px) {
+            top: 25%;
+            left: -4px;    
+     }
+
+        @media only screen and (max-width : 767px) {
+            display: none;
+            visibility: hidden;
+     }
+    }
+
+
+}
+

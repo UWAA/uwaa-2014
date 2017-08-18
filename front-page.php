@@ -2,6 +2,7 @@
 get_header(); 
 wp_enqueue_script('superHero');
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
+use \UWAA\View\ThumbnailBrowser\Thumbnail\HomepageEvents;
 
 ?>
 
@@ -33,17 +34,44 @@ endif;
 
       <div class="uw-body-copy">
 
-  <div class="row 5-column">
-       <?php
-      
+          <div class="row 5-column home-thumbnail-row home-events">
+
+              <div class="row-title-row">
+                  <div class="row-hr"></div>
+                  <div class="row-title-text">
+                      <h2>upcoming events</h2>
+                  </div>
+             </div>
+              <?php
+
+
+       $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+       $thumbnailRow->makeThumbnails(new HomepageEvents);
+
+              ?>
+
+          </div>
+
+          <div class="row 5-column home-thumbnail-row home-row">
+
+              <div class="row-title-row">
+                  <div class="row-hr"></div>
+                  <div class="row-title-text news">
+                      <h2>news</h2>
+                  </div>
+              </div>
+
+              <?php
+
 
       $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 
       $thumbnailRow->makeThumbnails(new Homepage);
 
-      ?>
+              ?>
 
-</div>
+          </div>
 
 
         
