@@ -6,7 +6,7 @@ class MetaBoxes
     protected $post;
 
     function __construct() {
-        
+
         global $post;
 
         $this->post = $post;
@@ -18,12 +18,12 @@ class MetaBoxes
         $this->add_event_meta();
         $this->add_header_text_toggle();
         $this->add_major_market_toggle();
-        $this->add_post_custom_actions(); 
-           
+        $this->add_post_custom_actions();
+
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
         add_filter('do_meta_boxes', array($this, 'renameFeaturedImage'), 0);
-        add_action('pre_get_posts', array($this, 'add_gradpack_content_meta'), 0);        
+        add_action('pre_get_posts', array($this, 'add_gradpack_content_meta'), 0);
     }
 
         public function renameFeaturedImage() {
@@ -31,7 +31,7 @@ class MetaBoxes
             $screen = get_current_screen();
             remove_meta_box( 'postimagediv', $screen, 'side' );
             add_meta_box('postimagediv', __('Post Header/Thumbnail Image'), 'post_thumbnail_meta_box', $screen, 'side', 'high');
-        }        
+        }
 
         public function moveEditorBox() {
             global $post, $wp_meta_boxes;
@@ -50,22 +50,22 @@ class MetaBoxes
             $boxesToRemove = array(
                 'postcustom',
                 'trackbacksdiv',
-                // 'categorydiv'                
+                // 'categorydiv'
                 );
 
             foreach ($pagesToRemoveBoxesFrom as $page):
-                foreach ($boxesToRemove as $box): 
+                foreach ($boxesToRemove as $box):
                     remove_meta_box($box, $page, 'normal');
                 endforeach;
             endforeach;
 
             remove_meta_box('formatdiv', 'post', 'normal');
             // remove_meta_box('tagsdiv-post_tag', 'post', 'normal');
-            
+
         }
 
 
-       
+
 
         protected function add_tours_meta() {
             new \UWAA\CustomPostData('tours', array(
@@ -80,16 +80,22 @@ class MetaBoxes
                         'type'=> 'select',
                         'default' => 'preliminary',
                         'options' => array(
-                                'preliminary' => 'Preliminary Tour', 
+                                'preliminary' => 'Preliminary Tour',
                                 'ready_to_publish_tour' => 'Ready to Publish'
                                 ),
                         'desc'=> 'Use this to determine if the tour should be landable from the updoming tour page.'
-                    ),                    
+                    ),
                     array(
                         'name' => 'Start Date',
                         'id'=> 'start_date',
                         'type'=> 'text',
                         'desc'=> 'The date this tour starts.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
+                        ),
+                    array(
+                        'name' => 'End Date',
+                        'id'=> 'end_date',
+                        'type'=> 'text',
+                        'desc'=> 'The date this tour ends, before any extension. Essential for the Member App  Formatting is very important.  e.g. 10/19/2014'
                         ),
                     array(
                      'name' => 'Cosmetic Tour Start Date',
@@ -120,7 +126,7 @@ class MetaBoxes
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
                         'desc'=> "Small gold text that appears below the image in a featured post.  Defaults to region specified in \"Tour Sorting Categories\" , or can be overwritten with this field."
-                        ),                                                             
+                        ),
                     array(
                         'name' => 'Tour Map Image',
                         'id'=> 'operator_map',
@@ -133,7 +139,7 @@ class MetaBoxes
                         'type'=> 'textarea',
                         'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
                         ),
-                                       
+
 
                 )
             )
@@ -144,7 +150,7 @@ class MetaBoxes
         protected function add_tours_map_meta() {
             new \UWAA\CustomPostData('thumbnail_information', array(
                 'title' => 'Map-Specific Information',
-                'pages' => array( 'tours'),  
+                'pages' => array( 'tours'),
                 'context' => 'normal',
                 'priority' => 'default',
                 'fields' => array(
@@ -159,13 +165,13 @@ class MetaBoxes
                         'id'=> 'lat_long',
                         'type'=> 'text',
                         'desc'=> 'The latitude, longitude coordinates for the trip.  Use this to precisely position the map-marker if a city does not work'
-                        ),                    
+                        ),
                     array(
                         'name' => 'Map Excerpt',
                         'id'=> 'map_excerpt',
                         'type'=> 'text',
                         'desc'=> "This is the text that will show up in the map. Limit to XX characters. "
-                        )                    
+                        )
                 )
             )
             );
@@ -186,13 +192,13 @@ class MetaBoxes
                         'id'=> 'lat_long',
                         'type'=> 'text',
                         'desc'=> 'The latitude, longitude coordinates for the trip.  Use this to precisely position the map-marker.'
-                        ),                    
+                        ),
                     array(
                         'name' => 'Map Excerpt',
                         'id'=> 'map_excerpt',
                         'type'=> 'text',
                         'desc'=> "This is the text that will show up in the map under the Chapter logo. Limit to XX characters."
-                        )                    
+                        )
                 )
             )
             );
@@ -229,7 +235,7 @@ class MetaBoxes
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
                         'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour, or can be overwritten with this field.  Homepage featured posts should have this."
-                        ),                    
+                        ),
                 )
             )
             );
@@ -248,13 +254,13 @@ class MetaBoxes
                      'id'=> 'pull-quote-text',
                      'type'=> 'text',
                      'desc'=> "Pull Quote Text"
-                    ), 
+                    ),
                     array(
                         'name' => 'Attribution',
                         'id'=> 'pull-quote-attribution',
                         'type'=> 'text',
                         'desc'=> 'To whom this quote is attributed.  Small gold text below quote.  e.g. Members name'
-                        )                                     
+                        )
                 )
             )
             );
@@ -267,25 +273,25 @@ class MetaBoxes
                 'pages' => array('chapters'),
                 'context' => 'normal',
                 'priority' => 'high',
-                'fields' => array(                    
+                'fields' => array(
                     array(
                         'name' => 'Chapter Map Excerpt',
                         'id'=> 'chapter_map_excerpt',
                         'type'=> 'text',
                         'desc'=> "Teaser text for the communities map.  E.g. 13,813 Alumni and frields in the XYZ area."
-                        ),                    
+                        ),
                     array(
                         'name' => 'Map Position',
                         'id'=> 'marker_position',
                         'type'=> 'text',
                         'desc'=> "If the chapter's location has a different name than the title (e.g. Bay Area vs. San Francisco), enter a location here to help the map place the marker in the correct spot."
-                        ), 
+                        ),
                     array(
                         'name' => 'Chapter Leader 1',
                         'id'=> 'chapter_leader_1',
                         'type'=> 'text',
                         'desc'=> "The name of the Chapter Leader, follow UWAA Style for grad year/school."
-                        ),                    
+                        ),
                     array(
                         'name' => 'Chapter Leader 1 Email',
                         'id'=> 'chapter_leader_1_email',
@@ -297,7 +303,7 @@ class MetaBoxes
                         'id'=> 'chapter_leader_2',
                         'type'=> 'text',
                         'desc'=> "(optional) The name of the Second Chapter Leader, follow UWAA Style for grad year/school."
-                        ),                    
+                        ),
                     array(
                         'name' => 'Chapter Leader 2 Email',
                         'id'=> 'chapter_leader_2_email',
@@ -345,13 +351,13 @@ class MetaBoxes
                         'id'=> 'chapter_twitter_name',
                         'type'=> 'text',
                         'desc'=> "Specialized name for the chapter Twitter feed.  E.g. NY Huskies"
-                        ),                    
+                        ),
                     array(
                         'name' => 'Latitude/Longitude',
                         'id'=> 'lat_long',
                         'type'=> 'text',
                         'desc'=> 'IF you are havingg issues getting the map marker to show up in the correct spot, then put in a lat long.'
-                        ), 
+                        ),
 
                 )
             )
@@ -371,7 +377,7 @@ class MetaBoxes
                         'id'=> 'benefit_promotion',
                         'type'=> 'textarea',
                         'desc'=> "Text to be displayed only if the user is logged in.  Such as promotional codes/offer details."
-                        ),                
+                        ),
                     array(
                         'name' => 'Benefit Provider Logo:',
                         'id'=> 'benefit_provider_logo',
@@ -389,15 +395,15 @@ class MetaBoxes
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
                         'desc'=> "Small gold text that appears below the image in a featured post.  For Tours, this will default to the region of the tour, or can be overwritten with this field.  Homepage featured posts should have this."
-                        ), 
+                        ),
                     array(
                         'name' => '80 Character Excerpt',
                         'id'=> '80_character_excerpt',
                         'type'=> 'textarea',
                         'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
                         ),
-                            
-                     
+
+
 
                 )
             )
@@ -419,11 +425,11 @@ class MetaBoxes
                         'type'=> 'select',
                         'default' => false,
                         'options' => array(
-                                false => 'Alumni/UWAA Event', 
+                                false => 'Alumni/UWAA Event',
                                 true => 'Partner Event'
                                 ),
                         'desc'=> 'Use this to make a limited event that will only show up on the calendar, but doesn\'t need a full event page buildout.'
-                    ),                   
+                    ),
                     array(
                         'name' => 'Start Date',
                         'id'=> 'start_date',
@@ -435,7 +441,7 @@ class MetaBoxes
                      'id'=> 'cosmetic_date',
                      'type'=> 'text',
                      'desc'=> "Appears over header image and under promotion thumbnails."
-                    ),                    
+                    ),
                     array(
                         'name' => 'Callout Box',
                         'id'=> 'thumbnail_callout',
@@ -447,7 +453,7 @@ class MetaBoxes
                         'id'=> 'thumbnail_subtitle',
                         'type'=> 'text',
                         'desc'=> "Small gold text that appears below the image in a featured post thumbnail.  E.g. New York Huskies, Member 101 Series."
-                        ),                                                         
+                        ),
                     array(
                         'name' => 'Alternate Link',
                         'id'=> 'alternate_link',
@@ -465,14 +471,14 @@ class MetaBoxes
                      'id'=> 'event_location',
                      'type'=> 'text',
                      'desc'=> "H5 - Where the event will be held - e.g. Kane Hall 120, UW Seattle Campus"
-                    ), 
+                    ),
                     array(
                         'name' => 'Event Time',
                         'id'=> 'event_time',
                         'type'=> 'text',
                         'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
                         ),
-                           
+
 
                     )
             )
@@ -490,8 +496,8 @@ class MetaBoxes
                     array(
                         'name' => 'Header Text Color',
                         'id'=> 'header_text_color',
-                        'type'=> 'select',                        
-                        'options' => array(                                 
+                        'type'=> 'select',
+                        'options' => array(
                                 'white-header-overlay' => 'White Text',
                                 'purple-header-overlay' => 'Purple Text'
                                 ),
@@ -516,7 +522,7 @@ class MetaBoxes
                         'type'=> 'select',
                         'default' => 'notMajorMarket',
                         'options' => array(
-                                'notMajorMarket' => 'Not a Major Market', 
+                                'notMajorMarket' => 'Not a Major Market',
                                 'majorMarket' => 'Is a Major Market'
                                 ),
                         'desc'=> 'Use this to toggle between major and non/major markets.  Non-major markets will have their map link direct to the "Other Areas" page'
@@ -527,15 +533,15 @@ class MetaBoxes
 
         }
 
-     
+
 
         protected function add_post_custom_actions() {
             new \UWAA\CustomPostData('post_custom_action', array(
                 'title' => 'Post Special Fields',
-                'pages' => array('post'),  
+                'pages' => array('post'),
                 'context' => 'normal',
                 'priority' => 'high',
-                'fields' => array(                                           
+                'fields' => array(
                         array(
                         'name' => 'Callout Box',
                         'id'=> 'thumbnail_callout',
@@ -560,7 +566,7 @@ class MetaBoxes
                         'type'=> 'select',
                         'default' => false,
                         'options' => array(
-                                false => 'Alumni/UWAA Content', 
+                                false => 'Alumni/UWAA Content',
                                 true => 'Partner Content'
                                 ),
                         'desc'=> 'Use this to make a limited story post that will only show up on the story page, but doesn\'t need a full buildout.'
@@ -570,7 +576,7 @@ class MetaBoxes
                         'id'=> 'alternate_link',
                         'type'=> 'text',
                         'desc'=> 'If this content should link to an external page, write the URL here. Leave this blank for any content/story that stays on our site.  This is also used for superhero redirects. Relative URLs(/alumni/definealumni) are supported.'
-                        )                            
+                        )
                     )
             )
             );
@@ -579,13 +585,13 @@ class MetaBoxes
 
          public function add_gradpack_content_meta()
         {
-                        
+
 
             global $post;
 
 
 
-            if(!empty($post) && $post->post_name == 'gradpack')  {                                
+            if(!empty($post) && $post->post_name == 'gradpack')  {
 
                 new \UWAA\CustomPostData('gradpack_content_meta', array(
                 'title' => 'Gradpack Content',

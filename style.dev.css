@@ -2101,9 +2101,12 @@ div.map-logo.vietnam {
 .home-thumbnail-row {
   margin-bottom: 20px;
 }
+.home-thumbnail-row:home-events {
+  margin-top: -13px;
+}
 .home-thumbnail-row .row-title-row {
   text-align: center;
-  padding: 10px 0;
+  padding: 25px 0 0px;
   width: auto;
 }
 .home-thumbnail-row .row-title-row .row-title-text {
@@ -4431,18 +4434,21 @@ ul#menu-alumni {
   height: 150px;
   width: 150px;
   background: url(assets/logos/uwaa-logo-purple.svg) no-repeat 0 0;
-  background-size: 132px;
-  left: -7px;
+  background-size: 105px;
+  left: 6px;
 }
 @media only screen and (max-width: 991px) {
   .dawgdrops-inner:before {
     top: 25%;
-    left: -4px;
+    left: 13px;
+    background-size: 88px;
   }
 }
-@media only screen and (max-width: 767px) {
-  .dawgdrops-inner:before {
-    display: none;
-    visibility: hidden;
-  }
+#spacer:before {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  background: url(assets/logos/uwaa-logo-purple.svg) no-repeat 0 0;
+  background-size: 105px;
+  left: 6px;
 }
