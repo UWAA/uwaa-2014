@@ -22,7 +22,7 @@ class Scripts
         'id'      => 'uwaa.site',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/uwaa.site' . $this->dev_script() . '.js',
         'deps'    => array(),
-        'version' => '1.0.3',
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
       ),
