@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 0.1.0
+ Version: 0.2.0
  */
 .thumbnail > img,
 .thumbnail a > img,
@@ -525,6 +525,9 @@ h6.intro-head {
   margin-top: -5px;
   font-weight: 600;
   margin-bottom: 0;
+}
+.page-board-of-trustees .wp-caption-text {
+  font-size: 12px;
 }
 a.read-more-link:hover,
 a.read-more-link:active {
