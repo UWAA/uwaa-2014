@@ -46,17 +46,23 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
       </div>
 
-      <?php       
-      $frameURL = "https://secure.gifts.washington.edu/membership/uwaa"  ;
-      if ($_GET['join'] == TRUE) {
-        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?join=true";
-      } elseif ($_GET['renew'] == TRUE){
-         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?renew=true";
-      } elseif ($_GET['newgrad'] == TRUE) {
-         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?newgrad=true";
-      } 
+        <?php
 
-      ?>
+      $appealCodeIFrameParam = '';
+      if(isset($_GET['appealcode'])) {
+          $appealCodeIFrameParam = '?appealcode='. filter_var($_GET['appealcode'], FILTER_SANITIZE_STRING);
+      }
+
+      $frameURL = "https://secure.gifts.washington.edu/membership/uwaa" . $appealCodeIFrameParam;
+      if ($_GET['join'] == TRUE) {
+        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa" . $appealCodeIFrameParam . "&join=true";
+      } elseif ($_GET['renew'] == TRUE){
+         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa" . $appealCodeIFrameParam . "&renew=true";
+      } elseif ($_GET['newgrad'] == TRUE) {
+         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa" . $appealCodeIFrameParam . "&newgrad=true";
+      }
+
+        ?>
   
       <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no"></iframe>
      
