@@ -22,10 +22,6 @@ var southWest = L.latLng(-90, 180),
         });
     
         map.setView(globalCenter, 2);    
-
-    
-    
-
     
 
     startLoading();
@@ -47,7 +43,23 @@ var southWest = L.latLng(-90, 180),
                         '</a></p>';
         
         marker.bindPopup($(popupContent).click(function(){
-            console.log('clicked');                        
+            var $pageAccordionContent = $('.collapse p');
+
+            var $accordionWithChapter = $pageAccordionContent.children( feature.properties.link ).parents('.panel');
+            var $indicator = $accordionWithChapter.find(".indicator:first");
+            var $content = $accordionWithChapter.children('.collapse');
+
+            $accordionWithChapter.removeClass('closed').addClass('open');
+            $indicator.attr("aria-expanded", "true");
+            $indicator.text("Expanded");
+            $indicator.css({ "position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)" });
+            $content.show().attr("aria-hidden", "false");
+
+            $('html, body').animate({                
+                scrollTop: $content.offset().top - 100
+            }, 500);
+
+
         })[0],
         {
         closeButton: true,

@@ -286,6 +286,17 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "If the chapter's location has a different name than the title (e.g. Bay Area vs. San Francisco), enter a location here to help the map place the marker in the correct spot."
                         ),
+                        array(
+                        'name' => 'International vs. US Toggle',
+                        'id'=> 'internationalOrUS',
+                        'type'=> 'select',
+                        'default' => 'international',
+                        'options' => array(
+                                'international' => 'International Huskies',
+                                'us' => 'US Huskies'
+                                ),
+                        'desc'=> 'Used to support the new map features on the US Huskies Page and International Huskies Page.  Without this, you could not get to the omaha chapter from the international huskies page.'
+                        ),                    
                     array(
                         'name' => 'Chapter Leader 1',
                         'id'=> 'chapter_leader_1',

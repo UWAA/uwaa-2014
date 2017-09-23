@@ -54,8 +54,7 @@
 
         var $pageAccordionContent = $('#accordion .panel .collapse p');
         
-        var $accordionWithChapter = $pageAccordionContent.children("#"+chapterToFind+"").parents('.panel');
-        // var $accordionWithChapter = $pageAccordionContent.children("#" + chapterToFind + "").parents('.panel');
+        var $accordionWithChapter = $pageAccordionContent.children("#"+chapterToFind+"").parents('.panel');        
         var $indicator = $accordionWithChapter.find(".indicator:first");
         var $content = $accordionWithChapter.children('.collapse');
 
