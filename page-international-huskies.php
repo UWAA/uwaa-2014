@@ -1,6 +1,6 @@
-<?php 
-get_header(); 
-wp_enqueue_script(array('communitiesMap'));
+<?php
+get_header();
+wp_enqueue_script(array('internationalHuskiesMap'));
 wp_enqueue_style('mapbox');
 wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson', 'https'))  ) );
 $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
@@ -35,9 +35,8 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
            
 
-          endwhile;
+          endwhile;          
 
-          get_template_part( 'partials/map' );
         ?>
          
         
