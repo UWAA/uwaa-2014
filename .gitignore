@@ -4,8 +4,8 @@ node_modules
 *.env.*
 assets/fonts/heron.*
 bower_components
-!vendor/uwaa
 vendor/*
+!vendor/UWAA
 .vs
 *.phpproj*
 project/*
