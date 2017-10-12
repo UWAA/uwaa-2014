@@ -1,8 +1,8 @@
 <?php namespace UWAA;
 /**
  * This is where all the JS files are registered
- *    Modified version of the UW-2014 Script loader.  Yanking out jquery, child theme stuff as they already call it.  Mirronring 
- *    their approach to loading admin and public and site scripts.  
+ *    Modified version of the UW-2014 Script loader.  Yanking out jquery, child theme stuff as they already call it.  Mirronring
+ *    their approach to loading admin and public and site scripts.
  *    Also loading our scripts in the footer...
  */
 
@@ -17,7 +17,7 @@ class Scripts
   {
 
     $this->SCRIPTS = array_merge( array(
-      
+
       'site'   => array (
         'id'      => 'uwaa.site',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/uwaa.site' . $this->dev_script() . '.js',
@@ -35,7 +35,7 @@ class Scripts
         'in_footer' => true,
         'admin'   => true
       ),
-    
+
 
     ));
 
@@ -59,10 +59,10 @@ class Scripts
         'version' => '2.0.1',
         'in_footer' => false,
         'admin'   => false
-      ),           
+      ),
       'responsiveFrameHelper'   => array (
         'id'      => 'responsiveFrameHelper',
-        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/responsiveFrameHelper' . $this->min_script() . '.js',                
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/responsiveFrameHelper' . $this->min_script() . '.js',
         'deps'    => array('responsiveFrame'),
         'in_footer' => true,
         'admin'   => false
@@ -80,7 +80,15 @@ class Scripts
         'id'      => 'mapbox',
         'url'     => "https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js",
         'deps'    => array(),
-        'version' => '2.0.1',
+        'version' => '2.1.2',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+
+      'seattleMap'   => array (
+        'id'      => 'seattleMap',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/seattle_map' . $this->min_script() . '.js',
+        'deps'    => array('mapbox'),        
         'in_footer' => true,
         'admin'   => false
       ),
@@ -92,7 +100,7 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-        
+
       ),
 
       'isotopeVetsInit' => array (
@@ -102,7 +110,7 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-        
+
       ),
 
        'toursMap' => array (
@@ -112,7 +120,7 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-        
+
       ),
         'communitiesMap' => array (
         'id'      => 'communitiesMap',
@@ -121,7 +129,7 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-        
+
       ),
         'velocity' => array (
         'id'      => 'velocity',
@@ -129,7 +137,7 @@ class Scripts
         'deps'    => array(),
         'version' => '2.0',
         'in_footer' => true,
-        'admin'   => false        
+        'admin'   => false
       ),
         'membershipStoreInit' => array (
         'id'      => 'membershipStoreInit',
@@ -138,7 +146,7 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-        
+
       ),
         'superHero' => array (
         'id'      => 'superHero',
@@ -186,10 +194,10 @@ class Scripts
         'deps'    => array('jquery', 'uwaa.site'),
         'version' => '1.0',
         'in_footer' => true,
-        'admin'   => false        
+        'admin'   => false
       ),
 
-    
+
 
     ));
 
@@ -202,7 +210,7 @@ class Scripts
 
   function uwaa_register_default_scripts()
   {
-      
+
       foreach ( $this->SCRIPTS as $script )
       {
         $script = (object) $script;
@@ -223,7 +231,7 @@ class Scripts
 
   public function uwaa_register_support_scripts()
   {
-      
+
       foreach ( $this->SUPPORT_SCRIPTS as $script )
       {
         $script = (object) $script;

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 $isPartnerEvent = get_post_meta($post->ID, 'mb_isPartnerEvent', true);
@@ -11,8 +11,15 @@ if ($isPartnerEvent) {
 }
 
 
-get_header(); 
+get_header();
 wp_enqueue_script('footballScheduleOpener');
+
+// if DawgDash Post
+
+
+if(strtolower(get_the_title()) == 'dawgdash') {
+    wp_enqueue_script('seattleMap');    
+}
 
 ?>
 <a name="pagination-top"></a>
