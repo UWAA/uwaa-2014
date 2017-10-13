@@ -17,8 +17,8 @@ wp_enqueue_script('footballScheduleOpener');
 // if DawgDash Post
 
 
-if(strtolower(get_the_title()) == 'dawgdash') {
-    wp_enqueue_script('seattleMap');    
+if(strtolower(get_the_title()) == 'alaska airlines dawg dash') {
+    wp_enqueue_script('seattleMap');
 }
 
 ?>
