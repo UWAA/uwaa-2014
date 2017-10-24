@@ -45,13 +45,6 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
     </div>
     
      <div class="col-md-4 uw-sidebar">
-
-
-
-
-
-
-
     <?php    
 
        
@@ -59,14 +52,31 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
         $communitiesSidebarMenu->renderCommunitiesChapterMenu();  
         
       
-       dynamic_sidebar( 'communities_sidebar' );
+    ?>
 
-       the_widget("UWAA\Widgets\SidebarSeeYourChapter");
+         <div id="no-chapter-widget" class="widget widget_text">             
+             <div class="uwaa-btn-wrapper">
+                 <a class="uwaa-btn btn-slant-right btn-purple" href="#accordion">Find your community</a>
+             </div>
+         </div>
+
+         
+
+         <div id="text-3" class="widget widget_text">
+             <h2 class="widgettitle">Update your contact information</h2>
+             <div class="textwidget">
+                 Help keep our records current!  Please <a href="/update">update your contact information,</a> which helps ensure that you receive relevant communications from the UW and the UW Alumni Association.
+             </div>
+         </div>
+
+         <?php
+
+        the_widget("UWAA\Widgets\SidebarSeeYourChapter");
         
 
     ?>
 
-    
+      
 
      
       </div>
