@@ -1,9 +1,7 @@
 (function ($) {
 
-var path = window.location.pathname.split('/').filter(function(n){ return n !== ''; }).pop()
-var globalCenter = [20, 15];
 var usCenter = [39.833333, -98.583333];
-var uiMenu = $("#mapNavigation");
+
 
 //bounding work
 var southWest = L.latLng(-90, 180),
@@ -20,23 +18,13 @@ var southWest = L.latLng(-90, 180),
         doubleClickZoom:false,
         maxBounds: bounds,
         });
-    if (path === 'international-huskies') {
-        map.setView(globalCenter, 2);
-    } else if (path === 'u-s-huskies') {
+    
         map.setView(usCenter, 4);
-    } else {
-        uiMenu.css('display', 'block');
-        map.setView([39.833333, -98.583333], 4);
-    }
+    
 
     
-    $('#usNav').on('click', function() {
-        map.setView(usCenter, 4);
-    });
-
-    $('#asiaNav').on('click', function() {
-        map.setView(globalCenter, 2);
-    });
+    
+    
 
     startLoading();
 
@@ -50,16 +38,39 @@ var southWest = L.latLng(-90, 180),
             feature = marker.feature;
 
         //Template for Custom Tooltip        
-        var popupContent = '<a href="' + feature.properties.link + '">' +
-                            '<div class="map-logo '+ feature.properties.logo +'"></div>' +
+        var popupContent = '<a href="' + feature.properties.link + '" data-chapter="' + feature.properties.link + '">' +
+                            '<div class="map-logo ' + feature.properties.logo + '"></div>' +
                             '<p class="map-excerpt">' + feature.properties.excerpt + '</a>' +
-                            '<a class="map-link" href="' + feature.properties.link + '">' +                            
-                        '</a></p>'; 
+                            '<a class="map-link" href="' + feature.properties.link + '">' +
+                        '</a></p>';
+        
+        marker.bindPopup($(popupContent).click(function(){
 
-        marker.bindPopup(popupContent,{
+           var chapterToFind = this.dataset.chapter.substr(1);
+
+            var $pageAccordionContent = $('.collapse p');           
+            var $accordionWithChapter = $pageAccordionContent.children( "#"+chapterToFind+"" ).parents('.panel');            
+            var $indicator = $accordionWithChapter.find(".indicator:first");
+            var $content = $accordionWithChapter.children('.collapse');
+
+            $accordionWithChapter.removeClass('closed').addClass('open');
+            $indicator.attr("aria-expanded", "true");
+            $indicator.text("Expanded");
+            $indicator.css({ "position": "absolute", "clip": "rect(1px, 1px, 1px, 1px)" });
+            $content.show().attr("aria-hidden", "false");
+
+            $('html, body').animate({                
+                scrollTop: $content.offset().top - 100
+            }, 500);
+
+
+        })[0],
+        {
         closeButton: true,
         minWidth: 320
-    });
+        }
+
+        )
     
     });
 

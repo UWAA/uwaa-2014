@@ -122,9 +122,9 @@ class Scripts
         'admin'   => false
 
       ),
-        'communitiesMap' => array (
-        'id'      => 'communitiesMap',
-        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/communitiesMap' . $this->min_script() . '.js',
+        'USHuskiesMap' => array (
+        'id'      => 'USHuskiesMap',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/USHuskiesMap' . $this->min_script() . '.js',
         'deps'    => array('mapbox'),
         'version' => '1.0',
         'in_footer' => true,

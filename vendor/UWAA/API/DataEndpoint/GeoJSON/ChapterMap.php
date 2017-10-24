@@ -78,7 +78,7 @@ public function build($endpointData)
         $featureContents = array(
             'logo' => esc_html($post->post_name),
             'link' => esc_url(apply_filters('remove_cms' , $link)),
-            'excerpt' => esc_html(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),
+            'excerpt' => esc_html(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),            
             'marker-color' => '#4b2e83'
             
         );
@@ -92,15 +92,32 @@ public function build($endpointData)
         $homeURL = home_url('/');
         $linkToOtherChaptersPage = '#' . $post->post_name . '';
         $isMajorMarket = get_post_meta($post->ID, 'mb_isMajorMarket', true);
+        $isUSOrInternational = get_post_meta($post->ID, 'mb_internationalOrUS', true);
 
 
         if ($isMajorMarket == 'majorMarket') {
-            return $linkToMajorMarket;
-            
+            return $linkToMajorMarket;            
 
         }
 
-        return $linkToOtherChaptersPage;
+        switch ($isUSOrInternational) {
+            case 'us':
+                return $homeURL . "u-s-huskies/#" . $post->post_name; 
+                break;
+
+            case 'international':
+                return $homeURL . "international-huskies/#" . $post->post_name;
+                break;
+            
+            default:
+                return $linkToOtherChaptersPage;
+                break;
+        }
+
+
+        
+
+        
 
     }
 
