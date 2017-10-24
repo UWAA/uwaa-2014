@@ -5,21 +5,21 @@ class UI
 
     public $breadcrumbs;
 
-    function __construct() 
+    function __construct()
     {
         $this->initShortcodes();
         add_action( 'admin_head', array($this, 'addAdminMenuIcons'));
         $this->Breadcrumbs = new Breadcrumbs();
         add_filter('excerpt_length', array($this, 'setExcerptLength'), 999);
-        
+
     }
 
-    public function setExcerptLength($length) 
+    public function setExcerptLength($length)
     {
         return 40;
     }
 
-        
+
 
     private function initShortcodes(){
         new Shortcodes\Button;
@@ -28,36 +28,38 @@ class UI
         new Shortcodes\Accordions;
         new Shortcodes\OdysseySignupButton;
         new Shortcodes\AddMap;
+        new Shortcodes\AddDawgDashMap;
+
     }
 
     public static function getPostFeaturedImageURL($id, $size)
     {
-        
+
         $url = wp_get_attachment_image_src($id, $size);
         echo($url[0]);
     }
 
       public function returnPostFeaturedImageURL($id, $size)
     {
-        
+
         $url = wp_get_attachment_image_src($id, $size);
         return($url[0]);
-    } 
+    }
 
     public function returnImageAltTag($id) {
-        $attachmentID = get_post_thumbnail_id($id);        
-        $altText = get_post_meta($attachmentID, '_wp_attachment_image_alt', true);        
+        $attachmentID = get_post_thumbnail_id($id);
+        $altText = get_post_meta($attachmentID, '_wp_attachment_image_alt', true);
         if (!$altText) {
                     return "Alt Text Missing";
-                }        
+                }
         return $altText;
     }
 
 
 
-    public function addAdminMenuIcons() 
+    public function addAdminMenuIcons()
     {
-        ?>
+?>
         <style>
         #adminmenu .menu-icon-tours div.wp-menu-image:before {
             content: '\f319';

@@ -545,184 +545,183 @@ class MetaBoxes
         }
 
 
+          protected function add_post_custom_actions() {
+              new \UWAA\CustomPostData('post_custom_action', array(
+                  'title' => 'Post Special Fields',
+                  'pages' => array('post'),
+                  'context' => 'normal',
+                  'priority' => 'high',
+                  'fields' => array(
+                          array(
+                          'name' => 'Callout Box',
+                          'id'=> 'thumbnail_callout',
+                          'type'=> 'text',
+                          'desc'=> "This text will show up in the small purple line on the thumbnail."
+                          ),
+                          array(
+                          'name' => 'Content Head',
+                          'id'=> 'thumbnail_subtitle',
+                          'type'=> 'text',
+                          'desc'=> "Small gold text that appears below the image in a featured post thumbnail.  E.g. New York Huskies, Member 101 Series."
+                          ),
+                          array(
+                          'name' => '80 Character Excerpt',
+                          'id'=> '80_character_excerpt',
+                          'type'=> 'textarea',
+                          'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
+                          ),
+                          array(
+                          'name' => 'Partner Content Toggle',
+                          'id'=> 'isPartnerEvent',
+                          'type'=> 'select',
+                          'default' => false,
+                          'options' => array(
+                                  false => 'Alumni/UWAA Content',
+                                  true => 'Partner Content'
+                                  ),
+                          'desc'=> 'Use this to make a limited story post that will only show up on the story page, but doesn\'t need a full buildout.'
+                      ),
+                      array(
+                          'name' => 'Alternate Link',
+                          'id'=> 'alternate_link',
+                          'type'=> 'text',
+                          'desc'=> 'If this content should link to an external page, write the URL here. Leave this blank for any content/story that stays on our site.  This is also used for superhero redirects. Relative URLs(/alumni/definealumni) are supported.'
+                          )
+                      )
+              )
+              );
 
-        protected function add_post_custom_actions() {
-            new \UWAA\CustomPostData('post_custom_action', array(
-                'title' => 'Post Special Fields',
-                'pages' => array('post'),
-                'context' => 'normal',
-                'priority' => 'high',
-                'fields' => array(
+          }
+
+          public function add_gradpack_content_meta()
+          {
+
+
+              global $post;
+
+
+
+              if(!empty($post) && $post->post_name == 'gradpack')  {
+
+                  new \UWAA\CustomPostData('gradpack_content_meta', array(
+                  'title' => 'Gradpack Content',
+                  'pages' => array('page'),
+                  'context' => 'advanced',
+                  'priority' => 'high',
+                  'fields' => array(
+                      array(
+                          'name' => 'Row One Title',
+                          'id'=> 'row_one_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the first row.'
+                          ),
+                       array(
+                          'name' => 'Row One Content',
+                          'id'=> 'row_one_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the first row.'
+                          ),
                         array(
-                        'name' => 'Callout Box',
-                        'id'=> 'thumbnail_callout',
-                        'type'=> 'text',
-                        'desc'=> "This text will show up in the small purple line on the thumbnail."
-                        ),
+                          'name' => 'Row Two Title',
+                          'id'=> 'row_two_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the second row.'
+                          ),
+                       array(
+                          'name' => 'Row Two Content',
+                          'id'=> 'row_two_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the second row.'
+                          ),
                         array(
-                        'name' => 'Content Head',
-                        'id'=> 'thumbnail_subtitle',
-                        'type'=> 'text',
-                        'desc'=> "Small gold text that appears below the image in a featured post thumbnail.  E.g. New York Huskies, Member 101 Series."
-                        ),
+                          'name' => 'Row Three Title',
+                          'id'=> 'row_three_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the third row.'
+                          ),
+                       array(
+                          'name' => 'Row Three Content',
+                          'id'=> 'row_three_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the third row.'
+                          ),
                         array(
-                        'name' => '80 Character Excerpt',
-                        'id'=> '80_character_excerpt',
-                        'type'=> 'textarea',
-                        'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
-                        ),
+                          'name' => 'Row Four Title',
+                          'id'=> 'row_four_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the fourth row.'
+                          ),
+                       array(
+                          'name' => 'Row Four Content',
+                          'id'=> 'row_four_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the fourth row.'
+                          ),
                         array(
-                        'name' => 'Partner Content Toggle',
-                        'id'=> 'isPartnerEvent',
-                        'type'=> 'select',
-                        'default' => false,
-                        'options' => array(
-                                false => 'Alumni/UWAA Content',
-                                true => 'Partner Content'
-                                ),
-                        'desc'=> 'Use this to make a limited story post that will only show up on the story page, but doesn\'t need a full buildout.'
-                    ),
-                    array(
-                        'name' => 'Alternate Link',
-                        'id'=> 'alternate_link',
-                        'type'=> 'text',
-                        'desc'=> 'If this content should link to an external page, write the URL here. Leave this blank for any content/story that stays on our site.  This is also used for superhero redirects. Relative URLs(/alumni/definealumni) are supported.'
-                        )
-                    )
-            )
-            );
+                          'name' => 'Row Five Title',
+                          'id'=> 'row_five_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the fifth row.'
+                          ),
+                       array(
+                          'name' => 'Row Five Content',
+                          'id'=> 'row_five_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the fifth row.'
+                          ),
+                        array(
+                          'name' => 'Row Six Title',
+                          'id'=> 'row_six_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the sixth row.'
+                          ),
+                       array(
+                          'name' => 'Row Six Content',
+                          'id'=> 'row_six_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the sixth row.'
+                          ),
+                        array(
+                          'name' => 'Row Seven Title',
+                          'id'=> 'row_seven_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the seventh row.'
+                          ),
+                       array(
+                          'name' => 'Row Seven Content',
+                          'id'=> 'row_seven_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the seventh row.'
+                          ),
+                        array(
+                          'name' => 'Row Eight Title',
+                          'id'=> 'row_eight_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the eighth row.'
+                          ),
+                       array(
+                          'name' => 'Row Eight Content',
+                          'id'=> 'row_eight_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the eighth row.'
+                          ),
+                       array(
+                          'name' => 'Row Nine Title',
+                          'id'=> 'row_nine_title',
+                          'type'=> 'text',
+                          'desc'=> 'The title text for the ninth row.'
+                          ),
+                       array(
+                          'name' => 'Row Nine Content',
+                          'id'=> 'row_nine_content',
+                          'type'=> 'textarea',
+                          'desc'=> 'The content text for the ninth row.'
+                          ),
+                      )
+                  ));
 
-        }
-
-         public function add_gradpack_content_meta()
-        {
-
-
-            global $post;
-
-
-
-            if(!empty($post) && $post->post_name == 'gradpack')  {
-
-                new \UWAA\CustomPostData('gradpack_content_meta', array(
-                'title' => 'Gradpack Content',
-                'pages' => array('page'),
-                'context' => 'advanced',
-                'priority' => 'high',
-                'fields' => array(
-                    array(
-                        'name' => 'Row One Title',
-                        'id'=> 'row_one_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the first row.'
-                        ),
-                     array(
-                        'name' => 'Row One Content',
-                        'id'=> 'row_one_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the first row.'
-                        ),
-                      array(
-                        'name' => 'Row Two Title',
-                        'id'=> 'row_two_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the second row.'
-                        ),
-                     array(
-                        'name' => 'Row Two Content',
-                        'id'=> 'row_two_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the second row.'
-                        ),
-                      array(
-                        'name' => 'Row Three Title',
-                        'id'=> 'row_three_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the third row.'
-                        ),
-                     array(
-                        'name' => 'Row Three Content',
-                        'id'=> 'row_three_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the third row.'
-                        ),
-                      array(
-                        'name' => 'Row Four Title',
-                        'id'=> 'row_four_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the fourth row.'
-                        ),
-                     array(
-                        'name' => 'Row Four Content',
-                        'id'=> 'row_four_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the fourth row.'
-                        ),
-                      array(
-                        'name' => 'Row Five Title',
-                        'id'=> 'row_five_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the fifth row.'
-                        ),
-                     array(
-                        'name' => 'Row Five Content',
-                        'id'=> 'row_five_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the fifth row.'
-                        ),
-                      array(
-                        'name' => 'Row Six Title',
-                        'id'=> 'row_six_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the sixth row.'
-                        ),
-                     array(
-                        'name' => 'Row Six Content',
-                        'id'=> 'row_six_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the sixth row.'
-                        ),
-                      array(
-                        'name' => 'Row Seven Title',
-                        'id'=> 'row_seven_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the seventh row.'
-                        ),
-                     array(
-                        'name' => 'Row Seven Content',
-                        'id'=> 'row_seven_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the seventh row.'
-                        ),
-                      array(
-                        'name' => 'Row Eight Title',
-                        'id'=> 'row_eight_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the eighth row.'
-                        ),
-                     array(
-                        'name' => 'Row Eight Content',
-                        'id'=> 'row_eight_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the eighth row.'
-                        ),
-                     array(
-                        'name' => 'Row Nine Title',
-                        'id'=> 'row_nine_title',
-                        'type'=> 'text',
-                        'desc'=> 'The title text for the ninth row.'
-                        ),
-                     array(
-                        'name' => 'Row Nine Content',
-                        'id'=> 'row_nine_content',
-                        'type'=> 'textarea',
-                        'desc'=> 'The content text for the ninth row.'
-                        ),
-                    )
-                ));
-
-            }
-        }
+              }
+          }
 
 
 
@@ -730,4 +729,4 @@ class MetaBoxes
 
 
 
-}
+      }

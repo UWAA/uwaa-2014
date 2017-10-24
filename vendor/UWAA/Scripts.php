@@ -80,7 +80,15 @@ class Scripts
         'id'      => 'mapbox',
         'url'     => "https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js",
         'deps'    => array(),
-        'version' => '2.0.1',
+        'version' => '2.1.2',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+
+      'seattleMap'   => array (
+        'id'      => 'seattleMap',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/seattle_map' . $this->min_script() . '.js',
+        'deps'    => array('mapbox'),        
         'in_footer' => true,
         'admin'   => false
       ),
@@ -121,7 +129,6 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-
       ),
       'internationalHuskiesMap' => array (
         'id'      => 'internationalHuskiesMap',
@@ -130,7 +137,6 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-
       ),
         'velocity' => array (
         'id'      => 'velocity',
