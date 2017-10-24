@@ -36,16 +36,18 @@ var southWest = L.latLng(-90, 180),
             feature = marker.feature;
 
         //Template for Custom Tooltip        
-        var popupContent = '<a href="' + feature.properties.link + '">' +
+        var popupContent = '<a href="' + feature.properties.link + '" data-chapter="' + feature.properties.link + '">' +
                             '<div class="map-logo ' + feature.properties.logo + '"></div>' +
                             '<p class="map-excerpt">' + feature.properties.excerpt + '</a>' +
                             '<a class="map-link" href="' + feature.properties.link + '">' +
                         '</a></p>';
         
         marker.bindPopup($(popupContent).click(function(){
-            var $pageAccordionContent = $('.collapse p');
 
-            var $accordionWithChapter = $pageAccordionContent.children( feature.properties.link ).parents('.panel');
+           var chapterToFind = this.dataset.chapter.substr(1);
+
+            var $pageAccordionContent = $('.collapse p');           
+            var $accordionWithChapter = $pageAccordionContent.children( "#"+chapterToFind+"" ).parents('.panel');            
             var $indicator = $accordionWithChapter.find(".indicator:first");
             var $content = $accordionWithChapter.children('.collapse');
 
