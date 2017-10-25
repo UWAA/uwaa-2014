@@ -9,7 +9,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
 ?>
 
-<div class="uw-hero-image communities"></div>
+<div class="uw-hero-image international"></div>
 
 <div class="container uw-body">
 

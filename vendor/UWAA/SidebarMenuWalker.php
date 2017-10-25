@@ -77,7 +77,7 @@ class SidebarMenuWalker extends \Walker_Nav_Menu {
     }
 
 
-    function start_lvl(&$output, $depth, $args = array() ) {
+    function start_lvl(&$output, $depth = 0, $args = array() ) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<ul class=\"children\">\n";
   }    
