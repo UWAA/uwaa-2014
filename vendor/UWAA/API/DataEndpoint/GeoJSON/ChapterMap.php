@@ -74,13 +74,14 @@ public function build($endpointData)
     {
 
         $link = $this->determineLink($post);
+        $jumper = explode('#', esc_url(apply_filters('remove_cms' , $link))); 
 
         $featureContents = array(
             'logo' => esc_html($post->post_name),
             'link' => esc_url(apply_filters('remove_cms' , $link)),
             'excerpt' => esc_html(get_post_meta($post->ID, 'mb_chapter_map_excerpt', true)),            
-            'marker-color' => '#4b2e83'
-            
+            'marker-color' => '#4b2e83',
+            'jumper' => $jumper[1]
         );
 
         return $featureContents;
@@ -102,11 +103,11 @@ public function build($endpointData)
 
         switch ($isUSOrInternational) {
             case 'us':
-                return $homeURL . "u-s-huskies/#" . $post->post_name; 
+                return $homeURL . "communities/u-s-huskies/#" . $post->post_name; 
                 break;
 
             case 'international':
-                return $homeURL . "international-huskies/#" . $post->post_name;
+                return $homeURL . "communities/international-huskies/#" . $post->post_name;
                 break;
             
             default:

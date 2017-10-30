@@ -36,7 +36,7 @@ var southWest = L.latLng(-90, 180),
             feature = marker.feature;
 
         //Template for Custom Tooltip        
-        var popupContent = '<a href="' + feature.properties.link + '" data-chapter="' + feature.properties.link + '">' +
+        var popupContent = '<a href="' + feature.properties.link + '" data-chapter="' + feature.properties.jumper + '">' +
                             '<div class="map-logo ' + feature.properties.logo + '"></div>' +
                             '<p class="map-excerpt">' + feature.properties.excerpt + '</a>' +
                             '<a class="map-link" href="' + feature.properties.link + '">' +

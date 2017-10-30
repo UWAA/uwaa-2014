@@ -25,6 +25,11 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
           // Start the Loop.
           while ( have_posts() ) : the_post();
 
+            ?>  
+          <h1><?php the_title() ?></h1>
+
+          <?php
+
             /*
              * Include the post format-specific template for the content. If you want to
              * use this in a child theme, then include a file called called content-___.php
