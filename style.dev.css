@@ -4635,11 +4635,12 @@ div.slideshow-24143 {
 }
 div.slideshow-24143 .uw-slideshow-controls {
   bottom: 100%;
-  top: 33%;
+  top: 0;
 }
 div.slideshow-24143 .uw-slideshow-controls.next {
-  left: 96%;
+  left: 94%;
 }
 div.slideshow-24143 .uw-slideshow-controls.previous {
-  left: 6%;
+  left: 88%;
+  margin-left: 0;
 }
