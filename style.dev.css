@@ -4638,9 +4638,10 @@ div.slideshow-24143 .uw-slideshow-controls {
   top: 0;
 }
 div.slideshow-24143 .uw-slideshow-controls.next {
-  left: 94%;
+  left: 100%;
+  margin-left: -45px;
 }
 div.slideshow-24143 .uw-slideshow-controls.previous {
-  left: 88%;
-  margin-left: 0;
+  left: 100%;
+  margin-left: -90px;
 }
