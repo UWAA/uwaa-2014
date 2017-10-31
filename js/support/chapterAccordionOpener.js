@@ -1,13 +1,17 @@
 (function($) {   
 
     var currentPage = window.location;
-    var nameOfPage = 'all-communities';
+    var goodPages = ['u-s-huskies', 'international-huskies'];
 
     var path = currentPage.pathname.split('/').filter(function(n){ return n !== ''; }).pop();
 
+    var isOkayToFire = goodPages.indexOf(path);
+
     
     //This function should only run on one page.
-    if (path === nameOfPage) {
+    if (isOkayToFire != -1) {
+
+    console.log('firing');
 
     //http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
     function parseURL(url) {
@@ -40,15 +44,17 @@
 
     var currentPage = parseURL(currentPage);
 
+    console.log(currentPage);
+
     // console.log(currentPage.params);
     
     //Another check, we are only going to search for a chapter if the URL has one.
-    if (currentPage.params.hasOwnProperty('chapter')) {
+    if (currentPage.hash != '') {
 
         
 
         // var chapterToFind = currentPage.params.chapter.replace("%20", " ");
-        var chapterToFind = currentPage.params.chapter;
+        var chapterToFind = currentPage.hash;
 
 
 

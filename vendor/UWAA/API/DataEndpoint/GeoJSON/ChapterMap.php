@@ -103,11 +103,11 @@ public function build($endpointData)
 
         switch ($isUSOrInternational) {
             case 'us':
-                return "#" . $post->post_name; 
+                return $homeURL . "communities/u-s-huskies/#" . $post->post_name; 
                 break;
 
             case 'international':
-                return "#" . $post->post_name;
+                return $homeURL . "communities/international-huskies/#" . $post->post_name;
                 break;
             
             default:

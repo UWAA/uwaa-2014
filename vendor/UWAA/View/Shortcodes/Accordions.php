@@ -62,7 +62,9 @@ class Accordions
             'country' => NULL            
         ), $atts );
 
-        $chapterID = ($a['country'] ? str_replace(' ', '-', strtolower($a['country'])) : str_replace(' ', '-', strtolower($a['name'])));
+        // $chapterID = ($a['country'] ? str_replace(' ', '-', strtolower($a['country'])) : str_replace(' ', '-', strtolower($a['name'])));
+        $chapterID = str_replace(' ', '-', strtolower($a['name']));
+
 
         if (empty($a['country'])) { 
             return   "<strong id=\"$chapterID\">{$a['name']}</strong>";

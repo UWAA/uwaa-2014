@@ -1,7 +1,7 @@
 <?php 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
 get_header(); 
-wp_enqueue_script(array('USHuskiesMap'));
+wp_enqueue_script(array('USHuskiesMap', 'chapterAccordionOpener'));
 wp_enqueue_style('mapbox');
 wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson', 'https' ) ) ) );
 $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();

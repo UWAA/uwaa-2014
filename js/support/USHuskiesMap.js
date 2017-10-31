@@ -46,9 +46,7 @@ var southWest = L.latLng(-90, 180),
         
         marker.bindPopup($(popupContent).click(function(){
 
-           var chapterToFind = this.dataset.chapter;
-
-           console.log(chapterToFind);
+           var chapterToFind = this.dataset.chapter;           
 
             var $pageAccordionContent = $('.collapse p');           
             var $accordionWithChapter = $pageAccordionContent.children( "#"+chapterToFind+"" ).parents('.panel');            
