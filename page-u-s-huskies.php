@@ -1,4 +1,5 @@
 <?php 
+use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
 get_header(); 
 wp_enqueue_script(array('USHuskiesMap'));
 wp_enqueue_style('mapbox');
@@ -27,6 +28,21 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
             ?>  
           <h1><?php the_title() ?></h1>
+
+
+            <div class="row">
+              <?php
+
+
+              $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+              $thumbnailRow->makeThumbnails(new Chapters(basename(get_permalink() ) ) );
+
+
+
+              ?>
+
+          </div>
 
           <?php
 
