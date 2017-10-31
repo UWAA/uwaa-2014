@@ -4634,5 +4634,12 @@ div.slideshow-24143 {
   height: 520px;
 }
 div.slideshow-24143 .uw-slideshow-controls {
-  bottom: 20px;
+  bottom: 100%;
+  top: 25%;
+}
+div.slideshow-24143 .uw-slideshow-controls.next {
+  right: 0;
+}
+div.slideshow-24143 .uw-slideshow-controls.previous {
+  left: 0;
 }
