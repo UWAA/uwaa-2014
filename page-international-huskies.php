@@ -89,7 +89,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
          <div id="text-3" class="widget widget_text">
              <h2 class="widgettitle">Update your contact information</h2>
              <div class="textwidget">
-                 Help keep our records current!  Please <a href="/update">update your contact information,</a> which helps ensure that you receive relevant communications from the UW and the UW Alumni Association.
+                 Help keep our records current!  Please <a href="https://www.washington.edu/cms/alumni/services/update/">update your contact information,</a> which helps ensure that you receive relevant communications from the UW and the UW Alumni Association.
              </div>
          </div>
 
