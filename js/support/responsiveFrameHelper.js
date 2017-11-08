@@ -1,5 +1,5 @@
 (function($){          
       $(function(){
-        $('#MembershipStoreFrame').responsiveIframe({ xdomain: '*'});
+        $('#MembershipStoreFrame').responsiveIframe({ xdomain: '*', scrollToTop: true});
       });        
   })(jQuery);
