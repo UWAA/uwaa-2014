@@ -1,12 +1,14 @@
 /*! jQuery ResponsiveIframe - v0.0.3 - 2013-09-05
 * https://github.com/npr/responsiveiframe
 * Copyright (c) 2013 Irakli Nadareishvili; Licensed MIT, GPL */
+
+/* modified to take scroll position - RG 11/7/2017 */
 if (typeof jQuery !== 'undefined') {
   (function( $ ){
     var settings = {
       xdomain: '*',
       ie : navigator.userAgent.toLowerCase().indexOf('msie') > -1,
-      scrollToTop: true
+      scrollToTop: false
     };
 
     var methods = {
@@ -62,16 +64,18 @@ if (typeof jQuery !== 'undefined') {
 
         if(settings.xdomain === '*' || matches ) {
           strD = e.data + "";
-          r = strD.match(/^(\d+)(s?)$/);
-          if(r && r.length === 3){
+          r = strD.match(/^(\d+)(s?)(\d+)?$/);
+          if(r && r.length === 4){
             height = parseInt(r[1], 10);
             if (!isNaN(height)) {
               try {
                 privateMethods.setHeight(elem, height);
               } catch (ex) {}
             }
-            if (settings.scrollToTop && r[2] === "s"){
+            if (settings.scrollToTop && r[2] === "s" && typeof r[3] === 'undefined'){
               scroll(0,0);
+            } else if (settings.scrollToTop && r[2] === "s" && typeof r[3] !== 'undefined') {
+                scroll(0, parseInt(r[3], 10) + elem.position().top);
             }
           }
         }
@@ -119,9 +123,15 @@ if (typeof jQuery !== 'undefined') {
     }
   };
 
-  ResponsiveIframe.prototype.messageParent = function(scrollTop) {
+  ResponsiveIframe.prototype.messageParent = function(scrollTop, offSet) {
     var h = document.body.offsetHeight;
-    h = (scrollTop)? h+'s':h;
+    if (scrollTop) {
+        h = h + 's';
+    } else if (!scrollTop && typeof offSet !== 'undefined' && offSet !== null) {
+        h = h + 's' + offSet;
+    } else {
+      h = h;
+    }
     if(top.postMessage){
       top.postMessage( h , '*');
     } else {
