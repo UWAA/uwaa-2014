@@ -50,10 +50,11 @@
 
     new \UWAA\View\Pagination('tours', get_the_ID());
 
-    $mapURL = get_post_meta(get_the_id(), 'mb_operator_map', true);    
+    $mapURL = get_post_meta(get_the_id(), 'mb_operator_map', true);
+    $bigMapURL = get_post_meta(get_the_id(), 'mb_operator_big_map', true);
      if ($mapURL) {
       echo '<div class="widget">';
-      echo '<img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" />';
+      echo '<a href=" ' . esc_attr($bigMapURL) . '  "><img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" /></a>';
       echo '</div>';
      }
         dynamic_sidebar( 'travel_sidebar' );

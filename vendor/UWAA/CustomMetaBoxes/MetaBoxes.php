@@ -133,6 +133,12 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "Provide the URL for the Tour Map you have uploaded to WordPress (via the Media Gallery or this page)."
                         ),
+                    array(
+                        'name' => 'Tour Map Big Image',
+                        'id'=> 'operator_big_map',
+                        'type'=> 'text',
+                        'desc'=> "Provide the URL for the Big Tour Map you have uploaded to WordPress (via the Media Gallery or this page). This is the image that will show in the lightbox on click."
+                        )
                      array(
                         'name' => '80 Character Excerpt',
                         'id'=> '80_character_excerpt',
