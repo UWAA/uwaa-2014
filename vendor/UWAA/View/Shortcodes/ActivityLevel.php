@@ -15,28 +15,28 @@ class ActivityLevel
         add_shortcode('activity-level', array($this, 'activity_code_handler'));
     }
 
-    public function activity_code_handler($atts, $content)
+    public function activity_code_handler($atts)
     {
         $attributes = (object) $atts;
 
         $classes = array('activity-level');
 
-        if (property_exists($attributes, 'activity-level'))
+        if (property_exists($attributes, 'level'))
 		{
-            $result = "";
 
-			switch ($attributes.level)
+
+			switch ($attributes->level)
 			{
-				case "1":
+				case 1:
 					$result = "activity-level-one";
 					break;
-				case "2":
+				case 2:
 					$result = "activity-level-two";
 					break;
-				case "3":
+				case 3:
 					$result = "activity-level-three";
 					break;
-				case "4":
+				case 4:
 					$result = "activity-level-four";
 					break;
 				default:
@@ -46,7 +46,7 @@ class ActivityLevel
 
 
         $class_string = implode($classes, ' ');
-        return ('<div class=" ' .$class_string. ' "></div>');
+        return ('<div class=" '.$class_string.' "></div>');
     }
 }
 
