@@ -64,6 +64,7 @@ class Scripts
         'id'      => 'responsiveFrameHelper',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/responsiveFrameHelper' . $this->min_script() . '.js',
         'deps'    => array('responsiveFrame'),
+        'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
       ),
@@ -88,7 +89,8 @@ class Scripts
       'seattleMap'   => array (
         'id'      => 'seattleMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/seattle_map' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),        
+        'deps'    => array('mapbox'), 
+        'version' => '1.0',       
         'in_footer' => true,
         'admin'   => false
       ),
@@ -198,6 +200,14 @@ class Scripts
         'covervid' => array (
         'id'      => 'covervid',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/covervid/covervid.js',
+        'deps'    => array('jquery', 'uwaa.site'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+        'bootstrap-modal' => array (
+        'id'      => 'bootstrap-modal',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/bootstrap/js/bootstrap.js',
         'deps'    => array('jquery', 'uwaa.site'),
         'version' => '1.0',
         'in_footer' => true,

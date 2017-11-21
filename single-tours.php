@@ -1,4 +1,7 @@
 <?php get_header(); 
+
+  wp_enqueue_script('bootstrap-modal');
+
   // Start the Loop.
   while ( have_posts() ) : the_post();
   
