@@ -45,14 +45,8 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 		  <p>
 	  	Launching now, you can save 
-<strong>40%</strong> on UWAA annual memberships! As a loyal Husky, we&rsquo;re offering you early access to our Cyber Member Monday rate. Whether you want to treat yourself, renew your membership or share with a friend, sign up today to enjoy generous benefits like exclusive invitations to member events and discounts at dozens of businesses&mdash;while supporting and staying connected to the UW.
+<strong>40%</strong> on UWAA annual memberships! Whether you want to treat yourself, renew your membership or share with a friend, sign up today to enjoy generous benefits like exclusive invitations to member events and discounts at dozens of businesses.
 		  </p>
-	  	
-	  	<p>Be connected. Be proud. Be a member.</p>
-
-	  	
-
-
 
 			<?php
 		  } else {         
@@ -146,7 +140,7 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 		?>
   
-      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no"></iframe>
+      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
      
 
     </div>
