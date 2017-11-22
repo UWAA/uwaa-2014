@@ -51,13 +51,13 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
         $appealCodeIFrameParams = array();
 
-       
+
 	   $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 	   parse_str($rawParentQueryStringParams, $parentPageParams);
 	   $childPageParams = array();
 
 	   if (count($parentPageParams > 0)) {
-		
+
 
 		   if(array_key_exists("JOIN", $parentPageParams)) {
 
@@ -86,6 +86,24 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 		   if(array_key_exists("MEMBCODES", $parentPageParams)) {
 
 			   $childPageParams['MEMBCODES'] = $parentPageParams['MEMBCODES'];
+
+		   }
+
+		   if(array_key_exists("UTM_SOURCE", $parentPageParams)) {
+
+			   $childPageParams['UTM_SOURCE'] = $parentPageParams['UTM_SOURCE'];
+
+		   }
+
+		   if(array_key_exists("UTM_MEDIUM", $parentPageParams)) {
+
+			   $childPageParams['UTM_MEDIUM'] = $parentPageParams['UTM_MEDIUM'];
+
+		   }
+
+		   if(array_key_exists("UTM_CAMPAIGN", $parentPageParams)) {
+
+			   $childPageParams['UTM_CAMPAIGN'] = $parentPageParams['UTM_CAMPAIGN'];
 
 		   }
 
