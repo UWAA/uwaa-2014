@@ -54,7 +54,8 @@
     $bigMapURL = get_post_meta(get_the_id(), 'mb_operator_big_map', true);
      if ($mapURL) {
       echo '<div class="widget">';
-      echo '<a href=" ' . esc_attr($bigMapURL) . '  "><img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" /></a>';
+      // echo '<a href=" ' . esc_attr($bigMapURL) . '  "><img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" /></a>';
+      echo '<img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" />';
       echo '</div>';
      }
         dynamic_sidebar( 'travel_sidebar' );
