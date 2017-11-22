@@ -88,7 +88,7 @@ class Scripts
       'seattleMap'   => array (
         'id'      => 'seattleMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/seattle_map' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),        
+        'deps'    => array('mapbox'),
         'in_footer' => true,
         'admin'   => false
       ),
@@ -121,6 +121,14 @@ class Scripts
         'in_footer' => true,
         'admin'   => false
 
+      ),
+	  'CommunitiesMap' => array (
+        'id'      => 'communitiesMap',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/communitiesMap' . $this->min_script() . '.js',
+        'deps'    => array('mapbox'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
       ),
         'USHuskiesMap' => array (
         'id'      => 'USHuskiesMap',
