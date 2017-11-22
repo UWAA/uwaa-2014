@@ -9,15 +9,27 @@ class OpenGraph
     
     function __construct()
     {
-        add_action('wp_head', array($this, 'columnsOpenGraph'), 5);
+        add_action('wp_head', array($this, 'handleOpenGraph'), 5);
 
     }
 
 
-    public function columnsOpenGraph() {
+    public function handleOpenGraph() {
     global $post;
+
+    if(get_the_title($post->ID) == "Choose a membership option") {
+            ?>
+            <meta property="og:title" content="Cyber Member Monday sale"/>
+            <meta property="og:description" content="For a limited time, save 40% on UWAA annual memberships! That’s a $20 discount for the best in purple pride."/>
+            <?php
+            return;
+        }
+
  
     if(is_single()) {
+
+        
+
         if(has_post_thumbnail($post->ID)) {                                     
             $feature = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'original');
             $img_src = $feature['0'];            
