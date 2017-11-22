@@ -46,27 +46,55 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
       </div>
 
-        <?php
+		<?php
 
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
+        $appealCodeIFrameParams = array();
 
-      $appealCodeIFrameParam = '';
-      
-      if(isset($_GET['appealcode'])) {
-          $appealCodeIFrameParam = 'appealcode='. filter_var($_GET['appealcode'], FILTER_SANITIZE_STRING);
-          $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?" . $appealCodeIFrameParam ; 
-      }
+       
+	   $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
+	   parse_str($rawParentQueryStringParams, $parentPageParams);
+	   $childPageParams = array();
 
-      
-      if ($_GET['join'] == TRUE) {
-        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?join=true&". $appealCodeIFrameParam;
-      } elseif ($_GET['renew'] == TRUE){
-         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?renew=true&" . $appealCodeIFrameParam;
-      } elseif ($_GET['newgrad'] == TRUE) {
-         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa?newgrad=true&" . $appealCodeIFrameParam;
-      }
+	   if (count($parentPageParams > 0)) {
+		
 
-        ?>
+		   if(array_key_exists("JOIN", $parentPageParams)) {
+
+			   $childPageParams['JOIN'] = $parentPageParams['JOIN'];
+
+		   }
+
+		   if(array_key_exists("RENEW", $parentPageParams)) {
+
+			   $childPageParams['RENEW'] = $parentPageParams['RENEW'];
+
+		   }
+
+		   if(array_key_exists("NEWGRAD", $parentPageParams)) {
+
+			   $childPageParams['NEWGRAD'] = $parentPageParams['NEWGRAD'];
+
+		   }
+
+		   if(array_key_exists("APPEALCODE", $parentPageParams)) {
+
+			   $childPageParams['APPEALCODE'] = $parentPageParams['APPEALCODE'];
+
+		   }
+
+		   if(array_key_exists("MEMBCODES", $parentPageParams)) {
+
+			   $childPageParams['MEMBCODES'] = $parentPageParams['MEMBCODES'];
+
+		   }
+
+
+		   $childPageQueryString = http_build_query($childPageParams);
+		   $frameURL .= "?" . $childPageQueryString;
+	   }
+
+		?>
   
       <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no"></iframe>
      
