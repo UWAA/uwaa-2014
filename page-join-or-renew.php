@@ -27,34 +27,78 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
       <div class="uw-body-copy">      
 
-      <?php
-          // Start the Loop.
-          while ( have_posts() ) : the_post();
+	  	<?php
 
-          ?>
-          <h1><?php the_title() ?></h1>
-                    
-
-          <?php
-
-          the_content();            
+		  $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
+		  parse_str($rawParentQueryStringParams, $parentPageParams);
+		  $childPageParams = array();
 
 
-          endwhile;     
+ 
+          
 
-        ?>
+	  	if(array_key_exists("MEMBCODES", $parentPageParams) && $parentPageParams["MEMBCODES"] == "CMJ,CMS") {
+
+          ?> 
+			  
+	  	<h1>Cyber Member Monday &mdash; Early Access</h1>
+
+		  <p>
+	  	Launching now, you can save 40% on UWAA annual memberships! As a loyal Husky, we&rsquo;re offering you early access to our Cyber Member Monday rate. Whether you want to treat yourself or give the gift of membership, sign up today to enjoy generous benefits like exclusive invitations to member events and discounts at dozens of businesses&mdash;while supporting and staying connected to the UW.
+		  </p>
+
+
+	  	<p>
+	  		<strong>UWAA members enjoy:</strong>
+	  		
+			  <ul>
+					<li>Invitations to exclusive member events, like UWAA Movie Nights, Nike Night and more</li>
+					<li>Early registration to free campus lectures, and discounts to UWAA public events like Alaska Airlines Dawg Dash</li>
+					<li>Borrowing privileges at UW Libraries collections on all three UW campuses</li>
+					<li>Discounts and benefits at dozens of businesses in the Pacific Northwest and online nationwide</li>
+					<li>Knowing we support UW students and public higher education in the state of Washington</li>
+			  </ul>
+	  		
+	  	</p>
+	  	<p>Be connected. Be proud. Be a member.</p>
+
+	  	
+
+
+
+			<?php
+		  } else {         
+
+            ?>
+
+	  	<h1>Choose a membership option</h1>
+
+
+	  	<p>
+	  		<strong>UWAA members enjoy:</strong>
+
+			<ul>
+				<li>Invitations to exclusive member events, like UWAA Movie Nights, Nike Night and more</li>
+				<li>Early registration to free campus lectures, and discounts to UWAA public events like Alaska Airlines Dawg Dash</li>
+				<li>Borrowing privileges at UW Libraries collections on all three UW campuses</li>
+				<li>Discounts and benefits at dozens of businesses in the Pacific Northwest and online nationwide</li>
+				<li>Knowing we support UW students and public higher education in the state of Washington</li>
+			</ul>
+	  		
+	  	</p>
+	  	<p>Be connected. Be proud. Be a member.</p>
 
       </div>
 
 		<?php
 
+		  } //END ELSE
+
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
         $appealCodeIFrameParams = array();
 
 
-	   $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
-	   parse_str($rawParentQueryStringParams, $parentPageParams);
-	   $childPageParams = array();
+	   
 
 	   if (count($parentPageParams > 0)) {
 
