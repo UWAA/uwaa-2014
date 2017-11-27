@@ -41,7 +41,7 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
           ?> 
 			  
-	  	<h1>Cyber Member Monday &mdash; Early Access</h1>
+	  	<h1>Cyber Member Monday</h1>
 
 		  <p>
 	  	Launching now, you can save 
