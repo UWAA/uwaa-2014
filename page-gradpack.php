@@ -19,7 +19,7 @@ while ( have_posts() ) : the_post();
          
             <div class="container">
             <div id="conGRADulations">
-              <h1>Con<span class="bold">grad</span>ulations<br/> Class of <?php echo date(Y) ?>!</h1>
+              <h1>Con<span class="bold">grad</span>ulations<br/> Class of <?php echo "2017 &amp; 2018" ?>!</h1>
             </div>
               <a href="#flickr"><div id="yellow-dot">Find<br/>Your <br> Free<br/>Photo<span></span></div></a>
             </div>
