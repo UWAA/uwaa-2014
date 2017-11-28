@@ -35,23 +35,9 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 
  
-          
+         ?>         
 
-	  	if(array_key_exists("MEMBCODES", $parentPageParams) && $parentPageParams["MEMBCODES"] == "CMJ,CMS") {
 
-          ?> 
-			  
-	  	<h1>Cyber Member Monday</h1>
-
-		  <p>
-	  	Launching now, you can save 
-<strong>40%</strong> on UWAA annual memberships! Whether you want to treat yourself, renew your membership or share with a friend, sign up today to enjoy generous benefits like exclusive invitations to member events and discounts at dozens of businesses.
-		  </p>
-
-			<?php
-		  } else {         
-
-            ?>
 
 	  	<h1>Choose a membership option</h1>
 
@@ -74,7 +60,7 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 		<?php
 
-		  } //END ELSE
+		  
 
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
         $appealCodeIFrameParams = array();
