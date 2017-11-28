@@ -27,16 +27,22 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
       <div class="uw-body-copy">      
 
-	  	<?php
+          <?php
 
 		  $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 		  parse_str($rawParentQueryStringParams, $parentPageParams);
 		  $childPageParams = array();
 
+          $cyberMondayEliminator = array_diff(array("CMJ", "CMA"), $parentPageParams);
 
- 
-         ?>         
+          if(count($cyberMondayEliminator) > 0) {
+              unset($parentPageParams["MEMBCODES"]);
+          }
 
+
+
+          ?>
+          
 
 
 	  	<h1>Choose a membership option</h1>
@@ -69,6 +75,8 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 	   
 
 	   if (count($parentPageParams > 0)) {
+
+           
 
 
 		   if(array_key_exists("JOIN", $parentPageParams)) {
