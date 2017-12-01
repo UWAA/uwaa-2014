@@ -144,7 +144,7 @@ class MetaBoxes
                         'id'=> '80_character_excerpt',
                         'type'=> 'textarea',
                         'desc'=> "Used in elements with limited text areas.  Such as home-page boxes and chapter story/event rows.  If you are promoting this event using content promotion, this must be filled out."
-                        ),
+                        )
 
 
                 )
