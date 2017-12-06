@@ -8,7 +8,7 @@
 class ActivityLevel
 {
 
-    private static $types = array('activity-level');
+    
 
     function __construct()
     {
@@ -21,32 +21,41 @@ class ActivityLevel
 
         $classes = array('activity-level');
 
-        if (property_exists($attributes, 'activity-level'))
+        if (property_exists($attributes, 'level'))
 		{
             $result = "";
 
-			switch ($attributes.level)
+
+			switch ($attributes->level)
 			{
 				case "1":
-					$result = "activity-level-one";
+                    $result = "Easy";
 					break;
 				case "2":
-					$result = "activity-level-two";
+                    $result = "Moderate";
 					break;
 				case "3":
-					$result = "activity-level-three";
+                    $result = "Active";
 					break;
 				case "4":
-					$result = "activity-level-four";
+                    $result = "Highly Active";
 					break;
 				default:
+                    $result = "No Level Specified";
 			}
-           array_push($classes, $result);
+            
         }
 
+        $activityLevelInt = $attributes->level;
+        $themeDirectory = get_stylesheet_directory_uri();
+      	$activityIcon = "<img src='".$themeDirectory."/assets/Tours_ActivityLevel_Icon.svg'>";
+          $activityLabel = $result;
 
-        $class_string = implode($classes, ' ');
-        return ('<div class=" ' .$class_string. ' "></div>');
+
+
+
+        return ('<div class="activity-level" data-toggle="modal" data-target="#activity-modal">'.str_repeat($activityIcon, $activityLevelInt).'<br />Activity Level:'.$activityLabel.'</div>');
+
     }
 }
 

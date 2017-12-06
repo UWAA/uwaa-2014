@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.6.2
+ Version: 1.7.0
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6888,6 +6888,12 @@ td.visible-print {
   font-size: .94em;
   line-height: 1.37;
 }
+.post-thumbnail-slide .copy p.operator {
+  color: #b7a57a;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: -14.5px;
+}
 .uw-sidebar .post-thumbnail-slide {
   width: 302px;
   margin-right: 0;
@@ -11005,17 +11011,26 @@ Typography
   margin-bottom: 20px;
   cursor: pointer;
 }
+.activity-level img {
+  height: auto;
+  width: 30px;
+}
 #activity-modal {
   background: rgba(0, 0, 0, 0.6);
 }
 #activity-modal .modal-dialog .modal-content {
   border-radius: 0;
   top: 60px;
+  position: relative;
+  z-index: 0;
 }
 #activity-modal .modal-dialog .modal-content .modal-header {
   border-bottom: none;
   padding: 0;
   min-height: 0;
+  height: 55px;
+  position: relative;
+  z-index: 1;
 }
 #activity-modal .modal-dialog .modal-content .modal-header .close {
   margin-top: 0;
@@ -11025,6 +11040,9 @@ Typography
   opacity: .5;
   background: rgba(0, 0, 0, 0.175);
   padding: 0 10px;
+}
+#activity-modal .modal-dialog .modal-content .modal-header + .modal-body {
+  margin-top: -55px;
 }
 #activity-modal .modal-dialog .modal-content .modal-body img {
   height: auto;
@@ -11227,18 +11245,22 @@ ul#menu-uwaa-navigation {
   left: 6px;
 }
 /*DawgDash*/
-div.slideshow-24143 {
+div.slideshow-24143,
+div.slideshow-25114 {
   height: 520px;
 }
-div.slideshow-24143 .uw-slideshow-controls {
+div.slideshow-24143 .uw-slideshow-controls,
+div.slideshow-25114 .uw-slideshow-controls {
   bottom: 100%;
   top: 0;
 }
-div.slideshow-24143 .uw-slideshow-controls.next {
+div.slideshow-24143 .uw-slideshow-controls.next,
+div.slideshow-25114 .uw-slideshow-controls.next {
   left: 100%;
   margin-left: -45px;
 }
-div.slideshow-24143 .uw-slideshow-controls.previous {
+div.slideshow-24143 .uw-slideshow-controls.previous,
+div.slideshow-25114 .uw-slideshow-controls.previous {
   left: 100%;
   margin-left: -90px;
 }

@@ -49,7 +49,7 @@
     </div>
 
     <div class="col-md-4 uw-sidebar">
-    <?php 
+        <?php
 
     new \UWAA\View\Pagination('tours', get_the_ID());
 
@@ -57,17 +57,23 @@
     $bigMapURL = get_post_meta(get_the_id(), 'mb_operator_big_map', true);
      if ($mapURL) {
       echo '<div class="widget">';
-      // echo '<a href=" ' . esc_attr($bigMapURL) . '  "><img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" /></a>';
-      echo '<img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" />';
+
+      if($bigMapURL == "") {
+          echo '<img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" />';
+        } else {
+            echo '<a href=" ' . esc_attr($bigMapURL) . '  "><img src=" ' . esc_attr($mapURL) . ' " title="Map of tour region" alt="Map of tour region" /></a>';
+      }
+
+
       echo '</div>';
      }
         dynamic_sidebar( 'travel_sidebar' );
-       
+
         the_widget("UWAA\Widgets\SocialSidebar");
 
         get_template_part('partials/forms', 'travel-newsletter');
         endwhile;
-    ?>
+        ?>
     </div>
 
 

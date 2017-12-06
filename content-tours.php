@@ -1,9 +1,8 @@
 <h1><?php the_title() ?></h1>
 <h2 class="date"><?php echo get_post_meta($post->ID, 'mb_cosmetic_date', true); ?></h2>
-<p class="operator">Tour Operator: <?php echo get_post_meta($post->ID, 'mb_operator', true); ?>
+<p class="operator">Tour Operator: <?php echo get_post_meta($post->ID, 'mb_operator', true); ?></p>
 <!-- <p class="price"><?php // echo get_post_meta($post->ID, 'mb_price', true); ?> -->
-<div class="activity-level"  data-toggle="modal" data-target="#activity-modal">Activity Level: 
-</div>
+
 <!-- Modal -->
 <div id="activity-modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -11,7 +10,7 @@
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <span class="close" data-dismiss="modal"> &times;</span>
+        <button type="button" aria-label="close" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
       </div>
       <?php 
       	$themeDirectory = get_stylesheet_directory_uri();
@@ -21,22 +20,22 @@
     
       <div class="modal-body">
 
-      	<?php echo str_repeat($activityIcon, 1) ?>
+      	<?php echo str_repeat($activityIcon, 1); ?>
         <p><strong>Easy: </strong> Minimal walking is required. Typically, involves cruising by ship. Suitable for travelers with limited mobility. Optional excursions may require a higher activity level.</p>
       </div>
 
       <div class="modal-body">
-      	<?php echo str_repeat($activityIcon, 2) ?>
+      	<?php echo str_repeat($activityIcon, 2); ?>
         <p><strong>Moderate: </strong>Moderate amount of walking required. Typically, two to three miles a day, often uphill, on uneven terrain and/or with multiple st airs. Requires the ability to board a ship and motor coach without assistance. </p>
       </div>
 
       <div class="modal-body">
-      	<?php echo str_repeat($activityIcon, 3) ?>
+      	<?php echo str_repeat($activityIcon, 3); ?>
         <p><strong>Active: </strong>Extensive walking required. Typically, three or more miles a day, often uphill, on uneven terrain, and/or with multiple stairs. May include optional activities such as biking, kayaking, or hiking and included destinations with high altitudes. Excellent health is required to take full advantage of the tour's inclusions.</p>
       </div>
 
       <div class="modal-body">
-      	<?php echo str_repeat($activityIcon, 4) ?>
+      	<?php echo str_repeat($activityIcon, 4); ?>
         <p><strong>Highly Active: </strong>Extensive walking and intense daily physical activity required. Appropriate for people who lead very active lives. Trip activities will be at a higher intensity and a more vigorous pace and may include activities such as biking, hiking at high altitudes and for long distances, white water rafting, and kayaking. A pre-trip physical training program is highly recommended and strongly encouraged.</p>
       </div>
 
