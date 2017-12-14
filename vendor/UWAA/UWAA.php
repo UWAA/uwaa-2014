@@ -14,24 +14,24 @@ class UWAA
     public $Memberchecker;
     public $Utilities;
     public $RegionalTags;
-    public $session;    
+    public $session;
 
     function __construct($wp)
     {
         $this->wp = $wp;
         $this->initialize();
-        
-    }   
+
+    }
 
     private function initialize()
     {
-            
+
         //Front-End specific helper functions
         $this->UI = new \UWAA\View\UI;
-        $this->SidebarMenuWalker = new \UWAA\SidebarMenuWalker;        
+        $this->SidebarMenuWalker = new \UWAA\SidebarMenuWalker;
         $this->Memberchecker = new \UWAA\Memberchecker\Memberchecker;
         $this->Utilities = new \UWAA\Utilities;
-        $this->RegionalTags = new \UWAA\RegionalTags;       
+        $this->RegionalTags = new \UWAA\RegionalTags;
 
 
 
@@ -40,7 +40,7 @@ class UWAA
         new \UWAA\Scripts;  //Loads UWAA child-theme specific scripts
         new \UWAA\Styles;
         new \UWAA\Sidebars;
-        new \UWAA\Images;  
+        new \UWAA\Images;
 
 
         //Custom Taxonomies
@@ -51,40 +51,42 @@ class UWAA
         new \UWAA\Taxonomies\Events;
         new \UWAA\Taxonomies\Benefits;
         new \UWAA\Taxonomies\AppRegionalTag;
-        
+
         //Relabels Tags
         new \UWAA\Taxonomies\RenameTags;
 
 
         //Custom Post Types
-        new \UWAA\CustomPostTypes\Tours; //Holds UWAA Custom Posts Types
-        new \UWAA\CustomPostTypes\Benefits; //Holds UWAA Custom Posts Types
-        new \UWAA\CustomPostTypes\Events; //Holds UWAA Custom Posts Types
-        new \UWAA\CustomPostTypes\RegionalChapters; //Holds UWAA Custom Posts Types
+        new \UWAA\CustomPostTypes\Tours; 
+        new \UWAA\CustomPostTypes\Benefits; 
+        new \UWAA\CustomPostTypes\Events; 
+        new \UWAA\CustomPostTypes\RegionalChapters; 
+        new \UWAA\CustomPostTypes\Membergrams; 
+        new \UWAA\CustomPostTypes\TPCMembergrams; 
 
 
         //OpenGraph Tagging
         new \UWAA\OpenGraph;  //Facebook and Twitter Card Generator
-       
+
 
         //Custom Meta Boxes
         new \UWAA\CustomMetaBoxes\MetaBoxes; //Holds custom taxonomies
 
         //API
         new \UWAA\API\RequestHandler($this->wp, $this->Memberchecker);  //Sets up the UWAA API for specialized feeds
-        new \UWAA\API\RSSFeed($this->RegionalTags); // Customized RSS Feeds 
+        new \UWAA\API\RSSFeed($this->RegionalTags); // Customized RSS Feeds
 
         //Widgets
         new \UWAA\Widgets\SidebarFeaturedPost;
         new \UWAA\Widgets\SidebarPullQuote;
         new \UWAA\Widgets\SidebarSeeYourChapter;
-        new \UWAA\Widgets\SocialSidebar;        
+        new \UWAA\Widgets\SocialSidebar;
         new \UWAA\ContentExperiments;
     }
 
 
     //Custom work for Quicklinks
-    
+
     public function Quicklinks(){
         new Quicklinks;
     }
