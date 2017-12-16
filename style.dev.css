@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.7.0
+ Version: 1.8.1
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9290,7 +9290,7 @@ div.map-logo.vietnam {
   background-color: #4b2e83;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 15px;
 }
 .panel .accordion-heading .chevron:after {
   content: "";
