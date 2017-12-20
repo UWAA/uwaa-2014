@@ -59,7 +59,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\CommonGroundProspective; //story arche
             </div>
 
             <div class="row no-row-margin">
-                <h2>Common Ground Events</h2>
+                <h2>Events</h2>
                 <?php
 
 
