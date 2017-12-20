@@ -45,7 +45,7 @@ class CommonGroundProspective extends ThumbnailBrowser implements Thumbnail
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'slug',
-          'terms'    => array( 'common-ground-prospective')
+          'terms'    => array( 'common-ground-perspective')
 
           )
       ) //End tax query
