@@ -10,11 +10,11 @@ class ThumbnailBrowser
           ),
           'br' => array(),
           'em' => array(),
-          'strong' => array(),          
+          'strong' => array(),
   );
 
 
-	
+
 
 	public function makeThumbnails(Thumbnail\Thumbnail $thumbnail)
   	{
@@ -23,15 +23,21 @@ class ThumbnailBrowser
 
 
 
-	protected function setCurrentPostID() 
+	protected function setCurrentPostID()
   	{
-    $this->currentPostID = get_the_ID();    
+    $this->currentPostID = get_the_ID();
   	}
 
 
   	//Move this to a WP DataHandler class
   	protected function getPostsToDisplay($args, $thumbnail) {
     $query = new \WP_Query($args);
+
+    //CAN HOOK IN HERE TO FIX DISPLAY   
+    //echo $query->have_posts();
+    if ( $query->have_posts() == FALSE ) {
+        $thumbnail->displayNothing();
+    }
 
     $thumbnail->extractPostInformation($query);
   }
@@ -48,14 +54,14 @@ class ThumbnailBrowser
     $postSubtitle = $this->getTourDestination($post);
 
     return $postSubtitle;
-    
+
   }
 
   protected function getTourDestination($post)
   {
     $toursRegions = array(
         'N. America',
-        'Latin America',        
+        'Latin America',
         'Europe',
         'Asia',
         'Africa',
@@ -64,12 +70,12 @@ class ThumbnailBrowser
     );
 
     if(has_term($toursRegions, 'destinations')):
-        $getTermsArgs = array(          
+        $getTermsArgs = array(
           'fields' => 'names'
           );
         $tourPostTerms = wp_get_post_terms(get_the_id(), 'destinations', $getTermsArgs);
         $result = array_values(array_intersect($toursRegions, $tourPostTerms));
-        return $result[0];  
+        return $result[0];
     endif;
   }
 
@@ -97,7 +103,7 @@ class ThumbnailBrowser
 
 
       return '<img src="' . $this->postImageThumbnailURL . '" "alt="'. $this->postImageAltText.'"/>';
-    } 
+    }
 
     if ($isotope) {
         return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Generic_Thumb_275x190.jpg" />';
@@ -107,33 +113,30 @@ class ThumbnailBrowser
 
     protected function getSortingToolbarTemplate($typeOfToolbar)
     {
-      
-      $buttons = $this->renderFilterButtons($typeOfToolbar);     
+
+      $buttons = $this->renderFilterButtons($typeOfToolbar);
       $template = <<<TOOLBAR
       <div class="filter-row">
       <div id="filters">
       <h2 class="filter-head">FILTER:</h2>
         $buttons
-      
-
-
       </div>
       </div>
 
 TOOLBAR;
-    
+
       return $template;
     }
 
-    protected function renderFilterButtons($typeOfToolbar) 
+    protected function renderFilterButtons($typeOfToolbar)
     {
       //Included because Posts are filtered by categories
       $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All '. $typeOfToolbar .'</li>';
 
       if ($typeOfToolbar == 'category') {
-        $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All Stories</li>';  
-      }      
-      
+        $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All Stories</li>';
+      }
+
 
       $terms = get_terms(strtolower($typeOfToolbar));
 
@@ -146,17 +149,17 @@ TOOLBAR;
       $terms = wp_list_filter($terms, array('slug'=>'content-for-app'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'no-regional-branding'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'alumni-veterans'),'NOT');
-      $terms = wp_list_filter($terms, array('slug'=>'student-veterans'),'NOT'); 
+      $terms = wp_list_filter($terms, array('slug'=>'student-veterans'),'NOT');
       $terms = wp_list_filter($terms, array('slug'=>'general-public'),'NOT');
-      $terms = wp_list_filter($terms, array('slug'=>'facultystaff'),'NOT'); 
+      $terms = wp_list_filter($terms, array('slug'=>'facultystaff'),'NOT');
 
         if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
             foreach ( $terms as $term ) {
-                
+
                   $template .= sprintf('<li class="filter-button" data-filter=".%s">%s</li>', strtolower($term->slug), $term->name);
-                
-        }     
-        
+
+        }
+
         endif;
 
       $template .= '</ul>';
@@ -177,7 +180,7 @@ TOOLBAR;
       echo $template;
     }
 
-    public function renderGridListPrintIcons() 
+    public function renderGridListPrintIcons()
     {
       $template = '
         <div class="grid-list-print-icons hidden-sm hidden-xs">
@@ -209,8 +212,8 @@ TOOLBAR;
 
      public function renderVeteransFilterToolbar()
     {
-      
-      $buttons = $this->renderFilterButtons($typeOfToolbar);   
+
+      $buttons = $this->renderFilterButtons($typeOfToolbar);
       $sortingOptions = array(
         array(
         "name" => "Alumni Veterans",
@@ -230,32 +233,32 @@ TOOLBAR;
         ),
 
       );
-    
+
       //Included because Posts are filtered by categories
       $buttons = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All</li>';
-        
+
       foreach ($sortingOptions as $option) {
-                
+
                   $buttons .= sprintf('<li class="filter-button" data-filter=".%s">%s</li>', strtolower($option['slug']), $option['name']);
-                
+
         }
 
-        $buttons .= '</ul>';     
+        $buttons .= '</ul>';
 
        $template = <<<TOOLBAR
       <div class="filter-row">
       <div id="filters">
       <h2 class="filter-head">FILTER:</h2>
         $buttons
-      
+
 
 
       </div>
       </div>
 
 TOOLBAR;
-        
-        
+
+
 
       $template .= '</ul>';
       echo $template;

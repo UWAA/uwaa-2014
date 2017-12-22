@@ -33,22 +33,27 @@ class CommonGroundEvent extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => array(
-        'tours',
         'events',
         'benefits',
         'post'
         ),
       'posts_per_page' => 5,
-      'orderby' => 'rand',
-
+      'orderby' => 'meta_value',
+      'order' => 'ASC',
+      'meta_key' => 'mb_start_date',
+      'meta_query' => array(
+        'key' => 'mb_start_date',
+        'type' => 'DATE',
+        'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
+        'compare' => '>=', // Return the ones greater than today's date
+      ),
       'tax_query' => array(
-        array(
+         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'slug',
           'terms'    => array( 'common-ground-event')
-
-          )
-      ) //End tax query
+          ),
+      ), //End tax query
       );
 
     return $args;
@@ -109,6 +114,10 @@ $template = <<<TEMPLATE
 TEMPLATE;
 
 return $template;
+}
+
+public function displayNothing() {
+    echo "No upcoming common ground events.";
 }
 
     public function __destruct()

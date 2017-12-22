@@ -38,7 +38,7 @@ class CommonGroundProspective extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 5,
+      'posts_per_page' => 10,
       'orderby' => 'rand',
 
       'tax_query' => array(

@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.8.2
+ Version: 1.8.3
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9181,6 +9181,10 @@ div.map-logo.vietnam {
 }
 .uw-hero-image.future-alumni {
   background: url(assets/headers/Page_Header_Future-Alumni.jpg) center center;
+  background-size: cover;
+}
+.uw-hero-image.common-ground {
+  background: url(assets/headers/Page_Header_Common-Ground.jpg) center center;
   background-size: cover;
 }
 @media only screen and (max-width: 767px) {

@@ -20,7 +20,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\CommonGroundProspective; //story arche
 
 
 
-<div class="uw-hero-image future-alumni"></div>
+<div class="uw-hero-image common-ground"></div>
 
 
 <div class="container uw-body">
@@ -58,21 +58,10 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\CommonGroundProspective; //story arche
 
             </div>
 
-            <div class="row no-row-margin">
-                <h2>Events</h2>
-                <?php
-
-
-                $thumbnailRowOne = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-
-                $thumbnailRowOne->makeThumbnails(new CommonGroundEvent);
-
-                ?>
-
-            </div>
-
-            <div class="row no-row-margin">
-                <h2>Perspectives</h2>
+            
+            <h3>Perspectives</h3>
+            <div class="row">
+                
                 <?php
 
 
@@ -84,14 +73,29 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\CommonGroundProspective; //story arche
 
             </div>
 
-            <div class="row no-row-margin">
-                <h2>Statewide Impact</h2>
+            <h3>Statewide Impact</h3>
+            <div class="row">
+                
                 <?php
 
 
                 $thumbnailRowThree = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 
                 $thumbnailRowThree->makeThumbnails(new CommonGroundStatewideImpact);
+
+                ?>
+
+            </div>
+
+            <h3>Events</h3>
+            <div class="row">
+              
+                <?php
+
+
+                $thumbnailRowOne = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+                $thumbnailRowOne->makeThumbnails(new CommonGroundEvent);
 
                 ?>
 
