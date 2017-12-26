@@ -34,33 +34,42 @@ get_header();
       <div class="uw-body-copy">
 
       
-            <?php
-                    
+          <?php
 
-                    include(locate_template( 'content-chapters.php' ));                    
 
-                
-            ?>
+                    include(locate_template( 'content-chapters.php' ));
+
+                    the_widget("UWAA\Widgets\SubPrefSignupForm", "subscriptionID=boop&fromName=boo&fromEmail=bar&returnURL=baz");
+
+
+          ?>
 
       </div>
 
     </div>
 
     <div class="col-md-4 uw-sidebar">    
-    <?php        
+        <?php
         endwhile;
 
-        
 
-        $chapterSidebar->renderCommunitiesChapterMenu();        
+
+        $chapterSidebar->renderCommunitiesChapterMenu();
 
         $chapterSidebar->renderLeaderWidget();
 
         $chapterSidebar->renderSocialWidget();
 
         $chapterSidebar->renderChapterContactForm();
-    ?>
 
+        ?>
+        <div class="widget no-frame-margin">
+            <h2 class="widgettitle">Sign up for the 509 eNews</h2>
+
+        <?php
+        the_widget("UWAA\Widgets\SubPrefSignupForm", "subscriptionID=boop&fromName=boo&fromEmail=bar&returnURL=baz");
+        ?>
+        </div>
       
     </div>
 

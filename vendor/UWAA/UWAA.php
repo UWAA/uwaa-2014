@@ -57,12 +57,12 @@ class UWAA
 
 
         //Custom Post Types
-        new \UWAA\CustomPostTypes\Tours; 
-        new \UWAA\CustomPostTypes\Benefits; 
-        new \UWAA\CustomPostTypes\Events; 
-        new \UWAA\CustomPostTypes\RegionalChapters; 
-        new \UWAA\CustomPostTypes\Membergrams; 
-        new \UWAA\CustomPostTypes\TPCMembergrams; 
+        new \UWAA\CustomPostTypes\Tours;
+        new \UWAA\CustomPostTypes\Benefits;
+        new \UWAA\CustomPostTypes\Events;
+        new \UWAA\CustomPostTypes\RegionalChapters;
+        new \UWAA\CustomPostTypes\Membergrams;
+        new \UWAA\CustomPostTypes\TPCMembergrams;
 
 
         //OpenGraph Tagging
@@ -80,8 +80,10 @@ class UWAA
         new \UWAA\Widgets\SidebarFeaturedPost;
         new \UWAA\Widgets\SidebarPullQuote;
         new \UWAA\Widgets\SidebarSeeYourChapter;
+        new \UWAA\Widgets\SubPrefSignupForm;
         new \UWAA\Widgets\SocialSidebar;
         new \UWAA\ContentExperiments;
+
     }
 
 
