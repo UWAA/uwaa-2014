@@ -4,9 +4,9 @@ use \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 use \UWAA\View\UI;
 
 
-class Chapters extends ThumbnailBrowser implements Thumbnail 
-{   
-    
+class Chapters extends ThumbnailBrowser implements Thumbnail
+{
+
     protected $args;
     private $UI;
 
@@ -37,10 +37,10 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 4, 
+      'posts_per_page' => 4,
       'orderby' => 'rand',
       // 'tag' => 'Home'
-      
+
       'tax_query' => array(
         'relation' => 'AND',
         array(
@@ -55,15 +55,15 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
           'terms'    => array($chapterSlug)
 
           )
-      ) //End tax query    
+      ) //End tax query
       );
-    
+
     return $args;
-  }  
+  }
 
-   
 
-  public function extractPostInformation($query) 
+
+  public function extractPostInformation($query)
   {
 
     // var_dump($query);
@@ -77,17 +77,17 @@ class Chapters extends ThumbnailBrowser implements Thumbnail
         $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');    
-        // $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'original');    
-        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));        
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');
+        // $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'original');
+        $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
-        
+
         echo $this->buildTemplate();
 
     endwhile;
 
-    wp_reset_postdata();    
+    wp_reset_postdata();
 
   }
 
@@ -104,8 +104,8 @@ $template = <<<TEMPLATE
       $image
       $callout
     </div>
-  <div class="copy">  
- <h4 class="title">{$this->postTitle}</h4> 
+  <div class="copy">
+ <h4 class="title">{$this->postTitle}</h4>
  $date
  <p class="excerpt">{$this->postExcerpt}</p>
  <a class="link-arrow" href="$link">
@@ -113,12 +113,13 @@ $template = <<<TEMPLATE
     </a>
  </div>
  </a>
-  
+
 </div>
 TEMPLATE;
 
 return $template;
-}
+  }
+
 
     public function __destruct()
     {

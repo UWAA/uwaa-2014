@@ -37,9 +37,7 @@ get_header();
           <?php
 
 
-                    include(locate_template( 'content-chapters.php' ));
-
-                    the_widget("UWAA\Widgets\SubPrefSignupForm", "subscriptionID=boop&fromName=boo&fromEmail=bar&returnURL=baz");
+                    include(locate_template( 'content-chapters.php' ));                    
 
 
           ?>
@@ -58,18 +56,26 @@ get_header();
 
         $chapterSidebar->renderLeaderWidget();
 
-        $chapterSidebar->renderSocialWidget();
+        $chapterSidebar->renderSocialWidget();        
 
-        $chapterSidebar->renderChapterContactForm();
-
+        if(get_the_title() == "Eastern Washington") {
         ?>
         <div class="widget no-frame-margin">
             <h2 class="widgettitle">Sign up for the 509 eNews</h2>
 
-        <?php
-        the_widget("UWAA\Widgets\SubPrefSignupForm", "subscriptionID=boop&fromName=boo&fromEmail=bar&returnURL=baz");
-        ?>
+            <?php
+            the_widget("UWAA\Widgets\SubPrefSignupForm", "subscriptionID=997&fromName=UW+Alumni+Association&fromEmail=uwalumni@uw.edu");
+            ?>
+
         </div>
+            <?php
+        } else {
+
+                    $chapterSidebar->renderChapterContactForm();
+            }
+        ?>
+
+        
       
     </div>
 

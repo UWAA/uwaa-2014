@@ -33,7 +33,7 @@ class ThumbnailBrowser
   	protected function getPostsToDisplay($args, $thumbnail) {
     $query = new \WP_Query($args);
 
-    //CAN HOOK IN HERE TO FIX DISPLAY   
+    //CAN HOOK IN HERE TO FIX DISPLAY
     //echo $query->have_posts();
     if ( $query->have_posts() == FALSE ) {
         $thumbnail->displayNothing();
@@ -263,4 +263,8 @@ TOOLBAR;
       $template .= '</ul>';
       echo $template;
     }
+
+     public function displayNothing() {
+         return;
+     }
 }

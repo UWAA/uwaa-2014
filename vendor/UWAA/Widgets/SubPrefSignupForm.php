@@ -47,7 +47,7 @@
           {
 
 
-              $this->subscriptionID = 327;
+              $this->subscriptionID = 997;
               $this->fromName = "UW Alumni Association";
               $this->fromEmail = "uwalumni@uw.edu";
               $this->showPlaceHolders = TRUE;
