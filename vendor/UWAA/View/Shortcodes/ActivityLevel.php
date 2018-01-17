@@ -54,7 +54,7 @@ class ActivityLevel
 
 
 
-        return ('<div class="activity-level" data-toggle="modal" data-target="#activity-modal">'.str_repeat($activityIcon, $activityLevelInt).'<br />Activity Level:'.$activityLabel.'</div>');
+        return ('<div class="activity-level" data-toggle="modal" data-target="#activity-modal">'.str_repeat($activityIcon, $activityLevelInt).'<br />Activity Level: ' .$activityLabel. '</div>');
 
     }
 }
