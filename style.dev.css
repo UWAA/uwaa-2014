@@ -10026,7 +10026,10 @@ a#memberCheckerLogout {
   padding: 10px 23px 5px;
   margin-bottom: 15px;
 }
-.pagination-buttons a {
+.pagination-buttons a:hover {
+  text-decoration: none;
+}
+.pagination-buttons a .label {
   color: #3d3d3d;
 }
 .pagination-buttons:before {

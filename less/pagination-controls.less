@@ -28,8 +28,8 @@
 
     }
 
-.pagination-buttons{
-    margin-top: -40px;    
+.pagination-buttons {
+    margin-top: -40px;
     width: 302px;
     background-color: #e3e3e3;
     display: table;
@@ -37,50 +37,50 @@
     padding: 10px 23px 5px;
     margin-bottom: 15px;
 
-    a{
-        color: @janegray;
+    a {
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .label {
+            color: @janegray;
+        }
     }
-    
-
-    &:before{
-                
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;    
-                -webkit-transform: skew(-20deg);    
-                -moz-transform: skew(-20deg);
-                -ms-transform: skew(-20deg);
-                -o-transform: skew(-20deg);
-                transform: skew(-20deg);
-                background-color: #e3e3e3;
-                height: 75px;
-                width: 86px;
-                right: 0px;
-            }
 
 
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        -webkit-transform: skew(-20deg);
+        -moz-transform: skew(-20deg);
+        -ms-transform: skew(-20deg);
+        -o-transform: skew(-20deg);
+        transform: skew(-20deg);
+        background-color: #e3e3e3;
+        height: 75px;
+        width: 86px;
+        right: 0px;
+    }
 
-  
-    
+
+
+
+
     .pagination-title {
         display: table-cell;
         text-transform: uppercase;
         font-size: 14px;
         text-align: right;
         line-height: 1;
-        padding-right:10px;
-        
+        padding-right: 10px;
         width: 55px;
-        
-
-
-          
-
     }
 
 
-    .button{        
+    .button {
         display: table-cell;
         width: 75px;
         height: 60px;
@@ -96,7 +96,7 @@
 
 
 
-        .icon{    
+        .icon {
             // border: 1px solid black;
             margin: 0 auto;
             height: 34px;
@@ -105,26 +105,36 @@
 
 
 
-            &.prev { background-position: 7px 0; }
-            &.grid { background-position: -32px 0;
-                    // padding-left: 10px;
-             }
-            &.next { background-position: -70px 0 }
+            &.prev {
+                background-position: 7px 0;
+            }
 
+            &.grid {
+                background-position: -32px 0;
+                // padding-left: 10px;
+            }
 
-
-
+            &.next {
+                background-position: -70px 0
+            }
         }
 
-        &:hover, &:active, &.current{
-            color:@purple;
+        &:hover, &:active, &.current {
+            color: @purple;
 
-            .icon{
-               &.prev {background-position: 7px -40px}
-               &.grid { background-position: -32px -40px }
-               &.next { background-position: -70px -40px }
-           }
-       }
+            .icon {
+                &.prev {
+                    background-position: 7px -40px
+                }
 
-   }
+                &.grid {
+                    background-position: -32px -40px
+                }
+
+                &.next {
+                    background-position: -70px -40px
+                }
+            }
+        }
+    }
 }
