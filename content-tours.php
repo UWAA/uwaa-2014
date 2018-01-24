@@ -32,7 +32,7 @@
             <div class="modal-body">
                 <?php echo str_repeat($activityIcon, 2); ?>
                 <p>
-                    <strong>Moderate: </strong>Moderate amount of walking required. Typically, two to three miles a day, often uphill, on uneven terrain and/or with multiple st airs. Requires the ability to board a ship and motor coach without assistance.
+                    <strong>Moderate: </strong>Moderate amount of walking required. Typically, two to three miles a day, often uphill, on uneven terrain and/or with multiple stairs. Requires the ability to board a ship and motor coach without assistance.
                 </p>
             </div>
 
@@ -46,12 +46,12 @@
             <div class="modal-body">
                 <?php echo str_repeat($activityIcon, 4); ?>
                 <p>
-                    <strong>Highly Active: </strong>Extensive walking and intense daily physical activity required. Appropriate for people who lead very active lives. Trip activities will be at a higher intensity and a more vigorous pace and may nclude activities such as biking, hiking at high altitudes and for long distances, white water rafting, and kayaking. A pre-trip physical training program is highly recommended and strongly encouraged.
+                    <strong>Highly Active: </strong>Extensive walking and intense daily physical activity required. Appropriate for people who lead very active lives. Trip activities will be at a higher intensity and a more vigorous pace and may include activities such as biking, hiking at high altitudes and for long distances, white water rafting, and kayaking. A pre-trip physical training program is highly recommended and strongly encouraged.
                 </p>
             </div>
 
             <div class="modal-footer">
-                <p>To fully enjoy your tour experience, it is important to be in good health regardless of the tour's activity level. Please use your best discretion when deciding which group tour is right for you as your ability will have an impact on other participants. If you have any questions, please do not hesitate to contact the UW Alumni Tour office.</p>
+                <p>To fully enjoy your tour experience, it is important to be in good health regardless of the tour's activity level. Please use your best discretion when deciding which group tour is right for you as your ability will have an impact on other participants. If you have any questions, please do not hesitate to contact the UW Alumni Tours office.</p>
             </div>
         </div>
 
