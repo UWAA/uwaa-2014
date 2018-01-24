@@ -32,14 +32,14 @@
             <div class="modal-body">
                 <?php echo str_repeat($activityIcon, 2); ?>
                 <p>
-                    <strong>Moderate: </strong>Moderate amount of walking required. Typically, two to three miles a day, often uphill, on uneven terrain and/or with multiple st airs. Requires the ability to board a ship and motor coach without ssistance.
+                    <strong>Moderate: </strong>Moderate amount of walking required. Typically, two to three miles a day, often uphill, on uneven terrain and/or with multiple st airs. Requires the ability to board a ship and motor coach without assistance.
                 </p>
             </div>
 
             <div class="modal-body">
                 <?php echo str_repeat($activityIcon, 3); ?>
                 <p>
-                    <strong>Active: </strong>Extensive walking required. Typically, three or more miles a day, often uphill, on uneven terrain, and/or with multiple stairs. May include optional activities such as biking, kayaking, or hiking and ncluded destinations with high altitudes. Excellent health is required to take full advantage of the tour's inclusions.
+                    <strong>Active: </strong>Extensive walking required. Typically, three or more miles a day, often uphill, on uneven terrain, and/or with multiple stairs. May include optional activities such as biking, kayaking, or hiking and included destinations with high altitudes. Excellent health is required to take full advantage of the tour's inclusions.
                 </p>
             </div>
 
