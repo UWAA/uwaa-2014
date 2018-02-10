@@ -17,6 +17,9 @@ class Utilities
         add_filter('request', array($this, 'addUWAACustomPostsToFeed'));
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
         add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
+        add_filter( 'manage_tours_posts_columns' , array($this , 'addTourExpiryDateColumnToTourList'), 10, 2);
+        add_action( 'manage_tours_posts_custom_column' , array($this , 'addTourExpiryDateValueToTourList'), 10, 2);
+        add_filter( 'manage_edit-tours_sortable_columns', array($this ,'makeTourEndDateSortable') );
         add_action( 'save_post', array($this, 'excludePreliminaryandMinorFromSearch'), 20 );
         add_filter('get_shortlink', array($this, 'returnUWFriendlyLink'), 10, 4);
         add_filter('get_sample_permalink_html', array($this, 'addGetPermalinkButton'), 5, 2);        
@@ -215,5 +218,47 @@ public function addGetPermalinkButton($arg, $post_id) {
 
 
 }
+
+
+
+
+    public function addTourExpiryDateColumnToTourList($columns) {      
+          
+          // die();
+        // unset($columns['title']);
+        
+    
+        return array_merge($columns,
+            array(
+                'end_date' => __('Tour End Date')
+            )
+    
+        );
+        
+    }
+
+    public function addTourExpiryDateValueToTourList($column, $post_id) {
+
+        $date_format = 'Y/m/d';
+
+        $shortDate = date($date_format, strtotime(get_post_meta( $post_id, 'mb_end_date', true )));
+        $longDate = date("Y/m/d H:i", strtotime(get_post_meta( $post_id, 'mb_end_date', true )));
+        
+        switch ( $column ) {
+            case 'end_date':
+                echo "Tour Ends:<br>";
+                echo '<abbr title="'.$longDate.'">'.$shortDate.'</abbr>';
+            break;
+            
+
+        }
+    }
+
+    public function makeTourEndDateSortable($columns) {
+        return wp_parse_args( array( 'end_date' => 'ended'), $columns );
+        // $columns['end_date'];
+        // return $columns;
+
+    }
 
 }
