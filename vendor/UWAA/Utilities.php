@@ -255,10 +255,10 @@ public function addGetPermalinkButton($arg, $post_id) {
     }
 
     public function makeTourEndDateSortable($columns) {
-        return wp_parse_args( array( 'end_date' => 'ended'), $columns );
-        // $columns['end_date'];
-        // return $columns;
+        return wp_parse_args( array( 'end_date' => 'ended'), $columns );     
 
     }
+
+   
 
 }

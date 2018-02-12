@@ -33,13 +33,7 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 		  parse_str($rawParentQueryStringParams, $parentPageParams);
 		  $childPageParams = array();
 
-          $cyberMondayEliminator = array_diff(array("CMJ", "CMA"), $parentPageParams);
-
-          if(count($cyberMondayEliminator) > 0) {
-              unset($parentPageParams["MEMBCODES"]);
-          }
-
-
+          $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
 
           ?>
           
