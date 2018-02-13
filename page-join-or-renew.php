@@ -56,17 +56,23 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
           		?>
 				<br><br>
-          		<strong>Two hearts – One joint membership</strong>
-          		<p><img class="alignright" src="https://www.washington.edu/cms/alumni/files/2015/01/2018_Add-Spouse-Drive_Inline2.jpg" alt="Sweethearts" />This Valentine’s Day, share your love of UW with your spouse/partner by upgrading to a joint life membership by adding your spouse/partner for $250. As a special thank you, upgrade by Feb. 21 and we’ll send you a set of engraved birch “Love UW” coasters while supplies last. 
+          		<p class="alignleft">
+          			
+          		
+          		<strong>Two hearts – One joint membership</strong><br><br>
+          		<img class="alignright" src="https://www.washington.edu/cms/alumni/files/2015/01/2018_Add-Spouse-Drive_Inline2.jpg" alt="Sweethearts" />This Valentine’s Day, share your love of UW with your spouse/partner by upgrading to a joint life membership by adding your spouse/partner for $250. As a special thank you, upgrade by Feb. 21 and we’ll send you a set of engraved birch “Love UW” coasters while supplies last. 
 
+				
           		</p>
 
           		<?php
           	} else {
           		?>
 
-          		<strong>Two hearts – One joint membership</strong>
-          		<p><img class="alignright" src="https://www.washington.edu/cms/alumni/files/2015/01/2018_Add-Spouse-Drive_Inline2.jpg" alt="Sweethearts" />This Valentine’s Day, share your love of UW by renewing your annual membership and adding your spouse/partner. As a special thank you, renew by Feb. 21 and we’ll send you a sweet Valentine's Day treat while supplies last.
+				<p class="alignleft">
+          		<strong>Two hearts – One joint membership</strong><br><br>
+          		<img class="alignright" src="https://www.washington.edu/cms/alumni/files/2015/01/2018_Add-Spouse-Drive_Inline2.jpg" alt="Sweethearts" />This Valentine’s Day, share your love of UW by renewing your annual membership and adding your spouse/partner. As a special thank you, renew by Feb. 21 and we’ll send you a sweet Valentine's Day treat while supplies last.
+          		
           		</p>
 
           		<?php
