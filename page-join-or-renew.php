@@ -6,6 +6,15 @@ $UWAA->Memberchecker->getSession();
 get_header(); 
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
+
+		  $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
+		  parse_str($rawParentQueryStringParams, $parentPageParams);
+		  $childPageParams = array();
+
+          $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
+
+          // LAD is life joint thing
+
 ?>
 
 <div class="uw-hero-image membership"></div>
@@ -27,38 +36,53 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
       <div class="uw-body-copy">      
 
-          <?php
+ <?php
+          // Start the Loop.
+          while ( have_posts() ) : the_post();
 
-		  $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
-		  parse_str($rawParentQueryStringParams, $parentPageParams);
-		  $childPageParams = array();
+            /*
+             * Include the post format-specific template for the content. If you want to
+             * use this in a child theme, then include a file called called content-___.php
+             * (where ___ is the post format) and that will be used instead.
+             */
+            get_template_part( 'content', 'page' );
 
-          $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
 
-          ?>
+          endwhile;
+
+
+          if(array_search("A18AAS", $parentPageParams)) {
+          	if(array_search("LAD", $parentPageParams)) {
+
+          		?>
+				<br><br>
+          		<strong>Two hearts – One joint membership</strong>
+          		<p><img class="alignright" src="https://www.washington.edu/cms/alumni/files/2015/01/2018_Add-Spouse-Drive_Inline2.jpg" alt="Sweethearts" />This Valentine’s Day, share your love of UW with your spouse/partner by upgrading to a joint life membership by adding your spouse/partner for $250. As a special thank you, upgrade by Feb. 21 and we’ll send you a set of engraved birch “Love UW” coasters while supplies last. 
+
+          		</p>
+
+          		<?php
+          	} else {
+          		?>
+
+          		<strong>Two hearts – One joint membership</strong>
+          		<p><img class="alignright" src="https://www.washington.edu/cms/alumni/files/2015/01/2018_Add-Spouse-Drive_Inline2.jpg" alt="Sweethearts" />This Valentine’s Day, share your love of UW by renewing your annual membership and adding your spouse/partner. As a special thank you, renew by Feb. 21 and we’ll send you a sweet Valentine's Day treat while supplies last.
+          		</p>
+
+          		<?php
+          	}
+          	
+          }
+
           
+        ?>
 
 
-	  	<h1>Choose a membership option</h1>
 
+      </div>  
+      <!-- Ending us-body-copy -->
 
-	  	<p>
-	  		<strong>UWAA members enjoy:</strong>
-
-			<ul>
-				<li>Invitations to exclusive member events, like UWAA Movie Nights, Nike Night and more</li>
-				<li>Early registration to free campus lectures, and discounts to UWAA public events like Alaska Airlines Dawg Dash</li>
-				<li>Borrowing privileges at UW Libraries collections on all three UW campuses</li>
-				<li>Discounts and benefits at dozens of businesses in the Pacific Northwest and online nationwide</li>
-				<li>Knowing we support UW students and public higher education in the state of Washington</li>
-			</ul>
-	  		
-	  	</p>
-	  	<p>Be connected. Be proud. Be a member.</p>
-
-      </div>
-
-		<?php
+		<?php  // The Store
 
 		  
 
