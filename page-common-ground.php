@@ -60,6 +60,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\CommonGroundProspective; //story arche
 
             
             <h3>Perspectives</h3>
+            <p>Find recently published communications by members of the UW community designed to challenge your thinking.</p>
             <div class="row">
                 
                 <?php
@@ -74,6 +75,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\CommonGroundProspective; //story arche
             </div>
 
             <h3>Statewide Impact</h3>
+            <p>Learn what the UW is doing in your community.</p>
             <div class="row">
                 
                 <?php
