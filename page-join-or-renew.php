@@ -12,6 +12,7 @@ wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 		  $childPageParams = array();
 
           $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
+          $parentPageParams["MEMBCODES"] = preg_replace("/|LAD/", "", $parentPageParams["MEMBCODES"]);
 
           // LAD is life joint thing
 
