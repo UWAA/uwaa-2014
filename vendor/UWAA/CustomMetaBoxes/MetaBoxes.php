@@ -19,6 +19,7 @@ class MetaBoxes
         $this->add_header_text_toggle();
         $this->add_major_market_toggle();
         $this->add_post_custom_actions();
+        $this->add_special_opengraph_tags();
 
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
@@ -520,6 +521,31 @@ class MetaBoxes
                                 ),
                         'desc'=> 'Text overlays the hero image on this post type.  Choose between Purple and White text'
                         ),
+                    )
+            )
+            );
+
+        }
+
+        protected function add_special_opengraph_tags() {
+            new \UWAA\CustomPostData('special_og_tags', array(
+                'title' => 'One-Off OpenGraph Tags',
+                'pages' => array('page'),  //add events, regional pages as they are ready
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                          'name' => 'OpenGraph Title',
+                          'id'=> 'special_og_title',
+                          'type'=> 'text',
+                          'desc'=> "This text will show up in the small purple line on the thumbnail."
+                          ),
+                    array(
+                          'name' => 'OpenGraph Description',
+                          'id'=> 'special_og_description',
+                          'type'=> 'text',
+                          'desc'=> "This text will show up in the small purple line on the thumbnail."
+                          ),
                     )
             )
             );

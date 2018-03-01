@@ -18,9 +18,14 @@ class OpenGraph
     global $post;
 
     if(get_the_title($post->ID) == "Choose a membership option") {
-            ?>
-            <meta property="og:title" content="Cyber Member Monday sale"/>
-            <meta property="og:description" content="For a limited time, save 40% on UWAA annual memberships! That’s a $20 discount for the best in purple pride."/>
+
+        $speciaOGTitle = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_title', true));
+        $speciaOGDescription = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_description', true));
+
+
+        ?>
+            <meta property="og:title" content="<?php echo $speciaOGTitle ?>"/>
+            <meta property="og:description" content="<?php echo $speciaOGDescription ?>"/>
             <?php
             return;
         }
