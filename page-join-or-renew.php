@@ -9,7 +9,8 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
       }
 
       if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=WASHINGTON-DC") !== FALSE) {        
-        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=washington-dc", FALSE, 301);
+        // header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=washington-dc", FALSE, 301);
+        header("Location: http://alumni.test/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=washington-dc", FALSE, 301);
         die();
         
       }
@@ -53,10 +54,13 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 		  $childPageParams = array();
 
 
+      if (array_key_exists("MEMBCODES", $parentPageParams)) {
       $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
       $parentPageParams["MEMBCODES"] = preg_replace("/|LAD/", "", $parentPageParams["MEMBCODES"]);
 
           // LAD is life joint thing
+      }
+      
 
     
 
@@ -153,7 +157,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
 		   if(array_key_exists("APPEALCODE", $parentPageParams)) {
 
-			   $childPageParams['APPEALCODE'] = $parentPageParams['APPEALCODE'];
+			   $childPageParams['appealCode'] = $parentPageParams['APPEALCODE'];
 
 		   }
 
