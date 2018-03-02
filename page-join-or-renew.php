@@ -3,35 +3,35 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
       // echo $rawParentQueryStringParams;
 
-      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=E-WASHINGTON') {        
-        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=e-washington");
+      if (strpos($rawParentQueryStringParams, 'UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=E-WASHINGTON') !== FALSE) {
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=e-washington", TRUE, 301);
         die();
         
       }
 
-      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=WASHINGTON-DC') {        
-        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=washington-dc");
+      if (strpos($rawParentQueryStringParams, 'UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=WASHINGTON-DC') !== FALSE) {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=washington-dc", TRUE, 301);
         die();
         
       }
 
-      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=NEW-YORK') {        
-        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=new-york");
+      if (strpos($rawParentQueryStringParams, 'UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=NEW-YORK') !== FALSE) {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=new-york", TRUE, 301);
         die();
         
       }
-      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=CALIFORNIA') {        
-        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=california");
+      if (strpos($rawParentQueryStringParams, 'UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=CALIFORNIA') !== FALSE) {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=california", TRUE, 301);
         die();
         
       }
-      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=NEWSLETTER&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=OREGON') {        
-        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=oregon");
+      if (strpos($rawParentQueryStringParams, 'UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=OREGON') !== FALSE) {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=oregon", TRUE, 301);
         die();
         
       }
-      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=NEWSLETTER&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=PUGET-SOUND') {        
-        header("Location: Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=puget-sound");
+      if (strpos($rawParentQueryStringParams, 'UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=PUGET-SOUND') !== FALSE) {        
+        header("Location: Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=puget-sound", TRUE, 301);
         die();
         
       }
