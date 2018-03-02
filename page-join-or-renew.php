@@ -1,14 +1,54 @@
 <?php
+$rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
+
+      // echo $rawParentQueryStringParams;
+
+      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=E-WASHINGTON') {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=e-washington");
+        die();
+        
+      }
+
+      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=WASHINGTON-DC') {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=washington-dc");
+        die();
+        
+      }
+
+      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=NEW-YORK') {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=new-york");
+        die();
+        
+      }
+      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=CALIFORNIA') {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=california");
+        die();
+        
+      }
+      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=NEWSLETTER&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=OREGON') {        
+        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=oregon");
+        die();
+        
+      }
+      if ($rawParentQueryStringParams == 'JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=NEWSLETTER&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=PUGET-SOUND') {        
+        header("Location: Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=puget-sound");
+        die();
+        
+      }
+
 
 $UWAA->Memberchecker->getSession();
 // @TODO Make booleans for store state (join vs. renew)
 
+
+      
+
 get_header(); 
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
-
-		  $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
-		  parse_str($rawParentQueryStringParams, $parentPageParams);
+		 
+		  
+      parse_str($rawParentQueryStringParams, $parentPageParams);
 		  $childPageParams = array();
 
           $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
