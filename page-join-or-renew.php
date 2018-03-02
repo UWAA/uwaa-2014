@@ -14,8 +14,8 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
         
       }
 
-      if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=NEW-YORK") !== FALSE) {        
-        header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=new-york", FALSE, 301);
+      if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=NEW-YORK") !== FALSE) {                
+        header("Location: http://alumni.test/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=new-york", FALSE, 301);
         die();
         
       }
@@ -46,50 +46,30 @@ get_header();
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 
-$rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
-
-      // if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=E-WASHINGTON") !== FALSE) {        
-      //   header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=e-washington", FALSE, 301);
-      //   die();
-        
-      // }
-
-      // if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=WASHINGTON-DC") !== FALSE) {        
-      //   header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=washington-dc", FALSE, 301);
-      //   die();
-        
-      // }
-
-      // if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=NEW-YORK") !== FALSE) {        
-      //   header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=new-york", FALSE, 301);
-      //   die();
-        
-      // }
-      // if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=ANNOUNCEMENT&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=CALIFORNIA") !== FALSE) {        
-      //   header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=california", FALSE, 301);
-      //   die();
-        
-      // }
-      // if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=NEWSLETTER&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=OREGON") !== FALSE) {        
-      //   header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=oregon", FALSE, 301);
-      //   die();
-        
-      // }
-      // if (strpos($rawParentQueryStringParams, "JOIN=TRUE/?APPEALCODE=A18S08?UTM_SOURCE=NEWSLETTER&UTM_MEDIUM=EMAIL&UTM_CAMPAIGN=SPRING-DRIVE&UTM_CONTENT=PUGET-SOUND") !== FALSE) {                
-      //   header("Location: https://www.washington.edu/cms/alumni/membership/be-a-member/join-or-renew?join=true&appealCode=A18S08&utm_source=announcement&utm_medium=email&utm_campaign=spring-drive&utm_content=puget-sound", FALSE, 301);
-      //   die();
-        
-      // }
-
+$rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);     
 		 
 		  
       parse_str($rawParentQueryStringParams, $parentPageParams);
 		  $childPageParams = array();
 
-          $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
-          $parentPageParams["MEMBCODES"] = preg_replace("/|LAD/", "", $parentPageParams["MEMBCODES"]);
+
+      $parentPageParams["MEMBCODES"] = preg_replace("/|CM(J|D),*/", "", $parentPageParams["MEMBCODES"]);
+      $parentPageParams["MEMBCODES"] = preg_replace("/|LAD/", "", $parentPageParams["MEMBCODES"]);
 
           // LAD is life joint thing
+
+    
+
+     // In the event a malformed spring drive URL still comes in, we'll blow away the calling params and at least ensure the the appeal is appended.
+     if(!array_key_exists("APPEALCODE", $parentPageParams) && strpos($rawParentQueryStringParams, 'A18S08') !== FALSE) {
+      unset($parentPageParams);
+      $parentPageParams = array();
+      $parentPageParams["APPEALCODE"] = "A18S08";
+      $parentPageParams["JOIN"] = "TRUE";
+     }
+      
+
+          
 
 ?>
 
