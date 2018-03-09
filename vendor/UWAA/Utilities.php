@@ -14,7 +14,9 @@ class Utilities
     function __construct()
     {
         add_filter('pre_get_posts',array($this,'SearchFilter'));
-        add_filter('request', array($this, 'addUWAACustomPostsToFeed'));
+        add_filter('query_vars', array($this, 'addUWAAQueryVariables'));
+        add_filter('request', array($this, 'addUWAACustomPostsToFeed'), 11, 2);
+        add_filter('request', array($this, 'createJoinedFeedType'), 10, 2);
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
         add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
         add_filter( 'manage_tours_posts_columns' , array($this , 'addTourExpiryDateColumnToTourList'), 10, 2);
@@ -23,6 +25,8 @@ class Utilities
         add_action( 'save_post', array($this, 'excludePreliminaryandMinorFromSearch'), 20 );
         add_filter('get_shortlink', array($this, 'returnUWFriendlyLink'), 10, 4);
         add_filter('get_sample_permalink_html', array($this, 'addGetPermalinkButton'), 5, 2);        
+        add_action( 'template_redirect', array($this, 'redirectMembergramDirectQueries' ));
+        add_action( 'parse_request',array($this, 'redirectDirectAccessToMembergrams') );
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -110,7 +114,7 @@ class Utilities
     public function removeUWAnalytics() 
     {      
         
-        // var_dump($GLOBALS['wp_filter']);
+        
         if ( ! function_exists( 'remove_anonymous_object_filter' ) )
             {
                 /**
@@ -167,10 +171,26 @@ class Utilities
             'benefits',
             'events',
             'public' => true
-            );
-        // $qv['post_type'] = get_post_types();
+            );        
     return $qv;
     }
+
+
+
+    public function createJoinedFeedType($qv) 
+    {        
+    if (isset($qv['feed']) && $qv['jointfeed'] == 'tpc_membergrams') {
+            $qv['post_type'] = array(
+            'tpcmembergrams',
+            'membergrams',            
+            'public' => true
+            );
+        }        
+    return $qv;
+    }
+
+
+
 
     public function Redirect($url, $permanent = false)
 {
@@ -258,6 +278,36 @@ public function addGetPermalinkButton($arg, $post_id) {
         return wp_parse_args( array( 'end_date' => 'ended'), $columns );     
 
     }
+
+    public function addUWAAQueryVariables($vars)
+    {
+        $vars[] = 'jointfeed';
+        return $vars;
+    }
+
+
+
+    public function redirectMembergramDirectQueries()
+    {
+        if( is_singular( array('membergrams', 'tpcmembergrams') ) || is_post_type_archive(array('membergrams', 'tpcmembergrams') ) )
+    {
+        wp_redirect( home_url( '/' ) );
+        exit();
+        
+    }
+
+    }
+
+
+
+public function redirectDirectAccessToMembergrams( $query ) {
+    if ('tpcmembergrams' == $query->query_vars['post_type'] || 'membergrams' == $query->query_vars['post_type'] ) {
+        wp_redirect( home_url( '/' ) );
+        exit();
+    }
+    
+    return $query;
+}
 
    
 

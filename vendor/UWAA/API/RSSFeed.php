@@ -9,6 +9,7 @@
           private $newsFields;
           private $toursFields;
           private $regionalTagList;
+          private $tpcMembergramFields;
 
 
 
@@ -64,8 +65,17 @@
                  'hasGeotag' => false
              );
 
+
+               $this->tpcMembergramFields = array(                 
+                 'hasTaxonomy' => false,
+                 'taxonomyName' => false,                  
+                 'hasGeotag' => false,
+                 'declarePostType' => true
+             );
+
               add_action('rss2_item', array($this, 'addFeedAugmentations'));
               add_action('rss2_item', array($this, 'addFeaturedPostThumbnailToFeed'));
+              add_action('rss2_item', array($this, 'addPostTypeDeclarationToFeed'));
               add_action('rss2_ns', array($this, 'addUWAANamespaceToFeed'));
 
           }
@@ -74,7 +84,7 @@
               $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
               $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], null , $this->eventFields['hasGeotag'] );
               $this->augmentFeed('post', $this->newsFields['fields']);
-              $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);
+              $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);              
           }
 
           public function addUWAANamespaceToFeed()
@@ -82,7 +92,7 @@
               echo "xmlns:uwaa_app=\"http://depts.washington.edu/alumni/appfeed/namespace/\"\n";
           }
 
-          private function augmentFeed($postType, $metaValues, $hasTaxonomy = false, $taxonomyName = null, $hasGeotag = false)
+          private function augmentFeed($postType, $metaValues, $hasTaxonomy = false, $taxonomyName = null, $hasGeotag = false )
           {
 
               $postType = $this->isPostType($postType);
@@ -105,11 +115,23 @@
                       $this->addRegionalLogoToFeed($terms);
                   }
 
-              }
+              }              
 
 
               return;
           }
+
+          public function addPostTypeDeclarationToFeed()
+          {
+              $id = get_the_id();
+              $posttype = get_post_type($id);
+              if( $posttype == 'tpcmembergrams' ) {
+                  echo "<uwaa_app:declarePostType><![CDATA[{$posttype}]]></uwaa_app:declarePostType>\n";
+
+              }
+          }
+
+
 
           public function addFeaturedPostThumbnailToFeed()
           {
@@ -164,7 +186,7 @@
                   }
               }
 
-              if('mb_start_date' != '' and 'mb_end_date' != '' ){
+              if('mb_start_date' != '' and 'mb_end_date' != ''){
                   $metaStart = get_post_meta(get_the_id() , 'mb_start_date', true);
                   $metaEnd = get_post_meta(get_the_id() , 'mb_end_date', true);
                   $start = new \DateTime($metaStart);
