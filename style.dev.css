@@ -9702,17 +9702,17 @@ a#memberCheckerLogout {
   margin-bottom: 0;
 }
 #join-renew-buttons .uwaa-btn-wrapper:last-child {
-  margin-left: 42px;
+  margin-left: 22px;
 }
 #join-renew-buttons .uwaa-btn {
   background-color: #d9d9d9;
   color: #4b2e83;
 }
 #join-renew-buttons .uwaa-btn.uwaa-btn-join {
-  width: 146px;
+  width: 156px;
 }
 #join-renew-buttons .uwaa-btn.uwaa-btn-renew {
-  width: 126px;
+  width: 136px;
 }
 #join-renew-buttons .uwaa-btn:hover,
 #join-renew-buttons .uwaa-btn:active {
@@ -9721,10 +9721,10 @@ a#memberCheckerLogout {
 }
 @media only screen and (min-width: 993px) and (max-width: 1199px) {
   #join-renew-buttons .uwaa-btn.uwaa-btn-join {
-    width: 115px;
+    width: 125px;
   }
   #join-renew-buttons .uwaa-btn.uwaa-btn-renew {
-    width: 90px;
+    width: 100px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -11293,4 +11293,18 @@ div.slideshow-25114 .uw-slideshow-controls.previous {
 .no-frame-margin iframe {
   margin: 0;
   min-height: 300px;
+}
+#mobile-sidebar-links {
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .uwaa-hidden-xs-up {
+    display: none !important;
+  }
+  .uwaa-hidden-xs-up,
+  tr.uwaa-hidden-xs-up,
+  th.uwaa-hidden-xs-up,
+  td.uwaa-hidden-xs-up {
+    display: none !important;
+  }
 }

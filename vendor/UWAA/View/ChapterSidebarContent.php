@@ -85,7 +85,7 @@ class ChapterSidebarContent
     public function renderMobileCommunitiesChapterMenu() {        
      
 
-        echo sprintf( '<nav id="mobile-relative" role="navigation" aria-label="relative">%s</nav>', $this->uwaa_list_pages($mobile = TRUE)) ;
+        echo sprintf( '<nav id="mobile-relative" role="navigation" aria-label="mobile-menu">%s</nav>', $this->uwaa_list_pages($mobile = TRUE)) ;
 
     }
 

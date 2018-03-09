@@ -60,7 +60,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\UWAAHistory;
 
     <div class="col-md-4 uw-sidebar">
     <?php 
-        uw_sidebar_menu();
+        echo sprintf( '<nav id="desktop-relative" aria-label="mobile menu that is not visible in the desktop version" class="uwaa-hidden-xs-up">%s</nav>', uw_list_pages() );;
         dynamic_sidebar( 'about_sidebar' ); 
     ?>
     </div>

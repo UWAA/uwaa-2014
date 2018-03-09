@@ -49,7 +49,8 @@ get_header();
     <div class="col-md-4 uw-sidebar">
     <?php
         include(locate_template( 'partials/join-renew.php' )); 
-        uw_sidebar_menu();
+         echo sprintf( '<nav id="desktop-relative" aria-label="mobile menu that is not visible in the desktop version" class="hidden-sm">%s</nav>', uw_list_pages() );
+
         dynamic_sidebar( 'membership_sidebar' ); 
     ?>
     </div>
