@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.10.0
+ Version: 1.10.1
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9694,6 +9694,7 @@ a#memberCheckerLogout {
   margin-top: -124px;
   margin-left: 20px;
   line-height: 1.2;
+  width: 100%;
 }
 #join-renew-buttons .uwaa-btn-wrapper {
   margin-right: 0;
@@ -9701,7 +9702,7 @@ a#memberCheckerLogout {
   margin-bottom: 0;
 }
 #join-renew-buttons .uwaa-btn-wrapper:last-child {
-  margin-left: 23px;
+  margin-left: 42px;
 }
 #join-renew-buttons .uwaa-btn {
   background-color: #d9d9d9;
