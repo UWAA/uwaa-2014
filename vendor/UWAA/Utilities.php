@@ -301,9 +301,15 @@ public function addGetPermalinkButton($arg, $post_id) {
 
 
 public function redirectDirectAccessToMembergrams( $query ) {    
-    if ( 'feed' != $query->query_vars['feed'] && ( ('tpcmembergrams' == $query->query_vars['post_type'] || 'membergrams' == $query->query_vars['post_type'] ) ) ) {
-        wp_redirect( home_url( '/' ) );
-        exit();
+    if ( 'tpcmembergrams' == $query->query_vars['post_type'] || 'membergrams' == $query->query_vars['post_type'] ) {
+
+        if ( 'feed' != $query->query_vars['feed']) {
+
+            wp_redirect( home_url( '/' ) );
+            exit();
+
+        }
+        
     }
     
     return $query;
