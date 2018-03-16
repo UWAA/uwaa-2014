@@ -203,7 +203,7 @@
 
                   if(is_array($sortingTerms)) {
                       foreach ($sortingTerms as $term) {
-                          echo "<uwaa_app:sorting><![CDATA[{". ucwords($term->name) . "}]]></uwaa_app:sorting>\n";
+                          echo "<uwaa_app:sorting><![CDATA[". ucwords($term->name) . "]]></uwaa_app:sorting>\n";
                       }
                       unset($terms);
                   }
