@@ -66,11 +66,23 @@
              );
 
 
-               $this->tpcMembergramFields = array(                 
+               $this->tpcMembergramFields = array(
+                'fields' => array(
+                  'mb_membergram_cta_link'
+                ),
                  'hasTaxonomy' => false,
                  'taxonomyName' => false,                  
                  'hasGeotag' => false,
                  'declarePostType' => true
+             );
+
+              $this->membergramFields = array(
+                'fields' => array(
+                  'mb_membergram_cta_link'
+                ),
+                 'hasTaxonomy' => false,
+                 'taxonomyName' => false,                  
+                 'hasGeotag' => false,                 
              );
 
               add_action('rss2_item', array($this, 'addFeedAugmentations'));
@@ -84,7 +96,9 @@
               $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
               $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], null , $this->eventFields['hasGeotag'] );
               $this->augmentFeed('post', $this->newsFields['fields']);
-              $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);              
+              $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);
+              $this->augmentFeed('membergrams', $this->membergramFields['fields']);
+              $this->augmentFeed('tpcmembergrams', $this->tpcMembergramFields['fields']);
           }
 
           public function addUWAANamespaceToFeed()
@@ -179,6 +193,10 @@
 
                       if ($element == 'end_date') {
                           $element = 'end_date';
+                      }
+
+                      if ($element == 'membergram_cta_link') {
+                          $element = 'membergram_cta_link';
                       }
 
                       echo "<uwaa_app:{$element}><![CDATA[{$content}]]></uwaa_app:{$element}>\n";

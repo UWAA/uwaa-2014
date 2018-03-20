@@ -20,6 +20,7 @@ class MetaBoxes
         $this->add_major_market_toggle();
         $this->add_post_custom_actions();
         $this->add_special_opengraph_tags();
+        $this->add_membergram_meta();
 
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
@@ -520,6 +521,26 @@ class MetaBoxes
                                 'purple-header-overlay' => 'Purple Text'
                                 ),
                         'desc'=> 'Text overlays the hero image on this post type.  Choose between Purple and White text'
+                        ),
+                    )
+            )
+            );
+
+        }
+
+        protected function add_membergram_meta() {
+            new \UWAA\CustomPostData('membergram_cta', array(
+                'title' => 'Membergram Features',
+                'pages' => array('membergrams', 'tpcmembergrams'),  //add events, regional pages as they are ready
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(                        
+                       'name' => 'Call-to-action Button Link',
+                        'id'=> 'membergram_cta_link',
+                        'type'=> 'text',
+                        'desc'=> "Add the link, including the 'http:' here.  This will be the destination for app 'learn more' buttons "
+                        
                         ),
                     )
             )

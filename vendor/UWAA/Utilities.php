@@ -289,21 +289,30 @@ public function addGetPermalinkButton($arg, $post_id) {
 
     public function redirectMembergramDirectQueries()
     {
-        if( is_singular( array('membergrams', 'tpcmembergrams') ) || is_post_type_archive(array('membergrams', 'tpcmembergrams') ) )
-    {
-        wp_redirect( home_url( '/' ) );
-        exit();
+
         
-    }
+
+
+            if( is_singular( array('membergrams', 'tpcmembergrams') ) || is_post_type_archive(array('membergrams', 'tpcmembergrams') ) )  
+        {
+            // if (! is_admin() ) {
+                wp_redirect( home_url( '/' ) );
+            exit();
+
+            // }
+            
+        
+        }       
+        
 
     }
 
 
 
 public function redirectDirectAccessToMembergrams( $query ) {    
-    if ( 'tpcmembergrams' == $query->query_vars['post_type'] || 'membergrams' == $query->query_vars['post_type'] ) {
+    if ( ('tpcmembergrams' == $query->query_vars['post_type'] || 'membergrams' == $query->query_vars['post_type'] ) && ! is_admin() ) {
 
-        if ( 'feed' != $query->query_vars['feed']) {
+        if ( 'feed' != $query->query_vars['feed'] ) {
 
             wp_redirect( home_url( '/' ) );
             exit();
