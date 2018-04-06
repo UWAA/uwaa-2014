@@ -1,4 +1,5 @@
 <?php namespace UWAA\CustomPostTypes;
+//Note that the post was set up as "membergrams," but the label is "appergrams" for human users.
 
 class Membergrams
 {
@@ -11,24 +12,24 @@ class Membergrams
         public static function setup_membergrams_posts()
         {
             $labels = array(
-                'name'                => 'Membergrams',
-                'singular_name'       => 'Membergram',
-                'menu_name'           => 'Membergrams',
+                'name'                => 'Appergrams',
+                'singular_name'       => 'Appergram',
+                'menu_name'           => 'Appergrams',
                 'parent_item_colon'   => 'Parent Item:',
-                'all_items'           => 'All Membergrams',
-                'view_item'           => 'View Membergram Details',
-                'add_new_item'        => 'Add New Membergram',
-                'add_new'             => 'Add Membergram',
-                'edit_item'           => 'Edit Membergram',
-                'update_item'         => 'Update Membergram',
-                'search_items'        => 'Search Membergrams',
-                'not_found'           => 'No Membergram Found',
-                'not_found_in_trash'  => 'No Membergram found in Trash',
+                'all_items'           => 'All Appergrams',
+                'view_item'           => 'View Appergram Details',
+                'add_new_item'        => 'Add New Appergram',
+                'add_new'             => 'Add Appergram',
+                'edit_item'           => 'Edit Appergram',
+                'update_item'         => 'Update Appergram',
+                'search_items'        => 'Search Appergrams',
+                'not_found'           => 'No Appergram Found',
+                'not_found_in_trash'  => 'No Appergram found in Trash',
             );
 
             $args = array(
                 'label'               => 'membergrams',
-                'description'         => 'Membergrams are posts that directly fire notifications in the UWAA member app.',
+                'description'         => 'Appergrams are posts that directly fire notifications in the UWAA member app.',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'excerpt',  ),
                 'taxonomies'          => array( 'post_tag' , 'category'),
