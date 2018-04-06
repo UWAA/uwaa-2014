@@ -27,6 +27,7 @@ class Utilities
         add_filter('get_sample_permalink_html', array($this, 'addGetPermalinkButton'), 5, 2);        
         add_action( 'template_redirect', array($this, 'redirectMembergramDirectQueries' ));
         add_action( 'parse_request',array($this, 'redirectDirectAccessToMembergrams') );
+        add_filter('get_image_tag_class', array($this, 'add_image_class'));
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -324,6 +325,12 @@ public function redirectDirectAccessToMembergrams( $query ) {
     return $query;
 }
 
+
+
+public function add_image_class($class){
+    $class .= ' inline';
+    return $class;
+}
    
 
 }
