@@ -28,6 +28,7 @@ class Utilities
         add_action( 'template_redirect', array($this, 'redirectMembergramDirectQueries' ));
         add_action( 'parse_request',array($this, 'redirectDirectAccessToMembergrams') );
         add_filter('get_image_tag_class', array($this, 'add_image_class'));
+        add_action('after_setup_theme', array($this, 'attachment_default_settings'));
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -331,6 +332,13 @@ public function add_image_class($class){
     $class .= ' inline';
     return $class;
 }
+
+
+
+public function attachment_default_settings() {
+  update_option('image_default_link_type', 'none' );  
+}
+
    
 
 }
