@@ -11,25 +11,25 @@ class TPCMembergrams
         public static function setup_tpc_membergram_posts()
         {
             $labels = array(
-                'name'                => 'TPC Membergrams',
-                'singular_name'       => 'TPC Membergram',
-                'menu_name'           => 'TPC Membergrams',
+                'name'                => 'TPC Appergrams',
+                'singular_name'       => 'TPC Appergram',
+                'menu_name'           => 'TPC Appergrams',
                 'parent_item_colon'   => 'Parent Item:',
-                'all_items'           => 'All TPC Membergrams',
-                'view_item'           => 'View TPC Membergram Details',
-                'add_new_item'        => 'Add New TPC Membergram',
-                'add_new'             => 'Add TPC Membergram',
-                'edit_item'           => 'Edit TPC Membergram',
-                'update_item'         => 'Update TPC Membergram',
-                'search_items'        => 'Search TPC Membergrams',
-                'not_found'           => 'No TPC Membergram Found',
-                'not_found_in_trash'  => 'No TPC Membergram found in Trash',
+                'all_items'           => 'All TPC Appergrams',
+                'view_item'           => 'View TPC Appergram Details',
+                'add_new_item'        => 'Add New TPC Appergram',
+                'add_new'             => 'Add TPC Appergram',
+                'edit_item'           => 'Edit TPC Appergram',
+                'update_item'         => 'Update TPC Appergram',
+                'search_items'        => 'Search TPC Appergrams',
+                'not_found'           => 'No TPC Appergram Found',
+                'not_found_in_trash'  => 'No TPC Appergram found in Trash',
             );
 
 
             $args = array(
                 'label'               => 'tpcmembergrams',
-                'description'         => 'TPC Membergrams are posts that directly fire notifications to authenticated TPC members in the UWAA member app.',
+                'description'         => 'TPC Appergrams are posts that directly fire notifications to authenticated TPC members in the UWAA member app.',
                 'labels'              => $labels,
                 'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions', 'excerpt',  ),
                 'taxonomies'          => array('post_tag' , 'category'),
