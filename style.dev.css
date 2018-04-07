@@ -7328,10 +7328,15 @@ a.read-more-link:after {
 }
 .featured-post.five-column h4.title {
   margin-bottom: .3em;
+  font-size: 19px;
 }
 .featured-post.five-column p.excerpt {
   font-size: .92em;
   line-height: 1.3;
+}
+.featured-post.five-column h4.date {
+  font-size: .90em;
+  line-height: 1.1;
 }
 .featured-post.five-column .copy {
   height: 230px;
@@ -7340,10 +7345,6 @@ a.read-more-link:after {
   .featured-post.five-column .copy h4.title {
     margin-bottom: .3em;
     font-size: 1.1em;
-  }
-  .featured-post.five-column .copy h4.date {
-    font-size: .97em;
-    line-height: 1.1;
   }
   .featured-post.five-column .copy p.excerpt {
     font-size: .85em;
@@ -7389,6 +7390,7 @@ a.read-more-link:after {
 }
 .featured-post.four-column h4.title {
   margin-bottom: .3em;
+  font-size: 19px;
 }
 .featured-post.four-column p.excerpt {
   font-size: .92em;
