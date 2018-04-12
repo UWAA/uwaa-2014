@@ -68,5 +68,5 @@
  ?>
 
 
- <p>Please consider purchasing travel insurance to protect your trip.  <a href="http://www.washington.edu/cms/alumni/travel/travel-insurance/" class="read-more-link">Learn more.</a></p>
+ <p>Please consider purchasing travel insurance to protect your trip.  <a href="http://www.washington.edu/alumni/travel/travel-insurance/" class="read-more-link">Learn more.</a></p>
 
