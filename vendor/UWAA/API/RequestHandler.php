@@ -131,7 +131,7 @@ class RequestHandler
     private function getWPObject($postType) {              
         $transientName = $postType . "TransientQuery";
         
-        // if ($this->checkTransient($postType) === false) {
+        if ($this->checkTransient($postType) === false) {
           $args = array (
             'post_type' => $postType,
             'orderby' => 'asc',
@@ -153,7 +153,7 @@ class RequestHandler
         $query = new \WP_query($args);        
         set_transient($transientName, $query, 6 * 'HOURS_IN_SECONDS');        
         return $query;   
-        // }     
+        }     
 
         $activeTransient= get_transient($transientName);        
         return $activeTransient;       
