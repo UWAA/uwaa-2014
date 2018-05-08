@@ -131,7 +131,7 @@ class RequestHandler
     private function getWPObject($postType) {              
         $transientName = $postType . "TransientQuery";
         
-        if ($this->checkTransient($postType) === false) {
+        // if ($this->checkTransient($postType) === false) {
           $args = array (
             'post_type' => $postType,
             'orderby' => 'asc',
@@ -139,7 +139,7 @@ class RequestHandler
             );
 
         if ($postType === 'tours') {
-          $args[] = array (
+          $args = array_merge($args, array (
             'meta_key' => 'mb_start_date',
             'meta_query' => array(
               'key' => 'mb_start_date',
@@ -147,13 +147,13 @@ class RequestHandler
               'value' => date("Y-m-d"), 
               'compare' => '>=', 
             )
-          );
+          ));
         }
 
         $query = new \WP_query($args);        
-        set_transient($transientName, $query, 6 * HOURS_IN_SECONDS);        
+        set_transient($transientName, $query, 6 * 'HOURS_IN_SECONDS');        
         return $query;   
-        }     
+        // }     
 
         $activeTransient= get_transient($transientName);        
         return $activeTransient;       

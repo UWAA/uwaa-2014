@@ -103,6 +103,14 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
           'value' => date("Y-m-d"),
           'compare' => '>=',
           ),
+      'tax_query' => array(                
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    => array( 'exclude-from-search'),
+          'operator'  => 'NOT IN'
+          )
+      ), //End tax query
       'posts_per_page' => -1,
       );
 
