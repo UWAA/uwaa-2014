@@ -29,6 +29,7 @@ class Utilities
         add_action( 'parse_request',array($this, 'redirectDirectAccessToMembergrams') );
         add_filter('get_image_tag_class', array($this, 'add_image_class'));
         add_action('after_setup_theme', array($this, 'attachment_default_settings'));
+        add_filter('the_permalink_rss', array($this, 'overwriteCTAButtonLink')); 
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -338,6 +339,16 @@ public function add_image_class($class){
 public function attachment_default_settings() {
   update_option('image_default_link_type', 'none' );  
 }
+
+public function overwriteCTAButtonLink($post_permalink) {
+    $content = get_post_meta(get_the_id() , 'mb_membergram_cta_link', true); 
+            if ($content)
+                  {
+            return $content;
+        } else {
+            return $post_permalink;
+        }
+    }
 
    
 
