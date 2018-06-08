@@ -208,6 +208,18 @@ TOOLBAR;
       return $shortenedString;
     }
 
+    protected function getPartnerEventClass($id) {
+        $isPartnerEvent = get_post_meta($id, 'mb_isPartnerEvent', true);
+        $classValue = '';
+
+        if ($isPartnerEvent) {
+          $classValue = 'partner-post';
+        }
+
+        return $classValue;          
+
+    }
+
     // Hardcoded grossness for Vets Week Page
 
      public function renderVeteransFilterToolbar()

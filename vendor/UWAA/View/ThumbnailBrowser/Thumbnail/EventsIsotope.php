@@ -70,6 +70,12 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
                 }               
         endif;
 
+        $isPartnerEvent = get_post_meta(get_the_id(), 'mb_isPartnerEvent', true);
+
+        if ($isPartnerEvent) {
+          $termArray[] = 'partner-post';
+        }
+
      	return $termArray;
      }
 

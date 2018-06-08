@@ -20,6 +20,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postImageThumbnailURL;
     protected $postExcerpt;
     protected $postImageAltText;
+    
 
     public function __construct()
     {
@@ -44,6 +45,8 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         
+
+        
         echo $this->buildTemplate();
 
     endwhile;
@@ -63,6 +66,12 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
                 $termArray[] = $term->slug;
                 }               
         endif;
+
+        $isPartnerEvent = get_post_meta(get_the_id(), 'mb_isPartnerEvent', true);
+
+        if ($isPartnerEvent) {
+          $termArray[] = 'partner-post';
+        }
 
      	return $termArray;
      }

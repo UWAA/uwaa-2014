@@ -99,11 +99,12 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
 
 public function buildTemplate() {
 
+$partnerPost = $this->getPartnerEventClass(get_the_ID());
 $callout = $this->renderCallout();
 $image = $this->renderImage();
 $date = $this->renderDate();
 $template = <<<TEMPLATE
-<div class="featured-post five-column">
+<div class="featured-post five-column $partnerPost">
 <a href="{$this->liveURL}">
     <div class="image-frame">
       $image

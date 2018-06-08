@@ -6836,6 +6836,10 @@ td.visible-print {
 .post-thumbnail-slide:hover.preliminary:hover {
   opacity: 1;
 }
+.post-thumbnail-slide.partner-post > .copy > a.link-arrow {
+  background: url(assets/uwaa-sprite.svg) -227px -510px no-repeat;
+  transform: none;
+}
 .post-thumbnail-slide .copy {
   color: #5a5a5a;
   padding: 6px 10px 10px 10px;
@@ -7225,6 +7229,10 @@ a.read-more-link:after {
 }
 .featured-post:hover {
   opacity: .8;
+}
+.featured-post.partner-post > .copy:after {
+  background: url(assets/uwaa-sprite.svg) -227px -510px no-repeat;
+  transform: none;
 }
 .featured-post .copy {
   color: #5a5a5a;

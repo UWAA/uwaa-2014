@@ -102,8 +102,9 @@ public function buildTemplate() {
 $callout = $this->renderCallout();
 $image = $this->renderImage();
 $date = $this->renderDate();
+$partnerPost = $this->getPartnerEventClass(get_the_ID());
 $template = <<<TEMPLATE
-<div class="featured-post five-column">
+<div class="featured-post five-column $partnerPost">
 <a href="{$this->liveURL}">
     <div class="image-frame">
       $image
