@@ -55,7 +55,7 @@ class Memberchecker {
 
         if ($this->memberCheckerRequest->cookies->has('UWAAMEM') == false) {
             $this->memberCheckerResponse = new Response();
-            $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(hash(sha512, 'UWAAMEM')));
+            $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(hash('sha512', 'UWAAMEM')));
             $this->memberCheckerResponse->sendHeaders();
         }
         
@@ -143,7 +143,7 @@ $memberDetails = json_decode($memberPayload);
 
 
 
-$result = $memberDetails->UWAAMemberCheckResult;  //returns success or failure
+$result = $memberDetails;  //returns success or failure
 $callSuccess = $result->Success;
 $callError = $result->ErrorMessage;
 $member = $result->ReturnedMember; 
