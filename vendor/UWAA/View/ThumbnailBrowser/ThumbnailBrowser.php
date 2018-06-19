@@ -210,9 +210,13 @@ TOOLBAR;
 
     protected function getPartnerEventClass($id) {
         $isPartnerEvent = get_post_meta($id, 'mb_isPartnerEvent', true);
+        $partnerEventURL = get_post_meta($id, 'mb_alternate_link', true);
+        $homeURL = '/washington\.edu\/alumni/';
+        $partnerEventGoesToSameSite = preg_match($homeURL, $partnerEventURL);
+        
         $classValue = '';
 
-        if ($isPartnerEvent) {
+        if ($isPartnerEvent && !$partnerEventGoesToSameSite) {
           $classValue = 'partner-post';
         }
 
