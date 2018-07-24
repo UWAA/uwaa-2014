@@ -1,5 +1,5 @@
 <div id="tours-signup" class="widget">
-<h2 class="widgettitle">“Join Our Mailing List</h2>
+<h2 class="widgettitle">Join Our Mailing List</h2>
 <!-- <form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate action="https://uwalum.wufoo.com/forms/q1vws8101tef77m/#public"> Production -->
 <form id="form13" name="form13" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate action="https://uwalum.wufoo.com/forms/z1adplro16m49gy/#public">
 
