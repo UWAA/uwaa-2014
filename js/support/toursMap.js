@@ -24,11 +24,20 @@ var host = window.location.hostname;
 
     
 
-    //TODO Single Origin Policy, and abstract.  
-    var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading); 
+    function isSecure() {
+        return location.protocol == 'https:';
+    }
     
 
-    markerLayer.loadURL('/api/tours/geojson');
+    var endPoint = homeLink.endpointURL;
+
+    if (isSecure()) {
+        var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
+    }   
+    
+    var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading);
+
+    markerLayer.loadURL(endPoint);
 
     markerLayer.on('layeradd', function(e) {
         var marker = e.layer,

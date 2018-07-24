@@ -4,8 +4,11 @@ get_header();
 wp_enqueue_script(array('USHuskiesMap', 'chapterAccordionOpener'));
 wp_enqueue_style('mapbox');
 
-$isHTTPS = ($_SERVER['HTTPS'] == 'on' ? 'https' :'http');
-wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson', $isHTTPS ) ) ) );
+wp_localize_script( 'mapbox', 'homeLink', 
+  array( 
+    'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson'))
+  ) 
+);
 
 
 $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();

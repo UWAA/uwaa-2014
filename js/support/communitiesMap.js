@@ -40,10 +40,21 @@
 
     startLoading();
 
+    
+
+    function isSecure() {
+        return location.protocol == 'https:';
+    }
+
+    var endPoint = homeLink.endpointURL;    
+
+    if (isSecure()) {        
+        var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
+    }
 
     var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading);
 
-    markerLayer.loadURL('/api/communities/geojson');
+    markerLayer.loadURL(endPoint);
 
     markerLayer.on('layeradd', function (e) {
         var marker = e.layer,
