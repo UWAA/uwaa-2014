@@ -28,10 +28,16 @@ var southWest = L.latLng(-90, 180),
 
     startLoading();
 
-    
+    var endPoint = homeLink.endpointURL;
+
+    if (isSecure()) {
+        var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
+    }
+    markerLayer.loadURL(endPoint);
+
     var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading);
 
-    markerLayer.loadURL(homeLink.endpointURL);
+    
 
     markerLayer.on('layeradd', function(e) {
         var marker = e.layer,
