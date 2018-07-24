@@ -1,5 +1,5 @@
 <div id="tours-signup" class="widget">
-<h2 class="widgettitle">Sign up for Travel Updates</h2>
+<h2 class="widgettitle">“Join Our Mailing List</h2>
 <!-- <form id="form3" name="form3" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate action="https://uwalum.wufoo.com/forms/q1vws8101tef77m/#public"> Production -->
 <form id="form13" name="form13" class="wufoo uwaa-form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" validate action="https://uwalum.wufoo.com/forms/z1adplro16m49gy/#public">
 
@@ -15,12 +15,12 @@
 <fieldset>
 <![if !IE | (gte IE 8)]>
 <legend id="title17" class="desc">
-How would you like to get updates from UW Alumni tours?
+How would you like to get information about our upcoming trips?
 </legend>
 <![endif]>
 <!--[if lt IE 8]>
 <label id="title17" class="desc">
-How would you like to get updates from UW Alumni tours?
+How would you like to get information about our upcoming trips?
 </label>
 <![endif]-->
 <div>
