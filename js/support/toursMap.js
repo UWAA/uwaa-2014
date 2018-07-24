@@ -26,10 +26,9 @@ var host = window.location.hostname;
 
     //TODO Single Origin Policy, and abstract.  
     var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading); 
-
     
 
-    markerLayer.loadURL(homeLink.endpointURL);
+    markerLayer.loadURL('/api/tours/geojson');
 
     markerLayer.on('layeradd', function(e) {
         var marker = e.layer,

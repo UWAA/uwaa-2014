@@ -43,7 +43,7 @@
 
     var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading);
 
-    markerLayer.loadURL(homeLink.endpointURL);
+    markerLayer.loadURL('/api/communities/geojson');
 
     markerLayer.on('layeradd', function (e) {
         var marker = e.layer,
