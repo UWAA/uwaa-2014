@@ -3,7 +3,11 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Chapters;
 get_header(); 
 wp_enqueue_script(array('USHuskiesMap', 'chapterAccordionOpener'));
 wp_enqueue_style('mapbox');
-wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson', 'https' ) ) ) );
+
+$isHTTPS = ($_SERVER['HTTPS'] == 'on' ? 'https' :'http');
+wp_localize_script( 'mapbox', 'homeLink', array( 'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson', $isHTTPS ) ) ) );
+
+
 $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
 
