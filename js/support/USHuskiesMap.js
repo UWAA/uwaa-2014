@@ -28,6 +28,10 @@ var southWest = L.latLng(-90, 180),
 
     startLoading();
 
+    function isSecure() {
+        return location.protocol == 'https:';
+    }
+
     var endPoint = homeLink.endpointURL;
 
     if (isSecure()) {
