@@ -37,11 +37,11 @@ var southWest = L.latLng(-90, 180),
     if (isSecure()) {
         var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
     }
-    markerLayer.loadURL(endPoint);
+    
 
     var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading);
 
-    
+    markerLayer.loadURL(endPoint);
 
     markerLayer.on('layeradd', function(e) {
         var marker = e.layer,
