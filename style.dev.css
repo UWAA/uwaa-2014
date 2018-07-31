@@ -8729,7 +8729,7 @@ div.map-logo.vietnam {
   text-decoration: underline;
   color: #85754d;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   .home-thumbnail-row .row-title-row .see-all-link {
     margin-top: -10px;
   }
