@@ -40,7 +40,10 @@ endif;
                   <div class="row-hr"></div>
                   <div class="row-title-text">
                       <h2>upcoming events</h2>
-                  </div>
+                  </div>                  
+
+                  <a class="see-all-link" href="<?php echo home_url( '/events'); ?>">see all events</a>
+
              </div>
               <?php
 
@@ -60,6 +63,7 @@ endif;
                   <div class="row-title-text news">
                       <h2>news</h2>
                   </div>
+                  <a class="see-all-link" href="<?php echo home_url('/stories'); ?>">see all stories</a>
               </div>
 
               <?php
