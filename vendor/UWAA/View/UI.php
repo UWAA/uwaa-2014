@@ -29,7 +29,8 @@ class UI
         new Shortcodes\OdysseySignupButton;
         new Shortcodes\AddMap;
         new Shortcodes\AddDawgDashMap;
-		new Shortcodes\ActivityLevel;
+        new Shortcodes\ActivityLevel;
+        new Shortcodes\ViewingParty;
 
     }
 
