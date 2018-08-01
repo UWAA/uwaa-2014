@@ -22,7 +22,7 @@ class ViewingParty
 
         <div class="wufoo-vp-code">
     <!-- This embed code may be restricted to use on a single domain, see documentation at: https://help.surveygizmo.com/help/iframe-embed#limit-permitted-domains-for-embeds -->
-<iframe src="https://www.surveygizmo.com/s3/4393280/Viewing-Party-Check-in" frameborder="0" width="auto" height="1500"></iframe>
+<iframe src="https://www.surveygizmo.com/s3/4393280/Viewing-Party-Check-in" frameborder="0" width="auto" height="1000"></iframe>
     </div>
 ';
 
