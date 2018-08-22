@@ -58,6 +58,13 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\Reunions;
 
     ?>
 
+    <div id="text-3" class="widget widget_text">
+             <h2 class="widgettitle">Update your contact information</h2>
+             <div class="textwidget">
+                 Help keep our records current!  Please <a href="https://www.washington.edu/alumni/services/update/">update your contact information,</a> which helps ensure that you receive reunion communications from the UW and the UW Alumni Association.
+             </div>
+         </div>
+
       
 
     </div>
