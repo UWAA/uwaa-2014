@@ -1,6 +1,6 @@
 <?php get_header(); 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\EventsIsotope;
-wp_enqueue_script(array('isotopeInit'));
+wp_enqueue_script(array('isotopeInit','subman'));
 ?>
 
 <div class="uw-hero-image events"></div>
@@ -16,6 +16,23 @@ wp_enqueue_script(array('isotopeInit'));
      <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
 
       <div class="uw-body-copy">
+
+        <div class="lecture-signup" id="lecture-signup">
+         <script type="text/javascript">
+            $(function() { 
+              SUBMANBUILDER.makeIframe({
+                subscriptionID: [328],           //REQUIRED: Subscription ID(s) for sign up e.g. [25, 27] for sign up to multiple sub prefs
+                fromName: "UW Email Sign Up",   //RECOMMENDED: From name of the confirmation email
+                fromEmail: "uwalumni@uw.edu",   //RECOMMENDED: From email of the confirmation email
+                showPlaceHolders: false,        //OPTIONAL: Show placeholder text inside the text boxes
+                hideLabels: false,              //OPTIONAL: Hide form labels
+                returnURL: "",                  //OPTIONAL: Set if confirmation page is different than sign up page
+              });
+            });
+          </script>
+
+        </div>
+       
 
 
         <div id="isotope-canvas">

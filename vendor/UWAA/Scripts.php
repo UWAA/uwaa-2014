@@ -221,6 +221,16 @@ class Scripts
         'in_footer' => true,
         'admin'   => false
       ),
+       'subman' => array (
+        'id'      => 'subman',
+        'url'     => 'https://subscribe.gifts.washington.edu/Scripts/SubManBuilder/submanbuilder.js',
+        'deps'    => array(),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+
+      
 
 
 
