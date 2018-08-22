@@ -8731,7 +8731,9 @@ div.map-logo.vietnam {
 }
 @media only screen and (max-width: 767px) {
   .home-thumbnail-row .row-title-row .see-all-link {
-    margin-top: -10px;
+    margin-top: -8px;
+    font-size: 13px;
+    padding-right: 10px;
   }
 }
 .home-thumbnail-row .row-hr {
