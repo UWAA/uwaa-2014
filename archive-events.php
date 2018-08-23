@@ -27,6 +27,7 @@ wp_enqueue_script(array('isotopeInit','subman'));
                 showPlaceHolders: false,        //OPTIONAL: Show placeholder text inside the text boxes
                 hideLabels: false,              //OPTIONAL: Hide form labels
                 returnURL: "",                  //OPTIONAL: Set if confirmation page is different than sign up page
+                placeholderID: "lecture-signup"
               });
             });
           </script>
