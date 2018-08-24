@@ -11113,6 +11113,14 @@ Typography
   text-align: left;
   margin: 0 -12px;
 }
+#lecture-signup-wrapper {
+  visibility: hidden;
+  display: none;
+}
+#lecture-signup-wrapper.iframe-opened {
+  visibility: visible;
+  display: block;
+}
 #map {
   position: absolute;
   top: 0;
