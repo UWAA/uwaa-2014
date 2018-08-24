@@ -102,7 +102,6 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
-
       ),
 
       'isotopeVetsInit' => array (
@@ -225,6 +224,14 @@ class Scripts
         'id'      => 'subman',
         'url'     => 'https://subscribe.gifts.washington.edu/Scripts/SubManBuilder/submanbuilder.js',
         'deps'    => array(),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+      'archiveSignupForm' => array (
+        'id'      => 'archiveSignupForm',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/archiveSubscriptionForm' . $this->min_script() . '.js',
+        'deps'    => array('isotopeInit'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
