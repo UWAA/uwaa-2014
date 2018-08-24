@@ -1,6 +1,6 @@
 <?php get_header(); 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\EventsIsotope;
-wp_enqueue_script(array('isotopeInit','subman'));
+wp_enqueue_script(array('isotopeInit','subman', 'archiveSignupForm'));
 ?>
 
 <div class="uw-hero-image events"></div>
@@ -17,7 +17,7 @@ wp_enqueue_script(array('isotopeInit','subman'));
 
       <div class="uw-body-copy">
 
-        <div class="lecture-signup" id="lecture-signup">
+        <div class="lecture-signup lecture-signup-closed" id="lecture-signup">
          <script type="text/javascript">
             $(function() { 
               SUBMANBUILDER.makeIframe({
