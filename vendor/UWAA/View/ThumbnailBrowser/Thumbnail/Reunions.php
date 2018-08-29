@@ -40,7 +40,7 @@ class Reunions extends ThumbnailBrowser implements Thumbnail
         ),
       'posts_per_page' => 5, 
       'orderby' => 'date',
-      'order' => 'desc',
+      'order' => 'asc',
       
       'tax_query' => array(        
         array(
