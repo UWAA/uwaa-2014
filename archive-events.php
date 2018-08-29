@@ -18,7 +18,8 @@ wp_enqueue_script(array('isotopeInit','subman', 'archiveSignupForm'));
       <div class="uw-body-copy">
 
         <div id="lecture-signup-wrapper">
-        <div class="lecture-signup lecture-signup-closed" id="lecture-signup">
+        <div class="lecture-signup-cover">
+        <div class="lecture-signup lecture-signup-closed" id="lecture-signup">        
          <script type="text/javascript">
             $(function() { 
               SUBMANBUILDER.makeIframe({
@@ -33,6 +34,7 @@ wp_enqueue_script(array('isotopeInit','subman', 'archiveSignupForm'));
             });
           </script>
 
+        </div>
         </div>
         </div>
        

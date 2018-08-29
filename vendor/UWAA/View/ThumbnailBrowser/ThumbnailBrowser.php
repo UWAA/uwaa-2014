@@ -183,18 +183,22 @@ TOOLBAR;
     public function renderGridListPrintIcons()
     {
       $template = '
-        <div class="grid-list-print-icons hidden-sm hidden-xs">
-          <div class="button grid-button is-checked">
+        <div class="grid-list-print-icons">
+          <div class="button grid-button is-checked hidden-sm hidden-xs">
             <div class="icon grid"></div>
             <div class="label">Overview</div>
           </div>
-          <div class="button list-button">
+          <div class="button list-button hidden-sm hidden-xs">
             <div class="icon list"></div>
             <div class="label">List</div>
           </div>
-          <div class="button print-button">
+          <div class="button print-button hidden-sm hidden-xs">
             <div class="icon print"></div>
             <div class="label">Print</div>
+          </div>
+          <div class="button text-button button-hidden hidden-xs" id="email-signup">
+            <div class="label">Join our <span></span> email list</div>
+            <div class="label close-text">Close</div>
           </div>
         </div>';
 

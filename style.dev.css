@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.11.1
+ Version: 1.11.2
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6996,7 +6996,6 @@ td.visible-print {
   right: 0;
   top: -70px;
   overflow: hidden;
-  outline: 1px solid #aaaaaa;
 }
 #isotope-search form {
   float: left;
@@ -7005,6 +7004,9 @@ td.visible-print {
 #isotope-search form input {
   height: 44px;
   font-size: 17px;
+  padding-left: 15px;
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 700;
 }
 #isotope-search input.search {
   height: 42px;
@@ -9260,6 +9262,46 @@ div.map-logo.vietnam {
   text-align: center;
   cursor: pointer;
 }
+.grid-list-print-icons .button.text-button {
+  border: 1px solid #4b2e83;
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  font-size: inherit;
+  height: 44px;
+  padding: 5px 15px;
+  margin-left: 13px;
+}
+.grid-list-print-icons .button.text-button:hover {
+  background-color: #4b2e83;
+}
+.grid-list-print-icons .button.text-button:hover .label {
+  color: #ffffff;
+}
+.grid-list-print-icons .button.text-button.button-hidden {
+  display: none;
+  visibility: hidden;
+}
+.grid-list-print-icons .button.text-button .label {
+  color: #4b2e83;
+  vertical-align: middle;
+  font-family: "Encode Sans", sans-serif;
+}
+.grid-list-print-icons .button.text-button .label.close-text {
+  display: none;
+  color: #ffffff;
+  background-color: red;
+  padding: .8em .6em;
+}
+.grid-list-print-icons .button.text-button.iframe-active {
+  background-color: red;
+}
+.grid-list-print-icons .button.text-button.iframe-active .label {
+  display: none;
+}
+.grid-list-print-icons .button.text-button.iframe-active .close-text {
+  display: block;
+}
 .grid-list-print-icons .button .icon {
   margin: 0 auto;
   height: 34px;
@@ -11114,12 +11156,38 @@ Typography
   margin: 0 -12px;
 }
 #lecture-signup-wrapper {
-  visibility: hidden;
+  padding: 10px;
+  height: 0;
+  widows: 0;
+  transition: height .5s linear;
+}
+#lecture-signup-wrapper iframe {
   display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+#lecture-signup-wrapper .lecture-signup-cover {
+  height: 100%;
+  width: 100%;
+  transition: opacity 1s linear;
+  opacity: 0;
 }
 #lecture-signup-wrapper.iframe-opened {
   visibility: visible;
   display: block;
+  border: 1px solid #4b2e83;
+  margin-bottom: -1px;
+  height: 240px;
+}
+#lecture-signup-wrapper.iframe-opened .lecture-signup-cover {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+#lecture-signup-wrapper.iframe-opened iframe {
+  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 #map {
   position: absolute;

@@ -1,7 +1,7 @@
 // grid-list-sprite.less
 
 
-.grid-list-print-icons{
+.grid-list-print-icons{    
     position: absolute;
     top:-70px;
     right: 300px;
@@ -21,7 +21,61 @@
         text-align: center;
         cursor: pointer;
 
+        
 
+
+        &.text-button {
+            border: 1px solid @purple;
+            display: inline-block;
+            vertical-align: top;
+            width: auto;
+            font-size: inherit;
+            height: 44px;
+            padding: 5px 15px;
+            margin-left: 13px;     
+            
+            &:hover{
+                .label  {
+                    color: @white;
+                }
+                background-color: @purple;
+            }
+            
+
+            &.button-hidden {
+            display: none;
+            visibility: hidden;
+            }
+
+            .label{
+                color: @purple;
+                vertical-align: middle;
+                font-family: "Encode Sans", sans-serif;  
+
+                &.close-text{                    
+                    display: none;
+                    color: @white;
+                    background-color: red;
+                    padding: .8em .6em;
+                }
+
+            }
+
+              &.iframe-active {
+                background-color: red;
+
+                 .label {
+                     display: none;
+                 }
+
+                 .close-text{
+                     display: block;
+                 }
+                }
+
+                    
+           
+        }
 
 
         .icon{    

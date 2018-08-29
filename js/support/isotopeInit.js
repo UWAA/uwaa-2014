@@ -9,12 +9,11 @@ Isotope = Backbone.View.extend({
     "click .list-button" : "listView",
     "click .grid-button" : "tileView",
     "click .print-button" : "print",
+    "click #email-signup": "makeSignupFormFrameVisible"
 
   },
 
   initialize: function() {
-    
-
 
 
     var isotopeQueryFilter = this.getURLParameterByName('filter');
@@ -33,25 +32,26 @@ Isotope = Backbone.View.extend({
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
     var ButtonToggle = this.toggleButtonClass;
 
-    
-
-
-    
-    
     $canvas.imagesLoaded(function() {
-    if (isotopeQueryFilter != '') {            
+    if (isotopeQueryFilter != '') {
+      console.log('have filter' + filterValue);  //debug      
       $canvas.isotope('layout');      
       $canvas.isotope({filter: filterValue});
+      console.log(this);
 
-      var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');
+      isotopeInit.signupFormCheck(filterValue);
+      
+
+      var buttonToToggleFromParam = $('[data-filter="' + filterValue + '"]');      
       buttonToToggleFromParam.siblings().removeClass('is-checked');
       buttonToToggleFromParam.addClass('is-checked');
 
     } else {      
+      console.log('no filter');  //debug
       $canvas.isotope('layout');      
     }
 
-    })
+    })    
 
     
   },
@@ -64,6 +64,8 @@ Isotope = Backbone.View.extend({
     this.$('.isotope').isotope({filter: filterValue});    
     history.pushState("UWAAFILTER", "", "?filter=" + filterValue.replace(/\./gi, ''));
     this.toggleButtonClass($target);
+    this.signupFormCheck(filterValue);
+    
 
     if(filterValue === '') {
       this.eraseCookie('UWAA_' + document.location.pathname);
@@ -157,7 +159,35 @@ Isotope = Backbone.View.extend({
 
   eraseCookie: function(name) {
     this.createCookie(name, "", -1);
-  }
+  },
+
+  signupFormCheck: function(filterValue) {    
+    switch (filterValue) {
+      case ".lecture":        
+        this.makeSignupFormButtonVisible("Lectures");        
+        
+        break;
+    
+      default: 
+        this.$("#email-signup").addClass('button-hidden');
+        $("#lecture-signup-wrapper").removeClass('iframe-opened');
+        return;
+        break;
+    }
+  },
+
+  makeSignupFormButtonVisible: function(label) {
+    this.$('#email-signup > div > span').html(label);
+    this.$('#email-signup').toggleClass('button-hidden');    
+  },
+
+  makeSignupFormFrameVisible: function() {
+    $("#lecture-signup-wrapper").toggleClass('iframe-opened');    
+    $('#email-signup').siblings().toggleClass('invisible');
+    $('#email-signup').toggleClass('iframe-active');
+    $('#isotope-search').toggleClass('invisible');
+  },
+ 
 
 
 });

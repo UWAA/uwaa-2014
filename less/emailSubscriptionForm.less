@@ -1,9 +1,44 @@
 #lecture-signup-wrapper {
-        visibility: hidden;
-        display: none;
+        padding: 10px;
+        height: 0;
+        widows: 0;
+        // -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+        transition: height .5s linear;
+
+        iframe {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            
+        }
+
+
+        .lecture-signup-cover {
+            height: 100%;
+            width:100%;
+            transition: opacity 1s linear;            
+            opacity: 0;
+        }
 
         &.iframe-opened{
             visibility: visible;
             display: block;
+            border: 1px solid @purple;
+            margin-bottom: -1px;
+            height: 240px;
+
+            .lecture-signup-cover {
+                height: 100%;
+                width: 100%;
+                opacity: 1;
+            }
+
+
+            iframe {
+                display: block;
+                visibility: visible;
+                opacity: 1;
+            }
+
         }
     }
