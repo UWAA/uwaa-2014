@@ -9289,12 +9289,7 @@ div.map-logo.vietnam {
 }
 .grid-list-print-icons .button.text-button .label.close-text {
   display: none;
-  color: #ffffff;
-  background-color: red;
   padding: .8em .6em;
-}
-.grid-list-print-icons .button.text-button.iframe-active {
-  background-color: red;
 }
 .grid-list-print-icons .button.text-button.iframe-active .label {
   display: none;
@@ -11161,7 +11156,8 @@ Typography
   widows: 0;
   transition: height .5s linear;
 }
-#lecture-signup-wrapper iframe {
+#lecture-signup-wrapper iframe,
+#lecture-signup-wrapper p {
   display: none;
   visibility: hidden;
   opacity: 0;
@@ -11184,7 +11180,8 @@ Typography
   width: 100%;
   opacity: 1;
 }
-#lecture-signup-wrapper.iframe-opened iframe {
+#lecture-signup-wrapper.iframe-opened iframe,
+#lecture-signup-wrapper.iframe-opened p {
   display: block;
   visibility: visible;
   opacity: 1;

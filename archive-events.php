@@ -19,6 +19,7 @@ wp_enqueue_script(array('isotopeInit','subman', 'archiveSignupForm'));
 
         <div id="lecture-signup-wrapper">
         <div class="lecture-signup-cover">
+          <p>Sign up to receive information about UW Public Lectures.</p>
         <div class="lecture-signup lecture-signup-closed" id="lecture-signup">        
          <script type="text/javascript">
             $(function() { 
