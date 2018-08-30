@@ -20,6 +20,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postImageThumbnailURL;
     protected $postExcerpt;
     protected $postImageAltText;
+    protected $postTags;
     
 
     public function __construct()
@@ -44,6 +45,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
+        $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
         
 
         
@@ -108,6 +110,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     $callout = $this->renderCallout();
     $image = $this->renderImage(true);
     $date = $this->renderDate();
+    $tags= $this->renderTags();
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
@@ -119,7 +122,8 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     <h6 class="subtitle">$this->postSubtitle</h6>
 		<h4 class="title">$this->postTitle</h4>
 		$date
-		<p>$this->postExcerpt</p>
+    <p>$this->postExcerpt</p>
+    $tags 
     <a class="link-arrow" href="$link">
       <span class="visually-hidden">Link</span>
     </a>

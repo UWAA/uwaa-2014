@@ -22,6 +22,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $alternateLink;
     protected $isPartnerEvent;
     protected $postImageAltText;
+    protected $postTags;
 
     public function __construct()
     {
@@ -49,6 +50,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->alternateLink = esc_url(get_post_meta(get_the_ID(), 'mb_alternate_link', true));
         $this->isPartnerEvent = get_post_meta(get_the_ID(), 'mb_isPartnerEvent', true);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
+        $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
         
         echo $this->buildTemplate();
 
@@ -127,6 +129,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
   $image = $this->renderImage(true);
   $link = $this->determineAlternateLink();
   $date = $this->renderDate();
+  $tags= $this->renderTags();
   // 
   
 	$template = <<<ISOTOPE
@@ -140,7 +143,8 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
 		<h6 class="subtitle">$this->postSubtitle</h6>
 		<h4 class="title">$this->postTitle</h4>
 		$date
-		<p>$this->postExcerpt</p>    
+    <p>$this->postExcerpt</p>
+    $tags 
     <a class="link-arrow" href="$link">
       <span class="visually-hidden">Link</span>
     </a>

@@ -91,6 +91,13 @@ class ThumbnailBrowser
     return;
    }
 
+   protected function renderTags() {
+     if ($this->postTags) {
+       return '<div class="visually-hidden" aria-hidden="true" >'.$this->postTags.'</div>';
+     }
+     return;
+   }
+
     protected function renderDate(){
     if ($this->postDate){
       return '<h4 class="date">' .$this->postDate. '</h4>';

@@ -23,6 +23,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     protected $isPreliminary;
     protected $postImageAltText;
     protected $tourOperator;
+    protected $postTags;
 
     public function __construct()
     {
@@ -50,6 +51,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         $this->tourOperator = get_post_meta(get_the_ID(), 'mb_operator', true);
+        $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
+
 
 
         echo $this->buildTemplate();
@@ -117,7 +120,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     return $args;
   }
 
-   protected function renderImage() {
+   protected function renderImage($isotope= false) {
     if ($this->postImageThumbnailURL) {
       return '<img src="' . $this->postImageThumbnailURL . '" "alt="'. $this->postImageAltText.'"/>';
     }
@@ -128,6 +131,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
 	public function buildTemplate(){
     $callout = $this->renderCallout();
     $image = $this->renderImage();
+      $tags= $this->renderTags();
+
 
 
     if ($this->isPreliminary == 'preliminary')
@@ -167,6 +172,7 @@ return $prelimTemplate;
     <p>$this->postExcerpt</p>
     <p class="operator">$this->tourOperator</p>
     <a class="link-arrow" href="$link">
+    $tags 
       <span class="visually-hidden">Link</span>
     </a>
     </div>
