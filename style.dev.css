@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.11.2
+ Version: 1.11.5
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -7959,7 +7959,8 @@ div.map-logo.sacramento,
 div.map-logo.orange-county,
 div.map-logo.palm-springs,
 div.map-logo.southern-california,
-div.map-logo.northern-california {
+div.map-logo.northern-california,
+div.map-logo.palm-desert {
   background-position: 50% -135.25px;
 }
 div.map-logo.china,
@@ -8110,6 +8111,15 @@ div.map-logo.netherlands {
 }
 div.map-logo.vietnam {
   background-position: 50% -1383.25px;
+}
+div.map-logo.nashville {
+  background-position: 50% -1549.75px;
+}
+div.map-logo.new-orleans {
+  background-position: 50% -1484.5px;
+}
+div.map-logo.minneapolis {
+  background-position: 50% -1517.5px;
 }
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 5px;
