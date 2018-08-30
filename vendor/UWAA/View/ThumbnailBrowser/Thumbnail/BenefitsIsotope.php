@@ -20,6 +20,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postImageThumbnailURL;
     protected $postExcerpt;    
     protected $postImageAltText;
+    protected $postTags;
 
     public function __construct()
     {
@@ -42,6 +43,8 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postExcerpt = wp_kses($this->shortenExcerpt(get_the_excerpt(), 220), $this->allowedHTMLTags);
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
+        $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
+
         
         echo $this->buildTemplate();
 
@@ -82,6 +85,7 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
   public function buildTemplate(){
     $callout = $this->renderCallout();
     $image = $this->renderImage();
+    $tags= $this->renderTags();
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
 	<a href="$this->postURL" title="$this->postTitle">
@@ -92,7 +96,8 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
 		<div class="copy">		
 		<h4 class="title">$this->postTitle</h4>
 		<h4 class="date">$this->postDate</h4>
-		<p>$this->postExcerpt</p>
+    <p>$this->postExcerpt</p>
+    $tags
     <a class="link-arrow" href="$link">
       <span class="visually-hidden">Link</span>
     </a>
