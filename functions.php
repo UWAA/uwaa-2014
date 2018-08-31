@@ -129,3 +129,23 @@ function load_page_specific_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'load_page_specific_scripts');
+
+
+if ( ! function_exists( 'uw_dropdowns') ) :
+  function uw_dropdowns()
+  {
+
+    echo '<nav id="dawgdrops" aria-label="Main menu"><div class="dawgdrops-inner container" role="application"><a href="'. get_bloginfo('url') .'" ><div class="uwaa-home-logo"></div></a>';
+
+    echo  wp_nav_menu( array(
+            'theme_location'  => UW_Dropdowns::LOCATION,
+            'container'       => false,
+            //'container_class' => 'dawgdrops-inner container',
+            'menu_class'      => 'dawgdrops-nav',
+            'fallback_cb'     => '',
+            'walker'          => new UW_Dropdowns_Walker_Menu()
+          ) );
+
+    echo '</div></nav>';
+  }
+endif;

@@ -261,25 +261,28 @@ ul#menu-uwaa-navigation {
 
 
 
-.dawgdrops-inner{
+.uwaa-home-logo {
     position: relative;
-
-
-    &:before {
-        position:absolute;
-        height: 150px;
-        width: 150px;
+    display: block;
+    float: left;
+        height: 80px;
+        width: 110px;
         background: url(assets/logos/uwaa-logo-purple.svg) no-repeat 0 0;
         background-size: 105px;
-        left: 6px;
+        left: -7px;
+        margin-right: 15px;
 
         @media only screen and (max-width : 991px) {
             top: 25%;
-            left: 13px;
+            left: 0px;
             background-size: 88px;
      }
+
+     &:hover{
+         opacity: .65;
+     }
        
-    }
+    
 }
 
 #spacer:before {
