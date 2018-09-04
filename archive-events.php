@@ -1,6 +1,6 @@
 <?php get_header(); 
 use \UWAA\View\ThumbnailBrowser\Thumbnail\EventsIsotope;
-wp_enqueue_script(array('isotopeInit','subman', 'archiveSignupForm'));
+wp_enqueue_script(array('isotopeInit','subman'));
 ?>
 
 <div class="uw-hero-image events"></div>
@@ -57,6 +57,7 @@ wp_enqueue_script(array('isotopeInit','subman', 'archiveSignupForm'));
             $eventGrid->makeThumbnails(new EventsIsotope);
             ?>
             </div>
+            <div id="iframe-emphasis-background" class="emphasis-background"></div>
         </div>
 
       </div>
@@ -64,6 +65,7 @@ wp_enqueue_script(array('isotopeInit','subman', 'archiveSignupForm'));
     </div>   
 
   </div>
+
 
 </div>
 

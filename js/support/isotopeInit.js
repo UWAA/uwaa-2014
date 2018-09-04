@@ -9,7 +9,8 @@ Isotope = Backbone.View.extend({
     "click .list-button" : "listView",
     "click .grid-button" : "tileView",
     "click .print-button" : "print",
-    "click #email-signup": "makeSignupFormFrameVisible"
+    "click #email-signup": "makeSignupFormFrameVisible",
+    "click #iframe-emphasis-background": "closeEmphasizedSignup"
 
   },
 
@@ -197,10 +198,19 @@ Isotope = Backbone.View.extend({
   addSignupFormEmphasis: function() {
     this.makeSignupFormFrameVisible();
     $("#lecture-signup-wrapper").addClass('special-emphasis');    
+    $("#iframe-emphasis-background").addClass('signup-has-emphasis');
+  },
+
+  closeEmphasizedSignup: function() {
+    $("#iframe-emphasis-background").removeClass("signup-has-emphasis");
+    $("#lecture-signup-wrapper").removeClass("special-emphasis");
+    this.makeSignupFormFrameVisible();
   }
+
 
 
 });
 
 isotopeInit = new Isotope();
+
 
