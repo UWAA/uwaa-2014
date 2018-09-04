@@ -17,6 +17,7 @@ Isotope = Backbone.View.extend({
 
 
     var isotopeQueryFilter = this.getURLParameterByName('filter');
+    var iFrameActivationFilter = this.getURLParameterByName('lectureSignup')
     var isotopeQueryCookie = this.getCookie('UWAA_' + document.location.pathname);
 
     if (isotopeQueryFilter.length === 0 && isotopeQueryCookie != null) {
@@ -30,14 +31,14 @@ Isotope = Backbone.View.extend({
     });
 
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
-    var ButtonToggle = this.toggleButtonClass;
+    
 
     $canvas.imagesLoaded(function() {
     if (isotopeQueryFilter != '') {
-      console.log('have filter' + filterValue);  //debug      
+      // console.log('have filter' + filterValue);  //debug      
       $canvas.isotope('layout');      
       $canvas.isotope({filter: filterValue});
-      console.log(this);
+      // console.log(this);
 
       isotopeInit.signupFormCheck(filterValue);
       
@@ -47,8 +48,12 @@ Isotope = Backbone.View.extend({
       buttonToToggleFromParam.addClass('is-checked');
 
     } else {      
-      console.log('no filter');  //debug
+      // console.log('no filter');  //debug
       $canvas.isotope('layout');      
+    }
+
+    if (iFrameActivationFilter === "true") {
+      isotopeInit.addSignupFormEmphasis();
     }
 
     })    
@@ -182,12 +187,17 @@ Isotope = Backbone.View.extend({
   },
 
   makeSignupFormFrameVisible: function() {
-    $("#lecture-signup-wrapper").toggleClass('iframe-opened');    
+    $("#lecture-signup-wrapper").toggleClass('iframe-opened').removeClass('special-emphasis');    
     $('#email-signup').siblings().toggleClass('invisible');
     $('#email-signup').toggleClass('iframe-active');
     $('#isotope-search').toggleClass('invisible');
+    
   },
  
+  addSignupFormEmphasis: function() {
+    this.makeSignupFormFrameVisible();
+    $("#lecture-signup-wrapper").addClass('special-emphasis');    
+  }
 
 
 });
