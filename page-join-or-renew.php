@@ -117,7 +117,7 @@ Need another reason to join? Sign up by Oct. 31 and receive a free thank-you gif
      } elseif (array_key_exists("RENEW", $parentPageParams)) {
        ?>
       <h4><strong>Now is the best time to renew</strong></h4>
-<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2015/01/01112450/UWAA-Keychain_175.jpg" alt="UWAA keychain on purple background" width="175" height="175" /><strong>Welcome back!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.
+<strong>Welcome back!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.
 <h3>Be connected. Be proud. Be a member.</h3>
        <?php
      } else {
