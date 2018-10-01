@@ -72,7 +72,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
       $parentPageParams["JOIN"] = "TRUE";
      }
       
-
+    
           
 
 ?>
@@ -97,10 +97,41 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
       <div class="uw-body-copy">    
 
 
+      
+
+
 
 
 
  <?php
+
+
+    if(array_key_exists("JOIN", $parentPageParams)) {
+      ?>
+     <h4><strong>Now is the best time to join</strong></h4>
+<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2015/01/01112450/UWAA-Keychain_175.jpg" alt="UWAA keychain on purple background" width="175" height="175" /><strong>It’s the fall membership drive!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match new and renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.
+
+Need another reason to join? Sign up by Oct. 31 and receive a free thank-you gift: a handy UWAA bottle opener keychain. Perfect for tailgates, picnics, or any time you’re thirsty.
+<h3>Be connected. Be proud. Be a member.</h3>
+<?php
+     } elseif (array_key_exists("RENEW", $parentPageParams)) {
+       ?>
+      <h4><strong>Now is the best time to renew</strong></h4>
+<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2015/01/01112450/UWAA-Keychain_175.jpg" alt="UWAA keychain on purple background" width="175" height="175" /><strong>Welcome back!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.
+<h3>Be connected. Be proud. Be a member.</h3>
+       <?php
+     } else {
+      ?>
+<h4><strong>Now is the best time to join</strong></h4>
+<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2015/01/01112450/UWAA-Keychain_175.jpg" alt="UWAA keychain on purple background" width="175" height="175" /><strong>It’s the fall membership drive!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match new member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.
+
+Need another reason to join? Sign up by Oct. 31 and receive a free thank-you gift: a handy UWAA bottle opener keychain. Perfect for tailgates, picnics, or any time you’re thirsty.
+<h3>Be connected. Be proud. Be a member.</h3>
+      <?php
+     }
+
+
+
           // Start the Loop.
           while ( have_posts() ) : the_post();
 
@@ -109,7 +140,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
-             get_template_part( 'content', 'page' );
+            //  get_template_part( 'content', 'page' );
 
 
           endwhile;
