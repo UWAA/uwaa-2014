@@ -207,8 +207,7 @@ if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfi
         
         echo '<strong>Name:</strong> ' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
         echo '<strong>Member Number:</strong> ' . $details['memberID'].'</br>';
-        echo '<strong>Membership Type:</strong> ' . $details['membershipType'] . '</br>';
-        echo '<strong>Status:</strong> ' . $details['memberStatus'].'</br>';
+        echo '<strong>Membership Type:</strong> ' . $details['membershipType'] . '</br>';        
         if ($details['membershipType'] == 'Annual Member') {
             echo '<strong>Expires:</strong> ' . $details['membershipExpiry'].'</br>';
         }
