@@ -294,7 +294,7 @@ public function addGetPermalinkButton($arg, $post_id) {
 
     public function hidePage()
     {
-        if(is_page('dawgdashmember')) {
+        if(is_page('dawgdashmemberpage')) {
             echo '<meta name="robots" content="noindex,nofollow">';
         }
 
