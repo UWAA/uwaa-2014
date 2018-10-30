@@ -29,7 +29,8 @@ class Utilities
         add_action( 'parse_request',array($this, 'redirectDirectAccessToMembergrams') );
         add_filter('get_image_tag_class', array($this, 'add_image_class'));
         add_action('after_setup_theme', array($this, 'attachment_default_settings'));
-        add_filter('the_permalink_rss', array($this, 'overwriteCTAButtonLink')); 
+        add_filter('the_permalink_rss', array($this, 'overwriteCTAButtonLink'));
+        add_action('wp_head', array($this, 'hidePage'), 4);
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -73,9 +74,12 @@ class Utilities
             )
         );
         
-        $query->set( 'tax_query', $taxquery );        
+        $query->set( 'tax_query', $taxquery );
+        $query->set('post__not_in', array(32169, 29667));  
         return $query;
         }
+
+    
     }
 
 
@@ -288,6 +292,13 @@ public function addGetPermalinkButton($arg, $post_id) {
         return $vars;
     }
 
+    public function hidePage()
+    {
+        if(is_page('dawgdashmember')) {
+            echo '<meta name="robots" content="noindex,nofollow">';
+        }
+
+    }
 
 
     public function redirectMembergramDirectQueries()
