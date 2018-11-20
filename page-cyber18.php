@@ -2,7 +2,7 @@
 
 // TODO - Put this in utilities
 // TODO - Surface this to editors
-$deadline = new DateTime("2018-11-27 11:59:59");
+$deadline = new DateTime("2018-11-26 11:59:59");
 $currentTime = new DateTime();
 
 
@@ -11,6 +11,7 @@ if ($currentTime > $deadline)
     header("Location: ". get_site_url() ."", FALSE, 301);
          die(); 
 }
+
 
 
 $UWAA->Memberchecker->getSession();
@@ -35,7 +36,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
     <div class="col-md-12 uw-content" role='main'>
 
       <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
-      <h2 class="uw-site-title">UWAA Membership</h2>
+      <h2 class="uw-site-title">Cyber Member Monday</h2>
 
       <div class="row uwaa-home-branding-row">
     
@@ -78,7 +79,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";        
 
-        $childPageParams['MEMBCODES'] = "CMJ,CMS";	   
+        $childPageParams['MEMBCODES'] = "CMS";	   
 
 	   if (count($parentPageParams > 0 ) ) {           
 
