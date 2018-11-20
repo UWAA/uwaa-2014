@@ -79,7 +79,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";        
 
-        $childPageParams['MEMBCODES'] = "CMS";	   
+        $childPageParams['MEMBCODES'] = "CMS,CMJ";	   
 
 	   if (count($parentPageParams > 0 ) ) {           
 
