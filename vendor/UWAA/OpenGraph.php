@@ -30,6 +30,19 @@ class OpenGraph
             return;
         }
 
+        if(get_the_title($post->ID) == "Join the UWAA today") {
+
+        $speciaOGTitle = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_title', true));
+        $speciaOGDescription = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_description', true));
+
+
+        ?>
+            <meta property="og:title" content="<?php echo $speciaOGTitle ?>"/>
+            <meta property="og:description" content="<?php echo $speciaOGDescription ?>"/>
+            <?php
+            return;
+        }
+
  
     if(is_single()) {
 
