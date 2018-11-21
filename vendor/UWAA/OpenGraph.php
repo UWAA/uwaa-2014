@@ -37,6 +37,7 @@ class OpenGraph
 
 
         ?>
+            <meta property="og:type" content="article" />
             <meta property="og:title" content="<?php echo $speciaOGTitle ?>"/>
             <meta property="og:description" content="<?php echo $speciaOGDescription ?>"/>
             <?php
