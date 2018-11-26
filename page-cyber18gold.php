@@ -2,8 +2,8 @@
 
 // TODO - Put this in utilities
 // TODO - Surface this to editors
-$deadline = new DateTime("2018-11-27 11:59:59");
-$currentTime = new DateTime();
+$deadline = new DateTime("2018-11-26 23:59:59", new DateTimeZone('America/Los_Angeles'));
+$currentTime = new DateTime('',new DateTimeZone('America/Los_Angeles'));
 
 
 if ($currentTime > $deadline) 
