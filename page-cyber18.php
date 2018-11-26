@@ -2,7 +2,7 @@
 
 // TODO - Put this in utilities
 // TODO - Surface this to editors
-$deadline = new DateTime("2018-11-26 11:59:59");
+$deadline = new DateTime("2018-11-27 11:59:59");
 $currentTime = new DateTime();
 
 
