@@ -11,9 +11,14 @@ wp_enqueue_script(array('isotopeInit','subman'));
 
     <div class="col-md-12 uw-content" role='main'>
 
+    <div class="col-md-12" style="margin-bottom:20px;background-color:#e8e3d3;">
+      <h3 style="color:#4b2e83">Traffic Alert: SR 99 Closure</h3>
+      <p>After January 11, the SR99 viaduct closure will disrupt local and regional traffic patterns. We advise you to plan your trip to UW accordingly during this three-week period.</p>
+     </div>
+
     <h2 class="uw-site-title">Events</h2>
     
-     <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
+     <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>     
 
       <div class="uw-body-copy">
 
