@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.11.7
+ Version: 1.12.0
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -8120,6 +8120,9 @@ div.map-logo.new-orleans {
 }
 div.map-logo.minneapolis {
   background-position: 50% -1517.5px;
+}
+div.map-logo.michigan {
+  background-position: 50% -1583.5px;
 }
 .leaflet-popup .leaflet-popup-content {
   padding: 10px 5px;
