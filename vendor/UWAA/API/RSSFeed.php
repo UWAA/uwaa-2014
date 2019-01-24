@@ -37,8 +37,12 @@
                       'mb_event_location',
                       'mb_80_character_excerpt',
                       'mb_thumbnail_subtitle',
+                      'mb_cvent_event_id'
                       ),
-                  'hasTaxonomy' => false,
+                  'hasTaxonomy' => true,
+                  'taxonomyName' => array(
+                      'events'
+                  ),
                   'hasGeotag' => true
               );
 
@@ -94,7 +98,7 @@
 
           public function addFeedAugmentations() {
               $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
-              $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], null , $this->eventFields['hasGeotag'] );
+              $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], $this->eventFields['taxonomyName'] , $this->eventFields['hasGeotag'] );
               $this->augmentFeed('post', $this->newsFields['fields']);
               $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);
               $this->augmentFeed('membergrams', $this->membergramFields['fields']);
@@ -238,7 +242,7 @@
                   return;
               }
 
-              if(is_array($geoTags) && count($geoTags == 1)) {
+              if(is_array($geoTags) && (count($geoTags) == 1)) {
                   $imageURL = "http://depts.washington.edu/alumni/appfeed/images/regionallogos/" . $geoTags[0]->slug . "-app-thumbnail.png";
                   $imageTitle = ucfirst($geoTags[0]->name) . " Huskies Logo";
 

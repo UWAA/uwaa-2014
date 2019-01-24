@@ -497,8 +497,12 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
                         ),
-
-
+                    array(
+                        'name' => 'CVENT Event Code',
+                        'id'=> 'cvent_event_id',
+                        'type'=> 'text',
+                        'desc'=> 'If the event is being managed by CVENT, put the "Event Code" here.'
+                        )
                     )
             )
             );
