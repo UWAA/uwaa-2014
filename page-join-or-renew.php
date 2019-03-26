@@ -101,8 +101,52 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
 
 // First, if we're not in drive, just do the WordPress content
-
 $currentMonth = date('m');
+
+$currentDate = date('m/d');
+
+
+//Set up a directive to automatically revert to normal store operations after a special period is over.
+$isSpecialDriveActive = false;
+
+
+// GivingDay Direct Appeal
+if (array_key_exists("APPEALCODE", $parentPageParams) ) {
+  if($parentPageParams["APPEALCODE"] == 'GD2019' && $currentDate == "03/26"){
+    $isSpecialDriveActive = true;
+    ?>
+    <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 inline" />
+    <h1>Choose your membership option:</h1>
+    <p>    
+      Husky Giving Day on April 4 is the day when the entire UW community comes together to support the people, programs and causes they care about most.
+    </p>
+    <p>
+      Want to pay it forward? Double your impact as part of our Husky Giving Day deal. Become a UWAA member by April 4, and the UWAA Board of Trustees will match it with a gift membership to a 2019 grad.
+    </p>
+
+    <?php
+  }
+
+}
+
+
+
+//GivingDay Browse-to (no appeal)
+if($currentDate == "03/26" && !array_key_exists("APPEALCODE", $parentPageParams) ) {
+  $isSpecialDriveActive = true;
+  ?>
+<img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 inline" />
+  <h1>Choose your membership option:</h1>
+
+  <p>
+    Today is Husky Giving Day when the entire UW community comes together to support the people, programs and causes they care about most.
+  </p>
+  <p>
+    Want to pay it forward? Double your impact as part of our Husky Giving Day deal. Join or renew today, and the UWAA Board of Trustees will match it with a gift membership to a 2019 grad.
+  </p>
+  <?php
+
+}
 
 
 if ($currentMonth == '10') {
@@ -143,7 +187,10 @@ Need another reason to join? Sign up by Oct. 31 and receive a free thank-you gif
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
+            if (!$isSpecialDriveActive) {
              get_template_part( 'content', 'page' );
+            }
+             
 
 
           endwhile;
@@ -166,7 +213,7 @@ Need another reason to join? Sign up by Oct. 31 and receive a free thank-you gif
 
 	   
 
-	   if (count($parentPageParams > 0)) {
+	   if (count($parentPageParams) > 0) {
 
            
 
