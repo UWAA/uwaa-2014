@@ -112,10 +112,10 @@ $isSpecialDriveActive = false;
 
 // GivingDay Direct Appeal
 if (array_key_exists("APPEALCODE", $parentPageParams) ) {
-  if($parentPageParams["APPEALCODE"] == 'GD2019' && $currentDate == "03/26"){
+  if($parentPageParams["APPEALCODE"] == 'A19G1' ){
     $isSpecialDriveActive = true;
     ?>
-    <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 inline" />
+    <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 responsive-center" />
     <h1>Choose your membership option:</h1>
     <p>    
       Husky Giving Day on April 4 is the day when the entire UW community comes together to support the people, programs and causes they care about most.
@@ -132,10 +132,10 @@ if (array_key_exists("APPEALCODE", $parentPageParams) ) {
 
 
 //GivingDay Browse-to (no appeal)
-if($currentDate == "03/26" && !array_key_exists("APPEALCODE", $parentPageParams) ) {
+if($currentDate == "03/26" ) {
   $isSpecialDriveActive = true;
   ?>
-<img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 inline" />
+<img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 responsive-center" />
   <h1>Choose your membership option:</h1>
 
   <p>
