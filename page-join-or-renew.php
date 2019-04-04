@@ -113,7 +113,7 @@ $isSpecialDriveActive = false;
 // GivingDay Direct Appeal
 if (array_key_exists("APPEALCODE", $parentPageParams) ) {
   $givingDayAppealCodes = array('A19G1', 'A19G2', 'A19G3');
-  if(in_array($parentPageParams["APPEALCODE"], $givingDayAppealCodes) ){
+  if(in_array($parentPageParams["APPEALCODE"], $givingDayAppealCodes) && $currentDate != "04/04" ){
     $isSpecialDriveActive = true;
     ?>
     <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 responsive-center" />
