@@ -21,6 +21,7 @@ class MetaBoxes
         $this->add_post_custom_actions();
         $this->add_special_opengraph_tags();
         $this->add_membergram_meta();
+        $this->add_page_level_redirect();
 
         add_action('admin_menu', array($this, 'removeUnusedMetaBoxes'), 0);
         add_action('edit_form_after_title', array($this, 'moveEditorBox'), 0);
@@ -512,7 +513,7 @@ class MetaBoxes
         protected function add_header_text_toggle() {
             new \UWAA\CustomPostData('header_toggle', array(
                 'title' => 'Event Post Information',
-                'pages' => array('events', 'tours', 'post'),  //add events, regional pages as they are ready
+                'pages' => array('events', 'tours', 'post', 'page'),  //add events, regional pages as they are ready
                 'context' => 'normal',
                 'priority' => 'high',
                 'fields' => array(
@@ -779,6 +780,35 @@ class MetaBoxes
 
               }
           }
+
+          protected function add_page_level_redirect() {
+            new \UWAA\CustomPostData('page_redirect', array(
+                'title' => 'Page Level redirect',
+                'pages' => array('page'),  //add events, regional pages as they are ready
+                'context' => 'normal',
+                'priority' => 'high',
+                'fields' => array(
+                    array(
+                          'name' => 'Redirect Slug',
+                          'id'=> 'redirect_slug',
+                          'type'=> 'text',
+                          'desc'=> "Enter the slug of the internal redirect you wish this page to hit.  Use this to create items in sidebar page navigation menus."
+                          ),
+                   array(
+                        'name' => 'Header Text Color',
+                        'id'=> 'is_page_redirecting',
+                        'type'=> 'select',
+                        'options' => array(
+                                false => 'No, this page will not redirect.',
+                                true => 'Yes, force this page to redirect immediately.'
+                                ),
+                        'desc'=> 'Choose if this page should immediately go somewhere else.'
+                        ),
+                    )
+            )
+            );
+
+        }
 
 
 

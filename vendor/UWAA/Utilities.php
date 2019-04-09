@@ -31,6 +31,8 @@ class Utilities
         add_action('after_setup_theme', array($this, 'attachment_default_settings'));
         add_filter('the_permalink_rss', array($this, 'overwriteCTAButtonLink'));
         add_action('wp_head', array($this, 'hidePage'), 4);
+
+        $this->addExcerptsToPosts();
     }   
 
     // https://tommcfarlin.com/get-permalink-by-slug/
@@ -360,6 +362,26 @@ public function overwriteCTAButtonLink($post_permalink) {
             return $post_permalink;
         }
     }
+
+    public function pageLevelRedirect() {
+        if (!is_page() ) {
+            return;
+        }
+    $isRedirecting = get_post_meta(get_the_id() , 'mb_is_page_redirecting', true);
+    $redirectTarget = get_post_meta(get_the_id() , 'mb_redirect_slug', true);
+            if ($isRedirecting)
+                  {
+            wp_redirect( home_url( '/' . $redirectTarget , '301' ) );
+            exit();
+        } else {
+            return;
+        }
+    }
+
+    public function addExcerptsToPosts() {
+        add_post_type_support( 'page', 'excerpt' );
+    }
+    
 
    
 

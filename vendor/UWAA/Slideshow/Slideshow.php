@@ -23,7 +23,8 @@ protected function getArgs() {
         'tours',
         'events',
         'benefits',
-        'post'
+        'post',
+        'page'
         ),
       'posts_per_page' => 5, 
       

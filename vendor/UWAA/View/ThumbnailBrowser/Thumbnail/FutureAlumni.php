@@ -36,7 +36,8 @@ class FutureAlumni extends ThumbnailBrowser implements Thumbnail
         'tours',
         'events',
         'benefits',
-        'post'
+        'post',
+        'page'
         ),
       'posts_per_page' => 5, 
       'orderby' => 'rand',      
