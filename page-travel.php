@@ -1,14 +1,14 @@
 <?php 
 get_header(); 
 wp_enqueue_script(array('toursMap', 'superHero'));
-wp_enqueue_style('mapbox');
+// wp_enqueue_style('mapbox'); //Map
 
 
-wp_localize_script( 'mapbox', 'homeLink', 
-  array( 
-    'endpointURL' => apply_filters('remove_cms', home_url('/api/tours/geojson'))  
-    ) 
-  );
+// wp_localize_script( 'mapbox', 'homeLink',  //Map
+//   array( 
+//     'endpointURL' => apply_filters('remove_cms', home_url('/api/tours/geojson'))  
+//     ) 
+//   );
 
 
 ?>
@@ -58,7 +58,7 @@ endif;
 
           endwhile;
 
-          get_template_part( 'partials/map' );
+          // get_template_part( 'partials/map' );  //Map
         ?>
          
         
