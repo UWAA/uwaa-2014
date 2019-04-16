@@ -11252,6 +11252,9 @@ Typography
 .leaflet-popup-content {
   font-family: 'Open Sans';
 }
+.lower-row {
+  margin-top: 20px;
+}
 .wp-caption.alignleft {
   margin: 5px 14px 8px 0px;
 }

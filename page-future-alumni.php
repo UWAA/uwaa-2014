@@ -2,6 +2,7 @@
 get_header();
 wp_enqueue_script(array('superHero'));
 use \UWAA\View\ThumbnailBrowser\Thumbnail\FutureAlumni;
+use \UWAA\View\ThumbnailBrowser\Thumbnail\FutureAlumniLower;
 ?>
 
 <div id="spacer"></div>
@@ -72,6 +73,18 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\FutureAlumni;
       $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 
       $thumbnailRow->makeThumbnails(new FutureAlumni);
+
+      ?>
+
+  </div>
+
+  <div class="row 5-column lower-row">
+       <?php
+      
+
+      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+      $thumbnailRow->makeThumbnails(new FutureAlumniLower);
 
       ?>
 
