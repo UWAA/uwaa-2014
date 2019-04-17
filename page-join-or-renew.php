@@ -110,6 +110,23 @@ $currentDate = date('m/d');
 $isSpecialDriveActive = false;
 
 
+if (array_key_exists("APPEALCODE", $parentPageParams) ) {
+  $newGradParentMailer = array('A19GM1');
+  if(in_array($parentPageParams["APPEALCODE"], $newGradParentMailer)  ){
+    $isSpecialDriveActive = true;
+    ?>    
+    <h1>Get your grad the gift of a lifetime!</h1>
+    <p>    
+      By giving the gift of UWAA membership, you are giving access to the rich variety of alumni programs, wide array of benefits and continued campus connections that will be there for your grad well into the future. 
+    </p>
+    
+
+    <?php
+  }
+
+}
+
+
 // GivingDay Direct Appeal
 if (array_key_exists("APPEALCODE", $parentPageParams) ) {
   $givingDayAppealCodes = array('A19G1', 'A19G2', 'A19G3');
