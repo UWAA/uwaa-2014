@@ -236,6 +236,14 @@ class Scripts
         'in_footer' => true,
         'admin'   => false
       ),
+      'marketoForms' => array (
+        'id'      => 'marketoForms',
+        'url'     => '//app-sj19.marketo.com/js/forms2/js/forms2.min.js',
+        'deps'    => array(),
+        'version' => '1.0',
+        'in_footer' => false,
+        'admin'   => false
+      )
 
       
 
