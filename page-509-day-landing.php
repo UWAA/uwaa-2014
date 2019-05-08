@@ -145,9 +145,11 @@ if (array_key_exists('SUCCESSMESSAGEONLY', $parentPageParams) && $parentPagePara
 
         <div style="margin-top:40px;">
 
-        <?php if ($successMessageOnly || $oneClickSubmission) {
-          echo "Thank you for being a 509 all star";
-        } else {
+        <?php if ($oneClickSubmission) {
+          echo "We have your address on file. Happy 509 Day!";
+        } elseif ($successMessageOnly) {
+          echo "We have received your address. Happy 509 Day!";
+        }{
 
         ?>
         <script src="//app-sj19.marketo.com/js/forms2/js/forms2.min.js"></script>
