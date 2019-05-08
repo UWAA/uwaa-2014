@@ -149,7 +149,7 @@ if (array_key_exists('SUCCESSMESSAGEONLY', $parentPageParams) && $parentPagePara
           echo "We have your address on file. Happy 509 Day!";
         } elseif ($successMessageOnly) {
           echo "We have received your address. Happy 509 Day!";
-        }{
+        } else {
 
         ?>
         <script src="//app-sj19.marketo.com/js/forms2/js/forms2.min.js"></script>
