@@ -143,9 +143,7 @@ if (array_key_exists('SUCCESSMESSAGEONLY', $parentPageParams) && $parentPagePara
         ?>
 
 
-
         
-        </div>
       </div>
       </div>
     </div>
