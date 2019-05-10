@@ -143,29 +143,7 @@ if (array_key_exists('SUCCESSMESSAGEONLY', $parentPageParams) && $parentPagePara
         ?>
 
 
-        <div style="margin-top:40px;">
 
-        <?php if ($oneClickSubmission) {
-          echo "We have your address on file. Happy 509 Day!";
-        } elseif ($successMessageOnly) {
-          echo "We have received your address. Happy 509 Day!";
-        } else {
-
-        ?>
-        <script src="//app-sj19.marketo.com/js/forms2/js/forms2.min.js"></script>
-<form id="mktoForm_1057">
-<noscript>Please make sure JavaScript is enabled to fill out the sign up form.</noscript>
-</form>
-<script>
-if (typeof MktoForms2 === 'undefined') {
-  console.log('no bueno');
-  document.getElementById('mktoForm_1057').textContent = 'Your browser settings are preventing our form from being displayed.';
-} else {
-  MktoForms2.loadForm("//app-sj19.marketo.com", "131-AQO-225", 1057);
-}
-
-</script>
-        <?php }  //end else ?>
         
         </div>
       </div>
