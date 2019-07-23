@@ -31,6 +31,7 @@ class UI
         new Shortcodes\AddDawgDashMap;
         new Shortcodes\ActivityLevel;
         new Shortcodes\ViewingParty;
+        new Shortcodes\SloganSurvey;
 
     }
 
