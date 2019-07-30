@@ -13,14 +13,14 @@ class SidebarPullQuote extends \WP_Widget
     const DESC  = 'Display a pull quote in the sidebar on posts where that information is available.';
     // private $content;
 
-  //Data from the post object to be used in our promoted post.  
+  //Data from the post object to be used in our promoted post.
     private $quoteText;
-    private $quoteAuthor;   
+    private $quoteAuthor;
 
 
     function __construct()
     {
-      parent::WP_Widget(
+      parent::__construct(
           $id      = self::ID,
           $name    = self::TITLE,
           $options = array(
@@ -29,17 +29,17 @@ class SidebarPullQuote extends \WP_Widget
             )
           );
       $this->UI = new \UWAA\View\UI;
-      
+
   }
 
-   
 
-  private function extractPostInformation() 
+
+  private function extractPostInformation()
   {
-        $currentPostID = get_the_ID();    
+        $currentPostID = get_the_ID();
         $this->quoteText = esc_html(get_post_meta($currentPostID, 'mb_pull-quote-text', true));
-        $this->quoteAuthor = esc_html(get_post_meta($currentPostID, 'mb_pull-quote-attribution', true));     
-       
+        $this->quoteAuthor = esc_html(get_post_meta($currentPostID, 'mb_pull-quote-attribution', true));
+
   }
 
   private function isBlockQuotePresent()
@@ -51,23 +51,23 @@ class SidebarPullQuote extends \WP_Widget
 
   }
 
-  
+
 
   public function widget( $args, $instance )
   {
     $this->extractPostInformation();
-     if ($this->isBlockQuotePresent()) 
+     if ($this->isBlockQuotePresent())
      {
         echo'<div class="'. $this::ID . ' widget">';
 
         $content=<<<CONTENT
    <div class="quote-text">$this->quoteText</div>
    <div class="quote-author">$this->quoteAuthor</div>
-   
+
 CONTENT;
         echo $content;
         echo '</div>';
- 
+
   }
 }
 

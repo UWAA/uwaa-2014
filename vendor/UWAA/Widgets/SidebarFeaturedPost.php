@@ -2,8 +2,8 @@
 
 /**
  * UWAA Featured Tour Sidebar Widget
- * Currently a placeholder.  This will be updated to pull in featured image and content from 
- * Other sections of the site.  
+ * Currently a placeholder.  This will be updated to pull in featured image and content from
+ * Other sections of the site.
  */
 
 
@@ -15,7 +15,7 @@ class SidebarFeaturedPost extends \WP_Widget
   const DESC  = 'Display featured posts in the the sidebar.';
   private $content;
 
-  //Data from the post object to be used in our promoted post.  
+  //Data from the post object to be used in our promoted post.
   private $postTitle;
   private $postThumbnailUrl;
   private $postCalloutText;
@@ -29,11 +29,11 @@ class SidebarFeaturedPost extends \WP_Widget
   private $postParent;
   private $hasResults;
   private $postThumbnailAltText;
-  
+
 
   function __construct()
   {
-      parent::WP_Widget(
+      parent::__construct(
       $id      = self::ID,
       $name    = self::TITLE,
       $options = array(
@@ -42,15 +42,15 @@ class SidebarFeaturedPost extends \WP_Widget
       )
     );
       $this->UI = new \UWAA\View\UI;
-      
+
   }
 
-  
-  private function setCurrentPostInformation() 
+
+  private function setCurrentPostInformation()
   {
     //Parse our WordPress template formatting to get another potential match for content.
-    
-     
+
+
 
     $this->currentPostInfo = array(
       'id' => get_the_ID(),
@@ -59,14 +59,14 @@ class SidebarFeaturedPost extends \WP_Widget
       'templateType' => ''
       );
 
-    if (is_page_template()) 
+    if (is_page_template())
     {
     $rawSlug = preg_match('/(?<=\/).*?(?=-)/', get_page_template_slug(), $matchedSlug);
-    
+
     $this->currentPostInfo['templateType'] = $matchedSlug[0] . "-section-sidebar";
-      
-    }  
-  
+
+    }
+
   }
 
    private function isCustomPostType()
@@ -74,15 +74,15 @@ class SidebarFeaturedPost extends \WP_Widget
     $postType = get_post_type($this->currentPostInfo['id']);
 
     switch($postType) {
-      
+
       case 'travel':
         return 'travel-section-sidebar';
         break;
-      
+
       case 'benefits':
         return 'membership-section-sidebar';
         break;
-      
+
       case 'chapters':
         return 'communities-section-sidebar';
         break;
@@ -110,33 +110,33 @@ class SidebarFeaturedPost extends \WP_Widget
     if ( !empty( $terms ) && !is_wp_error( $terms ) ) :
          foreach ( $terms as $term ) {
               $this->siteContentPromotionDestinations[] = strtolower($term->slug);
-          }     
-    endif; 
+          }
+    endif;
 
 
   }
 
-  private function getPromotedContent() {    
-    
+  private function getPromotedContent() {
+
     $postTitle = strtolower($this->currentPostInfo['slug']);
     $this->buildContentPromotionList();
-    $thisPostsContentSection = $this->isCustomPostType();    
+    $thisPostsContentSection = $this->isCustomPostType();
 
-    //See if the current post is in the list of potential places we are sending content to.    
-    
+    //See if the current post is in the list of potential places we are sending content to.
+
     if (in_array($postTitle, $this->siteContentPromotionDestinations)) {
       // echo "Using title match"; //debug
       return $postTitle;
-      
+
 
     } elseif (in_array(strtolower($thisPostsContentSection), $this->siteContentPromotionDestinations)) {
       // echo "Using post-type match";
       return $thisPostsContentSection;
-    
+
     } elseif (in_array(strtolower($this->currentPostInfo['templateType']) , $this->siteContentPromotionDestinations)) {
       // echo "Using parent match";  //debug
       return $this->currentPostInfo['templateType'];
-    } 
+    }
 
     //If the post is not explicitly targeted, check for content going toward it's section, otherwise find sitewide content.
     return 'sitewide';
@@ -146,7 +146,7 @@ class SidebarFeaturedPost extends \WP_Widget
   private function getPostsToDisplay() {
 
     $promotedContentSource = $this->getPromotedContent();
-    
+
     $args = array (
       // 'post_type' => array(
       //   'tours',
@@ -155,10 +155,10 @@ class SidebarFeaturedPost extends \WP_Widget
       //   'post'
       //   ),
       'post_type' => 'any',
-      'posts_per_page' => 1, 
+      'posts_per_page' => 1,
       'orderby' => 'rand',
       // 'tag' => 'Home'
-      
+
       'tax_query' => array(
         // 'relation' => 'AND',
         // array(
@@ -172,11 +172,11 @@ class SidebarFeaturedPost extends \WP_Widget
           'terms'    => array( $promotedContentSource)
 
           )
-      ) //End tax query    
+      ) //End tax query
       );
 
     $query = new \WP_Query($args);
-    
+
     if ($query) {
 
       $this->extractPostInformation($query);
@@ -184,9 +184,9 @@ class SidebarFeaturedPost extends \WP_Widget
 
 
 
-    
 
-  
+
+
   }
 
   private function shortenExcerpt($string, $excerptLength) {
@@ -198,7 +198,7 @@ class SidebarFeaturedPost extends \WP_Widget
 
 
 
-  private function extractPostInformation($query) 
+  private function extractPostInformation($query)
   {
 
     if ($query->have_posts()):
@@ -214,14 +214,14 @@ class SidebarFeaturedPost extends \WP_Widget
         $this->postSidebarImage = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'post-thumbnail');
         $this->postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
         $this->postThumbnailAltText = $this->UI->returnImageAltTag(get_the_ID());
-        
+
     endwhile;
 
     endif;
 
 
 
-    wp_reset_postdata();    
+    wp_reset_postdata();
   }
 
    private function renderCallout(){
@@ -242,28 +242,28 @@ class SidebarFeaturedPost extends \WP_Widget
     // extract( $args );
     // extract( $instance );
     // TODO This will be built with a an argument passed from the widget backend perhaps.
-   
+
 //Build this out with real data from the tours, and bind templating so that it only pull what is needed.  Consider putting that code elsewhere.
     //DI for the needed variables....
-  
+
    echo'<div class="uwaa-featured-tour widget">';
-   
-                  
+
+
    // $this->content .= get_template_part( 'partials/featured-sidebar-post.php' );
-   
-   // 
-   
+
+   //
+
 
 echo <<<CONTENT
    <div class="post-thumbnail-slide">
    <a href="$this->postURL">
-    <div class="image-frame">   
+    <div class="image-frame">
    <img src="$this->postSidebarImage" alt="$this->postThumbnailAltText" />
    $callout
    </div>
    <div class="copy">
    <h6 class="subtitle">$this->postSubtitle</h6>
-    <h4 class="title">$this->postTitle</h4>    
+    <h4 class="title">$this->postTitle</h4>
     <p>$this->postExcerpt</p>
    </div>
    </a>
@@ -278,7 +278,7 @@ CONTENT;
 }
 
 
- 
+
 }
 
 
