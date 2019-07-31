@@ -21,7 +21,7 @@
           function __construct()
           {
 
-              parent::WP_Widget(
+              parent::__construct(
                   $id      = self::ID,
                   $name    = self::TITLE,
                   $options = array(

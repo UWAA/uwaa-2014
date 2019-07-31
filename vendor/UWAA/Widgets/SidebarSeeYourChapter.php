@@ -13,14 +13,14 @@ class SidebarSeeYourChapter extends \WP_Widget
     const DESC  = 'Adds the "Don\'t See your chapter, box for communities pages.';
     // private $content;
 
-  //Data from the post object to be used in our promoted post.  
+  //Data from the post object to be used in our promoted post.
     private $quoteText;
-    private $quoteAuthor;   
+    private $quoteAuthor;
 
 
     function __construct()
     {
-      parent::WP_Widget(
+      parent::__construct(
           $id      = self::ID,
           $name    = self::TITLE,
           $options = array(
@@ -29,29 +29,29 @@ class SidebarSeeYourChapter extends \WP_Widget
             )
           );
       $this->UI = new \UWAA\View\UI;
-      
+
   }
 
-   
 
- 
 
-  
+
+
+
 
   public function widget($args, $instance )
   {
-       
+
 
         $content=<<<CONTENT
 <div id="no-chapter-widget" class="widget widget_text">
   <h2 class="widgettitle">Don't see your community?</h2>
   <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="mailto:alumni2@uw.edu&subject=Online%20Chapter%20Inquiry">Let Us Know!</a></div>
 </div>
-   
+
 CONTENT;
         echo $content;
- 
- 
+
+
   }
 
 

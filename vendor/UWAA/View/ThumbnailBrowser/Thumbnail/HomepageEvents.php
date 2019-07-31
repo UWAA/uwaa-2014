@@ -4,30 +4,30 @@ use \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 use \UWAA\View\UI;
 
 
-class HomepageEvents extends ThumbnailBrowser implements Thumbnail 
-{   
-    
+class HomepageEvents extends ThumbnailBrowser implements Thumbnail
+{
+
     protected $args;
     private $UI;
 
     //Properties Used to Build The Thumbnail For the Homepage
     protected $currentPostID;
-    protected $postTitle;    
+    protected $postTitle;
     protected $postCalloutText;
     protected $postDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
     protected $postExcerpt;
-    protected $postImageAltText;    
+    protected $postImageAltText;
     protected $liveURL;
 
-      
+
 
     public function __construct()
     {
         $this->args = $this->setArguments();
         $this->UI = new UI;
-        
+
     }
 
   private function setArguments()
@@ -39,10 +39,10 @@ class HomepageEvents extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 5, 
+      'posts_per_page' => 5,
       'orderby' => 'rand',
       // 'tag' => 'Home'
-      
+
       'tax_query' => array(
         // 'relation' => 'AND',
         // array(
@@ -56,15 +56,15 @@ class HomepageEvents extends ThumbnailBrowser implements Thumbnail
           'terms'    => array( 'home-events')
 
           )
-      ) //End tax query    
+      ) //End tax query
       );
 
     return $args;
-  }  
+  }
 
-   
 
-  public function extractPostInformation($query) 
+
+  public function extractPostInformation($query)
   {
         while ( $query->have_posts() ) : $query->the_post();
       if ($this->currentPostID == get_the_ID() ) {
@@ -72,9 +72,9 @@ class HomepageEvents extends ThumbnailBrowser implements Thumbnail
       }
 
 
-        $this->postTitle = esc_html(get_the_title(get_the_ID()));        
+        $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');    
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
@@ -90,11 +90,11 @@ class HomepageEvents extends ThumbnailBrowser implements Thumbnail
 
     endwhile;
 
-    wp_reset_postdata();    
+    wp_reset_postdata();
 
   }
 
- 
+
 
 
 public function buildTemplate() {
@@ -103,6 +103,7 @@ $callout = $this->renderCallout();
 $image = $this->renderImage();
 $date = $this->renderDate();
 $partnerPost = $this->getPartnerEventClass(get_the_ID());
+$link = $this->liveURL;
 $template = <<<TEMPLATE
 <div class="featured-post five-column $partnerPost">
 <a href="{$this->liveURL}">
@@ -112,7 +113,7 @@ $template = <<<TEMPLATE
     </div>
   <div class="copy">
  <h6 class="subtitle">{$this->postSubtitle}</h6>
- <h4 class="title">{$this->postTitle}</h4> 
+ <h4 class="title">{$this->postTitle}</h4>
   $date
  <p class="excerpt">{$this->postExcerpt}</p>
  <a class="link-arrow" href="$link">
@@ -120,7 +121,7 @@ $template = <<<TEMPLATE
     </a>
  </div>
  </a>
-  
+
 </div>
 TEMPLATE;
 

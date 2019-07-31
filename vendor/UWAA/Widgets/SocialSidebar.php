@@ -19,13 +19,13 @@ class SocialSidebar extends \WP_Widget
     private $email;
     private $linkedin;
 
-    
-   
+
+
 
 
     function __construct()
     {
-      parent::WP_Widget(
+      parent::__construct(
           $id      = self::ID,
           $name    = self::TITLE,
           $options = array(
@@ -45,18 +45,18 @@ class SocialSidebar extends \WP_Widget
     $link = urlencode(apply_filters('remove_cms' , get_permalink()));
 
 
-    
+
       $this->linkedin = 'http://www.linkedin.com/shareArticle?url='. $link .'';
       $this->facebook = 'http://www.facebook.com/sharer/sharer.php?u='. $link .'';
       $this->twitter = 'http://twitter.com/share?url='. $link .' &text= '. $link .' ';
       $this->email = 'mailto:?subject='.$this->title.'&body='. $link .' ';
-      
+
   }
 
 
 
 
-  public function widget($args, $instance) 
+  public function widget($args, $instance)
   {
 
     $this->setSharingLinks();
@@ -79,7 +79,7 @@ CONTENT;
 echo $content;
 
 
-    
+
 
   }
 

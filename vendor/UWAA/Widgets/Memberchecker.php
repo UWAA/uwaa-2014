@@ -3,7 +3,7 @@
 /**
  * UWAA Memberchecker  @TODO
  * Places a Login form for showing content only to UWAA Members.
- * To Be Implemented after launch.  
+ * To Be Implemented after launch.
  */
 
 use Symfony\Component\HttpFoundation\Session\Session;
@@ -20,7 +20,7 @@ class MemberChecker extends \WP_Widget
 
 function __construct()
   {
-      parent::WP_Widget(
+      parent::__construct(
       $id      = self::ID,
       $name    = self::TITLE,
       $options = array(
@@ -29,7 +29,7 @@ function __construct()
       )
     );
       $this->UI = new \UWAA\View\UI;
-      
+
   }
 
 
