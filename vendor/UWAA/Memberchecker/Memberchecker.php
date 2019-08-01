@@ -9,25 +9,25 @@ use Symfony\Component\HttpFoundation\Cookie;
 class Memberchecker {
 
     public $isLoggedIn;
-    public $hasActiveMembership;       
+    public $hasActiveMembership;
     public $memberCheckerRequest;
     public $memberCheckerCookie;
     public $memberCheckerCookieValues;
     public $memberCheckerResponse;
-    
-    
+
+
 
     private $memberValues;
-    
+
     function __construct() {
 
         $this->isLoggedIn = false;
-        $this->hasActiveMembership = false;      
-       
+        $this->hasActiveMembership = false;
+
     }
 
     public function addAJAXActions() {
-        
+
     }
 
     private function setMemberCheckCookie($values, $domain=null) {
@@ -39,15 +39,15 @@ class Memberchecker {
             $domain,  //Cookie Domain
             false, //HTTPS
             false //HTTPOnly
-            );        
+            );
         return $this->memberCheckerCookie;
     }
 
 
     public function getSession() {
 
-        
-        
+
+
         $this->memberCheckerRequest = Request::createFromGlobals();
 
 
@@ -58,32 +58,32 @@ class Memberchecker {
             $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(hash('sha512', 'UWAAMEM')));
             $this->memberCheckerResponse->sendHeaders();
         }
-        
-        
+
+
 
         if ($this->memberCheckerCookieValues->loggedIn) {
             $this->isLoggedIn = true;
         }
-        
+
         if(preg_match('(A|G)', $this->memberCheckerCookieValues->memberStatus) === 1) {
             $this->hasActiveMembership = true;
         }
-        
+
 
     }
 
      public function memberLogout() {
-        $this->memberCheckerResponse = new JsonResponse();        
+        $this->memberCheckerResponse = new JsonResponse();
         $this->memberCheckerResponse->headers->clearCookie('UWAAMEM');
         $this->memberCheckerResponse->send();
-        exit;   
+        exit;
     }
 
-    
 
-    public function callMemberChecker() {     
 
-        
+    public function callMemberChecker() {
+
+
         $this->memberCheckerResponse = new JsonResponse();
 
 $memberID = filter_var($_GET["idNumber"], FILTER_SANITIZE_NUMBER_INT);
@@ -96,16 +96,16 @@ if (empty($memberID)) {
         'message' =>'Please enter a valid Member ID Number'
     );
     echo json_encode($payload);
-    exit;    
+    exit;
 }
 
 if (empty($lastName)) {
      $payload = array (
         'error' => 'TRUE',
-        'message' =>'Please enter your last name',        
+        'message' =>'Please enter your last name',
     );
     echo json_encode($payload);
-    exit;    
+    exit;
 }
 
 if (!ctype_digit($memberID)) {
@@ -134,7 +134,7 @@ catch (exception $e)
     $returnValue["status"] = "error";
     $returnValue["errCode"] = "400";
     $returnValue["success"] = false;
-    echo json_encode($returnValue); 
+    echo json_encode($returnValue);
 
     exit;
 }
@@ -146,33 +146,33 @@ $memberDetails = json_decode($memberPayload);
 $result = $memberDetails;  //returns success or failure
 $callSuccess = $result->Success;
 $callError = $result->ErrorMessage;
-$member = $result->ReturnedMember; 
+$member = $result->ReturnedMember;
 
 if ($callSuccess === FALSE) {
     $payload = array (
         'error' => 'TRUE',
         'message' =>'Hmmm. There seems to be something wrong. Why don&rsquo;t you try again or call us and we’ll help you get it straightened out – 1-800-289-2586',
-        'errorMessage' => 'Technical Information: '. $callError        
+        'errorMessage' => 'Technical Information: '. $callError
     );
     echo json_encode($payload);
     exit;   //refine error handling further...TODO - Need feedback system on page.
 }
 
-if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfirst(remove_accents(strtolower(trim($member->MemberLName))))) {   
+if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfirst(remove_accents(strtolower(trim($member->MemberLName))))) {
 
     $payload = array (
-        'error' => 'TRUE',        
+        'error' => 'TRUE',
         'message' =>'We\'re sorry, that doesn\'t match what we have in our database. Why don&rsquo;t you try again or call us and we’ll help you get it straightened out – 1-800-289-2586',
         // 'message' => $result,
         'errorMessage' => 'Technical Information: ' . $callError
-        
+
     );
     echo json_encode($payload);
     exit;   //refine error handling further...TODO - Need feedback system on page.
 }
 
  else {
-    
+
     // //Set some key information we want to persist why they browse.
     if(preg_match('(A|G)', $member->MemberStatus) === 1) {
         $this->memberDetails = array(
@@ -184,17 +184,17 @@ if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfi
             "membershipType" => "$member->MembershipType",
             "loggedIn" => (bool) true,
             "active" => (bool) true
-            );       
+            );
     }
-   
-    
+
+
     $this->memberCheckerResponse->headers->setCookie($this->setMemberCheckCookie(json_encode($this->memberDetails)));
     $this->memberCheckerResponse->headers->set('Content-Type', 'application/json');
-    $this->memberCheckerResponse->headers->set('Access-Control-Allow-Origin', '*.washington.edu');    
+    $this->memberCheckerResponse->headers->set('Access-Control-Allow-Origin', '*.washington.edu');
     $this->memberCheckerResponse->setData($callSuccess);
-    $this->memberCheckerResponse->setCharset('UTF-8');        
+    $this->memberCheckerResponse->setCharset('UTF-8');
     $this->memberCheckerResponse->send();
-    }     
+    }
 
     exit;
 
@@ -203,11 +203,11 @@ if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfi
     }
 
      public function renderDetails() {
-        $details = $this->getCookieInformation();        
-        
-        echo '<strong>Name:</strong> ' . $details['firstName'] . ' ' . $details['lastName'] . '</br>'; 
+        $details = $this->getCookieInformation();
+
+        echo '<strong>Name:</strong> ' . $details['firstName'] . ' ' . $details['lastName'] . '</br>';
         echo '<strong>Member Number:</strong> ' . $details['memberID'].'</br>';
-        echo '<strong>Membership Type:</strong> ' . $details['membershipType'] . '</br>';        
+        echo '<strong>Membership Type:</strong> ' . $details['membershipType'] . '</br>';
         if ($details['membershipType'] == 'Annual Member') {
             echo '<strong>Expires:</strong> ' . $details['membershipExpiry'].'</br>';
         }
@@ -238,13 +238,13 @@ CONTENT;
     }
 
     public function getMemberIDNumber() {
-        
+
         $details = $this->getCookieInformation();
 
         $memberNumber = $details['memberID'];
-// 
+//
         return $memberNumber;
-        
+
     }
 
     public function renderThankYouText()
@@ -306,7 +306,7 @@ CONTENT;
 
     private function getMembershipStatus($membershipStatusCode)
     {
-        if(preg_match('(A|G)', $member->MemberStatus) === 1) {
+        if(preg_match('(A|G)', $membershipStatusCode) === 1) {
             return "Active";
         }
 
@@ -318,9 +318,9 @@ CONTENT;
     //
     //  #TODO- Move these into a subclass or over with other view-rendering function
 
-   
 
-    
 
-    
+
+
+
 }

@@ -32,15 +32,16 @@ class Breadcrumbs {
       $archiveType = post_type_archive_title('', false);
       if ($archiveType === "Benefits") {
         $html .=  '<li><a href="'  . home_url('/') .'membership" title="Membership">Membership</a></li><li>';
-      }     
+      }
       $html.= '<li class="current"><span>' . post_type_archive_title('', false) . '</span></li>';
     }
-   
+
       if ( is_single() )
       {
         if ( has_category() )
         {
-          $category = array_shift( get_the_category( $post->ID  ) ) ;
+          $post_category = get_the_category( $post->ID );
+          $category = array_shift( $post_category ) ;
           $html .= '<li><a href="'  . home_url('/') .'stories" title="Stories">Stories</a></li>';
           // $html .=  '<li><a href="'  . get_category_link( $category->term_id ) .'" title="'. get_cat_name( $category->term_id ).'">'. get_cat_name($category->term_id ) . '</a>';
         }
@@ -50,7 +51,7 @@ class Breadcrumbs {
           $archive_link = get_post_type_archive_link( $posttype->query_var );
           $postName = $posttype->name;
 
-          
+
           switch ($postName) {
           	case 'chapters':
           		$html .=  '<li><a href="'  . home_url('/') .'communities" title="Communities">Communities</a></li>';
@@ -64,19 +65,19 @@ class Breadcrumbs {
             case 'events':
               $html .=  '<li><a href="'  . home_url('/') .'events" title="Events">Events</a></li>';
               break;
-          	
+
           	default:
-          		
+
           		break;
           }
-          
+
           if (empty($posttype->rewrite['slug'])){
             $html .=  '<li><a href="'  . site_url('/' . $posttype->rewrite['slug'] . '/') .'" title="'. $posttype->labels->menu_name .'">'. $posttype->labels->menu_name  . '</a>';
           }
         }
         $html .=  '<li class="current"><span>'. get_the_title( $post->ID ) . '</span>';
       }
-    
+
 
     // If the current view is a page then the breadcrumbs will be parent pages.
     else if ( is_page() )
@@ -104,7 +105,7 @@ class Breadcrumbs {
 
     }
 
-    return "<nav class='uw-breadcrumbs' role='navigation' aria-label='breadcrumbs'><ul>$html</ul></nav>";	
+    return "<nav class='uw-breadcrumbs' role='navigation' aria-label='breadcrumbs'><ul>$html</ul></nav>";
 }
 
 
