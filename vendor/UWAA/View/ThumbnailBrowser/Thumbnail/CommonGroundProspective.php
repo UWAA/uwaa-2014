@@ -86,6 +86,7 @@ public function buildTemplate() {
 
 $callout = $this->renderCallout();
 $image = $this->renderImage();
+    $link = $this->postURL;
 $date = $this->renderDate();
 $template = <<<TEMPLATE
 <div class="featured-post four-column">

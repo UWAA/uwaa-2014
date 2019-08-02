@@ -4,9 +4,9 @@ use \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 use \UWAA\View\UI;
 
 
-class Communities extends ThumbnailBrowser implements Thumbnail 
-{   
-    
+class Communities extends ThumbnailBrowser implements Thumbnail
+{
+
     protected $args;
     private $UI;
 
@@ -36,10 +36,10 @@ class Communities extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 4, 
+      'posts_per_page' => 4,
       'orderby' => 'rand',
       // 'tag' => 'Home'
-      
+
       'tax_query' => array(
         // 'relation' => 'AND',
         // array(
@@ -53,15 +53,15 @@ class Communities extends ThumbnailBrowser implements Thumbnail
           'terms'    => array( 'Communities')
 
           )
-      ) //End tax query    
+      ) //End tax query
       );
 
     return $args;
-  }  
+  }
 
-   
 
-  public function extractPostInformation($query) 
+
+  public function extractPostInformation($query)
   {
         while ( $query->have_posts() ) : $query->the_post();
       if ($this->currentPostID == get_the_ID() ) {
@@ -73,25 +73,26 @@ class Communities extends ThumbnailBrowser implements Thumbnail
         $this->postTitle = htmlspecialchars(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'gridViewNoSidebar');    
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'gridViewNoSidebar');
         $this->postDate = htmlspecialchars(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = $this->shortenExcerpt(get_the_excerpt(), 100);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
-        
+
         echo $this->buildTemplate();
 
     endwhile;
 
-    wp_reset_postdata();    
+    wp_reset_postdata();
 
   }
 
- 
+
 
 
   public function buildTemplate(){
     $callout = $this->renderCallout();
+    $link = $this->postURL;
     $image = $this->renderImage();
     $date = $this->renderDate();
 
@@ -104,7 +105,7 @@ $template = <<<TEMPLATE
     </div>
   <div class="copy">
  <h6 class="subtitle">{$this->postSubtitle}</h6>
- <h4 class="title">{$this->postTitle}</h4> 
+ <h4 class="title">{$this->postTitle}</h4>
  $date
  <p class="excerpt">{$this->postExcerpt}</p>
  <a class="link-arrow" href="$link">
@@ -112,7 +113,7 @@ $template = <<<TEMPLATE
     </a>
  </div>
  </a>
-  
+
 </div>
 TEMPLATE;
 

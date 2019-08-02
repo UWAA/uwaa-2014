@@ -91,6 +91,7 @@ public function buildTemplate() {
 
 $callout = $this->renderCallout();
 $image = $this->renderImage();
+  $link = $this->postURL;
 $date = $this->renderDate();
 $template = <<<TEMPLATE
 <div class="featured-post four-column">
@@ -104,7 +105,7 @@ $template = <<<TEMPLATE
  <h4 class="title">{$this->postTitle}</h4>
  $date
  <p class="excerpt">{$this->postExcerpt}</p>
- <a class="link-arrow" href="$link">
+ <a class="link-arrow" href="{$this->postURL}">
       <span class="visually-hidden">Link</span>
     </a>
  </div>

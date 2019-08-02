@@ -3,11 +3,11 @@
 use \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 use \UWAA\View\UI;
 
-class StoryIsotope extends ThumbnailBrowser implements Thumbnail 
+class StoryIsotope extends ThumbnailBrowser implements Thumbnail
 {
 
 	protected $args;
-    
+
 
     private $UI;
 
@@ -21,7 +21,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postExcerpt;
     protected $postImageAltText;
     protected $postTags;
-    
+
 
     public function __construct()
     {
@@ -30,7 +30,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
 
     }
 
-      public function extractPostInformation($query) 
+      public function extractPostInformation($query)
   {
 
         while ( $query->have_posts() ) : $query->the_post();
@@ -39,21 +39,21 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postTitle = strip_tags(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');    
-        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;        
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');
+        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
-        
 
-        
+
+
         echo $this->buildTemplate();
 
     endwhile;
 
-    wp_reset_postdata();    
+    wp_reset_postdata();
 
   }
 
@@ -61,12 +61,12 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
     {
 
         $terms = get_the_terms(get_the_id(), 'category');
-        $termArray = array(); 
-        
+        $termArray = array();
+
         if ( $terms && !is_wp_error( $terms ) ) :
         	foreach ( $terms as $term ) {
                 $termArray[] = $term->slug;
-                }               
+                }
         endif;
 
         $isPartnerEvent = get_post_meta(get_the_id(), 'mb_isPartnerEvent', true);
@@ -83,8 +83,8 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => 'post',
-      'orderby' => 'date',      
-      'order' => 'DESC',  
+      'orderby' => 'date',
+      'order' => 'DESC',
       'posts_per_page' => -1,
       'tax_query' => array(
         'relation' => 'AND',
@@ -99,16 +99,17 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
           'terms'    => array( 'exclude-from-search'),
           'operator'  => 'NOT IN'
           )
-      ) //End tax query 
+      ) //End tax query
       );
 
     return $args;
-  }  
+  }
 
 
   public function buildTemplate(){
     $callout = $this->renderCallout();
     $image = $this->renderImage(true);
+    $link = $this->postURL;
     $date = $this->renderDate();
     $tags= $this->renderTags();
 	$template = <<<ISOTOPE
@@ -123,7 +124,7 @@ class StoryIsotope extends ThumbnailBrowser implements Thumbnail
 		<h4 class="title">$this->postTitle</h4>
 		$date
     <p>$this->postExcerpt</p>
-    $tags 
+    $tags
     <a class="link-arrow" href="$link">
       <span class="visually-hidden">Link</span>
     </a>

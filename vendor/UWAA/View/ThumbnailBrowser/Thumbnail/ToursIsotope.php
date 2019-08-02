@@ -106,7 +106,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
           'value' => date("Y-m-d"),
           'compare' => '>=',
           ),
-      'tax_query' => array(                
+      'tax_query' => array(
         array(
           'taxonomy' => 'category',
           'field'    => 'slug',
@@ -171,8 +171,8 @@ return $prelimTemplate;
     <h4 class="date">$this->postDate</h4>
     <p>$this->postExcerpt</p>
     <p class="operator">$this->tourOperator</p>
-    <a class="link-arrow" href="$link">
-    $tags 
+    <a class="link-arrow" href="$this->postURL">
+    $tags
       <span class="visually-hidden">Link</span>
     </a>
     </div>

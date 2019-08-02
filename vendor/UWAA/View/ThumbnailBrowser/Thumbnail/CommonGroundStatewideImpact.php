@@ -85,6 +85,7 @@ class CommonGroundStatewideImpact extends ThumbnailBrowser implements Thumbnail
 public function buildTemplate() {
 
 $callout = $this->renderCallout();
+    $link = $this->postURL;
 $image = $this->renderImage();
 $date = $this->renderDate();
 $template = <<<TEMPLATE
