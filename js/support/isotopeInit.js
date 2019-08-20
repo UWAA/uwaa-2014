@@ -169,7 +169,7 @@ Isotope = Backbone.View.extend({
 
   signupFormCheck: function(filterValue) {    
     switch (filterValue) {
-      case ".lecture":        
+      case ".arts-and-lectures":        
         this.makeSignupFormButtonVisible("Lectures");        
         
         break;
