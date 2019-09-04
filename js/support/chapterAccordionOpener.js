@@ -9,9 +9,7 @@
 
     
     //This function should only run on one page.
-    if (isOkayToFire != -1) {
-
-    console.log('firing');
+    if (isOkayToFire != -1) {    
 
     //http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
     function parseURL(url) {
@@ -42,9 +40,7 @@
         };
     }
 
-    var currentPage = parseURL(currentPage);
-
-    console.log(currentPage);
+    var currentPage = parseURL(currentPage);    
 
     // console.log(currentPage.params);
     
