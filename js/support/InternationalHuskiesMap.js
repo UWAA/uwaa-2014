@@ -26,7 +26,7 @@ var southWest = L.latLng(-90, 180),
 
     startLoading();
 
-     
+    //  Localized from WordPress
     var endPoint = homeLink.endpointURL;
 
 
