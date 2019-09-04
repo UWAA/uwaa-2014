@@ -6,7 +6,7 @@ wp_enqueue_style('mapbox');
 
 wp_localize_script( 'mapbox', 'homeLink', 
   array( 
-    'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson'))
+    'endpointURL' => apply_filters('sharing_permalink', home_url('/api/communities/geojson'))
   ) 
 );
 
