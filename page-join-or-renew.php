@@ -182,7 +182,9 @@ Need another reason to join? Sign up by Oct. 31 and receive a free thank-you gif
        ?>
        <h1>Choose your membership option:</h1>
       <h4><strong>Now is the best time to renew</strong></h4>
-<strong>Welcome back!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.
+<strong>Welcome back!</strong> 
+<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/10/01083217/PromotionalItem.jpg" alt="UWAA pennant on" width="175" height="175" /><strong>It’s the fall membership drive!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match new and renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.
+Need another reason to join? Sign up by Oct. 31 and receive a free thank-you gift: a "Husky for Life" pennant. Perfect to show your UW pride.
 <h3>Be connected. Be proud. Be a member.</h3>
        <?php
      } else {
