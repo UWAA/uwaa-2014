@@ -31,6 +31,8 @@ class Utilities
         add_action('after_setup_theme', array($this, 'attachment_default_settings'));
         add_filter('the_permalink_rss', array($this, 'overwriteCTAButtonLink'));
         add_action('wp_head', array($this, 'hidePage'), 4);
+        add_action('wp_head', array($this, 'addFacebookPixel'), 5);
+        
 
         $this->addExcerptsToPosts();
     }   
@@ -380,6 +382,32 @@ public function overwriteCTAButtonLink($post_permalink) {
 
     public function addExcerptsToPosts() {
         add_post_type_support( 'page', 'excerpt' );
+    }
+
+    public function addFacebookPixel() {
+
+        if (get_post_field( 'post_name', get_post() ) == 'join-or-renew') {
+            ?>
+        <!-- Facebook Pixel Code -->
+        <script>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '376455499971217');
+          fbq('track', 'PageView');
+          fbq('track', 'InitiateCheckout');
+        </script>
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=376455499971217&ev=PageView&noscript=1" /></noscript>
+        <!-- End Facebook Pixel Code -->
+
+        <?php
+        }
+        
     }
     
 
