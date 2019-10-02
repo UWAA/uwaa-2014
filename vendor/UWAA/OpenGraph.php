@@ -21,6 +21,7 @@ class OpenGraph
 
         $speciaOGTitle = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_title', true));
         $speciaOGDescription = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_description', true));
+        
 
 
         ?>
@@ -47,9 +48,18 @@ class OpenGraph
  
     if(is_single()) {
 
-        
+        $speciaOGTitle = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_title', true));
+        $speciaOGDescription = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_description', true));
+        $speciaOGImage = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_image', true));
 
-        if(has_post_thumbnail($post->ID)) {                                     
+        if (empty($speciaOGTitle) || empty($speciaOGDescription)) {
+            return;
+        }        
+
+        if (!is_null($speciaOGImage)) {
+            $img_src = $speciaOGImage;
+            $img_dimensions = "";
+        } elseif (has_post_thumbnail($post->ID)) {                                     
             $feature = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'original');
             $img_src = $feature['0'];            
             $img_dimensions = "

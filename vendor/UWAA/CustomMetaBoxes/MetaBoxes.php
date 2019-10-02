@@ -556,7 +556,7 @@ class MetaBoxes
         protected function add_special_opengraph_tags() {
             new \UWAA\CustomPostData('special_og_tags', array(
                 'title' => 'One-Off OpenGraph Tags',
-                'pages' => array('page'),  //add events, regional pages as they are ready
+                'pages' => array('page', 'post'),  //add events, regional pages as they are ready
                 'context' => 'normal',
                 'priority' => 'high',
                 'fields' => array(
@@ -571,6 +571,12 @@ class MetaBoxes
                           'id'=> 'special_og_description',
                           'type'=> 'text',
                           'desc'=> "This text will show up in the small purple line on the thumbnail."
+                          ),
+                    array(
+                          'name' => 'OpenGraph Image',
+                          'id'=> 'special_og_image',
+                          'type'=> 'text',
+                          'desc'=> "This image will appear in Facebook/Twitter Cards, overwriting default OpenGraph image settings."
                           ),
                     )
             )
