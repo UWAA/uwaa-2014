@@ -46,7 +46,7 @@ class OpenGraph
         }
 
  
-    if(is_single()) {
+    if(is_single() || is_page()) {
 
         $speciaOGTitle = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_title', true));
         $speciaOGDescription = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_description', true));
