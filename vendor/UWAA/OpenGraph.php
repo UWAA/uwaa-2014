@@ -76,22 +76,36 @@ class OpenGraph
         } else {
             $excerpt = get_bloginfo('description');
         }
+
+
+         $og_title = get_the_title();
+    $og_description = $excerpt;
+
+    if(!is_null($speciaOGTitle)) {
+        $og_title = $speciaOGTitle;
+    }
+
+    if(!is_null($speciaOGDescription)) {
+        $og_description = $speciaOGDescription;
+    }
     ?>
+
+   
  
-    <meta property="og:title" content="<?php echo the_title(); ?>"/>
-    <meta property="og:description" content="<?php echo $excerpt; ?>"/>
+    <meta property="og:title" content="<?php echo $og_title; ?>"/>
+    <meta property="og:description" content="<?php echo $og_description; ?>"/>
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="<?php echo the_permalink(); ?>"/>
     <meta property="og:site_name" content="<?php echo get_bloginfo(); ?>"/>
     <meta property="og:image" content="<?php echo $img_src; ?>"/>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@uwalum">
-    <meta name="twitter:title" content="<?php echo the_title(); ?>">
-    <meta name="twitter:description" content="<?php echo $excerpt; ?>">
+    <meta name="twitter:title" content="<?php echo $og_title; ?>">
+    <meta name="twitter:description" content="<?php echo $og_description; ?>">
     <meta name="twitter:image" content="<?php echo $img_src; ?>">
  
 <?php
-    echo $img_dimensions;
+    
     } else {
         return;
     }
