@@ -149,3 +149,7 @@ if ( ! function_exists( 'uw_dropdowns') ) :
     echo '</div></nav>';
   }
 endif;
+
+function uw_meta_tags() {
+  return;
+}
