@@ -94,8 +94,7 @@ class OpenGraph
  
     <meta property="og:title" content="<?php echo $og_title; ?>"/>
     <meta property="og:description" content="<?php echo $og_description; ?>"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="<?php echo "//".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>"/>
+    <meta property="og:type" content="article"/>    
     <meta property="og:site_name" content="<?php echo get_bloginfo(); ?>"/>
     <meta property="og:image" content="<?php echo $img_src; ?>"/>
     <meta name="twitter:card" content="summary_large_image">
