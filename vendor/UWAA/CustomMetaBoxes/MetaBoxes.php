@@ -496,7 +496,7 @@ class MetaBoxes
                         'name' => 'Event Time',
                         'id'=> 'event_time',
                         'type'=> 'text',
-                        'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m.'
+                        'desc'=> 'Start-Finish time of the event - e.g. 7-9 p.m. Only enter the event time or duration.  No extended language like, "doors open" should go in this field.'
                         ),
                     array(
                         'name' => 'CVENT Event Code',

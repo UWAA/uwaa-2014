@@ -106,6 +106,9 @@ function current_type_nav_class($classes, $item) {
     return $classes;
 }
 
+
+// MARK - Page-Specific Scripts are included here.
+// Can refer to scripts loaded in Scripts.php
 function load_page_specific_scripts() {
     global $post;
     wp_register_script( 'fevo_library','https://sdk.fevo.com/v1/fevo.js');
@@ -123,6 +126,9 @@ function load_page_specific_scripts() {
         {
             case 'sounders':
                 wp_enqueue_script('uwaa_fevo');                
+                break;
+            case 'be-a-member' :
+                wp_enqueue_script('appealCodePreservation');
                 break;
         }
     } 

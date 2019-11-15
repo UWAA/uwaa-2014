@@ -243,6 +243,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => false,
         'admin'   => false
+      ),
+      'appealCodePreservation' => array (
+        'id'      => 'appealCodePreservation',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/appealCodePreservation' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
       )
 
       
