@@ -251,6 +251,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
+      ),
+      'oregonMailingListEmailForm' => array (
+        'id'      => 'oregonMailingListEmailForm',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/oregonMailingListEmailForm' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
       )
 
       

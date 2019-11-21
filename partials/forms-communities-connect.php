@@ -15,11 +15,38 @@
 <label class="screen-reader-text" for="Field2">Last Name</label>
 
 
+<fieldset id="oregonChapterPreference" style="display:none;">
+<![if !IE | (gte IE 8)]>
+<legend id="title10" class="desc">
+Oregon Chapter Preference
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title10" class="desc">
+Oregon Chapter Preference
+</label>
+<![endif]-->
+<div>
+<span>
+<label class="checkbox checkbox-label" for="Field10">Portland
+<input id="Field10" name="Field10" type="checkbox" class="tours-form-enews checkbox" value="Portland" tabindex="0"     />
+</label>
+</span>
+<span>
+<label class="checkbox checkbox-label" for="Field11">Bend
+<input id="Field11" name="Field11" type="checkbox" class="tours-form-print checkbox" value="Bend" tabindex="0"     />
+</label>
+</span>
+</div>
+</fieldset>
+
+
 <label class="screen-reader-text" for="Field2">E-Mail</label>
 <div>
 <input id="Field3" name="Field3" type="email" spellcheck="false" placeholder="E-mail" class="field text medium" value="" maxlength="255" tabindex="3" />
 <input id="saveForm" name="saveForm" class="inlineSubmit" type="submit" value="Submit" />
 </div>
+
 
 <ul>
 <li class="hide">

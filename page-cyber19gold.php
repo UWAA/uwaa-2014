@@ -2,7 +2,7 @@
 
 // TODO - Put this in utilities
 // TODO - Surface this to editors
-$deadline = new DateTime("2018-11-26 23:59:59", new DateTimeZone('America/Los_Angeles'));
+$deadline = new DateTime("2019-11-25 23:59:59", new DateTimeZone('America/Los_Angeles'));
 $currentTime = new DateTime('',new DateTimeZone('America/Los_Angeles'));
 
 
@@ -11,7 +11,6 @@ if ($currentTime > $deadline)
     header("Location: ". get_site_url() ."", FALSE, 301);
          die(); 
 }
-
 
 
 $UWAA->Memberchecker->getSession();
@@ -79,7 +78,10 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";        
 
-        $childPageParams['MEMBCODES'] = "CMS,CMJ";	   
+        $childPageParams['MEMBCODES'] = "GMS,GMJ";
+        $countOfParentParams = count($parentPageParams);
+
+	   if ($countOfParentParams > 0 ) {      	   
 
 	   if (count($parentPageParams > 0 ) ) {           
 

@@ -6,6 +6,18 @@
         return $(this).attr('href').includes('join-or-renew')
     });
 
+    // Parse the current URL
+    var urlParameters = ( new URL(document.location).searchParams );
+
+    // remove UTM tags, if present
+    if (urlParameters.search.includes('utm')) {
+        
+        urlParameters.each(function () {
+            console.log($(this));
+        });
+    }
+    
+
     if (location.search.includes('appealcode')) {
 
         $joinLinks.each(function () {

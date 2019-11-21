@@ -125,11 +125,14 @@ function load_page_specific_scripts() {
         switch($post->post_name) 
         {
             case 'sounders':
-                wp_enqueue_script('uwaa_fevo');                
-                break;
+              wp_enqueue_script('uwaa_fevo');                
+              break;
             case 'be-a-member' :
-                wp_enqueue_script('appealCodePreservation');
-                break;
+              wp_enqueue_script('appealCodePreservation');
+              break;
+            case 'oregon':
+              wp_enqueue_script('oregonMailingListEmailForm');
+              break;
         }
     } 
 }
