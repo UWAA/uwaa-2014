@@ -2,7 +2,7 @@
 
 $superheroURL = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 
-if (has_excerpt($post-ID)) {
+if (has_excerpt($post->ID)) {
     $excerptText = get_the_excerpt($post->ID);
 }
 
