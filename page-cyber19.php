@@ -74,8 +74,7 @@ include(locate_template('content-cyber-superhero.php'));
       <!-- Ending us-body-copy -->
 
         <?php  // The Store
-          // $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
-          $frameURL = "http://localhost:41157/uwaa";
+          $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";          
           $childPageParams['MEMBCODES'] = "CMS,CMJ";
           $countOfParentParams = count($parentPageParams);
 

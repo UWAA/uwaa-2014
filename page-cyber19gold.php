@@ -1,5 +1,6 @@
 <?php
 
+
 // TODO - Put this in utilities
 // TODO - Surface this to editors
 $deadline = new DateTime("2019-11-25 23:59:59", new DateTimeZone('America/Los_Angeles'));
@@ -13,46 +14,46 @@ if ($currentTime > $deadline)
 }
 
 
+
 $UWAA->Memberchecker->getSession();
 get_header(); 
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);     
-		 
+
 		  
       parse_str($rawParentQueryStringParams, $parentPageParams);
-		  $childPageParams = array();
-   
-    
+		  $childPageParams = array();  
+
 ?>
 
-<div class="uw-hero-image membership"></div>
+<div class="cyber-header uw-homepage-slider-container">
+<?php
+
+include(locate_template('content-cyber-superhero.php'));
+
+?>
+  
+</div>
 
 <div class="container uw-body">
 
   <div class="row">
 
-    <div class="col-md-12 uw-content" role='main'>
-
-      <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
-      <h2 class="uw-site-title">Cyber Member Monday</h2>
+    <div class="col-md-8 uw-content" role='main'>      
+      
 
       <div class="row uwaa-home-branding-row">
     
-     <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
+      <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
 
-    </div>
+      </div>
 
-      <div class="uw-body-copy">    
+      <div class="uw-body-copy"> 
 
-
-
- <?php
-
-
-
-
-   // Start the Loop.
+        <?php
+      
+        // Start the Loop.
           while ( have_posts() ) : the_post();
 
             /*
@@ -65,84 +66,85 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
           endwhile;
 
-         ?>
+        ?>
 
 
 
-      </div>  
+        </div>  
       <!-- Ending us-body-copy -->
 
-		<?php  // The Store
+        <?php  // The Store
+          $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";          
+          $childPageParams['MEMBCODES'] = "GMS,GMJ";
+          $countOfParentParams = count($parentPageParams);
 
-		  
+          if ($countOfParentParams > 0 ) {
 
-        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";        
+            if(array_key_exists("JOIN", $parentPageParams)) {
 
-        $childPageParams['MEMBCODES'] = "GMS,GMJ";
-        $countOfParentParams = count($parentPageParams);
+              $childPageParams['JOIN'] = $parentPageParams['JOIN'];
 
-	   if ($countOfParentParams > 0 ) {      	   
+            }
 
-	   if (count($parentPageParams > 0 ) ) {           
+            if(array_key_exists("RENEW", $parentPageParams)) {
 
+              $childPageParams['RENEW'] = $parentPageParams['RENEW'];
 
-		   if(array_key_exists("JOIN", $parentPageParams)) {
+            }
 
-			   $childPageParams['JOIN'] = $parentPageParams['JOIN'];
+            if(array_key_exists("NEWGRAD", $parentPageParams)) {
 
-		   }
+              $childPageParams['NEWGRAD'] = $parentPageParams['NEWGRAD'];
 
-		   if(array_key_exists("RENEW", $parentPageParams)) {
+            }
 
-			   $childPageParams['RENEW'] = $parentPageParams['RENEW'];
+            if(array_key_exists("APPEALCODE", $parentPageParams)) {
 
-		   }
+              $childPageParams['appealCode'] = $parentPageParams['APPEALCODE'];
 
-		   if(array_key_exists("NEWGRAD", $parentPageParams)) {
+            }
 
-			   $childPageParams['NEWGRAD'] = $parentPageParams['NEWGRAD'];
+            if(array_key_exists("UTM_SOURCE", $parentPageParams)) {
 
-		   }
+              $childPageParams['UTM_SOURCE'] = $parentPageParams['UTM_SOURCE'];
 
-		   if(array_key_exists("APPEALCODE", $parentPageParams)) {
+            }
 
-			   $childPageParams['appealCode'] = $parentPageParams['APPEALCODE'];
+            if(array_key_exists("UTM_MEDIUM", $parentPageParams)) {
 
-		   }
+              $childPageParams['UTM_MEDIUM'] = $parentPageParams['UTM_MEDIUM'];
 
-		   if(array_key_exists("UTM_SOURCE", $parentPageParams)) {
+            }
 
-			   $childPageParams['UTM_SOURCE'] = $parentPageParams['UTM_SOURCE'];
+            if(array_key_exists("UTM_CAMPAIGN", $parentPageParams)) {
 
-		   }
+              $childPageParams['UTM_CAMPAIGN'] = $parentPageParams['UTM_CAMPAIGN'];
 
-		   if(array_key_exists("UTM_MEDIUM", $parentPageParams)) {
+            }          
+            
+          }
 
-			   $childPageParams['UTM_MEDIUM'] = $parentPageParams['UTM_MEDIUM'];
+          $childPageQueryString = http_build_query($childPageParams);
+          $frameURL .= "?" . $childPageQueryString;
 
-		   }
-
-		   if(array_key_exists("UTM_CAMPAIGN", $parentPageParams)) {
-
-			   $childPageParams['UTM_CAMPAIGN'] = $parentPageParams['UTM_CAMPAIGN'];
-
-		   }
-
-
-		   $childPageQueryString = http_build_query($childPageParams);
-		   $frameURL .= "?" . $childPageQueryString;
-	   }
-
-		?>
-  
-      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
+        ?>
+      
+          <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
      
 
-    </div>
+      </div>
+
+      <div class="col-md-4 uw-sidebar">
+        <?php
+
+          the_widget("UWAA\Widgets\SidebarFeaturedPost");
+
+        ?>
+      </div>
    
 
   </div>
-
+     
 </div>
 
 <?php get_footer(); ?>
