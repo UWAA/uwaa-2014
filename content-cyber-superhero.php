@@ -1,12 +1,18 @@
 <?php 
 
-$superheroURL = wp_get_attachment_url(get_post_thumbnail_id($post->ID))
+$superheroURL = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+
+if (has_excerpt($post-ID)) {
+    $excerptText = get_the_excerpt($post->ID);
+}
+
+
 
 ?>
 
 <div class="uw-homepage-slider-container uwaa-superhero">
 
-  <div class="uw-hero-image uw-homepage-slider" style="background:url('<?php echo $superheroURL; ?>') no-repeat center; background-size:cover;">
+  <div class="uw-hero-image uw-homepage-slider white-header-overlay" style="background:url('<?php echo $superheroURL; ?>') no-repeat center; background-size:cover;">
 
   
     <div style="background-image:url('<?php echo $superheroURL; ?>')" class="mobile-image"></div>
@@ -22,7 +28,7 @@ $superheroURL = wp_get_attachment_url(get_post_thumbnail_id($post->ID))
           
 
           <div class="membership-superhero-excerpt">
-          <?php ?> 
+          <p><?php echo $excerptText; ?> </p>
           </div>          
           
 
