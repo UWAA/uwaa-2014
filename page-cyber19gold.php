@@ -3,7 +3,7 @@
 
 // TODO - Put this in utilities
 // TODO - Surface this to editors
-$deadline = new DateTime("2019-11-25 23:59:59", new DateTimeZone('America/Los_Angeles'));
+$deadline = new DateTime("2019-12-02 23:59:59", new DateTimeZone('America/Los_Angeles'));
 $currentTime = new DateTime('',new DateTimeZone('America/Los_Angeles'));
 
 
