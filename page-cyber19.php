@@ -9,7 +9,7 @@ $currentTime = new DateTime('',new DateTimeZone('America/Los_Angeles'));
 
 if ($currentTime > $deadline) 
 { 
-    header("Location: ". get_site_url() ."", FALSE, 301);
+    header("Location: ". get_site_url() ."/membership", FALSE, 301);
          die(); 
 }
 
@@ -61,7 +61,28 @@ include(locate_template('content-cyber-superhero.php'));
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
-             get_template_part( 'content', 'page' );
+     
+             ?>
+
+
+<?php if(uw_list_pages()){ ?>
+	<div id="mobile-sidebar">
+		<button id="mobile-sidebar-menu" class="visible-xs" aria-hidden="true" tabindex="1">
+	    	<div aria-hidden="true" id="ham">
+		    	<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+	   		<div id="mobile-sidebar-title" class="page_item"> Close Menu </div>
+		</button>
+		<div id="mobile-sidebar-links" aria-hidden="true" class="visible-xs">  <?php uw_sidebar_menu(); ?></div>
+	</div>
+<?php } ?>
+
+<?php the_content(); ?>
+
+<?php
 
 
           endwhile;
