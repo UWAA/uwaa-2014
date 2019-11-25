@@ -4,11 +4,9 @@
         } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
             $UWAA->Memberchecker->renderThankYouText();
         } else {
-        //   $joinPage = $UWAA->Utilities->get_permalink_by_title("Choose a membership option");
-        $joinLink = "https://uw.edu/alumni/membership";
-        $renewLink = "https://uw.edu/alumni/membership";
-          //   $joinLink = ($joinPage ? $joinPage . "?join=true" : '#');
-        //   $renewLink = ($joinPage ? $joinPage . "?renew=true" : '#');          
+          $joinPage = $UWAA->Utilities->get_permalink_by_title("Choose a membership option");
+          $joinLink = ($joinPage ? $joinPage . "?join=true" : '#');
+          $renewLink = ($joinPage ? $joinPage . "?renew=true" : '#');          
         ?>
         <div id="join-renew-buttons" class="">
             <div class="uwaa-btn-wrapper"><a class="uwaa-btn uwaa-btn-join btn-slant-right " href="<?php echo $joinLink; ?>">Join UWAA</a></div>
