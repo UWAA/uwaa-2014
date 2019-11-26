@@ -130,6 +130,9 @@ function load_page_specific_scripts() {
             case 'be-a-member' :
               wp_enqueue_script('appealCodePreservation');
               break;
+            case 'membership' :
+              wp_enqueue_script('cyberAppealCodePreservation');
+              break;
             case 'oregon':
               wp_enqueue_script('oregonMailingListEmailForm');
               break;
