@@ -267,6 +267,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
+      ),
+      'homepageSnow' => array (
+        'id'      => 'homepageSnow',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/homepageSnow' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
       )
 
       

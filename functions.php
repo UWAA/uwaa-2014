@@ -139,6 +139,9 @@ function load_page_specific_scripts() {
             case 'oregon':
               wp_enqueue_script('oregonMailingListEmailForm');
               break;
+            case '/':
+              wp_enqueue_script('homepageSnow');
+              break;
         }
     } 
 }
