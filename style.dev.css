@@ -11233,6 +11233,9 @@ Typography
   display: block;
   visibility: visible;
 }
+.wistia_responsive_padding {
+  margin-bottom: 10px;
+}
 #map {
   position: absolute;
   top: 0;

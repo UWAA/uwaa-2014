@@ -141,8 +141,12 @@ canvas.addEventListener("mousemove", function(e) {
 
 //NOTE: resize does work - just takes some time for more snow to start falling when window is expanded
 window.onresize = function () {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    if (window.innerWidth > this.canvas.width) {
+        canvas.width = window.innerWidth;
+    }
+    if (window.innerHeight > this.canvas.height) {
+        canvas.height = window.innerHeight;
+    }
 };
 
 init();
