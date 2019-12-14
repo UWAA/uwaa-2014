@@ -5,6 +5,7 @@ function createCanvasOverlay()
    var canvasContainer = document.createElement('div');
   // Add the div into the document
    document.body.appendChild(canvasContainer);
+   canvasContainer.setAttribute("style", "pointer-events:none;")
    canvasContainer.style.position="fixed";
    // Set to 100% so that it will have the dimensions of the document
    canvasContainer.style.left="0px";
@@ -24,6 +25,7 @@ function createCanvasOverlay()
    myCanvas.height=canvasContainer.scrollHeight;
    myCanvas.style.overflow = 'visible';
    myCanvas.style.position = 'absolute';
+   
    // Add int into the container
    canvasContainer.appendChild(myCanvas);
 }
@@ -80,7 +82,7 @@ function snow() {
            flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
        }
 
-       ctx.fillStyle = "rgba(51,0,111," + flake.opacity + ")";
+       ctx.fillStyle = "rgba(168,218,250," + flake.opacity + ")";
        flake.y += flake.velY;
        flake.x += flake.velX;
            
