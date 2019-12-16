@@ -4,7 +4,7 @@ get_header();
 
 
 
-<div class="uw-hero-image membership"></div>
+<div class="uw-hero-image holidays"></div>
 
 <div class="container uw-body">
 
