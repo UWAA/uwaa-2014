@@ -5,7 +5,7 @@ function createCanvasOverlay()
    var canvasContainer = document.createElement('div');
   // Add the div into the document
    document.body.appendChild(canvasContainer);
-   canvasContainer.setAttribute("style", "pointer-events:none;")
+   canvasContainer.setAttribute("style", "pointer-events:none;");
    canvasContainer.style.position="fixed";
    // Set to 100% so that it will have the dimensions of the document
    canvasContainer.style.left="0px";
@@ -30,7 +30,7 @@ function createCanvasOverlay()
    canvasContainer.appendChild(myCanvas);
 }
 
-(function() {
+(function () {
    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
    function(callback) {
        window.setTimeout(callback, 1000 / 60);
@@ -57,7 +57,7 @@ function snow() {
        var flake = flakes[i],
            x = mX,
            y = mY,
-           minDist = 150,
+           minDist = 150;
            x2 = flake.x,
            y2 = flake.y;
 
@@ -136,19 +136,16 @@ function init() {
    snow();
 };
 
-canvas.addEventListener("mousemove", function(e) {
+window.addEventListener("mousemove", function(e) {
    mX = e.clientX,
    mY = e.clientY
 });
 
-//NOTE: resize does work - just takes some time for more snow to start falling when window is expanded
-window.onresize = function () {
-    if (window.innerWidth > this.canvas.width) {
-        canvas.width = window.innerWidth;
-    }
-    if (window.innerHeight > this.canvas.height) {
-        canvas.height = window.innerHeight;
-    }
-};
+window.addEventListener("resize", function(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+})
 
 init();
