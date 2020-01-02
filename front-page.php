@@ -14,13 +14,12 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\HomepageEvents;
 <?php 
 
 
-// if(class_exists('\UWAA\Slideshow\Slideshow')):
+if(class_exists('\UWAA\Slideshow\Slideshow')):
+$superhero = new \UWAA\Slideshow\Slideshow("home-superhero");
 
-// $superhero = new \UWAA\Slideshow\Slideshow("home-superhero");
+include(locate_template('content-slideshow.php'));
 
-// include(locate_template('content-slideshow.php'));
-
-// endif;
+endif;
 
 ?>
 
@@ -35,12 +34,7 @@ use \UWAA\View\ThumbnailBrowser\Thumbnail\HomepageEvents;
 
       <div class="uw-body-copy">
 
-          <div class="row 5-column home-thumbnail-row home-events">
-           
-            <script src="https://fast.wistia.com/embed/medias/onbjt5vurx.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:60.25% 0 0 0;position:relative;">
-            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-            <div class="wistia_embed wistia_async_onbjt5vurx seo=false videoFoam=true autoPlay=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-            <!-- NOTE: popover=true popoverAnimateThumbnail=true makes autoplay not work -->
+          <div class="row 5-column home-thumbnail-row home-events">           
             
             <div class="row-title-row">
                   <div class="row-hr"></div>
