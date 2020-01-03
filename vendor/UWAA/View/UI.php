@@ -45,7 +45,15 @@ class UI
       public function returnPostFeaturedImageURL($id, $size)
     {
 
-        $url = wp_get_attachment_image_src($id, $size);
+        $image = wp_get_attachment_metadata( $id);
+
+        if (!array_key_exists('app-feed-image', $image['sizes'])) {
+            $url = wp_get_attachment_image( $id, "thumbnail-large");
+        }
+        else {
+            $url = wp_get_attachment_image_src($id, $size);
+        }
+        
         return($url[0]);
     }
 
