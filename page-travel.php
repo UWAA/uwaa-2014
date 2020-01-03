@@ -58,7 +58,7 @@ endif;
 
           endwhile;
 
-          get_template_part( 'partials/map' );  //Map
+          // get_template_part( 'partials/map' );  //Map
         ?>
          
         
