@@ -58,7 +58,7 @@ class UI
         $image = wp_get_attachment_metadata( $id);
 
         if (!array_key_exists('app-feed-image', $image['sizes'])) {
-            $url = wp_get_attachment_image( $id, "thumbnail-large");
+            $url = wp_get_attachment_image_src( $id, "thumbnail-large");
         }
         else {
             $url = wp_get_attachment_image_src($id, $size);
