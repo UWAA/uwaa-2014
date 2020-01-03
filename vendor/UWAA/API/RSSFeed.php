@@ -157,7 +157,7 @@
               if( has_post_thumbnail( $id ) ) {
                   $imageID = get_post_thumbnail_id( $id );
                   
-                  $url = \UWAA\View\UI::returnPostFeaturedImageURL($imageID, 'app-feed-image' );
+                  $url = \UWAA\View\UI::returnAppImageURL($imageID, 'app-feed-image' );
                   echo "<uwaa_app:itemImage><![CDATA[{$url}]]></uwaa_app:itemImage>\n";
 
               }
