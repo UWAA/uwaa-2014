@@ -12,30 +12,12 @@
 <input id="Field3" name="Field3" type="text" class="field text half-column" placeholder="Last" value="" size="14" tabindex="2" required />
 
 
-<fieldset>
-<![if !IE | (gte IE 8)]>
-<legend id="title17" class="desc">
-How would you like to get information about our upcoming trips?
-</legend>
-<![endif]>
-<!--[if lt IE 8]>
-<label id="title17" class="desc">
-How would you like to get information about our upcoming trips?
-</label>
-<![endif]-->
-<div>
-<span>
-<label class="checkbox checkbox-label" for="Field17">Email
-<input id="Field17" name="Field17" type="checkbox" class="checkbox tours-form-enews" value="Email" data-toggle="checkbox" tabindex="3"     />
-</label>
-</span>
-<span>
-<label class="checkbox checkbox-label" for="Field18">Print Materials
-<input id="Field18" name="Field18" type="checkbox" class="checkbox tours-form-print" value="Print Materials" data-toggle="checkbox" tabindex="4"     />
-</label>
-</span>
+<div class="tours-email-field">
+<label class="screen-reader-text" for="Field1">E-Mail</label>
+<input id="Field1" placeholder="E-mail" name="Field1" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required/>
+<!-- <input id="saveForm" name="saveForm" class="inlineSubmit" type="submit" value="Submit" /> -->
 </div>
-</fieldset>
+    
 
 <div class="address-block tours-address-fields">
 <label class="desc" id="title9" for="Field9">
@@ -55,15 +37,15 @@ Address
 <label class="screen-reader-text" for="Field11">City</label>
 
 
-<input id="Field12" name="Field12" type="text" placeholder="State / Province / Region" class="field text addr half-column left" size="8" value="" tabindex="8" />
+<input id="Field12" name="Field12" type="text" placeholder="State / Province " class="field text addr half-column left" size="8" value="" tabindex="8" />
 <label class="screen-reader-text" for="Field12">State / Province / Region</label>
 
 
 <input id="Field13" name="Field13" type="text" class="field text addr half-column" placeholder="Postal / Zip Code" value="" maxlength="15" size="14" tabindex="9" />
 <label class="screen-reader-text" for="Field13">Postal / Zip Code</label>
+<!-- 
 
-
-<select id="Field14" name="Field14" class="field select addr" tabindex="10" placeholder="country" >
+<select id="Field14" name="Field14" class="field select addr" tabindex="10" >
 <option value="" selected disabled>Country</option>
 <option value="United States" >United States</option>
 <option value="United Kingdom" >United Kingdom</option>
@@ -279,7 +261,7 @@ Address
 <option value="Zambia" >Zambia</option>
 <option value="Zimbabwe" >Zimbabwe</option>
 </select>
-<label class="screen-reader-text" for="Field14">Country</label>
+<label class="screen-reader-text" for="Field14">Country</label> -->
 
 </div>
 
@@ -290,11 +272,37 @@ Address
 
 
 
-<div class="tours-email-field">
-<label class="screen-reader-text" for="Field1">E-Mail</label>
-<input id="Field1" placeholder="E-mail" name="Field1" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" required/>
-<!-- <input id="saveForm" name="saveForm" class="inlineSubmit" type="submit" value="Submit" /> -->
+
+<fieldset>
+<![if !IE | (gte IE 8)]>
+<legend id="title17" class="desc">
+How would you like to get information about our upcoming trips?
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title17" class="desc">
+How would you like to get information about our upcoming trips?
+</label>
+<![endif]-->
+<div>
+<span>
+<label class="checkbox checkbox-label" for="Field17">Email
+<input id="Field17" name="Field17" type="checkbox" class="checkbox tours-form-enews" value="Email"  tabindex="3"     />
+</label>
+</span>
+<span>
+<label class="checkbox checkbox-label" for="Field18">Print Materials
+<input id="Field18" name="Field18" type="checkbox" class="checkbox tours-form-print" value="Print Materials"  tabindex="4"     />
+</label>
+</span>
+<!-- <span>
+<label class="checkbox checkbox-label" for="Field19">Both Print and Email
+<input id="Field19" name="Field19" type="checkbox" class="checkbox tours-form-print" value="Both Print and Email" tabindex="5">
+</span>
+</label>
+</span> -->
 </div>
+</fieldset>
 
 <ul>
 <li class="hide">
