@@ -1,15 +1,14 @@
 <?php 
 get_header(); 
-wp_enqueue_script(array('toursMap', 'superHero'));
-// wp_enqueue_style('mapbox'); //Map
+wp_enqueue_script(array('mapbox-gl-js', 'toursMap', 'superHero'));
+wp_enqueue_style('mapbox-gl-js'); //Map
 
 
-// wp_localize_script( 'mapbox', 'homeLink',  //Map
-//   array( 
-//     'endpointURL' => apply_filters('remove_cms', home_url('/api/tours/geojson'))  
-//     ) 
-//   );
-
+wp_localize_script( 'mapbox', 'homeLink',  //Map
+  array( 
+    'endpointURL' => apply_filters('remove_cms', home_url('/api/tours/geojson'))  
+    ) 
+  );
 
 ?>
 
@@ -43,7 +42,6 @@ endif;
      <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
       <div class="uw-body-copy">
-
         <?php
           // Start the Loop.
           while ( have_posts() ) : the_post();
@@ -57,16 +55,14 @@ endif;
 
 
           endwhile;
-
           // get_template_part( 'partials/map' );  //Map
         ?>
-         
         
 
          
 
       </div>
-
+      <div id ="map"></div>
     </div>
     
      <div class="col-md-4 uw-sidebar">

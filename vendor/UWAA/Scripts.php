@@ -48,6 +48,14 @@ class Scripts
           'version' => '2.1.2',
           'admin'   => false
       ),
+      
+      'mapbox-gl-js' => array(
+        'id'      => 'mapbox-gl-js',
+        'url'     => 'https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css',
+        'deps'    => array(),
+        'version' => '1.6.1',
+        'admin'   => false
+    ),
 
     );
 
@@ -82,6 +90,15 @@ class Scripts
         'url'     => "https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js",
         'deps'    => array(),
         'version' => '2.1.2',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+
+      'mapbox-gl-js'   => array (
+        'id'      => 'mapbox-gl-js',
+        'url'     => "https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js",
+        'deps'    => array(),
+        'version' => '1.6.1',
         'in_footer' => true,
         'admin'   => false
       ),

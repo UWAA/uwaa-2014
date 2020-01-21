@@ -13,7 +13,8 @@ class Styles
 
       'mapbox' => array(
           'id'      => 'mapbox',
-          'url'     => 'https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css',
+          // 'url'     => 'https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css',
+          'url'     => 'https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css',
           'deps'    => array(),
           'version' => '2.1.2',
           'admin'   => false
