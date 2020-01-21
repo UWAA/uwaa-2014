@@ -64,23 +64,17 @@ map.addLayer({
   }
 });
   
-// map.addLayer({
-//   id: 'unclustered-point',
-//   type: 'circle',
-//   source: 'tours',
-//   filter: ['!', ['has', 'point_count']],
-//   paint: {
-//     'circle-color': '#4b2e83',
-//     'circle-radius': 8,
-//     // 'circle-stroke-width': 1,
-//     // 'circle-stroke-color': '#fff'
-//   }
-// });
-
-endPoint.features.forEach(function(coordinates) {
-  var marker = new mapboxgl.Marker({ "color": "#b40219" })
-  .setLngLat(coordinates)
-  .addTo(map);
+map.addLayer({
+  id: 'unclustered-point',
+  type: 'circle',
+  source: 'tours',
+  filter: ['!', ['has', 'point_count']],
+  paint: {
+    'circle-color': '#4b2e83',
+    'circle-radius': 8,
+    // 'circle-stroke-width': 1,
+    // 'circle-stroke-color': '#fff'
+  }
 });
 
 // inspect a cluster on click
