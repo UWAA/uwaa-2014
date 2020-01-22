@@ -59,7 +59,8 @@ class CustomPostData {
         "textarea" => "<textarea name='$id' class='widefat' rows='5'>$value</textarea>",
         "checkbox" => "<input type='checkbox' name='$id' value='$name' />",
         "select" => $type == 'select' ? $this->renderSelect($id, $options, $value) : '' ,
-        "file" => "<input type='file' name='$id' id='$id' />"
+        "file" => "<input type='file' name='$id' id='$id' />",
+        "list" => "<input list='$id' id='$id' name='$name' />"
 
         );
 
@@ -78,6 +79,12 @@ class CustomPostData {
                     echo '&nbsp;<span id="text-area-limit"></span>';
                     echo "<a href=\"#\" class=\"button button-small\" id=\"copy-to-excerpt\">Copy to Excerpt</a></br>";
                 }
+
+                if($id =='mb_marker_position'){
+                    echo '<datalist id="marker_position"></datalist>';
+                }
+
+
 
 
 
