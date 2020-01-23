@@ -30,7 +30,7 @@ class Scripts
       'admin' => array (
         'id'      => 'uwaa.wp.admin',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/admin/admin.js',
-        'deps'    => array(),
+        'deps'    => array('mapbox-gl-js'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => true
@@ -54,7 +54,7 @@ class Scripts
         'url'     => 'https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css',
         'deps'    => array(),
         'version' => '1.6.1',
-        'admin'   => false
+        'admin'   => true
     ),
 
     );
@@ -99,8 +99,8 @@ class Scripts
         'url'     => "https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js",
         'deps'    => array(),
         'version' => '1.6.1',
-        'in_footer' => true,
-        'admin'   => false
+        'in_footer' => false,
+        'admin'   => true
       ),
 
       'seattleMap'   => array (
@@ -363,7 +363,9 @@ class Scripts
       if ( ! is_admin() )
         return;
 
-      foreach ( $this->SCRIPTS as $script )
+      $allScripts = array_merge($this->SCRIPTS, $this->SUPPORT_SCRIPTS);
+
+      foreach ( $allScripts as $script )
       {
         $script = (object) $script;
 

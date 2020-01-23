@@ -24,6 +24,8 @@ map.on('load', function() {
     clusterMaxZoom: 12, 
     clusterRadius: 50,
 });
+
+map.on('render', finishedLoading);
   
 map.addLayer({
   id: 'clusters',
@@ -148,6 +150,16 @@ map.on('mouseleave', 'unclustered-point', function() {
 function isSecure() {
     return location.protocol == 'https:';
 }
+
+function finishedLoading() {
+    loader.className = 'done';
+    setTimeout(function() {
+        // then, after a half-second, add the class 'hide', which hides
+        // it completely and ensures that the user can interact with the
+        // map again.
+        loader.className = 'hide';
+    }, 100);
+  }
 
 if (isSecure()) {
   var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
