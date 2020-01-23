@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.13.2
+ Version: 1.13.4
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -10036,11 +10036,6 @@ a#memberCheckerLogout {
   display: block;
   visibility: visible;
   position: relative;
-}
-.uwaa-form .tours-address-fields,
-.uwaa-form .tours-email-field,
-.uwaa-form .tours-newsletter-submit {
-  display: none;
 }
 .uwaa-form input,
 .uwaa-form select {

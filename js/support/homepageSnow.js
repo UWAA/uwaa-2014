@@ -1,3 +1,6 @@
+// Adapted from a CodePen by https://github.com/loktar00
+// https://codepen.io/loktar00/pen/CHpGo
+
 //createCanvasOverlay taken from https://permadi.com/2009/04/usng-html-5-canvas-to-draw-over-my-web-page-part-2/
 function createCanvasOverlay()
 {

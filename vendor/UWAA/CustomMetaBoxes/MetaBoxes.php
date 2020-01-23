@@ -119,6 +119,12 @@ class MetaBoxes
                         'desc'=> "The price of the tour. E.g. \"From $200\" "
                         ),
                     array(
+                        'name' => 'Tour Operator Phone Number',
+                        'id'=> 'phone number',
+                        'type'=> 'text',
+                        'desc'=> "The Phone number of the tour operator. E.g. \"206-684-5476\" "
+                        ),
+                    array(
                         'name' => 'Thumbnail Callout Box',
                         'id'=> 'thumbnail_callout',
                         'type'=> 'text',

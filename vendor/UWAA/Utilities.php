@@ -32,6 +32,7 @@ class Utilities
         add_filter('the_permalink_rss', array($this, 'overwriteCTAButtonLink'));
         add_action('wp_head', array($this, 'hidePage'), 4);
         add_action('wp_head', array($this, 'addFacebookPixel'), 5);
+        add_filter('ppp_nonce_life', array($this, 'extendPreviewTime') );
         
 
         $this->addExcerptsToPosts();
@@ -408,6 +409,10 @@ public function overwriteCTAButtonLink($post_permalink) {
         <?php
         }
         
+    }
+
+    public function extendPreviewTime() {
+        return 60 * 60 * 24 * 7;
     }
     
 
