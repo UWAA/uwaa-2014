@@ -97,6 +97,16 @@ class Images {
                 'y_crop_position' => 'center'
                 ),
             'show'  => false
+            ),
+            'app-event-feed-image' => array (
+            'name'  => 'app-event-feed-image',
+            'width'  => 630,
+            'height'  => 428,
+            'crop'  => array (
+                'x_crop_position' => 'center',
+                'y_crop_position' => 'center'
+                ),
+            'show'  => false
             )
         );  
        
