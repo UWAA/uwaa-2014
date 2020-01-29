@@ -55,14 +55,13 @@ endif;
 
 
           endwhile;
-          // get_template_part( 'partials/map' );  //Map
+          get_template_part( 'partials/map' );  //Map
         ?>
         
 
          
 
       </div>
-      <div id ="map"></div>
     </div>
     
      <div class="col-md-4 uw-sidebar">
