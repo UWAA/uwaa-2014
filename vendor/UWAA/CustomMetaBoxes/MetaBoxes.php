@@ -172,7 +172,7 @@ class MetaBoxes
                     array(
                         'name' => 'Map Pin Location Name',
                         'id'=> 'marker_position',
-                        'type'=> 'text',
+                        'type'=> 'list',
                         'desc'=> "Pin location on the map. If you omit Lat/Long, this will be used to place the marker on the tour map."
                         ),
                     array(
