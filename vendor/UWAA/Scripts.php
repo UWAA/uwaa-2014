@@ -31,7 +31,7 @@ class Scripts
         'id'      => 'uwaa.wp.admin',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/admin/admin.js',
         'deps'    => array('mapbox-gl-js'),
-        'version' => '1.0',
+        'version' => '2.0',
         'in_footer' => true,
         'admin'   => true
       ),
@@ -134,8 +134,8 @@ class Scripts
        'toursMap' => array (
         'id'      => 'toursMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/toursMap' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),
-        'version' => '1.0',
+        'deps'    => array('mapbox-gl-js'),
+        'version' => '2.0',
         'in_footer' => true,
         'admin'   => false
 

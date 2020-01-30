@@ -1,10 +1,10 @@
 <?php 
 get_header(); 
-wp_enqueue_script(array('mapbox-gl-js', 'toursMap', 'superHero'));
-wp_enqueue_style('mapbox-gl-js'); //Map
+wp_enqueue_script(array('toursMap', 'superHero'));
 
 
-wp_localize_script( 'mapbox', 'homeLink',  //Map
+
+wp_localize_script( 'mapbox-gl-js', 'homeLink',  //Map
   array( 
     'endpointURL' => apply_filters('remove_cms', home_url('/api/tours/geojson'))  
     ) 
