@@ -5,7 +5,7 @@
         $("#mb_marker_position").autocomplete({
             source: function (request, response) {
                 $.ajax({
-                    url: "https://api.mapbox.com/geocoding/v5/mapbox.places/"+ request.term +" .json?access_token=pk.eyJ1IjoiYnBlcmljayIsImEiOiJIanhpaU1nIn0.S3h6SSQIZYpC2GDwYMDCYA&types=place&limit=6",
+                    url: "https://api.mapbox.com/geocoding/v5/mapbox.places/"+ request.term +" .json?access_token=pk.eyJ1IjoiYnBlcmljayIsImEiOiJIanhpaU1nIn0.S3h6SSQIZYpC2GDwYMDCYA&types=country,region,district,place,locality&language=en&limit=6",
                     dataType: "json",
                     data: {
                         term: request.term
