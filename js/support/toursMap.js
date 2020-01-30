@@ -18,7 +18,7 @@ map.addControl(new mapboxgl.NavigationControl());
 
 var endPoint = homeLink.endpointURL;
 
-map.on('styledata', finishedLoading);
+// map.on('styledata', finishedLoading);
 
 map.on('load', function() {
     map.loadImage(
@@ -164,15 +164,15 @@ function isSecure() {
     return location.protocol == 'https:';
 }
 
-function finishedLoading() {
-    loader.className = 'done';
-    setTimeout(function() {
-        // then, after a half-second, add the class 'hide', which hides
-        // it completely and ensures that the user can interact with the
-        // map again.
-        loader.className = 'hide';
-    }, 100);
-}
+// function finishedLoading() {
+//     loader.className = 'done';
+//     setTimeout(function() {
+//         // then, after a half-second, add the class 'hide', which hides
+//         // it completely and ensures that the user can interact with the
+//         // map again.
+//         loader.className = 'hide';
+//     }, 100);
+// }
 
 if (isSecure()) {
     var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
