@@ -1,8 +1,8 @@
 <div id="map-container">
     <div id="map">
-     <div id="loader">
+     <!-- <div id="loader">
         <div class="spinner"></div>
-    </div>
+    </div> -->
 
     <nav class='menu-ui' id="mapNavigation">
         <div class="uwaa-btn-wrapper"><span class="uwaa-btn uwaa-btn-join btn-purple btn-slant-right " id="usNav">&nbsp;&nbsp;U.S.</span></div>
