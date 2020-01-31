@@ -14,7 +14,11 @@ var map = new mapboxgl.Map({
 });
 
 
-map.addControl(new mapboxgl.NavigationControl());
+var nav = new mapboxgl.NavigationControl({
+    showCompass: false,
+    showZoom: true
+});
+map.addControl(nav, 'top-left');
 
 var endPoint = homeLink.endpointURL;
 
@@ -43,19 +47,19 @@ map.on('load', function() {
                         'step',
                         ['get', 'point_count'],
                         '#f0ddaf',
-                        4,
+                        5,
                         '#b7a57a',
-                        7,
+                        10,
                         '#85754d'
                     ],
                     'circle-radius': [
                         'step',
                         ['get', 'point_count'],
-                        15,
-                        4,
                         20,
-                        7,
-                        25
+                        5,
+                        25,
+                        10,
+                        30
                     ]
                 }
             });
@@ -83,7 +87,7 @@ map.on('load', function() {
                 filter: ['!', ['has', 'point_count']],
                 layout: {
                     'icon-image': 'marker',
-                    'icon-size': 0.75,
+                    'icon-size': 1,
                     'icon-allow-overlap': true
                 }
             });
