@@ -6,11 +6,6 @@ var map = new mapboxgl.Map({
     zoom: 0.5, 
     renderWorldCopies: false,
     fadeDuration: 0
-    // bounds:  
-    //   new mapboxgl.LngLatBounds(
-    //   new mapboxgl.LngLat(180, -90),
-    //   new mapboxgl.LngLat(-180, 90)
-    // )
 });
 
 var nav = new mapboxgl.NavigationControl({
@@ -34,7 +29,7 @@ map.on('load', function() {
                 data: endPoint,
                 cluster: true,
                 clusterMaxZoom: 12, 
-                clusterRadius: 50
+                clusterRadius: 40
             });
             map.addLayer({
                 id: 'clusters',
@@ -54,11 +49,11 @@ map.on('load', function() {
                     'circle-radius': [
                         'step',
                         ['get', 'point_count'],
-                        20,
-                        5,
                         25,
+                        5,
+                        30,
                         10,
-                        30
+                        35
                     ]
                 }
             });
