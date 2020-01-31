@@ -13,7 +13,6 @@ var map = new mapboxgl.Map({
     // )
 });
 
-
 var nav = new mapboxgl.NavigationControl({
     showCompass: false,
     showZoom: true
