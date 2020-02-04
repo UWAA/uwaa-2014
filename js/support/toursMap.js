@@ -40,8 +40,6 @@ map.on('load', function() {
                     'circle-color': [
                         'step',
                         ['get', 'point_count'],
-                        '#f0ddaf',
-                        5,
                         '#b7a57a',
                         10,
                         '#85754d'
@@ -50,11 +48,33 @@ map.on('load', function() {
                         'step',
                         ['get', 'point_count'],
                         25,
-                        5,
-                        30,
                         10,
-                        35
+                        30
                     ]
+
+                    //one color one size
+                    // 'circle-color': '#b7a57a',
+                    // 'circle-radius': 25
+
+                    //original cluster style:
+                    // 'circle-color': [
+                    //     'step',
+                    //     ['get', 'point_count'],
+                    //     '#f0ddaf',
+                    //     5,
+                    //     '#b7a57a',
+                    //     10,
+                    //     '#85754d'
+                    // ],
+                    // 'circle-radius': [
+                    //     'step',
+                    //     ['get', 'point_count'],
+                    //     25,
+                    //     5,
+                    //     30,
+                    //     10,
+                    //     35
+                    // ]
                 }
             });
             map.addLayer({
@@ -64,14 +84,17 @@ map.on('load', function() {
                 filter: ['has', 'point_count'],
                 layout: {
                     'text-field': '{point_count_abbreviated}',
-                    'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+                    'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
                     'text-size': 16,
                     'text-allow-overlap': true
                 },
                 paint: {
-                    'text-color': '#000',
-                    'text-halo-color': '#fff',
-                    'text-halo-width': 0.75
+                    'text-color': '#fff'
+
+                    //original cluster style:
+                    // 'text-color': '#000',
+                    // 'text-halo-color': '#fff',
+                    // 'text-halo-width': 0.75
                 }
             });
             map.addLayer({
