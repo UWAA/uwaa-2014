@@ -28,7 +28,7 @@ map.on('load', function() {
                 type: 'geojson',
                 data: endPoint,
                 cluster: true,
-                clusterMaxZoom: 12, 
+                clusterMaxZoom: 5, 
                 clusterRadius: 40
             });
             map.addLayer({
@@ -105,7 +105,8 @@ map.on('load', function() {
                 layout: {
                     'icon-image': 'marker',
                     'icon-size': 1,
-                    'icon-allow-overlap': true
+                    'icon-allow-overlap': true,
+                    'icon-ignore-placement': true
                 }
             });
         }
@@ -138,10 +139,6 @@ map.on('mouseleave', 'clusters', function() {
     map.getCanvas().style.cursor = '';
 });
 
-var popup = new mapboxgl.Popup({
-    closeButton: true,
-    closeOnClick: false
-});
 
 map.on('mouseenter', 'unclustered-point', function(e) {
     map.getCanvas().style.cursor = 'pointer';
@@ -150,31 +147,44 @@ map.on('mouseenter', 'unclustered-point', function(e) {
 map.on('click', 'unclustered-point', function(e) {
     map.getCanvas().style.cursor = 'pointer';
 
+    var features = map.queryRenderedFeatures(e.point, {
+        layers: ['unclustered-point']
+    });
+
     var coordinates = e.features[0].geometry.coordinates.slice();
-    if (e.features[0].properties.preliminary === 'preliminary') {
-    var description = '<p class="map-title">' + e.features[0].properties.title +  '</p>' +
-                      '<p class="map-date">' + e.features[0].properties.date +  '</p>' +
-                      '<p class="map-excerpt">' + e.features[0].properties.excerpt +                             
-                      '</p>'; 
+    var offset = 0;
 
-} else {        
-    var description = '<a href="' + e.features[0].properties.link + '">' +
-                    '<p class="map-title">' + e.features[0].properties.title +  '</p>' +                            
-                    '<p class="map-date">' + e.features[0].properties.date +  '</p>' +
-                    '<p class="map-excerpt">' + e.features[0].properties.excerpt + 
-                    '<a class="map-link" href="' + e.features[0].properties.link + '">' +
-                    '</a>' +
-                    '</p></a>'; 
-}
+    features.map(function(feat) {
+        if (feat.properties.preliminary === 'preliminary') {
+            var description = '<p class="map-title">' + feat.properties.title +  '</p>' +
+                            '<p class="map-date">' + feat.properties.date +  '</p>' +
+                            '<p class="map-excerpt">' + feat.properties.excerpt +                             
+                            '</p>'; 
 
-while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-}
+        } else {        
+            var description = '<a href="' + feat.properties.link + '">' +
+                            '<p class="map-title">' + feat.properties.title +  '</p>' +                            
+                            '<p class="map-date">' + feat.properties.date +  '</p>' +
+                            '<p class="map-excerpt">' + feat.properties.excerpt + 
+                            '<a class="map-link" href="' + feat.properties.link + '">' +
+                            '</a>' +
+                            '</p></a>'; 
+        }
+        new mapboxgl.Popup({
+            closeButton: true,
+            closeOnClick: true,
+            // offset: [offset, 0]
+            })
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map); 
+        // offset += 200;
+    });
 
-new mapboxgl.Popup()
-    .setLngLat(coordinates)
-    .setHTML(description)
-    .addTo(map);
+    // while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    //     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    // }
+
 });
 
 map.on('mouseleave', 'unclustered-point', function() {
