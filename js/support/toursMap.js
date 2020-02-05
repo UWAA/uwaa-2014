@@ -28,7 +28,7 @@ map.on('load', function() {
                 type: 'geojson',
                 data: endPoint,
                 cluster: true,
-                clusterMaxZoom: 5, 
+                clusterMaxZoom: 10, 
                 clusterRadius: 40
             });
             map.addLayer({
@@ -125,7 +125,7 @@ map.on('click', 'clusters', function(e) {
             if (err) return;
             map.easeTo({
                 center: features[0].geometry.coordinates,
-                zoom: map.getZoom() + 1
+                zoom: map.getZoom() + 1.5
                 //old zoom would zoom until next cluster level/point, which made it inconsistent
                 //zoom: zoom
             });
