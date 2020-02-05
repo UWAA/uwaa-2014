@@ -125,7 +125,9 @@ map.on('click', 'clusters', function(e) {
             if (err) return;
             map.easeTo({
                 center: features[0].geometry.coordinates,
-                zoom: zoom
+                zoom: map.getZoom() + 1
+                //old zoom would zoom until next cluster level/point, which made it inconsistent
+                //zoom: zoom
             });
         }
     );
