@@ -16,7 +16,7 @@ map.addControl(nav, 'top-left');
 
 var endPoint = homeLink.endpointURL;
 
-map.on('styledata', finishedLoading);
+// map.on('styledata', finishedLoading);
 
 map.on('load', function() {
     map.loadImage(
@@ -109,6 +109,7 @@ map.on('load', function() {
                     'icon-ignore-placement': true
                 }
             });
+            map.on('idle', finishedLoading);
         }
     );
 });
@@ -197,14 +198,19 @@ function isSecure() {
     return location.protocol == 'https:';
 }
 
+var firstLoad = true;
+
 function finishedLoading() {
-    loader.className = 'done';
-    setTimeout(function() {
-        // then, after a half-second, add the class 'hide', which hides
-        // it completely and ensures that the user can interact with the
-        // map again.
-        loader.className = 'hide';
-    }, 100);
+    if (firstLoad) {
+        loader.className = 'done';
+        setTimeout(function() {
+            // then, after a half-second, add the class 'hide', which hides
+            // it completely and ensures that the user can interact with the
+            // map again.
+            loader.className = 'hide';
+        }, 100);
+    }
+    firstLoad = false;
 }
 
 if (isSecure()) {
