@@ -11268,6 +11268,9 @@ Typography
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+.mapboxgl-popup-close-button {
+  font-size: 20px;
+}
 .uwaa-hero-image {
   height: 428px;
   background-size: cover;

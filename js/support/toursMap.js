@@ -6,15 +6,13 @@ var map = new mapboxgl.Map({
     zoom: 0.5, 
     renderWorldCopies: false,
     fadeDuration: 0
-    // bounds:  
-    //   new mapboxgl.LngLatBounds(
-    //   new mapboxgl.LngLat(180, -90),
-    //   new mapboxgl.LngLat(-180, 90)
-    // )
 });
 
-
-map.addControl(new mapboxgl.NavigationControl());
+var nav = new mapboxgl.NavigationControl({
+    showCompass: false,
+    showZoom: true
+});
+map.addControl(nav, 'top-left');
 
 var endPoint = homeLink.endpointURL;
 
@@ -30,8 +28,8 @@ map.on('load', function() {
                 type: 'geojson',
                 data: endPoint,
                 cluster: true,
-                clusterMaxZoom: 12, 
-                clusterRadius: 50
+                clusterMaxZoom: 10, 
+                clusterRadius: 40
             });
             map.addLayer({
                 id: 'clusters',
@@ -42,21 +40,41 @@ map.on('load', function() {
                     'circle-color': [
                         'step',
                         ['get', 'point_count'],
-                        '#f0ddaf',
-                        4,
                         '#b7a57a',
-                        7,
+                        10,
                         '#85754d'
                     ],
                     'circle-radius': [
                         'step',
                         ['get', 'point_count'],
-                        15,
-                        4,
-                        20,
-                        7,
-                        25
+                        25,
+                        10,
+                        30
                     ]
+
+                    //one color one size
+                    // 'circle-color': '#b7a57a',
+                    // 'circle-radius': 25
+
+                    //original cluster style:
+                    // 'circle-color': [
+                    //     'step',
+                    //     ['get', 'point_count'],
+                    //     '#f0ddaf',
+                    //     5,
+                    //     '#b7a57a',
+                    //     10,
+                    //     '#85754d'
+                    // ],
+                    // 'circle-radius': [
+                    //     'step',
+                    //     ['get', 'point_count'],
+                    //     25,
+                    //     5,
+                    //     30,
+                    //     10,
+                    //     35
+                    // ]
                 }
             });
             map.addLayer({
@@ -66,14 +84,17 @@ map.on('load', function() {
                 filter: ['has', 'point_count'],
                 layout: {
                     'text-field': '{point_count_abbreviated}',
-                    'text-font': ['Open Sans Regular', 'Arial Unicode MS Bold'],
+                    'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
                     'text-size': 16,
                     'text-allow-overlap': true
                 },
                 paint: {
-                    'text-color': '#000',
-                    'text-halo-color': '#fff',
-                    'text-halo-width': 0.75
+                    'text-color': '#fff'
+
+                    //original cluster style:
+                    // 'text-color': '#000',
+                    // 'text-halo-color': '#fff',
+                    // 'text-halo-width': 0.75
                 }
             });
             map.addLayer({
@@ -83,10 +104,12 @@ map.on('load', function() {
                 filter: ['!', ['has', 'point_count']],
                 layout: {
                     'icon-image': 'marker',
-                    'icon-size': 0.75,
-                    'icon-allow-overlap': true
+                    'icon-size': 1,
+                    'icon-allow-overlap': true,
+                    'icon-ignore-placement': true
                 }
             });
+            map.on('idle', finishedLoading);
         }
     );
 });
@@ -103,7 +126,9 @@ map.on('click', 'clusters', function(e) {
             if (err) return;
             map.easeTo({
                 center: features[0].geometry.coordinates,
-                zoom: zoom
+                zoom: map.getZoom() + 1.5
+                //old zoom would zoom until next cluster level/point, which made it inconsistent
+                //zoom: zoom
             });
         }
     );
@@ -117,10 +142,6 @@ map.on('mouseleave', 'clusters', function() {
     map.getCanvas().style.cursor = '';
 });
 
-var popup = new mapboxgl.Popup({
-    closeButton: true,
-    closeOnClick: false
-});
 
 map.on('mouseenter', 'unclustered-point', function(e) {
     map.getCanvas().style.cursor = 'pointer';
@@ -129,31 +150,44 @@ map.on('mouseenter', 'unclustered-point', function(e) {
 map.on('click', 'unclustered-point', function(e) {
     map.getCanvas().style.cursor = 'pointer';
 
+    var features = map.queryRenderedFeatures(e.point, {
+        layers: ['unclustered-point']
+    });
+
     var coordinates = e.features[0].geometry.coordinates.slice();
-    if (e.features[0].properties.preliminary === 'preliminary') {
-    var description = '<p class="map-title">' + e.features[0].properties.title +  '</p>' +
-                      '<p class="map-date">' + e.features[0].properties.date +  '</p>' +
-                      '<p class="map-excerpt">' + e.features[0].properties.excerpt +                             
-                      '</p>'; 
+    var offset = 0;
 
-} else {        
-    var description = '<a href="' + e.features[0].properties.link + '">' +
-                    '<p class="map-title">' + e.features[0].properties.title +  '</p>' +                            
-                    '<p class="map-date">' + e.features[0].properties.date +  '</p>' +
-                    '<p class="map-excerpt">' + e.features[0].properties.excerpt + 
-                    '<a class="map-link" href="' + e.features[0].properties.link + '">' +
-                    '</a>' +
-                    '</p></a>'; 
-}
+    features.map(function(feat) {
+        if (feat.properties.preliminary === 'preliminary') {
+            var description = '<p class="map-title">' + feat.properties.title +  '</p>' +
+                            '<p class="map-date">' + feat.properties.date +  '</p>' +
+                            '<p class="map-excerpt">' + feat.properties.excerpt +                             
+                            '</p>'; 
 
-while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-}
+        } else {        
+            var description = '<a href="' + feat.properties.link + '">' +
+                            '<p class="map-title">' + feat.properties.title +  '</p>' +                            
+                            '<p class="map-date">' + feat.properties.date +  '</p>' +
+                            '<p class="map-excerpt">' + feat.properties.excerpt + 
+                            '<a class="map-link" href="' + feat.properties.link + '">' +
+                            '</a>' +
+                            '</p></a>'; 
+        }
+        new mapboxgl.Popup({
+            closeButton: true,
+            closeOnClick: true,
+            // offset: [offset, 0]
+            })
+            .setLngLat(coordinates)
+            .setHTML(description)
+            .addTo(map); 
+        // offset += 200;
+    });
 
-new mapboxgl.Popup()
-    .setLngLat(coordinates)
-    .setHTML(description)
-    .addTo(map);
+    // while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    //     coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    // }
+
 });
 
 map.on('mouseleave', 'unclustered-point', function() {
@@ -164,15 +198,20 @@ function isSecure() {
     return location.protocol == 'https:';
 }
 
-// function finishedLoading() {
-//     loader.className = 'done';
-//     setTimeout(function() {
-//         // then, after a half-second, add the class 'hide', which hides
-//         // it completely and ensures that the user can interact with the
-//         // map again.
-//         loader.className = 'hide';
-//     }, 100);
-// }
+var firstLoad = true;
+
+function finishedLoading() {
+    if (firstLoad) {
+        loader.className = 'done';
+        setTimeout(function() {
+            // then, after a half-second, add the class 'hide', which hides
+            // it completely and ensures that the user can interact with the
+            // map again.
+            loader.className = 'hide';
+        }, 100);
+    }
+    firstLoad = false;
+}
 
 if (isSecure()) {
     var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
