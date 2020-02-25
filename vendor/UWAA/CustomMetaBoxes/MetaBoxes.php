@@ -562,7 +562,7 @@ class MetaBoxes
         protected function add_special_opengraph_tags() {
             new \UWAA\CustomPostData('special_og_tags', array(
                 'title' => 'One-Off OpenGraph Tags',
-                'pages' => array('page', 'post', 'events'),  //add events, regional pages as they are ready
+                'pages' => array('page', 'post', 'events', 'tours'),  //add events, regional pages as they are ready
                 'context' => 'normal',
                 'priority' => 'high',
                 'fields' => array(
