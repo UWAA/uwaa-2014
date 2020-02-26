@@ -469,7 +469,7 @@ class MetaBoxes
                         'desc'=> 'The date this event ends.  This is used to determine thumbnail order on browse pages. Leave blank if the event only occurs on one day.  Formatting is very important.  e.g. 10/19/2014'
                         ),
                     array(
-                     'name' => 'Cosmetic Event Start Date',
+                     'name' => 'Cosmetic Event Date',
                      'id'=> 'cosmetic_date',
                      'type'=> 'text',
                      'desc'=> "Appears over header image and under promotion thumbnails."
