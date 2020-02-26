@@ -460,7 +460,13 @@ class MetaBoxes
                         'name' => 'Start Date',
                         'id'=> 'start_date',
                         'type'=> 'text',
-                        'desc'=> 'The date this event.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
+                        'desc'=> 'The date this event starts.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
+                        ),
+                    array(
+                        'name' => 'End Date',
+                        'id'=> 'end_date',
+                        'type'=> 'text',
+                        'desc'=> 'The date this event ends.  This is used to determine thumbnail order on browse pages. Leave blank if the event only occurs on one day.  Formatting is very important.  e.g. 10/19/2014'
                         ),
                     array(
                      'name' => 'Cosmetic Event Start Date',
