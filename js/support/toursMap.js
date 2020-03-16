@@ -28,7 +28,7 @@ map.on('load', function() {
                 type: 'geojson',
                 data: endPoint,
                 cluster: true,
-                clusterMaxZoom: 10, 
+                clusterMaxZoom: 6, 
                 clusterRadius: 40
             });
             map.addLayer({
@@ -126,9 +126,10 @@ map.on('click', 'clusters', function(e) {
             if (err) return;
             map.easeTo({
                 center: features[0].geometry.coordinates,
-                zoom: map.getZoom() + 1.5
-                //old zoom would zoom until next cluster level/point, which made it inconsistent
-                //zoom: zoom
+                //zooming by set increment is consistent but means multiple click for some points/clusters
+                // zoom: map.getZoom() + 1.5
+                //zoom until next cluster level/point, which made it inconsistent
+                zoom: zoom
             });
         }
     );
@@ -175,7 +176,7 @@ map.on('click', 'unclustered-point', function(e) {
         }
         new mapboxgl.Popup({
             closeButton: true,
-            closeOnClick: true,
+            closeOnClick: false,
             // offset: [offset, 0]
             })
             .setLngLat(coordinates)
