@@ -9275,6 +9275,10 @@ div.map-logo.michigan {
   background: url(assets/headers/Page-Header_Holiday.jpg) center center;
   background-size: cover;
 }
+.uw-hero-image.stay-connected {
+  background: url(assets/headers/Page_Header_StayConnected.jpg) center center;
+  background-size: cover;
+}
 @media only screen and (max-width: 767px) {
   .single-post .uwaa-chapter-header {
     height: 150px;

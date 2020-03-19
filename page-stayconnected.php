@@ -5,7 +5,7 @@ wp_enqueue_script('isotopeInit');
 
 
 
-<div class="uw-hero-image membership"></div>
+<div class="uw-hero-image stay-connected"></div>
 
 <div class="container uw-body">
 
