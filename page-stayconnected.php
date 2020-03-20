@@ -14,7 +14,7 @@ wp_enqueue_script('isotopeInit');
     <div class="col-md-12 uw-content" role='main'>
 
       <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
-      <h2 class="uw-site-title">Resources for Resilient Huskies</h2>
+      <h2 class="uw-site-title">Stronger Together</h2>
 
     <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
       

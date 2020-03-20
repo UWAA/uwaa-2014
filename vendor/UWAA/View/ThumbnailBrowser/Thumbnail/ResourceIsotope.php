@@ -83,8 +83,8 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
   {
     $args = array (
       'post_type' => array('post', 'events', 'benefits'),
-      'orderby' => 'date',
-      'order' => 'DESC',
+      'orderby' => 'title',
+      'order' => 'ASC',
       'posts_per_page' => -1,
       'tax_query' => array(
         'relation' => 'AND',
