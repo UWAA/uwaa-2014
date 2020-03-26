@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.14.7
+ Version: 1.14.8
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -7159,7 +7159,7 @@ a.read-more-link:after {
   padding-top: 0 !important;
 }
 .resource-content {
-  margin-bottom: 140px;
+  margin-bottom: 53px;
 }
 .uwaa-btn {
   width: auto;
@@ -8777,13 +8777,8 @@ div.map-logo.michigan {
   margin-bottom: -44px;
 }
 .uwaa-home-branding-row .uw-breadcrumbs {
-  padding: 20px 13px 0 20px;
+  padding: 5px 13px 0 0;
   white-space: nowrap;
-}
-@media only screen and (max-width: 320px) {
-  .uwaa-home-branding-row .uw-breadcrumbs {
-    padding: 0px 13px 0 5px;
-  }
 }
 .uwaa-home-branding-row .uwaa-home-branding {
   padding-right: 0;
@@ -11529,4 +11524,9 @@ div.slideshow-25114 .uw-slideshow-controls.previous {
 .issuuembed.issuu-isrendered {
   margin-bottom: 70px;
   margin-top: -30px;
+}
+@media only screen and (max-width: 767px) {
+  .uw-body .uw-site-title {
+    margin: 0px -20px 0px -20px;
+  }
 }
