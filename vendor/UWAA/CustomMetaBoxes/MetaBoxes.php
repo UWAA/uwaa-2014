@@ -119,6 +119,12 @@ class MetaBoxes
                         'desc'=> "The price of the tour. E.g. \"From $200\" "
                         ),
                     array(
+                        'name' => 'Tour Operator Phone Number',
+                        'id'=> 'phone number',
+                        'type'=> 'text',
+                        'desc'=> "The Phone number of the tour operator. E.g. \"206-684-5476\" "
+                        ),
+                    array(
                         'name' => 'Thumbnail Callout Box',
                         'id'=> 'thumbnail_callout',
                         'type'=> 'text',
@@ -166,7 +172,7 @@ class MetaBoxes
                     array(
                         'name' => 'Map Pin Location Name',
                         'id'=> 'marker_position',
-                        'type'=> 'text',
+                        'type'=> 'list',
                         'desc'=> "Pin location on the map. If you omit Lat/Long, this will be used to place the marker on the tour map."
                         ),
                     array(
@@ -454,10 +460,16 @@ class MetaBoxes
                         'name' => 'Start Date',
                         'id'=> 'start_date',
                         'type'=> 'text',
-                        'desc'=> 'The date this event.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
+                        'desc'=> 'The date this event starts.  This is used to determine thumbnail order on browse pages.  (upcoming tours/events/etc.)  Formatting is very important.  e.g. 10/19/2014'
                         ),
                     array(
-                     'name' => 'Cosmetic Event Start Date',
+                        'name' => 'End Date',
+                        'id'=> 'end_date',
+                        'type'=> 'text',
+                        'desc'=> 'The date this event ends.  This is used to determine thumbnail order on browse pages. Leave blank if the event only occurs on one day.  Formatting is very important.  e.g. 10/19/2014'
+                        ),
+                    array(
+                     'name' => 'Cosmetic Event Date',
                      'id'=> 'cosmetic_date',
                      'type'=> 'text',
                      'desc'=> "Appears over header image and under promotion thumbnails."
@@ -556,7 +568,7 @@ class MetaBoxes
         protected function add_special_opengraph_tags() {
             new \UWAA\CustomPostData('special_og_tags', array(
                 'title' => 'One-Off OpenGraph Tags',
-                'pages' => array('page', 'post', 'events'),  //add events, regional pages as they are ready
+                'pages' => array('page', 'post', 'events', 'tours'),  //add events, regional pages as they are ready
                 'context' => 'normal',
                 'priority' => 'high',
                 'fields' => array(

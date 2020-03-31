@@ -3,10 +3,12 @@
     // build Jquery object of all the links  to the member store 
 
     var $joinLinks = $('a[href]').filter(function (index) {
-        return $(this).attr('href').includes('join-or-renew')
+        return $(this).attr('href').includes('cyber')
     });
 
-    // // Parse the current URL
+    
+
+    // Parse the current URL
     // var urlParameters = ( new URL(document.location).searchParams );
 
     // // remove UTM tags, if present

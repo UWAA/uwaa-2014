@@ -30,8 +30,8 @@ class Scripts
       'admin' => array (
         'id'      => 'uwaa.wp.admin',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/admin/admin.js',
-        'deps'    => array(),
-        'version' => '1.0',
+        'deps'    => array('mapbox-gl-js'),
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => true
       ),
@@ -48,6 +48,14 @@ class Scripts
           'version' => '2.1.2',
           'admin'   => false
       ),
+      
+      'mapbox-gl-js' => array(
+        'id'      => 'mapbox-gl-js',
+        'url'     => 'https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css',
+        'deps'    => array(),
+        'version' => '1.6.1',
+        'admin'   => true
+    ),
 
     );
 
@@ -86,6 +94,15 @@ class Scripts
         'admin'   => false
       ),
 
+      'mapbox-gl-js'   => array (
+        'id'      => 'mapbox-gl-js',
+        'url'     => "https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js",
+        'deps'    => array(),
+        'version' => '1.6.1',
+        'in_footer' => false,
+        'admin'   => true
+      ),
+
       'seattleMap'   => array (
         'id'      => 'seattleMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/seattle_map' . $this->min_script() . '.js',
@@ -117,8 +134,8 @@ class Scripts
        'toursMap' => array (
         'id'      => 'toursMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/toursMap' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),
-        'version' => '1.0',
+        'deps'    => array('mapbox-gl-js'),
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
 
@@ -252,9 +269,25 @@ class Scripts
         'in_footer' => true,
         'admin'   => false
       ),
+      'cyberAppealCodePreservation' => array (
+        'id'      => 'cyberAppealCodePreservation',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/cyberAppealCodePreservation' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+      ),
       'oregonMailingListEmailForm' => array (
         'id'      => 'oregonMailingListEmailForm',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/oregonMailingListEmailForm' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+      'homepageSnow' => array (
+        'id'      => 'homepageSnow',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/homepageSnow' . $this->min_script() . '.js',
         'deps'    => array('jquery'),
         'version' => '1.0',
         'in_footer' => true,
@@ -330,7 +363,9 @@ class Scripts
       if ( ! is_admin() )
         return;
 
-      foreach ( $this->SCRIPTS as $script )
+      $allScripts = array_merge($this->SCRIPTS, $this->SUPPORT_SCRIPTS);
+
+      foreach ( $allScripts as $script )
       {
         $script = (object) $script;
 

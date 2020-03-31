@@ -51,6 +51,7 @@ class UWAA
         new \UWAA\Taxonomies\Events;
         new \UWAA\Taxonomies\Benefits;
         new \UWAA\Taxonomies\AppRegionalTag;
+        new \UWAA\Taxonomies\Resources;
 
         //Relabels Tags
         new \UWAA\Taxonomies\RenameTags;

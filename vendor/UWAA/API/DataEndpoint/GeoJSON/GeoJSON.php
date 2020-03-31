@@ -11,7 +11,8 @@ class GeoJSON {
     function __construct() 
     {
         $this->mapBoxToken = $_ENV['MapboxAPIToken'];
-        $this->mapBoxEndpoint = "http://api.tiles.mapbox.com/v4/geocode/mapbox.places-v1/";
+        // $this->mapBoxEndpoint = "http://api.tiles.mapbox.com/v4/geocode/mapbox.places-v1/";
+        $this->mapBoxEndpoint = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
         $this->endpointData = array();
     }
    
@@ -32,14 +33,15 @@ class GeoJSON {
         $token = $this->mapBoxToken;
         $query = urlencode($string);
         $endpoint = $this->mapBoxEndpoint;
-        $url = $endpoint . $query . ".json?access_token=" . $token;
+        // $url = $endpoint . $query . ".json?access_token=" . $token;
+        $url = $endpoint . $query . ".json?fuzzyMatch=false&access_token=" . $token;
      
         $input = file_get_contents($url);
         $result = json_decode($input);
     
         if (empty($result->features))
         {
-            return array (1,1);  //@TODO Hacky...
+            return array (1000,1000);  //@TODO Hacky...
         }
     
     $coordinates = $result->features{0}->center;
@@ -69,8 +71,9 @@ class GeoJSON {
           $coordinates = $this->lookupCoordinatesFromString($tourTitle);
           
           return $coordinates;
-      } else {
-        return array(1,1);
+      } 
+      else {
+        return array(1000,1000);
       }
     }
 

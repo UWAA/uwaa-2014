@@ -18,6 +18,13 @@ class Styles
           'version' => '2.1.2',
           'admin'   => false
       ),
+      'mapbox-gl-js' => array(
+        'id'      => 'mapbox-gl-js',
+        'url'     => 'https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css',
+        'deps'    => array(),
+        'version' => '1.6.1',
+        'admin'   => false
+    ),
       'gradpack' => array(
           'id'      => 'gradpack',
           'url'     => get_bloginfo('stylesheet_directory') . '/gradpack.css',

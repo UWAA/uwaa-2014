@@ -6,6 +6,8 @@ UW.HomepageSlider = Backbone.View.extend({
 
   headline : '.next-headline',
 
+  controls: '.slideshow-controls',
+
   template : '<p class="next-headline slide-<%= slide %>" style="display:block;"><%= title %></p>',
 
   events : {
@@ -35,6 +37,7 @@ UW.HomepageSlider = Backbone.View.extend({
   showNextHeadline : function()
   {
     this.$el.find( this.headline ).show()
+    this.$el.find( this.controls ).show()
   },
 
   changeNextArticle: function()
@@ -60,6 +63,7 @@ UW.HomepageSlider = Backbone.View.extend({
 })
 
 UW.HomepageSlider.initialize = function() {
+  console.log($('.uw-homepage-slider').length);
   if ( $('.uw-homepage-slider').length  > 1 )
     UW.homepageslider = new UW.HomepageSlider();
 }

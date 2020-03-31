@@ -2,8 +2,21 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
+    "version": "0.2.0",    
     "configurations": [
+        {
+            "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe"
+        },
+        {
+            "type": "firefox",
+            "request": "attach",
+            "name": "Attach - uwalum.test",
+            "host": "localhost",            
+            "pathMappings": [{
+                "url" : "https://uwalum.test",
+                "path": "${workspaceFolder}"
+            }]
+        },        
         {
             "name": "Listen for XDebug",
             "type": "php",
@@ -11,7 +24,7 @@
             "port": 9000,
             // server -> local
             "pathMappings": {
-                "/srv/www/uwalum-test/public_html": "k:\\env\\wordpress\\www\\uwalum-test\\public_html"
+                "/srv/www/wordpress-one/public_html": "k:\\env\\wordpress\\www\\wordpress-one\\public_html"
                 // "e:/garbage": "/srv/www/"
             }
         },

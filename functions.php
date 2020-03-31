@@ -128,10 +128,19 @@ function load_page_specific_scripts() {
               wp_enqueue_script('uwaa_fevo');                
               break;
             case 'be-a-member' :
-              wp_enqueue_script('appealCodePreservation');
+              wp_enqueue_script('cyberAppealCodePreservation');
+              break;
+            case 'membership' :
+              wp_enqueue_script('cyberAppealCodePreservation');
+              break;
+            case 'join-or-renew' :
+              wp_enqueue_script('cyberAppealCodePreservation');
               break;
             case 'oregon':
               wp_enqueue_script('oregonMailingListEmailForm');
+              break;            
+            case 'holidays':
+              wp_enqueue_script('homepageSnow');
               break;
         }
     } 

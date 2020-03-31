@@ -89,18 +89,31 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
       'order' => 'ASC',
       'meta_key' => 'mb_start_date',
       'meta_query' => array(
-        'key' => 'mb_start_date',
-        'type' => 'DATE',
-        'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
-        'compare' => '>=', // Return the ones greater than today's date
-      ),
+        'relation' => 'OR',
+        array(
+          'key' => 'mb_start_date',
+          'type' => 'DATE',
+          'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
+          'compare' => '>=', // Return the ones greater than today's date
+        ),
+        array(
+          'relation' => 'AND',
+          array(
+            'key' => 'mb_start_date',
+            'type' => 'DATE',
+            'value' => date("Y-m-d", strtotime("now") ), // Set today's date (note the similar format)
+            'compare' => '<=', // Return the ones greater than today's date
+          ),
+          array(
+            'key' => 'mb_end_date',
+            'type' => 'DATE',
+            'value' => date("Y-m-d", strtotime("now") ), // Set today's date (note the similar format)
+            'compare' => '>=', // Return the ones greater than today's date
+          )
+        )
+              ),
       'tax_query' => array(
-        'relation' => 'AND',
-        // array(
-        //   'taxonomy' => 'destinations',
-        //   'field'    => 'name',
-        //   'terms'    => array( 'asia')
-        // ),
+        'relation' => 'AND',        
         array(
           'taxonomy' => 'category',
           'field'    => 'slug',
