@@ -39,10 +39,10 @@ endif;
             <div class="row-title-row">
                   <div class="row-hr"></div>
                   <div class="row-title-text">
-                      <h2>upcoming events</h2>
+                      <h2>upcoming digital&nbsp;events</h2>
                   </div>                  
 
-                  <a class="see-all-link" href="<?php echo home_url( '/events'); ?>">see all events</a>
+                  <a class="see-all-link" href="<?php echo home_url( '/events'); ?>">see all digital events</a>
 
              </div>
               <?php
