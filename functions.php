@@ -142,6 +142,10 @@ function load_page_specific_scripts() {
             case 'holidays':
               wp_enqueue_script('homepageSnow');
               break;
+            case 'zoom-backgrounds-for-huskies':
+              wp_enqueue_script('trackImageDownloads');
+            break;
+
         }
     } 
 }

@@ -8,6 +8,10 @@ var AlumniGoogleAnalyticsTracking = (function($) {
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+      if (location.hostname == 'uwalum.test') {
+        ga('set', 'sendHitTask', null);
+      }
+
       ga('create', 'UA-1576494-1', 'auto');
       ga('send', 'pageview');    
 
@@ -20,6 +24,15 @@ var AlumniGoogleAnalyticsTracking = (function($) {
         'Podcast Play',
         label
         )
+    },
+
+    fileDownload: function (label) {
+      ga('send',
+        'event',
+        'Image Download',
+        label,
+        'Downloaded'        
+      )
     },
 
 
