@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.14.6
+ Version: 1.14.7
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11260,6 +11260,9 @@ Typography
   opacity: .6;
   display: block;
   visibility: visible;
+}
+.page-strongertogether p {
+  margin: 0 0 80px;
 }
 .wistia_responsive_padding {
   margin-bottom: 10px;
