@@ -8511,6 +8511,11 @@ div.map-logo.michigan {
     width: 1140px;
   }
 }
+@media only screen and (min-width: 991px) {
+  .uw-homepage-slider-container .uw-homepage-slider .hero-container .title {
+    font-size: 50px;
+  }
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .uw-homepage-slider-container .uw-homepage-slider .hero-container {
     width: 880px;
@@ -11250,6 +11255,9 @@ Typography
   opacity: .6;
   display: block;
   visibility: visible;
+}
+.page-strongertogether p {
+  margin: 0 0 80px;
 }
 .wistia_responsive_padding {
   margin-bottom: 10px;
