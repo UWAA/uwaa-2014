@@ -218,6 +218,23 @@
          }
     }
 
+    //centering tiles
+    .post-thumbnail-slide {
+        @media screen and (max-width: 1200px) {
+            margin-left: 23px;
+        }
+
+        @media screen and (max-width: 991px) {
+            margin-left: calc(~"(100% - 550px)/4");
+            margin-right: calc(~"(100% - 550px)/4");
+         }
+
+
+         @media screen and (max-width: 599px) {
+            margin-left: calc(~"(100% - 275px)/2");
+         }
+    }
+
     .post-type-archive-benefits {
     .copy {
     height: 220px;
