@@ -292,6 +292,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
+      ),
+      'trackImageDownloads' => array (
+        'id'      => 'trackImageDownloads',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/trackImageDownloads' . $this->min_script() . '.js',
+        'deps'    => array(),
+        'version' => '2.0',
+        'in_footer' => true,
+        'admin'   => false
       )
 
       

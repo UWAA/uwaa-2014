@@ -144,6 +144,10 @@ TOOLBAR;
         $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All Stories</li>';
       }
 
+      if ($typeOfToolbar == 'Events') {
+        $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All Digital Events</li>';
+      }
+
 
       $terms = get_terms(strtolower($typeOfToolbar));
 
