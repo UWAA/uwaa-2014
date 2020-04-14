@@ -61,16 +61,7 @@ else {
 
       </div>
 
-    </div>
-    <div class="col-md-4 uw-sidebar">
-    <?php 
-        echo sprintf( '<nav id="desktop-relative" aria-label="mobile menu that is not visible in the desktop version" class="uwaa-hidden-xs-up">%s</nav>', uw_list_pages() );;
-        // echo '<nav id="desktop-relative" role="navigation" aria-label="relative">';
-        // uwaa_list_pages();
-        // echo '</nav>';
-        dynamic_sidebar( 'about_sidebar' ); 
-    ?>
-    </div>
+    </div>    
 
   </div>
 
