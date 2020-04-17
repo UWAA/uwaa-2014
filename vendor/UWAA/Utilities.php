@@ -33,6 +33,7 @@ class Utilities
         add_action('wp_head', array($this, 'hidePage'), 4);
         add_action('wp_head', array($this, 'addFacebookPixel'), 5);
         add_filter('ppp_nonce_life', array($this, 'extendPreviewTime') );
+        add_action( 'wp_body_open', array($this, 'addGTMNoscriptTracking' ) );
         
 
         $this->addExcerptsToPosts();
@@ -413,6 +414,14 @@ public function overwriteCTAButtonLink($post_permalink) {
 
     public function extendPreviewTime() {
         return 60 * 60 * 24 * 7;
+    }
+
+
+    public function addGTMNoscriptTracking() {
+        echo '<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PKKG9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->';
     }
     
 

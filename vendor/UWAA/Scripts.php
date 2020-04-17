@@ -35,6 +35,14 @@ class Scripts
         'in_footer' => true,
         'admin'   => true
       ),
+      'googleTagManager' => array (
+        'id'      => 'googleTagManager',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/googleTagManager' . $this->min_script() . '.js',
+        'deps'    => array(),
+        'version' => '2.0',
+        'in_footer' => false,
+        'admin'   => false
+      )
 
 
     ));
@@ -300,7 +308,7 @@ class Scripts
         'version' => '2.0',
         'in_footer' => true,
         'admin'   => false
-      )
+      )   
 
       
 
