@@ -21,6 +21,7 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postExcerpt;
     protected $postImageAltText;
     protected $postTags;
+    protected $alternateURL;
 
 
     public function __construct()
@@ -40,12 +41,13 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postURL = get_permalink();
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');
-        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));;
+        $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
+        $this->alternateURL = strip_tags(get_post_meta(get_the_ID(), 'mb_alternate_link', true));
 
 
 
@@ -104,16 +106,23 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
     return $args;
   }
 
+  private function getURL() {
+    if($this->alternateURL != ""){
+      return $this->alternateURL;
+    }
+    return $this->postURL;
+  }
+
 
   public function buildTemplate(){
     $callout = $this->renderCallout();
     $image = $this->renderImage(true);
-    $link = $this->postURL;
+    $link = $this->getURL();
     $date = $this->renderDate();
     $tags= $this->renderTags();
 	$template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms">
-	<a href="$this->postURL" title="$this->postTitle">
+	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
       $callout
 		  $image
