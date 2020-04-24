@@ -173,7 +173,7 @@ class CustomPostData {
             $value = get_post_meta(isset($post_id) ? $post_id : $post->ID, self::$prefix . $name, $single);
 
 
-                if ($value) {
+                if ($value && $value != "" && !is_array($value)) {
                     $displayValue = date_create_from_format('Ymd', $value);
                         if (!$displayValue) {
                             return 'Error with date';
@@ -191,10 +191,12 @@ class CustomPostData {
         global $post;
 
         $id = (isset($post_id)) ? $post_id : $post->ID;
-        if ($name == 'start_date' or $name == 'end_date'){
+        if ($name == 'start_date' or $name == 'end_date'){            
             $formattedDate = date_create($new);
             if (!$formattedDate) {
                 $new = "Check your format";
+            } else if ($new == "") {
+                $new = "";
             } else {
                 $new = date_format( $formattedDate, 'Ymd');
             }
