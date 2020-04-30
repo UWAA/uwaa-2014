@@ -131,7 +131,7 @@ if (array_key_exists('SUCCESSMESSAGEONLY', $parentPageParams) && $parentPagePara
           while ( have_posts() ) : the_post();
 
             /*
-             * Include the post format-specific template for the content. If you want to
+             * Include the post format-specific template for the content. If you wanp,t to
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
@@ -145,12 +145,14 @@ if (array_key_exists('SUCCESSMESSAGEONLY', $parentPageParams) && $parentPagePara
 		<div style="margin-top:40px;">
 
         <?php if ($oneClickSubmission) {
-          echo "We have your address on file. Happy 509 Day!";
+          echo "We will send your gift to the address we have on file. Happy 509 Day!";
         } elseif ($successMessageOnly) {
           echo "We have received your address. Happy 509 Day!";
         } else {
 
         ?>
+
+		<h2>Please enter your current mailing address.</h2>
         <script src="//app-sj19.marketo.com/js/forms2/js/forms2.min.js"></script>
 <form id="mktoForm_1065">
 <noscript>Please make sure JavaScript is enabled to fill out the sign up form.</noscript>
