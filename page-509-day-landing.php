@@ -70,7 +70,7 @@ else {
 
         ?>
 
-		<h2>Please enter your current mailing address.</h2>
+		<h2>Please enter your current mailing address</h2>
         <script src="//app-sj19.marketo.com/js/forms2/js/forms2.min.js"></script>
 <form id="mktoForm_1065">
 <noscript>Please make sure JavaScript is enabled to fill out the sign up form.</noscript>
