@@ -59,36 +59,9 @@ else {
 
           
         ?>
-
-		<div style="margin-top:40px;">
-
-        <?php if ($oneClickSubmission) {
-          echo "We will send your gift to the address we have on file. Happy 509 Day!";
-        } elseif ($successMessageOnly) {
-          echo "We have received your address. Happy 509 Day!";
-        } else {
-
-        ?>
-
-		<h2>Please enter your current mailing address</h2>
-        <script src="//app-sj19.marketo.com/js/forms2/js/forms2.min.js"></script>
-<form id="mktoForm_1065">
-<noscript>Please make sure JavaScript is enabled to fill out the sign up form.</noscript>
-</form>
-<script>
-if (typeof MktoForms2 === 'undefined') {
-  console.log('no bueno');
-  document.getElementById('mktoForm_1065').textContent = 'Your browser settings are preventing our form from being displayed.';
-} else {
-  MktoForms2.loadForm("//app-sj19.marketo.com", "131-AQO-225", 1065);
-}
-
-</script>
-        <?php }  //end else ?>
-
-
+		
         
-      </div>
+      
 	  </div>
       </div>
     </div>
