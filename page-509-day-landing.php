@@ -39,7 +39,7 @@ else {
 
     <div class="col-md-12 uw-content" role='main'>    
 
-  <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
+  <?php // get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
 
   
       <div class="uw-body-copy">
