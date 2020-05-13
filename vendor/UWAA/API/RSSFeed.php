@@ -102,7 +102,7 @@
             
            
             
-            if (!is_admin() && $query->is_feed() ) {
+            if (!is_admin() && $query->is_feed() && $query->query['post_type'] == 'events' ) {
                 
                  $appendedMeta = array(
                         'key'     => 'mb_start_date',
