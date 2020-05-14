@@ -308,7 +308,15 @@ class Scripts
         'version' => '2.0',
         'in_footer' => true,
         'admin'   => false
-      )   
+      ),
+      'starsAwardsSearch' => array (
+        'id'      => 'starsAwardsSearch',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/starsAwardsSearch' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+      )
 
       
 
