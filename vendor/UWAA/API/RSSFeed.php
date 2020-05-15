@@ -90,11 +90,34 @@
              );
 
               add_action('request', array($this, 'removePrivateItemsFromFeed'));
+              add_action('pre_get_posts', array($this, 'removeEventsWithNoDateFromFeed'));
               add_action('rss2_item', array($this, 'addFeedAugmentations'));
               add_action('rss2_item', array($this, 'addFeaturedPostThumbnailToFeed'));
               add_action('rss2_item', array($this, 'addPostTypeDeclarationToFeed'));
               add_action('rss2_ns', array($this, 'addUWAANamespaceToFeed'));
 
+          }
+
+          public function removeEventsWithNoDateFromFeed($query) {
+            
+           
+            
+            if (!is_admin() && $query->is_feed() && $query->query['post_type'] == 'events' ) {
+                
+                 $appendedMeta = array(
+                        'key'     => 'mb_start_date',
+                        'value'   => '',
+                        'compare' => '!='
+                );
+            
+                
+                $query->set('meta_key', 'mb_start_date');
+                $query->set('orderby', 'ASC');
+                $query->set('meta_query', array($appendedMeta));                
+                return $query;
+            }
+            
+            return $query;
           }
 
           public function removePrivateItemsFromFeed($request){
@@ -107,8 +130,6 @@
                     $exclusionID[]= $term->term_id;
                 }
             }
-
-            
 
             
             if ($request["feed"] === "feed") {
@@ -201,7 +222,9 @@
 
           private function addMetaValuesToFeed($metaValues) {
 
-              foreach($metaValues as $value)
+              
+            
+            foreach($metaValues as $value)
               {
 
                   if ($content = get_post_meta(get_the_id() , $value, true))
