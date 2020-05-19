@@ -1,6 +1,14 @@
-.grid {
+.page-star-awards{
+
+    .uw-body{
+        &.container {
+            .container-fluid;
+        }
+    }
+
+    .grid {
     width: 100%;
-    max-width: 1240px;
+    max-width: 1600px;
     margin: 0 auto;
      
     display: grid;
@@ -10,39 +18,46 @@
     grid-gap: 15px;
 }
 
-@media only screen and (min-width: 450px) {
+@media only screen and (min-width: 768px) {
     .grid {
       grid-template-columns: 1fr 1fr;
     }  
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1142px) {
     .grid {
       grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1538px) {
     .grid {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
-@media only screen and (min-width: 1200px) {
-    .grid {
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-}
-
 .flip-card {
     background-color: transparent;
-    width: 200px;
-    height: 250px;
+    width: 375px;
+    height: 375px;
     perspective: 1000px;
     text-align: center;
-    p,h1 {
-        color: white;
+    p,h1 {        
         vertical-align: middle;
+        color: @white;
+    }
+
+    &:nth-child(even) {
+        .flip-card-inner {
+            .flip-card-front, .flip-card-back{
+                background-color: @lightgold;
+                p, h1{
+                    color: @janegray;
+                }
+                
+            }
+        }
+        
     }
 }
   
@@ -53,6 +68,7 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: @white;
 }
   
 .flip-card:hover .flip-card-inner {
@@ -69,11 +85,27 @@
   
 .flip-card-front {
     background-color: #4b2e83;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;    
+    padding: 15px;
+    text-align: left;
+    
+    .first {
+        width: 100%;
+        font-size: 2vw;
+    }
+
+    .last {
+        width: 100%;
+        font-size: 3.5vw;
+        
+    }
+
+    .unit {
+        font-size: 1vw;
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+    }
 }
   
 .flip-card-back {
@@ -83,9 +115,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
+    font-size: 2vw;
 }
 
 #search {
-    width: 100%;
+    width: 25%;
     margin-bottom: 10px;
 }
+
+}
+

@@ -33,7 +33,10 @@ else {
 
       <div class="uw-body-copy">
       
+      
         <?php
+
+        
         
           // Start the Loop.
           while ( have_posts() ) : the_post();
@@ -62,77 +65,11 @@ else {
     <input id="search" type=text placeholder="Search">
 
     <div id="cards">
-    <div class ="grid">    
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>John Doe</h1>
-                </div>
-                <div class="flip-card-back">
-                    <p>Some amazing quote</p>
-                </div>
-            </div>
-        </div>
-      <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>John A</h1>
-                </div>
-                <div class="flip-card-back">
-                    <p>Some amazing quote</p>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>John Smith</h1>
-                </div>
-                <div class="flip-card-back">
-                    <p>Some amazing quote</p>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>Name Name</h1>
-                </div>
-                <div class="flip-card-back">
-                    <p>Some amazing quote</p>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>First Last</h1>
-                </div>
-                <div class="flip-card-back">
-                    <p>Some amazing quote</p>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>Blah Blah</h1>
-                </div>
-                <div class="flip-card-back">
-                    <p>Some amazing quote</p>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <h1>Another Name</h1>
-                </div>
-                <div class="flip-card-back">
-                    <p>Some amazing quote</p>
-                </div>
-            </div>
-        </div>
+        <div class ="grid">
+      
+            <?php $UWAA->UI->makeStarAwardCards(); ?>
+       
+        
         </div>  
     </div>
 

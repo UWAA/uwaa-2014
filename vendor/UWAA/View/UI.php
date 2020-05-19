@@ -119,6 +119,51 @@ class UI
         return new ChapterSidebarContent;
     }
 
+    private function splitNames($name){
+ 
+        $arr = explode(',', $name);
+        $num = count($arr);
+        $first_name = $middle_name = $last_name = null;
+
+        if ($num == 2) {
+            list($last_name, $first_name) = $arr;
+        } else {
+            list($last_name, $first_name, $middle_name) = $arr;
+        }
+
+        return (empty($first_name) || $num > 3) ? false : compact(
+            'first_name', 'middle_name', 'last_name'
+        );
+
+    }
+
+    public function makeStarAwardCards() {
+        $awardees = json_decode(file_get_contents(get_stylesheet_directory() . '/awardees.json', true));
+
+        if (is_array($awardees)) {
+            shuffle($awardees);
+            foreach ($awardees as $awardee) {
+                // fix the gd name
+                $formattedName = $this->splitNames($awardee->nominee);
+                ?>
+                <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3 class="first"><?php echo $formattedName['first_name'] ?></h3>
+                    <h3 class="last"><?php echo $formattedName['last_name'] ?></h3>
+                    <h4 class="unit"><?php echo $awardee->unit ?></h4>
+                </div>
+                <div class="flip-card-back">
+                    <p><?php echo $awardee->quote ?></p>
+                </div>
+            </div>
+        </div>
+
+                <?php
+            }
+        }
+    }
+
 
 
 } 
