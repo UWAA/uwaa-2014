@@ -8,31 +8,34 @@
 
     .grid {
     width: 100%;
-    max-width: 1600px;
+    // max-width: 1600px;
     margin: 0 auto;
      
     display: grid;
      
-    grid-template-columns: 1fr;
+    grid-template-columns: 375px;
     grid-template-rows: auto;
-    grid-gap: 15px;
+    grid-gap: 4px;
 }
 
 @media only screen and (min-width: 768px) {
     .grid {
-      grid-template-columns: 1fr 1fr;
+    //   grid-template-columns: 1fr 1fr;
+        grid-template-columns: 375px 375px;
     }  
 }
 
 @media only screen and (min-width: 1142px) {
     .grid {
-      grid-template-columns: 1fr 1fr 1fr;
+    //   grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 375px 375px 375px;
     }
 }
 
 @media only screen and (min-width: 1538px) {
     .grid {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+    //   grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 375px 375px 375px 375px;
     }
 }
 
@@ -52,7 +55,7 @@
             .flip-card-front, .flip-card-back{
                 background-color: @lightgold;
                 p, h1{
-                    color: @janegray;
+                    color: white;
                 }
                 
             }
@@ -91,20 +94,27 @@
     
     .first {
         width: 100%;
-        font-size: 2vw;
+        // font-size: 2vw;
+        font-size: 40px;
+        line-height: 0.5;
+        padding-top: 30px;
     }
 
     .last {
         width: 100%;
-        font-size: 3.5vw;
-        
+        // font-size: 3.5vw;
+        font-size: 70px;
     }
 
     .unit {
-        font-size: 1vw;
+        // font-size: 1vw;
+        font-size: 23px;
         position: absolute;
         right: 15px;
         bottom: 15px;
+        font-weight: 600;
+        text-align: right;
+        padding: 0 5px;
     }
 }
   
@@ -117,6 +127,12 @@
     align-items: center;
     padding: 15px;
     font-size: 2vw;
+    p {
+        font-family: "Open Sans";
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.5;
+    }
 }
 
 #search {
