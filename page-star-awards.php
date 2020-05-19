@@ -5,16 +5,31 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
 
 
-<div class="uw-hero-image star-awards"></div>
+<?php
+$featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
 
-<div class="container uw-body">
+if ($featureImage) { ?>
+<div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
+
+<?php    
+}
+else {
+  $defaultHeader = TRUE;
+  get_template_part( 'header', 'image' ); 
+}
+
+?>
+
+
+
+<div class="container-fluid uw-body">
+
+<h2 class="uw-site-title">Star Awards</h2>
 
   <div class="row">
 
     <div class="col-md-12 uw-content" role='main'>
-    
-
-  <?php get_template_part('partials/sidebar', 'page-breadcrumbs') ?>
+  
 
       <div class="uw-body-copy">
       
