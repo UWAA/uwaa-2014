@@ -5,27 +5,35 @@
     "version": "0.2.0",    
     "configurations": [
         {
-            "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe"
+            "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe",        
+            "type": "firefox",
+            "request": "launch",
+            "name": "JavaScript DB - uwalum.test",
+            "url": "http://uwalum.test/",
+            "webRoot": "${workspaceFolder}",
+            "log": {
+                "fileName": "${workspaceFolder}/vscode-firefox-debug.log",
+                "fileLevel": {
+                    "default": "Debug"
+                },
+                "consoleLevel": {
+                    "default": "Warn"
+                }
+            },
+            "pathMappings": [               
+                {
+                    "url": "http://uwalum.test",
+                    "path": "k:/env/wordpress/www/wordpress-one/public_html"
+                }
+            ]
         },
         {
-            "type": "firefox",
-            "request": "attach",
-            "name": "Attach - uwalum.test",
-            "host": "localhost",            
-            "pathMappings": [{
-                "url" : "https://uwalum.test",
-                "path": "${workspaceFolder}"
-            }]
-        },        
-        {
-            "name": "Listen for XDebug",
+            "name": "php Debug - uwalum.test",
             "type": "php",
             "request": "launch",
             "port": 9000,
-            // server -> local
             "pathMappings": {
                 "/srv/www/wordpress-one/public_html": "k:\\env\\wordpress\\www\\wordpress-one\\public_html"
-                // "e:/garbage": "/srv/www/"
             }
         },
         {
