@@ -11350,7 +11350,7 @@ Typography
 }
 .page-star-awards .grid {
   width: 100%;
-  margin: 10px auto;
+  margin: 10px 0;
   display: grid;
   grid-template-columns: 375px;
   grid-template-rows: auto;
