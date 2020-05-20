@@ -11290,7 +11290,7 @@ Typography
 }
 .page-star-awards .star-site-title {
   padding: 50px;
-  color: #a09494;
+  color: #ffffff;
   font-family: "Encode Sans Compressed", sans-serif;
   font-size: 50px;
   line-height: 55px;
@@ -11350,7 +11350,7 @@ Typography
 }
 .page-star-awards .grid {
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
   display: grid;
   grid-template-columns: 375px;
   grid-template-rows: auto;
@@ -11369,6 +11369,11 @@ Typography
 @media only screen and (min-width: 1538px) {
   .page-star-awards .grid {
     grid-template-columns: 375px 375px 375px 375px;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .page-star-awards .grid {
+    grid-template-columns: 375px 375px 375px 375px 375px;
   }
 }
 .page-star-awards .flip-card {
@@ -11421,13 +11426,14 @@ Typography
 }
 .page-star-awards .flip-card-front .first {
   width: 100%;
-  font-size: 40px;
-  line-height: 0.5;
+  font-size: 38px;
+  line-height: 1;
   padding-top: 30px;
 }
 .page-star-awards .flip-card-front .last {
   width: 100%;
-  font-size: 70px;
+  font-size: 63px;
+  line-height: .75;
 }
 .page-star-awards .flip-card-front .unit {
   font-size: 23px;
@@ -11445,8 +11451,14 @@ Typography
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 15px;
   font-size: 2vw;
+}
+.page-star-awards .flip-card-back .reverse-name {
+  font-family: 'Encode Sans Compressed', sans-serif;
+  font-weight: 600;
+  font-size: .7em;
 }
 .page-star-awards .flip-card-back p {
   font-family: "Open Sans";
@@ -11456,7 +11468,7 @@ Typography
 }
 .page-star-awards #search {
   width: 25%;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .page-strongertogether p {
   margin: 0 0 80px;

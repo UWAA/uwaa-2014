@@ -136,6 +136,7 @@ class UI
         );
 
     }
+    
 
     public function makeStarAwardCards() {
         $awardees = json_decode(file_get_contents(get_stylesheet_directory() . '/awardees.json', true));
@@ -149,11 +150,12 @@ class UI
                 <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <h3 class="first"><?php echo $formattedName['first_name'] ?></h3>
+                    <h3 class="first"><?php echo ($formattedName['first_name'] == false) ? $awardee->nominee : $formattedName['first_name'] ?></h3>
                     <h3 class="last"><?php echo $formattedName['last_name'] ?></h3>
                     <h4 class="unit"><?php echo $awardee->unit ?></h4>
                 </div>
                 <div class="flip-card-back">
+                    <p class="reverse-name"><?php echo $formattedName['first_name'] . ' ' . $formattedName['last_name']  ?></p>
                     <p><?php echo $awardee->quote ?></p>
                 </div>
             </div>

@@ -5,7 +5,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
 
 <div class="uw-hero-image star-awards">
-  <h2 class="star-site-title">2020 Star Awards</h2>
+  <h2 class="star-site-title">2020 Advancement Star Awards</h2>
 
 </div>
 
@@ -50,7 +50,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
           
         ?>
 
-    <input id="search" type=text placeholder="Search">
+    <input id="search" type=text placeholder="Find an Advancement star">
 
     <div id="cards">
         <div class ="grid">
@@ -66,38 +66,6 @@ wp_enqueue_script(array('starsAwardsSearch'));
     
   </div>
 </div>
-
-<!-- Handlebars Templates -->
-
-<!-- Index View  -->
-<script id="membershipIndexTile" type="text/x-handlebars-template">
-    {{#each []}}
-    <div class="membership-option-tile">
-       <h2>{{this.title}}</h2>
-       <h2>Membership</h2>
-    <div>
-    {{/each}}
-</script>
-
-
-
-<!-- Tile View  -->
-<script id="membershipTile" type="text/x-handlebars-template">
-    {{#each []}}
-    <div class="membership-option-tile">
-       <h2>{{this.title}}</h2>
-       <h2>Membership</h2>
-    <div>
-    {{/each}}
-</script>
-
-<!-- Thumbnails -->
-<script id="membershipThumbnails" type="text/x-handlebars-template">
-    <div class="membership-option-tile">
-       <span class"thumbnail"> You have Chosen: </span>
-    <div>
-</script>
-
 
 
 <?php get_footer(); ?>
