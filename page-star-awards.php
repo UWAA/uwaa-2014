@@ -4,32 +4,20 @@ wp_enqueue_script(array('starsAwardsSearch'));
 ?>
 
 
+<div class="uw-hero-image star-awards">
+  <h2 class="star-site-title">2020 Star Awards</h2>
 
-<?php
-$featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original');
-
-if ($featureImage) { ?>
-<div class="uwaa-hero-image <?php echo get_post_meta(get_the_id(), 'mb_header_text_color', true); ?> " style="background-image:url('<?php $UWAA->UI->getPostFeaturedImageURL(get_post_thumbnail_id($post->ID), 'original')?>');"></div>
-
-<?php    
-}
-else {
-  $defaultHeader = TRUE;
-  get_template_part( 'header', 'image' ); 
-}
-
-?>
-
-
+</div>
 
 <div class="container-fluid uw-body">
 
-<h2 class="uw-site-title">Star Awards</h2>
-
-  <div class="row">
-
-    <div class="col-md-12 uw-content" role='main'>
   
+  <div class="row">
+    
+    
+    <div class="col-md-12 uw-content" role='main'>
+      
+      
 
       <div class="uw-body-copy">
       
@@ -46,7 +34,7 @@ else {
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */             
-            get_template_part( 'content', 'star-awards' ); 
+            // get_template_part( 'content', 'star-awards' ); 
 
             ?>
             

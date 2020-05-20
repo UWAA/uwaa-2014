@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.14.14
+ Version: 1.15.0
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6317,6 +6317,8 @@ button.close {
 .uwaa-convio-wrapper .convio-content:after,
 .uwaa-convio-wrapper .convio-footer:before,
 .uwaa-convio-wrapper .convio-footer:after,
+.page-star-awards .uw-body.container:before,
+.page-star-awards .uw-body.container:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6348,6 +6350,7 @@ button.close {
 .uwaa-convio-wrapper .event-registration-header:after,
 .uwaa-convio-wrapper .convio-content:after,
 .uwaa-convio-wrapper .convio-footer:after,
+.page-star-awards .uw-body.container:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -6403,6 +6406,8 @@ button.close {
 .uwaa-convio-wrapper .convio-content:after,
 .uwaa-convio-wrapper .convio-footer:before,
 .uwaa-convio-wrapper .convio-footer:after,
+.page-star-awards .uw-body.container:before,
+.page-star-awards .uw-body.container:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6434,6 +6439,7 @@ button.close {
 .uwaa-convio-wrapper .event-registration-header:after,
 .uwaa-convio-wrapper .convio-content:after,
 .uwaa-convio-wrapper .convio-footer:after,
+.page-star-awards .uw-body.container:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -9296,6 +9302,10 @@ div.map-logo.michigan {
   background: url(assets/headers/Page_Header_StayConnected.jpg) center center;
   background-size: cover;
 }
+.uw-hero-image.star-awards {
+  background: url(assets/headers/2020_StarAwards2_sh.jpg) center center;
+  background-size: cover;
+}
 @media only screen and (max-width: 767px) {
   .single-post .uwaa-chapter-header {
     height: 150px;
@@ -11272,6 +11282,181 @@ Typography
   opacity: .6;
   display: block;
   visibility: visible;
+}
+.page-star-awards #dawgdrops,
+.page-star-awards #uwaa-footer {
+  display: none;
+  visibility: hidden;
+}
+.page-star-awards .star-site-title {
+  padding: 50px;
+  color: #a09494;
+  font-family: "Encode Sans Compressed", sans-serif;
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.page-star-awards .uw-body.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page-star-awards .uw-body.container:before,
+.page-star-awards .uw-body.container:after {
+  content: " ";
+  display: table;
+}
+.page-star-awards .uw-body.container:after {
+  clear: both;
+}
+.page-star-awards .uw-body.container:before,
+.page-star-awards .uw-body.container:after {
+  content: " ";
+  display: table;
+}
+.page-star-awards .uw-body.container:after {
+  clear: both;
+}
+.page-star-awards .uw-body.container:before,
+.page-star-awards .uw-body.container:after {
+  content: " ";
+  display: table;
+}
+.page-star-awards .uw-body.container:after {
+  clear: both;
+}
+.page-star-awards .uw-body.container:before,
+.page-star-awards .uw-body.container:after {
+  content: " ";
+  display: table;
+}
+.page-star-awards .uw-body.container:after {
+  clear: both;
+}
+.page-star-awards .uw-body.container > .navbar-header,
+.page-star-awards .uw-body.container > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .page-star-awards .uw-body.container > .navbar-header,
+  .page-star-awards .uw-body.container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.page-star-awards .grid {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 375px;
+  grid-template-rows: auto;
+  grid-gap: 4px;
+}
+@media only screen and (min-width: 768px) {
+  .page-star-awards .grid {
+    grid-template-columns: 375px 375px;
+  }
+}
+@media only screen and (min-width: 1142px) {
+  .page-star-awards .grid {
+    grid-template-columns: 375px 375px 375px;
+  }
+}
+@media only screen and (min-width: 1538px) {
+  .page-star-awards .grid {
+    grid-template-columns: 375px 375px 375px 375px;
+  }
+}
+.page-star-awards .flip-card {
+  background-color: transparent;
+  width: 375px;
+  height: 375px;
+  perspective: 1000px;
+  text-align: center;
+}
+.page-star-awards .flip-card p,
+.page-star-awards .flip-card h1 {
+  vertical-align: middle;
+  color: #ffffff;
+}
+.page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front,
+.page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-back {
+  background-color: #b7a57a;
+}
+.page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front p,
+.page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-back p,
+.page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
+.page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-back h1 {
+  color: white;
+}
+.page-star-awards .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+.page-star-awards .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.page-star-awards .flip-card-front,
+.page-star-awards .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.page-star-awards .flip-card-front {
+  background-color: #4b2e83;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+.page-star-awards .flip-card-front .first {
+  width: 100%;
+  font-size: 40px;
+  line-height: 0.5;
+  padding-top: 30px;
+}
+.page-star-awards .flip-card-front .last {
+  width: 100%;
+  font-size: 70px;
+}
+.page-star-awards .flip-card-front .unit {
+  font-size: 23px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  font-weight: 600;
+  text-align: right;
+  padding: 0 5px;
+}
+.page-star-awards .flip-card-back {
+  background-color: #4b2e83;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  font-size: 2vw;
+}
+.page-star-awards .flip-card-back p {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.page-star-awards #search {
+  width: 25%;
+  margin-bottom: 10px;
 }
 .page-strongertogether p {
   margin: 0 0 80px;
