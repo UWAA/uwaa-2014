@@ -50,6 +50,16 @@ wp_enqueue_script(array('starsAwardsSearch'));
           
         ?>
 
+        <h2>Winners</h2>
+
+        <div id="winner-cards">
+          <div class="grid">
+            <?php $UWAA->UI->makeStarAwardWinnerCards(); ?>
+          </div>
+        </div>
+
+        <h2>Nominees</h2>
+
     <input id="search" type=text placeholder="Find an Advancement star">
 
     <div id="cards">

@@ -136,6 +136,51 @@ class UI
         );
 
     }
+
+    public function makeStarAwardWinnerCards() {
+        $winners = json_decode(file_get_contents(get_stylesheet_directory() . '/winners.json', true));
+
+        if (is_array($winners)) {
+            shuffle($winners);
+            foreach ($winners as $winner) {
+                // fix the gd name
+                $formattedName = $this->splitNames($winner->nominee);
+                ?>
+                <a href="#modal-<?php echo strtolower(trim($formattedName['first_name'])) ?>">
+                <div class="flip-card winner-flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front dashicons-before dashicons-star-empty">
+                    <h3 class="first"><?php echo ($formattedName['first_name'] == false) ? $winner->nominee : $formattedName['first_name'] ?></h3>
+                    <h3 class="last"><?php echo $formattedName['last_name'] ?></h3>
+                    <h4 class="unit"><?php echo $winner->unit ?></h4>
+                </div>               
+            </div>
+        </div>
+        </a>
+
+        <div class="modal zoom-out" id="modal-<?php echo strtolower(trim($formattedName['first_name'])) ?>">
+		    <div class="modal-overlay">
+			    <a href="#close"></a>
+            </div>
+            
+		    <div class="modal-container">
+    			<div class="modal-container__header">
+	    			<div class="modal-container__header-close">
+		    			<a href="#close"><span class="icon-close">&times;</span> <span class="hide-text">Close</span></a>
+			    	</div>
+			    </div>
+
+			    <div class="modal-container__content">
+                    <h3 class="modal-container__content-title"><?php echo $formattedName['first_name'] . ' ' . $formattedName['last_name']  ?></h3>                
+				    <p><?php echo $winner->quote ?></p>
+			    </div>
+		    </div>        
+        </div>
+
+                <?php
+            }
+        }
+    }
     
 
     public function makeStarAwardCards() {
