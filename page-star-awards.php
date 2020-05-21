@@ -1,6 +1,6 @@
 <?php 
 get_header(); 
-wp_enqueue_script(array('starsAwardsSearch')); 
+wp_enqueue_script(array('starsAwardsSearch'));
 ?>
 
 
