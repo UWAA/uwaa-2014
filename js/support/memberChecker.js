@@ -17,9 +17,9 @@ $('form#memberloginForm').on('submit', function(event) {
             // action: 'callMemberChecker',
             url: callMemberCheckerAJAX.ajaxurl +'/login',
             data: form.serialize(),
-            dataType: 'json',
+            // dataType: 'json',
             // Remove for prod @TODO
-            success: function(data) {
+            success: function(data) {               
 
                 if(!data.error) {
                     location.reload();
