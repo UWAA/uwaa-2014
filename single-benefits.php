@@ -59,6 +59,8 @@ get_header();
     
     
     <?php 
+
+    dynamic_sidebar( 'benefits_sidebar' );
          
         endwhile;        
     ?>
