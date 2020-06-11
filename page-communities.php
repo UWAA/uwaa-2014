@@ -53,7 +53,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
           endwhile;
 
-          get_template_part( 'partials/map' );
+          // get_template_part( 'partials/map' );
         ?>
 
         <h3 style="margin-top:60px;">Is your contact information current?</h3>
