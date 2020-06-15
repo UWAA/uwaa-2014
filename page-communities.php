@@ -5,7 +5,7 @@ wp_enqueue_style('mapbox');
 
 
 
-wp_localize_script( 'mapbox', 'homeLink', 
+wp_localize_script( 'mapbox-gl-js', 'homeLink', 
   array( 
     'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson'))
   ) 
