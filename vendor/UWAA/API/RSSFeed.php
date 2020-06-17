@@ -61,6 +61,7 @@
                      'mb_80_character_excerpt',
                      'mb_start_date',
                      'mb_end_date',
+                     'mb_cosmetic_date'
                      ),
                  'hasTaxonomy' => true,
                  'taxonomyName' => array(
@@ -246,6 +247,10 @@
 
                       if ($element == 'end_date') {
                           $element = 'end_date';
+                      }
+
+                      if ($element == 'cosmetic_date') {
+                          $element = 'cosmetic_date';
                       }
 
                       if ($element == 'membergram_cta_link') {
