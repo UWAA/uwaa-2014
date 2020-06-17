@@ -1,8 +1,4 @@
 <div id="map-container">
-    <nav class='mapboxgl-control-container' style="display: flex; justify-content: flex-end" id="mapNavigation">
-        <div class="uwaa-btn-wrapper" style=''><span class="uwaa-btn uwaa-btn-join btn-purple btn-slant-right " id="usNav">&nbsp;&nbsp;U.S.</span></div>
-        <div class="uwaa-btn-wrapper"><span class="uwaa-btn uwaa-btn-join btn-gold btn-slant-left " id="asiaNav">Global&nbsp;&nbsp;</span></div>
-    </nav>
 
     <div id="map">
      <div id="loader">
