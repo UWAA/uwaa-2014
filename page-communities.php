@@ -5,7 +5,7 @@ wp_enqueue_style('mapbox');
 
 
 
-wp_localize_script( 'mapbox', 'homeLink', 
+wp_localize_script( 'mapbox-gl-js', 'homeLink', 
   array( 
     'endpointURL' => apply_filters('remove_cms', home_url('/api/communities/geojson'))
   ) 
@@ -32,6 +32,11 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
   
       <div class="uw-body-copy">
 
+        <nav class='mapboxgl-control-container' style="display: flex; justify-content: flex-end" id="mapNavigation">
+          <div class="uwaa-btn-wrapper" style=''><span class="uwaa-btn uwaa-btn-join btn-purple btn-slant-right " id="usNav">&nbsp;&nbsp;U.S.</span></div>
+          <div class="uwaa-btn-wrapper"><span class="uwaa-btn uwaa-btn-join btn-gold btn-slant-left " id="asiaNav">Global&nbsp;&nbsp;</span></div>
+        </nav>
+
         <?php
           // Start the Loop.
           while ( have_posts() ) : the_post();
@@ -54,6 +59,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
           endwhile;
 
           get_template_part( 'partials/map' );
+          
         ?>
 
         <h3 style="margin-top:60px;">Is your contact information current?</h3>
