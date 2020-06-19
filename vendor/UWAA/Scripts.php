@@ -159,7 +159,7 @@ class Scripts
         'USHuskiesMap' => array (
         'id'      => 'USHuskiesMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/USHuskiesMap' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),
+        'deps'    => array('mapbox-gl-js'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
@@ -167,7 +167,7 @@ class Scripts
       'internationalHuskiesMap' => array (
         'id'      => 'internationalHuskiesMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/internationalHuskiesMap' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),
+        'deps'    => array('mapbox-gl-js'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false

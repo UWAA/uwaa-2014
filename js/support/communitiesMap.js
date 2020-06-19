@@ -35,10 +35,7 @@ map.on('load', function() {
             map.addImage('marker', image);
             map.addSource('communities', {
                 type: 'geojson',
-                data: endPoint,
-                cluster: true,
-                clusterMaxZoom: 6, 
-                clusterRadius: 40
+                data: endPoint
             });
             map.addLayer({
                 id: 'unclustered-point',
@@ -90,7 +87,6 @@ map.on('click', 'unclustered-point', function(e) {
     });
 
     var coordinates = e.features[0].geometry.coordinates.slice();
-    var offset = 0;
 
     features.map(function(feat) {
         var popupContent = '<a href="' + feat.properties.link + '">' +
