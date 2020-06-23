@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.15.4
+ Version: 1.15.6
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11606,8 +11606,11 @@ Typography
   width: 100%;
   height: 400px;
 }
-.mapboxgl-popup {
+.page-travel .mapboxgl-popup {
   max-width: 200px;
+}
+.page-communities .mapboxgl-popup {
+  min-width: 320px;
 }
 .mapboxgl-popup-content {
   text-align: center;
