@@ -151,7 +151,7 @@ class Scripts
 	  'CommunitiesMap' => array (
         'id'      => 'communitiesMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/communitiesMap' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),
+        'deps'    => array('mapbox-gl-js'),
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
