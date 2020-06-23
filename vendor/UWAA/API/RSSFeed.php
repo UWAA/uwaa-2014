@@ -132,8 +132,7 @@
                 }
             }
 
-            
-            if ($request["feed"] === "feed") {
+            if (isset($request["feed"])) {
                 $request['category__not_in'] = $exclusionID;
                 return $request;
            }
@@ -144,12 +143,42 @@
           }
 
           public function addFeedAugmentations() {
-              $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
-              $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], $this->eventFields['taxonomyName'] , $this->eventFields['hasGeotag'] );
-              $this->augmentFeed('post', $this->newsFields['fields']);
-              $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);
-              $this->augmentFeed('membergrams', $this->membergramFields['fields']);
-              $this->augmentFeed('tpcmembergrams', $this->tpcMembergramFields['fields']);
+
+            switch ($_REQUEST['post_type']) {
+                case 'events':
+                    $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], $this->eventFields['taxonomyName'] , $this->eventFields['hasGeotag'] );
+                    break;
+                case 'benefits':
+                    $this->augmentFeed('benefits', $this->benefitFields['fields'], $this->benefitFields['hasTaxonomy'], $this->benefitFields['taxonomyName'], $this->benefitFields['hasGeotag']);
+                break;
+
+                case 'post':
+                    $this->augmentFeed('post', $this->newsFields['fields']);
+                break;
+
+                case 'tours':
+                    $this->augmentFeed('tours', $this->toursFields['fields'], $this->toursFields['hasTaxonomy'], $this->toursFields['taxonomyName']);                
+                break;
+
+                case 'membergrams':
+                    $this->augmentFeed('membergrams', $this->membergramFields['fields']);
+                break;
+
+                case 'tpcmembergrams':
+                    $this->augmentFeed('tpcmembergrams', $this->tpcMembergramFields['fields']);
+                break;
+                
+
+                default:
+                    return;
+                    break;
+            }
+              
+              
+              
+              
+              
+              
           }
 
           public function addUWAANamespaceToFeed()
@@ -174,10 +203,14 @@
                   if ($hasGeotag == true) {  //Very, very confused as to why this needs to be nested.
 
                       $terms = get_the_terms(get_the_id(), 'app_geotag');
+                        
+                        if ($terms) {  //Needed if the editor forgets to add Geotags. Supresses errors.
+                            $this->addGeoTagsToFeed($terms);
+                            $this->addRegionalLogoToFeed($terms);
+                        }
 
 
-                      $this->addGeoTagsToFeed($terms);
-                      $this->addRegionalLogoToFeed($terms);
+                      
                   }
 
               }              
@@ -204,7 +237,7 @@
               if( has_post_thumbnail( $id ) ) {
                   $imageID = get_post_thumbnail_id( $id );
                   
-                  $url = \UWAA\View\UI::returnAppImageURL($imageID, 'app-feed-image' );
+                  $url = \UWAA\View\UI::returnAppImageURL($imageID);                  
                   echo "<uwaa_app:itemImage><![CDATA[{$url}]]></uwaa_app:itemImage>\n";
 
               }

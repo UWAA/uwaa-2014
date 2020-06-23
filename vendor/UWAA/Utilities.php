@@ -192,7 +192,7 @@ class Utilities
 
     public function createJoinedFeedType($qv) 
     {        
-    if (isset($qv['feed']) && $qv['jointfeed'] == 'tpc_membergrams') {
+    if (isset($qv['feed']) && isset($qv['jointfeed']) == 'tpc_membergrams') {
             $qv['post_type'] = array(
             'tpcmembergrams',
             'membergrams',            

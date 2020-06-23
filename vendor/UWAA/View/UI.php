@@ -52,29 +52,39 @@ class UI
         return($url[0]);
     }
 
-    public function returnAppImageURL($id, $size)
+    public function returnAppImageURL($id)
     {
 
-        $image = wp_get_attachment_metadata( $id);
+        $image = wp_get_attachment_metadata($id);
 
-        if (array_key_exists('app-event-feed-image', $image['sizes'])) {
-            $url = wp_get_attachment_image_src( $id, "app-event-feed-image");
-            return($url[0]);
+        if ($image) {
+
+            if ($image['height'] == 428 && $image['width'] == 630) {
+                $url = wp_get_attachment_image_src( $id, "full");
+                return($url[0]);
+            }
+            
+            
+            if (array_key_exists('app-event-feed-image', $image['sizes'])) {
+                $url = wp_get_attachment_image_src( $id, "app-event-feed-image");
+                return($url[0]);
+            }
+
+            if (array_key_exists('app-feed-image', $image['sizes'])) {
+                $url = wp_get_attachment_image_src( $id, "app-feed-image");
+                return($url[0]);
+            }
+
+            if (!array_key_exists('app-feed-image', $image['sizes'])) {
+                $url = wp_get_attachment_image_src( $id, "thumbnail-large");
+                return($url[0]);
+            }
+            else {
+                return;
+            }            
         }
 
-        if (array_key_exists('app-feed-image', $image['sizes'])) {
-            $url = wp_get_attachment_image_src( $id, "app-feed-image");
-            return($url[0]);
-        }
-
-        if (!array_key_exists('app-feed-image', $image['sizes'])) {
-            $url = wp_get_attachment_image_src( $id, "thumbnail-large");
-        }
-        else {
-            $url = wp_get_attachment_image_src($id, $size);
-        }
         
-        return($url[0]);
     }
 
     public function returnImageAltTag($id) {
