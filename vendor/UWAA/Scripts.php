@@ -152,23 +152,23 @@ class Scripts
         'id'      => 'communitiesMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/communitiesMap' . $this->min_script() . '.js',
         'deps'    => array('mapbox-gl-js'),
-        'version' => '1.0',
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
       ),
         'USHuskiesMap' => array (
         'id'      => 'USHuskiesMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/USHuskiesMap' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),
-        'version' => '1.0',
+        'deps'    => array('mapbox-gl-js'),
+        'version' => '2.0',
         'in_footer' => true,
         'admin'   => false
       ),
       'internationalHuskiesMap' => array (
         'id'      => 'internationalHuskiesMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/internationalHuskiesMap' . $this->min_script() . '.js',
-        'deps'    => array('mapbox'),
-        'version' => '1.0',
+        'deps'    => array('mapbox-gl-js'),
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
       ),
