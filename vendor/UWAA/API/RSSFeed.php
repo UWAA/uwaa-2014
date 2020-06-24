@@ -260,7 +260,7 @@
             if (in_array('mb_benefit_promotion', $metaValues)) {
                    
                       $link = get_permalink( get_the_id());
-                      $printedLink = '[uwaa-button url="' . $link . '" color="purple" type="slant-right" new="true"]Join Costco[/uwaa-button]';
+                      $printedLink = '[uwaa-button url="' . $link . '" color="purple" type="slant-right" new="true"]Learn More[/uwaa-button]';
                       echo "<uwaa_app:benefit_promotion><![CDATA[{$printedLink}]]></uwaa_app:benefit_promotion>\n";
 
                 } else {
