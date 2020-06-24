@@ -33,6 +33,7 @@
               $this->eventFields = array(
                   'fields' => array(
                       'mb_start_date',
+                      'mb_end_date',
                       'mb_event_time',
                       'mb_event_location',
                       'mb_80_character_excerpt',
@@ -256,46 +257,59 @@
 
           private function addMetaValuesToFeed($metaValues) {
 
-              
+            if (in_array('mb_benefit_promotion', $metaValues)) {
+                   
+                      $link = get_permalink( get_the_id());
+                      $printedLink = '[uwaa-button url="' . $link . '" color="purple" type="slant-right" new="true"]Join Costco[/uwaa-button]';
+                      echo "<uwaa_app:benefit_promotion><![CDATA[{$printedLink}]]></uwaa_app:benefit_promotion>\n";
+
+                } else {
+
+                    foreach($metaValues as $value)
+                    
+                    {
+                
+
+                        if ($content = get_post_meta(get_the_id() , $value, true) )
+                        
+                        {
+
+                            $element = htmlspecialchars(trim(str_replace('mb_', ' ', $value)));
+
+                            if ($element == '80_character_excerpt') {
+                                $element = 'excerpt';
+                            }
+
+                            if ($element == 'thumbnail_subtitle') {
+                                $element = 'content_head';
+                            }
+
+                            if ($element == 'start_date') {
+                                $element = 'start_date';
+                            }
+
+                            if ($element == 'end_date') {
+                                $element = 'end_date';
+                            }
+
+                            if ($element == 'cosmetic_date') {
+                                $element = 'cosmetic_date';
+                            }
+
+                            if ($element == 'membergram_cta_link') {
+                                $element = 'membergram_cta_link';
+                            }
+
+                            echo "<uwaa_app:{$element}><![CDATA[{$content}]]></uwaa_app:{$element}>\n";
+
+                        }
+                        
+                    }
+
+                }
             
-            foreach($metaValues as $value)
-              {
 
-                  if ($content = get_post_meta(get_the_id() , $value, true))
-                  {
-
-                      $element = htmlspecialchars(trim(str_replace('mb_', ' ', $value)));
-
-                      if ($element == '80_character_excerpt') {
-                          $element = 'excerpt';
-                      }
-
-                      if ($element == 'thumbnail_subtitle') {
-                          $element = 'content_head';
-                      }
-
-                      if ($element == 'start_date') {
-                          $element = 'start_date';
-                      }
-
-                      if ($element == 'end_date') {
-                          $element = 'end_date';
-                      }
-
-                      if ($element == 'cosmetic_date') {
-                          $element = 'cosmetic_date';
-                      }
-
-                      if ($element == 'membergram_cta_link') {
-                          $element = 'membergram_cta_link';
-                      }
-
-                      echo "<uwaa_app:{$element}><![CDATA[{$content}]]></uwaa_app:{$element}>\n";
-
-                  }
-              }
-
-              if('mb_start_date' != '' and 'mb_end_date' != ''){
+              if(in_array('mb_start_date', $metaValues) && in_array('mb_end_date', $metaValues) ){
                   $metaStart = get_post_meta(get_the_id() , 'mb_start_date', true);
                   $metaEnd = get_post_meta(get_the_id() , 'mb_end_date', true);
                   $start = new \DateTime($metaStart);
