@@ -61,6 +61,13 @@ class Sidebars {
                 'before_widget' => self::BEFORE_WIDGET,
                 'after_widget'  => self::AFTER_WIDGET
                 ),
+            'huskies-vote' => array (
+                'name'          => 'Huskies Vote',
+                'id'            => 'huskies-vote_sidebar',
+                'description'   => 'Sidebar for Huskies Vote',
+                'before_widget' => self::BEFORE_WIDGET,
+                'after_widget'  => self::AFTER_WIDGET
+                ),
 
             ));
     }  

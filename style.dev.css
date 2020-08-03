@@ -7328,6 +7328,9 @@ a.read-more-link:after {
   /* Extra Small Devices, Phones */
   /* Custom, iPhone Retina */
 }
+.page-huskies-vote .featured-post.five-column {
+  margin-bottom: 10px;
+}
 @media only screen and (min-width: 993px) {
   .featured-post.five-column {
     width: 20%;
