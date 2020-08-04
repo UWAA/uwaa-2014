@@ -298,4 +298,86 @@ TOOLBAR;
      public function displayNothing() {
          return;
      }
+
+     protected function returnVariableFormatInformation(string $type = 'string') {
+
+      if ($type == 'int') {
+        switch ($this->format) {
+          case 5:
+            return 5;
+            break;
+
+            case 4:
+            return 4;
+            break;
+          
+          default:
+            return 5;
+            break;
+        }        
+      }
+
+      if ($type == '2x') {
+        switch ($this->format) {
+          case 5:
+            return 10;
+            break;
+
+            case 4:
+            return 8;
+            break;
+          
+          default:
+            return 10;
+            break;
+        }        
+      }
+
+      if ($type == 'thumbnailSize') {
+        switch ($this->format) {
+          case 5:
+            return 'postExcerptRowOfFive';
+            break;
+
+            case 4:
+            return 'postExcerptRowOfFour';
+            break;
+          
+          default:
+            return 10;
+            break;
+        }        
+      }
+
+      if ($type == 'class') {
+        switch ($this->format) {
+          case 5:
+            return 'five-column';
+            break;
+
+            case 4:
+            return 'four-column';
+            break;
+          
+          default:
+            return 'five-column';
+            break;
+        }        
+      }
+
+      switch ($this->format) {
+          case 5:
+            return 'Five';
+            break;
+
+            case 4:
+            return 'Four';
+            break;
+          
+          default:
+            return 'Five';
+            break;
+        }
+
+    }
 }

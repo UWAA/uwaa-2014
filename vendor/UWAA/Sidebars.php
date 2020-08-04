@@ -68,6 +68,14 @@ class Sidebars {
                 'before_widget' => self::BEFORE_WIDGET,
                 'after_widget'  => self::AFTER_WIDGET
                 ),
+            'rej' => array (
+                'name'          => 'Huskies Vote',
+                'id'            => 'rej_sidebar',
+                'description'   => 'Sidebar for the Race, Equity and Justice Page',
+                'before_widget' => self::BEFORE_WIDGET,
+                'after_widget'  => self::AFTER_WIDGET
+                ),
+                
 
             ));
     }  
