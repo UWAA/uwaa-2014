@@ -63,7 +63,7 @@ else {
       </div>
 
        <h3>Events</h3>
-            <p>Flannel gastropub pug godard raw denim vaporware before they sold out. Polaroid art party franzen, </p>
+            <p><?php the_field('custom_text_one') ?></p>
             <div class="row">
                 
                 <?php
@@ -78,7 +78,7 @@ else {
             </div>
 
             <h3>Resources</h3>
-            <p>I'm baby craft beer gluten-free 3 wolf moon fam whatever disrupt. Normcore williamsburg cray intelligentsia pabst glossier 90's</p>
+            <p><?php the_field('custom_text_two') ?></p>
             <div class="row">
                 
                 <?php
