@@ -67,7 +67,7 @@ class REJResources extends ThumbnailBrowser implements Thumbnail
         $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFour');
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));

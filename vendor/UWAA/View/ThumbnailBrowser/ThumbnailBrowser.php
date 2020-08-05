@@ -340,7 +340,7 @@ TOOLBAR;
             break;
 
             case 4:
-            return 'postExcerptRowOfFour';
+            return 'postExcerptRowOfFive';
             break;
           
           default:
