@@ -62,7 +62,7 @@ else {
 
       </div>
 
-       <h3>Events</h3>
+       <h3>Events &amp; Programs</h3>
             <p><?php the_field('custom_text_one') ?></p>
             <div class="row">
                 
