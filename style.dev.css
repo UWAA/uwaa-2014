@@ -11627,6 +11627,9 @@ Typography
   background-size: cover;
   background-position: center center;
 }
+.page-racequityjustice .uwaa-hero-image {
+  height: 350px;
+}
 .leaflet-popup-content {
   font-family: 'Open Sans';
 }
