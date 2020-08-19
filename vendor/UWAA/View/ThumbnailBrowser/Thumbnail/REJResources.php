@@ -26,6 +26,7 @@ class REJResources extends ThumbnailBrowser implements Thumbnail
     {
         $this->args = $this->setArguments();
         $this->UI = new UI;
+        $this->format = 5;
 
     }
 
@@ -38,7 +39,7 @@ class REJResources extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 8,
+      'posts_per_page' => $this->returnVariableFormatInformation('2x'),
       'orderby' => 'rand',
 
       'tax_query' => array(
@@ -67,7 +68,7 @@ class REJResources extends ThumbnailBrowser implements Thumbnail
         $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), $this->returnVariableFormatInformation('thumbnailSize'));
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
@@ -88,8 +89,9 @@ $callout = $this->renderCallout();
 $image = $this->renderImage();
     $link = $this->postURL;
 $date = $this->renderDate();
+$class = $this->returnVariableFormatInformation('class');
 $template = <<<TEMPLATE
-<div class="featured-post four-column">
+<div class="featured-post $class">
 <a href="{$this->postURL}">
     <div class="image-frame">
       $image

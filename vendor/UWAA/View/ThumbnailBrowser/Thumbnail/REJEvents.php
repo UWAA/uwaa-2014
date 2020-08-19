@@ -26,6 +26,7 @@ class REJEvents extends ThumbnailBrowser implements Thumbnail
     {
         $this->args = $this->setArguments();
         $this->UI = new UI;
+        $this->format = 5;
 
     }
 
@@ -38,16 +39,28 @@ class REJEvents extends ThumbnailBrowser implements Thumbnail
         'post',
         'page'
         ),
-      'posts_per_page' => 10,
-      'orderby' => 'meta_value',
-      'order' => 'ASC',
-      'meta_key' => 'mb_start_date',
+      'posts_per_page' => $this->returnVariableFormatInformation('2x'),                  
       'meta_query' => array(
-        'key' => 'mb_start_date',
-        'type' => 'DATE',
-        'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
-        'compare' => '>=', // Return the ones greater than today's date
-      ),
+        'relation' => 'OR',
+        'start_date' => array(
+          'key' => 'mb_start_date',
+          'type' => 'DATE',
+          'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
+          'compare' => '>=' // Return the ones greater than today's date
+        ), 
+        'no_date' => array(
+          'key' => 'mb_start_date',
+          'value' => ''        
+        ),
+        'has_date' => array(
+            'key' => 'mb_start_date',
+            'compare' => 'NOT EXISTS'
+        ),    
+      ),    
+      'orderby' => array(
+        'no_date' => 'DESC',
+        'start_date' => 'ASC',
+        ),
       'tax_query' => array(
          array(
           'taxonomy' => 'uwaa_content_promotion',
@@ -73,7 +86,7 @@ class REJEvents extends ThumbnailBrowser implements Thumbnail
         $this->postTitle = esc_html(get_the_title(get_the_ID()));
         $this->postURL = get_permalink();
         $this->postCalloutText = esc_html(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
-        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'postExcerptRowOfFive');
+        $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), $this->returnVariableFormatInformation('thumbnailSize'));
         $this->postDate = esc_html(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
         $this->postSubtitle = parent::getPostSubtitle($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
@@ -94,8 +107,9 @@ $callout = $this->renderCallout();
 $image = $this->renderImage();
   $link = $this->postURL;
 $date = $this->renderDate();
+$class = $this->returnVariableFormatInformation('class');
 $template = <<<TEMPLATE
-<div class="featured-post four-column">
+<div class="featured-post $class">
 <a href="{$this->postURL}">
     <div class="image-frame">
       $image
