@@ -47,18 +47,14 @@ class REJEvents extends ThumbnailBrowser implements Thumbnail
           'type' => 'DATE',
           'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
           'compare' => '>=' // Return the ones greater than today's date
-        ), 
-        'no_date' => array(
-          'key' => 'mb_start_date',
-          'value' => ''        
-        ),
+        ),         
         'has_date' => array(
             'key' => 'mb_start_date',
             'compare' => 'NOT EXISTS'
         ),    
       ),    
-      'orderby' => array(
-        'no_date' => 'DESC',
+      'orderby' => array(        
+        'has_date' => 'rand',
         'start_date' => 'ASC',
         ),
       'tax_query' => array(
