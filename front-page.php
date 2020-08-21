@@ -39,7 +39,7 @@ endif;
             <div class="row-title-row">
                   <div class="row-hr"></div>
                   <div class="row-title-text">
-                      <h2>upcoming events</h2>
+                      <h2><?php the_field('custom_text_one') ?></h2>
                   </div>                  
 
                   <a class="see-all-link" href="<?php echo home_url( '/events'); ?>">see all events</a>
@@ -61,7 +61,7 @@ endif;
               <div class="row-title-row">
                   <div class="row-hr"></div>
                   <div class="row-title-text news">
-                      <h2>news</h2>
+                      <h2><?php the_field('custom_text_two') ?>s</h2>
                   </div>
                   <a class="see-all-link" href="<?php echo home_url('/stories'); ?>">see all stories</a>
               </div>

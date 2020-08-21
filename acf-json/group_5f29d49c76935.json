@@ -7,7 +7,7 @@
             "label": "Custom Text One",
             "name": "custom_text_one",
             "type": "text",
-            "instructions": "",
+            "instructions": "Homepage - Content Row One Title",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -26,7 +26,7 @@
             "label": "Custom Text One Two",
             "name": "custom_text_two",
             "type": "text",
-            "instructions": "",
+            "instructions": "Homepage - Content Row Two Title",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -76,6 +76,6 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
-    "description": "Use these fields to update special content as indicated by you WordPress developer",
-    "modified": 1596577528
+    "description": "Use these fields to update special content as indicated by your WordPress developer",
+    "modified": 1598049409
 }
