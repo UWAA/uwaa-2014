@@ -180,3 +180,10 @@ add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
 function load_dashicons_front_end() {
   wp_enqueue_style( 'dashicons' );
 }
+
+
+add_action( 'after_setup_theme', 'register_test_menu' );
+function register_test_menu()
+    {
+        register_nav_menu( 'Test Menu', 'test-menu');
+    }
