@@ -64,6 +64,7 @@ class UWAA
         new \UWAA\CustomPostTypes\RegionalChapters;
         new \UWAA\CustomPostTypes\Membergrams;
         new \UWAA\CustomPostTypes\TPCMembergrams;
+        new \UWAA\CustomPostTypes\AppLinks;
 
 
         //OpenGraph Tagging
