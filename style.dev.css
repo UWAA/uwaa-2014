@@ -8773,14 +8773,11 @@ div.map-logo.michigan {
   width: auto;
 }
 .home-thumbnail-row .row-title-row .row-title-text {
-  width: 244px;
+  width: 20%;
   margin: 0 auto;
 }
 .home-thumbnail-row-container:nth-child(odd) .home-thumbnail-row .row-title-row .row-title-text {
   background-color: #e8e3d3;
-}
-.home-thumbnail-row .row-title-row .row-title-text.news {
-  width: 104px;
 }
 .home-thumbnail-row .row-title-row .row-title-text h2 {
   font-family: 'Encode Sans Compressed', Arial, sans-serif;
