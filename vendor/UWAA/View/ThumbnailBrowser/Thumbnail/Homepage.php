@@ -54,7 +54,7 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'slug',
-          'terms'    => array( 'home-news')
+          'terms'    => array( 'home-programs')
 
           )
       ) //End tax query

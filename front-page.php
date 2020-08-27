@@ -3,6 +3,7 @@ get_header();
 wp_enqueue_script('superHero');
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 use \UWAA\View\ThumbnailBrowser\Thumbnail\HomepageEvents;
+use \UWAA\View\ThumbnailBrowser\Thumbnail\HomepageNewsAndPublications;
 
 ?>
 
@@ -27,67 +28,122 @@ endif;
 
   <div class="row">
 
-    <div class="col-md-12 uw-content" role='main'>
+    <div role='main'>
 
-   <!-- No breadcrumbs for holiday front page -->
-   <!-- <?php get_template_part('partials/page', 'breadcrumbs') ?> -->
-
-      <div class="uw-body-copy">
-
-          <div class="row 5-column home-thumbnail-row home-events">           
-            
-            <div class="row-title-row">
-                  <div class="row-hr"></div>
-                  <div class="row-title-text">
-                      <h2><?php the_field('custom_text_one') ?></h2>
-                  </div>                  
-
-                  <a class="see-all-link" href="<?php echo home_url( '/events'); ?>">see all events</a>
-
-             </div>
-              <?php
-
-
-       $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-
-       $thumbnailRow->makeThumbnails(new HomepageEvents);
-
-              ?>
-
-          </div>
-
-          <div class="row 5-column home-thumbnail-row home-row">
-
-              <div class="row-title-row">
-                  <div class="row-hr"></div>
-                  <div class="row-title-text news">
-                      <h2><?php the_field('custom_text_two') ?></h2>
-                  </div>
-                  <a class="see-all-link" href="<?php echo home_url('/stories'); ?>">see all stories</a>
-              </div>
-
-              <?php
-
-
-      $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
-
-      $thumbnailRow->makeThumbnails(new Homepage);
-
-              ?>
-
-          </div>
-
-
-        
-      </div>
+    <!-- No breadcrumbs for holiday front page -->
+    <!-- <?php get_template_part('partials/page', 'breadcrumbs') ?> -->
 
     </div>
-    
-    
 
-  </div>
+  </div> <!-- /row -->
 
-</div>
+</div> <!-- /container -->
+
+   <div class="container-fluid home-thumbnail-row-container">
+
+      <div class="row 5-column home-thumbnail-row home-row">
+
+        <div class="container uwaa-home-body-container">
+          
+          <div class="row">
+
+            <div class="col-md-12 uw-content">
+
+              <div class="row-title-row">
+                <div class="row-hr"></div>
+
+                <div class="row-title-text news">
+                  <h2><?php the_field('custom_text_one') ?></h2>
+                </div>
+
+              </div>
+
+                <?php
+
+                  $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+                  $thumbnailRow->makeThumbnails(new HomepageEvents);
+
+                ?>
+
+            </div>
+          </div>
+
+        </div>
+          
+      </div>
+    </div>
+
+    <div class="container-fluid home-thumbnail-row-container gold">
+
+      <div class="row 5-column home-thumbnail-row home-row">
+
+        <div class="container uwaa-home-body-container">
+          
+          <div class="row">
+
+            <div class="col-md-12 uw-content">
+
+              <div class="row-title-row">
+                <div class="row-hr"></div>
+
+                <div class="row-title-text news">
+                  <h2><?php the_field('custom_text_two') ?></h2>
+                </div>
+
+              </div>
+
+                <?php
+
+                  $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+                  $thumbnailRow->makeThumbnails(new Homepage);
+
+                ?>
+
+            </div>
+          </div>
+
+        </div>
+          
+      </div>
+    </div>
+
+    <div class="container-fluid home-thumbnail-row-container">
+
+      <div class="row 5-column home-thumbnail-row home-row">
+
+        <div class="container uwaa-home-body-container">
+          
+          <div class="row">
+
+            <div class="col-md-12 uw-content">
+
+              <div class="row-title-row">
+                <div class="row-hr"></div>
+
+                <div class="row-title-text news">
+                  <h2><?php the_field('custom_text_three') ?></h2>
+                </div>
+
+              </div>
+
+                <?php
+
+                  $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
+
+                  $thumbnailRow->makeThumbnails(new HomepageNewsAndPublications);
+
+                ?>
+
+            </div>
+          </div>
+
+        </div>
+          
+      </div>
+    </div>
+
 
 <div class="container-fluid">
 

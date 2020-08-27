@@ -29,12 +29,30 @@
     }
 
 
+.uwaa-home-body-container {    
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.home-thumbnail-row-container{
+
+    &:nth-child(odd){
+        background-color: @ulralightgold;
+    }  
+
+}
+
+
+
+
 .home-thumbnail-row {
     margin-bottom: 20px;
 
     &:home-events {
         margin-top: -13px;
     }
+
+    
 
     .row-title-row {
         text-align:center;
@@ -43,8 +61,11 @@
         
         .row-title-text {
                 width: 244px;
-                margin: 0 auto;
-                background-color: @white;
+                margin: 0 auto;                
+
+                .home-thumbnail-row-container:nth-child(odd) & {
+                    background-color: @ulralightgold;
+                }
 
                 &.news{
                     width: 104px;                    
@@ -57,7 +78,12 @@
             font-weight: 900;
             font-size: 22px;
             text-transform:uppercase;      
-            background: @white;
+            background-color: @white;
+            color: @purple;
+
+            .home-thumbnail-row-container:nth-child(odd) & {
+                    background-color: inherit;
+                }
 
             }
         }
