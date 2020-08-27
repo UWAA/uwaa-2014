@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.15.6
+ Version: 1.16.0
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -7268,6 +7268,7 @@ a.read-more-link:after {
   box-shadow: -1px 1px 2px #d9d9d9, 1px 1px 2px #d9d9d9;
   padding: 6px 10px 10px 10px;
   position: relative;
+  background-color: #ffffff;
 }
 .featured-post .copy:after {
   background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
@@ -8753,6 +8754,13 @@ div.map-logo.michigan {
     display: none;
   }
 }
+.uwaa-home-body-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.home-thumbnail-row-container:nth-child(odd) {
+  background-color: #e8e3d3;
+}
 .home-thumbnail-row {
   margin-bottom: 20px;
 }
@@ -8767,7 +8775,9 @@ div.map-logo.michigan {
 .home-thumbnail-row .row-title-row .row-title-text {
   width: 244px;
   margin: 0 auto;
-  background-color: #ffffff;
+}
+.home-thumbnail-row-container:nth-child(odd) .home-thumbnail-row .row-title-row .row-title-text {
+  background-color: #e8e3d3;
 }
 .home-thumbnail-row .row-title-row .row-title-text.news {
   width: 104px;
@@ -8777,7 +8787,11 @@ div.map-logo.michigan {
   font-weight: 900;
   font-size: 22px;
   text-transform: uppercase;
-  background: #ffffff;
+  background-color: #ffffff;
+  color: #4b2e83;
+}
+.home-thumbnail-row-container:nth-child(odd) .home-thumbnail-row .row-title-row .row-title-text h2 {
+  background-color: inherit;
 }
 .home-thumbnail-row .row-title-row .see-all-link {
   float: right;
