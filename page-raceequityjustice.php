@@ -63,7 +63,7 @@ else {
 
       </div>
 
-       <h3>Events and Programs</h3>
+       <h3>Programs and Events</h3>
             <p><?php the_field('custom_text_one') ?></p>
             <div class="row">
                 
@@ -93,7 +93,7 @@ else {
 
             </div>
 
-            <h3>Stories</h3>
+            <h3>Stories and News</h3>
             <p><?php the_field('custom_text_three') ?></p>
             <div class="row">
                 
