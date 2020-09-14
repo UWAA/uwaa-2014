@@ -4,10 +4,12 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
 $UWAA->Memberchecker->getSession();
 
-
-
-
-      
+function previewOrActiveDrive() {
+  if (is_user_logged_in() || get_field('drive_custom_is_active')) {
+    return TRUE;
+  }
+  return FALSE;
+}
 
 get_header(); 
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
@@ -26,23 +28,45 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
           // LAD is life joint thing
       }
       
-
-    
-
-     // In the event a malformed spring drive URL still comes in, we'll blow away the calling params and at least ensure the the appeal is appended.
-     if(!array_key_exists("APPEALCODE", $parentPageParams) && strpos($rawParentQueryStringParams, 'A18S08') !== FALSE) {
-      unset($parentPageParams);
-      $parentPageParams = array();
-      $parentPageParams["APPEALCODE"] = "A18S08";
-      $parentPageParams["JOIN"] = "TRUE";
-     }
-      
     
           
+// <!-- drive_custom_is_control_shown -->
 
+if( previewOrActiveDrive() ) {
+  // show the join/renew custom superheros
+if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_superhero')) {
+
+  $superhero = get_field('drive_custom_join_superhero');
 ?>
+  
+  <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($superhero['url']); ?>);"></div>
+
+<?php
+
+} elseif (array_key_exists("RENEW", $parentPageParams ) && get_field('drive_custom_renew_superhero') )  {
+
+  $superhero = get_field('drive_custom_renew_superhero');
+?>
+  
+  <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($superhero['url']); ?>);"></div>
+
+<?php } else { ?> 
+
+  <div class="uw-hero-image membership"></div> 
+
+<?php
+}
+
+} else { ?>
 
 <div class="uw-hero-image membership"></div>
+
+<?php  } ?>
+
+
+
+
+
 
 <div class="container uw-body">
 
@@ -50,8 +74,37 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
     <div class="col-md-12 uw-content" role='main'>
 
-      <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->
-      <h2 class="uw-site-title">UWAA Membership</h2>
+      <!-- <a href="<?php echo home_url('/'); ?>" title="<?php echo esc_attr( get_bloginfo() ) ?>"><h2 class="uw-site-title"><?php bloginfo(); ?></h2></a> -->     
+
+      <?php 
+
+        if( previewOrActiveDrive() ) {
+          // show the join/renew custom superheros
+        if(array_key_exists("JOIN", $parentPageParams) ) {
+        
+          ?>
+          <h2 class="uw-site-title"><?php echo get_field('drive_custom_join_headline') ?> </h2>
+        
+        <?php
+
+        } elseif (array_key_exists("RENEW", $parentPageParams ) && get_field('drive_custom_renew_superhero') )  {       
+          
+        ?>
+
+         <h2 class="uw-site-title"><?php echo get_field('drive_custom_renew_headline') ?> </h2>
+        
+        <?php } else { ?> 
+        
+          <h2 class="uw-site-title">UWAA Membership </h2>
+        
+        <?php
+        }
+
+        } else { ?>
+
+          <h2 class="uw-site-title">UWAA Membership </h2>
+        
+        <?php  } ?>
 
       <div class="row uwaa-home-branding-row">
     
@@ -76,108 +129,30 @@ $currentDate = date('m/d');
 $isSpecialDriveActive = false;
 
 
-if (array_key_exists("APPEALCODE", $parentPageParams) ) {
-  $newGradParentMailer = array('A19GM1');
-  if(in_array($parentPageParams["APPEALCODE"], $newGradParentMailer)  ){
-    $isSpecialDriveActive = true;
-    ?>    
-    <h1>Get your grad the gift of a lifetime!</h1>
-    <p>    
-      By giving the gift of UWAA membership, you are giving access to the rich variety of alumni programs, wide array of benefits and continued campus connections that will be there for your grad well into the future. 
-    </p>
-    
-
-    <?php
-  }
-
-}
 
 
-// GivingDay Direct Appeal
-if (array_key_exists("APPEALCODE", $parentPageParams) ) {
-  $givingDayAppealCodes = array('A19G1', 'A19G2', 'A19G3');
-  if(in_array($parentPageParams["APPEALCODE"], $givingDayAppealCodes) && $currentDate != "04/04" ){
-    $isSpecialDriveActive = true;
-    ?>
-    <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 responsive-center" />
-    <h1>Choose your membership option:</h1>
-    <p>    
-      Husky Giving Day on April 4 is the day when the entire UW community comes together to support the people, programs and causes they care about most.
-    </p>
-    <p>
-      Want to pay it forward? Double your impact as part of our Husky Giving Day deal. Become a UWAA member by April 4, and the UWAA Board of Trustees will match it with a gift membership to a 2019 grad.
-    </p>
-
-    <?php
-  }
-
-}
-
-
-
-//GivingDay Browse-to (no appeal)
-if($currentDate == "04/04" ) {
-  $isSpecialDriveActive = true;
-  ?>
-<img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/03/26133543/Husky-Giving-Day-300.png" alt="Husky-Giving-Day-300" width="191" height="300" class="alignright size-medium wp-image-35280 responsive-center" />
-  <h1>Choose your membership option:</h1>
-
-  <p>
-    Today is Husky Giving Day when the entire UW community comes together to support the people, programs and causes they care about most.
-  </p>
-  <p>
-    Want to pay it forward? Double your impact as part of our Husky Giving Day deal. Join or renew today, and the UWAA Board of Trustees will match it with a gift membership to a 2019 grad.
-  </p>
-  <?php
-
-}
-
-
-if ($currentMonth == '10') {
+if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, or if the 'drive active' true/false field is checked
   if(array_key_exists("JOIN", $parentPageParams)) {
-      ?>
 
-      <h1>Now is the best time to join</h1>      
+    ?> <h1> <?php echo get_field('drive_custom_join_subhead'); ?></h1>
+    
+    <?php
+    
+    echo get_field('drive_custom_join_content');
 
-<img class="inline wp-image-31784 size-full" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/10/01090237/2019_FallDrive_Inline_1line1.png" alt="Husky for Life" width="280" />
-<p>
-<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/10/01083217/PromotionalItem.jpg" alt="UWAA pennant on" width="175" height="175" /><strong>It’s the fall membership drive!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match new and renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.</p>
-<p>Need another reason to join? Join by Oct. 31 and receive a free thank-you gift: a "Husky for Life!" pennant.</p>
-
-<h3>Join the pack</h3>
-
-<h4><strong>Choose your membership option:</strong></h4>
-<?php
      } elseif (array_key_exists("RENEW", $parentPageParams)) {
-       ?>
-      <h1>Now is the best time to join</h1>      
 
-<img class="inline wp-image-31784 size-full" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/10/01090237/2019_FallDrive_Inline_1line1.png" alt="Husky for Life" width="280" />
-<p>
-<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/10/01083217/PromotionalItem.jpg" alt="UWAA pennant on" width="175" height="175" /><strong>It’s the fall membership drive!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match new and renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.</p>
-<p>Need another reason to join? Join by Oct. 31 and receive a free thank-you gift: a "Husky for Life!" pennant.</p>
-
-<h3>Join the pack</h3>
-
-<h4><strong>Choose your membership option:</strong></h4>
+      ?> <h1> <?php echo get_field('drive_custom_renew_subhead'); ?></h1>
+    
+    <?php
+    
+      echo get_field('drive_custom_renew_content');
+    ?>
+      
        <?php
      } else {
-      ?>
-      <h1>Now is the best time to join</h1>      
 
-<img class="inline wp-image-31784 size-full" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/10/01090237/2019_FallDrive_Inline_1line1.png" alt="Husky for Life" width="280" />
-<p>
-<img class="inline wp-image-31784 size-full alignright" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2019/10/01083217/PromotionalItem.jpg" alt="UWAA pennant on" width="175" height="175" /><strong>It’s the fall membership drive!</strong> Through the end of October, our long-time partner <strong>BECU has pledged to match new and renewing member dues with a gift</strong> in support of student scholarships and higher education in Washington, up to $50,000.</p>
-<p>Need another reason to join? Join by Oct. 31 and receive a free thank-you gift: a "Husky for Life!" pennant.</p>
-
-<h3>Join the pack</h3>
-
-<h4><strong>Choose your membership option:</strong></h4>
-      <?php
-     }
-} else {
-
-   // Start the Loop.
+      // Start the Loop.
           while ( have_posts() ) : the_post();
 
             /*
@@ -185,13 +160,34 @@ if ($currentMonth == '10') {
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
-            if (!$isSpecialDriveActive) {
+            
              get_template_part( 'content', 'page' );
-            }
+            
              
 
 
           endwhile;
+
+     }
+} else {
+
+  // Start the Loop.
+          while ( have_posts() ) : the_post();
+
+            /*
+             * Include the post format-specific template for the content. If you want to
+             * use this in a child theme, then include a file called called content-___.php
+             * (where ___ is the post format) and that will be used instead.
+             */
+            
+             get_template_part( 'content', 'page' );
+            
+             
+
+
+          endwhile;
+
+   
 
 }
           ?>
