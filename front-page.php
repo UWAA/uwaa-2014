@@ -55,6 +55,7 @@ endif;
                 <div class="row-title-text news">
                   <h2><?php the_field('custom_text_one') ?></h2>
                 </div>
+                <a class="see-all-link" href="<?php echo home_url( '/events'); ?>">see all events</a>
 
               </div>
 
@@ -125,6 +126,7 @@ endif;
                 <div class="row-title-text news">
                   <h2><?php the_field('custom_text_three') ?></h2>
                 </div>
+                <a class="see-all-link" href="<?php echo home_url('/stories'); ?>">see all stories</a>
 
               </div>
 
