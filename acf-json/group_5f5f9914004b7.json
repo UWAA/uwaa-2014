@@ -74,6 +74,21 @@
             "endpoint": 0
         },
         {
+            "key": "field_5f612c98469f8",
+            "label": "Superhero Text Color",
+            "name": "drive_custom_superhero_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
             "key": "field_5f5fd7a487c2c",
             "label": "Join Superhero",
             "name": "drive_custom_join_superhero",
@@ -285,5 +300,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1600123716
+    "modified": 1600203973
 }

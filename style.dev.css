@@ -9918,6 +9918,9 @@ a#memberCheckerLogout {
 .page-member-account .uw-sidebar-menu {
   margin-top: 0;
 }
+.uw-site-title.drive-custom {
+  top: -430px;
+}
 #membership-option-table {
   border: none;
 }

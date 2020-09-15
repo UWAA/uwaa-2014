@@ -83,7 +83,7 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
         if(array_key_exists("JOIN", $parentPageParams) ) {
         
           ?>
-          <h2 class="uw-site-title"><?php echo get_field('drive_custom_join_headline') ?> </h2>
+          <h2 class="uw-site-title drive-custom" style="color:<?php echo esc_attr( get_field('drive_custom_superhero_text_color') ) ?>;"><?php echo get_field('drive_custom_join_headline') ?> </h2>
         
         <?php
 
@@ -91,7 +91,7 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
           
         ?>
 
-         <h2 class="uw-site-title"><?php echo get_field('drive_custom_renew_headline') ?> </h2>
+         <h2 class="uw-site-title drive-custom" style="color:<?php echo esc_attr( get_field('drive_custom_superhero_text_color') ) ?>;"><?php echo get_field('drive_custom_renew_headline') ?> </h2>
         
         <?php } else { ?> 
         
