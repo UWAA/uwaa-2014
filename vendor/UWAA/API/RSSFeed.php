@@ -91,6 +91,15 @@
                  'hasGeotag' => false,                 
              );
 
+             $this->appLinksFields = array(
+                  'fields' => array(
+                      'mb_thumbnail_subtitle',  //Known as a content head.
+                      'mb_80_character_excerpt'
+                      ),
+                  'hasTaxonomy' => false,
+                  'hasGeotag' => false
+              );
+
               add_action('request', array($this, 'removePrivateItemsFromFeed'));
               add_action('pre_get_posts', array($this, 'removeEventsWithNoDateFromFeed'));
               add_action('rss2_item', array($this, 'addFeedAugmentations'));
@@ -167,6 +176,8 @@
 
                 case 'tpcmembergrams':
                     $this->augmentFeed('tpcmembergrams', $this->tpcMembergramFields['fields']);
+                case 'tpcmembergrams':
+                    $this->augmentFeed('applinks', $this->appLinksFields['fields']);
                 break;
                 
 
