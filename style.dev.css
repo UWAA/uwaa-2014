@@ -8587,7 +8587,7 @@ div.map-logo.michigan {
     margin-top: 40px;
   }
   .uw-homepage-slider-container {
-    height: 500px;
+    height: 350px;
   }
   .uw-homepage-slider-container .mobile-image {
     display: block;
@@ -8603,9 +8603,9 @@ div.map-logo.michigan {
     background-size: cover;
   }
   .uw-homepage-slider-container .uw-homepage-slider.uw-hero-image {
-    padding: 30px;
+    padding: 20px;
     position: absolute;
-    height: 500px;
+    height: 350px;
   }
   .uw-homepage-slider-container .uw-homepage-slider.uw-hero-image:before {
     position: absolute;
@@ -8646,7 +8646,7 @@ div.map-logo.michigan {
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container h2 {
     margin: 0;
-    font-size: 1em;
+    font-size: .9em;
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container p {
     padding-right: 0;
@@ -11626,8 +11626,25 @@ Typography
 .page-travel .mapboxgl-popup {
   max-width: 200px;
 }
-.page-communities .mapboxgl-popup {
+.page-communities .mapboxgl-popup,
+.page-international-huskies .mapboxgl-popup,
+.page-u-s-huskies .mapboxgl-popup {
   min-width: 320px;
+}
+.page-communities .mapboxgl-popup-tip,
+.page-international-huskies .mapboxgl-popup-tip,
+.page-u-s-huskies .mapboxgl-popup-tip {
+  border: none;
+}
+.page-communities .mapboxgl-popup a.map-link:after,
+.page-international-huskies .mapboxgl-popup a.map-link:after,
+.page-u-s-huskies .mapboxgl-popup a.map-link:after {
+  bottom: 5px;
+}
+.page-communities .mapboxgl-popup-content,
+.page-international-huskies .mapboxgl-popup-content,
+.page-u-s-huskies .mapboxgl-popup-content {
+  padding-top: 5px;
 }
 .mapboxgl-popup-content {
   text-align: center;
