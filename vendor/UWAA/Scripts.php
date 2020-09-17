@@ -160,7 +160,7 @@ class Scripts
         'id'      => 'USHuskiesMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/USHuskiesMap' . $this->min_script() . '.js',
         'deps'    => array('mapbox-gl-js'),
-        'version' => '2.0',
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
       ),

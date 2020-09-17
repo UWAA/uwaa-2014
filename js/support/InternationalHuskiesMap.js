@@ -1,55 +1,83 @@
-(function ($) {
+mapboxgl.accessToken = "pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ";
+var globalCenter = [0, 0];
+var path = window.location.pathname.split('/').filter(function(n){ return n !== ''; }).pop();
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/bperick/ckbh38dq004dl1inqeej0mih0',
+    center: globalCenter,
+    zoom: .5, 
+    renderWorldCopies: false,
+    fadeDuration: 0
+});
 
-var path = window.location.pathname.split('/').filter(function(n){ return n !== ''; }).pop()
-var globalCenter = [20, 15];
-var usCenter = [39.833333, -98.583333];
-var uiMenu = $("#mapNavigation");
+var nav = new mapboxgl.NavigationControl({
+    showCompass: false,
+    showZoom: true
+});
+map.addControl(nav, 'top-left');
 
-//bounding work
-var southWest = L.latLng(-90, 180),
-    northEast = L.latLng(90, -180),
-    bounds = L.latLngBounds(southWest, northEast);
+var endPoint = homeLink.endpointURL;
 
-    L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
-    var map = L.mapbox.map('map', 'bperick.d9650d93', {
-        tileLayer : {
-                    continuousWorld: true,        
-                    noWrap: true
-                },
-        scrollWheelZoom:false,
-        doubleClickZoom:false,
-        maxBounds: bounds,
-        });
-    
-        map.setView(globalCenter, 2);    
-    
+map.on('load', function() {
+    map.loadImage(
+        'https://a.tiles.mapbox.com/v4/marker/pin-m+4b2e83.png?access_token=pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ',
+        function(error, image) {
+            if (error) throw error;
+            map.addImage('marker', image);
+            map.addSource('communities', {
+                type: 'geojson',
+                data: endPoint
+            });
+            map.addLayer({
+                id: 'unclustered-point',
+                type: 'symbol',
+                source: 'communities',
+                layout: {
+                    'icon-image': 'marker',
+                    'icon-size': 1,
+                    'icon-allow-overlap': true,
+                    'icon-ignore-placement': true
+                }
+            });
+            finishedLoading();
+        }
+    );
+});
 
-    startLoading();
 
-    //  Localized from WordPress
-    var endPoint = homeLink.endpointURL;
+var firstLoad = true;
 
+function finishedLoading() {
+    if (firstLoad) {
+        loader.className = 'done';
+        setTimeout(function() {
+            // then, after a half-second, add the class 'hide', which hides
+            // it completely and ensures that the user can interact with the
+            // map again.
+            loader.className = 'hide';
+        }, 100);
+    }
+    firstLoad = false;
+}
 
-    
-    var markerLayer = L.mapbox.featureLayer().addTo(map).on('ready', finishedLoading);
+map.on('click', 'unclustered-point', function(e) {
+    map.getCanvas().style.cursor = 'pointer';
 
-    markerLayer.loadURL(endPoint);
+    var features = map.queryRenderedFeatures(e.point, {
+        layers: ['unclustered-point']
+    });
 
-    
-    markerLayer.on('layeradd', function(e) {
-        var marker = e.layer,
-            feature = marker.feature;
+    var coordinates = e.features[0].geometry.coordinates.slice();
 
-        //Template for Custom Tooltip        
-        var popupContent = '<a href="' + feature.properties.link + '" data-chapter="' + feature.properties.jumper + '">' +
-                            '<div class="map-logo ' + feature.properties.logo + '"></div>' +
-                            '<p class="map-excerpt">' + feature.properties.excerpt + '</a>' +
-                            '<a class="map-link" href="' + feature.properties.link + '">' +
-                        '</a></p>';
-        
-        marker.bindPopup($(popupContent).click(function(){
+    features.map(function(feat) {
+        var popupContent = '<a href="' + feat.properties.link + '" data-chapter="' + feat.properties.jumper +  '">' +
+                    '<div class="map-logo ' + feat.properties.logo + '"></div>' +
+                    '<p class="map-excerpt">' + feat.properties.excerpt + '</a>' +
+                    '<a class="map-link" href="' + feat.properties.link + '">' +
+                    '</a></p>';
 
-           var chapterToFind = this.dataset.chapter;
+        $(popupContent).click(function(){
+            var chapterToFind = this.dataset.chapter;
 
             var $pageAccordionContent = $('.collapse p');           
             var $accordionWithChapter = $pageAccordionContent.children( "#"+chapterToFind+"" ).parents('.panel');            
@@ -65,37 +93,36 @@ var southWest = L.latLng(-90, 180),
             $('html, body').animate({                
                 scrollTop: $content.offset().top - 100
             }, 500);
-
-
-        })[0],
-        {
-        closeButton: true,
-        minWidth: 320
-        }
-
-        )
-    
+        });
+                    
+        new mapboxgl.Popup({
+            closeButton: true,
+            closeOnClick: true,
+            })
+            .setLngLat(coordinates)
+            .setHTML(popupContent)
+            .addTo(map); 
     });
+    map.flyTo({
+        center: coordinates,
+    });
+});
 
+map.on('mouseenter', 'unclustered-point', function(e) {
+    map.getCanvas().style.cursor = 'pointer';
+});
 
-    function startLoading() {
-    loader.className = '';
-    }
+map.on('mouseleave', 'unclustered-point', function() {
+    map.getCanvas().style.cursor = '';
+});
 
-function finishedLoading() {
-    loader.className = 'done';
-    setTimeout(function() {
-        // then, after a half-second, add the class 'hide', which hides
-        // it completely and ensures that the user can interact with the
-        // map again.
-        loader.className = 'hide';        
-    }, 100);   
-
+function isSecure() {
+    return location.protocol == 'https:';
 }
 
-
-
-}(jQuery));
+if (isSecure()) {
+    var endPoint = endPoint.replace(/^http:\/\//i, 'https://');
+} 
 
 
 

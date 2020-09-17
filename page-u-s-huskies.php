@@ -4,7 +4,7 @@ get_header();
 wp_enqueue_script(array('USHuskiesMap', 'chapterAccordionOpener'));
 wp_enqueue_style('mapbox');
 
-wp_localize_script( 'mapbox', 'homeLink', 
+wp_localize_script( 'mapbox-gl-js', 'homeLink', 
   array( 
     'endpointURL' => apply_filters('sharing_permalink', home_url('/api/communities/geojson'))
   ) 
@@ -64,6 +64,8 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
            
 
           endwhile;
+
+          get_template_part( 'partials/map' );
 
           
         ?>

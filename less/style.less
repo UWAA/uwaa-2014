@@ -97,9 +97,18 @@
   }
 }
 
-.page-communities {
+.page-communities, .page-international-huskies, .page-u-s-huskies {
   .mapboxgl-popup {
     min-width: 320px;
+  }
+  .mapboxgl-popup-tip {
+    border: none;
+  }
+  .mapboxgl-popup a.map-link:after {
+    bottom: 5px;
+  }
+  .mapboxgl-popup-content {
+    padding-top: 5px;
   }
 }
 
