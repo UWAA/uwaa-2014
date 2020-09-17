@@ -113,9 +113,9 @@ class ThumbnailBrowser
     }
 
     if ($isotope) {
-        return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Generic_Thumb_275x190.jpg" />';
+        return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/2020_Generic_Purple-with-W_pp.jpg" />';
     }
-    return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Generic_Thumb_275x190.jpg" />';
+    return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/2020_Generic_Purple-with-W_pp.jpg" />';
    }
 
     protected function getSortingToolbarTemplate($typeOfToolbar)
