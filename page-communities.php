@@ -58,7 +58,7 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
 
           endwhile;
 
-          // get_template_part( 'partials/map' );
+          get_template_part( 'partials/map' );
           
         ?>
 
