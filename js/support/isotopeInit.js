@@ -24,7 +24,9 @@ Isotope = Backbone.View.extend({
     if (isotopeQueryFilter.length === 0 && isotopeQueryCookie != null) {
      var isotopeQueryFilter = isotopeQueryCookie;
      history.pushState("UWAAFILTER", "", "?filter=" + isotopeQueryFilter);
-    }    
+    }
+
+
 
     $canvas = this.$('.isotope').isotope({
       itemSelector: '.post-thumbnail-slide',
@@ -39,10 +41,17 @@ Isotope = Backbone.View.extend({
     
 
     $canvas.imagesLoaded(function() {
-    if (isotopeQueryFilter != '') {
-      // console.log('have filter' + filterValue);  //debug      
-      $canvas.isotope('layout');      
-      $canvas.isotope({filter: filterValue});
+    if (isotopeQueryFilter != '') {     
+      
+
+      if (filterValue === '.live-stream') {        
+        $canvas.isotope('layout');
+        $canvas.isotope({ sortBy: 'date', filter: filterValue });
+                
+      } else {
+        $canvas.isotope('layout');
+        $canvas.isotope({ filter: filterValue });
+      }
       // console.log(this);
 
       isotopeInit.signupFormCheck(filterValue);
