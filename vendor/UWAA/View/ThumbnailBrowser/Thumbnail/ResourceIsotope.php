@@ -16,6 +16,7 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postURL;
     protected $postCalloutText;
     protected $postDate;
+    protected $startDate;
     protected $postSubtitle;
     protected $postImageThumbnailURL;
     protected $postExcerpt;
@@ -42,6 +43,7 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postCalloutText = strip_tags(get_post_meta(get_the_ID(), 'mb_thumbnail_callout', true));
         $this->postImageThumbnailURL = $this->UI->returnPostFeaturedImageURL(get_post_thumbnail_id(get_the_ID()), 'isotopeGrid');
         $this->postDate = strip_tags(get_post_meta(get_the_ID(), 'mb_cosmetic_date', true));
+        $this->startDate = $this->formatDateForSorting($query);
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_the_excerpt(), 220));
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->postSubtitle = $this->getPostSubtitle($query);
@@ -119,9 +121,10 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
     $image = $this->renderImage(true);
     $link = $this->getURL();
     $date = $this->renderDate();
+    $sortDate = $this->startDate;
     $tags= $this->renderTags();
 	$template = <<<ISOTOPE
-<div class="post-thumbnail-slide $this->postTerms">
+<div class="post-thumbnail-slide $this->postTerms" $sortDate>
 	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
       $callout

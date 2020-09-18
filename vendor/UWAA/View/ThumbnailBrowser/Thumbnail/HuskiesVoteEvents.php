@@ -38,7 +38,7 @@ class HuskiesVoteEvents extends ThumbnailBrowser implements Thumbnail
         'post',
         'page'
         ),
-      'posts_per_page' => 4,
+      'posts_per_page' => 8,
       'orderby' => 'meta_value',
       'order' => 'ASC',
       'meta_key' => 'mb_start_date',

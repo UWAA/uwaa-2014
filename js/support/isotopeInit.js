@@ -28,7 +28,11 @@ Isotope = Backbone.View.extend({
 
     $canvas = this.$('.isotope').isotope({
       itemSelector: '.post-thumbnail-slide',
-      layoutMode: 'fitRows'
+      layoutMode: 'fitRows',
+      getSortData : {
+        date : '[data-sort]',
+        title : '.title'
+      }
     });
 
     var filterValue = '.' + isotopeQueryFilter.toLowerCase();
@@ -66,8 +70,12 @@ Isotope = Backbone.View.extend({
   filterByButton: function(e) {
     var $target = $(e.target);
     this.$('#quicksearch').val('');
-    var filterValue = $target.attr('data-filter');         
-    this.$('.isotope').isotope({filter: filterValue});    
+    var filterValue = $target.attr('data-filter');
+    this.$('.isotope').isotope({
+      filter: filterValue,
+      sortBy: 'title'
+    
+    });    
     history.pushState("UWAAFILTER", "", "?filter=" + filterValue.replace(/\./gi, ''));
     this.toggleButtonClass($target);
     this.signupFormCheck(filterValue);
@@ -77,6 +85,10 @@ Isotope = Backbone.View.extend({
       this.eraseCookie('UWAA_' + document.location.pathname);
       history.pushState("UWAAFILTER", "", document.location.pathname);      
       return;
+    }
+
+    if(filterValue === '.live-stream'){      
+      this.$('.isotope').isotope({ sortBy: 'date' });
     }
 
     this.createCookie('UWAA_' + document.location.pathname, filterValue.replace(/\./gi, ''), 1);

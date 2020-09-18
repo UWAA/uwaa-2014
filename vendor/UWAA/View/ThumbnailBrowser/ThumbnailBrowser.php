@@ -57,6 +57,17 @@ class ThumbnailBrowser
 
   }
 
+  protected function formatDateForSorting($post){
+    $date = get_post_meta(get_the_ID(), 'mb_start_date', true);
+
+    if(!empty($date)):
+      return 'data-sort="'. esc_attr(date_create_from_format( 'Ymd', ($date ) )->format('c') ) .'"';
+    endif;
+    
+    return;
+
+  }
+
   protected function getTourDestination($post)
   {
     $toursRegions = array(
