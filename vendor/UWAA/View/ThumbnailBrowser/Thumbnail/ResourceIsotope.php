@@ -33,7 +33,7 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
     }
 
       public function extractPostInformation($query)
-  {
+  {    
 
         while ( $query->have_posts() ) : $query->the_post();
 
@@ -102,7 +102,31 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
           'terms'    => array( 'exclude-from-search'),
           'operator'  => 'NOT IN'
           )
-      ) //End tax query
+        ), //End tax query 
+      // 'meta_key' => 'mb_start_date',
+      'meta_query' => array(
+        'relation' => 'OR',
+          array(
+            'key' => 'mb_start_date',
+            'type' => 'DATE',
+            'value' => date("Y-m-d"),
+            'compare' => '>=',
+          ),
+          array(
+            'relation' => 'OR',
+            array(
+              'key' => 'mb_start_date',            
+              'compare' => 'NOT EXISTS',
+              'value' => ''
+            ),
+            array(
+              'key' => 'mb_start_date',
+              'value' => ''
+            )
+          )
+          
+          
+        ),
       );
 
     return $args;
