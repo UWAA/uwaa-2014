@@ -124,7 +124,7 @@ class Scripts
         'id'      => 'isotopeInit',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/isotopeInit' . $this->min_script() . '.js',
         'deps'    => array('isotope'),
-        'version' => '1.0',
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
       ),
