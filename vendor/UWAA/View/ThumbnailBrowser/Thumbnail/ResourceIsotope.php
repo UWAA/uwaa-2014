@@ -123,9 +123,22 @@ class ResourceIsotope extends ThumbnailBrowser implements Thumbnail
               'key' => 'mb_start_date',
               'value' => ''
             )
-          )
-          
-          
+            ),
+            array(
+            'relation' => 'AND',
+              array(
+                'key' => 'mb_start_date',
+                'type' => 'DATE',
+                'value' => date("Y-m-d", strtotime("now") ), // Set today's date (note the similar format)
+                'compare' => '<=', // Return the ones greater than today's date
+              ),
+              array(
+                'key' => 'mb_end_date',
+                'type' => 'DATE',
+                'value' => date("Y-m-d", strtotime("now") ), // Set today's date (note the similar format)
+                'compare' => '>=', // Return the ones greater than today's date
+              )
+            )
         ),
       );
 
