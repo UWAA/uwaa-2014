@@ -5,8 +5,9 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 $UWAA->Memberchecker->getSession();
 
 function previewOrActiveDrive() {
-  if (is_user_logged_in() || get_field('drive_custom_is_active')) {
+  if (is_user_logged_in() || get_field('controls')['drive_custom_is_active']) {
     return TRUE;
+    
   }
   return FALSE;
 }
@@ -27,12 +28,12 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
           // LAD is life joint thing
       }
-      
-    
-          
+
+      // var_dump();
+            
 // <!-- drive_custom_is_control_shown -->
 
-if( previewOrActiveDrive() ) {
+if(previewOrActiveDrive() ) {
   // show the join/renew custom superheros
 if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_superhero')) {
 
