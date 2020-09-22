@@ -37,7 +37,7 @@ class CommonGroundEvent extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => 5,
+      'posts_per_page' => 8,
       'orderby' => 'meta_value',
       'order' => 'ASC',
       'meta_key' => 'mb_start_date',
