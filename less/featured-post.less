@@ -24,6 +24,8 @@
         position: relative;
         background-color: @white;
 
+        
+
 
          &:after {
             background: url(assets/uwaa-sprite.svg) no-repeat -228px -493px;
@@ -146,6 +148,10 @@
     .copy {
         height: 230px;
 
+        .uwaa-home-body-container & {
+            height: 200px;
+        }
+
 
         @media only screen and (min-width: 990px) and (max-width: 1200px) {
             h4.title{
@@ -200,7 +206,7 @@
         }
 
     .copy {
-        height: 220px;
+        height: 220px;        
         
         @media only screen and (max-width: 991px) {
         height: 130px;
@@ -244,5 +250,6 @@
 // }
 
 .row-gold-background {
-    background-color: @ultralightgold;    
+    background-color: @ultralightgold;
+    
 }

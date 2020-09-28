@@ -24,21 +24,6 @@ endif;
 
 ?>
 
-<div class="container uw-body">
-
-  <div class="row">
-
-    <div role='main'>
-
-    <!-- No breadcrumbs for holiday front page -->
-    <!-- <?php get_template_part('partials/page', 'breadcrumbs') ?> -->
-
-    </div>
-
-  </div> <!-- /row -->
-
-</div> <!-- /container -->
-
    <div class="container-fluid home-thumbnail-row-container">
 
       <div class="row 5-column home-thumbnail-row home-row">
