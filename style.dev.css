@@ -7382,6 +7382,9 @@ a.read-more-link:after {
 .featured-post.five-column .copy {
   height: 230px;
 }
+.uwaa-home-body-container .featured-post.five-column .copy {
+  height: 200px;
+}
 @media only screen and (min-width: 990px) and (max-width: 1200px) {
   .featured-post.five-column .copy h4.title {
     margin-bottom: .3em;
@@ -8762,8 +8765,14 @@ div.map-logo.michigan {
   padding-left: 0;
   padding-right: 0;
 }
+.home-thumbnail-row-container {
+  margin-bottom: 10px;
+}
 .home-thumbnail-row-container.row-gold-background {
   background-color: #e8e3d3;
+}
+.home-thumbnail-row-container.row-gold-background .row-hr {
+  border-color: #ffffff;
 }
 .home-thumbnail-row {
   margin-bottom: 20px;
@@ -8779,6 +8788,7 @@ div.map-logo.michigan {
 .home-thumbnail-row .row-title-row .row-title-text {
   width: 20%;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 .home-thumbnail-row-container.row-gold-background .home-thumbnail-row .row-title-row .row-title-text {
   background-color: #e8e3d3;
@@ -8788,11 +8798,11 @@ div.map-logo.michigan {
   font-weight: 900;
   font-size: 22px;
   text-transform: uppercase;
-  background-color: #ffffff;
   color: #4b2e83;
+  white-space: nowrap;
 }
-.home-thumbnail-row-container:nth-child(odd) .home-thumbnail-row .row-title-row .row-title-text h2 {
-  background-color: inherit;
+.home-thumbnail-row-container.row-gold-background .home-thumbnail-row .row-title-row .row-title-text h2 {
+  background-color: #e8e3d3;
 }
 .home-thumbnail-row .row-title-row .see-all-link {
   float: right;
