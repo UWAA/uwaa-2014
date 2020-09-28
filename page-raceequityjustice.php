@@ -24,7 +24,9 @@ else {
 
 ?>
 
-<div class="container uw-body">
+<div class="uw-body">
+
+<div class="container">
 
   <div class="row">
 
@@ -34,36 +36,48 @@ else {
       
       
 
-      <div id="main_content" class="uw-body-copy">
+        <div id="main_content" class="uw-body-copy">
 
-      <h6 class="intro-head"> <?php echo get_post_meta($post->ID, 'mb_thumbnail_subtitle', true) ?></h6>
+        <h6 class="intro-head"> <?php echo get_post_meta($post->ID, 'mb_thumbnail_subtitle', true) ?></h6>
 
-                <h1>
-                  <?php the_title() ?>
-                </h1>
+                  <h1>
+                    <?php the_title() ?>
+                  </h1>
 
-      <?php
-          // Start the Loop.
-          while ( have_posts() ) : the_post();
+        <?php
+            // Start the Loop.
+            while ( have_posts() ) : the_post();
 
-            /*
-             * Include the post format-specific template for the content. If you want to
-             * use this in a child theme, then include a file called called content-___.php
-             * (where ___ is the post format) and that will be used instead.
-             */
-            the_content();
+              /*
+              * Include the post format-specific template for the content. If you want to
+              * use this in a child theme, then include a file called called content-___.php
+              * (where ___ is the post format) and that will be used instead.
+              */
+              the_content();
 
 
-          endwhile;
-        ?>
-         
-           
+            endwhile;
+          ?>
+          
+            
 
-         
+          
 
-      </div>
+        </div>
 
-       <h3>Programs and Events</h3>
+       </div> <!-- /row -->
+
+</div> <!-- /container -->
+
+</div>
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 uw-content">
+
+                    <h3>Programs and Events</h3>
             <p><?php the_field('custom_text_one') ?></p>
             <div class="row">
                 
@@ -78,9 +92,26 @@ else {
 
             </div>
 
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="container-fluid">
+              <div class="row row-gold-background">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 uw-content">
+
+       
+
             <h3>Resources</h3>
             <p><?php the_field('custom_text_two') ?></p>
-            <div class="row">
+            <div class="row ">
                 
                 <?php
 
@@ -92,6 +123,19 @@ else {
                 ?>
 
             </div>
+
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+             <div class="container-fluid">
+              <div class="row">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 uw-content">
 
             <h3>Stories and News</h3>
             <p><?php the_field('custom_text_three') ?></p>
@@ -106,6 +150,12 @@ else {
 
                 ?>
 
+            </div>
+
+            </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
     </div>

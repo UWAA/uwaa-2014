@@ -75,7 +75,7 @@ endif;
       </div>
     </div>
 
-    <div class="container-fluid home-thumbnail-row-container gold">
+    <div class="container-fluid home-thumbnail-row-container row-gold-background">
 
       <div class="row 5-column home-thumbnail-row home-row">
 
