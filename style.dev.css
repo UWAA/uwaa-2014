@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.18.0
+ Version: 1.20.1
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -7329,7 +7329,8 @@ a.read-more-link:after {
   /* Extra Small Devices, Phones */
   /* Custom, iPhone Retina */
 }
-.page-huskies-vote .featured-post.five-column {
+.page-huskies-vote .featured-post.five-column,
+.page-raceequityjustice .featured-post.five-column {
   margin-bottom: 10px;
 }
 @media only screen and (min-width: 993px) {
@@ -7457,6 +7458,9 @@ a.read-more-link:after {
     font-size: .8em;
     line-height: 1.25;
   }
+}
+.row-gold-background {
+  background-color: #e8e3d3;
 }
 .uw-homepage-slider-container.communities-header {
   margin-left: -15px;
@@ -8758,7 +8762,7 @@ div.map-logo.michigan {
   padding-left: 0;
   padding-right: 0;
 }
-.home-thumbnail-row-container:nth-child(odd) {
+.home-thumbnail-row-container.row-gold-background {
   background-color: #e8e3d3;
 }
 .home-thumbnail-row {
@@ -8776,7 +8780,7 @@ div.map-logo.michigan {
   width: 20%;
   margin: 0 auto;
 }
-.home-thumbnail-row-container:nth-child(odd) .home-thumbnail-row .row-title-row .row-title-text {
+.home-thumbnail-row-container.row-gold-background .home-thumbnail-row .row-title-row .row-title-text {
   background-color: #e8e3d3;
 }
 .home-thumbnail-row .row-title-row .row-title-text h2 {
