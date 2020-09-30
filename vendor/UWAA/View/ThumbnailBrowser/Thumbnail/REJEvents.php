@@ -32,31 +32,27 @@ class REJEvents extends ThumbnailBrowser implements Thumbnail
 
   private function setArguments()
   {
-    $args = array (
-      'post_type' => array(
-        'events',
-        'benefits',
-        'post',
-        'page'
-        ),
+    $args = array (           
       'posts_per_page' => $this->returnVariableFormatInformation('2x'),                  
       'meta_query' => array(
         'relation' => 'OR',
-        'start_date' => array(
-          'key' => 'mb_start_date',
-          'type' => 'DATE',
-          'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
-          'compare' => '>=' // Return the ones greater than today's date
-        ),         
-        'has_date' => array(
-            'key' => 'mb_start_date',
-            'compare' => 'NOT EXISTS'
+        'has_date_before_today' => array(         
+            array(
+              'key' => 'mb_start_date',
+              'type' => 'DATE',
+              'value' => date("Y-m-d", strtotime('-1 day')), // Set today's date (note the similar format)
+              'compare' => '>=' // Return the ones greater than today's date
+            ),                      
+        ),        
+        'has_no_date' => array(
+              'key' => 'mb_start_date',            
+              'compare' => 'NOT EXISTS',             
         ),    
-      ),    
-      'orderby' => array(        
-        'has_date' => 'rand',
-        'start_date' => 'ASC',
-        ),
+      ),          
+      'orderby' => array(
+        'type' => 'ASC',
+        'meta_value' => 'ASC',        
+      ),               
       'tax_query' => array(
          array(
           'taxonomy' => 'uwaa_content_promotion',
@@ -89,8 +85,9 @@ class REJEvents extends ThumbnailBrowser implements Thumbnail
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
 
         echo $this->buildTemplate();
+        
 
-    endwhile;
+    endwhile;    
 
     wp_reset_postdata();
 
