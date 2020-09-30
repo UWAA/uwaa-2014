@@ -10,14 +10,19 @@ minifyCss = require('gulp-minify-css'),
 mainBowerFiles = require('main-bower-files');
 
 
+
+  
+
+
 var pkg = require('./package.json');
+pkg.cacheHash = pkg.version + '.' + Date.now().toString(36);
 var banner = ['/*',
   ' Theme Name: <%= pkg.name %>',
   ' Theme Uri: <%= pkg.authorUri %>',
   ' Description: <%= pkg.description %>',
   ' Author: <%= pkg.authors %>',
   ' Template: <%= pkg.template %>',
-  ' Version: <%= pkg.version %>',
+  ' Version: <%= pkg.cacheHash %>',
   ' */',
   ''].join('\n');
 
@@ -38,7 +43,7 @@ var paths = {
 }
 
 gulp.task('default', function() {
-  
+  console.log(this);
 });
 
 
