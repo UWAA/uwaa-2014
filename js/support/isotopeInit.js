@@ -33,7 +33,8 @@ Isotope = Backbone.View.extend({
       layoutMode: 'fitRows',
       getSortData : {
         date : '[data-sort]',
-        title : '.title'
+        title : '.title',
+        order : '[data-order]'
       }
     });
 
@@ -82,7 +83,7 @@ Isotope = Backbone.View.extend({
     var filterValue = $target.attr('data-filter');
     this.$('.isotope').isotope({
       filter: filterValue,
-      // sortBy: 'title'
+      sortBy: 'order'
     
     });    
     history.pushState("UWAAFILTER", "", "?filter=" + filterValue.replace(/\./gi, ''));

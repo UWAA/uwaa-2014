@@ -24,6 +24,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     protected $postImageAltText;
     protected $tourOperator;
     protected $postTags;
+    protected $originalPostOrder;
 
     public function __construct()
     {
@@ -52,6 +53,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         $this->tourOperator = get_post_meta(get_the_ID(), 'mb_operator', true);
         $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
+        $this->originalPostOrder = $query->current_post;
 
 
 
@@ -132,13 +134,14 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     $callout = $this->renderCallout();
     $image = $this->renderImage();
       $tags= $this->renderTags();
+      $postOrder = $this->originalPostOrder + 1;
 
 
 
     if ($this->isPreliminary == 'preliminary')
     {
             $prelimTemplate = <<<PRELIMISOTOPE
-      <div class="post-thumbnail-slide preliminary $this->postTerms">
+      <div class="post-thumbnail-slide preliminary $this->postTerms" data-order="$postOrder">
     <div class="image-frame">
       $callout
       $image
@@ -159,7 +162,7 @@ return $prelimTemplate;
 
 
         $template = <<<ISOTOPE
-<div class="post-thumbnail-slide $this->postTerms">
+<div class="post-thumbnail-slide $this->postTerms" data-order="$postOrder">
   <a href="$this->postURL" title="$this->postTitle">
     <div class="image-frame">
       $callout

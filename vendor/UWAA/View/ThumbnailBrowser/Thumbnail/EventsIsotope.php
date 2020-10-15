@@ -23,6 +23,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
     protected $isPartnerEvent;
     protected $postImageAltText;
     protected $postTags;
+    protected $originalPostOrder;
 
     public function __construct()
     {
@@ -51,7 +52,7 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
         $this->isPartnerEvent = get_post_meta(get_the_ID(), 'mb_isPartnerEvent', true);
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
-        
+        $this->originalPostOrder = $query->current_post;
         echo $this->buildTemplate();
 
     endwhile;
@@ -143,10 +144,11 @@ class EventsIsotope extends ThumbnailBrowser implements Thumbnail
   $link = $this->determineAlternateLink();
   $date = $this->renderDate();
   $tags= $this->renderTags();
+  $postOrder = $this->originalPostOrder + 1;
   // 
   
 	$template = <<<ISOTOPE
-<div class="post-thumbnail-slide $this->postTerms">
+<div class="post-thumbnail-slide $this->postTerms" data-order="$postOrder">
 	<a href="$link" title="$this->postTitle">
     <div class="image-frame">
       $callout
