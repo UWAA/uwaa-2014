@@ -82,7 +82,7 @@ Isotope = Backbone.View.extend({
     var filterValue = $target.attr('data-filter');
     this.$('.isotope').isotope({
       filter: filterValue,
-      sortBy: 'title'
+      // sortBy: 'title'
     
     });    
     history.pushState("UWAAFILTER", "", "?filter=" + filterValue.replace(/\./gi, ''));
