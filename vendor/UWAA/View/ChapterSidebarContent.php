@@ -13,6 +13,8 @@ class ChapterSidebarContent
     private $leader1Email;
     private $leader2;
     private $leader2Email;
+    private $leader3;
+    private $leader3Email;
 
 
     function __construct()
@@ -27,6 +29,8 @@ class ChapterSidebarContent
         $this->leader1Email = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_leader_1_email', true));
         $this->leader2 = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_leader_2', true));
         $this->leader2Email = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_leader_2_email', true));
+        $this->leader3 = esc_html(get_post_meta(get_the_ID(), 'mb_chapter_leader_3', true));
+        $this->leader3Email = esc_attr(get_post_meta(get_the_ID(), 'mb_chapter_leader_3_email', true));
 
     }
 
@@ -41,6 +45,9 @@ class ChapterSidebarContent
             } 
             if ($this->leader2) {                
                 $widget .= '<a class="email" href="mailto:' . $this->leader2Email . '"> '. $this->leader2 .'</a>';
+            }
+            if ($this->leader3) {                
+                $widget .= '<a class="email" href="mailto:' . $this->leader3Email . '"> '. $this->leader3 .'</a>';
             }
         $widget .= '</div>';
 

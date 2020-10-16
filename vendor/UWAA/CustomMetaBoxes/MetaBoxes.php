@@ -336,6 +336,18 @@ class MetaBoxes
                         'type'=> 'text',
                         'desc'=> "(optional) The e-mail address of the second chapter leader."
                         ),
+                        array(
+                        'name' => 'Chapter Leader 3',
+                        'id'=> 'chapter_leader_3',
+                        'type'=> 'text',
+                        'desc'=> "(optional) The name of the Third Chapter Leader, follow UWAA Style for grad year/school."
+                        ),
+                    array(
+                        'name' => 'Chapter Leader 3 Email',
+                        'id'=> 'chapter_leader_3_email',
+                        'type'=> 'text',
+                        'desc'=> "(optional) The e-mail address of the third chapter leader."
+                        ),
                     array(
                         'name' => 'Chapter Logo Thumbnail ID',
                         'id'=> 'chapter_logo_id',
