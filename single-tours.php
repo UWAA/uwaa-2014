@@ -4,6 +4,9 @@
 
   // Start the Loop.
   while ( have_posts() ) : the_post();
+
+  $acfBigMap = get_field('tours_map_large_image');
+  $acfSmallMap = get_field('tours_map_small_image');
   
   
 
@@ -53,8 +56,10 @@
 
     new \UWAA\View\Pagination('tours', get_the_ID());
 
-    $mapURL = get_post_meta(get_the_id(), 'mb_operator_map', true);
-    $bigMapURL = get_post_meta(get_the_id(), 'mb_operator_big_map', true);
+
+    // TODO - Should this be here, or should the logic be pulled to another part of the template
+    $mapURL = ($acfSmallMap != '' ? $acfSmallMap : get_post_meta(get_the_id(), 'mb_operator_map', true) );
+    $bigMapURL = ($acfBigMap !=  '' ? $acfBigMap : get_post_meta(get_the_id(), 'mb_operator_big_map', true) );
      if ($mapURL) {
       echo '<div class="widget">';
 

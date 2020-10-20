@@ -1,0 +1,72 @@
+{
+    "key": "group_5f8f66277c172",
+    "title": "Tours Map Upload",
+    "fields": [
+        {
+            "key": "field_5f8f664a2ac9c",
+            "label": "Tours Map Image - Large",
+            "name": "tours_map_large_image",
+            "type": "image",
+            "instructions": "Upload an image here for the tours map that appears in the modal box as an expanded view of the tour in question",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "uploadedTo",
+            "min_width": 302,
+            "min_height": 250,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ".jpg, .png"
+        },
+        {
+            "key": "field_5f8f6abd2240b",
+            "label": "Tours Map Image - Small\/Sidebar",
+            "name": "tours_map_small_image",
+            "type": "image",
+            "instructions": "Upload an image here for the tours map that appears in the sidebar of the tour currently being viewed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "uploadedTo",
+            "min_width": 302,
+            "min_height": 230,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ".jpg, .png"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "tours"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1603235638
+}
