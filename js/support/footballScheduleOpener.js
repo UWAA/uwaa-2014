@@ -43,7 +43,7 @@
     console.log(currentPage.params);
     
     //Another check, we are only going to search for a chapter if the URL has one.
-    if (currentPage.params.hasOwnProperty('schedule')) {
+    if (currentPage.hash == 'schedule') {
 
         console.log('sarching');
         
