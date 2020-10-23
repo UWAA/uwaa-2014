@@ -217,7 +217,7 @@ class Scripts
         'id'      => 'footballScheduleOpener',
         'url'     => get_bloginfo( 'stylesheet_directory' ) . '/js/support/footballScheduleOpener'. $this->min_script() .'.js',
         'deps'    => array( 'backbone' ),
-        'version' => '1.0',
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false,
     ),
