@@ -43,16 +43,11 @@
     console.log(currentPage.params);
     
     //Another check, we are only going to search for a chapter if the URL has one.
-    if (currentPage.hash == 'schedule') {
-
-        console.log('sarching');
-        
-
-        // var chapterToFind = currentPage.params.chapter.replace("%20", " ");
+        if (currentPage.hash == 'schedule' || currentPage.hash == 'broadcast' || currentPage.hash == 'warmup' || currentPage.hash == 'parties' ) {
 
         var $pageAccordionContent = $('#accordion .panel .collapse p');
         
-        var $accordionWithChapter = $pageAccordionContent.children("#schedule").parents('.panel');
+        var $accordionWithChapter = $pageAccordionContent.children("#"+currentPage.hash).parents('.panel');
         // var $accordionWithChapter = $pageAccordionContent.children("#" + chapterToFind + "").parents('.panel');
         var $indicator = $accordionWithChapter.find(".indicator:first");
         var $content = $accordionWithChapter.children('.collapse');
