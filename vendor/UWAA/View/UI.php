@@ -32,6 +32,7 @@ class UI
         new Shortcodes\ActivityLevel;
         new Shortcodes\ViewingParty;
         new Shortcodes\SloganSurvey;
+        new Shortcodes\ZoomBackgrounds();
 
     }
 

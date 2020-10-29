@@ -22,7 +22,7 @@
         {
             "key": "field_5f9a4ea6d4895",
             "label": "Zoom Slides",
-            "name": "zoom_slides",
+            "name": "zoom-slides",
             "type": "repeater",
             "instructions": "Add zoom images",
             "required": 0,
@@ -41,7 +41,7 @@
                 {
                     "key": "field_5f9a4f0dd4896",
                     "label": "Zoom Background",
-                    "name": "zoom_background",
+                    "name": "zoom-background",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -82,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1603948370
+    "modified": 1603950183
 }

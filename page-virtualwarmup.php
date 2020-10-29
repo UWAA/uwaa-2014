@@ -64,7 +64,7 @@ $featureImage = $UWAA->UI->returnPostFeaturedImageURL(get_post_thumbnail_id($pos
                         comments_template();
                     }
 
-                endwhile;
+                endwhile;                
 
               
             ?>
