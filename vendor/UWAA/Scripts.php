@@ -316,6 +316,14 @@ class Scripts
         'version' => '1.0',
         'in_footer' => true,
         'admin'   => false
+      ),
+      'countdownTimer' => array (
+        'id'      => 'countdownTimer',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/countdownTimer' . $this->min_script() . '.js',
+        'deps'    => array('jquery'),
+        'version' => wp_get_theme()->get('Version'),
+        'in_footer' => true,
+        'admin'   => false
       )
 
       
