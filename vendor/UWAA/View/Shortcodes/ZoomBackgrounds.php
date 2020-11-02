@@ -32,6 +32,7 @@ class ZoomBackgrounds
             $zoom .= '<a href="'.$fullsizeURL.'">';
             $zoom .= $mediumURL;
             $zoom .= '</a>';
+            $zoom .= do_shortcode( '[uwaa-button url="'.$fullsizeURL.'" color="purple" type="slant-right"]Download[/uwaa-button]');
 
             // Download Button
             
