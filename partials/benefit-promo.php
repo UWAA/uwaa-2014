@@ -1,5 +1,10 @@
 <?php
 
+$ID = get_page_by_path( 'virtualwarmup');
+
+$now = new DateTime( 'now' ,new DateTimeZone('America/Los_Angeles') );
+$kickoff = new DateTime(get_field('countdown_end_time', $ID ), new DateTimeZone('America/Los_Angeles') );
+
 $promoText = get_post_meta(get_the_ID(), 'mb_benefit_promotion', true);
 
 if (!empty($promoText)) {
@@ -22,7 +27,7 @@ if (!empty($promoText)) {
             ))));
                 } 
 
-            elseif (has_term('virtual-warmup', 'uwaa_content_promotion')) {
+            elseif (has_term('virtual-warmup', 'uwaa_content_promotion') && $now > $kickoff) {
                 
                 echo do_shortcode(wp_kses(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true), array('a' => array(
             'href' => array(),
