@@ -22,7 +22,7 @@ if (!empty($promoText)) {
             ))));
                 } 
 
-            elseif (has_tag('virtual-warmup')) {
+            elseif (has_term('virtual-warmup', 'uwaa_content_promotion')) {
                 
                 echo do_shortcode(wp_kses(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true), array('a' => array(
             'href' => array(),
