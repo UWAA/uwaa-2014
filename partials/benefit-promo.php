@@ -21,6 +21,17 @@ if (!empty($promoText)) {
             'class' => array()
             ))));
                 } 
+
+            elseif (has_tag('virtual-warmup')) {
+                
+                echo do_shortcode(wp_kses(get_post_meta(get_the_ID(), 'mb_benefit_promotion', true), array('a' => array(
+            'href' => array(),
+            'title' => array(),
+            'class' => array()
+        ), 'div' => array(
+            'class' => array()
+            ))));
+                } 
                 else{
                     echo "Log in or <a href=\" " . get_site_url() . "/membership/join-or-renew/?join\">join the UWAA</a>";
                 }

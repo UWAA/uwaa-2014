@@ -32,6 +32,8 @@ class ZoomBackgrounds
             $zoom .= '<a href="'.$fullsizeURL.'">';
             $zoom .= $mediumURL;
             $zoom .= '</a>';
+
+            // Download Button
             
     endwhile;
 
