@@ -32,7 +32,9 @@ class UI
         new Shortcodes\ActivityLevel;
         new Shortcodes\ViewingParty;
         new Shortcodes\SloganSurvey;
-        new Shortcodes\ZoomBackgrounds();
+        new Shortcodes\ZoomBackgrounds;
+        new Shortcodes\BenefitGrid;
+        new Shortcodes\FootballSponsorLockup;
 
     }
 
