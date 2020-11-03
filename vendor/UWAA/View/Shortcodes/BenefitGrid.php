@@ -20,12 +20,13 @@ class BenefitGrid
     
 
 
-    public  function addBenefitGrid( $atts, $content="" ) {        
-
+    public  function addBenefitGrid( $atts, $content="" ) {
+        
+        $content = '</div><div class="thumbnail-row">'; // End uw-body-copy
         $thumbnailRow = new \UWAA\View\ThumbnailBrowser\ThumbnailBrowser;
 
-        $content = $thumbnailRow->makeThumbnails(new VirtualWarmupBenefitGrid);
-        
+        $content .= $thumbnailRow->returnThumbnails(new VirtualWarmupBenefitGrid);
+        $content .= '</div><div class="uw-body-copy">';
 
     return $content;
 

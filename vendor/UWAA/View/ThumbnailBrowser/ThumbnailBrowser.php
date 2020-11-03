@@ -19,6 +19,12 @@ class ThumbnailBrowser
 	public function makeThumbnails(Thumbnail\Thumbnail $thumbnail)
   	{
     $this->getPostsToDisplay($thumbnail->args, $thumbnail);
+    }
+    
+  public function returnThumbnails(Thumbnail\Thumbnail $thumbnail)
+  	{
+    $content = $this->returnPostsToDisplay($thumbnail->args, $thumbnail);
+    return $content;
   	}
 
 
@@ -40,6 +46,19 @@ class ThumbnailBrowser
     }
 
     $thumbnail->extractPostInformation($query);
+  }
+
+  protected function returnPostsToDisplay($args, $thumbnail) {
+    $query = new \WP_Query($args);
+
+    //CAN HOOK IN HERE TO FIX DISPLAY
+    //echo $query->have_posts();
+    if ( $query->have_posts() == FALSE ) {
+        $thumbnail->displayNothing();
+    }
+
+    $content = $thumbnail->extractPostInformation($query);
+    return $content;
   }
 
   //Default to text entered by an editor, but then check and see if a Tour or Benefit Tag applies and use that instead.

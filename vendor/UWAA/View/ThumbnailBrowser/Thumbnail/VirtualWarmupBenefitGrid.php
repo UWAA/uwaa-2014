@@ -70,9 +70,11 @@ class VirtualWarmupBenefitGrid extends ThumbnailBrowser implements Thumbnail
         $this->postExcerpt = esc_html($this->shortenExcerpt(get_post_meta(get_the_ID(), 'mb_80_character_excerpt', true), 100));
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
 
-        echo $this->buildTemplate();
+        $content .= $this->buildTemplate();
 
     endwhile;
+
+    return $content;
 
     wp_reset_postdata();
 
@@ -86,7 +88,7 @@ $image = $this->renderImage();
     $link = $this->postURL;
 $date = $this->renderDate();
 $template = <<<TEMPLATE
-<div class="featured-post five-column">
+<div class="featured-post four-column">
 <a href="{$this->postURL}">
     <div class="image-frame">
       $image

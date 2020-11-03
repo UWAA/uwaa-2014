@@ -24,7 +24,8 @@ class ZoomBackgrounds
         $id = get_the_ID();
 
         if( have_rows('zoom-slides', $id) ):
-            $zoom = '<div class="zoom-slides">';
+            $zoom = '</div>'; //ends 'body-copy 
+            $zoom .= '<div class="zoom-slides">';
      while( have_rows('zoom-slides') ): the_row(); 
          $image = get_sub_field('zoom-background');
             $fullsizeURL = wp_get_attachment_image_url( $image['ID'], 'full' );
@@ -38,7 +39,7 @@ class ZoomBackgrounds
             
     endwhile;
 
-    $zoom .= '</div>';
+    $zoom .= '</div><div class="uw-body-copy">';
     
     endif;
 
