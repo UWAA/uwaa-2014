@@ -1,6 +1,6 @@
 <?php
 get_header();
-wp_localize_script('countdownTimer', 'endTime', get_field('countdown_end_time') );
+wp_localize_script('countdownTimer', 'endTime', get_field('countdown_end_time', get_the_ID() ) );
 wp_enqueue_script('countdownTimer');
 
 

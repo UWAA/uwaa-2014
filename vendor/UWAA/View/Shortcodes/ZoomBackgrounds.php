@@ -25,15 +25,17 @@ class ZoomBackgrounds
 
         if( have_rows('zoom-slides', $id) ):
             $zoom = '</div>'; //ends 'body-copy 
-            $zoom .= '<div class="zoom-slides">';
+            $zoom .= '<div class="zoom-slides row">';
      while( have_rows('zoom-slides') ): the_row(); 
          $image = get_sub_field('zoom-background');
             $fullsizeURL = wp_get_attachment_image_url( $image['ID'], 'full' );
             $mediumURL = wp_get_attachment_image( $image['ID'], 'medium' );
+            $zoom .= '<div class="col-sm-4">';
             $zoom .= '<a href="'.$fullsizeURL.'">';
             $zoom .= $mediumURL;
             $zoom .= '</a>';
             $zoom .= do_shortcode( '[uwaa-button url="'.$fullsizeURL.'" color="purple" type="slant-right"]Download[/uwaa-button]');
+            $zoom .= '</div>';
 
             // Download Button
             

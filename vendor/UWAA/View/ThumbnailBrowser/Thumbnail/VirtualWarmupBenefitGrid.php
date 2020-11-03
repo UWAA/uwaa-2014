@@ -88,7 +88,7 @@ $image = $this->renderImage();
     $link = $this->postURL;
 $date = $this->renderDate();
 $template = <<<TEMPLATE
-<div class="featured-post four-column">
+<div class="featured-post col-xs-4">
 <a href="{$this->postURL}">
     <div class="image-frame">
       $image
