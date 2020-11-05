@@ -59,6 +59,11 @@ $communitiesSidebarMenu = $UWAA->UI->buildCommunitySidebar();
           
         ?>
 
+        <nav class='mapboxgl-control-container' style="display: flex; justify-content: flex-end" id="mapNavigation">
+          <div class="uwaa-btn-wrapper" style=''><span class="uwaa-btn uwaa-btn-join btn-purple btn-slant-right " id="usNav">&nbsp;&nbsp;U.S.</span></div>
+          <div class="uwaa-btn-wrapper"><span class="uwaa-btn uwaa-btn-join btn-gold btn-slant-left " id="asiaNav">Global&nbsp;&nbsp;</span></div>
+        </nav>
+
         <h3 style="margin-top:60px;">Is your contact information current?</h3>
         <p>Don't miss out on all the Husky happenings around the world. Please take a moment to update your information.</p>
         <div class="uwaa-btn-wrapper"><a class="uwaa-btn btn-slant-right btn-purple" href="https://www.washington.edu/alumni/services/update-your-information/" target="_blank">Update your information</a></div>

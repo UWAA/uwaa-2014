@@ -75,8 +75,16 @@ class BenefitsIsotope extends ThumbnailBrowser implements Thumbnail
       'post_type' => 'benefits',
       'orderby' => 'title',
       'order' => 'ASC',
-      'posts_per_page' => -1
-      );
+      'posts_per_page' => -1,
+    'tax_query' => array(
+        array(
+          'taxonomy' => 'uwaa_content_promotion',          
+          'operator' => 'NOT IN',
+          'field' => 'slug',
+          'terms' => 'warmup-only'
+        ),
+    )
+    );
 
     return $args;
   }
