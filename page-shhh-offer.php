@@ -88,7 +88,7 @@ else {
 
         <?php  // The Store
           $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";          
-          $childPageParams['MEMBCODES'] = "CMS,CMJ";
+          $childPageParams['MEMBCODES'] = "CAS,CAJ";
           $countOfParentParams = count($parentPageParams);
 
           if ($countOfParentParams > 0 ) {
