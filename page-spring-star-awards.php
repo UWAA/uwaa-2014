@@ -50,13 +50,13 @@ wp_enqueue_script(array('starsAwardsSearch'));
           
         ?>
 
-        <a href="/spring-star-awards">See the Spring Star Awards</a>
+        <a href="/star-awards">See the Fall Star Awards</a>
 
         <h2>Winners</h2>
 
         <div id="winner-cards">
           <div class="grid">
-            <?php $UWAA->UI->makeStarAwardWinnerCards('fall'); ?>
+            <?php $UWAA->UI->makeStarAwardWinnerCards('spring'); ?>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
     <div id="cards">
         <div class ="grid">
       
-            <?php $UWAA->UI->makeStarAwardCards('fall'); ?>
+            <?php $UWAA->UI->makeStarAwardCards('spring'); ?>
        
         
         </div>  

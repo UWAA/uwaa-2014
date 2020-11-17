@@ -150,8 +150,8 @@ class UI
 
     }
 
-    public function makeStarAwardWinnerCards() {
-        $winners = json_decode(file_get_contents(get_stylesheet_directory() . '/winners.json', true));
+    public function makeStarAwardWinnerCards($season) {
+        $winners = json_decode(file_get_contents(get_stylesheet_directory() . '/'.$season.'winners.json', true));        
 
         if (is_array($winners)) {
             shuffle($winners);
@@ -196,8 +196,8 @@ class UI
     }
     
 
-    public function makeStarAwardCards() {
-        $awardees = json_decode(file_get_contents(get_stylesheet_directory() . '/awardees.json', true));
+    public function makeStarAwardCards($season = 'spring') {
+        $awardees = json_decode(file_get_contents(get_stylesheet_directory() . '/'.$season.'awardees.json', true));
 
         if (is_array($awardees)) {
             shuffle($awardees);
