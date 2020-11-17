@@ -50,7 +50,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
           
         ?>
 
-        <a href="alumni/spring-star-awards">See the Spring Star Awards</a>
+        <a href="<?php site_url('spring-star-awards')?>">See the Spring Star Awards</a>
 
         <h2>Winners</h2>
 
