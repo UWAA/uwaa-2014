@@ -50,7 +50,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
           
         ?>
 
-        <a href="<?php site_url('star-awards')?>">See the Fall Star Awards</a>
+        <a href="<?php echo get_site_url("", 'star-awards')?>">See the Fall Star Awards</a>
 
         <h2>Winners</h2>
 
