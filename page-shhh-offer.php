@@ -67,8 +67,30 @@ else {
              * use this in a child theme, then include a file called called content-___.php
              * (where ___ is the post format) and that will be used instead.
              */
-     
+
+
              ?>
+
+
+        <p>
+
+          <?php  
+
+            if(array_key_exists("JOIN", $parentPageParams) ) {
+
+                          echo get_field('custom_text_one');
+
+                        }
+
+                        if(array_key_exists("RENEW", $parentPageParams) ) {
+
+                          echo get_field('custom_text_two');
+
+                        }
+
+          ?>
+
+          </p>
 
 
 

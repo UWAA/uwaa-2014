@@ -70,6 +70,26 @@ else {
      
              ?>
 
+             <p>
+
+          <?php  
+
+            if(array_key_exists("JOIN", $parentPageParams) ) {
+
+                          echo get_field('custom_text_one');
+
+                        }
+
+                        if(array_key_exists("RENEW", $parentPageParams) ) {
+
+                          echo get_field('custom_text_two');
+
+                        }
+
+          ?>
+
+          </p>
+
 
 
 <?php the_content(); ?>
