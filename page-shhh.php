@@ -70,7 +70,13 @@ else {
      
              ?>
 
-             <p>
+            
+
+
+
+<?php the_content(); ?>
+
+ <p>
 
           <?php  
 
@@ -89,10 +95,6 @@ else {
           ?>
 
           </p>
-
-
-
-<?php the_content(); ?>
 
 <?php
 
