@@ -35,7 +35,7 @@ class VirtualWarmupBenefitGrid extends ThumbnailBrowser implements Thumbnail
       'post_type' => array(        
         'benefits',        
         ),
-      'posts_per_page' => 5,
+      'posts_per_page' => 10,
       'orderby' => 'rand',
 
       'tax_query' => array(
