@@ -1,8 +1,9 @@
 (function ($) {
 
     function countdownTimer() {
-        var endTime = window.endTime;
-        var difference = +new Date(endTime) - +new Date();
+        var endTime = new Date(window.endTime);
+        var currentTime = new Date();
+        var difference = endTime - currentTime;
         var remaining = "Go Dawgs!";
 
         if (difference > 0) {
