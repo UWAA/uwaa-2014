@@ -88,24 +88,7 @@ $image = $this->renderImage();
     $link = $this->postURL;
 $date = $this->renderDate();
 $template = <<<TEMPLATE
-<div class="featured-post four-column">
-<a href="{$this->postURL}">
-    <div class="image-frame">
-      $image
-      $callout
-    </div>
-  <div class="copy">
- <h6 class="subtitle">{$this->postSubtitle}</h6>
- <h4 class="title">{$this->postTitle}</h4>
- $date
- <p class="excerpt">{$this->postExcerpt}</p>
- <a class="link-arrow" href="$link">
-      <span class="visually-hidden">Link</span>
-    </a>
- </div>
- </a>
-
-</div>
+<div class="featured-post four-column"><a href="{$this->postURL}"><div class="image-frame">$image$callout</div><div class="copy"><h6 class="subtitle">{$this->postSubtitle}</h6> <h4 class="title">{$this->postTitle}</h4> $date <p class="excerpt">{$this->postExcerpt}</p> <a class="link-arrow" href="$link"><span class="visually-hidden">Link</span></a></div></a></div>
 TEMPLATE;
 
 return $template;
