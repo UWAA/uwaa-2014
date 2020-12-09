@@ -30,7 +30,7 @@ class ZoomBackgrounds
          $image = get_sub_field('zoom-background');
             $fullsizeURL = wp_get_attachment_image_url( $image['ID'], 'full' );
             $mediumURL = wp_get_attachment_image( $image['ID'], 'medium' );
-            $zoom .= '<div class="col-sm-4">';
+            $zoom .= '<div class="col-xs-6 col-sm-4">';
             $zoom .= '<a href="'.$fullsizeURL.'">';
             $zoom .= $mediumURL;
             $zoom .= '</a>';
