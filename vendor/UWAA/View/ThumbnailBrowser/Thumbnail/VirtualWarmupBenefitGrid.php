@@ -74,9 +74,11 @@ class VirtualWarmupBenefitGrid extends ThumbnailBrowser implements Thumbnail
 
     endwhile;
 
+    wp_reset_postdata();
+
     return $content;
 
-    wp_reset_postdata();
+    
 
   }
 
