@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.20.7.kign2ltx
+ Version: 1.20.7.kikzg7f3
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11695,6 +11695,22 @@ Typography
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+.page-holidays #uw-container .uw-body {
+  background-color: unset;
+}
+.page-holidays #uw-container #uw-container-inner {
+  background-image: url('assets/holiday_background.jpg');
+  background-color: unset;
+}
+.page-holidays .fireplace-video video {
+  width: 100%;
+}
+.page-holidays .mantle {
+  background-image: url('assets/2020_Holiday-Card-Mantle_CROP.jpg');
+  height: 15vw;
+  background-size: cover;
+  background-position: bottom;
 }
 .page-strongertogether p {
   margin: 0 0 80px;
