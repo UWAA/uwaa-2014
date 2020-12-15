@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.20.7.kip4in2l
+ Version: 1.20.7.kiqjykkv
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11703,6 +11703,14 @@ Typography
   background-image: url('assets/holiday_background.jpg');
   background-color: unset;
 }
+.page-holidays .fireplace-video .shadow {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: inset -7px -7px 4px 1px #4b2e83, inset 7px -7px 4px 1px #4b2e83;
+}
 .page-holidays .fireplace-video video {
   width: 100%;
 }
@@ -11711,6 +11719,7 @@ Typography
   height: 15vw;
   background-size: cover;
   background-position: bottom;
+  box-shadow: inset -7px 7px 4px 1px #4b2e83, inset 7px 7px 4px 1px #4b2e83;
 }
 .page-strongertogether p {
   margin: 0 0 80px;

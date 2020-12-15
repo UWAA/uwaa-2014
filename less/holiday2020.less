@@ -3,12 +3,13 @@
     #uw-container{
 
         .uw-body{
-            background-color: unset;
+            background-color: unset;            
+            
         }
 
         #uw-container-inner {
         background-image: url('assets/holiday_background.jpg');        
-        background-color: unset;
+        background-color: unset;     
     }
 
     }
@@ -17,9 +18,20 @@
 
 
     .fireplace-video {
+        .shadow{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: inset -7px -7px 4px 1px @purple, inset 7px -7px 4px 1px @purple;
+        }
+        
         video {
             width: 100%;
         }
+
+        
     }
 
     .mantle{
@@ -27,6 +39,7 @@
         height: 15vw;
         background-size: cover;
         background-position: bottom;
+        box-shadow: inset -7px 7px 4px 1px @purple, inset 7px 7px 4px 1px @purple;
     }
 
 
