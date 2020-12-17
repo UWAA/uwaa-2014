@@ -4,6 +4,16 @@
 
         .uw-body{
             background-color: unset;            
+
+            .loader{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: block;
+                left: 0;
+                background-color: rgba(0, 0, 0, 80%);
+                z-index: 4;
+            }
             
         }
 
@@ -12,6 +22,75 @@
         background-color: unset;     
     }
 
+    }
+
+    .mantle{
+        background-image: url('assets/2020_Holiday-Card-Mantle_1920x481.jpg');
+        height: 16vw;
+        min-height: 293px;
+        background-size: cover;
+        background-position: bottom;
+        box-shadow: inset -7px 7px 4px 1px @purple, inset 7px 7px 4px 1px @purple;
+
+        .hit-area{
+            min-width: 44px;
+            min-height: 44px;
+            cursor: pointer;            
+            animation: pulse 3.0s infinite;            
+
+
+            &:hover{
+                border: 1px solid blue;
+
+            }
+        }
+
+        #snowglobe{
+            position: absolute;
+            top: 57%;
+            left: 33%;
+            height: 120px;
+            width: 120px;
+            clip-path: circle(60px at center);
+            border-radius: 50%;
+            
+            // Breakpoint Shift
+        }
+
+        #boys36{
+            position: absolute;
+            top: 59%;
+            left: 58%;            
+            height: 100px;
+            width: 80px;
+            
+            // Breakpoint Shift
+        }
+
+        #denny{
+            position: absolute;
+            top: 17%;
+            left: 43%;
+            height: 243px;
+            width: 172px;            
+
+            // Breakpoint Shift
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+            @keyframes fadeout {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+            @keyframes pulse {
+            from { background-color: rgba(0, 0, 0, 0); }
+            to { background-color:  rgba(0, 0, 0, 30%); }
+        }
+
+        
     }
     
     
@@ -25,21 +104,62 @@
             top: 0;
             left: 0;
             box-shadow: inset -7px -7px 4px 1px @purple, inset 7px -7px 4px 1px @purple;
+            z-index: 1;
         }
         
         video {
             width: 100%;
+            z-index: 2;
+            position: relative;
+            margin-bottom: 5px;
         }
 
         
     }
 
-    .mantle{
-        background-image: url('assets/2020_Holiday-Card-Mantle_CROP.jpg');
-        height: 15vw;
-        background-size: cover;
-        background-position: bottom;
-        box-shadow: inset -7px 7px 4px 1px @purple, inset 7px 7px 4px 1px @purple;
+    .uw-body-copy {
+        margin-top: 15px;
+    }
+
+    
+
+    .modal-content{
+        background-image: url('assets/holiday_background.jpg');        
+        background-color: unset;
+
+        .modal-header{
+
+            border-bottom: none;
+
+            h4{
+                font-size: 4rem;
+            }
+        }
+
+        .modal-body{
+
+            .center-block {
+                margin-bottom: 10px;
+            }
+            
+            .modal-square-image{
+                max-width: 20%;
+                margin-right: 15px;
+            }
+        }
+
+        .modal-footer {
+            border-top: none;
+
+            .btn {
+                background-color: @purple;
+
+                &:hover{
+                    background-color: @lightgold;
+                    color: @janegray;
+                }
+            }
+        }
     }
 
 

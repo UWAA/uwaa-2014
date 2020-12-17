@@ -324,7 +324,16 @@ class Scripts
         'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
+      ),
+      'imagesLoaded' => array (
+        'id'      => 'imagesLoaded',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/imagesloaded/imagesloaded.min.js',
+        'deps'    => array('jquery','uwaa.site'),
+        'version' => '4.1.4',
+        'in_footer' => true,
+        'admin'   => false
       )
+
 
       
 

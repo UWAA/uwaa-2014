@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.20.7.kiqjykkv
+ Version: 1.20.7.kiskezp1
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11699,9 +11699,82 @@ Typography
 .page-holidays #uw-container .uw-body {
   background-color: unset;
 }
+.page-holidays #uw-container .uw-body .loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4;
+}
 .page-holidays #uw-container #uw-container-inner {
   background-image: url('assets/holiday_background.jpg');
   background-color: unset;
+}
+.page-holidays .mantle {
+  background-image: url('assets/2020_Holiday-Card-Mantle_1920x481.jpg');
+  height: 16vw;
+  min-height: 293px;
+  background-size: cover;
+  background-position: bottom;
+  box-shadow: inset -7px 7px 4px 1px #4b2e83, inset 7px 7px 4px 1px #4b2e83;
+}
+.page-holidays .mantle .hit-area {
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  animation: pulse 3.0s infinite;
+}
+.page-holidays .mantle .hit-area:hover {
+  border: 1px solid blue;
+}
+.page-holidays .mantle #snowglobe {
+  position: absolute;
+  top: 57%;
+  left: 33%;
+  height: 120px;
+  width: 120px;
+  clip-path: circle(60px at center);
+  border-radius: 50%;
+}
+.page-holidays .mantle #boys36 {
+  position: absolute;
+  top: 59%;
+  left: 58%;
+  height: 100px;
+  width: 80px;
+}
+.page-holidays .mantle #denny {
+  position: absolute;
+  top: 17%;
+  left: 43%;
+  height: 243px;
+  width: 172px;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }
 .page-holidays .fireplace-video .shadow {
   height: 100%;
@@ -11710,16 +11783,43 @@ Typography
   top: 0;
   left: 0;
   box-shadow: inset -7px -7px 4px 1px #4b2e83, inset 7px -7px 4px 1px #4b2e83;
+  z-index: 1;
 }
 .page-holidays .fireplace-video video {
   width: 100%;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 5px;
 }
-.page-holidays .mantle {
-  background-image: url('assets/2020_Holiday-Card-Mantle_CROP.jpg');
-  height: 15vw;
-  background-size: cover;
-  background-position: bottom;
-  box-shadow: inset -7px 7px 4px 1px #4b2e83, inset 7px 7px 4px 1px #4b2e83;
+.page-holidays .uw-body-copy {
+  margin-top: 15px;
+}
+.page-holidays .modal-content {
+  background-image: url('assets/holiday_background.jpg');
+  background-color: unset;
+}
+.page-holidays .modal-content .modal-header {
+  border-bottom: none;
+}
+.page-holidays .modal-content .modal-header h4 {
+  font-size: 4rem;
+}
+.page-holidays .modal-content .modal-body .center-block {
+  margin-bottom: 10px;
+}
+.page-holidays .modal-content .modal-body .modal-square-image {
+  max-width: 20%;
+  margin-right: 15px;
+}
+.page-holidays .modal-content .modal-footer {
+  border-top: none;
+}
+.page-holidays .modal-content .modal-footer .btn {
+  background-color: #4b2e83;
+}
+.page-holidays .modal-content .modal-footer .btn:hover {
+  background-color: #b7a57a;
+  color: #3d3d3d;
 }
 .page-strongertogether p {
   margin: 0 0 80px;
