@@ -7,7 +7,7 @@ if ( !is_user_logged_in() ) {
         
 get_header('clean');
 wp_enqueue_style(array('holiday', 'flickity') );
-wp_enqueue_script(array('bootstrap-modal', 'flickity'));
+wp_enqueue_script(array('bootstrap-modal', 'flickity-fade'));
 
 
 ?>
@@ -114,7 +114,7 @@ wp_enqueue_script(array('bootstrap-modal', 'flickity'));
         <h4 class="modal-title">Denny Hall Insignia</h4>
       </div>
       <div class="modal-body">
-        <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "setGallerySize": false }'>
+        <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "fade": true , "setGallerySize": false, "pageDots": false }'>
         <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2020/12/18143422/DennyHall_Old.jpg" alt="Historical Image of Denny Hall" />
         <img src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2020/12/18143425/DennyHall_Current.jpg" alt="Modern Image of Denny Hall" />
         </div>

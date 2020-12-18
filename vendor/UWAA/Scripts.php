@@ -332,7 +332,7 @@ class Scripts
         'version' => '4.1.4',
         'in_footer' => true,
         'admin'   => false
-      ),
+      ),      
       'flickity' => array (
         'id'      => 'flickity',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/flickity/flickity.pkgd.min.js',
@@ -340,7 +340,16 @@ class Scripts
         'version' => '2.2.1',
         'in_footer' => true,
         'admin'   => false
-      )
+      ),
+      'flickity-fade' => array (
+        'id'      => 'flickity-fade',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/flickity/flickity-fade.js',
+        'deps'    => array('flickity'),
+        'version' => '2.2.1',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+      
 
 
       
