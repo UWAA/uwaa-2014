@@ -30,7 +30,8 @@ class Styles
           'url'     => get_bloginfo('stylesheet_directory') . '/gradpack.css',
           'deps'    => array(),
           'version' => '',
-          'admin'   => false
+          'admin'   => false,
+          'support' => true
       ),
 
       'google-font-open' => array(
@@ -47,14 +48,50 @@ class Styles
           'version' => '',
           'admin'   => true
       ),
+      'flickity' => array(
+          'id'      => 'flickity',
+          'url'     => get_bloginfo('stylesheet_directory') . '/less/flickity.css',
+          'deps'    => array(),
+          'version' => '',
+          'admin'   => false,
+          'support' => true
+      ),
+      'holiday' => array(
+          'id'      => 'holiday',
+          'url'     => get_bloginfo('stylesheet_directory') . '/holiday.css',
+          'deps'    => array(),
+          'version' => '',
+          'admin'   => false,
+          'support' => true
+      ),
 
     );
 
     
 
     add_action( 'wp_enqueue_scripts', array( $this, 'uw_register_default_styles' ) );
+    add_action( 'wp_enqueue_scripts', array( $this, 'uwaa_register_support_styles' ) );
     add_action( 'admin_head', array( $this, 'uw_enqueue_admin_styles' ) );
 
+  }
+
+  function uwaa_register_support_styles() {
+      foreach ( $this->STYLES as $style )
+      {
+        $style = (object) $style;
+
+        if (array_key_exists( 'support', $style) && $style->support )
+      {
+
+        wp_register_style(
+          $style->id,
+          $style->url,
+          $style->deps,
+          $style->version
+        );
+      }
+
+      }
   }
 
   function uw_register_default_styles()
@@ -63,12 +100,16 @@ class Styles
       {
         $style = (object) $style;
 
+        if (!array_key_exists( 'support', $style) )
+      {
+
         wp_enqueue_style(
           $style->id,
           $style->url,
           $style->deps,
           $style->version
         );
+      }
 
       }
 

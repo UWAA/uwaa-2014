@@ -6,6 +6,7 @@ if ( !is_user_logged_in() ) {
         }
         
 get_header('clean');
+wp_enqueue_style(array('holiday', 'flickity') );
 wp_enqueue_script(array('bootstrap-modal', 'imagesLoaded'));
 
 
@@ -52,6 +53,7 @@ wp_enqueue_script(array('bootstrap-modal', 'imagesLoaded'));
       <video controls loop="true" muted autoplay="autoplay">
               <!-- <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.webm" type="video/webm" > -->
               <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/2020_Holiday-Card_1920x1920.mp4" type="video/mp4" >
+              <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/2020_Holiday-Card_1920x1920.webm" type="video/webm" >
           </video>  
       
       </div>
@@ -90,10 +92,11 @@ wp_enqueue_script(array('bootstrap-modal', 'imagesLoaded'));
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Boys in the Boat</h4>
+        <h4 class="modal-title">Relive the “Swing”</h4>
       </div>
       <div class="modal-body">
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SufEe-d4DN4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>What better way to close out 2020 than to revel again in the glory of the Washington rowers at the 1936 Olympics in Berlin. Their epic quest is captured in the PBS documentary “American Experience: The Boys of ’36,” inspired by Daniel James Brown’s critically acclaimed book, “The Boys in the Boat.” </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
@@ -108,17 +111,21 @@ wp_enqueue_script(array('bootstrap-modal', 'imagesLoaded'));
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Denny Hall and the "W"</h4>
+        <h4 class="modal-title">Denny Hall Insignia</h4>
       </div>
       <div class="modal-body">
         <img class="center-block" src="https://www.fillmurray.com/1920/1080" alt="Bill Murray">
           <p>
             <img class="img-thumbnail pull-left modal-square-image" src="https://www.fillmurray.com/600/600" alt="Bill Murray Square">
-            Veniam qui fugiat et culpa quis occaecat est sit officia ad. Elit proident et sit cupidatat nostrud ea. Sit officia labore id excepteur et ullamco nulla sint eiusmod tempor nulla irure proident. Culpa minim consectetur fugiat irure dolor laborum deserunt duis minim ipsum amet excepteur. Labore aute ad tempor aute culpa eu Lorem culpa. Elit esse ex qui do eu cupidatat veniam aliqua do eiusmod.</p>          
+            The “UW”  on the mantle clock is inspired by the 1895 insignia featured on the face of Denny Hall, the first building erected on what is now UW’s Seattle campus. The building also house the “Varsity Bell,” produced in 1862. <a href="https://www.washington.edu/news/2004/11/04/denny-bell-to-ring-again"/>Learn more about the Varsity Bell</a>,  from the UW Magazine archive. The bell is still rung each year on Homecoming Weekend and on Veteran’s Day.
           <p>
             Hear the Denny Bells          
           </p>
-          <audio controls src="<?php bloginfo("stylesheet_directory"); ?>/assets/audio/bells.wav"></audio>
+          <audio controls>
+            <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/audio/Denny-Bell.wav" type="audio/mpeg">
+            <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/audio/Denny-Bell.mp3" type="audio/ogg">
+            <p>Your browser doesn't support HTML5 audio. Here is a <a href="myAudio.mp4">link to the audio</a> instead.</p>
+          </audio>
           
       </div>
       <div class="modal-footer">

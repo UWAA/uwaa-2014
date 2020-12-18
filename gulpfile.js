@@ -122,6 +122,13 @@ gulp.task('less', function () {
     .on('error', catchErrors)     
     .pipe(gulp.dest('./'));
 
+    gulp.src('./less/holiday2020.less')     
+    .pipe(less())
+    .pipe(rename("holiday.css"))    
+    .pipe(minifyCss())
+    .on('error', catchErrors)     
+    .pipe(gulp.dest('./'));
+
     gulp.src('./less/admin/admin.less')     
     .pipe(less())
     .pipe(minifyCss())

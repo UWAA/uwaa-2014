@@ -332,6 +332,14 @@ class Scripts
         'version' => '4.1.4',
         'in_footer' => true,
         'admin'   => false
+      ),
+      'flickity' => array (
+        'id'      => 'flickity',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/flickity/flickity.pkgd.min.js',
+        'deps'    => array('jquery','uwaa.site'),
+        'version' => '2.2.1',
+        'in_footer' => true,
+        'admin'   => false
       )
 
 
