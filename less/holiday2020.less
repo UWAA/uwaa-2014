@@ -27,12 +27,25 @@
     }
 
     .mantle{
+
         background-image: url('assets/2020_Holiday-Card-Mantle_1920x481.jpg');
         height: 16vw;
-        min-height: 293px;
+        min-height: 25vw;
         background-size: cover;
         background-position: bottom;
         box-shadow: inset -7px 7px 4px 1px @purple, inset 7px 7px 4px 1px @purple;
+
+        @media only screen and (min-width : @screen-lg) {
+             min-height: 294px;
+        }
+
+        // @media only screen and (max-width : @screen-sm-max) {
+        //     min-height: 192px;
+        // }
+
+        // @media only screen and (max-width : @screen-xs-max) {
+        //     min-height: 192px;
+        // }
 
         .hit-area{
             min-width: 44px;
