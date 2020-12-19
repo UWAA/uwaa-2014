@@ -123,9 +123,10 @@ wp_enqueue_script(array('bootstrap-modal', 'flickity-fade'));
           <p>
             <img class="img-thumbnail pull-left modal-square-image" src="https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/94/2020/12/18143049/Denny-Hall-Logo.jpg" alt="Image of Denny Hall W Relief">
             The “UW”  on the mantle clock is inspired by the 1895 insignia featured on the face of Denny Hall, the first building erected on what is now UW’s Seattle campus. The building also houses the “Varsity Bell,” produced in 1862. <a href="https://www.washington.edu/news/2004/11/04/denny-bell-to-ring-again"/>Learn more about the Varsity Bell</a>,  from the UW Magazine archive. The bell is still rung each year on Homecoming Weekend and on Veteran’s Day.
-          <p>
+            <div class="clearfix"></div>
+          <h4>
             Hear the Denny Bells          
-          </p>
+          </h4>
           <audio controls>
             <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/audio/Denny-Bell.wav" type="audio/mpeg">
             <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/audio/Denny-Bell.mp3" type="audio/ogg">

@@ -12,9 +12,21 @@
                 width: 100%;
                 height: 100%;
                 display: block;
-                left: 0;
-                background-color: rgba(0, 0, 0, 80%);
+                left: 0;                // background-color: rgba(0, 0, 0, 80%);
                 z-index: 4;
+                @patternsize: 100px;
+                background-image:
+                    linear-gradient(45deg,transparent 90%,lighten(@purple,10%) 90%),
+                    linear-gradient(-45deg,transparent 90%,lighten(@purple,10%) 90%),
+                    linear-gradient(-315deg,lighten(@purple,10%) 10%,transparent 10%),
+                    linear-gradient(315deg,lighten(@purple,10%) 10%,transparent 10%),
+                    linear-gradient(45deg,transparent 49%,@purple 49%,@purple 51%,transparent 51%),
+                    linear-gradient(-45deg,transparent 49%,@purple 49%,@purple 51%,transparent 51%),
+                    // linear-gradient(45deg,transparent 45%,fade-out($@lightgold,.5) 45%,fade-out($@lightgold,.5) 55%,transparent 55%),
+                    // linear-gradient(-45deg,transparent 45%,fade-out($@lightgold,.5) 45%,fade-out($@lightgold,.5) 55%,transparent 55%),
+                    radial-gradient(circle,darken(@purple,5%) 0,darken(@purple,5%) 50%,transparent 50%);
+                background-size:@patternsize @patternsize;
+                background-color:@purple;
             }
             
         }
@@ -151,11 +163,16 @@
         margin-top: 15px;
     }
 
+
+
+    .modal-dialog {
+        margin: 100px auto;
+        font-size: 17px;
+    };
     
 
     .modal-content{
-        background-image: url('assets/holiday_background.jpg');        
-        background-color: unset;
+        background-color: @white;
 
 
         .carousel{
@@ -171,20 +188,40 @@
         .modal-header{
 
             border-bottom: none;
+            padding-bottom: none;
 
             h4{
                 font-size: 4rem;
+                color: @purple;
+                text-transform: uppercase;                
             }
         }
 
         .modal-body{
+            padding-top: none;
+
+            iframe {
+                margin: 0;
+            }
+            
+            p {
+                font-size: 1.5rem;
+                font-family: 'Uni Sans', sans-serif;
+                font-weight: 800;
+            }
+
+            h4 {
+                color: @purple;
+                text-transform: uppercase;
+            }
+            
 
             .center-block {
                 margin-bottom: 10px;
             }
             
             .modal-square-image{
-                max-width: 20%;
+                width: 40%;
                 margin-right: 15px;
             }
         }
