@@ -1,10 +1,4 @@
 <?php 
-
-if ( !is_user_logged_in() ) {
-          wp_redirect( '/alumni' );
-          exit;
-        }
-        
 get_header('clean');
 wp_enqueue_style(array('holiday', 'flickity') );
 wp_enqueue_script(array('bootstrap-modal', 'flickity-fade'));
