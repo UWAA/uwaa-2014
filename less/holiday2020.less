@@ -96,12 +96,41 @@
             left: 58%;            
             height: 11vw;
             width: 7vw;
-            
+
             // Breakpoint Shift
             @media only screen and (min-width : @screen-lg) {
                 top: 53%;
                 width: 84px;
                 height: 132px;            
+            }
+
+            
+        }
+        
+        // Adjusting boys36 hit area
+        @media only screen and (max-width : 600px) {
+            #boys36.hit-area {
+                min-width: 30px;
+            }
+        }
+
+        @media only screen and (max-width : 425px) {
+            #boys36.hit-area {
+                min-width: 30px;
+            }
+        }
+
+        @media only screen and (max-width : 375px) {
+            #boys36.hit-area {
+                min-width: 25px;
+                min-height: 30px;
+            }
+        }
+
+        @media only screen and (max-width : 320px) {
+            #boys36.hit-area {
+                min-width: 23px;
+                min-height: 28px;
             }
         }
 
