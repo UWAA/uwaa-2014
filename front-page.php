@@ -1,6 +1,7 @@
 <?php 
 get_header(); 
 wp_enqueue_script('superHero');
+wp_enqueue_script('homepageSnow');
 use \UWAA\View\ThumbnailBrowser\Thumbnail\Homepage;
 use \UWAA\View\ThumbnailBrowser\Thumbnail\HomepageEvents;
 use \UWAA\View\ThumbnailBrowser\Thumbnail\HomepageNewsAndPublications;
