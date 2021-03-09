@@ -29,6 +29,7 @@ class SidebarFeaturedPost extends \WP_Widget
   private $postParent;
   private $hasResults;
   private $postThumbnailAltText;
+  private $liveURL;
 
 
   function __construct()
@@ -66,6 +67,8 @@ class SidebarFeaturedPost extends \WP_Widget
     $this->currentPostInfo['templateType'] = $matchedSlug[0] . "-section-sidebar";
 
     }
+
+    
 
   }
 
@@ -229,6 +232,12 @@ class SidebarFeaturedPost extends \WP_Widget
         $this->postSubtitle = get_post_meta(get_the_ID(), 'mb_thumbnail_subtitle', true);
         $this->postThumbnailAltText = $this->UI->returnImageAltTag(get_the_ID());
 
+        $this->liveURL = get_permalink();
+
+        if(get_post_meta(get_the_ID(), 'mb_isPartnerEvent', true)) {
+          $this->liveURL = get_post_meta(get_the_ID(), 'mb_alternate_link', true);
+        }
+
     endwhile;
 
     endif;
@@ -270,7 +279,7 @@ class SidebarFeaturedPost extends \WP_Widget
 
 echo <<<CONTENT
    <div class="post-thumbnail-slide">
-   <a href="$this->postURL">
+   <a href="$this->liveURL">
     <div class="image-frame">
    <img src="$this->postSidebarImage" alt="$this->postThumbnailAltText" />
    $callout
