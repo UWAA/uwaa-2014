@@ -18,8 +18,8 @@
             "return_format": "url",
             "preview_size": "medium",
             "library": "all",
-            "min_width": 302,
-            "min_height": 250,
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
             "max_width": "",
             "max_height": "",
@@ -41,9 +41,9 @@
             },
             "return_format": "url",
             "preview_size": "full",
-            "library": "uploadedTo",
-            "min_width": 302,
-            "min_height": 230,
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
             "max_width": "",
             "max_height": "",
@@ -68,5 +68,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1608767143
+    "modified": 1616110552
 }
