@@ -35,6 +35,7 @@ class UI
         new Shortcodes\ZoomBackgrounds;
         new Shortcodes\BenefitGrid;
         new Shortcodes\FootballSponsorLockup;
+        new Shortcodes\DD2021TagboardEmbed;
 
     }
 
