@@ -36,6 +36,7 @@ class UI
         new Shortcodes\BenefitGrid;
         new Shortcodes\FootballSponsorLockup;
         new Shortcodes\DD2021TagboardEmbed;
+        new Shortcodes\ConvergeEmailFormEmbed;
 
     }
 
