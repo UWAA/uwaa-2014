@@ -287,7 +287,7 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 
 
        if(get_field('store_option_rate_codes') != '') {
-            $paremeterPrefix = "?";
+            $paremeterPrefix = "";
 
             if ($childPageQueryString) {
                 $paremeterPrefix = "&";
