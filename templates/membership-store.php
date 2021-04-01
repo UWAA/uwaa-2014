@@ -17,7 +17,7 @@ function previewOrActiveDrive() {
 }
 
 function isDebug() {
-    if (is_user_logged_in() || get_field('controls')['drive_custom_is_control_shown']) {
+    if (is_user_logged_in() && get_field('controls')['drive_custom_is_control_shown']) {
     return TRUE;
     
   }
@@ -254,8 +254,8 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 
 		   }
 
-           //Only allows rate codes to be set by URL parameter if NOT set in the WP Admin Panel
-		   if(array_key_exists("MEMBCODES", $parentPageParams) && get_field('store_option_rate_codes') == '' ) {
+           //Parameter-provided codes will overwrite codes specified in WordPress
+		   if(array_key_exists("MEMBCODES", $parentPageParams)) {
 
 			   $childPageParams['MEMBCODES'] = $parentPageParams['MEMBCODES'];
 
@@ -286,7 +286,8 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 	   }
 
 
-       if(get_field('store_option_rate_codes') != '') {
+       //Only put Wordpress Admin Panel codes in if no parameters for MEMBCODES come from the URL
+       if(get_field('store_option_rate_codes') != '' && !array_key_exists("MEMBCODES", $childPageParams)) {
             $paremeterPrefix = "";
 
             if ($childPageQueryString) {
@@ -298,8 +299,12 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
            }
 
        if(isDebug()) {
-         echo "Admin Rate Codes " . get_field('store_option_rate_codes');
+           echo '<div style="border:solid 1px black;padding:5px">';
+        echo "<h3 style=\"color:red\">Debug Information</h3>";
+         echo "Admin Rate Codes " . get_field('store_option_rate_codes') . "<pre>Note that passing a membcode as a parameter will overwrite these values.</pre>";
          var_dump($childPageParams);
+         echo "Store iFrame URL: " . $frameURL;
+         echo '</div>';
 
         }
 
