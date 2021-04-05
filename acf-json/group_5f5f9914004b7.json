@@ -108,6 +108,60 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_606b741c31b9f",
+            "label": "Generic Superhero Headline",
+            "name": "drive_custom_generic_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_606b7197d8524",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_606b743931ba0",
+            "label": "Generic Superhero Subhead",
+            "name": "drive_custom_generic_subhead",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_606b7197d8524",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5f5fd7a487c2c",
             "label": "Join Superhero",
             "name": "drive_custom_join_superhero",
@@ -361,5 +415,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1617654577
+    "modified": 1617654910
 }
