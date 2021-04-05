@@ -288,7 +288,7 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 
        //Only put Wordpress Admin Panel codes in if no parameters for MEMBCODES come from the URL
        if(get_field('store_option_rate_codes') != '' && !array_key_exists("MEMBCODES", $childPageParams)) {
-            $paremeterPrefix = "";
+            $paremeterPrefix = "?";
 
             if ($childPageQueryString) {
                 $paremeterPrefix = "&";
