@@ -62,6 +62,15 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
 ?>
   
   <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($superhero['url']); ?>);"></div>
+    
+<?php
+
+} elseif (get_field('drive_custom_join_superhero') && get_field('drive_control_generic_superhero') )  {
+
+  $superhero = get_field('drive_custom_join_superhero');
+?>
+
+  <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($superhero['url']); ?>);"></div>
 
 <?php } else { ?> 
 

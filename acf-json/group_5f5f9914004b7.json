@@ -89,6 +89,25 @@
             "default_value": ""
         },
         {
+            "key": "field_606b7197d8524",
+            "label": "Generic Superhero Override",
+            "name": "drive_control_generic_superhero",
+            "type": "true_false",
+            "instructions": "Check this box if you want the superhero for, \"Join\" shown regardless of the \"join\" or \"renew\" type codes being present.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5f5fd7a487c2c",
             "label": "Join Superhero",
             "name": "drive_custom_join_superhero",
@@ -342,5 +361,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1617231063
+    "modified": 1617654577
 }
