@@ -166,7 +166,7 @@ class Scripts
       ),
       'internationalHuskiesMap' => array (
         'id'      => 'internationalHuskiesMap',
-        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/internationalHuskiesMap' . $this->min_script() . '.js',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/InternationalHuskiesMap' . $this->min_script() . '.js',
         'deps'    => array('mapbox-gl-js'),
         'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
