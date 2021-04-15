@@ -314,9 +314,18 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
             
             $frameURL .= $paremeterPrefix . "membcodes=" . get_field('store_option_rate_codes');
 
-           }
+           }       
 
-       if(isDebug()) {
+		?>
+
+        
+  
+      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
+
+
+      <?php 
+
+      if(isDebug()) {
            echo '<div style="border:solid 1px black;padding:5px">';
         echo "<h3 style=\"color:red\">Debug Information</h3>";
          echo "Admin Rate Codes " . get_field('store_option_rate_codes') . "<pre>Note that passing a membcode as a parameter will overwrite these values.</pre>";
@@ -325,12 +334,9 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
          echo '</div>';
 
         }
-
-		?>
-
-        
-  
-      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
+      
+      
+      ?>
      
 
     </div>
