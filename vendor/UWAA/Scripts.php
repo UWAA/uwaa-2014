@@ -30,7 +30,7 @@ class Scripts
       'admin' => array (
         'id'      => 'uwaa.wp.admin',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/admin/admin.js',
-        'deps'    => array('mapbox-gl-js'),
+        'deps'    => array('mapbox-gl-js', 'jquery-ui-autocomplete'),
         'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => true
