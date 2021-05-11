@@ -99,10 +99,14 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
 
 add_filter('nav_menu_css_class', 'current_type_nav_class', 10, 2 );
 function current_type_nav_class($classes, $item) {
-    $post_type = ucfirst(get_query_var('post_type'));    
-    if ($item->title != '' && $item->title == $post_type) {
+    $post_type = get_query_var('post_type');
+    if(is_string($post_type)) {
+      if ($item->title != '' && $item->title == ucfirst($post_type) ) {
         array_push($classes, 'current_page_item');
     };
+
+    }
+    
     return $classes;
 }
 
