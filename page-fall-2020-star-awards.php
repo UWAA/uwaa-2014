@@ -5,7 +5,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
 
 <div class="uw-hero-image star-awards">
-  <h2 class="star-site-title">Spring 2020 Advancement Star Awards</h2>
+  <h2 class="star-site-title">Fall 2020 Advancement Star Awards</h2>
 
 </div>
 
