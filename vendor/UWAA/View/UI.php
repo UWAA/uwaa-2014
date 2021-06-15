@@ -153,7 +153,11 @@ class UI
     }
 
     public function makeStarAwardWinnerCards($season) {
-        $winners = json_decode(file_get_contents(get_stylesheet_directory() . '/'.$season.'winners.json', true));        
+        $winners = json_decode(file_get_contents(get_stylesheet_directory() . '/'.$season.'winners.json', true));
+
+        if (!$winners) {
+            echo 'Last error: ', json_last_error_msg(), PHP_EOL, PHP_EOL;
+        }
 
         if (is_array($winners)) {
             shuffle($winners);
@@ -200,6 +204,10 @@ class UI
 
     public function makeStarAwardCards($season = 'spring') {
         $awardees = json_decode(file_get_contents(get_stylesheet_directory() . '/'.$season.'awardees.json', true));
+
+        if (!$awardees) {
+            echo 'Last error: ', json_last_error_msg(), PHP_EOL, PHP_EOL;
+        }
 
         if (is_array($awardees)) {
             shuffle($awardees);
