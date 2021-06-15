@@ -52,7 +52,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
         <!-- Modernize This -->
 
         <a href="<?php echo get_site_url('', '/star-awards')?>">See the current Star Awards</a></br>
-        <a href="<?php echo get_site_url('', '/spring-2020-star-awards')?>">See the Spring 2020 Star Awards</a>
+        <a href="<?php echo get_site_url('', '/fall-2020-star-awards')?>">See the Fall 2020 Star Awards</a>
 
         <h2>Awardees</h2>
 
