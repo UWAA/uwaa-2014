@@ -75,6 +75,13 @@ class Sidebars {
                 'before_widget' => self::BEFORE_WIDGET,
                 'after_widget'  => self::AFTER_WIDGET
                 ),
+            'about' => array (
+                'name'          => 'About',
+                'id'            => 'about_sidebar',
+                'description'   => 'Sidebar for About Pages (BOT, etc.)',
+                'before_widget' => self::BEFORE_WIDGET,
+                'after_widget'  => self::AFTER_WIDGET
+                ),
                 
 
             ));
