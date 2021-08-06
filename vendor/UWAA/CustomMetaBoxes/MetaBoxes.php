@@ -417,6 +417,12 @@ class MetaBoxes
                         'desc'=> "Text to be displayed only if the user is logged in.  Such as promotional codes/offer details."
                         ),
                     array(
+                        'name' => 'How to get your benefit (Life Members):',
+                        'id'=> 'benefit_promotion_life',
+                        'type'=> 'textarea',
+                        'desc'=> "Text to be displayed only if the user is logged in AND is a life member.  Such as promotional codes/offer details. This content will supersede Annual Member benefits."
+                        ),
+                    array(
                         'name' => 'Benefit Provider Logo:',
                         'id'=> 'benefit_provider_logo',
                         'type'=> 'text',

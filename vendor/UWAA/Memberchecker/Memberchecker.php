@@ -14,6 +14,7 @@ class Memberchecker {
     public $memberCheckerCookie;
     public $memberCheckerCookieValues;
     public $memberCheckerResponse;
+    public $membershipType;
 
 
 
@@ -23,6 +24,7 @@ class Memberchecker {
 
         $this->isLoggedIn = false;
         $this->hasActiveMembership = false;
+        $this->getMembershipType = null;
 
     }
 
@@ -68,6 +70,12 @@ class Memberchecker {
         if(preg_match('(A|G)', $this->memberCheckerCookieValues->memberStatus) === 1) {
             $this->hasActiveMembership = true;
         }
+
+        if($this->getMembershipType($this->memberCheckerCookieValues->membershipType) != "") {
+            $this->membershipType = $this->getMembershipType($this->memberCheckerCookieValues->membershipType);
+        }
+        
+        
 
 
     }
@@ -261,6 +269,10 @@ CONTENT;
 
     echo $content;
 
+    }
+
+    public function returnMembershipType() {
+        return $this->getMembershipType($member->getMembershipType);
     }
 
 
