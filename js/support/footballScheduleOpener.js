@@ -43,7 +43,7 @@
     console.log(currentPage.params);
     
     //Another check, we are only going to search for a chapter if the URL has one.
-        if (currentPage.hash == 'schedule' || currentPage.hash == 'broadcast' || currentPage.hash == 'warmup' || currentPage.hash == 'parties' ) {
+        if (currentPage.hash == 'schedule' || currentPage.hash == 'broadcast' || currentPage.hash == 'warmup' || currentPage.hash == 'parties' || currentPage.hash == 'viewing-parties' || currentPage.hash == 'events') {
 
         var $pageAccordionContent = $('#accordion .panel .collapse p');
         
