@@ -175,7 +175,7 @@ TOOLBAR;
       }
 
       if ($typeOfToolbar == 'Events') {
-        $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All Digital Events</li>';
+        $template = '<ul class="filter-group"><li class="filter-button is-checked" data-filter="">All</li>';
       }
 
 
