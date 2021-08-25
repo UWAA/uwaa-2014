@@ -140,7 +140,7 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 
 		  
 
-        $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/uwaa/payout";
+        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa/payout";
         $appealCodeIFrameParams = array();
 
 
