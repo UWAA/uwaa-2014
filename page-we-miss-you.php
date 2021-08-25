@@ -140,7 +140,7 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 
 		  
 
-        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa/payout";
+        $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/uwaa/payout";
         $appealCodeIFrameParams = array();
 
 
@@ -195,7 +195,7 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
   
       <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
      
-
+<!-- http://localhost:41157/uwaa/payout?membcodes=LSP&MD5Hash=0000031956,800.64bc46a73c1785312db742399de681df -->
     </div>
    
 
