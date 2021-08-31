@@ -80,7 +80,18 @@ else {
                 <h6 class="intro-head"> <?php echo get_post_meta($post->ID, 'mb_thumbnail_subtitle', true) ?></h6>
 
                 <h1>
-                  <?php the_title() ?>
+                  <?php 
+                  
+                  if (is_single("51460")) {
+                    echo "Alaska Airlines Mileage Plan<sup>tm</sup> Sweepstakes";
+                  } else {
+                    the_title(); 
+                  }
+                  
+                  
+                  
+                  
+                  ?>
                 </h1>
 
 
