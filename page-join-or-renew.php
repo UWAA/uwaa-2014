@@ -5,7 +5,15 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 $UWAA->Memberchecker->getSession();
 
 function previewOrActiveDrive() {
-  if (is_user_logged_in() || get_field('controls')['drive_custom_is_active']) {
+  if (is_user_logged_in() || get_field('controls')['drive_preview_drive_content']) {
+    return TRUE;
+    
+  }
+  return FALSE;
+}
+
+function driveIsActive() {
+  if (get_field('controls')['drive_custom_is_active']) {
     return TRUE;
     
   }
@@ -33,7 +41,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
             
 // <!-- drive_custom_is_control_shown -->
 
-if(previewOrActiveDrive() ) {
+if(previewOrActiveDrive() || driveIsActive() ) {
   // show the join/renew custom superheros
 if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_superhero')) {
 
@@ -79,7 +87,7 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
 
       <?php 
 
-        if( previewOrActiveDrive() ) {
+        if( previewOrActiveDrive() || driveIsActive() ) {
           // show the join/renew custom superheros
         if(array_key_exists("JOIN", $parentPageParams) ) {
         
@@ -132,7 +140,7 @@ $isSpecialDriveActive = false;
 
 
 
-if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, or if the 'drive active' true/false field is checked
+if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a user is logged in, or if the 'drive active' true/false field is checked
   if(array_key_exists("JOIN", $parentPageParams)) {
 
     ?> <h1> <?php echo get_field('drive_custom_join_subhead'); ?></h1>
@@ -203,6 +211,14 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 		  
 
         $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
+
+        if (previewOrActiveDrive() && get_bloginfo( 'name') == "uwalum-local" ) {
+          $frameURL = "http://localhost:41157/uwaa";
+        }
+
+        if (previewOrActiveDrive() && get_bloginfo( 'name') == "Alumni" ) {
+          $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/uwaa";
+        }
         $appealCodeIFrameParams = array();
 
 
