@@ -210,15 +210,21 @@ if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a 
 
 		  
 
-        $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
-
-        if (previewOrActiveDrive() && get_bloginfo( 'name') == "uwalum-local" ) {
-          $frameURL = "http://localhost:41157/uwaa";
-        }
-
         if (previewOrActiveDrive() && get_bloginfo( 'name') == "Alumni" ) {
           $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/uwaa";
+        } elseif (previewOrActiveDrive() && get_bloginfo( 'name') == "uwalum-local" ) {
+          $frameURL = "http://localhost:41157/uwaa";
+        } else {
+          $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
         }
+
+        
+
+        
+
+        
+
+        
         $appealCodeIFrameParams = array();
 
 
