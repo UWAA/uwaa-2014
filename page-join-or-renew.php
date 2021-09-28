@@ -5,19 +5,19 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 $UWAA->Memberchecker->getSession();
 
 function previewOrActiveDrive() {
-  if (is_user_logged_in() || get_field('controls')['drive_preview_drive_content']) {
-    return TRUE;
+  if (is_user_logged_in() && get_field('controls')['drive_preview_drive_content'] === true )  {
+    return true;
     
   }
-  return FALSE;
+  return false;
 }
 
 function driveIsActive() {
-  if (get_field('controls')['drive_custom_is_active']) {
-    return TRUE;
+  if (get_field('controls')['drive_custom_is_active'] === true) {
+    return true;
     
   }
-  return FALSE;
+  return false;
 }
 
 get_header(); 
@@ -210,7 +210,7 @@ if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a 
 
 		  
 
-        if (previewOrActiveDrive() == true && get_bloginfo( 'name') == "Alumni" ) {
+        if (previewOrActiveDrive()  && get_bloginfo( 'name') == "Alumni" ) {
           $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/uwaa";
         } elseif (previewOrActiveDrive() && get_bloginfo( 'name') == "uwalum-local" ) {
           $frameURL = "http://localhost:41157/uwaa";
