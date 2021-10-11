@@ -37,6 +37,7 @@ class UI
         new Shortcodes\FootballSponsorLockup;
         new Shortcodes\DD2021TagboardEmbed;
         new Shortcodes\ConvergeEmailFormEmbed;
+        new Shortcodes\WistiaEmbed;
 
     }
 
