@@ -27,13 +27,20 @@ class WistiaEmbed
             $css = $attributes->css;
         }
 
+        
+        if (isset($attributes->classes)){
+            array_push($classes, $attributes->classes);
+        }
+
         $videoID = '#';
         if (isset($attributes->videoid)){
             $videoID = $attributes->videoid;
         }
 
 
-        $returnValue = '<div class="uwaa-wistia-wrapper" style="'.$css.'"><script src="https://fast.wistia.com/embed/medias/'.$videoID.'.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_'.$videoID.' popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div></div>';
+        $class_string = implode($classes, ' ');  
+
+        $returnValue = '<div class="'.$class_string.'" style="'.$css.'"><script src="https://fast.wistia.com/embed/medias/'.$videoID.'.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><span class="wistia_embed wistia_async_'.$videoID.' popover=true popoverAnimateThumbnail=true videoFoam=true" style="display:inline-block;height:100%;position:relative;width:100%">&nbsp;</span></div></div></div>';
 
         
         return $returnValue;
