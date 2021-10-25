@@ -31,7 +31,7 @@ $(document).ready(function () {
 
             $accordions_headers.each(function (index_h) {
                 var $that = $(this),
-                    $text = $that.text(),
+                    $text = 'Read More',
                     $accordion_panel = $that.next(".js-accordion__panel"),
                     $index_header = index_h + 1;
 
@@ -95,14 +95,19 @@ $(document).ready(function () {
                 $all_accordion_headers.attr("aria-selected", "false");
                 $this.attr("aria-selected", "true");
 
+                
+                
+
                 // opened or closed?
                 if ($this.attr("aria-expanded") == "false") { // closed
                     $this.attr("aria-expanded", "true");
                     $this_panel.attr("aria-hidden", "false");
+                    $this.text("Read Less");
                 }
                 else { // opened
                     $this.attr("aria-expanded", "false");
                     $this_panel.attr("aria-hidden", "true");
+                    $this.text("Read More");
                 }
 
                 if ($accordion_multiselectable == "false") {
