@@ -38,6 +38,7 @@ class UI
         new Shortcodes\DD2021TagboardEmbed;
         new Shortcodes\ConvergeEmailFormEmbed;
         new Shortcodes\WistiaEmbed;
+        new Shortcodes\ReadMore;
 
     }
 
