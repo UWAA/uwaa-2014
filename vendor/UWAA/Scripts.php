@@ -349,6 +349,14 @@ class Scripts
         'in_footer' => true,
         'admin'   => false
       ),
+      'covervid-cyber' => array (
+        'id'      => 'covervid-cyber',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/coverVidHelper' . $this->min_script() . '.js',
+        'deps'    => array('covervid'),
+        'version' => '2.2.1',
+        'in_footer' => true,
+        'admin'   => false
+      ),
       
 
 

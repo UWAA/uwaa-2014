@@ -50,8 +50,8 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');  
 
-
-
+// Disables the Gutenberg Block Editor
+add_filter('use_block_editor_for_post', '__return_false', 10);
 
 // http://christianvarga.com/how-to-get-submenu-items-from-a-wordpress-menu-based-on-parent-or-sibling/
   // add hook

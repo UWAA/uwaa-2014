@@ -20,8 +20,23 @@ function driveIsActive() {
   return false;
 }
 
+function cyber() {
+  // if (get_field('controls')['drive_custom_is_active'] === true) {
+    return true;
+    
+  // }
+  // return false;
+}
+
+
 get_header(); 
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
+
+if(cyber()) {
+
+}
+
+
 
 
 $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);     
@@ -41,6 +56,9 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
             
 // <!-- drive_custom_is_control_shown -->
 
+// TODO  - ACF Field Control
+$cyberdrive = true;
+
 if(previewOrActiveDrive() || driveIsActive() ) {
   // show the join/renew custom superheros
 if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_superhero')) {
@@ -58,6 +76,16 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
 ?>
   
   <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($superhero['url']); ?>);"></div>
+
+<?php } elseif(cyber()) { ?> 
+
+  <div class="uw-hero-image cyber-video-wrapper">  
+  
+    <video id="cyber-video"  playsinline autoplay muted loop poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Cyber.jpg">
+        <!-- <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.webm" type="video/webm" > -->
+        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/cyberheader.mp4" type="video/mp4" >
+    </video>
+</div>
 
 <?php } else { ?> 
 
@@ -102,7 +130,14 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
 
          <h2 class="uw-site-title drive-custom" style="color:<?php echo esc_attr( get_field('drive_custom_superhero_text_color') ) ?>;"><?php echo get_field('drive_custom_renew_headline') ?> </h2>
         
-        <?php } else { ?> 
+        <?php } elseif(cyber()) 
+        
+          { 
+
+          }
+        
+          
+          else { ?> 
         
           <h2 class="uw-site-title">UWAA Membership </h2>
         
@@ -117,7 +152,8 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
 
       <div class="row uwaa-home-branding-row">
     
-     <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
+     <!-- TODO - Make a cyber something toggle. -->
+      <!-- <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?> -->
 
     </div>
 
@@ -208,11 +244,13 @@ if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a 
 
 		<?php  // The Store
 
+    echo get_bloginfo("name");
+
 		  
 
-        if (previewOrActiveDrive()  && get_bloginfo( 'name') == "Alumni" ) {
+        if (previewOrActiveDrive()  && get_bloginfo( 'name') == "alumni" ) {
           $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/uwaa";
-        } elseif (previewOrActiveDrive() && get_bloginfo( 'name') == "uwalum-local" ) {
+        } elseif (previewOrActiveDrive() && get_bloginfo( 'name') == "uwalum" ) {
           $frameURL = "http://localhost:41157/uwaa";
         } else {
           $frameURL = "https://secure.gifts.washington.edu/membership/uwaa";
@@ -296,7 +334,7 @@ if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a 
 
 		?>
   
-      <iframe id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
+      <iframe allowtransparency="true" id="MembershipStoreFrame" src="<?php echo $frameURL; ?>" width="100%" height="3250px" frameborder="0" scrolling="no" style="margin-top:10px;"></iframe>
      
 
     </div>
