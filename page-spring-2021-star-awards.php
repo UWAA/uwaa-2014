@@ -60,7 +60,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
         <div id="winner-cards">
           <div class="grid">
-            <?php $UWAA->UI->makeStarAwardWinnerCards('spring2020'); ?>
+            <?php $UWAA->UI->makeStarAwardWinnerCards('spring2021'); ?>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
     <div id="cards">
         <div class ="grid">
       
-            <?php $UWAA->UI->makeStarAwardCards('spring2020'); ?>
+            <?php $UWAA->UI->makeStarAwardCards('spring2021'); ?>
        
         
         </div>  
