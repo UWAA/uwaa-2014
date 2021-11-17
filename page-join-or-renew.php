@@ -242,9 +242,7 @@ if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a 
       </div>  
       <!-- Ending us-body-copy -->
 
-		<?php  // The Store
-
-    echo get_bloginfo("name");
+		<?php  // The Store    
 
 		  
 
