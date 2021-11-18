@@ -1,441 +1,459 @@
-[
-    {
-        "key": "group_5f5f9914004b7",
-        "title": "Membership Drive Dashboard",
-        "fields": [
-            {
-                "key": "field_5f5fd81087c2e",
-                "label": "Controls",
-                "name": "controls",
-                "type": "group",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "layout": "block",
-                "sub_fields": [
-                    {
-                        "key": "field_5f5fd81e87c2f",
-                        "label": "Drive Active",
-                        "name": "drive_custom_is_active",
-                        "type": "true_false",
-                        "instructions": "Check this box to activate the drive",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "message": "WHEN THIS BOX IS CHECKED - DRIVE CONTENT IS VISIBLE TO THE PUBLIC",
-                        "default_value": 0,
-                        "ui": 0,
-                        "ui_on_text": "",
-                        "ui_off_text": ""
-                    },
-                    {
-                        "key": "field_5f5fdc84bca35",
-                        "label": "Show Debug Controls",
-                        "name": "drive_custom_is_control_shown",
-                        "type": "true_false",
-                        "instructions": "Use this to toggle the visibility of the debug controls to see the different versions of the page",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "message": "",
-                        "default_value": 0,
-                        "ui": 0,
-                        "ui_on_text": "",
-                        "ui_off_text": ""
-                    },
-                    {
-                        "key": "field_61524bfba29f9",
-                        "label": "Preview Drive Content",
-                        "name": "drive_preview_drive_content",
-                        "type": "true_false",
-                        "instructions": "Check this box to load development versions of the store, and preview drive-specific superheros and content",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "message": "Preview yes\/no?",
-                        "default_value": 1,
-                        "ui": 0,
-                        "ui_on_text": "",
-                        "ui_off_text": ""
-                    }
-                ]
+{
+    "key": "group_5f5f9914004b7",
+    "title": "Membership Drive Dashboard",
+    "fields": [
+        {
+            "key": "field_5f5fd81087c2e",
+            "label": "Controls",
+            "name": "controls",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            {
-                "key": "field_5f5fd77987c2b",
-                "label": "Superheros",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_5f612c98469f8",
-                "label": "Superhero Text Color",
-                "name": "drive_custom_superhero_text_color",
-                "type": "color_picker",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "enable_opacity": false,
-                "return_format": "string"
-            },
-            {
-                "key": "field_606b7197d8524",
-                "label": "Generic Superhero Override",
-                "name": "drive_control_generic_superhero",
-                "type": "true_false",
-                "instructions": "Check this box if you want the superhero for, \"Join\" shown regardless of the \"join\" or \"renew\" type codes being present.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "message": "",
-                "default_value": 0,
-                "ui": 0,
-                "ui_on_text": "",
-                "ui_off_text": ""
-            },
-            {
-                "key": "field_606b741c31b9f",
-                "label": "Generic Superhero Headline",
-                "name": "drive_custom_generic_headline",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_606b7197d8524",
-                            "operator": "==",
-                            "value": "1"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_606b743931ba0",
-                "label": "Generic Superhero Subhead",
-                "name": "drive_custom_generic_subhead",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_606b7197d8524",
-                            "operator": "==",
-                            "value": "1"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5f5fd7a487c2c",
-                "label": "Join Superhero",
-                "name": "drive_custom_join_superhero",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5f5fd7b187c2d",
-                "label": "Renew Superhero",
-                "name": "drive_custom_renew_superhero",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5f5fd70073767",
-                "label": "Renew Page Content",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_5f5fd6e973766",
-                "label": "Custom Renew Page Headline",
-                "name": "drive_custom_renew_headline",
-                "type": "text",
-                "instructions": "Custom text that will appear",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "<h1>",
-                "append": "<\/h1>",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5f5fd6d573765",
-                "label": "Custom Renew Page Subhead",
-                "name": "drive_custom_renew_subhead",
-                "type": "text",
-                "instructions": "Custom text that will appear",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5f5f9b0a73764",
-                "label": "Custom Renew Page Content",
-                "name": "drive_custom_renew_content",
-                "type": "wysiwyg",
-                "instructions": "Custom text that will appear",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "delay": 0
-            },
-            {
-                "key": "field_5f5fd76c87c2a",
-                "label": "Join Page Content",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_5f5f994473761",
-                "label": "Custom Join Page Headline",
-                "name": "drive_custom_join_headline",
-                "type": "text",
-                "instructions": "Custom text that will appear",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "<h1>",
-                "append": "<\/h1>",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5f5f9ade73762",
-                "label": "Custom Join Page Subhead",
-                "name": "drive_custom_join_subhead",
-                "type": "text",
-                "instructions": "Custom text that will appear",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5f5f9aef73763",
-                "label": "Custom Join Page Content",
-                "name": "drive_custom_join_content",
-                "type": "wysiwyg",
-                "instructions": "Custom text that will appear",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "delay": 0
-            },
-            {
-                "key": "field_6064f36ba0cf8",
-                "label": "Store Options",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "top",
-                "endpoint": 0
-            },
-            {
-                "key": "field_6064f396a0cf9",
-                "label": "Rate Codes",
-                "name": "store_option_rate_codes",
-                "type": "text",
-                "instructions": "A comma separated list, with no leading\/following whitespace.\r\n\r\nThis will make special or unique store options appear.  A Digital Option, for example.\r\nOnly the options for the individual rate codes will appear.  \r\n\r\nNote this has no impact on the main membership store (\/join-or-renew)",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "CMA,CMJ",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            }
-        ],
-        "location": [
-            [
+            "layout": "block",
+            "sub_fields": [
                 {
-                    "param": "page",
-                    "operator": "==",
-                    "value": "2227"
-                }
-            ],
-            [
+                    "key": "field_5f5fd81e87c2f",
+                    "label": "Drive Active",
+                    "name": "drive_custom_is_active",
+                    "type": "true_false",
+                    "instructions": "Check this box to activate the drive",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "WHEN THIS BOX IS CHECKED - DRIVE CONTENT IS VISIBLE TO THE PUBLIC",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
                 {
-                    "param": "page_template",
-                    "operator": "==",
-                    "value": "templates\/membership-store.php"
+                    "key": "field_5f5fdc84bca35",
+                    "label": "Show Debug Controls",
+                    "name": "drive_custom_is_control_shown",
+                    "type": "true_false",
+                    "instructions": "Use this to toggle the visibility of the debug controls to see the different versions of the page",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_61524bfba29f9",
+                    "label": "Preview Drive Content",
+                    "name": "drive_preview_drive_content",
+                    "type": "true_false",
+                    "instructions": "Check this box to load development versions of the store, and preview drive-specific superheros and content",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Preview yes\/no?",
+                    "default_value": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_61959cebc02cb",
+                    "label": "Cyberdrive",
+                    "name": "drive_custom_cyber",
+                    "type": "true_false",
+                    "instructions": "Check this box to deploy the CyberMonday styling to the Membership Store",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
+        },
+        {
+            "key": "field_5f5fd77987c2b",
+            "label": "Superheros",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f612c98469f8",
+            "label": "Superhero Text Color",
+            "name": "drive_custom_superhero_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": false,
+            "return_format": "string"
+        },
+        {
+            "key": "field_606b7197d8524",
+            "label": "Generic Superhero Override",
+            "name": "drive_control_generic_superhero",
+            "type": "true_false",
+            "instructions": "Check this box if you want the superhero for, \"Join\" shown regardless of the \"join\" or \"renew\" type codes being present.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_606b741c31b9f",
+            "label": "Generic Superhero Headline",
+            "name": "drive_custom_generic_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_606b7197d8524",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_606b743931ba0",
+            "label": "Generic Superhero Subhead",
+            "name": "drive_custom_generic_subhead",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_606b7197d8524",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f5fd7a487c2c",
+            "label": "Join Superhero",
+            "name": "drive_custom_join_superhero",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f5fd7b187c2d",
+            "label": "Renew Superhero",
+            "name": "drive_custom_renew_superhero",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f5fd70073767",
+            "label": "Renew Page Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f5fd6e973766",
+            "label": "Custom Renew Page Headline",
+            "name": "drive_custom_renew_headline",
+            "type": "text",
+            "instructions": "Custom text that will appear",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "<h1>",
+            "append": "<\/h1>",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f5fd6d573765",
+            "label": "Custom Renew Page Subhead",
+            "name": "drive_custom_renew_subhead",
+            "type": "text",
+            "instructions": "Custom text that will appear",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f5f9b0a73764",
+            "label": "Custom Renew Page Content",
+            "name": "drive_custom_renew_content",
+            "type": "wysiwyg",
+            "instructions": "Custom text that will appear",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5f5fd76c87c2a",
+            "label": "Join Page Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f5f994473761",
+            "label": "Custom Join Page Headline",
+            "name": "drive_custom_join_headline",
+            "type": "text",
+            "instructions": "Custom text that will appear",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "<h1>",
+            "append": "<\/h1>",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f5f9ade73762",
+            "label": "Custom Join Page Subhead",
+            "name": "drive_custom_join_subhead",
+            "type": "text",
+            "instructions": "Custom text that will appear",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f5f9aef73763",
+            "label": "Custom Join Page Content",
+            "name": "drive_custom_join_content",
+            "type": "wysiwyg",
+            "instructions": "Custom text that will appear",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_6064f36ba0cf8",
+            "label": "Store Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6064f396a0cf9",
+            "label": "Rate Codes",
+            "name": "store_option_rate_codes",
+            "type": "text",
+            "instructions": "A comma separated list, with no leading\/following whitespace.\r\n\r\nThis will make special or unique store options appear.  A Digital Option, for example.\r\nOnly the options for the individual rate codes will appear.  \r\n\r\nNote this has no impact on the main membership store (\/join-or-renew)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "CMA,CMJ",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "66"
+            }
         ],
-        "menu_order": 0,
-        "position": "acf_after_title",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": ""
-    }
-]
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/membership-store.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1637195035
+}

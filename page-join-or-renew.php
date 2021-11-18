@@ -21,20 +21,20 @@ function driveIsActive() {
 }
 
 function cyber() {
-  // if (get_field('controls')['drive_custom_is_active'] === true) {
+  if (get_field('controls')['drive_custom_cyber'] === true) {
+    add_filter( 'body_class', function( $classes ) {
+    return array_merge( $classes, array( 'cyberdrive' ) );
+} );
     return true;
-    
-  // }
-  // return false;
+    }
+  return false;
 }
 
 
 get_header(); 
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
-if(cyber()) {
 
-}
 
 
 
@@ -57,7 +57,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 // <!-- drive_custom_is_control_shown -->
 
 // TODO  - ACF Field Control
-$cyberdrive = true;
+
 
 if(previewOrActiveDrive() || driveIsActive() ) {
   // show the join/renew custom superheros
@@ -153,7 +153,8 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
       <div class="row uwaa-home-branding-row">
     
      <!-- TODO - Make a cyber something toggle. -->
-      <!-- <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?> -->
+     
+     <?php if(!cyber()) { include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); }?>
 
     </div>
 
