@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",    
     "configurations": [
+
         {
             "firefoxExecutable": "C:\\Program Files\\Firefox Developer Edition\\firefox.exe",        
             "type": "firefox",
@@ -28,12 +29,15 @@
             ]
         },
         {
-            "name": "php Debug - uwalum.test",
+            "name": "Listen for Xdebug (Local)",
             "type": "php",
             "request": "launch",
             "port": 9000,
-            "pathMappings": {
-                "/srv/www/wordpress-one/public_html": "k:\\env\\wordpress\\www\\wordpress-one\\public_html"
+            "xdebugSettings": {
+                "max_children": 128,
+                "max_data": 1024,
+                "max_depth": 3,
+                "show_hidden": 1
             }
         },
         {
@@ -42,7 +46,13 @@
             "request": "launch",
             "program": "${file}",
             "cwd": "${fileDirname}",
-            "port": 9000
+            "port": 9000,
+            "xdebugSettings": {
+                "max_children": 128,
+                "max_data": 1024,
+                "max_depth": 3,
+                "show_hidden": 1
+            }
         }
     ]
 }
