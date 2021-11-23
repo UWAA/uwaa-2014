@@ -85,7 +85,7 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
   <div class="uw-hero-image cyber-video-wrapper">  
   
     <video id="cyber-video"  playsinline autoplay muted loop poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Cyber.jpg">
-        <!-- <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/flagVideo.webm" type="video/webm" > -->
+        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/cyberheader.webm" type="video/webm" >
         <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/cyberheader.mp4" type="video/mp4" >
     </video>
 </div>
