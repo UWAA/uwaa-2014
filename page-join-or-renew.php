@@ -250,7 +250,7 @@ if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a 
 
 		  
 
-        if (previewOrActiveDrive()  && get_bloginfo( 'name') == "alumni" ) {
+        if (previewOrActiveDrive()  && get_bloginfo( 'name') == "Alumni" ) {
           $frameURL = "https://ua-dev-secure.gifts.washington.edu/membership/uwaa";
         } elseif (previewOrActiveDrive() && get_bloginfo( 'name') == "uwalum" ) {
           $frameURL = "http://localhost:41157/uwaa";
