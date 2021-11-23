@@ -21,13 +21,16 @@ function driveIsActive() {
 }
 
 function cyber() {
-  if (get_field('controls')['drive_custom_cyber'] === true) {
-    add_filter( 'body_class', function( $classes ) {
-    return array_merge( $classes, array( 'cyberdrive' ) );
-} );
+  if (get_field('controls')['drive_custom_cyber'] === true) {    
     return true;
     }
   return false;
+}
+
+if (cyber()) {
+  add_filter( 'body_class', function( $classes ) {
+    return array_merge( $classes, array( 'cyberweek' ) );
+} );
 }
 
 
