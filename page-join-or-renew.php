@@ -27,7 +27,7 @@ function cyber() {
   return false;
 }
 
-if (cyber()) {
+if ((cyber() && previewOrActiveDrive()) || cyber() && driveIsActive()) {
   add_filter( 'body_class', function( $classes ) {
     return array_merge( $classes, array( 'cyberweek' ) );
 } );
