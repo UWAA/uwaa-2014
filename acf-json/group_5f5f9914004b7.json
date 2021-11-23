@@ -445,6 +445,13 @@
                 "operator": "==",
                 "value": "templates\/membership-store.php"
             }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "2227"
+            }
         ]
     ],
     "menu_order": 0,
