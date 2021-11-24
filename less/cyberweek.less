@@ -8,9 +8,14 @@
         }
     }
 
+    
+
     .uw-hero-image::after{
         background: none;
         display: none;
+
+        // Removes the video with the ratio of width to height is such that it loses its cover effect.
+    
     }
 
 
@@ -25,14 +30,6 @@
         height: 450px;
     }
 
-    // Removes the video with the ratio of width to height is such that it loses its cover effect.
-    @media only screen and (max-width: 810px) {
-        video {
-            display: none;
-        }
-    }
-
-
 
 
     #uw-container-inner{
@@ -42,5 +39,11 @@
 
     .uw-body {
         background: transparent;
+    }
+
+    @media only screen and (max-width: @screen-sm) {
+     .uw-hero-image {
+         display: block;
+     }
     }
 }

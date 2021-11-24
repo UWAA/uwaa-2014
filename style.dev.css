@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.22.0.kwclqv6q
+ Version: 1.22.0.kwcs34v4
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11858,17 +11858,17 @@ Typography
   width: 100vw;
   height: 450px;
 }
-@media only screen and (max-width: 810px) {
-  .cyberweek video {
-    display: none;
-  }
-}
 .cyberweek #uw-container-inner {
   background: #000000;
   background: linear-gradient(180deg, #000000 0%, #000000 900px, #4b2e83 100%);
 }
 .cyberweek .uw-body {
   background: transparent;
+}
+@media only screen and (max-width: 768px) {
+  .cyberweek .uw-hero-image {
+    display: block;
+  }
 }
 .page-alwayslearning p {
   margin: 0 0 80px;
