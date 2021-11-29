@@ -181,7 +181,16 @@ $isSpecialDriveActive = false;
 
 
 if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a user is logged in, or if the 'drive active' true/false field is checked
-  if(array_key_exists("JOIN", $parentPageParams)) {
+  if (cyber() OR (array_key_exists("JOIN", $parentPageParams) AND cyber() ) OR (array_key_exists("RENEW", $parentPageParams) AND cyber() ) ) {
+
+      ?> <h1> <?php echo get_field('drive_custom_cybermonday_subhead'); ?></h1>
+    
+    <?php
+    
+      echo get_field('drive_custom_cybermonday_content');
+  }
+  
+  elseif(array_key_exists("JOIN", $parentPageParams)) {
 
     ?> <h1> <?php echo get_field('drive_custom_join_subhead'); ?></h1>
     
@@ -197,16 +206,7 @@ if (previewOrActiveDrive() || driveIsActive() ) {  //Content in this shows if a 
     
       echo get_field('drive_custom_renew_content');
 
-    } elseif (cyber() OR (array_key_exists("JOIN", $parentPageParams) AND cyber() ) OR (array_key_exists("RENEW", $parentPageParams) AND cyber() ) ) {
-
-      ?> <h1> <?php echo get_field('drive_custom_cybermonday_subhead'); ?></h1>
-    
-    <?php
-    
-      echo get_field('drive_custom_cybermonday_content');
-    ?>
-      
-       <?php
+  
      } else {
 
       // Start the Loop.
