@@ -674,14 +674,21 @@ class MetaBoxes
                                   true => 'Partner Content'
                                   ),
                           'desc'=> 'Use this to make a limited story post that will only show up on the story page, but doesn\'t need a full buildout.'
-                      ),
-                      array(
+                         ),
+                         array(
                           'name' => 'Alternate Link',
                           'id'=> 'alternate_link',
                           'type'=> 'text',
                           'desc'=> 'If this content should link to an external page, write the URL here. Leave this blank for any content/story that stays on our site.  This is also used for superhero redirects. Relative URLs(/alumni/definealumni) are supported.'
-                          )
-                      )
+                         ),
+                          array(
+                          'name' => 'display_priority',
+                          'id'=> 'display_priority',
+                          'type'=> 'text',                          
+                          'desc'=> 'If filled, this will allow this content to be prioritized for display in certain areas on the site, e.g. Thumbnail Rows on the homepage.  Use sparingly, if at all.'
+                          ),
+                      ),
+                      
               )
               );
 
