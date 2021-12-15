@@ -40,7 +40,7 @@ class REJStories extends ThumbnailBrowser implements Thumbnail
         'benefits',
         'post'
         ),
-      'posts_per_page' => $this->returnVariableFormatInformation('2x'),
+      'posts_per_page' => 5,
       'orderby' => 'rand',
 
       'tax_query' => array(
