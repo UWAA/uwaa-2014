@@ -164,15 +164,15 @@ return $prelimTemplate;
 
         $template = <<<ISOTOPE
 <div class="post-thumbnail-slide $this->postTerms" data-order="$postOrder">
-  <a href="$this->postURL" title="$this->postTitle">
+  <a class="slide-link" href="$this->postURL" title="$this->postTitle">
     <div class="image-frame">
       $callout
       $image
     </div>
     <div class="copy">
-    <h6 class="subtitle">$this->postSubtitle</h6>
-    <h4 class="title">$this->postTitle</h4>
-    <h4 class="date">$this->postDate</h4>
+      <h6 class="subtitle test">$this->postSubtitle</h6>
+      <h4 class="title">$this->postTitle</h4>
+      <h4 class="date">$this->postDate</h4>
     <p>$this->postExcerpt</p>
     <p class="operator">$this->tourOperator</p>
     <a class="link-arrow" href="$this->postURL">
