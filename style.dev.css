@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.22.0.kx99y00x
+ Version: 1.22.0.kx9c4p1a
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9418,7 +9418,7 @@ div.map-logo.michigan {
   width: 44px;
   background: url(assets/icons/Grid_List_Print_Sprite.png) no-repeat transparent;
 }
-.grid-list-print-icons .button .icon.grid {
+.grid-list-print-icons .button .icon.isotope-grid {
   background-position: 7px 0;
 }
 .grid-list-print-icons .button .icon.list {
@@ -9433,9 +9433,9 @@ div.map-logo.michigan {
 .grid-list-print-icons .button.is-checked {
   color: #4b2e83;
 }
-.grid-list-print-icons .button:hover .icon.grid,
-.grid-list-print-icons .button:active .icon.grid,
-.grid-list-print-icons .button.is-checked .icon.grid {
+.grid-list-print-icons .button:hover .icon.isotope-grid,
+.grid-list-print-icons .button:active .icon.isotope-grid,
+.grid-list-print-icons .button.is-checked .icon.isotope-grid {
   background-position: 7px -36px;
 }
 .grid-list-print-icons .button:hover .icon.list,
