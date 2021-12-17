@@ -88,7 +88,7 @@ class Scripts
         'id'      => 'isotope',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/libraries/isotope/dist/isotope.pkgd.js',
         'deps'    => array('jquery'),
-        'version' => '2.0.1',
+        'version' => wp_get_theme()->get('Version'),
         'in_footer' => true,
         'admin'   => false
       ),
