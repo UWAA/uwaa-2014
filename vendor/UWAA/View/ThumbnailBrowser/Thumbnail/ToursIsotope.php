@@ -129,12 +129,23 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     return '<img src=" ' . get_stylesheet_directory_uri() . '/assets/Travel_Generic_Thumb_275x190.jpg" />';
    }
 
+   protected function createShortenedLink(){
+      $target = $this->postURL;
+      $needles = array('/(https|http):\/\/www.washington.edu\//');
+      $replacement = 'http://uwalum.com/';
+      $printURL = preg_replace($needles, $replacement, $target);
+
+      return $printURL;
+
+   }
+
 
 	public function buildTemplate(){
     $callout = $this->renderCallout();
     $image = $this->renderImage();
-      $tags= $this->renderTags();
-      $postOrder = $this->originalPostOrder + 1;
+    $tags= $this->renderTags();
+    $postOrder = $this->originalPostOrder + 1;
+    $printLink = $this->createShortenedLink();
 
 
 
@@ -169,18 +180,20 @@ return $prelimTemplate;
       $callout
       $image
     </div>
+  </a>  
     <div class="copy">
+    <a class="copy-link" href="$printLink" title="copy">
       <h6 class="subtitle test">$this->postSubtitle</h6>
       <h4 class="title">$this->postTitle</h4>
       <h4 class="date">$this->postDate</h4>
-    <p>$this->postExcerpt</p>
-    <p class="operator">$this->tourOperator</p>
-    <a class="link-arrow" href="$this->postURL">
-    $tags
-      <span class="visually-hidden">Link</span>
-    </a>
+      <p>$this->postExcerpt</p>
+      <p class="operator">$this->tourOperator</p>    
+      <a class="link-arrow" href="$this->postURL">
+        $tags
+        <span class="visually-hidden">Link</span>
+      </a>      
     </div>
-  </a>
+  
 </div>
 
 ISOTOPE;
