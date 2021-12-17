@@ -130,8 +130,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
    }
 
    protected function createShortenedLink(){
-      $target = $this->postURL;
-      $needles = array('/(https|http):\/\/www.washington.edu\//');
+      $target = $this->postURL;      
+      $needles = array('/(https|http):\/\/www.washington.edu\/alumni\/travel\//');
       $replacement = 'http://uwalum.com/';
       $printURL = preg_replace($needles, $replacement, $target);
 
