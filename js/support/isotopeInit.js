@@ -151,6 +151,11 @@ Isotope = Backbone.View.extend({
   print: function(e) {    
     $listButton = $('.list-button');
     this.listView(e);
+    this.$("a[href^='https://www.washington.edu/alumni/travel/tours']")    
+      .each(function () {
+        this.href = this.href.replace(/^http:\/\/www\.washington\.edu\/alumni\/travel/,      
+          "http://uwalum.com");
+      });
     _.delay(function(){window.print();},  500);
     
 
