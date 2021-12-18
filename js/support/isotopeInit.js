@@ -159,7 +159,7 @@ Isotope = Backbone.View.extend({
 
       var $elems = $([])
         .pushStack($canvas.isotope('getFilteredItemElements'))
-      this.$(".post-thumbnail-slide").not($elems).toggleClass('no-print');
+      this.$(".post-thumbnail-slide").not($elems).addClass('no-print');
       $elems.removeClass('no-print');
       
     
