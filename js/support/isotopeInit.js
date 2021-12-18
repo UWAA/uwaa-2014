@@ -103,7 +103,6 @@ Isotope = Backbone.View.extend({
 
     this.createCookie('UWAA_' + document.location.pathname, filterValue.replace(/\./gi, ''), 1);
 
-
   },
 
   toggleButtonClass: function(target) {    
@@ -156,6 +155,14 @@ Isotope = Backbone.View.extend({
         this.href = this.href.replace(/^https\:\/\/www\.washington\.edu\/alumni\/travel/g,
           "http://uwalum.com");
       });
+    
+
+      var $elems = $([])
+        .pushStack($canvas.isotope('getFilteredItemElements'))
+      this.$(".post-thumbnail-slide").not($elems).toggleClass('no-print');
+      $elems.removeClass('no-print');
+      
+    
     _.delay(function(){window.print();},  500);
     
 
