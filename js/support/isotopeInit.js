@@ -153,7 +153,7 @@ Isotope = Backbone.View.extend({
     this.$("a[href^='https://www.washington.edu/alumni/travel/tours']")
       .each(function () {
         this.href = this.href.replace(/^https\:\/\/www\.washington\.edu\/alumni\/travel/g,
-          "uwalum.com");
+          "http://uwalum.com");
       });
     
 
