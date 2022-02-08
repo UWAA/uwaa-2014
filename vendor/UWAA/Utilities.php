@@ -18,7 +18,7 @@ class Utilities
         add_filter('request', array($this, 'addUWAACustomPostsToFeed'), 11, 2);
         add_filter('request', array($this, 'createJoinedFeedType'), 10, 2);
         add_action( 'admin_menu', array($this, 'renameStoryPosts'));
-        add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
+        // add_action('wp_head', array($this, 'removeUWAnalytics'), 0);
         add_filter( 'manage_tours_posts_columns' , array($this , 'addTourExpiryDateColumnToTourList'), 10, 2);
         add_action( 'manage_tours_posts_custom_column' , array($this , 'addTourExpiryDateValueToTourList'), 10, 2);
         add_filter( 'manage_edit-tours_sortable_columns', array($this ,'makeTourEndDateSortable') );
