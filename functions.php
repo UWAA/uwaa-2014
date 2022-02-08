@@ -154,7 +154,7 @@ function load_page_specific_scripts() {
     } 
 }
 
-add_action('wp_enqueue_scripts', 'load_page_specific_scripts');
+// add_action('wp_enqueue_scripts', 'load_page_specific_scripts');
 
 
 if ( ! function_exists( 'uw_dropdowns') ) :
