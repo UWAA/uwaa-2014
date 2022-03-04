@@ -113,48 +113,48 @@ function current_type_nav_class($classes, $item) {
 
 // MARK - Page-Specific Scripts are included here.
 // Can refer to scripts loaded in Scripts.php
-// function load_page_specific_scripts() {
-//     global $post;
-//     wp_register_script( 'fevo_library','https://sdk.fevo.com/v1/fevo.js');
-//     wp_register_script( 'uwaa_fevo', get_stylesheet_directory_uri() . '/js/support/uwaaFevo.js', array('fevo_library', 'jquery'));
-//     $fevoValues = array(
-//       'fevoPublisherKey' => ($_ENV['fevoPublisherKey']),
-//       'fevoEventKey' => ($_ENV['fevoEventKey']),
-//       );
+function load_page_specific_scripts() {
+    global $post;
+    wp_register_script( 'fevo_library','https://sdk.fevo.com/v1/fevo.js');
+    wp_register_script( 'uwaa_fevo', get_stylesheet_directory_uri() . '/js/support/uwaaFevo.js', array('fevo_library', 'jquery'));
+    $fevoValues = array(
+      'fevoPublisherKey' => ($_ENV['fevoPublisherKey']),
+      'fevoEventKey' => ($_ENV['fevoEventKey']),
+      );
 
-//     wp_localize_script('uwaa_fevo', 'uwaaFevoProperties', $fevoValues);    
+    wp_localize_script('uwaa_fevo', 'uwaaFevoProperties', $fevoValues);    
 
-//     if( is_page() || is_single() )
-//     {
-//         switch($post->post_name) 
-//         {
-//             case 'sounders':
-//               wp_enqueue_script('uwaa_fevo');                
-//               break;
-//             case 'be-a-member' :
-//               wp_enqueue_script('cyberAppealCodePreservation');
-//               break;
-//             case 'membership' :
-//               wp_enqueue_script('cyberAppealCodePreservation');
-//               break;
-//             case 'join-or-renew' :
-//               wp_enqueue_script('cyberAppealCodePreservation');
-//               break;
-//             case 'oregon':
-//               wp_enqueue_script('oregonMailingListEmailForm');
-//               break;            
-//             // case 'holidays':
-//             //   wp_enqueue_script('homepageSnow');
-//             //   break;
-//             case 'zoom-backgrounds-for-huskies':
-//               wp_enqueue_script('trackImageDownloads');
-//             break;
+    if( is_page() || is_single() )
+    {
+        switch($post->post_name) 
+        {
+            case 'sounders':
+              wp_enqueue_script('uwaa_fevo');                
+              break;
+            case 'be-a-member' :
+              wp_enqueue_script('cyberAppealCodePreservation');
+              break;
+            case 'membership' :
+              wp_enqueue_script('cyberAppealCodePreservation');
+              break;
+            case 'join-or-renew' :
+              wp_enqueue_script('cyberAppealCodePreservation');
+              break;
+            case 'oregon':
+              wp_enqueue_script('oregonMailingListEmailForm');
+              break;            
+            // case 'holidays':
+            //   wp_enqueue_script('homepageSnow');
+            //   break;
+            case 'zoom-backgrounds-for-huskies':
+              wp_enqueue_script('trackImageDownloads');
+            break;
 
-//         }
-//     } 
-// }
+        }
+    } 
+}
 
-// add_action('wp_enqueue_scripts', 'load_page_specific_scripts');
+add_action('wp_enqueue_scripts', 'load_page_specific_scripts');
 
 
 if ( ! function_exists( 'uw_dropdowns') ) :
