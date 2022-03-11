@@ -34,6 +34,8 @@ class Utilities
         add_action('wp_head', array($this, 'addFacebookPixel'), 5);
         add_filter('ppp_nonce_life', array($this, 'extendPreviewTime') );
         add_action( 'wp_body_open', array($this, 'addGTMNoscriptTracking' ) );
+        add_action('wp_head', array($this, 'addPageSpecificCSS'), 5);
+        add_action( 'admin_enqueue_scripts', array($this, 'addEditorToPageSpecificCSS') );
         
 
         $this->addExcerptsToPosts();
@@ -423,6 +425,41 @@ public function overwriteCTAButtonLink($post_permalink) {
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->';
     }
+
+    public function addPageSpecificCSS(){
+        if(function_exists("get_field")){
+            $acf_custom_css = get_field('css_rules');
+
+            if($acf_custom_css){
+                echo "<!-- ACF Page-Specific Styles -->";
+                echo '<style type="text/css" media="screen">';
+                echo wp_filter_nohtml_kses( $acf_custom_css );
+                echo '</style>';
+                echo "<!-- END ACF Page-Specific Styles -->";
+            }
+        }
+    }
+
+    public function addEditorToPageSpecificCSS() {
+    
+ 
+    // Enqueue code editor and settings for manipulating HTML.
+    $settings = wp_enqueue_code_editor( array( 'type' => 'css' ) );
+ 
+    // Return if the editor was not enqueued.
+    if ( false === $settings ) {
+        return;
+    }
+ 
+    wp_add_inline_script(
+        'code-editor',
+        sprintf(
+            'jQuery( function() { wp.codeEditor.initialize( "acf-field_622a4efc160c6", %s ); } );',
+            wp_json_encode( $settings )
+        )
+    );
+}
+
     
 
    
