@@ -42,7 +42,8 @@
 
         .row-hr {
                         border-color: @white;
-                    }
+
+                   
     }    
 
 }
@@ -63,11 +64,22 @@
         text-align:center;
         padding: 25px 0 0px;
         width:auto;
+    }
+
+
+         
+        
+
+        
         
         .row-title-text {
                 width: 23%;
                 margin: 0 auto;
                 background-color: @white;
+
+                @media only screen and (max-width: @screen-xs-max) {
+                background-color: inherit;
+                }
 
                 .home-thumbnail-row-container.row-gold-background  & {
                     background-color: @ulralightgold;
@@ -75,10 +87,10 @@
                     
                 }
 
-                // &.news{
-                //     width: 104px;                    
-                // }
-
+              @media only screen and (max-width: @screen-xs-max) {
+                text-align: left;
+                margin-left:20px;
+                }
 
 
             h2 {            
@@ -119,6 +131,9 @@
             margin-top: -8px;
             font-size: 13px;
             padding-right: 10px;
+            padding-bottom: 0px;
+
+            
         }
         }
         
@@ -128,6 +143,11 @@
     .row-hr {
         border-bottom: 3px solid @lightgray;
         margin-bottom: -44px;
+
+        @media only screen and (max-width: @screen-xs-max) {
+        display: none;
+        visibility: hidden;
+        }
 
     }
 

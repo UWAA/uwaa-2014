@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.24.1.kybyh8uf
+ Version: 1.24.1.l0vj2dup
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -8792,26 +8792,37 @@ div.map-logo.michigan {
 .home-thumbnail-row-container.row-gold-background .row-hr {
   border-color: #ffffff;
 }
-.home-thumbnail-row {
+.home-thumbnail-row-container .home-thumbnail-row {
   margin-bottom: 20px;
 }
-.home-thumbnail-row:home-events {
+.home-thumbnail-row-container .home-thumbnail-row:home-events {
   margin-top: -13px;
 }
-.home-thumbnail-row .row-title-row {
+.home-thumbnail-row-container .home-thumbnail-row .row-title-row {
   text-align: center;
   padding: 25px 0 0px;
   width: auto;
 }
-.home-thumbnail-row .row-title-row .row-title-text {
+.home-thumbnail-row-container .home-thumbnail-row .row-title-text {
   width: 23%;
   margin: 0 auto;
   background-color: #ffffff;
 }
-.home-thumbnail-row-container.row-gold-background .home-thumbnail-row .row-title-row .row-title-text {
+@media only screen and (max-width: 767px) {
+  .home-thumbnail-row-container .home-thumbnail-row .row-title-text {
+    background-color: inherit;
+  }
+}
+.home-thumbnail-row-container.row-gold-background .home-thumbnail-row-container .home-thumbnail-row .row-title-text {
   background-color: #e8e3d3;
 }
-.home-thumbnail-row .row-title-row .row-title-text h2 {
+@media only screen and (max-width: 767px) {
+  .home-thumbnail-row-container .home-thumbnail-row .row-title-text {
+    text-align: left;
+    margin-left: 20px;
+  }
+}
+.home-thumbnail-row-container .home-thumbnail-row .row-title-text h2 {
   font-family: 'Encode Sans Compressed', Arial, sans-serif;
   font-weight: 900;
   font-size: 20px;
@@ -8819,10 +8830,10 @@ div.map-logo.michigan {
   color: #4b2e83;
   white-space: nowrap;
 }
-.home-thumbnail-row-container.row-gold-background .home-thumbnail-row .row-title-row .row-title-text h2 {
+.home-thumbnail-row-container.row-gold-background .home-thumbnail-row-container .home-thumbnail-row .row-title-text h2 {
   background-color: #e8e3d3;
 }
-.home-thumbnail-row .row-title-row .see-all-link {
+.home-thumbnail-row-container .home-thumbnail-row .see-all-link {
   float: right;
   width: 100%;
   text-align: right;
@@ -8834,21 +8845,28 @@ div.map-logo.michigan {
   margin-top: -26px;
   padding-bottom: 20px;
 }
-.home-thumbnail-row .row-title-row .see-all-link:hover,
-.home-thumbnail-row .row-title-row .see-all-link:active {
+.home-thumbnail-row-container .home-thumbnail-row .see-all-link:hover,
+.home-thumbnail-row-container .home-thumbnail-row .see-all-link:active {
   text-decoration: underline;
   color: #85754d;
 }
 @media only screen and (max-width: 767px) {
-  .home-thumbnail-row .row-title-row .see-all-link {
+  .home-thumbnail-row-container .home-thumbnail-row .see-all-link {
     margin-top: -8px;
     font-size: 13px;
     padding-right: 10px;
+    padding-bottom: 0px;
   }
 }
-.home-thumbnail-row .row-hr {
+.home-thumbnail-row-container .row-hr {
   border-bottom: 3px solid #dddddd;
   margin-bottom: -44px;
+}
+@media only screen and (max-width: 767px) {
+  .home-thumbnail-row-container .row-hr {
+    display: none;
+    visibility: hidden;
+  }
 }
 .uwaa-home-branding-row .uw-breadcrumbs {
   padding: 5px 13px 0 0;
@@ -11966,6 +11984,11 @@ Typography
 }
 .page-raceequityjustice .uwaa-hero-image {
   height: 350px;
+}
+@media only screen and (max-width: 767px) {
+  .page-raceequityjustice .uwaa-hero-image {
+    height: 264px;
+  }
 }
 .leaflet-popup-content {
   font-family: 'Open Sans';
