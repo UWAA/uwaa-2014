@@ -333,6 +333,9 @@
     
      .uw-homepage-slider {
        &.uw-hero-image {
+          @media only screen and (max-width: @screen-xs-max) {
+            padding-top: 0;
+          }
           padding: 20px;
           position: absolute;
           height: 350px;
@@ -374,7 +377,7 @@
          p {
            padding-right: 0;
            font-size: 16px;
-           line-height: 24px;
+           line-height: 22px;
          }
          .udub-slant {
             margin: 5px 0 15px 0 !important;
@@ -462,6 +465,10 @@
 .uwaa-superhero .hero-container .title.title {
   font-size: 40px;
   line-height: 40px;
+
+  @media only screen and (max-width: @screen-xs-max) {
+    font-size: 36px;
+  }
 }
 
 }

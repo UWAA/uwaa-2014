@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.24.1.l0vj2dup
+ Version: 1.24.2.l0vjklwe
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -8676,7 +8676,7 @@ div.map-logo.michigan {
   .uw-homepage-slider-container .uw-homepage-slider .hero-container p {
     padding-right: 0;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .uw-homepage-slider-container .uw-homepage-slider .hero-container .udub-slant {
     margin: 5px 0 15px 0 !important;
@@ -8717,6 +8717,11 @@ div.map-logo.michigan {
     bottom: -58px;
   }
 }
+@media only screen and (max-width: 767px) and only screen and (max-width: 767px) {
+  .uw-homepage-slider-container .uw-homepage-slider.uw-hero-image {
+    padding-top: 0;
+  }
+}
 @media only screen and (max-width: 321px) {
   .uw-homepage-slider-container .uw-homepage-slider .hero-container h1 {
     font-size: 1.8em;
@@ -8742,6 +8747,11 @@ div.map-logo.michigan {
   .uwaa-superhero .hero-container .title.title {
     font-size: 40px;
     line-height: 40px;
+  }
+}
+@media only screen and (max-width: 991px) and only screen and (max-width: 767px) {
+  .uwaa-superhero .hero-container .title.title {
+    font-size: 36px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -8802,6 +8812,11 @@ div.map-logo.michigan {
   text-align: center;
   padding: 25px 0 0px;
   width: auto;
+}
+@media only screen and (max-width: 767px) {
+  .home-thumbnail-row-container .home-thumbnail-row .row-title-row {
+    padding-top: 0;
+  }
 }
 .home-thumbnail-row-container .home-thumbnail-row .row-title-text {
   width: 23%;
