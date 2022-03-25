@@ -39,6 +39,7 @@ class UI
         new Shortcodes\ConvergeEmailFormEmbed;
         new Shortcodes\WistiaEmbed;
         new Shortcodes\ReadMore;
+        new Shortcodes\TourBrochureButton;
 
     }
 

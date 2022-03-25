@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.24.3.l0vkeey2
+ Version: 1.24.4.l11c82hw
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11301,16 +11301,19 @@ Typography
   height: auto;
   width: 27px;
 }
-#activity-modal {
+#activity-modal,
+#brochure-modal {
   background: rgba(0, 0, 0, 0.6);
 }
-#activity-modal .modal-dialog .modal-content {
+#activity-modal .modal-dialog .modal-content,
+#brochure-modal .modal-dialog .modal-content {
   border-radius: 0;
   top: 60px;
   position: relative;
   z-index: 0;
 }
-#activity-modal .modal-dialog .modal-content .modal-header {
+#activity-modal .modal-dialog .modal-content .modal-header,
+#brochure-modal .modal-dialog .modal-content .modal-header {
   border-bottom: none;
   padding: 0;
   min-height: 0;
@@ -11318,7 +11321,8 @@ Typography
   position: relative;
   z-index: 1;
 }
-#activity-modal .modal-dialog .modal-content .modal-header .close {
+#activity-modal .modal-dialog .modal-content .modal-header .close,
+#brochure-modal .modal-dialog .modal-content .modal-header .close {
   margin-top: 0;
   margin-right: 20px;
   font-size: 3em;
@@ -11327,17 +11331,21 @@ Typography
   background: rgba(0, 0, 0, 0.175);
   padding: 0 10px;
 }
-#activity-modal .modal-dialog .modal-content .modal-header + .modal-body {
+#activity-modal .modal-dialog .modal-content .modal-header + .modal-body,
+#brochure-modal .modal-dialog .modal-content .modal-header + .modal-body {
   margin-top: -55px;
 }
-#activity-modal .modal-dialog .modal-content .modal-body img {
+#activity-modal .modal-dialog .modal-content .modal-body img,
+#brochure-modal .modal-dialog .modal-content .modal-body img {
   height: auto;
   width: 30px;
 }
-#activity-modal .modal-dialog .modal-content .modal-footer {
+#activity-modal .modal-dialog .modal-content .modal-footer,
+#brochure-modal .modal-dialog .modal-content .modal-footer {
   margin: 0 12px;
 }
-#activity-modal .modal-dialog .modal-content .modal-footer p {
+#activity-modal .modal-dialog .modal-content .modal-footer p,
+#brochure-modal .modal-dialog .modal-content .modal-footer p {
   font-size: .9em;
   font-style: italic;
   text-align: left;
