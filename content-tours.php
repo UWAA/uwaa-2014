@@ -58,6 +58,32 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div id="brochure-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" aria-label="close" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+
+            <div class="modal-body">
+
+                <?php echo do_shortcode('[wufoo username="uwalum" formhash="w1k93e3l1w0qr27" autoresize="true" height="300" header="show" ssl="true" defaultv="Field5='.get_the_title() .'"]' ) ?>
+            </div>
+
+            <div class="modal-footer">                
+            </div>
+           
+        </div>
+
+    </div>
+</div>
+
 <?php
 
   if ( is_archive() )
