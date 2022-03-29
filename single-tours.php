@@ -76,7 +76,7 @@
 
         the_widget("UWAA\Widgets\SocialSidebar");
 
-        get_template_part('partials/forms', 'travel-newsletter');
+        // get_template_part('partials/forms', 'travel-newsletter');
         endwhile;
         ?>
     </div>
