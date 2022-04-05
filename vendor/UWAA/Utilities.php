@@ -433,7 +433,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             if($acf_custom_css){
                 echo "<!-- ACF Page-Specific Styles -->";
                 echo '<style type="text/css" media="screen">';
-                echo wp_filter_nohtml_kses( $acf_custom_css );
+                echo wp_filter_nohtml_kses( preg_replace('/\s+/', '' ,   $acf_custom_css ) );
                 echo '</style>';
                 echo "<!-- END ACF Page-Specific Styles -->";
             }
