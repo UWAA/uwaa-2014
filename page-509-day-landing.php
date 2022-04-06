@@ -44,6 +44,8 @@ else {
   
       <div class="uw-body-copy">
 
+      
+
         <?php
           // Start the Loop.
           while ( have_posts() ) : the_post();
@@ -55,10 +57,34 @@ else {
              */
             get_template_part( 'content', 'page' );
 
-          endwhile;
-
+          endwhile;         
           
         ?>
+
+        
+
+
+        <!-- 509 Day Promotion System -->
+        <?php 
+
+          if ( get_field("509_promotion_toggle") ) {
+            if ($oneClickSubmission) {
+                echo get_field("509_address_on_file_text");
+              } elseif ($successMessageOnly) {
+                echo get_field("509_address_received") ;
+              } else {
+        ?>
+
+		        <h2>Please enter your current mailing address.</h2>
+        
+        <?php  echo get_field("509_field_embed_code") ?>
+
+        <?php 
+        }  //end else
+        
+        } //end toggle if
+         ?>   
+        
 		
         
       
