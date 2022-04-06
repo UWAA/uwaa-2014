@@ -44,25 +44,9 @@ else {
   
       <div class="uw-body-copy">
 
+      <h1> <?php the_title() ?> </h1>
+
       
-
-        <?php
-          // Start the Loop.
-          while ( have_posts() ) : the_post();
-
-            /*
-             * Include the post format-specific template for the content. If you wanp,t to
-             * use this in a child theme, then include a file called called content-___.php
-             * (where ___ is the post format) and that will be used instead.
-             */
-            get_template_part( 'content', 'page' );
-
-          endwhile;         
-          
-        ?>
-
-        
-
 
         <!-- 509 Day Promotion System -->
         <?php 
@@ -77,16 +61,16 @@ else {
 
 		        <h2>Please enter your current mailing address.</h2>
         
-        <?php  echo get_field("509_field_embed_code") ?>
+        <?php echo get_field("509_field_embed_code") ?>
 
         <?php 
         }  //end else
         
-        } //end toggle if
-         ?>   
-        
-		
-        
+        } else {
+
+          the_content();
+          
+          } ?>   
       
 	  </div>
       </div>
