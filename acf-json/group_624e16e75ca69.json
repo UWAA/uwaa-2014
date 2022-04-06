@@ -1,0 +1,120 @@
+[
+    {
+        "key": "group_624e16e75ca69",
+        "title": "509 Day",
+        "fields": [
+            {
+                "key": "field_624e16f6e4e69",
+                "label": "Promotion Toggle",
+                "name": "509_promotion_toggle",
+                "type": "true_false",
+                "instructions": "Use this to toggle the overall 509 promotion.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "If Checked, the form will be displayed.",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_624e174ce4e6a",
+                "label": "Address on File Text",
+                "name": "509_address_on_file_text",
+                "type": "text",
+                "instructions": "Text displayed to users who click through from the email to send to the address we have on file for them.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_624e17a3e4e6b",
+                "label": "Address Form Completed Success Message",
+                "name": "509_address_received",
+                "type": "text",
+                "instructions": "Text displayed to users who complete the form to update their address",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_624e18a8e4e6d",
+                "label": "Promotion Ended Copy",
+                "name": "509_promotion_ended",
+                "type": "text",
+                "instructions": "Text displayed to users if they visit and the promotion has closed.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_624e17ffe4e6c",
+                "label": "Field Embed Code",
+                "name": "509_field_embed_code",
+                "type": "textarea",
+                "instructions": "Embed Code to display address update form.  From Marketo or elsewhere",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "36274"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
