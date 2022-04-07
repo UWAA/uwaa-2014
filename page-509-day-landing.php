@@ -59,16 +59,20 @@ else {
               } else {
         ?>
 
-		        <h2>Please enter your current mailing address.</h2>
+		    <h2>Please enter your current mailing address.</h2>
         
-        <?php echo get_field("509_field_embed_code") ?>
+        <?php $formID = get_field("509_field_embed_code"); 
+
+        echo sprintf('<script src="//explore.uw.edu/js/forms2/js/forms2.min.js"></script><form id="mktoForm_%s"></form><script>MktoForms2.loadForm("//explore.uw.edu", "131-AQO-225", %s);</script>', $formID, $formID);
+        
+        ?>
 
         <?php 
         }  //end else
         
         } else {
 
-          the_content();
+          echo get_field("509_promotion_ended");
           
           } ?>   
       

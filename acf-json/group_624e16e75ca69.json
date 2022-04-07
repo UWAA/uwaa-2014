@@ -82,8 +82,8 @@
             "key": "field_624e17ffe4e6c",
             "label": "Field Embed Code",
             "name": "509_field_embed_code",
-            "type": "textarea",
-            "instructions": "Embed Code to display address update form.  From Marketo or elsewhere",
+            "type": "text",
+            "instructions": "Form ID from Marketo",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -93,9 +93,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "prepend": "",
+            "append": "",
+            "maxlength": 10
         }
     ],
     "location": [
@@ -115,5 +115,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1649285743
+    "modified": 1649289824
 }
