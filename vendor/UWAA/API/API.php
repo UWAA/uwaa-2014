@@ -8,7 +8,7 @@ class API
 		$http_origin = $_SERVER['HTTP_HOST'];		
 		$isHTTPS = ($_SERVER['HTTPS'] = 'on' ? 'https' :'http');
 
-		if ($http_origin == "uwalum.test" || $http_origin == "washington.edu" || $http_origin == "uw.edu") {
+		if ($http_origin == "uwalum.local" || $http_origin == "washington.edu" || $http_origin == "uw.edu") {
 
 			header('Access-Control-Allow-Origin: '. site_url( '/', $isHTTPS). ' ');
 			header('Access-Control-Allow-Methods: GET');
