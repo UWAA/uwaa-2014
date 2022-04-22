@@ -61,11 +61,7 @@ else {
 
 		    <h2>Please enter your current mailing address.</h2>
         
-        <?php $formID = get_field("509_field_embed_code"); 
-
-        echo sprintf('<script src="//explore.uw.edu/js/forms2/js/forms2.min.js"></script><form id="mktoForm_%s"></form><script>MktoForms2.loadForm("//explore.uw.edu", "131-AQO-225", %s);</script>', $formID, $formID);
-        
-        ?>
+        <?php echo do_shortcode('[wufoo username="uwalum" formhash="p1drn85v1lrvbif" autoresize="true" height="590" header="show" ssl="true"]'); ?>
 
         <?php 
         }  //end else
