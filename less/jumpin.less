@@ -1,0 +1,115 @@
+// Jumpin.less
+
+.page-jumpin {
+
+
+    .jumpin-header{
+        .make-row();
+
+
+        .image{
+            .make-sm-column(6);
+            .hidden-sm();
+        }
+
+        .text {
+            .make-sm-column(6);
+            color: @white;
+            background-color: @purple;
+            
+            
+            h1{
+                text-transform: uppercase;
+            }
+
+            p {
+                color: @white;
+            }
+
+        }
+    }
+
+
+    .app-download {
+        .make-row();
+        background-color: @lightgold;
+
+        .app-image {
+            .make-sm-column(1);
+
+        }
+
+        .copy-block {
+            .make-sm-column(9);
+            
+            .subtitle{
+                color: @purple;
+                font-family: "Encode Sans Compressed", sans-serif;
+                text-transform: uppercase;
+            }
+
+            .copy {
+                color: @white;
+                font-family: "Open Sans", Arial, sans-serif;
+            }
+        }
+
+        .store-icons {
+            .make-sm-column(2);
+        }
+    }
+
+    .purple-social {
+        .make-row();
+        background-color: @purple;        
+    }
+
+    .uw-content{
+        .row{
+            .icon{
+                .make-sm-column(2);
+            }
+
+            .textarea {
+                .make-sm-column(10);
+
+                h2{
+                    color: @purple;
+                    font-family: "Encode Sans Compressed", sans-serif;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    color: @janegray;
+                    font-family: "Open Sans", Arial, sans-serif;
+
+                    a {
+                        color: @lightgold;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .wufoo-container{
+        background-color: @lightgold;
+        .wufoo-form-row {
+            .make-row();
+            
+
+            .form-container{
+                .container();
+
+                .form{
+                    .make-sm-column(12);
+                }
+            }
+        }
+
+    }
+
+    
+
+} //end page-jumpin

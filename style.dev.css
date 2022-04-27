@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.25.0.l1bcwi90
+ Version: 1.25.1.l2i654hx
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6325,6 +6325,16 @@ button.close {
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:before,
 .page-spring-2021-star-awards .uw-body.container:after,
+.page-jumpin .jumpin-header:before,
+.page-jumpin .jumpin-header:after,
+.page-jumpin .app-download:before,
+.page-jumpin .app-download:after,
+.page-jumpin .purple-social:before,
+.page-jumpin .purple-social:after,
+.page-jumpin .wufoo-container .wufoo-form-row:before,
+.page-jumpin .wufoo-container .wufoo-form-row:after,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:before,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6360,6 +6370,11 @@ button.close {
 .page-spring-2020-star-awards .uw-body.container:after,
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
+.page-jumpin .jumpin-header:after,
+.page-jumpin .app-download:after,
+.page-jumpin .purple-social:after,
+.page-jumpin .wufoo-container .wufoo-form-row:after,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -6423,6 +6438,16 @@ button.close {
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:before,
 .page-spring-2021-star-awards .uw-body.container:after,
+.page-jumpin .jumpin-header:before,
+.page-jumpin .jumpin-header:after,
+.page-jumpin .app-download:before,
+.page-jumpin .app-download:after,
+.page-jumpin .purple-social:before,
+.page-jumpin .purple-social:after,
+.page-jumpin .wufoo-container .wufoo-form-row:before,
+.page-jumpin .wufoo-container .wufoo-form-row:after,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:before,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6458,6 +6483,11 @@ button.close {
 .page-spring-2020-star-awards .uw-body.container:after,
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
+.page-jumpin .jumpin-header:after,
+.page-jumpin .app-download:after,
+.page-jumpin .purple-social:after,
+.page-jumpin .wufoo-container .wufoo-form-row:after,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -11951,6 +11981,405 @@ Typography
 @media only screen and (max-width: 768px) {
   .cyberweek .uw-hero-image {
     display: block;
+  }
+}
+.page-jumpin .jumpin-header {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-jumpin .jumpin-header:before,
+.page-jumpin .jumpin-header:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .jumpin-header:after {
+  clear: both;
+}
+.page-jumpin .jumpin-header:before,
+.page-jumpin .jumpin-header:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .jumpin-header:after {
+  clear: both;
+}
+.page-jumpin .jumpin-header:before,
+.page-jumpin .jumpin-header:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .jumpin-header:after {
+  clear: both;
+}
+.page-jumpin .jumpin-header:before,
+.page-jumpin .jumpin-header:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .jumpin-header:after {
+  clear: both;
+}
+.page-jumpin .jumpin-header .image {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .jumpin-header .image {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .jumpin-header .image {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-jumpin .jumpin-header .image {
+    display: none !important;
+  }
+  .page-jumpin .jumpin-header .image,
+  tr.page-jumpin .jumpin-header .image,
+  th.page-jumpin .jumpin-header .image,
+  td.page-jumpin .jumpin-header .image {
+    display: none !important;
+  }
+}
+.page-jumpin .jumpin-header .text {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #ffffff;
+  background-color: #4b2e83;
+}
+@media (min-width: 768px) {
+  .page-jumpin .jumpin-header .text {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .jumpin-header .text {
+    float: left;
+    width: 50%;
+  }
+}
+.page-jumpin .jumpin-header .text h1 {
+  text-transform: uppercase;
+}
+.page-jumpin .jumpin-header .text p {
+  color: #ffffff;
+}
+.page-jumpin .app-download {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #b7a57a;
+}
+.page-jumpin .app-download:before,
+.page-jumpin .app-download:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .app-download:after {
+  clear: both;
+}
+.page-jumpin .app-download:before,
+.page-jumpin .app-download:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .app-download:after {
+  clear: both;
+}
+.page-jumpin .app-download:before,
+.page-jumpin .app-download:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .app-download:after {
+  clear: both;
+}
+.page-jumpin .app-download:before,
+.page-jumpin .app-download:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .app-download:after {
+  clear: both;
+}
+.page-jumpin .app-download .app-image {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .app-download .app-image {
+    float: left;
+    width: 8.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .app-download .app-image {
+    float: left;
+    width: 8.33333333%;
+  }
+}
+.page-jumpin .app-download .copy-block {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .app-download .copy-block {
+    float: left;
+    width: 75%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .app-download .copy-block {
+    float: left;
+    width: 75%;
+  }
+}
+.page-jumpin .app-download .copy-block .subtitle {
+  color: #4b2e83;
+  font-family: "Encode Sans Compressed", sans-serif;
+  text-transform: uppercase;
+}
+.page-jumpin .app-download .copy-block .copy {
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.page-jumpin .app-download .store-icons {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .app-download .store-icons {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .app-download .store-icons {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+.page-jumpin .purple-social {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #4b2e83;
+}
+.page-jumpin .purple-social:before,
+.page-jumpin .purple-social:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .purple-social:after {
+  clear: both;
+}
+.page-jumpin .purple-social:before,
+.page-jumpin .purple-social:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .purple-social:after {
+  clear: both;
+}
+.page-jumpin .purple-social:before,
+.page-jumpin .purple-social:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .purple-social:after {
+  clear: both;
+}
+.page-jumpin .purple-social:before,
+.page-jumpin .purple-social:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .purple-social:after {
+  clear: both;
+}
+.page-jumpin .uw-content .row .icon {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .uw-content .row .icon {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .uw-content .row .icon {
+    float: left;
+    width: 16.66666667%;
+  }
+}
+.page-jumpin .uw-content .row .textarea {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .uw-content .row .textarea {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .uw-content .row .textarea {
+    float: left;
+    width: 83.33333333%;
+  }
+}
+.page-jumpin .uw-content .row .textarea h2 {
+  color: #4b2e83;
+  font-family: "Encode Sans Compressed", sans-serif;
+  text-transform: uppercase;
+}
+.page-jumpin .uw-content .row .textarea p {
+  color: #3d3d3d;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+.page-jumpin .uw-content .row .textarea p a {
+  color: #b7a57a;
+  text-transform: uppercase;
+}
+.page-jumpin .wufoo-container {
+  background-color: #b7a57a;
+}
+.page-jumpin .wufoo-container .wufoo-form-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:before,
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  clear: both;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:before,
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  clear: both;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:before,
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  clear: both;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:before,
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row:after {
+  clear: both;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:before,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  clear: both;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:before,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  clear: both;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:before,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  clear: both;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:before,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  content: " ";
+  display: table;
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  .page-jumpin .wufoo-container .wufoo-form-row .form-container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .page-jumpin .wufoo-container .wufoo-form-row .form-container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-jumpin .wufoo-container .wufoo-form-row .form-container {
+    width: 1170px;
+  }
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container > .navbar-header,
+.page-jumpin .wufoo-container .wufoo-form-row .form-container > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .wufoo-container .wufoo-form-row .form-container > .navbar-header,
+  .page-jumpin .wufoo-container .wufoo-form-row .form-container > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+.page-jumpin .wufoo-container .wufoo-form-row .form-container .form {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .wufoo-container .wufoo-form-row .form-container .form {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .wufoo-container .wufoo-form-row .form-container .form {
+    float: left;
+    width: 100%;
   }
 }
 .page-alwayslearning p {
