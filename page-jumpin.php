@@ -106,12 +106,10 @@ get_header();
                     <?php 
                       echo $copyBlock;
                       
-                      if( $link ): ?>
+                      if( $linkURL ): ?>
                         <a href="<?php echo esc_url( $linkURL ); ?>"><?php echo $linkText; ?></a>
                       <?php endif; ?>
-                    
-                    ?>
-                    
+                      
                   </p>
 
                 </div>
