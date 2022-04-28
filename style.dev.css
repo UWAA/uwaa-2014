@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.25.1.l2i654hx
+ Version: 1.25.1.l2i7p0tg
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -11983,9 +11983,20 @@ Typography
     display: block;
   }
 }
+.page-jumpin {
+  font-size: 14px;
+}
+.page-jumpin .purple-background {
+  background-color: #4b2e83;
+}
+.page-jumpin .gold-background {
+  background-color: #b7a57a;
+}
 .page-jumpin .jumpin-header {
   margin-left: -15px;
   margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .page-jumpin .jumpin-header:before,
 .page-jumpin .jumpin-header:after {
@@ -12024,18 +12035,7 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .page-jumpin .jumpin-header .image {
-    float: left;
-    width: 50%;
-  }
-}
-@media (min-width: 768px) {
-  .page-jumpin .jumpin-header .image {
-    float: left;
-    width: 50%;
-  }
+  padding: 0;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .page-jumpin .jumpin-header .image {
@@ -12048,21 +12048,62 @@ Typography
     display: none !important;
   }
 }
+@media (max-width: 767px) {
+  .page-jumpin .jumpin-header .image {
+    display: none !important;
+  }
+  .page-jumpin .jumpin-header .image,
+  tr.page-jumpin .jumpin-header .image,
+  th.page-jumpin .jumpin-header .image,
+  td.page-jumpin .jumpin-header .image {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .page-jumpin .jumpin-header .image {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .page-jumpin .jumpin-header .image {
+    float: left;
+    width: 50%;
+  }
+}
+.page-jumpin .jumpin-header .image img {
+  height: 50vw;
+  width: auto;
+}
 .page-jumpin .jumpin-header .text {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  height: 50vw;
+  padding: 50px;
   color: #ffffff;
   background-color: #4b2e83;
 }
 @media (min-width: 768px) {
   .page-jumpin .jumpin-header .text {
     float: left;
-    width: 50%;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
+  .page-jumpin .jumpin-header .text {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .page-jumpin .jumpin-header .text {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
   .page-jumpin .jumpin-header .text {
     float: left;
     width: 50%;
@@ -12070,9 +12111,13 @@ Typography
 }
 .page-jumpin .jumpin-header .text h1 {
   text-transform: uppercase;
+  font-weight: 900;
+  font-size: 8em;
 }
 .page-jumpin .jumpin-header .text p {
   color: #ffffff;
+  font-size: 3em;
+  line-height: 1.4;
 }
 .page-jumpin .app-download {
   margin-left: -15px;
@@ -12116,17 +12161,19 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  height: 0;
+  padding-top: 10px;
 }
 @media (min-width: 768px) {
   .page-jumpin .app-download .app-image {
     float: left;
-    width: 8.33333333%;
+    width: 25%;
   }
 }
 @media (min-width: 768px) {
   .page-jumpin .app-download .app-image {
     float: left;
-    width: 8.33333333%;
+    width: 25%;
   }
 }
 .page-jumpin .app-download .copy-block {
@@ -12138,23 +12185,28 @@ Typography
 @media (min-width: 768px) {
   .page-jumpin .app-download .copy-block {
     float: left;
-    width: 75%;
+    width: 41.66666667%;
   }
 }
 @media (min-width: 768px) {
   .page-jumpin .app-download .copy-block {
     float: left;
-    width: 75%;
+    width: 41.66666667%;
   }
 }
 .page-jumpin .app-download .copy-block .subtitle {
+  margin: 0;
   color: #4b2e83;
   font-family: "Encode Sans Compressed", sans-serif;
   text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3em;
 }
 .page-jumpin .app-download .copy-block .copy {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
+  font-size: 2em;
+  line-height: .8;
 }
 .page-jumpin .app-download .store-icons {
   position: relative;
@@ -12165,19 +12217,45 @@ Typography
 @media (min-width: 768px) {
   .page-jumpin .app-download .store-icons {
     float: left;
-    width: 16.66666667%;
+    width: 33.33333333%;
   }
 }
 @media (min-width: 768px) {
   .page-jumpin .app-download .store-icons {
     float: left;
-    width: 16.66666667%;
+    width: 33.33333333%;
   }
+}
+.page-jumpin .app-download .store-icons ul {
+  padding: 20px 0;
+}
+.page-jumpin .app-download .store-icons ul li {
+  list-style: none;
+  display: block;
+  padding: 5px 0;
+  margin-bottom: 0;
+}
+.page-jumpin .app-download .store-icons ul li a {
+  color: #fff;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+  padding: 20px 20px;
+  width: 100%;
+}
+.page-jumpin .app-download .store-icons ul li a.apple {
+  background: no-repeat center / contain url('assets/jumpin/App_Store_Apple.png');
+}
+.page-jumpin .app-download .store-icons ul li a.android {
+  background: no-repeat center / contain url('assets/jumpin/App_Store_Android.png');
 }
 .page-jumpin .purple-social {
   margin-left: -15px;
   margin-right: -15px;
   background-color: #4b2e83;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .page-jumpin .purple-social:before,
 .page-jumpin .purple-social:after {
@@ -12210,55 +12288,132 @@ Typography
 }
 .page-jumpin .purple-social:after {
   clear: both;
+}
+.page-jumpin .purple-social .follow-text {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .purple-social .follow-text {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .purple-social .follow-text {
+    float: left;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .purple-social .follow-text {
+    margin-left: 41.66666667%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .purple-social .follow-text {
+    margin-left: 41.66666667%;
+  }
+}
+.page-jumpin .purple-social .follow-text p {
+  text-align: right;
+  margin: 0;
+  color: #ffffff;
+  font-family: "Encode Sans Compressed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3em;
+}
+.page-jumpin .purple-social .social-icons {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-jumpin .purple-social .social-icons {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .page-jumpin .purple-social .social-icons {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.page-jumpin .purple-social .social-icons ul {
+  padding: 20px 0;
+}
+.page-jumpin .purple-social .social-icons ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 0;
+  margin-bottom: 0;
+}
+.page-jumpin .purple-social .social-icons ul li a {
+  color: #fff;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+  padding: 20px 20px;
+  width: 100%;
+  background-size: contain;
+}
+.page-jumpin .purple-social .social-icons ul li a.instagram {
+  background: no-repeat center / contain url('assets/jumpin/Instagram_Icon.png');
+}
+.page-jumpin .purple-social .social-icons ul li a.twitter {
+  background: no-repeat center / contain url('assets/jumpin/Twitter_Icon.png');
+}
+.page-jumpin .purple-social .social-icons ul li a.facebook {
+  background: no-repeat center / contain url('assets/jumpin/Facebook_Icon.png');
+}
+.page-jumpin .purple-social .social-icons ul li a.linkedin {
+  background: no-repeat center / contain url('assets/jumpin/Linkedin_Icon.png');
+}
+.page-jumpin .uw-content {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.page-jumpin .uw-content .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .page-jumpin .uw-content .row .icon {
   position: relative;
+  float: left;
+  width: 33.33333333%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .page-jumpin .uw-content .row .icon {
-    float: left;
-    width: 16.66666667%;
-  }
-}
-@media (min-width: 768px) {
-  .page-jumpin .uw-content .row .icon {
-    float: left;
-    width: 16.66666667%;
-  }
 }
 .page-jumpin .uw-content .row .textarea {
   position: relative;
+  float: left;
+  width: 66.66666667%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .page-jumpin .uw-content .row .textarea {
-    float: left;
-    width: 83.33333333%;
-  }
-}
-@media (min-width: 768px) {
-  .page-jumpin .uw-content .row .textarea {
-    float: left;
-    width: 83.33333333%;
-  }
 }
 .page-jumpin .uw-content .row .textarea h2 {
   color: #4b2e83;
   font-family: "Encode Sans Compressed", sans-serif;
   text-transform: uppercase;
+  font-size: 4em;
 }
 .page-jumpin .uw-content .row .textarea p {
   color: #3d3d3d;
   font-family: "Open Sans", Arial, sans-serif;
+  font-size: 2em;
 }
 .page-jumpin .uw-content .row .textarea p a {
   color: #b7a57a;
   text-transform: uppercase;
+  font-weight: 900;
 }
 .page-jumpin .wufoo-container {
   background-color: #b7a57a;

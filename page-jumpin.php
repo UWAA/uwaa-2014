@@ -9,7 +9,8 @@ get_header();
 
 <!-- Header - ACF field for side image, ACF field for header text content -->
 
-<div class="jumpin-header">
+
+<div class="jumpin-header no-gutters">
     <div class="image">
       <?php 
 
@@ -28,43 +29,72 @@ get_header();
 </div>
 
 
+<div class="container-fluid gold-background">
+  <div class="row">
+
+    <div class="container">
+
+      <div class="app-download gold-background">
+            <!-- Gold download app row -->
+            <div class="app-image">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/jumpin/Phone_Icon.png" alt="Smartphone">
+            </div>
+            <div class="copy-block">
+              <p class="subtitle"><?php the_field('app_download_row_subtitle') ?></p>
+              <p class="copy"><?php the_field('app_download_row_copy') ?></p>
+            </div>
+            <div class="store-icons">
+              <ul class="app-store-icons">
+                <li ><a class="store-icon apple" href="">apple</a></li>
+                <li ><a class="store-icon android" href="">android</a></li>
+              </ul>
+            </div>
+        </div>
+
+          </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid purple-background">
+  <div class="row">
+
+    <div class="container">
+
+        <div class="purple-social">
+            <!-- Purple social  -->
+            <div class="follow-text">
+              <p>follow us</p>
+            </div>
+            <div class="social-icons">            >
+              <ul>
+              <li>
+                <a class="instagram" href="">Instagram</a>
+              </li>
+              <li>
+                <a class="twitter" href="">Twitter</a>
+              </li>
+              <li>
+                <a class="facebook" href="">facebook</a>
+              </li>
+              <li>
+                <a class="linkedin" href="">linkedin</a>
+              </li>
+            </ul>
+            </div>
+        </div>
+
+
+      </div>
+      </div>
+      </div>
+
+  
+
+
 <div class="container uw-body">
 
-  <div class="app-download gold-background">
-      <!-- Gold download app row -->
-      <div class="app-image"></div>
-      <div class="copy-block">
-        <p class="subtitle"><?php the_field('app_download_row_subtitle') ?></p>
-        <p class="copy"><?php the_field('app_download_row_copy') ?></p>
-      </div>
-      <div class="store-icons">
-        <ul class="app-store-icons">
-          <li class="store-icon apple"><a href="">apple</a></li>
-          <li class="store-icon android"><a href="">android</a></li>
-        </ul>
-      </div>
-  </div>
-
-  <div class="purple-social">
-      <!-- Purple social  -->
-      <div class="follow-text">
-        <p>follow us</p>
-      </div>
-      <ul class="social-icons">
-        <li>
-          <a class="instagram" href="">Instagram</a>
-        </li>
-        <li>
-          <a class="twitter" href="">Twitter</a>
-        </li>
-        <li>
-          <a class="facebook" href="">facebook</a>
-        </li>
-        <li>
-          <a class="linkedin" href="">linkedin</a>
-        </li>
-      </ul>
-  </div>
+ 
 
   <div class="row">
 
@@ -109,7 +139,7 @@ get_header();
                       if( $linkURL ): ?>
                         <a href="<?php echo esc_url( $linkURL ); ?>"><?php echo $linkText; ?></a>
                       <?php endif; ?>
-                      
+
                   </p>
 
                 </div>

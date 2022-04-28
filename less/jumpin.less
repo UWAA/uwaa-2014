@@ -1,91 +1,237 @@
 // Jumpin.less
+@row-height: 50vw;
 
 .page-jumpin {
+    font-size: 14px;
+
+    .purple-background {
+        background-color: @purple;
+    }
+
+    .gold-background {
+        background-color: @lightgold;
+    }
 
 
     .jumpin-header{
         .make-row();
+         display: flex;
+        flex-wrap: wrap;
 
 
         .image{
-            .make-sm-column(6);
-            .hidden-sm();
+            .hidden-sm;            
+            .hidden-xs;
+            .make-md-column(6);
+            // .hidden-sm();            
+            padding: 0;
+            
+            
+            img {                
+                height: @row-height;           
+                width: auto;
+            }
         }
 
         .text {
-            .make-sm-column(6);
+            .make-sm-column(12);  
+            .make-md-column(6);                      
+            height: @row-height;           
+            padding: 50px;            
             color: @white;
             background-color: @purple;
             
             
             h1{
                 text-transform: uppercase;
+                font-weight: 900;
+                font-size: 8em;
+
             }
 
             p {
                 color: @white;
+                font-size: 3em;
+                line-height: 1.4;
             }
 
         }
     }
 
+    // background: url(assets/uwaa-sprite.svg
 
     .app-download {
         .make-row();
         background-color: @lightgold;
 
         .app-image {
-            .make-sm-column(1);
+            .make-sm-column(3);
+            height: 0;
+            padding-top: 10px;
+
+            // when xs viewport - remove height;
 
         }
 
         .copy-block {
-            .make-sm-column(9);
+            .make-sm-column(5);
             
             .subtitle{
+                margin: 0;                
                 color: @purple;
                 font-family: "Encode Sans Compressed", sans-serif;
                 text-transform: uppercase;
+                font-weight: 900;
+                font-size: 3em;
             }
 
             .copy {
                 color: @white;
                 font-family: "Open Sans", Arial, sans-serif;
+                font-size: 2em;
+                line-height: .8;
             }
         }
 
         .store-icons {
-            .make-sm-column(2);
+            .make-sm-column(4);            
+
+            ul{
+                padding: 20px 0;
+                li{
+                    list-style: none;
+                    display: block;
+                    padding: 5px 0;
+                    margin-bottom: 0;
+
+                    a {
+                        color: #fff;
+                        text-indent: -9999px;
+                        overflow: hidden;
+                        display: block;
+                        padding: 20px 20px;
+                        width: 100%;                        
+
+                        &.apple {
+                           background: no-repeat center/contain url('assets/jumpin/App_Store_Apple.png');
+                        }
+
+                        &.android {
+                           background: no-repeat center/contain url('assets/jumpin/App_Store_Android.png');
+                        }
+
+                        
+                    }
+                }
+            }
         }
     }
 
     .purple-social {
         .make-row();
-        background-color: @purple;        
+        background-color: @purple;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .follow-text {
+            .make-sm-column(3);
+            .make-sm-column-offset(5);
+
+            p{
+                text-align: right;
+                margin: 0;                
+                color: @white;
+                font-family: "Encode Sans Compressed", sans-serif;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 3em;  
+            }
+        }
+
+
+        .social-icons{
+            .make-sm-column(4);
+
+            ul{
+            padding: 20px 0;
+
+            li{
+                list-style: none;
+                display: inline-block;
+                padding: 5px 0;
+                margin-bottom: 0;
+
+                a {
+                        color: #fff;
+                        text-indent: -9999px;
+                        overflow: hidden;
+                        display: block;
+                        padding: 20px 20px;
+                        width: 100%;
+                        background-size: contain;
+
+                        &.instagram {
+                           background: no-repeat center/contain url('assets/jumpin/Instagram_Icon.png');
+                        }
+
+                        &.twitter {
+                           background: no-repeat center/contain url('assets/jumpin/Twitter_Icon.png');
+                        }
+
+                        &.facebook {
+                           background: no-repeat center/contain url('assets/jumpin/Facebook_Icon.png');
+                        }
+
+                        &.linkedin {
+                           background: no-repeat center/contain url('assets/jumpin/Linkedin_Icon.png');
+                        }
+
+                        
+
+                        
+                    }
+
+            }
+            }
+
+        }
+
+        
     }
 
     .uw-content{
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+
         .row{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
             .icon{
-                .make-sm-column(2);
+                .make-xs-column(4);
             }
 
             .textarea {
-                .make-sm-column(10);
+                .make-xs-column(8);
 
                 h2{
                     color: @purple;
                     font-family: "Encode Sans Compressed", sans-serif;
                     text-transform: uppercase;
+                    font-size:4em;
                 }
 
                 p {
                     color: @janegray;
                     font-family: "Open Sans", Arial, sans-serif;
+                    font-size: 2em;
 
                     a {
                         color: @lightgold;
                         text-transform: uppercase;
+                        font-weight: 900;
                     }
                 }
 
