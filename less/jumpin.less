@@ -15,7 +15,9 @@
     .jumpin-header{
         .make-row();
          display: flex;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;
+        background-color: @purple;
+        align-items: center;
 
 
         .image{
@@ -26,8 +28,12 @@
             padding: 0;
             
             
+            
             img {                
-                .img-responsive;
+                object-fit: cover;
+                height: auto;
+                object-position: center center;
+                width: auto;
             }
         }
 
@@ -51,6 +57,7 @@
                 text-transform: uppercase;
                 font-weight: 900;
                 font-size: 3.5em;
+                margin: 0;
 
             }
 
@@ -58,6 +65,7 @@
                 color: @white;
                 font-size: 1.5em;
                 line-height: 1.5;
+                margin-bottom: 0;
             }
 
         }
@@ -68,11 +76,14 @@
     .app-download {
         .make-row();
         background-color: @lightgold;
+         display: flex;
+        flex-wrap: wrap;
+        align-items: center;
 
         .app-image {
             .make-sm-column(3);
             height: 0;
-            padding-top: 10px;
+            align-self:baseline;
 
             // when xs viewport - remove height;
 
@@ -87,14 +98,15 @@
                 font-family: "Encode Sans Wide", sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
-                font-size: 2.5em;
+                font-size: 2em;
+                line-height: 1em;;
             }
 
             .copy {
                 color: @white;
                 font-family: "Open Sans", Arial, sans-serif;
                 font-size: 1.5em;
-                line-height: .8;
+                line-height: 1;
                 padding-right: 5%;
             }
         }
@@ -103,7 +115,7 @@
             .make-sm-column(3);            
 
             ul{
-                padding: 20px 0;
+                padding: 10px 0;
                 li{
                     list-style: none;
                     display: block;
@@ -115,7 +127,7 @@
                         text-indent: -9999px;
                         overflow: hidden;
                         display: block;
-                        padding: 20px 20px;
+                        padding: 10px 10px;
                         width: 100%;                        
 
                         &.apple {
@@ -138,7 +150,7 @@
         background-color: @purple;
         display: flex;
         flex-wrap: wrap;
-        align-items: top;
+        align-items: center;
 
         .follow-text {
             .make-sm-column(4);
@@ -151,7 +163,7 @@
                 font-family: "Encode Sans Wide", sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
-                font-size: 2.5em;  
+                font-size: 2em;  
             }
         }
 

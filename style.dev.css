@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.25.1.l2jjcic3
+ Version: 1.25.1.l2ii5yw1
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9637,6 +9637,9 @@ div.map-logo.michigan {
   /* Borders */
   /* Typography */
 }
+.wufoo body {
+  background-color: transparent;
+}
 .wufoo .focused {
   background: #4b2e83;
 }
@@ -11994,6 +11997,8 @@ Typography
   margin-right: -15px;
   display: flex;
   flex-wrap: wrap;
+  background-color: #4b2e83;
+  align-items: center;
 }
 .page-jumpin .jumpin-header:before,
 .page-jumpin .jumpin-header:after {
@@ -12069,10 +12074,10 @@ Typography
   }
 }
 .page-jumpin .jumpin-header .image img {
-  width: 100% \9;
-  display: block;
-  max-width: 100%;
+  object-fit: cover;
   height: auto;
+  object-position: center center;
+  width: auto;
 }
 .page-jumpin .jumpin-header .text {
   position: relative;
@@ -12117,16 +12122,21 @@ Typography
   text-transform: uppercase;
   font-weight: 900;
   font-size: 3.5em;
+  margin: 0;
 }
 .page-jumpin .jumpin-header .text p {
   color: #ffffff;
   font-size: 1.5em;
   line-height: 1.5;
+  margin-bottom: 0;
 }
 .page-jumpin .app-download {
   margin-left: -15px;
   margin-right: -15px;
   background-color: #b7a57a;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .page-jumpin .app-download:before,
 .page-jumpin .app-download:after {
@@ -12166,7 +12176,7 @@ Typography
   padding-left: 15px;
   padding-right: 15px;
   height: 0;
-  padding-top: 10px;
+  align-self: baseline;
 }
 @media (min-width: 768px) {
   .page-jumpin .app-download .app-image {
@@ -12204,13 +12214,14 @@ Typography
   font-family: "Encode Sans Wide", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 2.5em;
+  font-size: 2em;
+  line-height: 1em;
 }
 .page-jumpin .app-download .copy-block .copy {
   color: #ffffff;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1.5em;
-  line-height: .8;
+  line-height: 1;
   padding-right: 5%;
 }
 .page-jumpin .app-download .store-icons {
@@ -12232,7 +12243,7 @@ Typography
   }
 }
 .page-jumpin .app-download .store-icons ul {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .page-jumpin .app-download .store-icons ul li {
   list-style: none;
@@ -12245,7 +12256,7 @@ Typography
   text-indent: -9999px;
   overflow: hidden;
   display: block;
-  padding: 20px 20px;
+  padding: 10px 10px;
   width: 100%;
 }
 .page-jumpin .app-download .store-icons ul li a.apple {
@@ -12260,7 +12271,7 @@ Typography
   background-color: #4b2e83;
   display: flex;
   flex-wrap: wrap;
-  align-items: top;
+  align-items: center;
 }
 .page-jumpin .purple-social:before,
 .page-jumpin .purple-social:after {
@@ -12329,7 +12340,7 @@ Typography
   font-family: "Encode Sans Wide", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 .page-jumpin .purple-social .social-icons {
   position: relative;
