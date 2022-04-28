@@ -91,81 +91,86 @@ get_header();
 
   
 
+<div class="overlay-container container-fluid">
+  <div class="overlay-row row">  
 
-<div class="container uw-body">
-
- 
-
-  <div class="row">
-
-    <div class="col-md-12 uw-content" role='main'>
-
-    <!-- ACF repeater field, two values, image and text -->
-      <?php 
-          // Check rows exists.
-      if( have_rows('blocks') ):
-
-          // Loop through rows.
-          while( have_rows('blocks') ) : the_row();
-
-              // Load sub field value.
-              $image = get_sub_field('icon_image');
-              $subTitle = get_sub_field('subtitle');
-              $copyBlock = get_sub_field('copy_block');
-              $linkText = get_sub_field('link_text');
-              $linkURL = get_sub_field('link');
-                      
-              // Do something...
-
-              ?>
-
-              <!-- Template -->
-
-              <div class="row">
-                <div class="icon">
-                  <?php               
-                    $size = 'full'; // (thumbnail, medium, large, full or custom size)
-                      if( $image ) {
-                        echo wp_get_attachment_image( $image, $size );
-                    }
-                  ?>
-                </div>
-                <div class="textarea">
-                  <h2><?php echo $subTitle ?></h2>
-                  <p>
-                    <?php 
-                      echo $copyBlock;
-                      
-                      if( $linkURL ): ?>
-                        <a href="<?php echo esc_url( $linkURL ); ?>"><?php echo $linkText; ?></a>
-                      <?php endif; ?>
-
-                  </p>
-
-                </div>
-              </div>
-
-              <?php
-
-          // End loop.
-          endwhile;
-
-      // No value.
-      else :
-          // Do something...
-      endif;
-
-      ?>
-
-    </div>
+    <div class="container uw-body">
 
     
 
-  </div>
+      <div class="row">
 
-  
+        <div class="col-md-12 uw-content" role='main'>
 
-</div>
+        <!-- ACF repeater field, two values, image and text -->
+          <?php 
+              // Check rows exists.
+          if( have_rows('blocks') ):
+
+              // Loop through rows.
+              while( have_rows('blocks') ) : the_row();
+
+                  // Load sub field value.
+                  $image = get_sub_field('icon_image');
+                  $subTitle = get_sub_field('subtitle');
+                  $copyBlock = get_sub_field('copy_block');
+                  $linkText = get_sub_field('link_text');
+                  $linkURL = get_sub_field('link');
+                          
+                  // Do something...
+
+                  ?>
+
+                  <!-- Template -->
+
+                  <div class="row">
+                    <div class="icon">
+                      <?php               
+                        $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                          if( $image ) {
+                            echo wp_get_attachment_image( $image, $size );
+                        }
+                      ?>
+                    </div>
+                    <div class="textarea">
+                      <h2><?php echo $subTitle ?></h2>
+                      <p>
+                        <?php 
+                          echo $copyBlock;
+                          
+                          if( $linkURL ): ?>
+                            <a href="<?php echo esc_url( $linkURL ); ?>"><?php echo $linkText; ?></a>
+                          <?php endif; ?>
+
+                      </p>
+
+                    </div>
+                  </div>
+
+                  <?php
+
+              // End loop.
+              endwhile;
+
+          // No value.
+          else :
+              // Do something...
+          endif;
+
+          ?>
+
+        </div>
+
+        
+
+      </div>
+
+      
+
+    </div>
+
+</div> <!-- overlay row -->
+</div> <!-- overlay fluid-container -->
 
 <div class="container-fluid wufoo-container">
   <div class="wufoo-form-row">

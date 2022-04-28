@@ -2,7 +2,7 @@
 @row-height: 50vw;
 
 .page-jumpin {
-    font-size: 14px;
+    font-size: 12px;
 
     .purple-background {
         background-color: @purple;
@@ -16,7 +16,7 @@
     .jumpin-header{
         .make-row();
          display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap;        
 
 
         .image{
@@ -39,10 +39,18 @@
             height: @row-height;           
             padding: 50px;            
             color: @white;
-            background-color: @purple;
+            background-color: @purple;            
+            background-image: url('assets/jumpin/Icon_Pattern_Upper_Right.png');
+            background-repeat: no-repeat;
+            background-size:50% 50%;            
+            background-position: top right;                
+            background-blend-mode: screen;           
+
+            
             
             
             h1{
+                font-family: "Encode Sans Wide", sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
                 font-size: 8em;
@@ -52,7 +60,7 @@
             p {
                 color: @white;
                 font-size: 3em;
-                line-height: 1.4;
+                line-height: 2;
             }
 
         }
@@ -74,15 +82,15 @@
         }
 
         .copy-block {
-            .make-sm-column(5);
+            .make-sm-column(6);
             
             .subtitle{
                 margin: 0;                
                 color: @purple;
-                font-family: "Encode Sans Compressed", sans-serif;
+                font-family: "Encode Sans Wide", sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
-                font-size: 3em;
+                font-size: 3.5em;
             }
 
             .copy {
@@ -94,7 +102,7 @@
         }
 
         .store-icons {
-            .make-sm-column(4);            
+            .make-sm-column(3);            
 
             ul{
                 padding: 20px 0;
@@ -132,42 +140,46 @@
         background-color: @purple;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: top;
 
         .follow-text {
-            .make-sm-column(3);
+            .make-sm-column(4);
             .make-sm-column-offset(5);
 
             p{
                 text-align: right;
                 margin: 0;                
-                color: @white;
-                font-family: "Encode Sans Compressed", sans-serif;
+                color: @lightgold;
+                font-family: "Encode Sans Wide", sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
-                font-size: 3em;  
+                font-size: 3.5em;  
             }
         }
 
 
         .social-icons{
-            .make-sm-column(4);
+            .make-sm-column(3);
+            text-align: center;
 
-            ul{
-            padding: 20px 0;
+            ul{            
+                padding-left: 0;
+                margin-top: -15px;
+                margin-bottom: 0;
 
             li{
                 list-style: none;
                 display: inline-block;
-                padding: 5px 0;
+                padding:0;
                 margin-bottom: 0;
+                margin-right: 5px;
 
                 a {
                         color: #fff;
                         text-indent: -9999px;
                         overflow: hidden;
                         display: block;
-                        padding: 20px 20px;
+                        padding: 20px;
                         width: 100%;
                         background-size: contain;
 
@@ -200,9 +212,33 @@
         
     }
 
+    .overlay-container {
+
+        background-image: url('assets/jumpin/Icon_Pattern_Upper_Right.png');        
+        background-size:25% auto;            
+        background-position: top right;
+        background-repeat: no-repeat;                
+        
+        
+        .overlay-row {        
+            background-image: url('assets/jumpin/Icon_Pattern_Lower_Left.png');            
+            background-repeat: no-repeat;
+            background-position: bottom left;            
+            background-size: 25% auto;
+            
+        }
+        
+
+    }
+
+    .uw-body{
+        background-color: transparent;
+    }
+
     .uw-content{
         padding-top: 5vh;
         padding-bottom: 5vh;
+        background-color: transparent;
 
         .row{
             display: flex;
@@ -218,7 +254,7 @@
 
                 h2{
                     color: @purple;
-                    font-family: "Encode Sans Compressed", sans-serif;
+                    font-family: "Encode Sans Wide", sans-serif;
                     text-transform: uppercase;
                     font-size:4em;
                 }
@@ -227,6 +263,7 @@
                     color: @janegray;
                     font-family: "Open Sans", Arial, sans-serif;
                     font-size: 2em;
+                    padding-right: 15px;
 
                     a {
                         color: @lightgold;
