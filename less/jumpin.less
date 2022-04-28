@@ -1,5 +1,4 @@
 // Jumpin.less
-@row-height: 50vw;
 
 .page-jumpin {
     // font base 10px
@@ -28,15 +27,13 @@
             
             
             img {                
-                height: @row-height;           
-                width: auto;
+                .img-responsive;
             }
         }
 
         .text {
             .make-sm-column(12);  
-            .make-md-column(6);                      
-            height: @row-height;           
+            .make-md-column(6);     
             padding: 50px;            
             color: @white;
             background-color: @purple;            
@@ -53,14 +50,14 @@
                 font-family: "Encode Sans Wide", sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
-                font-size: 6em;
+                font-size: 3.5em;
 
             }
 
             p {
                 color: @white;
-                font-size: 2.5em;
-                line-height: 2;
+                font-size: 1.5em;
+                line-height: 1.5;
             }
 
         }
@@ -251,7 +248,7 @@
                 text-align: center;
 
                 img {
-                    max-width: 75%;
+                    max-width: 50%;
                 }
 
 
@@ -264,13 +261,13 @@
                     color: @purple;
                     font-family: "Encode Sans Wide", sans-serif;
                     text-transform: uppercase;
-                    font-size:3.25em;
+                    font-size:2.2em;
                 }
 
                 p {
                     color: @janegray;
                     font-family: "Open Sans", Arial, sans-serif;
-                    font-size: 1.5em;
+                    font-size: 1.1em;
                     padding-right: 15px;
 
                     a {

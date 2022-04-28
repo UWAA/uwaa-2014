@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.25.1.l2ik5fw9
+ Version: 1.25.1.l2jbj58i
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -12069,15 +12069,16 @@ Typography
   }
 }
 .page-jumpin .jumpin-header .image img {
-  height: 50vw;
-  width: auto;
+  width: 100% \9;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .page-jumpin .jumpin-header .text {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 50vw;
   padding: 50px;
   color: #ffffff;
   background-color: #4b2e83;
@@ -12115,12 +12116,12 @@ Typography
   font-family: "Encode Sans Wide", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 6em;
+  font-size: 3.5em;
 }
 .page-jumpin .jumpin-header .text p {
   color: #ffffff;
-  font-size: 2.5em;
-  line-height: 2;
+  font-size: 1.5em;
+  line-height: 1.5;
 }
 .page-jumpin .app-download {
   margin-left: -15px;
@@ -12417,7 +12418,7 @@ Typography
   text-align: center;
 }
 .page-jumpin .uw-content .row .icon img {
-  max-width: 75%;
+  max-width: 50%;
 }
 .page-jumpin .uw-content .row .textarea {
   position: relative;
@@ -12431,12 +12432,12 @@ Typography
   color: #4b2e83;
   font-family: "Encode Sans Wide", sans-serif;
   text-transform: uppercase;
-  font-size: 3.25em;
+  font-size: 2.2em;
 }
 .page-jumpin .uw-content .row .textarea p {
   color: #3d3d3d;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   padding-right: 15px;
 }
 .page-jumpin .uw-content .row .textarea p a {
