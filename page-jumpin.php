@@ -45,8 +45,8 @@ get_header();
             </div>
             <div class="store-icons">
               <ul class="app-store-icons">
-                <li ><a class="store-icon apple" href="">apple</a></li>
-                <li ><a class="store-icon android" href="">android</a></li>
+                <li ><a class="store-icon apple" href="https://apps.apple.com/us/app/uw-alumni-association/id682824301">apple</a></li>
+                <li ><a class="store-icon android" href="https://play.google.com/store/apps/details?id=edu.uw.uwaa">android</a></li>
               </ul>
             </div>
         </div>
@@ -69,16 +69,16 @@ get_header();
             <div class="social-icons">            >
               <ul>
               <li>
-                <a class="instagram" href="">Instagram</a>
+                <a class="instagram" href="http://instagram.com/uwalum">Instagram</a>
               </li>
               <li>
-                <a class="twitter" href="">Twitter</a>
+                <a class="twitter" href="https://www.twitter.com/UWalum">Twitter</a>
               </li>
               <li>
-                <a class="facebook" href="">facebook</a>
+                <a class="facebook" href="https://www.facebook.com/UWalum">facebook</a>
               </li>
               <li>
-                <a class="linkedin" href="">linkedin</a>
+                <a class="linkedin" href="https://www.linkedin.com/groups?gid=40422">linkedin</a>
               </li>
             </ul>
             </div>
