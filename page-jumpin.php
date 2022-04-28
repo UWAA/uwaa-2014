@@ -66,7 +66,7 @@ get_header();
             <div class="follow-text">
               <p>follow us</p>
             </div>
-            <div class="social-icons">            >
+            <div class="social-icons">
               <ul>
               <li>
                 <a class="instagram" href="http://instagram.com/uwalum">Instagram</a>

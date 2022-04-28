@@ -87,6 +87,10 @@
 
             // when xs viewport - remove height;
 
+            img{
+                object-fit: contain;
+            }
+
         }
 
         .copy-block {
@@ -153,8 +157,8 @@
         align-items: center;
 
         .follow-text {
-            .make-sm-column(4);
-            .make-sm-column-offset(5);
+            .make-sm-column(5);
+            .make-sm-column-offset(4);
 
             p{
                 text-align: right;
@@ -173,15 +177,14 @@
             text-align: center;
 
             ul{            
-                padding-left: 0;
-                margin-top: -25px;
+                padding-left: 0;                
                 margin-bottom: 0;
 
             li{
                 list-style: none;
-                display: inline-block;
+                display: inline-flex;
                 padding:0;
-                margin-bottom: 0;
+                margin: 0;
                 margin-right: 5px;
 
                 a {
@@ -189,7 +192,7 @@
                         text-indent: -9999px;
                         overflow: hidden;
                         display: block;
-                        padding: 20px;
+                        padding: 15px;
                         width: 100%;
                         background-size: contain;
 

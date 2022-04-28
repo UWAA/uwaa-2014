@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.25.1.l2ii5yw1
+ Version: 1.25.1.l2jl175g
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9637,6 +9637,7 @@ div.map-logo.michigan {
   /* Borders */
   /* Typography */
 }
+.wufoo .img-thumbnail,
 .wufoo body {
   background-color: transparent;
 }
@@ -12190,6 +12191,9 @@ Typography
     width: 25%;
   }
 }
+.page-jumpin .app-download .app-image img {
+  object-fit: contain;
+}
 .page-jumpin .app-download .copy-block {
   position: relative;
   min-height: 1px;
@@ -12314,23 +12318,23 @@ Typography
 @media (min-width: 768px) {
   .page-jumpin .purple-social .follow-text {
     float: left;
-    width: 33.33333333%;
+    width: 41.66666667%;
   }
 }
 @media (min-width: 768px) {
   .page-jumpin .purple-social .follow-text {
     float: left;
-    width: 33.33333333%;
+    width: 41.66666667%;
   }
 }
 @media (min-width: 768px) {
   .page-jumpin .purple-social .follow-text {
-    margin-left: 41.66666667%;
+    margin-left: 33.33333333%;
   }
 }
 @media (min-width: 768px) {
   .page-jumpin .purple-social .follow-text {
-    margin-left: 41.66666667%;
+    margin-left: 33.33333333%;
   }
 }
 .page-jumpin .purple-social .follow-text p {
@@ -12363,14 +12367,13 @@ Typography
 }
 .page-jumpin .purple-social .social-icons ul {
   padding-left: 0;
-  margin-top: -25px;
   margin-bottom: 0;
 }
 .page-jumpin .purple-social .social-icons ul li {
   list-style: none;
-  display: inline-block;
+  display: inline-flex;
   padding: 0;
-  margin-bottom: 0;
+  margin: 0;
   margin-right: 5px;
 }
 .page-jumpin .purple-social .social-icons ul li a {
@@ -12378,7 +12381,7 @@ Typography
   text-indent: -9999px;
   overflow: hidden;
   display: block;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   background-size: contain;
 }
