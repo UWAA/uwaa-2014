@@ -23,8 +23,8 @@ get_header();
       ?>
     </div>
     <div class="text">
-      <h1><?php the_field('page_title') ?></h1>
-      <p><?php the_field('header_copy') ?></p>
+      <h1><?php html_entity_decode(the_field('page_title') ) ?></h1>
+      <p><?php html_entity_decode(the_field('header_copy') ) ?></p>
     </div>
 </div>
 
@@ -40,7 +40,7 @@ get_header();
               <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/jumpin/Phone_Icon.png" alt="Smartphone">
             </div>
             <div class="copy-block">
-              <p class="subtitle"><?php the_field('app_download_row_subtitle') ?></p>
+              <p class="subtitle"><?php html_entity_decode(the_field('app_download_row_subtitle') ) ?></p>
               <p class="copy"><?php the_field('app_download_row_copy') ?></p>
             </div>
             <div class="store-icons">
@@ -136,10 +136,10 @@ get_header();
                       <h2><?php echo $subTitle ?></h2>
                       <p>
                         <?php 
-                          echo $copyBlock;
+                          echo html_entity_decode($copyBlock);
                           
                           if( $linkURL ): ?>
-                            <a href="<?php echo esc_url( $linkURL ); ?>"><?php echo $linkText; ?></a>
+                            <a href="<?php echo esc_url( $linkURL ); ?>"><?php echo html_entity_decode($linkText); ?></a>
                           <?php endif; ?>
 
                       </p>
