@@ -30,7 +30,7 @@ get_header();
 
 
 <div class="container-fluid gold-background">
-  <div class="row">
+  <div class="row no-gutters">
 
     <div class="container">
 
