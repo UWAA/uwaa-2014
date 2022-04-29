@@ -177,7 +177,7 @@ get_header();
     <div class="form-container">
       <h2>tell us</h2>
 
-      <div class="form">
+      <div class="form responsive-embed">
 
 
         <?php 
