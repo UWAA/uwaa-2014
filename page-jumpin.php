@@ -9,7 +9,7 @@ get_header();
 
 <!-- Header - ACF field for side image, ACF field for header text content -->
 
-
+<div class="jumpin-container">
 <div class="jumpin-header no-gutters">
     <div class="image">
       <?php 
@@ -194,6 +194,9 @@ get_header();
 
 
   </div>
+</div>
+
+<!-- /jumpin-container -->
 </div>
 
 

@@ -1,7 +1,31 @@
 // Jumpin.less
 
+// lg -1200
+// sm - 992
+// xs - 768
+//
+
+.jumpin-container {
+    font-size:18px;
+
+    /* Medium devices (desktops, 1199px and lower) */
+    @media (max-width: @screen-md-max) {
+        font-size: 15px;
+        }
+
+    /* Small devices (desktops, 991px and lower) */
+    @media (max-width: @screen-sm-max) {
+        font-size: 13px;
+        }
+
+    /* X-Small devices (desktops, 767px and lower) */
+     @media (max-width: @screen-xs) {
+         font-size: 11px;
+         }
+}
+
 .page-jumpin {
-    // font base 10px
+    
 
     .purple-background {
         background-color: @purple;
@@ -18,12 +42,16 @@
         flex-wrap: wrap;
         background-color: @purple;
         align-items: center;
+        background-image: url('assets/jumpin/Icon_Pattern_Upper_Right.png');
+        background-repeat: no-repeat;
+        background-size:25% auto;            
+        background-position: top right;                
+        background-blend-mode: screen;
 
 
-        .image{
-            .hidden-sm;            
+        .image{            
             .hidden-xs;
-            .make-md-column(6);
+            .make-sm-column(6);
             // .hidden-sm();            
             padding: 0;
             
@@ -38,19 +66,21 @@
         }
 
         .text {
-            .make-sm-column(12);  
-            .make-md-column(6);     
+            .make-xs-column(12);
+            .make-sm-column(6);
             padding: 50px;            
             color: @white;
-            background-color: @purple;            
-            background-image: url('assets/jumpin/Icon_Pattern_Upper_Right.png');
-            background-repeat: no-repeat;
-            background-size:50% 50%;            
-            background-position: top right;                
-            background-blend-mode: screen;           
+            background-color: transparent;
+            
+            @media (max-width: @screen-xs-max) {
+                background: center/cover url('assets/jumpin/Header_Image_Uncropped.jpg') no-repeat;
+                text-shadow: 1px 1px 2px black;
 
+             }
             
-            
+            @media (min-width: @screen-sm-min) AND (max-width: 900px) {
+                font-size: 11px;
+            }
             
             h1{
                 font-family: "Encode Sans Wide", sans-serif;
@@ -66,6 +96,7 @@
                 font-size: 1.5em;
                 line-height: 1.5;
                 margin-bottom: 0;
+                
             }
 
         }
@@ -81,20 +112,32 @@
         align-items: center;
 
         .app-image {
+            .make-xs-column(3);
             .make-sm-column(3);
             height: 0;
             align-self:baseline;
 
-            // when xs viewport - remove height;
+            // when xs viewport - rremove height;
+            @media (max-width: @screen-xs-max) {
+                height: auto;
+                align-self: unset;
+             }
 
-            img{
-                object-fit: contain;
-            }
+            
 
         }
 
         .copy-block {
+            .make-xs-column(5);
             .make-sm-column(6);
+
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+            @media (max-width: @screen-xs-min) {
+                font-size:10px;
+                
+             }
             
             .subtitle{
                 margin: 0;                
@@ -103,7 +146,7 @@
                 text-transform: uppercase;
                 font-weight: 900;
                 font-size: 2em;
-                line-height: 1em;;
+                line-height: 1em;                
             }
 
             .copy {
@@ -112,11 +155,18 @@
                 font-size: 1.5em;
                 line-height: 1;
                 padding-right: 5%;
+                margin: 0;
+
+                @media (max-width: @screen-xs-max) {
+                padding: 0;
+                padding-bottom: 10px;
+                }
             }
         }
 
         .store-icons {
-            .make-sm-column(3);            
+            .make-xs-column(4);            
+            .make-sm-column(3);
 
             ul{
                 padding: 10px 0;
@@ -155,8 +205,11 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
 
         .follow-text {
+            .make-xs-column(6);
             .make-sm-column(5);
             .make-sm-column-offset(4);
 
@@ -167,14 +220,21 @@
                 font-family: "Encode Sans Wide", sans-serif;
                 text-transform: uppercase;
                 font-weight: 900;
-                font-size: 2em;  
+                font-size: 2em;
+
+                
             }
         }
 
 
         .social-icons{
+            .make-xs-column(6);
             .make-sm-column(3);
             text-align: center;
+
+            @media (max-width: @screen-xs-max) {
+              text-align: left;  
+             }
 
             ul{            
                 padding-left: 0;                
@@ -257,13 +317,24 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            margin-bottom: 4vh;
 
             .icon{
                 .make-xs-column(4);
                 text-align: center;
 
                 img {
-                    max-width: 50%;
+                    max-width: 50%;                   
+
+                    @media (max-width: @screen-md-max) {
+                    max-width: 75%;
+                    }
+
+                    @media (max-width: @screen-sm-max) {
+                    max-width: 100%;
+                    }
+
+                    
                 }
 
 
@@ -277,19 +348,20 @@
                     font-family: "Encode Sans Wide", sans-serif;
                     text-transform: uppercase;
                     font-size:2.2em;
+                    margin: 0 0 10px 0;
                 }
 
                 p {
                     color: @janegray;
                     font-family: "Open Sans", Arial, sans-serif;
                     font-size: 1.1em;
-                    padding-right: 15px;
+                    padding-right: 15px;                    
+                }
 
-                    a {
+                a {
                         color: @lightgold;
                         text-transform: uppercase;
                         font-weight: 900;
-                    }
                 }
 
             }

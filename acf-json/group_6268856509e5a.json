@@ -46,7 +46,7 @@
             "key": "field_626885c61987e",
             "label": "Header Copy",
             "name": "header_copy",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -56,10 +56,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_6268879fc6e0b",
@@ -300,7 +300,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "55671"
+                "value": "129"
             }
         ]
     ],
@@ -312,5 +312,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1651123387
+    "modified": 1651208122
 }

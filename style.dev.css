@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.25.1.l2jl175g
+ Version: 1.25.1.l2jyk4mi
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9637,8 +9637,7 @@ div.map-logo.michigan {
   /* Borders */
   /* Typography */
 }
-.wufoo .img-thumbnail,
-.wufoo body {
+.wufoo .embed body {
   background-color: transparent;
 }
 .wufoo .focused {
@@ -11987,6 +11986,27 @@ Typography
     display: block;
   }
 }
+.jumpin-container {
+  font-size: 18px;
+  /* Medium devices (desktops, 1199px and lower) */
+  /* Small devices (desktops, 991px and lower) */
+  /* X-Small devices (desktops, 767px and lower) */
+}
+@media (max-width: 1199px) {
+  .jumpin-container {
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .jumpin-container {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480px) {
+  .jumpin-container {
+    font-size: 11px;
+  }
+}
 .page-jumpin .purple-background {
   background-color: #4b2e83;
 }
@@ -12000,6 +12020,11 @@ Typography
   flex-wrap: wrap;
   background-color: #4b2e83;
   align-items: center;
+  background-image: url('assets/jumpin/Icon_Pattern_Upper_Right.png');
+  background-repeat: no-repeat;
+  background-size: 25% auto;
+  background-position: top right;
+  background-blend-mode: screen;
 }
 .page-jumpin .jumpin-header:before,
 .page-jumpin .jumpin-header:after {
@@ -12040,17 +12065,6 @@ Typography
   padding-right: 15px;
   padding: 0;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .page-jumpin .jumpin-header .image {
-    display: none !important;
-  }
-  .page-jumpin .jumpin-header .image,
-  tr.page-jumpin .jumpin-header .image,
-  th.page-jumpin .jumpin-header .image,
-  td.page-jumpin .jumpin-header .image {
-    display: none !important;
-  }
-}
 @media (max-width: 767px) {
   .page-jumpin .jumpin-header .image {
     display: none !important;
@@ -12062,13 +12076,13 @@ Typography
     display: none !important;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .page-jumpin .jumpin-header .image {
     float: left;
     width: 50%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .page-jumpin .jumpin-header .image {
     float: left;
     width: 50%;
@@ -12081,41 +12095,37 @@ Typography
   width: auto;
 }
 .page-jumpin .jumpin-header .text {
+  float: left;
+  width: 100%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   padding: 50px;
   color: #ffffff;
-  background-color: #4b2e83;
-  background-image: url('assets/jumpin/Icon_Pattern_Upper_Right.png');
-  background-repeat: no-repeat;
-  background-size: 50% 50%;
-  background-position: top right;
-  background-blend-mode: screen;
+  background-color: transparent;
 }
 @media (min-width: 768px) {
-  .page-jumpin .jumpin-header .text {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .page-jumpin .jumpin-header .text {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 992px) {
   .page-jumpin .jumpin-header .text {
     float: left;
     width: 50%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .page-jumpin .jumpin-header .text {
     float: left;
     width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .page-jumpin .jumpin-header .text {
+    background: center / cover url('assets/jumpin/Header_Image_Uncropped.jpg') no-repeat;
+    text-shadow: 1px 1px 2px black;
+  }
+}
+@media (min-width: 768px) AND (max-width: 900px) {
+  .page-jumpin .jumpin-header .text {
+    font-size: 11px;
   }
 }
 .page-jumpin .jumpin-header .text h1 {
@@ -12172,6 +12182,8 @@ Typography
   clear: both;
 }
 .page-jumpin .app-download .app-image {
+  float: left;
+  width: 25%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -12191,14 +12203,21 @@ Typography
     width: 25%;
   }
 }
-.page-jumpin .app-download .app-image img {
-  object-fit: contain;
+@media (max-width: 767px) {
+  .page-jumpin .app-download .app-image {
+    height: auto;
+    align-self: unset;
+  }
 }
 .page-jumpin .app-download .copy-block {
+  float: left;
+  width: 41.66666667%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 @media (min-width: 768px) {
   .page-jumpin .app-download .copy-block {
@@ -12210,6 +12229,11 @@ Typography
   .page-jumpin .app-download .copy-block {
     float: left;
     width: 50%;
+  }
+}
+@media (max-width: 480px) {
+  .page-jumpin .app-download .copy-block {
+    font-size: 10px;
   }
 }
 .page-jumpin .app-download .copy-block .subtitle {
@@ -12227,8 +12251,17 @@ Typography
   font-size: 1.5em;
   line-height: 1;
   padding-right: 5%;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .page-jumpin .app-download .copy-block .copy {
+    padding: 0;
+    padding-bottom: 10px;
+  }
 }
 .page-jumpin .app-download .store-icons {
+  float: left;
+  width: 33.33333333%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -12276,6 +12309,8 @@ Typography
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .page-jumpin .purple-social:before,
 .page-jumpin .purple-social:after {
@@ -12310,6 +12345,8 @@ Typography
   clear: both;
 }
 .page-jumpin .purple-social .follow-text {
+  float: left;
+  width: 50%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -12347,6 +12384,8 @@ Typography
   font-size: 2em;
 }
 .page-jumpin .purple-social .social-icons {
+  float: left;
+  width: 50%;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -12363,6 +12402,11 @@ Typography
   .page-jumpin .purple-social .social-icons {
     float: left;
     width: 25%;
+  }
+}
+@media (max-width: 767px) {
+  .page-jumpin .purple-social .social-icons {
+    text-align: left;
   }
 }
 .page-jumpin .purple-social .social-icons ul {
@@ -12421,6 +12465,7 @@ Typography
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 4vh;
 }
 .page-jumpin .uw-content .row .icon {
   position: relative;
@@ -12433,6 +12478,16 @@ Typography
 }
 .page-jumpin .uw-content .row .icon img {
   max-width: 50%;
+}
+@media (max-width: 1199px) {
+  .page-jumpin .uw-content .row .icon img {
+    max-width: 75%;
+  }
+}
+@media (max-width: 991px) {
+  .page-jumpin .uw-content .row .icon img {
+    max-width: 100%;
+  }
 }
 .page-jumpin .uw-content .row .textarea {
   position: relative;
@@ -12447,6 +12502,7 @@ Typography
   font-family: "Encode Sans Wide", sans-serif;
   text-transform: uppercase;
   font-size: 2.2em;
+  margin: 0 0 10px 0;
 }
 .page-jumpin .uw-content .row .textarea p {
   color: #3d3d3d;
@@ -12454,7 +12510,7 @@ Typography
   font-size: 1.1em;
   padding-right: 15px;
 }
-.page-jumpin .uw-content .row .textarea p a {
+.page-jumpin .uw-content .row .textarea a {
   color: #b7a57a;
   text-transform: uppercase;
   font-weight: 900;
