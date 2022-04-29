@@ -18,7 +18,7 @@
             </div>
             </nav>
             <div class="uwaa-logo">
-                <a href="<?php get_bloginfo('url') ?>">
+                <a href="<?php get_bloginfo('url') ?>">  <!-- TODO -->
                 <?php get_template_part('assets/uwaa', 'logo.svg');?>
                 </a>
             </div>
