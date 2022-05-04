@@ -11,3 +11,4 @@ vendor/*
 project/*
 *.log
 *.sln
+less/reference.less
