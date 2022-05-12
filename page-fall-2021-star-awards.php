@@ -53,7 +53,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
         <a href="<?php echo get_site_url('', '/star-awards')?>">See the current Star Awards</a> </br>
         <a href="<?php echo get_site_url('', '/spring-2020-star-awards')?>">See the Spring 2020 Star Awards</a></br>
-        <a href="<?php echo get_site_url('', '/spring-2021-star-awards')?>">See the Spring 2021 Star Awards</a>/br>
+        <a href="<?php echo get_site_url('', '/spring-2021-star-awards')?>">See the Spring 2021 Star Awards</a></br>
         <a href="<?php echo get_site_url('', '/fall-2021-star-awards')?>">See the Fall 2021 Star Awards</a>
         
 
@@ -61,7 +61,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
         <div id="winner-cards">
           <div class="grid">
-            <?php $UWAA->UI->makeStarAwardWinnerCards('fall2020'); ?>
+            <?php $UWAA->UI->makeStarAwardWinnerCards('fall2021'); ?>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
     <div id="cards">
         <div class ="grid">
       
-            <?php $UWAA->UI->makeStarAwardCards('fall2020'); ?>
+            <?php $UWAA->UI->makeStarAwardCards('fall2021'); ?>
        
         
         </div>  
