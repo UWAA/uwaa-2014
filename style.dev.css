@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.26.3.l3f3ut6m
+ Version: 1.26.3.l3ke9l60
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -9917,30 +9917,36 @@ ul.uwaa-social li a:focus.email {
   border-radius: 10px;
 }
 .membership-card.annual {
-  background-image: url(assets/member_card_annual.jpg);
+  background-image: url(assets/2022_MemberCard_Web_Annual_302x192.jpg);
   border: 1px solid #CCCCCC;
 }
-.membership-card.life {
-  background-image: url(assets/member_card_life.jpg);
-}
-.membership-card.life p {
-  color: #ffffff;
-}
 .membership-card p {
+  color: #ffffff;
   position: absolute;
   margin: 0;
   padding: 0;
-  left: 5px;
+  right: 10px;
   font-size: 13px;
+  line-height: 1.7;
+  font-weight: 400;
 }
 .membership-card p.member-name {
   top: 147px;
   font-weight: 700;
 }
 .membership-card p.member-number {
-  top: 123px;
+  top: 129px;
 }
 .membership-card p.renewal {
+  top: 163px;
+}
+.membership-card.life {
+  background-image: url(assets/2022_MemberCard_Web_Life_302x192.jpg);
+}
+.membership-card.life p.member-number {
+  top: 147px;
+}
+.membership-card.life p.member-name {
   top: 163px;
 }
 .uw-sidebar .membership-card {
