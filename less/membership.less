@@ -24,7 +24,7 @@
 
 
         &.member-name {
-            top: 147px;
+            top: 145px;
             font-weight: 700;
 
             
@@ -61,11 +61,31 @@
 .uw-sidebar {
      .membership-card {
         margin-left: 0;
+
+    @media only screen and (min-width: 993px) and (max-width: 1199px) {
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 276px;
+        height:176px;
+
+    p{
+        
+            &.member-number {
+                top: 127px;
+            }
+        
+            &.member-name {
+                top: 143px;
+            }
+        
+    }
     }
 
     a#memberCheckerLogout {
         margin-right: 20px;
     }
+}
+
 }
 
 #memberloginForm {
