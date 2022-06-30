@@ -109,14 +109,27 @@ get_header();
 
     <div class="container">
 
-      <div class="details-row black-background">
-        <div class=""></div>
-        <div class=""></div>
-        <div class=""></div>
+      <div class="registration-item-row black-background">
+        <div class="registration-item pups">
+            <h2>Title</h2>
+            <p class="subhead">Sub</p>
+            <p class="copy">Some Copy</p>
+            <p class="price">$15</p>
+        </div>
+        <div class="registration-item dogs">
+            <h2>Title</h2>
+            <p class="subhead">Sub</p>
+            <p class="copy">Some Copy</p>
+            <p class="price">$15</p>
+        </div>
+        <div class="registration-item virtual">
+            <h2>Title</h2>
+            <p class="subhead">Sub</p>
+            <p class="copy">Some Copy</p>
+            <p class="price">$15</p>
+        </div>
 
-            
-            
-
+    </div>
                 
          </div>
             
@@ -127,7 +140,25 @@ get_header();
     </div>
   </div>
 
+<div class="container-fluid yellow-background">
+  <div class="row no-gutters">
 
+    <div class="container">
+
+      <div class="register-row yellow-background">            
+            <div class="register-row-content">              
+              <p><?php the_field('register_bands_text') ?>              
+                </p>
+                <a href="<?php echo get_field('getmeregistered_link') ?>" class="btn btn-primary btn-lg" tabindex="-1" role="button"><?php the_field('register_bands_button_text') ?></a>
+                
+         </div>
+            
+        </div>
+
+          </div>
+
+    </div>
+  </div>
   
 
 <div class="overlay-container container-fluid">

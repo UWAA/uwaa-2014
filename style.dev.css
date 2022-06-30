@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l50mi6h4
+ Version: 1.27.0.l5176ggy
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6345,6 +6345,8 @@ button.close {
 .page-dawgdash .details-row:after,
 .page-dawgdash .membership-special-row:before,
 .page-dawgdash .membership-special-row:after,
+.page-dawgdash .registration-item-row:before,
+.page-dawgdash .registration-item-row:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6390,6 +6392,7 @@ button.close {
 .page-dawgdash .register-row:after,
 .page-dawgdash .details-row:after,
 .page-dawgdash .membership-special-row:after,
+.page-dawgdash .registration-item-row:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -6473,6 +6476,8 @@ button.close {
 .page-dawgdash .details-row:after,
 .page-dawgdash .membership-special-row:before,
 .page-dawgdash .membership-special-row:after,
+.page-dawgdash .registration-item-row:before,
+.page-dawgdash .registration-item-row:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6518,6 +6523,7 @@ button.close {
 .page-dawgdash .register-row:after,
 .page-dawgdash .details-row:after,
 .page-dawgdash .membership-special-row:after,
+.page-dawgdash .registration-item-row:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -13262,6 +13268,75 @@ Typography
   font-weight: 900;
   font-size: 1em;
   text-align: left;
+}
+.page-dawgdash .registration-item-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-dawgdash .registration-item-row:before,
+.page-dawgdash .registration-item-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .registration-item-row:after {
+  clear: both;
+}
+.page-dawgdash .registration-item-row:before,
+.page-dawgdash .registration-item-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .registration-item-row:after {
+  clear: both;
+}
+.page-dawgdash .registration-item-row:before,
+.page-dawgdash .registration-item-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .registration-item-row:after {
+  clear: both;
+}
+.page-dawgdash .registration-item-row:before,
+.page-dawgdash .registration-item-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .registration-item-row:after {
+  clear: both;
+}
+.page-dawgdash .registration-item-row .registration-item {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-dawgdash .registration-item-row .registration-item {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 768px) {
+  .page-dawgdash .registration-item-row .registration-item {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.page-dawgdash .registration-item-row .registration-item.pups {
+  background-image: url('assets/dawgdash23/Dawg-Dash-PupsRun_219x197.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.page-dawgdash .registration-item-row .registration-item.dogs {
+  background-image: url('assets/dawgdash23/Dawg-Dash-Dawgdanna_219x197.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.page-dawgdash .registration-item-row .registration-item.virtual {
+  background-image: url('assets/dawgdash23/Dawg-Dash-Virtual_219x197.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 .page-alwayslearning p {
   margin: 0 0 80px;
