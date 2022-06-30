@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l51eolzx
+ Version: 1.27.0.l51cylz3
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -12987,7 +12987,7 @@ Typography
 .page-id-285 .dawgdash-header .text p {
   color: #ffffff;
   font-size: 1.5em;
-  line-height: 1.5;
+  line-height: 1;
   margin-bottom: 0;
 }
 .page-id-56639 .register-row,
@@ -13471,6 +13471,8 @@ Typography
   padding-left: 15px;
   padding-right: 15px;
   min-height: 389px;
+  background: #000000;
+  background: linear-gradient(256deg, #000000 0%, #404040 100%);
 }
 @media (min-width: 768px) {
   .page-id-56639 .registration-item-row .registration-item,
@@ -13543,9 +13545,17 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 375px;
-  background-size: cover;
-  background-repeat: none;
+  background-color: #000000;
+  min-height: 375px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 1199px) {
+  .page-id-56639 .sponsor-block-row .sponsor-block,
+  .page-id-285 .sponsor-block-row .sponsor-block {
+    background-size: contain;
+  }
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.half-size,
 .page-id-285 .sponsor-block-row .sponsor-block.half-size {
@@ -13553,6 +13563,8 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  min-height: 375px;
+  background-position: left;
 }
 @media (min-width: 992px) {
   .page-id-56639 .sponsor-block-row .sponsor-block.half-size,
@@ -13566,17 +13578,33 @@ Typography
   .page-id-285 .sponsor-block-row .sponsor-block.half-size {
     float: left;
     width: 50%;
+  }
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.half-size:first-child,
+.page-id-285 .sponsor-block-row .sponsor-block.half-size:first-child {
+  background-position: right;
+}
+@media (max-width: 991px) {
+  .page-id-56639 .sponsor-block-row .sponsor-block.half-size:first-child,
+  .page-id-285 .sponsor-block-row .sponsor-block.half-size:first-child {
+    background-position: center;
+  }
+}
+@media (max-width: 991px) {
+  .page-id-56639 .sponsor-block-row .sponsor-block.half-size,
+  .page-id-285 .sponsor-block-row .sponsor-block.half-size {
+    background-position: center;
   }
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.alaska,
 .page-id-285 .sponsor-block-row .sponsor-block.alaska {
   background-image: url('assets/dawgdash23/SPR_051922_UW Dawg Dash Ad and Backdrop_Web Banner_R32.png');
-  height: 292px;
+  min-height: 292px;
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.alaska.half-size,
 .page-id-285 .sponsor-block-row .sponsor-block.alaska.half-size {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Alaska_658x375.png');
-  height: 375px;
+  min-height: 375px;
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.brooks,
 .page-id-285 .sponsor-block-row .sponsor-block.brooks {

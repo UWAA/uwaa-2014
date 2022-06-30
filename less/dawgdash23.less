@@ -107,7 +107,7 @@
                 p {
                     color: @white;
                     font-size: 1.5em;
-                    line-height: 1.5;
+                    line-height: 1;
                     margin-bottom: 0;
     
                 }
@@ -156,7 +156,7 @@
                 .details-row {
                     .make-row();
                     display: flex;
-                    flex-wrap: wrap;
+                    flex-wrap: wrap;                    
                     background-color: @black;
                     align-items: center;
                     background-image: url('assets/dawgdash23/Dawg-Dash-Registration_656x743.png');
@@ -164,6 +164,7 @@
                     background-size: 100% auto;
                     background-position: right;
                     background-blend-mode: screen;
+                    
 
                     .copy {
                             .make-xs-column(12);
@@ -288,6 +289,8 @@
                     .registration-item{
                         .make-sm-column(4);
                         min-height: 389px;
+                        background: rgb(0, 0, 0);
+                        background: linear-gradient(256deg, rgba(0, 0, 0, 1) 0%, rgba(64, 64, 64, 1) 100%);
                         
                         h2{
                             color: @ddlightpurple;
@@ -344,30 +347,47 @@
                     }
                 }
 
-                .sponsor-block-row{
+                .sponsor-block-row{                    
                     .sponsor-block{
                         .make-xs-column(12);
-                        height:375px;
-                        background-size: cover;
-                        background-repeat: none;
-                        
+                        background-color: @black;
+                        min-height:375px;
+                        background-size: contain;                        
+                        background-repeat: no-repeat;
+                        background-position: center;
 
+                        @media (min-width: @screen-md-max) {
+                                background-size: contain;
+                        }
                         
 
                         &.half-size{
-                            .make-md-column(6);                                                    
+                            .make-md-column(6);
+                            min-height: 375px;
+                            background-position: left;
 
-                            
+                            &:first-child{
+                                background-position: right;
+                             
+                                @media (max-width: @screen-sm-max) {
+                                background-position: center;
+                            }
+
+                            }
+
+                            @media (max-width: @screen-sm-max) {
+                                background-position: center;
+                            }
                             
                         }
 
                         &.alaska{
                             background-image: url('assets/dawgdash23/SPR_051922_UW Dawg Dash Ad and Backdrop_Web Banner_R32.png');
-                            height:292px;
+                            min-height:292px;
                             
                         &.half-size  {
                                 background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Alaska_658x375.png');
-                                height: 375px;
+                                min-height: 375px;
                             }
 
                         }
