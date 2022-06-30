@@ -347,11 +347,16 @@
                     }
                 }
 
-                .sponsor-block-row{                    
+                .sponsor-block-row{   
+                    text-align: center;
+                    background-color: @black;
+                    
+                
+
                     .sponsor-block{
                         .make-xs-column(12);
                         background-color: @black;
-                        min-height:375px;
+                        min-height:280px;
                         background-size: contain;                        
                         background-repeat: no-repeat;
                         background-position: center;
@@ -359,12 +364,14 @@
                         @media (min-width: @screen-md-max) {
                                 background-size: contain;
                         }
+
+                        
                         
 
                         &.half-size{
-                            .make-md-column(6);
-                            min-height: 375px;
+                            .make-md-column(6);                                                      
                             background-position: left;
+                            min-height: 280px;
 
                             &:first-child{
                                 background-position: right;
@@ -382,13 +389,20 @@
                         }
 
                         &.alaska{
-                            background-image: url('assets/dawgdash23/SPR_051922_UW Dawg Dash Ad and Backdrop_Web Banner_R32.png');
-                            min-height:292px;
-                            
-                        &.half-size  {
-                                background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Alaska_658x375.png');
-                                min-height: 375px;
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_1200x280.jpg');                            
+
+                            @media (max-width: @screen-md-max) {
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_992x232.jpg');
+                            // min-height: 232px;
                             }
+
+                            @media (max-width: @screen-sm-max) {
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_768x180.jpg');
+                            // min-height: 180px;
+                            }
+
+                            
+                        
 
                         }
 
@@ -397,8 +411,14 @@
 
                         &.half-size  {
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
+                            // background-size: 625px;
                             
                         }
+                        }
+
+                        &.att{
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-ATT_638x375.png');
+                        
                         }
                     }
                 }

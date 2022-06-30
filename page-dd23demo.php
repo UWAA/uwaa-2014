@@ -171,15 +171,17 @@ get_header();
   <div class="row no-gutters">
 
    
-      <div class="sponsor-block-row">            
+      <div class="sponsor-block-row">
+        
             <div class="sponsor-block alaska"></div>
+        
           
             
         </div>
 
         <div class="sponsor-block-row">
               <div class="sponsor-block brooks half-size"></div>
-            <div class="sponsor-block alaska half-size"></div>
+            <div class="sponsor-block att half-size"></div>
         </div>
 
     
@@ -200,7 +202,18 @@ get_header();
         </div>
 
     </div>
+    
+  <div id='legend' style='display:none;'>
+    <img style="float: left;width:200px;" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2022/06/30130615/Dawg-Dash-Logo_504x446.png" alt="Alaska Airlines Dawg Dash 2022" />
+    <h1>COURSE ROUTES</h1>
+    <nav class='legend clearfix'>
+      <span style='background:#8d5dda;'></span>
+	    <strong>5K</strong>
+	    <br />
+      <span style='background:#ecc813;'></span>    	    <strong>10K</strong>
 
+	<br />
+  </div>
    <div id='map'></div>
 
 
