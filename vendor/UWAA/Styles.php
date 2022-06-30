@@ -25,6 +25,13 @@ class Styles
         'version' => '1.6.1',
         'admin'   => false
     ),
+     'mapbox331' => array(
+        'id'      => 'mapbox331',
+        'url'     => 'https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css',
+        'deps'    => array(),
+        'version' => '3.3.1',
+        'admin'   => false
+    ),
       'gradpack' => array(
           'id'      => 'gradpack',
           'url'     => get_bloginfo('stylesheet_directory') . '/gradpack.css',

@@ -6357,6 +6357,10 @@ button.close {
 .page-id-56639 .registration-item-row:after,
 .page-id-285 .registration-item-row:before,
 .page-id-285 .registration-item-row:after,
+.page-id-56639 .course-map-title-row:before,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:before,
+.page-id-285 .course-map-title-row:after,
 .page-id-56639 .banner-row:before,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:before,
@@ -6412,6 +6416,8 @@ button.close {
 .page-id-285 .membership-special-row:after,
 .page-id-56639 .registration-item-row:after,
 .page-id-285 .registration-item-row:after,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:after,
 .mobile-menu-row:after {
@@ -6509,6 +6515,10 @@ button.close {
 .page-id-56639 .registration-item-row:after,
 .page-id-285 .registration-item-row:before,
 .page-id-285 .registration-item-row:after,
+.page-id-56639 .course-map-title-row:before,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:before,
+.page-id-285 .course-map-title-row:after,
 .page-id-56639 .banner-row:before,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:before,
@@ -6564,6 +6574,8 @@ button.close {
 .page-id-285 .membership-special-row:after,
 .page-id-56639 .registration-item-row:after,
 .page-id-285 .registration-item-row:after,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:after,
 .mobile-menu-row:after {
@@ -13613,6 +13625,70 @@ Typography
 .page-id-56639 .sponsor-block-row .sponsor-block.brooks.half-size,
 .page-id-285 .sponsor-block-row .sponsor-block.brooks.half-size {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
+}
+.page-id-56639 .course-map-title-row,
+.page-id-285 .course-map-title-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-id-56639 .course-map-title-row:before,
+.page-id-285 .course-map-title-row:before,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  clear: both;
+}
+.page-id-56639 .course-map-title-row:before,
+.page-id-285 .course-map-title-row:before,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  clear: both;
+}
+.page-id-56639 .course-map-title-row:before,
+.page-id-285 .course-map-title-row:before,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  clear: both;
+}
+.page-id-56639 .course-map-title-row:before,
+.page-id-285 .course-map-title-row:before,
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .course-map-title-row:after,
+.page-id-285 .course-map-title-row:after {
+  clear: both;
+}
+.page-id-56639 .course-map-title-row .title,
+.page-id-285 .course-map-title-row .title {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "Encode Sans Wide", sans-serif;
+  font-weight: 900;
+  font-size: 3.5em;
+  text-align: center;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 .page-id-56639 .faq-row .faq-content,
 .page-id-285 .faq-row .faq-content {

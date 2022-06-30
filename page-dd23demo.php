@@ -1,7 +1,12 @@
 <?php
 // Jump-in Single-Page Template
 
-get_header(); 
+wp_enqueue_script('dd23map');
+wp_enqueue_style('mapbox331');
+get_header();
+
+
+
 
 
 
@@ -182,9 +187,7 @@ get_header();
     </div>
   </div>
 
-  <div class="container-fluid map-container light-purple-background">
-    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+  <div class="container-fluid map-container light-purple-background">    
   <div class="row no-gutters">
 
     <div class="container">
@@ -200,14 +203,7 @@ get_header();
 
    <div id='map'></div>
 
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiYnBlcmljayIsImEiOiJrT2xBSUNzIn0.n-CVAwFlqHGqkiDUxsIdSQ';
-  var map = L.mapbox.map('map')
-    .setView([47.661, -122.308], 15)
-    .addLayer(L.mapbox.styleLayer('mapbox://styles/bperick/cl3xc38ar000115qmby77jmwd'));
 
-  map.legendControl.addLegend(document.getElementById('legend').innerHTML);
-</script>
 
     </div>
   </div>

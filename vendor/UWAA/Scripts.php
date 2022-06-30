@@ -111,6 +111,24 @@ class Scripts
         'admin'   => true
       ),
 
+       'mapbox331'   => array (
+        'id'      => 'mapbox331',
+        'url'     => "https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js",
+        'deps'    => array(),
+        'version' => '3.3.1',
+        'in_footer' => false,
+        'admin'   => false
+      ),
+
+       'dd23map'   => array (
+        'id'      => 'dd23map',
+        'url'     => get_bloginfo('stylesheet_directory') . '/js/support/dd23map' . $this->min_script() . '.js',
+        'deps'    => array('mapbox331'),
+        'version' => '1.0',
+        'in_footer' => true,
+        'admin'   => false
+      ),
+
       'seattleMap'   => array (
         'id'      => 'seattleMap',
         'url'     => get_bloginfo('stylesheet_directory') . '/js/support/seattle_map' . $this->min_script() . '.js',
