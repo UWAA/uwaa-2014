@@ -287,9 +287,39 @@
 
                     .registration-item{
                         .make-sm-column(4);
-
+                        min-height: 389px;
+                        
                         h2{
-                            
+                            color: @ddlightpurple;
+                            font-family: "Encode Sans Wide", sans-serif;
+                            font-weight: 900;
+                            font-size: 2em;
+                            text-transform: uppercase;
+
+                        }
+
+                        .subhead{
+                            color: @ddyellow;
+                            font-family: "Encode Sans Wide", sans-serif;
+                            font-size: 1.5em;
+                            text-transform: uppercase;
+                            font-weight: 900;
+
+                        }
+
+                        .copy {
+                            color: @white;
+                            font-family: "Open Sans", Arial, sans-serif;
+                            font-size: 1em;
+                            line-height: 1;
+                        }
+
+                        .price{
+                            color: @ddyellow;
+                            font-family: "Encode Sans Wide", sans-serif;
+                            font-size: 1.5em;
+                            text-transform: uppercase;
+                            font-weight: 900;
                         }
 
                         &.pups{
@@ -311,6 +341,85 @@
                         }
 
 
+                    }
+                }
+
+                .sponsor-block-row{
+                    .sponsor-block{
+                        .make-xs-column(12);
+                        height:375px;
+                        background-size: cover;
+                        background-repeat: none;
+                        
+
+                        
+
+                        &.half-size{
+                            .make-md-column(6);                                                    
+
+                            
+                            
+                        }
+
+                        &.alaska{
+                            background-image: url('assets/dawgdash23/SPR_051922_UW Dawg Dash Ad and Backdrop_Web Banner_R32.png');
+                            height:292px;
+                            
+                        &.half-size  {
+                                background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Alaska_658x375.png');
+                                height: 375px;
+                            }
+
+                        }
+
+                        &.brooks{
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module3-Brooks_1200x375.png');
+
+                        &.half-size  {
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
+                            
+                        }
+                        }
+                    }
+                }
+
+                .map-row{
+                    // mapbox stuff
+                }
+
+                .faq-row{
+                    .faq-content{
+                        .make-xs-column(12);
+                    }
+                }
+
+                .banner-row{
+                    .make-row();
+
+                    div {
+                        
+                        background-repeat: no-repeat;
+                        background-position: center;                      
+
+                        
+                        
+                        &.banner-lg{
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_1200x284.png');
+                            
+                            .visible-md();
+                            .visible-lg();
+                            .hidden-xs();
+                            height: 284px;
+                        }
+
+                        &.banner-sm{
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_380x160.png');
+                            
+                            .hidden-md();
+                            .hidden-lg();
+                            .visible-xs();
+                            height: 160px;
+                        }
                     }
                 }
 

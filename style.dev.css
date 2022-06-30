@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5176ggy
+ Version: 1.27.0.l51cylz3
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6347,6 +6347,8 @@ button.close {
 .page-dawgdash .membership-special-row:after,
 .page-dawgdash .registration-item-row:before,
 .page-dawgdash .registration-item-row:after,
+.page-dawgdash .banner-row:before,
+.page-dawgdash .banner-row:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6393,6 +6395,7 @@ button.close {
 .page-dawgdash .details-row:after,
 .page-dawgdash .membership-special-row:after,
 .page-dawgdash .registration-item-row:after,
+.page-dawgdash .banner-row:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -6478,6 +6481,8 @@ button.close {
 .page-dawgdash .membership-special-row:after,
 .page-dawgdash .registration-item-row:before,
 .page-dawgdash .registration-item-row:after,
+.page-dawgdash .banner-row:before,
+.page-dawgdash .banner-row:after,
 .mobile-menu-row:before,
 .mobile-menu-row:after {
   content: " ";
@@ -6524,6 +6529,7 @@ button.close {
 .page-dawgdash .details-row:after,
 .page-dawgdash .membership-special-row:after,
 .page-dawgdash .registration-item-row:after,
+.page-dawgdash .banner-row:after,
 .mobile-menu-row:after {
   clear: both;
 }
@@ -13310,6 +13316,7 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  min-height: 389px;
 }
 @media (min-width: 768px) {
   .page-dawgdash .registration-item-row .registration-item {
@@ -13322,6 +13329,33 @@ Typography
     float: left;
     width: 33.33333333%;
   }
+}
+.page-dawgdash .registration-item-row .registration-item h2 {
+  color: #9880b8;
+  font-family: "Encode Sans Wide", sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.page-dawgdash .registration-item-row .registration-item .subhead {
+  color: #ffd637;
+  font-family: "Encode Sans Wide", sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.page-dawgdash .registration-item-row .registration-item .copy {
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1;
+}
+.page-dawgdash .registration-item-row .registration-item .price {
+  color: #ffd637;
+  font-family: "Encode Sans Wide", sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 .page-dawgdash .registration-item-row .registration-item.pups {
   background-image: url('assets/dawgdash23/Dawg-Dash-PupsRun_219x197.png');
@@ -13337,6 +13371,224 @@ Typography
   background-image: url('assets/dawgdash23/Dawg-Dash-Virtual_219x197.png');
   background-repeat: no-repeat;
   background-position: bottom right;
+}
+.page-dawgdash .sponsor-block-row .sponsor-block {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 375px;
+  background-size: cover;
+  background-repeat: none;
+}
+.page-dawgdash .sponsor-block-row .sponsor-block.half-size {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .page-dawgdash .sponsor-block-row .sponsor-block.half-size {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .page-dawgdash .sponsor-block-row .sponsor-block.half-size {
+    float: left;
+    width: 50%;
+  }
+}
+.page-dawgdash .sponsor-block-row .sponsor-block.alaska {
+  background-image: url('assets/dawgdash23/SPR_051922_UW Dawg Dash Ad and Backdrop_Web Banner_R32.png');
+  height: 292px;
+}
+.page-dawgdash .sponsor-block-row .sponsor-block.alaska.half-size {
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Alaska_658x375.png');
+  height: 375px;
+}
+.page-dawgdash .sponsor-block-row .sponsor-block.brooks {
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module3-Brooks_1200x375.png');
+}
+.page-dawgdash .sponsor-block-row .sponsor-block.brooks.half-size {
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
+}
+.page-dawgdash .faq-row .faq-content {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page-dawgdash .banner-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.page-dawgdash .banner-row:before,
+.page-dawgdash .banner-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .banner-row:after {
+  clear: both;
+}
+.page-dawgdash .banner-row:before,
+.page-dawgdash .banner-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .banner-row:after {
+  clear: both;
+}
+.page-dawgdash .banner-row:before,
+.page-dawgdash .banner-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .banner-row:after {
+  clear: both;
+}
+.page-dawgdash .banner-row:before,
+.page-dawgdash .banner-row:after {
+  content: " ";
+  display: table;
+}
+.page-dawgdash .banner-row:after {
+  clear: both;
+}
+.page-dawgdash .banner-row div {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.page-dawgdash .banner-row div.banner-lg {
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_1200x284.png');
+  display: none !important;
+  height: 284px;
+}
+.page-dawgdash .banner-row div.banner-lg,
+tr.page-dawgdash .banner-row div.banner-lg,
+th.page-dawgdash .banner-row div.banner-lg,
+td.page-dawgdash .banner-row div.banner-lg {
+  display: none !important;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page-dawgdash .banner-row div.banner-lg {
+    display: block !important;
+  }
+  table.page-dawgdash .banner-row div.banner-lg {
+    display: table;
+  }
+  tr.page-dawgdash .banner-row div.banner-lg {
+    display: table-row !important;
+  }
+  th.page-dawgdash .banner-row div.banner-lg,
+  td.page-dawgdash .banner-row div.banner-lg {
+    display: table-cell !important;
+  }
+  tr.page-dawgdash .banner-row div.banner-lg {
+    display: table-row !important;
+  }
+  th.page-dawgdash .banner-row div.banner-lg,
+  td.page-dawgdash .banner-row div.banner-lg {
+    display: table-cell !important;
+  }
+}
+.page-dawgdash .banner-row div.banner-lg,
+tr.page-dawgdash .banner-row div.banner-lg,
+th.page-dawgdash .banner-row div.banner-lg,
+td.page-dawgdash .banner-row div.banner-lg {
+  display: none !important;
+}
+@media (min-width: 1200px) {
+  .page-dawgdash .banner-row div.banner-lg {
+    display: block !important;
+  }
+  table.page-dawgdash .banner-row div.banner-lg {
+    display: table;
+  }
+  tr.page-dawgdash .banner-row div.banner-lg {
+    display: table-row !important;
+  }
+  th.page-dawgdash .banner-row div.banner-lg,
+  td.page-dawgdash .banner-row div.banner-lg {
+    display: table-cell !important;
+  }
+  tr.page-dawgdash .banner-row div.banner-lg {
+    display: table-row !important;
+  }
+  th.page-dawgdash .banner-row div.banner-lg,
+  td.page-dawgdash .banner-row div.banner-lg {
+    display: table-cell !important;
+  }
+}
+@media (max-width: 767px) {
+  .page-dawgdash .banner-row div.banner-lg {
+    display: none !important;
+  }
+  .page-dawgdash .banner-row div.banner-lg,
+  tr.page-dawgdash .banner-row div.banner-lg,
+  th.page-dawgdash .banner-row div.banner-lg,
+  td.page-dawgdash .banner-row div.banner-lg {
+    display: none !important;
+  }
+}
+.page-dawgdash .banner-row div.banner-sm {
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_380x160.png');
+  display: none !important;
+  height: 160px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page-dawgdash .banner-row div.banner-sm {
+    display: none !important;
+  }
+  .page-dawgdash .banner-row div.banner-sm,
+  tr.page-dawgdash .banner-row div.banner-sm,
+  th.page-dawgdash .banner-row div.banner-sm,
+  td.page-dawgdash .banner-row div.banner-sm {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .page-dawgdash .banner-row div.banner-sm {
+    display: none !important;
+  }
+  .page-dawgdash .banner-row div.banner-sm,
+  tr.page-dawgdash .banner-row div.banner-sm,
+  th.page-dawgdash .banner-row div.banner-sm,
+  td.page-dawgdash .banner-row div.banner-sm {
+    display: none !important;
+  }
+}
+.page-dawgdash .banner-row div.banner-sm,
+tr.page-dawgdash .banner-row div.banner-sm,
+th.page-dawgdash .banner-row div.banner-sm,
+td.page-dawgdash .banner-row div.banner-sm {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  .page-dawgdash .banner-row div.banner-sm {
+    display: block !important;
+  }
+  table.page-dawgdash .banner-row div.banner-sm {
+    display: table;
+  }
+  tr.page-dawgdash .banner-row div.banner-sm {
+    display: table-row !important;
+  }
+  th.page-dawgdash .banner-row div.banner-sm,
+  td.page-dawgdash .banner-row div.banner-sm {
+    display: table-cell !important;
+  }
+  tr.page-dawgdash .banner-row div.banner-sm {
+    display: table-row !important;
+  }
+  th.page-dawgdash .banner-row div.banner-sm,
+  td.page-dawgdash .banner-row div.banner-sm {
+    display: table-cell !important;
+  }
 }
 .page-alwayslearning p {
   margin: 0 0 80px;
