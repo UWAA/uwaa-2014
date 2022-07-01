@@ -473,29 +473,50 @@
                 .banner-row{
                     .make-row();
 
-                    div {
+                    
+
+                    .banner {
                         
                         background-repeat: no-repeat;
-                        background-position: center;                      
+                        background-position: center;    
+                        z-index: 1;                  
 
                         
                         
                         &.banner-lg{
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_1200x284.png');
                             
-                            .visible-md();
-                            .visible-lg();
+                            
+                            .hidden-sm();
                             .hidden-xs();
                             height: 284px;
+
+                        .banner-background {
+                                width: 100%;
+                                background-color: #171717;
+                                height: 140px;
+                                z-index: -1;
+                                position: relative;
+                                top: 29%;
+                            }
                         }
 
                         &.banner-sm{
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_380x160.png');
                             
+                            
                             .hidden-md();
                             .hidden-lg();
-                            .visible-xs();
                             height: 160px;
+
+                            .banner-background {
+                                    width: 100%;
+                                    background-color: #171717;
+                                    height: 78px;
+                                    z-index: -1;
+                                    position: relative;
+                                    top: 29%;
+                                }
                         }
                     }
                 }

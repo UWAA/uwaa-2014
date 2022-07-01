@@ -13783,190 +13783,103 @@ Typography
 .page-id-285 .banner-row:after {
   clear: both;
 }
-.page-id-56639 .banner-row div,
-.page-id-285 .banner-row div {
+.page-id-56639 .banner-row .banner,
+.page-id-285 .banner-row .banner {
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 1;
 }
-.page-id-56639 .banner-row div.banner-lg,
-.page-id-285 .banner-row div.banner-lg {
+.page-id-56639 .banner-row .banner.banner-lg,
+.page-id-285 .banner-row .banner.banner-lg {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_1200x284.png');
-  display: none !important;
   height: 284px;
 }
-.page-id-56639 .banner-row div.banner-lg,
-.page-id-285 .banner-row div.banner-lg,
-tr.page-id-56639 .banner-row div.banner-lg,
-tr.page-id-285 .banner-row div.banner-lg,
-th.page-id-56639 .banner-row div.banner-lg,
-th.page-id-285 .banner-row div.banner-lg,
-td.page-id-56639 .banner-row div.banner-lg,
-td.page-id-285 .banner-row div.banner-lg {
-  display: none !important;
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .page-id-56639 .banner-row div.banner-lg,
-  .page-id-285 .banner-row div.banner-lg {
-    display: block !important;
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-id-56639 .banner-row .banner.banner-lg,
+  .page-id-285 .banner-row .banner.banner-lg {
+    display: none !important;
   }
-  table.page-id-56639 .banner-row div.banner-lg,
-  table.page-id-285 .banner-row div.banner-lg {
-    display: table;
-  }
-  tr.page-id-56639 .banner-row div.banner-lg,
-  tr.page-id-285 .banner-row div.banner-lg {
-    display: table-row !important;
-  }
-  th.page-id-56639 .banner-row div.banner-lg,
-  th.page-id-285 .banner-row div.banner-lg,
-  td.page-id-56639 .banner-row div.banner-lg,
-  td.page-id-285 .banner-row div.banner-lg {
-    display: table-cell !important;
-  }
-  tr.page-id-56639 .banner-row div.banner-lg,
-  tr.page-id-285 .banner-row div.banner-lg {
-    display: table-row !important;
-  }
-  th.page-id-56639 .banner-row div.banner-lg,
-  th.page-id-285 .banner-row div.banner-lg,
-  td.page-id-56639 .banner-row div.banner-lg,
-  td.page-id-285 .banner-row div.banner-lg {
-    display: table-cell !important;
-  }
-}
-.page-id-56639 .banner-row div.banner-lg,
-.page-id-285 .banner-row div.banner-lg,
-tr.page-id-56639 .banner-row div.banner-lg,
-tr.page-id-285 .banner-row div.banner-lg,
-th.page-id-56639 .banner-row div.banner-lg,
-th.page-id-285 .banner-row div.banner-lg,
-td.page-id-56639 .banner-row div.banner-lg,
-td.page-id-285 .banner-row div.banner-lg {
-  display: none !important;
-}
-@media (min-width: 1200px) {
-  .page-id-56639 .banner-row div.banner-lg,
-  .page-id-285 .banner-row div.banner-lg {
-    display: block !important;
-  }
-  table.page-id-56639 .banner-row div.banner-lg,
-  table.page-id-285 .banner-row div.banner-lg {
-    display: table;
-  }
-  tr.page-id-56639 .banner-row div.banner-lg,
-  tr.page-id-285 .banner-row div.banner-lg {
-    display: table-row !important;
-  }
-  th.page-id-56639 .banner-row div.banner-lg,
-  th.page-id-285 .banner-row div.banner-lg,
-  td.page-id-56639 .banner-row div.banner-lg,
-  td.page-id-285 .banner-row div.banner-lg {
-    display: table-cell !important;
-  }
-  tr.page-id-56639 .banner-row div.banner-lg,
-  tr.page-id-285 .banner-row div.banner-lg {
-    display: table-row !important;
-  }
-  th.page-id-56639 .banner-row div.banner-lg,
-  th.page-id-285 .banner-row div.banner-lg,
-  td.page-id-56639 .banner-row div.banner-lg,
-  td.page-id-285 .banner-row div.banner-lg {
-    display: table-cell !important;
+  .page-id-56639 .banner-row .banner.banner-lg,
+  .page-id-285 .banner-row .banner.banner-lg,
+  tr.page-id-56639 .banner-row .banner.banner-lg,
+  tr.page-id-285 .banner-row .banner.banner-lg,
+  th.page-id-56639 .banner-row .banner.banner-lg,
+  th.page-id-285 .banner-row .banner.banner-lg,
+  td.page-id-56639 .banner-row .banner.banner-lg,
+  td.page-id-285 .banner-row .banner.banner-lg {
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
-  .page-id-56639 .banner-row div.banner-lg,
-  .page-id-285 .banner-row div.banner-lg {
+  .page-id-56639 .banner-row .banner.banner-lg,
+  .page-id-285 .banner-row .banner.banner-lg {
     display: none !important;
   }
-  .page-id-56639 .banner-row div.banner-lg,
-  .page-id-285 .banner-row div.banner-lg,
-  tr.page-id-56639 .banner-row div.banner-lg,
-  tr.page-id-285 .banner-row div.banner-lg,
-  th.page-id-56639 .banner-row div.banner-lg,
-  th.page-id-285 .banner-row div.banner-lg,
-  td.page-id-56639 .banner-row div.banner-lg,
-  td.page-id-285 .banner-row div.banner-lg {
+  .page-id-56639 .banner-row .banner.banner-lg,
+  .page-id-285 .banner-row .banner.banner-lg,
+  tr.page-id-56639 .banner-row .banner.banner-lg,
+  tr.page-id-285 .banner-row .banner.banner-lg,
+  th.page-id-56639 .banner-row .banner.banner-lg,
+  th.page-id-285 .banner-row .banner.banner-lg,
+  td.page-id-56639 .banner-row .banner.banner-lg,
+  td.page-id-285 .banner-row .banner.banner-lg {
     display: none !important;
   }
 }
-.page-id-56639 .banner-row div.banner-sm,
-.page-id-285 .banner-row div.banner-sm {
+.page-id-56639 .banner-row .banner.banner-lg .banner-background,
+.page-id-285 .banner-row .banner.banner-lg .banner-background {
+  width: 100%;
+  background-color: #171717;
+  height: 140px;
+  z-index: -1;
+  position: relative;
+  top: 29%;
+}
+.page-id-56639 .banner-row .banner.banner-sm,
+.page-id-285 .banner-row .banner.banner-sm {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_380x160.png');
-  display: none !important;
   height: 160px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .page-id-56639 .banner-row div.banner-sm,
-  .page-id-285 .banner-row div.banner-sm {
+  .page-id-56639 .banner-row .banner.banner-sm,
+  .page-id-285 .banner-row .banner.banner-sm {
     display: none !important;
   }
-  .page-id-56639 .banner-row div.banner-sm,
-  .page-id-285 .banner-row div.banner-sm,
-  tr.page-id-56639 .banner-row div.banner-sm,
-  tr.page-id-285 .banner-row div.banner-sm,
-  th.page-id-56639 .banner-row div.banner-sm,
-  th.page-id-285 .banner-row div.banner-sm,
-  td.page-id-56639 .banner-row div.banner-sm,
-  td.page-id-285 .banner-row div.banner-sm {
+  .page-id-56639 .banner-row .banner.banner-sm,
+  .page-id-285 .banner-row .banner.banner-sm,
+  tr.page-id-56639 .banner-row .banner.banner-sm,
+  tr.page-id-285 .banner-row .banner.banner-sm,
+  th.page-id-56639 .banner-row .banner.banner-sm,
+  th.page-id-285 .banner-row .banner.banner-sm,
+  td.page-id-56639 .banner-row .banner.banner-sm,
+  td.page-id-285 .banner-row .banner.banner-sm {
     display: none !important;
   }
 }
 @media (min-width: 1200px) {
-  .page-id-56639 .banner-row div.banner-sm,
-  .page-id-285 .banner-row div.banner-sm {
+  .page-id-56639 .banner-row .banner.banner-sm,
+  .page-id-285 .banner-row .banner.banner-sm {
     display: none !important;
   }
-  .page-id-56639 .banner-row div.banner-sm,
-  .page-id-285 .banner-row div.banner-sm,
-  tr.page-id-56639 .banner-row div.banner-sm,
-  tr.page-id-285 .banner-row div.banner-sm,
-  th.page-id-56639 .banner-row div.banner-sm,
-  th.page-id-285 .banner-row div.banner-sm,
-  td.page-id-56639 .banner-row div.banner-sm,
-  td.page-id-285 .banner-row div.banner-sm {
+  .page-id-56639 .banner-row .banner.banner-sm,
+  .page-id-285 .banner-row .banner.banner-sm,
+  tr.page-id-56639 .banner-row .banner.banner-sm,
+  tr.page-id-285 .banner-row .banner.banner-sm,
+  th.page-id-56639 .banner-row .banner.banner-sm,
+  th.page-id-285 .banner-row .banner.banner-sm,
+  td.page-id-56639 .banner-row .banner.banner-sm,
+  td.page-id-285 .banner-row .banner.banner-sm {
     display: none !important;
   }
 }
-.page-id-56639 .banner-row div.banner-sm,
-.page-id-285 .banner-row div.banner-sm,
-tr.page-id-56639 .banner-row div.banner-sm,
-tr.page-id-285 .banner-row div.banner-sm,
-th.page-id-56639 .banner-row div.banner-sm,
-th.page-id-285 .banner-row div.banner-sm,
-td.page-id-56639 .banner-row div.banner-sm,
-td.page-id-285 .banner-row div.banner-sm {
-  display: none !important;
-}
-@media (max-width: 767px) {
-  .page-id-56639 .banner-row div.banner-sm,
-  .page-id-285 .banner-row div.banner-sm {
-    display: block !important;
-  }
-  table.page-id-56639 .banner-row div.banner-sm,
-  table.page-id-285 .banner-row div.banner-sm {
-    display: table;
-  }
-  tr.page-id-56639 .banner-row div.banner-sm,
-  tr.page-id-285 .banner-row div.banner-sm {
-    display: table-row !important;
-  }
-  th.page-id-56639 .banner-row div.banner-sm,
-  th.page-id-285 .banner-row div.banner-sm,
-  td.page-id-56639 .banner-row div.banner-sm,
-  td.page-id-285 .banner-row div.banner-sm {
-    display: table-cell !important;
-  }
-  tr.page-id-56639 .banner-row div.banner-sm,
-  tr.page-id-285 .banner-row div.banner-sm {
-    display: table-row !important;
-  }
-  th.page-id-56639 .banner-row div.banner-sm,
-  th.page-id-285 .banner-row div.banner-sm,
-  td.page-id-56639 .banner-row div.banner-sm,
-  td.page-id-285 .banner-row div.banner-sm {
-    display: table-cell !important;
-  }
+.page-id-56639 .banner-row .banner.banner-sm .banner-background,
+.page-id-285 .banner-row .banner.banner-sm .banner-background {
+  width: 100%;
+  background-color: #171717;
+  height: 78px;
+  z-index: -1;
+  position: relative;
+  top: 29%;
 }
 .page-alwayslearning p {
   margin: 0 0 80px;
