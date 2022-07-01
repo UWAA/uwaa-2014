@@ -13551,7 +13551,7 @@ Typography
   background-repeat: no-repeat, no-repeat;
   background-position-x: right, 20px;
   background-position-y: bottom, 95%;
-  background-size: 15vw, 10vw auto;
+  background-size: 50% auto, 40% auto;
 }
 .page-id-56639 .registration-item-row .registration-item.virtual,
 .page-id-285 .registration-item-row .registration-item.virtual {
