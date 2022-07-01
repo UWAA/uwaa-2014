@@ -119,7 +119,7 @@ get_header();
         <div class="registration-item pups">
             <h2>kids</h2>
             <p class="subhead">husky pups run</p>
-            <p class="copy">Kids under 12 can join the fun, run with the pack, and get a sweet t-shirt.</p>
+            <p class="copy">Kids under 10 can join the fun, run with the pack, and get a sweet t-shirt.</p>
             <p class="price">$10</p>
         </div>
         <div class="registration-item dogs">
