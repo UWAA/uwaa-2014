@@ -126,7 +126,7 @@ get_header();
             <h2>dogs</h2>
             <p class="subhead">four-legged fun</p>
             <p class="copy">Register your dog to receive a snazzy dogdanna. Two sizes available to fit pugs to pointers.</p>
-            <p class="price">$15</p>
+            <p class="price">$5</p>
         </div>
         <div class="registration-item virtual">
             <h2>VIRTUAL</h2>
@@ -194,7 +194,7 @@ get_header();
     </div>
   </div>
 
-  <div class="container-fluid map-container light-purple-background">    
+  <!-- <div class="container-fluid map-container light-purple-background">    
   <div class="row no-gutters">
 
     <div class="container">
@@ -224,7 +224,7 @@ get_header();
 
 
     </div>
-  </div>
+  </div> -->
 
 
   <div class="container-fluid white-background">

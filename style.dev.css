@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l51xkt4b
+ Version: 1.27.0.l52tpm5t
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13541,13 +13541,13 @@ Typography
 }
 .page-id-56639 .registration-item-row .registration-item.pups,
 .page-id-285 .registration-item-row .registration-item.pups {
-  background-image: url('assets/dawgdash23/Dawg-Dash-PupsRun_219x197.png');
+  background-image: url('assets/dawgdash23/Dawg-Dash-PupsRun_Shadow_219x197.png');
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 .page-id-56639 .registration-item-row .registration-item.dogs,
 .page-id-285 .registration-item-row .registration-item.dogs {
-  background-image: url('assets/dawgdash23/Dawg-Dash-Dawgdanna_219x197.png'), url('assets/dawgdash23/2023_Dawg-Dash-Dawgdanna-WSECU_250x38.png');
+  background-image: url('assets/dawgdash23/Dawg-Dash-Dawgdanna_Shadow_219x197.png'), url('assets/dawgdash23/2023_Dawg-Dash-Dawgdanna-WSECU_250x38.png');
   background-repeat: no-repeat, no-repeat;
   background-position-x: right, 20px;
   background-position-y: bottom, 95%;
@@ -13555,7 +13555,7 @@ Typography
 }
 .page-id-56639 .registration-item-row .registration-item.virtual,
 .page-id-285 .registration-item-row .registration-item.virtual {
-  background-image: url('assets/dawgdash23/Dawg-Dash-Virtual_219x197.png');
+  background-image: url('assets/dawgdash23/Dawg-Dash-Virtual_Shadow_219x197.png');
   background-repeat: no-repeat;
   background-position: bottom right;
 }
