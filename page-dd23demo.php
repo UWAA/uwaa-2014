@@ -65,9 +65,9 @@ get_header();
                 <h2><?php html_entity_decode(the_field('registration_details_title') ) ?></h2>
                 <p><?php html_entity_decode(the_field('registration_details_copy') ) ?></p>
                 <ul>
-                    <li><?php html_entity_decode(the_field('general_public_title') ) ?><span class="price"><?php html_entity_decode(the_field('general_public_price') ) ?></span></li>
-                    <li><?php html_entity_decode(the_field('member_title') ) ?><span class="price"><?php html_entity_decode(the_field('member_price') ) ?></span></li>
-                    <li><?php html_entity_decode(the_field('student_title') ) ?><span class="price"><?php html_entity_decode(the_field('student_price') ) ?></span></li>
+                    <li><div><?php html_entity_decode(the_field('general_public_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('general_public_price') ) ?></div></li>
+                    <li><div><?php html_entity_decode(the_field('member_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('member_price') ) ?></div></li>
+                    <li><div><?php html_entity_decode(the_field('student_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('student_price') ) ?></div></li>
                 </ul>
 
             </div>
@@ -167,21 +167,25 @@ get_header();
   </div>
 
 
-    <div class="container-fluid white-background">
+    <div class="container-fluid black-background">
   <div class="row no-gutters">
 
    
-      <div class="sponsor-block-row">
-        
-            <div class="sponsor-block alaska"></div>
-        
+  <div class="sponsor-block-row">
+            <a href="https://www.alaskaair.com/promo/as2216">
+              <div class="sponsor-block alaska"></div>
+            </a>
           
             
         </div>
 
         <div class="sponsor-block-row">
-              <div class="sponsor-block brooks half-size"></div>
-            <div class="sponsor-block att half-size"></div>
+              <div class="sponsor-block brooks half-size">
+               
+              </div>
+            <div class="sponsor-block att half-size">
+              
+            </div>
         </div>
 
     
@@ -259,9 +263,9 @@ get_header();
       <div class="faq-row white-background">            
             <div class="register-row-content">              
               <p style="text-align: center;"><em>Special thanks to our partners</em></p>
-<p style="text-align: center;"><a href="http://alaskaair.com"><img class="aligncenter wp-image-22219" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2019/09/17151258/Logo_AlaskaAirlines_190x701.png" alt="Alaska Airlines logo" width="204" height="90" /></a></p>
+<p style="text-align: center;"><a href="http://alaskaair.com"><img class="aligncenter wp-image-22219" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2022/06/30230420/2023_Dawg-Dash-Partner-Alaska_800x270.png" alt="Alaska Airlines logo" width="204" height="90" /></a></p>
 <p style="text-align: center;"><a href="https://www.att.com/"><img class="aligncenter wp-image-21331 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2019/08/21115831/Logo_ATT_190x70.gif" alt="logo_01_BECU" width="131" height="48" /></a><a href="https://www.becu.org/everyday-banking/debit-card/uw-card"><img class="aligncenter wp-image-29659 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2015/06/10172428/Logo_BECU_190x70.gif" alt="" width="190" height="70" /></a></p>
-<p style="text-align: center;"><a href="https://www.brooksrunning.com/"><img class="aligncenter wp-image-21340 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2017/05/10183156/logo_Brooks.jpg" alt="logo_Brooks" width="131" height="48" /></a> <a href="http://www.bookstore.washington.edu/home/home.taf?"><img class="aligncenter wp-image-21328 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2017/05/10183158/logo_00_bookstore1.png" alt="logo_00_bookstore" width="131" height="48" /></a><a href="https://www.uwmedicine.org/"><img class="aligncenter wp-image-51338" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2021/08/11120945/UWM_CobrandedLogo-300x88.jpg" alt="" width="160" height="47" /></a><a href="https://wsecu.org/"><img class="aligncenter wp-image-21330 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2017/05/10183203/logo_05_WSECU.png" alt="logo_05_WSECU" width="131" height="48" /></a></p>
+<p style="text-align: center;"><a href="https://www.brooksrunning.com/"><img class="aligncenter wp-image-21340 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2017/05/10183156/logo_Brooks.jpg" alt="logo_Brooks" width="131" height="48" /></a> <a href="http://www.bookstore.washington.edu/home/home.taf?"><img class="aligncenter wp-image-21328 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2022/06/30230423/2023_Dawg-Dash-Partner-UBS_186x70-1.png" alt="logo_00_bookstore" width="131" height="48" /></a><a href="https://www.uwmedicine.org/"><img class="aligncenter wp-image-51338" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2021/08/11120945/UWM_CobrandedLogo-300x88.jpg" alt="" width="160" height="47" /></a><a href="https://wsecu.org/"><img class="aligncenter wp-image-21330 size-full" src="https://uw-s3-cdn.s3.us-west-2.amazonaws.com/wp-content/uploads/sites/94/2017/05/10183203/logo_05_WSECU.png" alt="logo_05_WSECU" width="131" height="48" /></a></p>
             
                 
          </div>

@@ -201,10 +201,24 @@
                                 list-style: none;
                                 padding: 0;
                                 margin-top: 15px;
+                                color: @ddyellow;
+                                font-family: "Encode Sans Wide", sans-serif;
+                                text-transform: uppercase;
+                                font-weight: 900;
 
-                                .price{
-                                    margin-left: 15%;
+                                
+                                li{
+                                   div{
+                                    display: inline-block;
+                                    
+                                    
+                                    &:first-child{
+                                        width: 75%
+                                    }
+                                   }
                                 }
+
+                               
                             }
                     
                         }
@@ -327,14 +341,16 @@
 
                         &.pups{
                             background-image: url('assets/dawgdash23/Dawg-Dash-PupsRun_219x197.png');
-                            background-repeat: no-repeat;                            
-                            background-position: bottom right;
+                                background-repeat: no-repeat;
+                                background-position: bottom right;
                         }
 
                         &.dogs{
-                            background-image: url('assets/dawgdash23/Dawg-Dash-Dawgdanna_219x197.png');
-                            background-repeat: no-repeat;                            
-                            background-position: bottom right;
+                            background-image: url('assets/dawgdash23/Dawg-Dash-Dawgdanna_219x197.png'), url('assets/dawgdash23/2023_Dawg-Dash-Dawgdanna-WSECU_250x38.png');
+                            background-repeat: no-repeat, no-repeat;                            
+                            background-position-x: right, 20px;
+                            background-position-y: bottom, 95%;
+                            background-size: 15vw, 10vw auto;
                         }
 
                         &.virtual{
@@ -354,9 +370,10 @@
                 
 
                     .sponsor-block{
+                        display: block;
                         .make-xs-column(12);
                         background-color: @black;
-                        min-height:280px;
+                        min-height:307px;
                         background-size: contain;                        
                         background-repeat: no-repeat;
                         background-position: center;
@@ -365,13 +382,10 @@
                                 background-size: contain;
                         }
 
-                        
-                        
-
                         &.half-size{
-                            .make-md-column(6);                                                      
+                            .make-sm-column(6);                                                      
                             background-position: left;
-                            min-height: 280px;
+                            min-height: 375px;
 
                             &:first-child{
                                 background-position: right;
@@ -389,6 +403,7 @@
                         }
 
                         &.alaska{
+                            // background-color: #1bb1d2;
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_1200x280.jpg');                            
 
                             @media (max-width: @screen-md-max) {
@@ -407,11 +422,15 @@
                         }
 
                         &.brooks{
+                            
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module3-Brooks_1200x375.png');
+                            background-repeat: no-repeat;
 
                         &.half-size  {
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
-                            // background-size: 625px;
+                            .overlay{
+                                background: linear-gradient(202deg, rgba(197, 192, 171, 1) 0%, rgba(224, 220, 205, 1) 100%);
+                            }
                             
                         }
                         }
@@ -439,6 +458,10 @@
 
                     
                     
+                }
+
+                #map {
+                    height: 450px;
                 }
 
                 .faq-row{

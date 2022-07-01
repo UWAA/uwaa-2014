@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l51gwfmf
+ Version: 1.27.0.l51xkt4b
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13201,10 +13201,18 @@ Typography
   list-style: none;
   padding: 0;
   margin-top: 15px;
+  color: #ffd637;
+  font-family: "Encode Sans Wide", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
 }
-.page-id-56639 .details-row .copy ul .price,
-.page-id-285 .details-row .copy ul .price {
-  margin-left: 15%;
+.page-id-56639 .details-row .copy ul li div,
+.page-id-285 .details-row .copy ul li div {
+  display: inline-block;
+}
+.page-id-56639 .details-row .copy ul li div:first-child,
+.page-id-285 .details-row .copy ul li div:first-child {
+  width: 75%;
 }
 .page-id-56639 .details-row .image,
 .page-id-285 .details-row .image {
@@ -13539,9 +13547,11 @@ Typography
 }
 .page-id-56639 .registration-item-row .registration-item.dogs,
 .page-id-285 .registration-item-row .registration-item.dogs {
-  background-image: url('assets/dawgdash23/Dawg-Dash-Dawgdanna_219x197.png');
-  background-repeat: no-repeat;
-  background-position: bottom right;
+  background-image: url('assets/dawgdash23/Dawg-Dash-Dawgdanna_219x197.png'), url('assets/dawgdash23/2023_Dawg-Dash-Dawgdanna-WSECU_250x38.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position-x: right, 20px;
+  background-position-y: bottom, 95%;
+  background-size: 15vw, 10vw auto;
 }
 .page-id-56639 .registration-item-row .registration-item.virtual,
 .page-id-285 .registration-item-row .registration-item.virtual {
@@ -13556,6 +13566,7 @@ Typography
 }
 .page-id-56639 .sponsor-block-row .sponsor-block,
 .page-id-285 .sponsor-block-row .sponsor-block {
+  display: block;
   position: relative;
   float: left;
   width: 100%;
@@ -13563,7 +13574,7 @@ Typography
   padding-left: 15px;
   padding-right: 15px;
   background-color: #000000;
-  min-height: 280px;
+  min-height: 307px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -13581,16 +13592,16 @@ Typography
   padding-left: 15px;
   padding-right: 15px;
   background-position: left;
-  min-height: 280px;
+  min-height: 375px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .page-id-56639 .sponsor-block-row .sponsor-block.half-size,
   .page-id-285 .sponsor-block-row .sponsor-block.half-size {
     float: left;
     width: 50%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .page-id-56639 .sponsor-block-row .sponsor-block.half-size,
   .page-id-285 .sponsor-block-row .sponsor-block.half-size {
     float: left;
@@ -13632,10 +13643,15 @@ Typography
 .page-id-56639 .sponsor-block-row .sponsor-block.brooks,
 .page-id-285 .sponsor-block-row .sponsor-block.brooks {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module3-Brooks_1200x375.png');
+  background-repeat: no-repeat;
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.brooks.half-size,
 .page-id-285 .sponsor-block-row .sponsor-block.brooks.half-size {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.brooks.half-size .overlay,
+.page-id-285 .sponsor-block-row .sponsor-block.brooks.half-size .overlay {
+  background: linear-gradient(202deg, #c5c0ab 0%, #e0dccd 100%);
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.att,
 .page-id-285 .sponsor-block-row .sponsor-block.att {
@@ -13704,6 +13720,10 @@ Typography
   text-align: center;
   padding: 10px 0;
   text-transform: uppercase;
+}
+.page-id-56639 #map,
+.page-id-285 #map {
+  height: 450px;
 }
 .page-id-56639 .faq-row .faq-content,
 .page-id-285 .faq-row .faq-content {
