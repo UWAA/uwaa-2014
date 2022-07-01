@@ -180,8 +180,9 @@ get_header();
         </div>
 
         <div class="sponsor-block-row">
+            <a href="https://www.brooksrunning.com/en_us/blog/training-workouts/">
               <div class="sponsor-block brooks half-size">
-               
+               </a>
               </div>
             <div class="sponsor-block att half-size">
               
