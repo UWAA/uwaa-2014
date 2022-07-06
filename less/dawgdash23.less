@@ -11,6 +11,8 @@
 
 
 .dawgdash-container {
+    // .container();
+    // background-color: #9881b8;
     font-size: 18px;
 
     /* Medium devices (desktops, 1199px and lower) */
@@ -30,6 +32,8 @@
 }
 
 .page-id-56639, .page-id-285 {
+
+    // background-color: @black;
 
         .black-background {
             background-color: @black;
@@ -68,6 +72,10 @@
                 // .hidden-sm();            
                 padding: 10vh 0 10vh 15vw;
                 text-align: right;
+
+                @media (max-width: @screen-sm-max) {
+                        padding: 5vh 0 5vh 15vw;
+                }
     
                 img {
                     object-fit: cover;
@@ -87,7 +95,10 @@
                 .make-sm-column(6);
                 padding: 50px 15vw 50px 50px;
                 color: @ddyellow;
-                background-color: transparent;    
+                background-color: transparent;
+                
+                
+                   
                 
     
                 @media (min-width: @screen-sm-min) AND (max-width: 900px) {
@@ -109,8 +120,7 @@
                     color: @white;
                     font-size: 1.5em;
                     line-height: 1;
-                    margin-bottom: 0;
-                    
+                    margin-bottom: 0;                   
     
                 }
     
@@ -187,6 +197,10 @@
                                 font-size: 3em;
                                 margin: 0;
                                 line-height: 1;
+
+                                @media (max-width: @screen-sm-max) {
+                                        font-size: 2.5em;
+                                    }
                     
                     
                             }
@@ -231,6 +245,13 @@
                         .make-sm-column(6);
                         // .hidden-sm();
                         text-align: right;
+
+                        @media (max-width: @screen-xs-max) {                            
+                            text-align: center;                            
+                            ;
+                        }
+
+
         
                         img {
                             object-fit: cover;
@@ -241,7 +262,13 @@
                         // when xs viewport - rremove height;
                         @media (max-width: @screen-xs-max) {
                             padding: 10px;
-                            text-align: center;
+                            text-align: center; 
+                            height: 400px;
+                            ;
+                        }
+
+                        @media (max-width: @screen-xs) {                            
+                            height: 350px;
                             ;
                         }
                     }
@@ -429,10 +456,7 @@
                             background-repeat: no-repeat;
 
                         &.half-size  {
-                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
-                            .overlay{
-                                background: linear-gradient(202deg, rgba(197, 192, 171, 1) 0%, rgba(224, 220, 205, 1) 100%);
-                            }
+                            background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');                            
                             
                         }
                         }

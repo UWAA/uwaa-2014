@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l52tpm5t
+ Version: 1.27.0.l522g2q4
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -12941,6 +12941,12 @@ Typography
     width: 50%;
   }
 }
+@media (max-width: 991px) {
+  .page-id-56639 .dawgdash-header .image,
+  .page-id-285 .dawgdash-header .image {
+    padding: 5vh 0 5vh 15vw;
+  }
+}
 .page-id-56639 .dawgdash-header .image img,
 .page-id-285 .dawgdash-header .image img {
   object-fit: cover;
@@ -13189,6 +13195,12 @@ Typography
   margin: 0;
   line-height: 1;
 }
+@media (max-width: 991px) {
+  .page-id-56639 .details-row .copy h2,
+  .page-id-285 .details-row .copy h2 {
+    font-size: 2.5em;
+  }
+}
 .page-id-56639 .details-row .copy p,
 .page-id-285 .details-row .copy p {
   color: #ffffff;
@@ -13238,6 +13250,12 @@ Typography
     width: 50%;
   }
 }
+@media (max-width: 767px) {
+  .page-id-56639 .details-row .image,
+  .page-id-285 .details-row .image {
+    text-align: center;
+  }
+}
 .page-id-56639 .details-row .image img,
 .page-id-285 .details-row .image img {
   object-fit: cover;
@@ -13249,6 +13267,13 @@ Typography
   .page-id-285 .details-row .image {
     padding: 10px;
     text-align: center;
+    height: 400px;
+  }
+}
+@media (max-width: 480px) {
+  .page-id-56639 .details-row .image,
+  .page-id-285 .details-row .image {
+    height: 350px;
   }
 }
 .page-id-56639 .membership-special-row,
@@ -13648,10 +13673,6 @@ Typography
 .page-id-56639 .sponsor-block-row .sponsor-block.brooks.half-size,
 .page-id-285 .sponsor-block-row .sponsor-block.brooks.half-size {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Brooks_638x375.png');
-}
-.page-id-56639 .sponsor-block-row .sponsor-block.brooks.half-size .overlay,
-.page-id-285 .sponsor-block-row .sponsor-block.brooks.half-size .overlay {
-  background: linear-gradient(202deg, #c5c0ab 0%, #e0dccd 100%);
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.att,
 .page-id-285 .sponsor-block-row .sponsor-block.att {
