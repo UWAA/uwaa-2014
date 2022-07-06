@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l522g2q4
+ Version: 1.27.0.l5a6kcif
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13185,6 +13185,12 @@ Typography
     font-size: 11px;
   }
 }
+@media screen and (max-width: 767px) {
+  .page-id-56639 .details-row .copy,
+  .page-id-285 .details-row .copy {
+    font-size: 13px;
+  }
+}
 .page-id-56639 .details-row .copy h2,
 .page-id-285 .details-row .copy h2 {
   font-family: "Encode Sans Wide", sans-serif;
@@ -13250,10 +13256,10 @@ Typography
     width: 50%;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .page-id-56639 .details-row .image,
   .page-id-285 .details-row .image {
-    text-align: center;
+    border-bottom: 5px solid #9881b8;
   }
 }
 .page-id-56639 .details-row .image img,
@@ -13263,17 +13269,12 @@ Typography
   object-position: center center;
 }
 @media (max-width: 767px) {
-  .page-id-56639 .details-row .image,
-  .page-id-285 .details-row .image {
+  .page-id-56639 .details-row .image img,
+  .page-id-285 .details-row .image img {
+    object-fit: contain;
     padding: 10px;
     text-align: center;
     height: 400px;
-  }
-}
-@media (max-width: 480px) {
-  .page-id-56639 .details-row .image,
-  .page-id-285 .details-row .image {
-    height: 350px;
   }
 }
 .page-id-56639 .membership-special-row,
@@ -13533,6 +13534,13 @@ Typography
     width: 33.33333333%;
   }
 }
+@media (max-width: 767px) {
+  .page-id-56639 .registration-item-row .registration-item,
+  .page-id-285 .registration-item-row .registration-item {
+    font-size: 18px;
+    border-bottom: 5px solid #9881b8;
+  }
+}
 .page-id-56639 .registration-item-row .registration-item h2,
 .page-id-285 .registration-item-row .registration-item h2 {
   color: #9880b8;
@@ -13555,6 +13563,12 @@ Typography
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 1em;
   line-height: 1;
+}
+@media (max-width: 767px) {
+  .page-id-56639 .registration-item-row .registration-item .copy,
+  .page-id-285 .registration-item-row .registration-item .copy {
+    padding-right: 40%;
+  }
 }
 .page-id-56639 .registration-item-row .registration-item .price,
 .page-id-285 .registration-item-row .registration-item .price {

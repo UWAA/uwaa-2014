@@ -8,6 +8,8 @@
 @ddyellow: #FFD637;
 @ddpurple: #36246a;
 @ddlightpurple: #9880B8;
+@ddbackground: #9881b8;
+
 
 
 .dawgdash-container {
@@ -188,6 +190,10 @@
                             @media (min-width: @screen-sm-min) AND (max-width: 900px) {
                                 font-size: 11px;
                             }
+
+                            @media screen and (max-width: @screen-xs-max) {
+                                font-size: 13px;
+                            }
                     
                             h2 {
                                 font-family: "Encode Sans Wide", sans-serif;
@@ -246,31 +252,29 @@
                         // .hidden-sm();
                         text-align: right;
 
-                        @media (max-width: @screen-xs-max) {                            
-                            text-align: center;                            
-                            ;
+                        @media screen and (max-width: @screen-xs-max) {
+                            border-bottom: 5px solid @ddbackground;                            
                         }
-
 
         
                         img {
                             object-fit: cover;
                             height: auto;
                             object-position: center center;
-                        }
-        
-                        // when xs viewport - rremove height;
-                        @media (max-width: @screen-xs-max) {
+
+                            @media (max-width: @screen-xs-max) {
+                            object-fit: contain;
                             padding: 10px;
                             text-align: center; 
                             height: 400px;
-                            ;
+                            
+                            
                         }
-
-                        @media (max-width: @screen-xs) {                            
-                            height: 350px;
-                            ;
+                        
                         }
+        
+                        
+                        
                     }
         
                     
@@ -334,6 +338,11 @@
                         min-height: 389px;
                         background: rgb(0, 0, 0);
                         background: linear-gradient(256deg, rgba(0, 0, 0, 1) 0%, rgba(64, 64, 64, 1) 100%);
+
+                        @media (max-width: @screen-xs-max) {
+                        font-size: 18px;
+                        border-bottom: 5px solid @ddbackground;
+                            }
                         
                         h2{
                             color: @ddlightpurple;
@@ -358,6 +367,12 @@
                             font-family: "Open Sans", Arial, sans-serif;
                             font-size: 1em;
                             line-height: 1;
+
+                            @media (max-width: @screen-xs-max) {
+                            
+                            padding-right: 40%;
+                            
+                        }
                         }
 
                         .price{
