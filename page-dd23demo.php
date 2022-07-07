@@ -53,8 +53,7 @@ if( $headerImage ) {
 
 
 
-<div class="black-background">
-<div class="row no-gutters">
+
 
 
 
@@ -88,11 +87,7 @@ if( $detailsImage ) {
 
 
 
-</div>
-</div>
 
-<div class="light-purple-background">
-<div class="row no-gutters">
 
 
 
@@ -104,12 +99,6 @@ if( $detailsImage ) {
 </div>
 
 
-
-</div>
-</div>
-
-<div class="black-background">
-<div class="row no-gutters">
 
 
 
@@ -137,11 +126,7 @@ if( $detailsImage ) {
 
 </div>
 
-</div>
 
-
-
-</div>
 
 
 
