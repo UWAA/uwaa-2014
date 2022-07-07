@@ -63,8 +63,8 @@ if( $headerImage ) {
 <h2><?php html_entity_decode(the_field('registration_details_title') ) ?></h2>
 <p><?php html_entity_decode(the_field('registration_details_copy') ) ?></p>
 <ul>
-<li><div><?php html_entity_decode(the_field('general_public_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('general_public_price') ) ?></div></li>
 <li><div><?php html_entity_decode(the_field('member_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('member_price') ) ?></div></li>
+<li><div><?php html_entity_decode(the_field('general_public_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('general_public_price') ) ?></div></li>
 <li><div><?php html_entity_decode(the_field('student_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('student_price') ) ?></div></li>
 </ul>
 
@@ -115,22 +115,22 @@ if( $detailsImage ) {
 
 <div class="registration-item-row black-background">
 <div class="registration-item pups">
-<h2>kids</h2>
-<p class="subhead">husky pups run</p>
-<p class="copy">Kids under 10 can join the fun, run with the pack, and get a sweet t-shirt.</p>
-<p class="price">$10</p>
+<h2><?php html_entity_decode(the_field('registration_items_pups_title') ) ?></h2>
+<p class="subhead"><?php html_entity_decode(the_field('registration_items_pups_subhead') ) ?></p>
+<p class="copy"><?php html_entity_decode(the_field('registration_items_pups_copy') ) ?></p>
+<p class="price">$<?php html_entity_decode(the_field('registration_items_pups_price') ) ?></p>
 </div>
 <div class="registration-item dogs">
-<h2>dogs</h2>
-<p class="subhead">four-legged fun</p>
-<p class="copy">Register your dog to receive a snazzy dogdanna. Two sizes available to fit pugs to pointers.</p>
-<p class="price">$5</p>
+<h2><?php html_entity_decode(the_field('registration_items_dogs_title') ) ?></h2>
+<p class="subhead"><?php html_entity_decode(the_field('registration_items_dogs_subhead') ) ?></p>
+<p class="copy"><?php html_entity_decode(the_field('registration_items_dogs_copy') ) ?></p>
+<p class="price">$<?php html_entity_decode(the_field('registration_items_dogs_price') ) ?></p>
 </div>
 <div class="registration-item virtual">
-<h2>RUN ANYWHERE</h2>
-<p class="subhead">LOREM IPSUM</p>
-<p class="copy">Not in Seattle? We’ve got you covered. Check out our virtual options and run where you are!  </p>
-<p class="price">$15</p>
+<h2><?php html_entity_decode(the_field('registration_items_virtual_title') ) ?></h2>
+<p class="subhead"><?php html_entity_decode(the_field('registration_items_virtual_subhead') ) ?></p>
+<p class="copy"><?php html_entity_decode(the_field('registration_items_virtual_copy') ) ?></p>
+<p class="price">$<?php html_entity_decode(the_field('registration_items_virtual_price') ) ?></p>
 </div>
 
 
