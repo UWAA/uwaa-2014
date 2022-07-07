@@ -35,8 +35,7 @@ if( $headerImage ) {
 </div>
 
 
-<div class="container-fluid yellow-background">
-<div class="row no-gutters">
+
 
 
 
@@ -52,8 +51,7 @@ if( $headerImage ) {
 
 </div>
 
-</div>
-</div>
+
 
 <div class="container-fluid black-background">
 <div class="row no-gutters">
@@ -146,8 +144,6 @@ if( $detailsImage ) {
 </div>
 
 
-<div class="container-fluid yellow-background">
-<div class="row no-gutters">
 
 
 
@@ -163,8 +159,7 @@ if( $detailsImage ) {
 
 
 
-</div>
-</div>
+
 
 
 <div class="black-background">
@@ -228,7 +223,7 @@ if( $detailsImage ) {
 </div> -->
 
 
-<div class="container-fluid white-background">
+<div class="white-background">
 <div class="row no-gutters">
 
 
