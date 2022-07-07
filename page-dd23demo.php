@@ -248,17 +248,11 @@ if( $detailsImage ) {
 
 
 <div class="white-background">
-<div class="banner-row no-gutters">
-<div class="banner banner-sm">
-<div class="banner-background"></div>
-</div>
-<div class="banner banner-lg">
-<div class="banner-background"></div>
-</div>
-
-
-
-</div>
+  <div class="banner-row no-gutters">
+    <div class="banner banner-sm"></div>
+    <div class="banner banner-lg"></div>
+    <div class="banner-background"></div>
+  </div>
 </div>
 
 

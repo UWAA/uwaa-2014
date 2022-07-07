@@ -414,15 +414,13 @@
 
                 .sponsor-block-row{   
                     text-align: center;
-                    background-color: @black;
-                    
+                    background-color: @white;                    
                 
 
                     .sponsor-block{
                         display: block;
-                        .make-xs-column(12);
-                        background-color: @black;
-                        min-height:307px;
+                        .make-xs-column(12);                        
+                        min-height:280px;
                         background-size: contain;                        
                         background-repeat: no-repeat;
                         background-position: center;
@@ -432,27 +430,30 @@
                         }
 
                         &.half-size{
-                            .make-sm-column(6);                                                      
-                            background-position: left;
-                            min-height: 375px;
+                            .make-sm-column(6);                                                                                                              
+                            background-position: top;
+                            height: 375px;
+                            margin-bottom: -45px;
 
-                            &:first-child{
-                                background-position: right;
-                             
-                                @media (max-width: @screen-sm-max) {
-                                background-position: center;
-                            }
-
+                            @media (max-width: @screen-md-max) {
+                                margin-bottom: -100px
+                            
                             }
 
                             @media (max-width: @screen-sm-max) {
-                                background-position: center;
+                           margin-bottom: -165px;                            
                             }
+
+                            @media (max-width: @screen-xs-max) {
+                           margin-bottom: 0;
+                           height: 57vw;
+                            }
+
                             
                         }
 
                         &.alaska{
-                            // background-color: #1bb1d2;
+                            background-color: #1bb1d2;
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_1200x280.jpg');                            
 
                             @media (max-width: @screen-md-max) {
@@ -518,51 +519,50 @@
 
                 .banner-row{
                     .make-row();
+                    position: relative;
+
+                    .banner-background {
+                            .hidden-md();
+                            .hidden-lg();
+                            width: 100%;                            
+                            background-color: #171717;
+                            height: 78px;
+                            z-index: 1;
+                            position: relative;
+                            top: -114px;
+                            margin-bottom: -4vh;
+                        }
 
                     
 
                     .banner {
                         
                         background-repeat: no-repeat;
-                        background-position: center;    
-                        z-index: 1;                  
-
+                        background-position: center;
                         
                         
                         &.banner-lg{
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_1200x284.png');
+                            background-size: contain;
                             
                             
                             .hidden-sm();
                             .hidden-xs();
                             height: 284px;
 
-                        .banner-background {
-                                width: 100%;
-                                background-color: #171717;
-                                height: 140px;
-                                z-index: -1;
-                                position: relative;
-                                top: 29%;
-                            }
+                        
                         }
 
                         &.banner-sm{
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Rule_380x160.png');
+                            position:relative;
+                            z-index: 2;
                             
                             
                             .hidden-md();
                             .hidden-lg();
                             height: 160px;
 
-                            .banner-background {
-                                    width: 100%;
-                                    background-color: #171717;
-                                    height: 78px;
-                                    z-index: -1;
-                                    position: relative;
-                                    top: 29%;
-                                }
                         }
                     }
                 }
