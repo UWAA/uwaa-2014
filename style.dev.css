@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5aiqx27
+ Version: 1.27.0.l5aikddy
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -12921,6 +12921,8 @@ Typography
 .page-id-56639 #uw-container #uw-container-inner,
 .page-id-285 #uw-container #uw-container-inner {
   background-color: #000000;
+  background-image: url('assets/dawgdash23/Registration_656x743.png');
+  background-repeat: repeat;
 }
 .page-id-56639 .black-background,
 .page-id-285 .black-background {
@@ -13376,9 +13378,6 @@ Typography
   background-color: #9880b8;
   padding-top: 5px;
   padding-bottom: 5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -13430,38 +13429,6 @@ Typography
 .page-id-285 .membership-special-row:after {
   clear: both;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  .page-id-56639 .membership-special-row,
-  .page-id-285 .membership-special-row {
-    display: none !important;
-  }
-  .page-id-56639 .membership-special-row,
-  .page-id-285 .membership-special-row,
-  tr.page-id-56639 .membership-special-row,
-  tr.page-id-285 .membership-special-row,
-  th.page-id-56639 .membership-special-row,
-  th.page-id-285 .membership-special-row,
-  td.page-id-56639 .membership-special-row,
-  td.page-id-285 .membership-special-row {
-    display: none !important;
-  }
-}
-@media (max-width: 767px) {
-  .page-id-56639 .membership-special-row,
-  .page-id-285 .membership-special-row {
-    display: none !important;
-  }
-  .page-id-56639 .membership-special-row,
-  .page-id-285 .membership-special-row,
-  tr.page-id-56639 .membership-special-row,
-  tr.page-id-285 .membership-special-row,
-  th.page-id-56639 .membership-special-row,
-  th.page-id-285 .membership-special-row,
-  td.page-id-56639 .membership-special-row,
-  td.page-id-285 .membership-special-row {
-    display: none !important;
-  }
-}
 .page-id-56639 .membership-special-row .subtitle,
 .page-id-285 .membership-special-row .subtitle {
   position: relative;
@@ -13474,6 +13441,20 @@ Typography
   text-transform: uppercase;
   line-height: 1;
   text-align: left;
+}
+@media (min-width: 768px) {
+  .page-id-56639 .membership-special-row .subtitle,
+  .page-id-285 .membership-special-row .subtitle {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .membership-special-row .subtitle,
+  .page-id-285 .membership-special-row .subtitle {
+    float: left;
+    width: 100%;
+  }
 }
 @media (min-width: 992px) {
   .page-id-56639 .membership-special-row .subtitle,
@@ -13499,6 +13480,20 @@ Typography
   font-weight: 900;
   font-size: 3.5em;
 }
+@media (min-width: 768px) {
+  .page-id-56639 .membership-special-row .price,
+  .page-id-285 .membership-special-row .price {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .membership-special-row .price,
+  .page-id-285 .membership-special-row .price {
+    float: left;
+    width: 100%;
+  }
+}
 @media (min-width: 992px) {
   .page-id-56639 .membership-special-row .price,
   .page-id-285 .membership-special-row .price {
@@ -13519,6 +13514,20 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-id-56639 .membership-special-row .copy,
+  .page-id-285 .membership-special-row .copy {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .membership-special-row .copy,
+  .page-id-285 .membership-special-row .copy {
+    float: left;
+    width: 100%;
+  }
 }
 @media (min-width: 992px) {
   .page-id-56639 .membership-special-row .copy,
@@ -13542,6 +13551,7 @@ Typography
   font-weight: 900;
   font-size: 1em;
   text-align: left;
+  line-height: 1;
 }
 .page-id-56639 .registration-item-row,
 .page-id-285 .registration-item-row {
@@ -13638,6 +13648,8 @@ Typography
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 900;
+  line-height: 1;
+  margin-bottom: 0;
 }
 .page-id-56639 .registration-item-row .registration-item .copy,
 .page-id-285 .registration-item-row .registration-item .copy {

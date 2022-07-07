@@ -40,6 +40,8 @@
 
     #uw-container #uw-container-inner{
         background-color: @black;
+        background-image: url('assets/dawgdash23/Registration_656x743.png');
+        background-repeat: repeat;
     }
 
         .black-background {
@@ -308,9 +310,7 @@
                 }
 
                 .membership-special-row {
-                    .make-row();
-                    .hidden-sm;
-                    .hidden-xs;
+                    .make-row();                    
                     background-color: @ddlightpurple;
                     padding-top: 5px;
                     padding-bottom: 5px;
@@ -325,7 +325,8 @@
                     border-left: 2px solid @black;
 
                     .subtitle{
-                        .make-md-column(5);                        
+                        .make-sm-column(12);
+                        .make-md-column(5);  
                         font-family: "Encode Sans Wide", sans-serif;
                         font-weight: 900;
                         font-size: 2em;
@@ -336,6 +337,7 @@
                     }
 
                     .price{
+                        .make-sm-column(12);
                         .make-md-column(2);
                         font-family: "Encode Sans Wide", sans-serif;
                         font-weight: 900;
@@ -343,6 +345,7 @@
                     }
 
                     .copy{
+                        .make-sm-column(12);
                         .make-md-column(5);
 
                         p{
@@ -352,6 +355,7 @@
                             font-weight: 900;
                             font-size: 1em;
                             text-align: left;
+                            line-height: 1;
                         }
                     }
         
@@ -387,6 +391,8 @@
                             font-size: 1.5em;
                             text-transform: uppercase;
                             font-weight: 900;
+                            line-height: 1;
+                            margin-bottom: 0;
 
                         }
 
