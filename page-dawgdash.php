@@ -57,17 +57,8 @@ if( $headerImage ) {
 
 
 
-<div class="details-row black-background">            
-<div class="copy">
-<h2><?php html_entity_decode(the_field('registration_details_title') ) ?></h2>
-<p><?php html_entity_decode(the_field('registration_details_copy') ) ?></p>
-<ul>
-<li><div><?php html_entity_decode(the_field('member_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('member_price') ) ?></div></li>
-<li><div><?php html_entity_decode(the_field('general_public_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('general_public_price') ) ?></div></li>
-<li><div><?php html_entity_decode(the_field('student_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('student_price') ) ?></div></li>
-</ul>
+<div class="details-row black-background">
 
-</div>
 <div class="image">
 <?php 
 
@@ -79,6 +70,19 @@ if( $detailsImage ) {
 
 ?>
 </div>
+
+
+<div class="copy">
+<h2><?php html_entity_decode(the_field('registration_details_title') ) ?></h2>
+<p><?php html_entity_decode(the_field('registration_details_copy') ) ?></p>
+<ul>
+<li><div><?php html_entity_decode(the_field('member_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('member_price') ) ?></div></li>
+<li><div><?php html_entity_decode(the_field('general_public_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('general_public_price') ) ?></div></li>
+<li><div><?php html_entity_decode(the_field('student_title') ) ?></div><div class="price">$<?php html_entity_decode(the_field('student_price') ) ?></div></li>
+</ul>
+
+</div>
+
 
 
 

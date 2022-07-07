@@ -205,6 +205,7 @@
                     .copy {
                             .make-xs-column(12);
                             .make-sm-column(6);
+                            .make-sm-column-pull(6);
                             padding: 4vw;                            
                             background-color: transparent;
                     
@@ -278,8 +279,10 @@
                     .image {
                         .make-xs-column(12);
                         .make-sm-column(6);
+                        .make-sm-column-push(6);
                         // .hidden-sm();
                         text-align: right;
+                        padding-right: 0;
 
                         @media screen and (max-width: @screen-xs-max) {
                             border-bottom: 5px solid @ddbackground;                            
@@ -289,16 +292,7 @@
                         img {
                             object-fit: cover;
                             height: auto;
-                            object-position: center center;
-
-                            @media (max-width: @screen-xs-max) {
-                            object-fit: contain;
-                            padding: 10px;
-                            text-align: center; 
-                            height: 400px;
-                            
-                            
-                        }
+                            object-position: center center;                            
                         
                         }
         

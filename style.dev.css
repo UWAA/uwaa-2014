@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5aikddy
+ Version: 1.27.0.l5bmq7z2
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13266,6 +13266,18 @@ Typography
     width: 50%;
   }
 }
+@media (min-width: 768px) {
+  .page-id-56639 .details-row .copy,
+  .page-id-285 .details-row .copy {
+    right: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .details-row .copy,
+  .page-id-285 .details-row .copy {
+    right: 50%;
+  }
+}
 @media (min-width: 768px) AND (max-width: 900px) {
   .page-id-56639 .details-row .copy,
   .page-id-285 .details-row .copy {
@@ -13335,6 +13347,7 @@ Typography
   padding-left: 15px;
   padding-right: 15px;
   text-align: right;
+  padding-right: 0;
 }
 @media (min-width: 768px) {
   .page-id-56639 .details-row .image,
@@ -13348,6 +13361,18 @@ Typography
   .page-id-285 .details-row .image {
     float: left;
     width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .details-row .image,
+  .page-id-285 .details-row .image {
+    left: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .details-row .image,
+  .page-id-285 .details-row .image {
+    left: 50%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -13362,15 +13387,6 @@ Typography
   height: auto;
   object-position: center center;
 }
-@media (max-width: 767px) {
-  .page-id-56639 .details-row .image img,
-  .page-id-285 .details-row .image img {
-    object-fit: contain;
-    padding: 10px;
-    text-align: center;
-    height: 400px;
-  }
-}
 .page-id-56639 .membership-special-row,
 .page-id-285 .membership-special-row {
   margin-left: -15px;
@@ -13378,6 +13394,9 @@ Typography
   background-color: #9880b8;
   padding-top: 5px;
   padding-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   text-align: center;
