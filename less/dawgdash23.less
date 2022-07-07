@@ -16,7 +16,7 @@
     .container();
     background-color: @white;
     font-size: 18px;
-    box-shadow: 0 0 15px 15px @ddbackground;
+    box-shadow: 0 0 400px 15px @ddbackground;
 
     /* Medium devices (desktops, 1199px and lower) */
     @media (max-width: @screen-md-max) {
@@ -170,6 +170,7 @@
                     font-weight: 900;
                     font-size: 2.5em;
                     margin: 0;
+                    line-height: 1;
                 }
 
                 .btn {                    
@@ -252,6 +253,12 @@
                                 li{
                                    div{
                                     display: inline-block;
+                                    line-height: 1;
+                                    margin-bottom: 10px;
+
+                                    &:first-child{
+                                        vertical-align: top;
+                                    }
                                     
                                     
                                     &:first-child{
@@ -314,6 +321,8 @@
                     justify-content: center;
                     text-align: center;
                     padding: 10px 0;
+                    border-right: 2px solid @black;
+                    border-left: 2px solid @black;
 
                     .subtitle{
                         .make-md-column(5);                        

@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5a6kcif
+ Version: 1.27.0.l5aiqx27
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -12835,7 +12835,7 @@ Typography
   padding-right: 15px;
   background-color: #ffffff;
   font-size: 18px;
-  box-shadow: 0 0 15px 15px #9881b8;
+  box-shadow: 0 0 400px 15px #9881b8;
   /* Medium devices (desktops, 1199px and lower) */
   /* Small devices (desktops, 991px and lower) */
   /* X-Small devices (desktops, 767px and lower) */
@@ -13167,6 +13167,7 @@ Typography
   font-weight: 900;
   font-size: 2.5em;
   margin: 0;
+  line-height: 1;
 }
 .page-id-56639 .register-row .register-row-content .btn,
 .page-id-285 .register-row .register-row-content .btn {
@@ -13312,6 +13313,12 @@ Typography
 .page-id-56639 .details-row .copy ul li div,
 .page-id-285 .details-row .copy ul li div {
   display: inline-block;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.page-id-56639 .details-row .copy ul li div:first-child,
+.page-id-285 .details-row .copy ul li div:first-child {
+  vertical-align: top;
 }
 .page-id-56639 .details-row .copy ul li div:first-child,
 .page-id-285 .details-row .copy ul li div:first-child {
@@ -13376,6 +13383,8 @@ Typography
   justify-content: center;
   text-align: center;
   padding: 10px 0;
+  border-right: 2px solid #000000;
+  border-left: 2px solid #000000;
 }
 .page-id-56639 .membership-special-row:before,
 .page-id-285 .membership-special-row:before,
