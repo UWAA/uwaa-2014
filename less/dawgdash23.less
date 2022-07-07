@@ -69,7 +69,8 @@
             background-repeat: no-repeat;
             // background-size: 35% auto;
             background-position: bottom right;
-            background-blend-mode: screen;   
+            background-blend-mode: screen;
+            font-size: .9em;
                      
     
     
@@ -92,7 +93,7 @@
 
                 // when xs viewport - rremove height;
                 @media (max-width: @screen-xs-max) {
-                    padding: 10px;
+                    padding: 10vw;
                     text-align: center;;
                 }
             }
@@ -110,13 +111,19 @@
     
                 @media (min-width: @screen-sm-min) AND (max-width: 900px) {
                     font-size: 11px;
+                    
+                }
+
+                 @media (max-width: @screen-xs-max) {
+                    padding: 10vw 15vw;
+                 
                 }
     
                 h1 {
                     font-family: "Encode Sans Wide", sans-serif;
                     text-transform: uppercase;
                     font-weight: 900;
-                    font-size: 4em;
+                    font-size: 3.8em;
                     margin: 0;
                     line-height: 1;
                     
@@ -126,8 +133,15 @@
                 p {
                     color: @white;
                     font-size: 1.5em;
-                    line-height: 1;
-                    margin-bottom: 0;                   
+                    line-height: 1.2;
+                    margin: 2vh 0;
+
+
+                     // when xs viewport - rremove height;
+                     @media (max-width: @screen-xs-max) {
+                        
+                
+                    }
     
                 }
     
@@ -189,7 +203,7 @@
                     .copy {
                             .make-xs-column(12);
                             .make-sm-column(6);
-                            padding: 50px;                            
+                            padding: 4vw;                            
                             background-color: transparent;
                     
                     

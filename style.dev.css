@@ -12949,6 +12949,7 @@ Typography
   background-repeat: no-repeat;
   background-position: bottom right;
   background-blend-mode: screen;
+  font-size: .9em;
 }
 .page-id-56639 .dawgdash-header:before,
 .page-id-285 .dawgdash-header:before,
@@ -13034,7 +13035,7 @@ Typography
 @media (max-width: 767px) {
   .page-id-56639 .dawgdash-header .image,
   .page-id-285 .dawgdash-header .image {
-    padding: 10px;
+    padding: 10vw;
     text-align: center;
   }
 }
@@ -13069,12 +13070,18 @@ Typography
     font-size: 11px;
   }
 }
+@media (max-width: 767px) {
+  .page-id-56639 .dawgdash-header .text,
+  .page-id-285 .dawgdash-header .text {
+    padding: 10vw 15vw;
+  }
+}
 .page-id-56639 .dawgdash-header .text h1,
 .page-id-285 .dawgdash-header .text h1 {
   font-family: "Encode Sans Wide", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 4em;
+  font-size: 3.8em;
   margin: 0;
   line-height: 1;
 }
@@ -13082,8 +13089,8 @@ Typography
 .page-id-285 .dawgdash-header .text p {
   color: #ffffff;
   font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 0;
+  line-height: 1.2;
+  margin: 2vh 0;
 }
 .page-id-56639 .register-row,
 .page-id-285 .register-row {
@@ -13240,7 +13247,7 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding: 50px;
+  padding: 4vw;
   background-color: transparent;
 }
 @media (min-width: 768px) {
