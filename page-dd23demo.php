@@ -229,7 +229,7 @@ if( $detailsImage ) {
 
 
 <div class="faq-row white-background">            
-<div class="register-row-content">              
+<div class="faq-content">              
 <?php the_field('faq') ?>              
 
 
