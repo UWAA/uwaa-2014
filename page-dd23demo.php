@@ -38,7 +38,7 @@ if( $headerImage ) {
 <div class="container-fluid yellow-background">
 <div class="row no-gutters">
 
-<div class="container">
+
 
 <div class="register-row yellow-background">            
 <div class="register-row-content">              
@@ -48,7 +48,7 @@ if( $headerImage ) {
 
 </div>
 
-</div>
+
 
 </div>
 
@@ -58,7 +58,7 @@ if( $headerImage ) {
 <div class="container-fluid black-background">
 <div class="row no-gutters">
 
-<div class="container">
+
 
 <div class="details-row black-background">            
 <div class="copy">
@@ -84,7 +84,7 @@ if( $detailsImage ) {
 </div>
 
 
-</div>
+
 
 </div>
 
@@ -96,7 +96,7 @@ if( $detailsImage ) {
 <div class="container-fluid light-purple-background">
 <div class="row no-gutters">
 
-<div class="container">
+
 
 <div class="membership-special-row light-purple-background">            
 <div class="subtitle"><?php html_entity_decode(the_field('membership_band_subtitle') ) ?></div>
@@ -105,7 +105,7 @@ if( $detailsImage ) {
 
 </div>
 
-</div>
+
 
 </div>
 </div>
@@ -113,7 +113,7 @@ if( $detailsImage ) {
 <div class="container-fluid black-background">
 <div class="row no-gutters">
 
-<div class="container">
+
 
 <div class="registration-item-row black-background">
 <div class="registration-item pups">
@@ -135,7 +135,7 @@ if( $detailsImage ) {
 <p class="price">$15</p>
 </div>
 
-</div>
+
 
 </div>
 
@@ -149,7 +149,7 @@ if( $detailsImage ) {
 <div class="container-fluid yellow-background">
 <div class="row no-gutters">
 
-<div class="container">
+
 
 <div class="register-row yellow-background">            
 <div class="register-row-content">              
@@ -161,13 +161,13 @@ if( $detailsImage ) {
 
 </div>
 
-</div>
-
-</div>
-</div>
 
 
-<div class="container-fluid black-background">
+</div>
+</div>
+
+
+<div class="black-background">
 <div class="row no-gutters">
 
 
@@ -231,7 +231,7 @@ if( $detailsImage ) {
 <div class="container-fluid white-background">
 <div class="row no-gutters">
 
-<div class="container">
+
 
 <div class="faq-row white-background">            
 <div class="register-row-content">              
@@ -240,14 +240,14 @@ if( $detailsImage ) {
 
 </div>
 
+
+
 </div>
 
 </div>
 
-</div>
 
-
-<div class="container-fluid white-background">
+<div class="white-background">
 <div class="banner-row no-gutters">
 <div class="banner banner-sm">
 <div class="banner-background"></div>
@@ -262,10 +262,10 @@ if( $detailsImage ) {
 </div>
 
 
-<div class="container-fluid white-background">
+<div class="white-background">
 <div class="row no-gutters">
 
-<div class="container">
+
 
 <div class="faq-row white-background">            
 <div class="register-row-content">              
@@ -277,7 +277,7 @@ if( $detailsImage ) {
   
   </div>
   
-  </div>
+  
   
   </div>
   

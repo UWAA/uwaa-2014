@@ -16,6 +16,7 @@
     .container();
     background-color: @white;
     font-size: 18px;
+    box-shadow: 0 0 15px 15px @ddbackground;
 
     /* Medium devices (desktops, 1199px and lower) */
     @media (max-width: @screen-md-max) {
@@ -66,7 +67,7 @@
             align-items: center;
             background-image: url('assets/dawgdash23/Dawg-Dash-Header_656x730.png');
             background-repeat: no-repeat;
-            background-size: 35% auto;
+            // background-size: 35% auto;
             background-position: bottom right;
             background-blend-mode: screen;   
                      
@@ -76,11 +77,11 @@
                 .make-xs-column(12);
                 .make-sm-column(6);
                 // .hidden-sm();            
-                padding: 10vh 0 10vh 15vw;
-                text-align: right;
+                padding: 5vh 0 5vh 0;
+                text-align: center;
 
                 @media (max-width: @screen-sm-max) {
-                        padding: 5vh 0 5vh 15vw;
+                        padding: 5vh 1vw 5vh 1vw;
                 }
     
                 img {
@@ -99,7 +100,7 @@
             .text {
                 .make-xs-column(12);
                 .make-sm-column(6);
-                padding: 50px 15vw 50px 50px;
+                // padding: 50px 15vw 50px 50px;
                 color: @ddyellow;
                 background-color: transparent;
                 

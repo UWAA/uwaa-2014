@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5a6kcif
+ Version: 1.27.0.l5ai2azd
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -12835,6 +12835,7 @@ Typography
   padding-right: 15px;
   background-color: #ffffff;
   font-size: 18px;
+  box-shadow: 0 0 15px 15px #9881b8;
   /* Medium devices (desktops, 1199px and lower) */
   /* Small devices (desktops, 991px and lower) */
   /* X-Small devices (desktops, 767px and lower) */
@@ -12946,7 +12947,6 @@ Typography
   align-items: center;
   background-image: url('assets/dawgdash23/Dawg-Dash-Header_656x730.png');
   background-repeat: no-repeat;
-  background-size: 35% auto;
   background-position: bottom right;
   background-blend-mode: screen;
 }
@@ -13002,8 +13002,8 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding: 10vh 0 10vh 15vw;
-  text-align: right;
+  padding: 5vh 0 5vh 0;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .page-id-56639 .dawgdash-header .image,
@@ -13022,7 +13022,7 @@ Typography
 @media (max-width: 991px) {
   .page-id-56639 .dawgdash-header .image,
   .page-id-285 .dawgdash-header .image {
-    padding: 5vh 0 5vh 15vw;
+    padding: 5vh 1vw 5vh 1vw;
   }
 }
 .page-id-56639 .dawgdash-header .image img,
@@ -13046,7 +13046,6 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding: 50px 15vw 50px 50px;
   color: #ffd637;
   background-color: transparent;
 }
