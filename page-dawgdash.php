@@ -104,6 +104,41 @@ if( $detailsImage ) {
 
 
 
+<?php 
+if(get_field('registration_items_pups_image')){ ?>
+
+<style type="text/css">
+   div.registration-item.pups {
+    background-image: url(<?php the_field('registration_items_pups_image'); ?>) !important;
+   }
+</style>
+
+<?php }?>
+
+<?php 
+if(get_field('registration_items_dogs_image')){ ?>
+
+<style type="text/css">
+   div.registration-item.dogs {
+    background-image: url(<?php the_field('registration_items_dogs_image'); ?>) ,url(<?php echo get_stylesheet_directory_uri(  );?>/assets/dawgdash23/2023_Dawg-Dash-Dawgdanna-WSECU_250x38.png) !important;
+   }
+</style>
+
+<?php }?>
+
+<?php 
+if(get_field('registration_items_virtual_image')){ ?>
+
+<style type="text/css">
+   div.registration-item.virtual {
+    background-image: url(<?php the_field('registration_items_virtual_image'); ?>) !important;
+   }
+</style>
+
+<?php }?>
+
+<!-- background-image: url(assets/dawgdash23/Dawg-Dash-Dawgdanna_Shadow_219x197.png),url(assets/dawgdash23/2023_Dawg-Dash-Dawgdanna-WSECU_250x38.png); -->
+
 
 
 <div class="registration-item-row black-background">
@@ -213,6 +248,14 @@ if( $detailsImage ) {
 
 
 <div class="white-background">
+
+<div class="faq-title-row light-purple-background">            
+
+<div class="title">Frequently Asked Questions</div>
+
+
+</div>
+
 <div class="row no-gutters">
 
 

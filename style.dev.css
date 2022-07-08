@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5bmq7z2
+ Version: 1.27.0.l5byyqns
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6363,6 +6363,10 @@ button.close {
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:before,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:before,
+.page-id-285 .faq-title-row:after,
 .page-id-56639 .banner-row:before,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:before,
@@ -6421,6 +6425,8 @@ button.close {
 .page-id-285 .registration-item-row:after,
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:after,
 .mobile-menu-row:after {
@@ -6524,6 +6530,10 @@ button.close {
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:before,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:before,
+.page-id-285 .faq-title-row:after,
 .page-id-56639 .banner-row:before,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:before,
@@ -6582,6 +6592,8 @@ button.close {
 .page-id-285 .registration-item-row:after,
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:after,
 .mobile-menu-row:after {
@@ -12917,11 +12929,12 @@ Typography
 .page-id-56639,
 .page-id-285 {
   background-color: #000000;
+  background-image: url('assets/dawgdash23/Registration_656x743.png');
 }
 .page-id-56639 #uw-container #uw-container-inner,
 .page-id-285 #uw-container #uw-container-inner {
   background-color: #000000;
-  background-image: url('assets/dawgdash23/Registration_656x743.png');
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash-Background_800x800.png');
   background-repeat: repeat;
 }
 .page-id-56639 .black-background,
@@ -12947,8 +12960,9 @@ Typography
   flex-wrap: wrap;
   background-color: #000000;
   align-items: center;
-  background-image: url('assets/dawgdash23/Dawg-Dash-Header_656x730.png');
+  background-image: url('assets/dawgdash23/Dawg-Dash-Header_Wide_656x730.png');
   background-repeat: no-repeat;
+  background-size: 100% auto;
   background-position: bottom right;
   background-blend-mode: screen;
   font-size: .9em;
@@ -13796,6 +13810,13 @@ Typography
     background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_768x180.jpg');
   }
 }
+@media (max-width: 767px) {
+  .page-id-56639 .sponsor-block-row .sponsor-block.alaska,
+  .page-id-285 .sponsor-block-row .sponsor-block.alaska {
+    background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-Alaska_658x375.png');
+    height: 57vw;
+  }
+}
 .page-id-56639 .sponsor-block-row .sponsor-block.brooks,
 .page-id-285 .sponsor-block-row .sponsor-block.brooks {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module3-Brooks_1200x375.png');
@@ -13810,56 +13831,84 @@ Typography
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-ATT_638x375.png');
 }
 .page-id-56639 .course-map-title-row,
-.page-id-285 .course-map-title-row {
+.page-id-285 .course-map-title-row,
+.page-id-56639 .faq-title-row,
+.page-id-285 .faq-title-row {
   margin-left: -15px;
   margin-right: -15px;
 }
 .page-id-56639 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:before,
+.page-id-56639 .faq-title-row:before,
+.page-id-285 .faq-title-row:before,
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:before,
+.page-id-56639 .faq-title-row:before,
+.page-id-285 .faq-title-row:before,
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:before,
+.page-id-56639 .faq-title-row:before,
+.page-id-285 .faq-title-row:before,
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:before,
+.page-id-56639 .faq-title-row:before,
+.page-id-285 .faq-title-row:before,
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
-.page-id-285 .course-map-title-row:after {
+.page-id-285 .course-map-title-row:after,
+.page-id-56639 .faq-title-row:after,
+.page-id-285 .faq-title-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row .title,
-.page-id-285 .course-map-title-row .title {
+.page-id-285 .course-map-title-row .title,
+.page-id-56639 .faq-title-row .title,
+.page-id-285 .faq-title-row .title {
   position: relative;
   float: left;
   width: 100%;
@@ -13868,9 +13917,10 @@ Typography
   padding-right: 15px;
   font-family: "Encode Sans Wide", sans-serif;
   font-weight: 900;
-  font-size: 3.5em;
+  font-size: 2.5em;
   text-align: center;
-  padding: 10px 0;
+  line-height: 1;
+  padding: 3vh;
   text-transform: uppercase;
 }
 .page-id-56639 #map,
