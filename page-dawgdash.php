@@ -166,7 +166,21 @@ if(get_field('registration_items_virtual_image')){ ?>
 </div>
 
 
+<div class="black-background">
+<div class="row no-gutters">
 
+
+<div class="sponsor-block-row">
+<div class="bonus-copy">
+  <div class="subtitle">Members Get More!</div>
+  <div class="copy">Complete your running look with a UWAA member-exclusive cherry blossom cooling buff.</div>
+</div>
+<div class="sponsor-block uwaa"></div>
+
+</div>
+
+  </div>
+  </div>
 
 
 
@@ -194,8 +208,6 @@ if(get_field('registration_items_virtual_image')){ ?>
 <a href="https://www.alaskaair.com/promo/as2216">
 <div class="sponsor-block alaska"></div>
 </a>
-
-
 </div>
 
 <div class="sponsor-block-row">

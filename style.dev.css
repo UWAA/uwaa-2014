@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5byyqns
+ Version: 1.27.0.l5ra9doc
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13730,6 +13730,44 @@ Typography
   text-align: center;
   background-color: #ffffff;
 }
+.page-id-56639 .sponsor-block-row .bonus-copy,
+.page-id-285 .sponsor-block-row .bonus-copy {
+  display: none !important;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #9880b8;
+  color: #36246a;
+  padding: 2vh 15vw 3vh 15px;
+}
+@media (max-width: 767px) {
+  .page-id-56639 .sponsor-block-row .bonus-copy,
+  .page-id-285 .sponsor-block-row .bonus-copy {
+    display: block !important;
+  }
+}
+.page-id-56639 .sponsor-block-row .bonus-copy .subtitle,
+.page-id-285 .sponsor-block-row .bonus-copy .subtitle {
+  font-family: "Encode Sans Wide", sans-serif;
+  font-weight: 900;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: left;
+}
+.page-id-56639 .sponsor-block-row .bonus-copy .copy,
+.page-id-285 .sponsor-block-row .bonus-copy .copy {
+  margin: 0;
+  color: #36246a;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+  text-align: left;
+  line-height: 1;
+}
 .page-id-56639 .sponsor-block-row .sponsor-block,
 .page-id-285 .sponsor-block-row .sponsor-block {
   display: block;
@@ -13791,6 +13829,39 @@ Typography
   .page-id-285 .sponsor-block-row .sponsor-block.half-size {
     margin-bottom: 0;
     height: 57vw;
+  }
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.uwaa,
+.page-id-285 .sponsor-block-row .sponsor-block.uwaa {
+  background-color: #9880b8;
+  background-position: top right;
+  background-image: url('assets/dawgdash23/Dawg-Dash-Buff-FULL_WIDTH_1200X240.png');
+  height: 234px;
+  min-height: 0;
+}
+@media (max-width: 1199px) {
+  .page-id-56639 .sponsor-block-row .sponsor-block.uwaa,
+  .page-id-285 .sponsor-block-row .sponsor-block.uwaa {
+    height: 151px;
+  }
+}
+@media (max-width: 767px) {
+  .page-id-56639 .sponsor-block-row .sponsor-block.uwaa,
+  .page-id-285 .sponsor-block-row .sponsor-block.uwaa {
+    background-image: url('assets/dawgdash23/Dawg-Dash-Buff-MODULE_2_658X240.png');
+    background-size: cover;
+    height: 37.5vw;
+    max-height: 270px;
+    min-height: 240px;
+  }
+}
+@media (max-width: 589px) {
+  .page-id-56639 .sponsor-block-row .sponsor-block.uwaa,
+  .page-id-285 .sponsor-block-row .sponsor-block.uwaa {
+    background-image: url('assets/dawgdash23/Dawg-Dash-Buff-MODULE_2_658X240.png');
+    background-size: contain;
+    background-position: bottom right;
+    min-height: 0;
   }
 }
 .page-id-56639 .sponsor-block-row .sponsor-block.alaska,

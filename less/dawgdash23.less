@@ -438,7 +438,37 @@
 
                 .sponsor-block-row{   
                     text-align: center;
-                    background-color: @white;                    
+                    background-color: @white;
+
+                    .bonus-copy {
+                        .visible-xs-block();                        
+                        .make-xs-column(12);
+                        background-color: @ddlightpurple;
+                        color: @ddpurple;
+                        padding: 2vh 15vw 3vh 15px;
+                        
+
+                        .subtitle {                               
+                                font-family: "Encode Sans Wide", sans-serif;
+                                font-weight: 900;
+                                font-size: 2.5em;
+                                text-transform: uppercase;
+                                line-height: 1;
+                                text-align: left;
+                        
+                            }                        
+                                                    
+                            .copy {
+                                
+                                    margin: 0;
+                                    color: @ddpurple;
+                                    font-family: "Open Sans", Arial, sans-serif;
+                                    font-weight: 900;
+                                    font-size: 2em;
+                                    text-align: left;
+                                    line-height: 1;
+                            }                            
+                    }
                 
 
                     .sponsor-block{
@@ -476,9 +506,39 @@
                             
                         }
 
+                         &.uwaa{
+                            background-color: @ddlightpurple;
+                            background-position: top right;
+                            background-image: url('assets/dawgdash23/Dawg-Dash-Buff-FULL_WIDTH_1200X240.png');                            
+                            height: 234px;
+                            min-height: 0;
+
+                            @media (max-width: @screen-md-max) {                            
+                            height: 151px;
+                            }
+                            
+
+                            @media (max-width: @screen-xs-max) {
+                            background-image: url('assets/dawgdash23/Dawg-Dash-Buff-MODULE_2_658X240.png');
+                            background-size: cover;
+                            height: 37.5vw;
+                            max-height: 270px;
+                            min-height: 240px;
+                            }
+
+                            @media (max-width: 589px) {
+                            background-image: url('assets/dawgdash23/Dawg-Dash-Buff-MODULE_2_658X240.png');
+                            background-size: contain;                                                        
+                            background-position: bottom right;
+                            min-height: 0;
+                            }
+
+                        }
+
                         &.alaska{
                             background-color: #1bb1d2;
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_1200x280.jpg');                            
+                            
 
                             @media (max-width: @screen-md-max) {
                             background-image: url('assets/dawgdash23/2023_Dawg-Dash-Alaska_992x232.jpg');
