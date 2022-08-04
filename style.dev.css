@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l5ra9doc
+ Version: 1.27.0.l6fmdw64
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13835,7 +13835,7 @@ Typography
 .page-id-285 .sponsor-block-row .sponsor-block.uwaa {
   background-color: #9880b8;
   background-position: top right;
-  background-image: url('assets/dawgdash23/Dawg-Dash-Buff-FULL_WIDTH_1200X240.png');
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash_Member-1200x240.png');
   height: 234px;
   min-height: 0;
 }
@@ -13848,7 +13848,7 @@ Typography
 @media (max-width: 767px) {
   .page-id-56639 .sponsor-block-row .sponsor-block.uwaa,
   .page-id-285 .sponsor-block-row .sponsor-block.uwaa {
-    background-image: url('assets/dawgdash23/Dawg-Dash-Buff-MODULE_2_658X240.png');
+    background-image: url('assets/dawgdash23/2023_Dawg-Dash-Member_Module_2_658X240.png');
     background-size: cover;
     height: 37.5vw;
     max-height: 270px;
@@ -13858,7 +13858,7 @@ Typography
 @media (max-width: 589px) {
   .page-id-56639 .sponsor-block-row .sponsor-block.uwaa,
   .page-id-285 .sponsor-block-row .sponsor-block.uwaa {
-    background-image: url('assets/dawgdash23/Dawg-Dash-Buff-MODULE_2_658X240.png');
+    background-image: url('assets/dawgdash23/2023_Dawg-Dash-Member_Module_2_658X240.png');
     background-size: contain;
     background-position: bottom right;
     min-height: 0;
