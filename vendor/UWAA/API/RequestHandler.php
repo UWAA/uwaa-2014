@@ -144,7 +144,7 @@ class RequestHandler
             'meta_query' => array(
               'key' => 'mb_start_date',
               'type' => 'DATE',
-              'value' => date("Y-m-d"), 
+              'value' => date("Ymd"), 
               'compare' => '>=', 
             )
           ));

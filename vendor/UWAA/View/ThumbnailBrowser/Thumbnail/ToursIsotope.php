@@ -50,6 +50,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postExcerpt = wp_kses($this->shortenExcerpt(get_the_excerpt(), 220), $this->allowedHTMLTags);
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
         $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);
+        $this->mbStartDate = get_post_meta(get_the_ID(), 'mb_start_date', true);
+        $this->today = date("Ymd");
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         $this->tourOperator = get_post_meta(get_the_ID(), 'mb_operator', true);
         $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
@@ -105,7 +107,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
       'meta_query' => array(
           'key' => 'mb_start_date',
           'type' => 'DATE',
-          'value' => date("Y-m-d"),
+          'value' => date("Ymd"),
           'compare' => '>=',
           ),
       'tax_query' => array(
@@ -151,7 +153,8 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
     <h4 class="title">$this->postTitle</h4>
     <h4 class="date">$this->postDate</h4>
     <p>$this->postExcerpt</p>
-    <p class="operator">$this->tourOperator</p>
+    <p class="operator">$this->tourOperator</p>    
+
     </div>
 
 </div>
@@ -176,7 +179,9 @@ return $prelimTemplate;
       <h4 class="title">$this->postTitle</h4>
       <h4 class="date">$this->postDate</h4>
       <p>$this->postExcerpt</p>
-      <p class="operator">$this->tourOperator</p>    
+      <p class="operator">$this->tourOperator</p>      
+      <p class="invisible">Today: $this->today</p>
+      <p class="invisible">MB Start: $this->mbStartDate</p>
       <a class="link-arrow" href="$this->postURL">
         $tags
         <span class="visually-hidden">Link</span>
