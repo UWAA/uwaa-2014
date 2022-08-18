@@ -49,9 +49,7 @@ class ToursIsotope extends ThumbnailBrowser implements Thumbnail
         $this->postSubtitle = $this->getPostSubtitle($query);
         $this->postExcerpt = wp_kses($this->shortenExcerpt(get_the_excerpt(), 220), $this->allowedHTMLTags);
         $this->postTerms = strtolower(implode( " ", $this->getListOfTerms()));
-        $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);
-        $this->mbStartDate = get_post_meta(get_the_ID(), 'mb_start_date', true);
-        $this->today = date("Ymd");
+        $this->isPreliminary = get_post_meta(get_the_ID(), 'mb_isPreliminaryTour', true);        
         $this->postImageAltText = $this->UI->returnImageAltTag(get_the_ID());
         $this->tourOperator = get_post_meta(get_the_ID(), 'mb_operator', true);
         $this->postTags = get_the_term_list(get_the_id(), 'post_tag', '', ' , ');
@@ -179,9 +177,7 @@ return $prelimTemplate;
       <h4 class="title">$this->postTitle</h4>
       <h4 class="date">$this->postDate</h4>
       <p>$this->postExcerpt</p>
-      <p class="operator">$this->tourOperator</p>      
-      <p class="invisible">Today: $this->today</p>
-      <p class="invisible">MB Start: $this->mbStartDate</p>
+      <p class="operator">$this->tourOperator</p>           
       <a class="link-arrow" href="$this->postURL">
         $tags
         <span class="visually-hidden">Link</span>
