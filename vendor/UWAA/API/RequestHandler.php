@@ -145,7 +145,7 @@ class RequestHandler
               'key' => 'mb_start_date',
               'type' => 'DATE',
               'value' => date("Ymd"), 
-              'compare' => '>=', 
+              'compare' => '>', 
             )
           ));
         }
