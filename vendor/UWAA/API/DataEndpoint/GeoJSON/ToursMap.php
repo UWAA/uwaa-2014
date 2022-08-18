@@ -82,6 +82,8 @@ class ToursMap extends GeoJSON implements \UWAA\API\DataEndpoint\DataEndpoint
             'link' => apply_filters('remove_cms' ,get_permalink($post->ID)),
             'excerpt' => esc_html(get_post_meta($post->ID, 'mb_map_excerpt', true)),
             'date' => esc_html(get_post_meta($post->ID, 'mb_cosmetic_date', true)),
+            'enddate' => esc_html(get_post_meta($post->ID, 'mb_end_date', true)),
+            'date' => date('Ymd'),
             'marker-color' => '#4b2e83'
         );
 
