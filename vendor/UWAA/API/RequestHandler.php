@@ -139,7 +139,7 @@ class RequestHandler
             );
 
         if ($postType === 'tours') {
-          $args = array_merge($args, array (
+          $args = array_merge($args, array (            
             'meta_key' => 'mb_start_date',
             'meta_query' => array(
               'key' => 'mb_start_date',
@@ -164,9 +164,9 @@ class RequestHandler
     private function checkTransient($postType) {
       $queryName = $postType . "TransientQuery";          
       if (is_object(get_transient($queryName)) == FALSE) {                  
-        return false;
+        return false; //temporarily blow up transient
       }      
-      return true;
+      return false;
     }
 
     
