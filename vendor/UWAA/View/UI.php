@@ -40,6 +40,7 @@ class UI
         new Shortcodes\WistiaEmbed;
         new Shortcodes\ReadMore;
         new Shortcodes\TourBrochureButton;
+        new Shortcodes\StaffList;
 
     }
 
