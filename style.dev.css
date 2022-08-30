@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.0.l7b3fd4r
+ Version: 1.27.0.l7gnui0b
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -14539,4 +14539,5 @@ nav#mobile-relative.frontpage button.uw-mobile-menu-toggle {
 }
 .page-uwaa-staff-directory p.uwaa-staff:nth-child(odd) {
   padding: 6px;
+  background-color: #e8e3d3;
 }
