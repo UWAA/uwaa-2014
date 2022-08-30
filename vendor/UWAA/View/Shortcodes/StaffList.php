@@ -41,7 +41,7 @@ class StaffList
 
                 if($department && $staffer->Department != $department)
                 {
-                    $content .= '<hr></br><h2 class="uwaa-team-name">'.$staffer->Department.'</h2>';
+                    $content .= '</div><hr><div></br><h2 class="uwaa-team-name">'.$staffer->Department.'</h2>';
                 }
                 
                 $content .= sprintf( '<p class="uwaa-staff"><strong>%1$s %2$s</strong></br>%3$s</br><a href="mailto:%4$s">%4$s</a>', $staffer->First, $staffer->Last, $staffer->Position, $staffer->Email);
