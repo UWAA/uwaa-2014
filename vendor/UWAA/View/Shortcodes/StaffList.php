@@ -32,7 +32,7 @@ class StaffList
             
              usort($staff, array($this, 'departmentSort'));
              
-            $content .= '<h2 class="uwaa-team-name">Leadership</h2>';
+            $content .= '<h2 class="uwaa-team-name">Executive Leadership</h2>';
 
             $department = null;
             foreach ($staff as $staffer ) {
