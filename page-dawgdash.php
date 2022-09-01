@@ -226,7 +226,7 @@ if(get_field('registration_items_virtual_image')){ ?>
 </div>
 
 
-<!-- <div class="map-container light-purple-background">    
+<div class="map-container light-purple-background">    
 <div class="row no-gutters">
 
 <div class="container">
@@ -256,7 +256,7 @@ if(get_field('registration_items_virtual_image')){ ?>
 
 
 </div>
-</div> -->
+</div>
 
 
 <div class="white-background">
