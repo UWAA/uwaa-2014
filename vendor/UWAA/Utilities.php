@@ -458,7 +458,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             wp_json_encode( $settings )
         )
     );
-}
+    }
+
+    
+    public function isCurrentTimeBefore($dateTime) {
+        date_default_timezone_set('America/Los_Angeles');
+        $timeFormat = "DD/MM/YY SS:SS";
+        $timeToCheck = new \DateTime($dateTime);
+        $now = new \DateTime();
+
+        if ($now < $timeToCheck) {
+            // you haven't passed that time yet
+            return TRUE;
+        }
+
+        return FALSE;
+
+
+    }
 
     
 

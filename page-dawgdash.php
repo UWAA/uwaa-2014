@@ -135,31 +135,53 @@ if(get_field('registration_items_virtual_image')){ ?>
    }
 </style>
 
-<?php }?>
+<?php }
 
-<!-- background-image: url(assets/dawgdash23/Dawg-Dash-Dawgdanna_Shadow_219x197.png),url(assets/dawgdash23/2023_Dawg-Dash-Dawgdanna-WSECU_250x38.png); -->
+
+  $regItemCutoverTime = "09/16/2022 23:59";
+  $columnSize = "col-sm-6";
+
+  if ($UWAA->Utilities->isCurrentTimeBefore($regItemCutoverTime)) {
+  $columnSize = "col-sm-4";
+  }
+
+
+
+
+
+
+
+?>
+
+
 
 
 
 <div class="registration-item-row black-background">
-<div class="registration-item pups">
+<div class="registration-item <?php echo $columnSize; ?> pups">
 <h2><?php html_entity_decode(the_field('registration_items_pups_title') ) ?></h2>
 <p class="subhead"><?php html_entity_decode(the_field('registration_items_pups_subhead') ) ?></p>
 <p class="copy"><?php html_entity_decode(the_field('registration_items_pups_copy') ) ?></p>
 <p class="price">$<?php html_entity_decode(the_field('registration_items_pups_price') ) ?></p>
 </div>
-<div class="registration-item dogs">
+<div class="registration-item <?php echo $columnSize; ?> dogs">
 <h2><?php html_entity_decode(the_field('registration_items_dogs_title') ) ?></h2>
 <p class="subhead"><?php html_entity_decode(the_field('registration_items_dogs_subhead') ) ?></p>
 <p class="copy"><?php html_entity_decode(the_field('registration_items_dogs_copy') ) ?></p>
 <p class="price">$<?php html_entity_decode(the_field('registration_items_dogs_price') ) ?></p>
 </div>
-<div class="registration-item virtual">
+
+<?php if ($UWAA->Utilities->isCurrentTimeBefore($regItemCutoverTime)) { ?>
+  
+  <div class="registration-item <?php echo $columnSize; ?> virtual">
 <h2><?php html_entity_decode(the_field('registration_items_virtual_title') ) ?></h2>
 <p class="subhead"><?php html_entity_decode(the_field('registration_items_virtual_subhead') ) ?></p>
 <p class="copy"><?php html_entity_decode(the_field('registration_items_virtual_copy') ) ?></p>
 <p class="price">$<?php html_entity_decode(the_field('registration_items_virtual_price') ) ?></p>
 </div>
+
+<?php } ?>
+
 
 
 
