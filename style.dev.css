@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.1.l868zv4s
+ Version: 1.27.1.l8c8ph3q
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -14238,13 +14238,13 @@ Typography
   background-size: cover;
   background-position: center center;
 }
-.page-raceequityjustice .uwaa-hero-image {
-  height: 350px;
-}
 @media only screen and (max-width: 767px) {
-  .page-raceequityjustice .uwaa-hero-image {
+  .uwaa-hero-image {
     height: 264px;
   }
+}
+.page-raceequityjustice .uwaa-hero-image {
+  height: 350px;
 }
 .leaflet-popup-content {
   font-family: 'Open Sans';

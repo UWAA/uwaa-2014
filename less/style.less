@@ -136,14 +136,16 @@
 	height:428px;
 	background-size: cover;
   background-position: center center;
+
+  @media only screen and (max-width: @screen-xs-max) {
+      height: 264px;
+    }
   
   .page-raceequityjustice & {
     height: 350px;
 
 
-    @media only screen and (max-width: @screen-xs-max) {
-      height: 264px;
-    }
+    
   }
 }
 
