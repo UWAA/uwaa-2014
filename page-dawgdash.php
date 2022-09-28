@@ -51,8 +51,34 @@ if( $headerImage ) {
 
 </div>
 
+<?php
+$isBeforeTagboardLiveTime = $UWAA->Utilities->isCurrentTimeBefore("09/29/2022 00:00");
+
+function isPreviewForAdminTrue(){
+  if(!is_user_logged_in( )){
+    return false;
+  }
+  if(get_field("tagboard_display_tagboard_preview")) {
+    return true;
+  }
+  return false;
+}
+
+if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue() or get_field("display_tagboard_publically") == true)
+{
+
+?>
+
+<!-- Leader of the pack -->
 
 
+
+<div class="tagboard row">
+  <div class="tagboard-embed" tgb-embed-id="7028"></div><script src="https://static.tagboard.com/embed/assets/js/embed.js"></script>
+</div>
+
+
+<?php }?>
 
 
 
@@ -101,7 +127,6 @@ if( $detailsImage ) {
 <div class="copy"><?php html_entity_decode(the_field('membership_band_copy') ) ?></div>
 
 </div>
-
 
 
 <?php 

@@ -1107,6 +1107,61 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_6334c76d88d41",
+            "label": "Tagboard",
+            "name": "tagboard",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6334c78488d42",
+                    "label": "Display Tagboard Publically",
+                    "name": "display_tagboard_publically",
+                    "type": "true_false",
+                    "instructions": "Check this box to display the tagboard publicly, regardless of the scheduled timing for display.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_6334c7c788d43",
+                    "label": "Preview Tagboard",
+                    "name": "display_tagboard_preview",
+                    "type": "true_false",
+                    "instructions": "Check this box to display the Tagboard to you as a logged-in WordPress user.  For troubleshooting purposes.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -1115,13 +1170,6 @@
                 "param": "page",
                 "operator": "==",
                 "value": "285"
-            }
-        ],
-        [
-            {
-                "param": "page",
-                "operator": "==",
-                "value": "56639"
             }
         ]
     ],
@@ -1133,5 +1181,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1657260952
+    "show_in_rest": 0,
+    "modified": 1664405057
 }
