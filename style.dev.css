@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.2.l8c8t75p
+ Version: 1.27.2.l8nj411k
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6347,6 +6347,10 @@ button.close {
 .page-id-56639 .register-row:after,
 .page-id-285 .register-row:before,
 .page-id-285 .register-row:after,
+.page-id-56639 .att-pack-leader-row:before,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:before,
+.page-id-285 .att-pack-leader-row:after,
 .page-id-56639 .details-row:before,
 .page-id-56639 .details-row:after,
 .page-id-285 .details-row:before,
@@ -6417,6 +6421,8 @@ button.close {
 .page-id-285 .dawgdash-header:after,
 .page-id-56639 .register-row:after,
 .page-id-285 .register-row:after,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after,
 .page-id-56639 .details-row:after,
 .page-id-285 .details-row:after,
 .page-id-56639 .membership-special-row:after,
@@ -6514,6 +6520,10 @@ button.close {
 .page-id-56639 .register-row:after,
 .page-id-285 .register-row:before,
 .page-id-285 .register-row:after,
+.page-id-56639 .att-pack-leader-row:before,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:before,
+.page-id-285 .att-pack-leader-row:after,
 .page-id-56639 .details-row:before,
 .page-id-56639 .details-row:after,
 .page-id-285 .details-row:before,
@@ -6584,6 +6594,8 @@ button.close {
 .page-id-285 .dawgdash-header:after,
 .page-id-56639 .register-row:after,
 .page-id-285 .register-row:after,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after,
 .page-id-56639 .details-row:after,
 .page-id-285 .details-row:after,
 .page-id-56639 .membership-special-row:after,
@@ -13196,6 +13208,154 @@ Typography
   margin-left: 5%;
   text-transform: uppercase;
   padding: 2vh 2vw;
+}
+.page-id-56639 .att-pack-leader-row,
+.page-id-285 .att-pack-leader-row {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: .8em;
+}
+.page-id-56639 .att-pack-leader-row:before,
+.page-id-285 .att-pack-leader-row:before,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  clear: both;
+}
+.page-id-56639 .att-pack-leader-row:before,
+.page-id-285 .att-pack-leader-row:before,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  clear: both;
+}
+.page-id-56639 .att-pack-leader-row:before,
+.page-id-285 .att-pack-leader-row:before,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  clear: both;
+}
+.page-id-56639 .att-pack-leader-row:before,
+.page-id-285 .att-pack-leader-row:before,
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  content: " ";
+  display: table;
+}
+.page-id-56639 .att-pack-leader-row:after,
+.page-id-285 .att-pack-leader-row:after {
+  clear: both;
+}
+.page-id-56639 .att-pack-leader-row .logo-headline,
+.page-id-285 .att-pack-leader-row .logo-headline {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-id-56639 .att-pack-leader-row .logo-headline,
+  .page-id-285 .att-pack-leader-row .logo-headline {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .att-pack-leader-row .logo-headline,
+  .page-id-285 .att-pack-leader-row .logo-headline {
+    float: left;
+    width: 50%;
+  }
+}
+.page-id-56639 .att-pack-leader-row .logo-headline .logo,
+.page-id-285 .att-pack-leader-row .logo-headline .logo {
+  order: 1;
+  flex-grow: 4;
+}
+.page-id-56639 .att-pack-leader-row .logo-headline .logo img,
+.page-id-285 .att-pack-leader-row .logo-headline .logo img {
+  height: 100px;
+}
+.page-id-56639 .att-pack-leader-row .logo-headline h2,
+.page-id-285 .att-pack-leader-row .logo-headline h2 {
+  order: 2;
+  font-family: "Encode Sans Wide", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.5em;
+  margin: 0;
+  line-height: 1;
+}
+@media (max-width: 767px) {
+  .page-id-56639 .att-pack-leader-row .logo-headline,
+  .page-id-285 .att-pack-leader-row .logo-headline {
+    justify-content: center;
+  }
+  .page-id-56639 .att-pack-leader-row .logo-headline img,
+  .page-id-285 .att-pack-leader-row .logo-headline img {
+    padding: 15px 10% 0 0;
+  }
+  .page-id-56639 .att-pack-leader-row .logo-headline h2,
+  .page-id-285 .att-pack-leader-row .logo-headline h2 {
+    font-size: 3em;
+  }
+}
+.page-id-56639 .att-pack-leader-row .copy,
+.page-id-285 .att-pack-leader-row .copy {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+@media (min-width: 768px) {
+  .page-id-56639 .att-pack-leader-row .copy,
+  .page-id-285 .att-pack-leader-row .copy {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .att-pack-leader-row .copy,
+  .page-id-285 .att-pack-leader-row .copy {
+    float: left;
+    width: 50%;
+  }
+}
+.page-id-56639 .att-pack-leader-row .copy p,
+.page-id-285 .att-pack-leader-row .copy p {
+  margin: 0;
+  padding: 15px 0;
+  color: #36246a;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  text-align: left;
+  line-height: 1;
 }
 .page-id-56639 .details-row,
 .page-id-285 .details-row {
