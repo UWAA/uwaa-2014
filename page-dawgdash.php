@@ -72,15 +72,16 @@ if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue() or get_field("display_t
 <!-- Leader of the pack -->
 
 <div class="att-pack-leader-row light-purple-background">
+  <div class="att-pack-leader-content">
   <div class="logo-headline">
-    <div class="logo">
+    <div class="att-logo">
       <img src="<?php echo get_stylesheet_directory_uri(  );?>/assets/dawgdash23/ATT_Logo.png" alt="AT&T Logo">
     </div>
     
     <h2>leaders of the&nbsp;pack</h2>
   </div>
   <div class="copy"><p>Share your Dawg Dash photo on Instagram or Twitter with #DawgDashCares and AT&T will donate $100 to the UWAA Scholarship Fund. Tag @ATT and your donation doubles!</p></div>
-
+</div>
 
 </div>
 

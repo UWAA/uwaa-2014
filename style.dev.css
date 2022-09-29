@@ -13263,15 +13263,18 @@ Typography
 }
 .page-id-56639 .att-pack-leader-row .logo-headline,
 .page-id-285 .att-pack-leader-row .logo-headline {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: row;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding-left: 4vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 }
 @media (min-width: 768px) {
   .page-id-56639 .att-pack-leader-row .logo-headline,
@@ -13287,14 +13290,10 @@ Typography
     width: 50%;
   }
 }
-.page-id-56639 .att-pack-leader-row .logo-headline .logo,
-.page-id-285 .att-pack-leader-row .logo-headline .logo {
-  order: 1;
-  flex-grow: 4;
-}
-.page-id-56639 .att-pack-leader-row .logo-headline .logo img,
-.page-id-285 .att-pack-leader-row .logo-headline .logo img {
+.page-id-56639 .att-pack-leader-row .logo-headline .att-logo img,
+.page-id-285 .att-pack-leader-row .logo-headline .att-logo img {
   height: 100px;
+  margin-right: 7vw;
 }
 .page-id-56639 .att-pack-leader-row .logo-headline h2,
 .page-id-285 .att-pack-leader-row .logo-headline h2 {
@@ -13305,15 +13304,12 @@ Typography
   font-size: 2.5em;
   margin: 0;
   line-height: 1;
+  align-self: center;
 }
 @media (max-width: 767px) {
   .page-id-56639 .att-pack-leader-row .logo-headline,
   .page-id-285 .att-pack-leader-row .logo-headline {
     justify-content: center;
-  }
-  .page-id-56639 .att-pack-leader-row .logo-headline img,
-  .page-id-285 .att-pack-leader-row .logo-headline img {
-    padding: 15px 10% 0 0;
   }
   .page-id-56639 .att-pack-leader-row .logo-headline h2,
   .page-id-285 .att-pack-leader-row .logo-headline h2 {
@@ -13326,11 +13322,7 @@ Typography
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: flex-end;
-  flex-direction: row;
+  padding-top: 10px;
 }
 @media (min-width: 768px) {
   .page-id-56639 .att-pack-leader-row .copy,
