@@ -74,7 +74,7 @@ if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue() or get_field("display_t
 
 
 <div class="tagboard row">
-  <div class="tagboard-embed" tgb-embed-id="7028"></div><script src="https://static.tagboard.com/embed/assets/js/embed.js"></script>
+  <div class="tagboard-embed" style="background-color: black" tgb-embed-id="7028"></div><script src="https://static.tagboard.com/embed/assets/js/embed.js"></script>
 </div>
 
 
