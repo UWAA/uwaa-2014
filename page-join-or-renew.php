@@ -77,8 +77,16 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
 
   $superhero = get_field('drive_custom_renew_superhero');
 ?>
+
+<?php
+
+} elseif (get_the_post_thumbnail_url($post->ID, 'original'))  {
+
+  $featureImage = get_the_post_thumbnail_url($post->ID, 'original')
   
-  <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($superhero['url']); ?>);"></div>
+?>
+  
+  <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($featureImage); ?>);"></div>
 
 <?php } elseif(cyber()) { ?> 
 
