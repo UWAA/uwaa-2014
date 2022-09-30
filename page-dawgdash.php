@@ -54,17 +54,35 @@ if( $headerImage ) {
 <?php
 $isBeforeTagboardLiveTime = $UWAA->Utilities->isCurrentTimeBefore("09/29/2022 00:00");
 
-function isPreviewForAdminTrue(){
+function isPreviewForAdminTrue($type){
   if(!is_user_logged_in( )){
     return false;
   }
-  if(get_field("tagboard_display_tagboard_preview")) {
-    return true;
+
+  switch ($type) {
+    case 'tagboard':
+    if(get_field("tagboard_display_tagboard_preview")) {
+      return true;
+    }
+      break;
+    case 'race-day':
+      if(get_field("race_day_preview")) {
+       return true;
+      }
+      break;    
+      case 'value':
+        if(get_field("post_race_preview")) {
+      return true;
+    }
+        break;
+    
+    default:
+      return false;
+      break;
   }
-  return false;
 }
 
-if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue() or get_field("display_tagboard_publically") == true)
+if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field("display_tagboard_publically") == true)
 {
 
 ?>
@@ -95,7 +113,7 @@ if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue() or get_field("display_t
 <?php }?>
 
 
-
+<?php if (!isPreviewForAdminTrue('race-day') ) { ?>
 
 <div class="details-row black-background">
 
@@ -258,7 +276,7 @@ if(get_field('registration_items_virtual_image')){ ?>
 
 
 
-
+<?php } //end race-day?>
 
 
 <div class="black-background">
@@ -270,17 +288,15 @@ if(get_field('registration_items_virtual_image')){ ?>
 <div class="sponsor-block alaska"></div>
 </a>
 </div>
-
+<?php if (!isPreviewForAdminTrue('race-day') ) { ?>
 <div class="sponsor-block-row">
 <a href="https://www.brooksrunning.com/en_us/blog/training-workouts/">
 <div class="sponsor-block brooks half-size"></div>
 </a>
 
-<div class="sponsor-block att half-size">
-
+<div class="sponsor-block att half-size"></div>
 </div>
-</div>
-
+<?php } ?>
 </div>
 
 
