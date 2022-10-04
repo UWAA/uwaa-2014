@@ -1214,6 +1214,25 @@
                     "ui_off_text": ""
                 },
                 {
+                    "key": "field_633caaaa2ce32",
+                    "label": "Race End Preview",
+                    "name": "race_end_preview",
+                    "type": "true_false",
+                    "instructions": "Toggle to show\/hide the course map\/FAQ content for the day of the race.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
                     "key": "field_63375add4affc",
                     "label": "Cutover Time",
                     "name": "cutover_time",
@@ -1227,8 +1246,98 @@
                         "id": ""
                     },
                     "display_format": "d\/m\/Y g:i a",
-                    "return_format": "d\/m\/Y g:i a",
+                    "return_format": "Y-m-d H:i:s",
                     "first_day": 1
+                },
+                {
+                    "key": "field_633cb5a22f884",
+                    "label": "Race End Time",
+                    "name": "race_end_time",
+                    "type": "date_time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y g:i a",
+                    "return_format": "Y-m-d H:i:s",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_633caa4750ae0",
+                    "label": "Header Text",
+                    "name": "header_text",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_633caa5c50ae1",
+                    "label": "CTA Text",
+                    "name": "cta_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_633caa6450ae2",
+                    "label": "CTA Button Text",
+                    "name": "cta_button_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_633caa6f50ae3",
+                    "label": "CTA Button Link",
+                    "name": "cta_button_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         },
@@ -1335,11 +1444,6 @@
                 "param": "page",
                 "operator": "==",
                 "value": "285"
-            },
-            {
-                "param": "page",
-                "operator": "==",
-                "value": "56639"
             }
         ]
     ],
@@ -1352,5 +1456,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664572280
+    "modified": 1664923064
 }

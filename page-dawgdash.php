@@ -69,6 +69,11 @@ function isPreviewForAdminTrue($type){
       if(get_field("race_day_preview")) {
        return true;
       }
+      break;
+      case 'after-race':
+      if(get_field("race_day_preview")) {
+       return true;
+      }
       break;    
       case 'value':
         if(get_field("post_race_preview")) {
@@ -81,6 +86,26 @@ function isPreviewForAdminTrue($type){
       break;
   }
 }
+
+
+
+function isBeforeRaceDayStart(){
+  $date_now = date('Y-m-d H:i:s');  
+  
+  if($date_now < get_field("race_day_cutover_time")) {    
+    return true;
+  }  
+  return false;
+};
+
+function isBeforeRaceEndTime(){
+  $date_now = date('Y-m-d H:i:s');  
+  
+  if($date_now < get_field("race_day_race_end_time")) {    
+    return true;
+  }  
+  return false;
+};
 
 if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field("display_tagboard_publically") == true)
 {
@@ -113,7 +138,7 @@ if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field(
 <?php }?>
 
 
-<?php if (!isPreviewForAdminTrue('race-day') ) { ?>
+<?php if (!isPreviewForAdminTrue('race-day') || isBeforeRaceDayStart()) { ?>
 
 <div class="details-row black-background">
 
@@ -302,6 +327,7 @@ if(get_field('registration_items_virtual_image')){ ?>
 
 </div>
 
+<?php if(isBeforeRaceEndTime()) { ?>
 
 <div class="map-container light-purple-background">    
 <div class="row no-gutters">
@@ -361,6 +387,8 @@ if(get_field('registration_items_virtual_image')){ ?>
 </div>
 
 </div>
+
+<?php } //end ifBeforeRaceTime ?>
 
 
 <div class="white-background">
