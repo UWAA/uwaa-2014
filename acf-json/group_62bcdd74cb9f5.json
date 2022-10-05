@@ -1267,6 +1267,25 @@
                     "first_day": 1
                 },
                 {
+                    "key": "field_633cbd6cefa02",
+                    "label": "Header Title",
+                    "name": "header_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_633caa4750ae0",
                     "label": "Header Text",
                     "name": "header_text",
@@ -1443,7 +1462,7 @@
             {
                 "param": "page",
                 "operator": "==",
-                "value": "285"
+                "value": "56639"
             }
         ]
     ],
@@ -1456,5 +1475,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664923064
+    "modified": 1664925065
 }

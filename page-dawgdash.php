@@ -26,24 +26,46 @@ if( $headerImage ) {
   echo wp_get_attachment_image( $headerImage, $size );
 }
 
+function headerText() {
+  if( isRaceDay() ) {
+    return get_field("race_day_header_text");
+}
+return get_field('header_copy');
+}
+
+function headerTitle() {
+  if(isRaceDay()) {
+    return get_field("race_day_header_title");
+}
+return get_field('header_title');
+}
+
 ?>
 </div>
 <div class="text">
-<h1><?php html_entity_decode(the_field('header_title') ) ?></h1>
-<p><?php html_entity_decode(the_field('header_copy') ) ?></p>
+<h1><?php echo html_entity_decode(headerTitle() ) ?></h1>
+<p><?php echo html_entity_decode(headerText()) ?></p>
 </div>
 </div>
 
 
 
+<?php
 
+$regBandText = (isRaceDay() ? get_field('race_day_cta_text') : get_field('register_bands_text') );
+$regBandLink = (isRaceDay() ? get_field('race_day_cta_button_text') : get_field('register_bands_button_text') );
+$regBandURL = (isRaceDay() ? get_field('race_day_cta_button_link') : get_field('getmeregistered_link') );
+
+
+
+?>
 
 
 <div class="register-row yellow-background">            
 <div class="register-row-content">              
-<p><?php the_field('register_bands_text') ?>              
+<p><?php echo $regBandText ?>              
 </p>
-<a href="<?php echo get_field('getmeregistered_link') ?>" class="btn btn-primary btn-lg" tabindex="-1" role="button"><?php the_field('register_bands_button_text') ?></a>
+<a href="<?php echo $regBandURL;  ?>" class="btn btn-primary btn-lg" tabindex="-1" role="button"><?php echo $regBandLink;  ?></a>
 
 </div>
 
@@ -71,11 +93,9 @@ function isPreviewForAdminTrue($type){
       }
       break;
       case 'after-race':
-      if(get_field("race_day_preview")) {
-       return true;
-      }
+      
       break;    
-      case 'value':
+      case 'post-race':
         if(get_field("post_race_preview")) {
       return true;
     }
@@ -89,23 +109,71 @@ function isPreviewForAdminTrue($type){
 
 
 
-function isBeforeRaceDayStart(){
-  $date_now = date('Y-m-d H:i:s');  
-  
-  if($date_now < get_field("race_day_cutover_time")) {    
-    return true;
-  }  
-  return false;
-};
 
-function isBeforeRaceEndTime(){
+
+
+
+// God... horrible... DRY
+function isRaceDay(){
   $date_now = date('Y-m-d H:i:s');  
-  
-  if($date_now < get_field("race_day_race_end_time")) {    
+  if($date_now > get_field("race_day_cutover_time")) {    
     return true;
+  }
+
+  if(!is_user_logged_in( )){
+    return false;
+  }
+
+  if(get_field("race_day_preview")) {
+       return true;
+  }
+
+  
+
+  return false;  
+
+}
+
+function isRaceDayAfterRace(){
+   $date_now = date('Y-m-d H:i:s');  
+  $date_now = date('Y-m-d H:i:s');  
+   $date_now = date('Y-m-d H:i:s');  
+  
+  if($date_now > get_field("race_day_race_end_time")) {    
+    return true;
+  }
+  if(!is_user_logged_in( )){
+    return false;
+  }
+
+    if(get_field("race_day_race_end_preview")) {
+       return true;
+      }
+    return false;
   }  
+
+
+
+function isPostRace(){
+  
+    if(get_field("post_race_preview")) {
+      return true;
+    }
+   
+    
+    if(!is_user_logged_in( )){
+    return false;
+  }
+
+    $date_now = date('Y-m-d H:i:s');  
+  $date_now = date('Y-m-d H:i:s');  
+    $date_now = date('Y-m-d H:i:s');  
+  
+    if($date_now < get_field("post_race_cutover_time")) {    
+    return true;
+  }
   return false;
-};
+}
 
 if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field("display_tagboard_publically") == true)
 {
@@ -138,7 +206,7 @@ if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field(
 <?php }?>
 
 
-<?php if (!isPreviewForAdminTrue('race-day') || isBeforeRaceDayStart()) { ?>
+<?php if (isRaceday() == false) { ?>
 
 <div class="details-row black-background">
 
@@ -313,7 +381,7 @@ if(get_field('registration_items_virtual_image')){ ?>
 <div class="sponsor-block alaska"></div>
 </a>
 </div>
-<?php if (!isPreviewForAdminTrue('race-day') ) { ?>
+<?php if (!isRaceDay() ) { ?>
 <div class="sponsor-block-row">
 <a href="https://www.brooksrunning.com/en_us/blog/training-workouts/">
 <div class="sponsor-block brooks half-size"></div>
@@ -327,7 +395,7 @@ if(get_field('registration_items_virtual_image')){ ?>
 
 </div>
 
-<?php if(isBeforeRaceEndTime()) { ?>
+<?php if(!isRaceDayAfterRace()) { ?>
 
 <div class="map-container light-purple-background">    
 <div class="row no-gutters">
