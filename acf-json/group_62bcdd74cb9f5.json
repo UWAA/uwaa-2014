@@ -1324,6 +1324,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_633df75adfb8b",
+                    "label": "CTA Subtext",
+                    "name": "cta_subtext",
+                    "type": "text",
+                    "instructions": "Smaller, extra text to appear below banner-sized text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "cta-subtext",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_633caa6450ae2",
                     "label": "CTA Button Text",
                     "name": "cta_button_text",
@@ -1475,5 +1494,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1664925065
+    "modified": 1665005465
 }

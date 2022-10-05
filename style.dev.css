@@ -13197,6 +13197,14 @@ Typography
   margin: 0;
   line-height: 1;
 }
+.page-id-56639 .register-row .register-row-content p span,
+.page-id-285 .register-row .register-row-content p span {
+  text-transform: none;
+  font-size: .6em;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1;
+}
 .page-id-56639 .register-row .register-row-content .btn,
 .page-id-285 .register-row .register-row-content .btn {
   vertical-align: middle;

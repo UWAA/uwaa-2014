@@ -55,6 +55,7 @@ return get_field('header_title');
 $regBandText = (isRaceDay() ? get_field('race_day_cta_text') : get_field('register_bands_text') );
 $regBandLink = (isRaceDay() ? get_field('race_day_cta_button_text') : get_field('register_bands_button_text') );
 $regBandURL = (isRaceDay() ? get_field('race_day_cta_button_link') : get_field('getmeregistered_link') );
+$regBandSubtext = (isRaceDay() ? "<br><span>" . get_field('race_day_cta_subtext') . "</span>" : "");
 
 
 
@@ -63,7 +64,7 @@ $regBandURL = (isRaceDay() ? get_field('race_day_cta_button_link') : get_field('
 
 <div class="register-row yellow-background">            
 <div class="register-row-content">              
-<p><?php echo $regBandText ?>              
+<p><?php echo $regBandText.$regBandSubtext?>
 </p>
 <a href="<?php echo $regBandURL;  ?>" class="btn btn-primary btn-lg" tabindex="-1" role="button"><?php echo $regBandLink;  ?></a>
 
@@ -191,7 +192,9 @@ if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field(
     
     <h2>leaders of the&nbsp;pack</h2>
   </div>
-  <div class="copy"><p>Share your Dawg Dash photo on Instagram or Twitter with #DawgDashCares and AT&T will donate $100 to the UWAA Scholarship Fund. Tag @ATT and your donation doubles!</p></div>
+
+  <?php $leaderCopy = (isPostRace()) ? "Take a look at the community members who helped us meet our goal in the AT&T #DawgDashCares event! Each person posting represents at least $100 for student scholarships." : "Share your Dawg Dash photo on Instagram or Twitter with #DawgDashCares and AT&T will donate $100 to the UWAA Scholarship Fund. Tag @ATT and your donation doubles!";  ?>
+  <div class="copy"><p><?php echo $leaderCopy ?></p></div>
 </div>
 
 </div>
