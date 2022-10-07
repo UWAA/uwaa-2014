@@ -13178,6 +13178,10 @@ Typography
 .page-id-285 .dawgdash-header .text.post-race {
   text-align: center;
 }
+.page-id-56639 .dawgdash-header .text.post-race h1,
+.page-id-285 .dawgdash-header .text.post-race h1 {
+  margin-top: 2vh;
+}
 .page-id-56639 .dawgdash-header .text.post-race,
 .page-id-285 .dawgdash-header .text.post-race {
   position: relative;
