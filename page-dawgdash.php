@@ -16,7 +16,10 @@ get_header();
 <!-- Header - ACF field for side image, ACF field for header text content -->
 
 <div class="dawgdash-container">
-<?php if(!isPostRace())   {?>
+
+
+
+
 <div class="dawgdash-header no-gutters">
 <div class="image">
 <?php 
@@ -48,28 +51,7 @@ return get_field('header_title');
 <p><?php echo html_entity_decode(headerText()) ?></p>
 </div>
 </div>
-<?php } ?>
 
-<?php if(isPostRace())   {?>
-<div class="dawgdash-header post-race no-gutters">
-<div class="image post-race">
-<?php 
-
-$headerImage = get_field('header_image');
-$size = 'full'; // (thumbnail, medium, large, full or custom size)
-if( $headerImage ) {
-  echo wp_get_attachment_image( $headerImage, $size );
-}
-
-
-?>
-</div>
-<div class="text post-race">
-<h1><?php the_field("post_race_header_title") ?></h1>
-<p><?php  the_field("post_race_header_copy") ?></p>
-</div>
-</div>
-<?php } ?>
 
 
 <?php
