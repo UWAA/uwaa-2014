@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.2.l8nj411k
+ Version: 1.27.2.l8y4sbhx
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13067,6 +13067,27 @@ Typography
     text-align: center;
   }
 }
+.page-id-56639 .dawgdash-header .image.post-race,
+.page-id-285 .dawgdash-header .image.post-race {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-id-56639 .dawgdash-header .image.post-race,
+  .page-id-285 .dawgdash-header .image.post-race {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .dawgdash-header .image.post-race,
+  .page-id-285 .dawgdash-header .image.post-race {
+    float: left;
+    width: 100%;
+  }
+}
 .page-id-56639 .dawgdash-header .text,
 .page-id-285 .dawgdash-header .text {
   float: left;
@@ -13119,6 +13140,27 @@ Typography
   font-size: 1.5em;
   line-height: 1.2;
   margin: 2vh 0;
+}
+.page-id-56639 .dawgdash-header .text.post-race,
+.page-id-285 .dawgdash-header .text.post-race {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .page-id-56639 .dawgdash-header .text.post-race,
+  .page-id-285 .dawgdash-header .text.post-race {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .dawgdash-header .text.post-race,
+  .page-id-285 .dawgdash-header .text.post-race {
+    float: left;
+    width: 100%;
+  }
 }
 .page-id-56639 .register-row,
 .page-id-285 .register-row {
@@ -14042,6 +14084,30 @@ Typography
 .page-id-56639 .sponsor-block-row .sponsor-block.att,
 .page-id-285 .sponsor-block-row .sponsor-block.att {
   background-image: url('assets/dawgdash23/2023_Dawg-Dash-Module2-ATT_638x375.png');
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.post-race.brooks,
+.page-id-285 .sponsor-block-row .sponsor-block.post-race.brooks {
+  background-image: url('assets/dawgdash23/2023_Sponsor-Ad_Brooks_658x375.jpg');
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.post-race.wsecu,
+.page-id-285 .sponsor-block-row .sponsor-block.post-race.wsecu {
+  background-image: url('assets/dawgdash23/2023_Sponsor-Ad_WSECU_658x375.jpg');
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.post-race.att,
+.page-id-285 .sponsor-block-row .sponsor-block.post-race.att {
+  background-image: url('assets/dawgdash23/2023_Sponsor-Ad_ATT_658x375.jpg');
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.post-race.ubs,
+.page-id-285 .sponsor-block-row .sponsor-block.post-race.ubs {
+  background-image: url('assets/dawgdash23/2023_Sponsor-Ad_UBS_658x375.jpg');
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.post-race.uwmed,
+.page-id-285 .sponsor-block-row .sponsor-block.post-race.uwmed {
+  background-image: url('assets/dawgdash23/2023_Sponsor-Ad_UWMed_658x375.jpg');
+}
+.page-id-56639 .sponsor-block-row .sponsor-block.post-race.becu,
+.page-id-285 .sponsor-block-row .sponsor-block.post-race.becu {
+  background-image: url('assets/dawgdash23/2023_Sponsor-Ad_BECU_658x375.jpg');
 }
 .page-id-56639 .course-map-title-row,
 .page-id-285 .course-map-title-row,

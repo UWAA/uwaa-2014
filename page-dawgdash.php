@@ -16,6 +16,7 @@ get_header();
 <!-- Header - ACF field for side image, ACF field for header text content -->
 
 <div class="dawgdash-container">
+<?php if(!isPostRace())   {?>
 <div class="dawgdash-header no-gutters">
 <div class="image">
 <?php 
@@ -47,7 +48,28 @@ return get_field('header_title');
 <p><?php echo html_entity_decode(headerText()) ?></p>
 </div>
 </div>
+<?php } ?>
 
+<?php if(isPostRace())   {?>
+<div class="dawgdash-header no-gutters">
+<div class="image post-race">
+<?php 
+
+$postRaceHeaderImage = get_field('post_race_header_image');
+$size = 'full'; // (thumbnail, medium, large, full or custom size)
+if( $postRaceHeaderImage ) {
+  echo wp_get_attachment_image( $postRaceHeaderImage, $size );
+}
+
+
+?>
+</div>
+<div class="text post-race">
+<h1><?php the_field("post_race_header_title") ?></h1>
+<p><?php  the_field("post_race_header_copy") ?></p>
+</div>
+</div>
+<?php } ?>
 
 
 <?php
@@ -170,7 +192,7 @@ function isPostRace(){
   $date_now = date('Y-m-d H:i:s');  
     $date_now = date('Y-m-d H:i:s');  
   
-    if($date_now < get_field("post_race_cutover_time")) {    
+    if($date_now > get_field("post_race_cutover_time")) {    
     return true;
   }
   return false;
@@ -391,6 +413,35 @@ if(get_field('registration_items_virtual_image')){ ?>
 </a>
 
 <div class="sponsor-block att half-size"></div>
+</div>
+<?php } ?>
+<?php if (isPostRace() ) { ?>
+<div class="sponsor-block-row">
+<a href="https://www.brooksrunning.com/">
+<div class="sponsor-block post-race brooks half-size"></div>
+</a>
+
+<a href="https://wsecu.org/">
+<div class="sponsor-block post-race wsecu half-size"></div>
+</a>
+</div>
+<div class="sponsor-block-row">
+<a href="https://www.ubookstore.com/">
+<div class="sponsor-block post-race ubs half-size"></div>
+</a>
+
+<a href="https://www.becu.org/">
+<div class="sponsor-block post-race becu half-size"></div>
+</a>
+</div>
+<div class="sponsor-block-row">
+<a href="https://www.att.com/">
+<div class="sponsor-block post-race att half-size"></div>
+</a>
+
+<a href="https://www.uwmedicine.org/">
+<div class="sponsor-block post-race uwmed half-size"></div>
+</a>
 </div>
 <?php } ?>
 </div>
