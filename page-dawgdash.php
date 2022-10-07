@@ -51,14 +51,14 @@ return get_field('header_title');
 <?php } ?>
 
 <?php if(isPostRace())   {?>
-<div class="dawgdash-header no-gutters">
+<div class="dawgdash-header post-race no-gutters">
 <div class="image post-race">
 <?php 
 
-$postRaceHeaderImage = get_field('post_race_header_image');
+$headerImage = get_field('header_image');
 $size = 'full'; // (thumbnail, medium, large, full or custom size)
-if( $postRaceHeaderImage ) {
-  echo wp_get_attachment_image( $postRaceHeaderImage, $size );
+if( $headerImage ) {
+  echo wp_get_attachment_image( $headerImage, $size );
 }
 
 

@@ -73,7 +73,12 @@
             background-size: 100% auto;
             background-position: bottom right;
             background-blend-mode: screen;
-            font-size: .9em;
+            font-size: .9em;          
+
+            &.post-race {
+                background-image: none;
+            }
+
                      
     
     
@@ -84,6 +89,21 @@
                 padding: 5vh 0 5vh 0;
                 text-align: center;
 
+                &.post-race {
+                        background-image: url('assets/dawgdash23/2023_Dawg-Dash-Post-Race-Header.jpg');
+                        .make-sm-column(12);
+                        text-align: left;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        padding: 13vh 1vw;
+
+                        @media (max-width: @screen-sm-max) {
+                        background-image: none;
+                        text-align: center;                        
+                        }       
+                    }
+
                 @media (max-width: @screen-sm-max) {
                         padding: 5vh 1vw 5vh 1vw;
                 }
@@ -91,7 +111,7 @@
                 img {
                     object-fit: cover;
                     height: auto;
-                    object-position: center center;
+                    object-position: center left;
                 }
 
                 // when xs viewport - rremove height;
@@ -100,9 +120,7 @@
                     text-align: center;;
                 }
 
-                &.post-race {
-                    .make-sm-column(12);
-                }
+                
             }
     
             .text {
@@ -150,6 +168,10 @@
                 
                     }
     
+                }
+
+                &.post-race {
+                    text-align: center;
                 }
 
             &.post-race {

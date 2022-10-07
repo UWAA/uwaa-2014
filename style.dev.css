@@ -13023,6 +13023,10 @@ Typography
 .page-id-285 .dawgdash-header:after {
   clear: both;
 }
+.page-id-56639 .dawgdash-header.post-race,
+.page-id-285 .dawgdash-header.post-race {
+  background-image: none;
+}
 .page-id-56639 .dawgdash-header .image,
 .page-id-285 .dawgdash-header .image {
   float: left;
@@ -13048,6 +13052,40 @@ Typography
     width: 50%;
   }
 }
+.page-id-56639 .dawgdash-header .image.post-race,
+.page-id-285 .dawgdash-header .image.post-race {
+  background-image: url('assets/dawgdash23/2023_Dawg-Dash-Post-Race-Header.jpg');
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 13vh 1vw;
+}
+@media (min-width: 768px) {
+  .page-id-56639 .dawgdash-header .image.post-race,
+  .page-id-285 .dawgdash-header .image.post-race {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .page-id-56639 .dawgdash-header .image.post-race,
+  .page-id-285 .dawgdash-header .image.post-race {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .page-id-56639 .dawgdash-header .image.post-race,
+  .page-id-285 .dawgdash-header .image.post-race {
+    background-image: none;
+    text-align: center;
+  }
+}
 @media (max-width: 991px) {
   .page-id-56639 .dawgdash-header .image,
   .page-id-285 .dawgdash-header .image {
@@ -13058,34 +13096,13 @@ Typography
 .page-id-285 .dawgdash-header .image img {
   object-fit: cover;
   height: auto;
-  object-position: center center;
+  object-position: center left;
 }
 @media (max-width: 767px) {
   .page-id-56639 .dawgdash-header .image,
   .page-id-285 .dawgdash-header .image {
     padding: 10vw;
     text-align: center;
-  }
-}
-.page-id-56639 .dawgdash-header .image.post-race,
-.page-id-285 .dawgdash-header .image.post-race {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  .page-id-56639 .dawgdash-header .image.post-race,
-  .page-id-285 .dawgdash-header .image.post-race {
-    float: left;
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .page-id-56639 .dawgdash-header .image.post-race,
-  .page-id-285 .dawgdash-header .image.post-race {
-    float: left;
-    width: 100%;
   }
 }
 .page-id-56639 .dawgdash-header .text,
@@ -13140,6 +13157,10 @@ Typography
   font-size: 1.5em;
   line-height: 1.2;
   margin: 2vh 0;
+}
+.page-id-56639 .dawgdash-header .text.post-race,
+.page-id-285 .dawgdash-header .text.post-race {
+  text-align: center;
 }
 .page-id-56639 .dawgdash-header .text.post-race,
 .page-id-285 .dawgdash-header .text.post-race {
