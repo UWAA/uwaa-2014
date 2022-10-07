@@ -18,7 +18,26 @@ get_header();
 <div class="dawgdash-container">
 
 
+<?php if(isPostRace())   {?>
+<div class="dawgdash-header post-race no-gutters">
+<div class="image post-race">
+<?php 
 
+$headerImage = get_field('header_image');
+$size = 'full'; // (thumbnail, medium, large, full or custom size)
+if( $headerImage ) {
+  echo wp_get_attachment_image( $headerImage, $size );
+}
+
+
+?>
+</div>
+<div class="text post-race">
+<h1><?php the_field("post_race_header_title") ?></h1>
+<p><?php  the_field("post_race_header_copy") ?></p>
+</div>
+</div>
+<?php } else {?>
 
 <div class="dawgdash-header no-gutters">
 <div class="image">
@@ -51,7 +70,7 @@ return get_field('header_title');
 <p><?php echo html_entity_decode(headerText()) ?></p>
 </div>
 </div>
-
+<?php } ?>
 
 
 <?php
@@ -139,7 +158,7 @@ function isRaceDay(){
 
 }
 
-function isRaceDayAfterRace(){
+function isPostRace(){
    $date_now = date('Y-m-d H:i:s');  
   $date_now = date('Y-m-d H:i:s');  
    $date_now = date('Y-m-d H:i:s');  
@@ -151,7 +170,7 @@ function isRaceDayAfterRace(){
     return false;
   }
 
-    if(get_field("race_day_race_end_preview")) {
+    if(get_field("post_race_preview")) {
        return true;
       }
     return false;
@@ -159,26 +178,7 @@ function isRaceDayAfterRace(){
 
 
 
-function isPostRace(){
-  
-    if(get_field("post_race_preview")) {
-      return true;
-    }
-   
-    
-    if(!is_user_logged_in( )){
-    return false;
-  }
 
-    $date_now = date('Y-m-d H:i:s');  
-  $date_now = date('Y-m-d H:i:s');  
-    $date_now = date('Y-m-d H:i:s');  
-  
-    if($date_now > get_field("post_race_cutover_time")) {    
-    return true;
-  }
-  return false;
-}
 
 if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field("display_tagboard_publically") == true)
 {
@@ -441,7 +441,7 @@ if(get_field('registration_items_virtual_image')){ ?>
 
 </div>
 
-<?php if(!isRaceDayAfterRace()) { ?>
+<?php if(!isPostRace()) { ?>
 
 <div class="map-container light-purple-background">    
 <div class="row no-gutters">
