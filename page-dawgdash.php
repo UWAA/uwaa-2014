@@ -84,7 +84,7 @@ $regBandURL = get_field('post_race_cta_button_link');
   $regBandText = (isRaceDay() ? get_field('race_day_cta_text') : get_field('register_bands_text') );
 $regBandLink = (isRaceDay() ? get_field('race_day_cta_button_text') : get_field('register_bands_button_text') );
 $regBandURL = (isRaceDay() ? get_field('race_day_cta_button_link') : get_field('getmeregistered_link') );
-$regBandSubtext = (isRaceDay() ? "<br><span>" . get_field('race_day_cta_subtext') . "</span>" : "");
+$regBandSubtext = (isRaceDay() ? "<p class=\"subtext\">" . get_field('race_day_cta_subtext') . "</p>" : "");
   
 }
 
@@ -98,7 +98,7 @@ $regBandSubtext = (isRaceDay() ? "<br><span>" . get_field('race_day_cta_subtext'
 
 <div class="register-row yellow-background">            
 <div class="register-row-content">              
-<p><?php echo $regBandText.$regBandSubtext?>
+<div><p><?php echo $regBandText.$regBandSubtext?></div>
 </p>
 <a href="<?php echo $regBandURL;  ?>" class="btn btn-primary btn-lg" tabindex="-1" role="button"><?php echo $regBandLink;  ?></a>
 
