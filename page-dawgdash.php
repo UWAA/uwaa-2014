@@ -417,30 +417,40 @@ if(get_field('registration_items_virtual_image')){ ?>
 <?php } ?>
 <?php if (isPostRace() ) { ?>
 <div class="sponsor-block-row">
-<a href="https://www.brooksrunning.com/">
-<div class="sponsor-block post-race brooks half-size"></div>
-</a>
-
-<a href="https://wsecu.org/">
-<div class="sponsor-block post-race wsecu half-size"></div>
-</a>
-</div>
-<div class="sponsor-block-row">
-<a href="https://www.ubookstore.com/">
-<div class="sponsor-block post-race ubs half-size"></div>
+<a href="https://www.att.com/">
+<div class="sponsor-block post-race att half-size"></div>
 </a>
 
 <a href="https://www.becu.org/">
 <div class="sponsor-block post-race becu half-size"></div>
 </a>
+
+
+
+
 </div>
 <div class="sponsor-block-row">
-<a href="https://www.att.com/">
-<div class="sponsor-block post-race att half-size"></div>
+
+
+<a href="https://www.brooksrunning.com/">
+<div class="sponsor-block post-race brooks half-size"></div>
 </a>
+
+<a href="https://www.ubookstore.com/">
+<div class="sponsor-block post-race ubs half-size"></div>
+</a>
+
+
+</div>
+<div class="sponsor-block-row">
+
 
 <a href="https://www.uwmedicine.org/">
 <div class="sponsor-block post-race uwmed half-size"></div>
+</a>
+
+<a href="https://wsecu.org/">
+<div class="sponsor-block post-race wsecu half-size"></div>
 </a>
 </div>
 <?php } ?>
