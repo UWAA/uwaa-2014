@@ -224,7 +224,7 @@ if(!$isBeforeTagboardLiveTime or isPreviewForAdminTrue("tagboard") or get_field(
 <?php }?>
 
 
-<?php if (isRaceday() == false) { ?>
+<?php if (!isRaceDay()) { ?>
 
 <div class="details-row black-background">
 
