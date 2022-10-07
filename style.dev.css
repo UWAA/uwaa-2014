@@ -6371,6 +6371,10 @@ button.close {
 .page-id-56639 .faq-title-row:after,
 .page-id-285 .faq-title-row:before,
 .page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:before,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:before,
+.page-id-285 .sponsor-post-race-thanks-row:after,
 .page-id-56639 .banner-row:before,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:before,
@@ -6433,6 +6437,8 @@ button.close {
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
 .page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:after,
 .mobile-menu-row:after {
@@ -6544,6 +6550,10 @@ button.close {
 .page-id-56639 .faq-title-row:after,
 .page-id-285 .faq-title-row:before,
 .page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:before,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:before,
+.page-id-285 .sponsor-post-race-thanks-row:after,
 .page-id-56639 .banner-row:before,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:before,
@@ -6606,6 +6616,8 @@ button.close {
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
 .page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after,
 .page-id-56639 .banner-row:after,
 .page-id-285 .banner-row:after,
 .mobile-menu-row:after {
@@ -12954,6 +12966,10 @@ Typography
   background-color: #000000;
   color: #ffffff;
 }
+.page-id-56639 .black-background.sponsor-post-race-thanks-row,
+.page-id-285 .black-background.sponsor-post-race-thanks-row {
+  color: #9880b8;
+}
 .page-id-56639 .yellow-background,
 .page-id-285 .yellow-background {
   background-color: #ffd637;
@@ -14133,7 +14149,9 @@ Typography
 .page-id-56639 .course-map-title-row,
 .page-id-285 .course-map-title-row,
 .page-id-56639 .faq-title-row,
-.page-id-285 .faq-title-row {
+.page-id-285 .faq-title-row,
+.page-id-56639 .sponsor-post-race-thanks-row,
+.page-id-285 .sponsor-post-race-thanks-row {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -14141,74 +14159,100 @@ Typography
 .page-id-285 .course-map-title-row:before,
 .page-id-56639 .faq-title-row:before,
 .page-id-285 .faq-title-row:before,
+.page-id-56639 .sponsor-post-race-thanks-row:before,
+.page-id-285 .sponsor-post-race-thanks-row:before,
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:before,
 .page-id-56639 .faq-title-row:before,
 .page-id-285 .faq-title-row:before,
+.page-id-56639 .sponsor-post-race-thanks-row:before,
+.page-id-285 .sponsor-post-race-thanks-row:before,
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:before,
 .page-id-56639 .faq-title-row:before,
 .page-id-285 .faq-title-row:before,
+.page-id-56639 .sponsor-post-race-thanks-row:before,
+.page-id-285 .sponsor-post-race-thanks-row:before,
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row:before,
 .page-id-285 .course-map-title-row:before,
 .page-id-56639 .faq-title-row:before,
 .page-id-285 .faq-title-row:before,
+.page-id-56639 .sponsor-post-race-thanks-row:before,
+.page-id-285 .sponsor-post-race-thanks-row:before,
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   content: " ";
   display: table;
 }
 .page-id-56639 .course-map-title-row:after,
 .page-id-285 .course-map-title-row:after,
 .page-id-56639 .faq-title-row:after,
-.page-id-285 .faq-title-row:after {
+.page-id-285 .faq-title-row:after,
+.page-id-56639 .sponsor-post-race-thanks-row:after,
+.page-id-285 .sponsor-post-race-thanks-row:after {
   clear: both;
 }
 .page-id-56639 .course-map-title-row .title,
 .page-id-285 .course-map-title-row .title,
 .page-id-56639 .faq-title-row .title,
-.page-id-285 .faq-title-row .title {
+.page-id-285 .faq-title-row .title,
+.page-id-56639 .sponsor-post-race-thanks-row .title,
+.page-id-285 .sponsor-post-race-thanks-row .title {
   position: relative;
   float: left;
   width: 100%;
