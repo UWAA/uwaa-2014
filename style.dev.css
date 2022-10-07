@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.27.2.l8z3zcn0
+ Version: 1.27.2.l8y4sbhx
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -13263,10 +13263,10 @@ Typography
 .page-id-56639 .register-row .register-row-content p.subtext,
 .page-id-285 .register-row .register-row-content p.subtext {
   text-transform: none;
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 600;
-  line-height: .6;
+  line-height: 1;
 }
 .page-id-56639 .register-row .register-row-content .btn,
 .page-id-285 .register-row .register-row-content .btn {
