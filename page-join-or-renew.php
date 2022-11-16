@@ -28,9 +28,7 @@ function cyber() {
 }
 
 if ((cyber() && previewOrActiveDrive()) || cyber() && driveIsActive()) {
-  add_filter( 'body_class', function( $classes ) {
-    return array_merge( $classes, array( 'cyberweek' ) );
-} );
+  
 }
 
 
@@ -88,15 +86,6 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
   
   <div class="uwaa-hero-image" style="background-image:url(<?php echo esc_url($featureImage); ?>);"></div>
 
-<?php } elseif(cyber()) { ?> 
-
-  <div class="uw-hero-image cyber-video-wrapper">  
-  
-    <video id="cyber-video"  playsinline autoplay muted loop poster="<?php bloginfo("stylesheet_directory"); ?>/assets/headers/Page_Header_Cyber.png">
-        <source  src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/cyberheader.webm" type="video/webm" >
-        <source src="<?php bloginfo("stylesheet_directory"); ?>/assets/video/cyberheader.mp4" type="video/mp4" >
-    </video>
-</div>
 
 <?php } else { ?> 
 
