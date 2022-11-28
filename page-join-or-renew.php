@@ -76,8 +76,6 @@ if(array_key_exists("JOIN", $parentPageParams) && get_field('drive_custom_join_s
   $superhero = get_field('drive_custom_renew_superhero');
 ?>
 
-
-
 <?php
 
 } elseif (get_the_post_thumbnail_url($post->ID, 'original'))  {
