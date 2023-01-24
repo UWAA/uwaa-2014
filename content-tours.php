@@ -73,7 +73,7 @@
 
             <div class="modal-body">
 
-                <?php echo do_shortcode('[wufoo username="uwalum" formhash="w1k93e3l1w0qr27" autoresize="true" height="300" header="show" ssl="true" defaultv="Field5='.get_the_title() .'"]' ) ?>
+                <?php echo do_shortcode('[wufoo username="uwalum" formhash="w1k93e3l1w0qr27" autoresize="false" height="800px" header="show" ssl="true" defaultv="Field5='.get_the_title() .'"]' ) ?>
             </div>
 
             <div class="modal-footer">                

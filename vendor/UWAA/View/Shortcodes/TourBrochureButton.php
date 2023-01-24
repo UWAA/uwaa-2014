@@ -48,15 +48,11 @@ class TourBrochureButton
         if (property_exists($attributes, 'small')){
             array_push($classes, 'btn-sm');
         }
-
-        $target = '';
-        if (property_exists($attributes, 'new')){
-            $target = "target=\"_blank\"";
-        }
+        
 
         // Default style gold, slant-right, match styles
         $class_string = implode($classes, ' ');        
-        $buttonHTML = sprintf('<div class="uwaa-btn-wrapper brochure-request" data-toggle="modal" data-target="#brochure-modal"><a class="%s %s" href="%s" %s>%s</a></div>', $class_string, $color, $url, $target, $content);
+        $buttonHTML = sprintf('<div class="uwaa-btn-wrapper brochure-request" data-toggle="modal" data-target="#brochure-modal"><a class="%s %s" href="%s">%s</a></div>', $class_string, $color, $url, $content);
 
         $output =  <<<SCRIPT
 
