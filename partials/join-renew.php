@@ -4,7 +4,7 @@
         } elseif ($UWAA->Memberchecker->isLoggedIn == true && $UWAA->Memberchecker->hasActiveMembership == true) {
             $UWAA->Memberchecker->renderThankYouText();
         } else {
-          $joinPage = $UWAA->Utilities->get_permalink_by_title("Choose a membership option");
+          $joinPage = site_url("join-or-renew");
           $joinLink = ($joinPage ? $joinPage . "?join=true" : '#');
           $renewLink = ($joinPage ? $joinPage . "?renew=true" : '#');          
         ?>
