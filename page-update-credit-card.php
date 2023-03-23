@@ -92,13 +92,13 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
       if(array_key_exists("IDS", $parentPageParams)) {
 
-			   $childPageParams['ids'] = strtoupper($parentPageParams['IDS']);
+			   $childPageParams['ids'] = strtolower($parentPageParams['IDS']);
 
 		   }  
 
 		   if(array_key_exists("NOTIFICATIONGUID", $parentPageParams)) {
 
-			   $childPageParams['notificationGUID'] = strtoupper($parentPageParams['NOTIFICATIONGUID']);
+			   $childPageParams['notificationGUID'] = strtolower($parentPageParams['NOTIFICATIONGUID']);
 
 		   }
 
@@ -106,7 +106,7 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 
        if(array_key_exists("D_IDS", $parentPageParams)) {
 
-			   $childPageParams['d_ids'] = strtoupper($parentPageParams['D_IDS']);
+			   $childPageParams['d_ids'] = strtolower($parentPageParams['D_IDS']);
 
 		   }
 
