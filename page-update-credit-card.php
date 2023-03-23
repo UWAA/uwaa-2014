@@ -5,7 +5,7 @@ get_header();
 wp_enqueue_script(array('responsiveFrame', 'responsiveFrameHelper'));
 
 
-$rawParentQueryStringParams = $_SERVER['QUERY_STRING'];
+$rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 		 
 		  
       parse_str($rawParentQueryStringParams, $parentPageParams);
@@ -77,7 +77,7 @@ $rawParentQueryStringParams = $_SERVER['QUERY_STRING'];
 		<?php  // The Frame		  
 
         
-          $frameURL = "https://online.gifts.washington.edu/secure/updatecc/uwaaupdate/";
+          $frameURL = "https://online.gifts.washington.edu/secure/updatecc/UWAAupdate";
         
 
         
@@ -90,36 +90,41 @@ $rawParentQueryStringParams = $_SERVER['QUERY_STRING'];
 
 	   if (count($parentPageParams) > 0) {
 
-           
+      if(array_key_exists("IDS", $parentPageParams)) {
 
+			   $childPageParams['ids'] = strtoupper($parentPageParams['IDS']);
 
-		   if(array_key_exists("notificationGuid", $parentPageParams)) {
+		   }  
 
-			   $childPageParams['notificationGuid'] = $parentPageParams['notificationGuid'];
+		   if(array_key_exists("NOTIFICATIONGUID", $parentPageParams)) {
 
-		   }
-
-		   if(array_key_exists("ids", $parentPageParams)) {
-
-			   $childPageParams['ids'] = $parentPageParams['ids'];
+			   $childPageParams['notificationGUID'] = strtoupper($parentPageParams['NOTIFICATIONGUID']);
 
 		   }
 
-		   if(array_key_exists("fullCardUpdate", $parentPageParams)) {
+		   
 
-			   $childPageParams['fullCardUpdate'] = $parentPageParams['fullCardUpdate'];
+       if(array_key_exists("D_IDS", $parentPageParams)) {
 
-		   }
-
-		   if(array_key_exists("referrerName", $parentPageParams)) {
-
-			   $childPageParams['referrerName'] = $parentPageParams['referrerName'];
+			   $childPageParams['d_ids'] = strtoupper($parentPageParams['D_IDS']);
 
 		   }
 
-		   if(array_key_exists("cardLastUpdatedDate", $parentPageParams)) {
+		   if(array_key_exists("FULLCARDUPDATE", $parentPageParams)) {
 
-			   $childPageParams['cardLastUpdatedDate'] = $parentPageParams['cardLastUpdatedDate'];
+			   $childPageParams['FULLCARDUPDATE'] = $parentPageParams['FULLCARDUPDATE'];
+
+		   }
+
+		   if(array_key_exists("REFERRERNAME", $parentPageParams)) {
+
+			   $childPageParams['REFERRERNAME'] = $parentPageParams['REFERRERNAME'];
+
+		   }
+
+		   if(array_key_exists("CARDLASTUPDATEDDATE", $parentPageParams)) {
+
+			   $childPageParams['CARDLASTUPDATEDDATE'] = $parentPageParams['CARDLASTUPDATEDDATE'];
 
 		   }
 
