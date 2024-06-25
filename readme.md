@@ -6,5 +6,7 @@ Development:  Ben Erickson bperick@uw.edu
 
 This is the source code for the new UW Alumni Child theme, based on the [UW-2014 Boundless Theme] (https://github.com/uweb/uw-2014), maintained by the central UW Marketing Web Team.
 
+Testing repo deployment to Azure.
+
 
 [uw.edu/alumni] (http://www.uw.edu/alumni)
