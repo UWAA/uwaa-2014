@@ -142,7 +142,10 @@ function load_page_specific_scripts() {
               break;
             case 'oregon':
               wp_enqueue_script('oregonMailingListEmailForm');
-              break;            
+              break; 
+            case 'southern-california':
+              wp_enqueue_script('southernCaliforniaMailingListEmailForm');
+              break;              
             // case 'holidays':
             //   wp_enqueue_script('homepageSnow');
             //   break;

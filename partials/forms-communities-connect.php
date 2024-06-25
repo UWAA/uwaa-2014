@@ -40,6 +40,31 @@ Oregon Chapter Preference
 </div>
 </fieldset>
 
+<fieldset id="southernCaliforniaChapterPreference" style="display:none;">
+<![if !IE | (gte IE 8)]>
+<legend id="title10" class="desc">
+Southern California Chapter Preference
+</legend>
+<![endif]>
+<!--[if lt IE 8]>
+<label id="title10" class="desc">
+Southern California Chapter Preference
+</label>
+<![endif]-->
+<div>
+<span>
+<label class="checkbox checkbox-label" for="Field12">Los Angeles
+<input id="Field12" name="Field12" type="checkbox" class="tours-form-enews checkbox" value="Los Angeles" tabindex="0"     />
+</label>
+</span>
+<span>
+<label class="checkbox checkbox-label" for="Field13">Orange County
+<input id="Field13" name="Field13" type="checkbox" class="tours-form-print checkbox" value="Orange County" tabindex="0"     />
+</label>
+</span>
+</div>
+</fieldset>
+
 
 <label class="screen-reader-text" for="Field2">E-Mail</label>
 <div>
