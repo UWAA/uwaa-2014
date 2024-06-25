@@ -1,26 +1,32 @@
 [
         {
-            "nominee": "Alice Lee",
-            "unit": "UMAC"
+            "nominee": "Lee, Alice",
+            "unit": "UMAC",
+            "quote" :"Alice's creative input has a positive impact on her team and she is a tri-force of compassion, widsom and hard work."
         },
         {
-            "nominee": "Marzette Mondin",
-            "unit": "Development - Engineering"
+            "nominee": "Mondin, Marzette",
+            "unit": "Development - Engineering",
+            "quote" :"Marzette is an exemplar of leadership and charts the path for all of us with grace and integrity and the UW is a better place as a result of their efforts."
         },
         {
-            "nominee": "Sharon Dana",
-            "unit": "Development - Engineering"
+            "nominee": "Dana, Sharon",
+            "unit": "Development: Engineering",
+            "quote" :"Sharon is a fabulous collaborator between unit and central fundraising and an incredible partner for corporate and foundation relations discussions on equitable and inclusive community engagement."
         },
         {
-            "nominee": "Taylor White",
-            "unit": "ASE"
+            "nominee": "White, Taylor",
+            "unit": "ASE",
+            "quote" :"Taylor has leaned into areas of disorganization and collaborated with others to create new and efficient systems; she leaned into vulnerability and earned even ore trust and respect from colleagues and stakeholders."
         },
         {
-            "nominee": "Daranee Oakley",
-            "unit": "Advancement Operations"
+            "nominee": "Oakley, Daranee",
+            "unit": "Advancement Operations",
+            "quote" :"Daranee's passion and creative \"solutioning\" are the key ingredients to many of our successful processes. We are lucky to have this star on our team!"
         },
         {
-            "nominee": "Michelle LeSourd",
-            "unit": "Development – Development Programs"
+            "nominee": "LeSourd, Michelle",
+            "unit": "Development Programs",
+            "quote" :"From helping to shape a deeply caring culture to always seeking to deepen our own understanding of our work and its relationship to those around us, Michelle brings authenticity and empathy to our team."
         }
     ]

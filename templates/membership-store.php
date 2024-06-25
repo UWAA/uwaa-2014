@@ -297,6 +297,12 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
 
 		   }
 
+       if(array_key_exists("GIFT", $parentPageParams)) {
+
+			   $childPageParams['GIFT'] = $parentPageParams['GIFT'];
+
+		   }
+
 
 
 		   $childPageQueryString = http_build_query($childPageParams);

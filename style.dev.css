@@ -4,7 +4,7 @@
  Description: A child theme built on the 2014 boundless UW theme
  Author: Ben Erickson and Jane Higgins
  Template: uw-2014
- Version: 1.29.2.ld3hu0ki
+ Version: 1.29.2.lpk87v7g
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -6329,6 +6329,10 @@ button.close {
 .page-fall-2021-star-awards .uw-body.container:after,
 .page-spring-2022-star-awards .uw-body.container:before,
 .page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:before,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:before,
+.page-spring-2023-star-awards .uw-body.container:after,
 .page-jumpin .jumpin-header:before,
 .page-jumpin .jumpin-header:after,
 .page-jumpin .app-download:before,
@@ -6418,6 +6422,8 @@ button.close {
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
 .page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after,
 .page-jumpin .jumpin-header:after,
 .page-jumpin .app-download:after,
 .page-jumpin .purple-social:after,
@@ -6511,6 +6517,10 @@ button.close {
 .page-fall-2021-star-awards .uw-body.container:after,
 .page-spring-2022-star-awards .uw-body.container:before,
 .page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:before,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:before,
+.page-spring-2023-star-awards .uw-body.container:after,
 .page-jumpin .jumpin-header:before,
 .page-jumpin .jumpin-header:after,
 .page-jumpin .app-download:before,
@@ -6600,6 +6610,8 @@ button.close {
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
 .page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after,
 .page-jumpin .jumpin-header:after,
 .page-jumpin .app-download:after,
 .page-jumpin .purple-social:after,
@@ -11630,12 +11642,16 @@ Typography
 .page-spring-2021-star-awards #dawgdrops,
 .page-fall-2021-star-awards #dawgdrops,
 .page-spring-2022-star-awards #dawgdrops,
+.page-fall-2022-star-awards #dawgdrops,
+.page-spring-2023-star-awards #dawgdrops,
 .page-star-awards #uwaa-footer,
 .page-spring-2020-star-awards #uwaa-footer,
 .page-fall-2020-star-awards #uwaa-footer,
 .page-spring-2021-star-awards #uwaa-footer,
 .page-fall-2021-star-awards #uwaa-footer,
-.page-spring-2022-star-awards #uwaa-footer {
+.page-spring-2022-star-awards #uwaa-footer,
+.page-fall-2022-star-awards #uwaa-footer,
+.page-spring-2023-star-awards #uwaa-footer {
   display: none;
   visibility: hidden;
 }
@@ -11644,7 +11660,9 @@ Typography
 .page-fall-2020-star-awards .star-site-title,
 .page-spring-2021-star-awards .star-site-title,
 .page-fall-2021-star-awards .star-site-title,
-.page-spring-2022-star-awards .star-site-title {
+.page-spring-2022-star-awards .star-site-title,
+.page-fall-2022-star-awards .star-site-title,
+.page-spring-2023-star-awards .star-site-title {
   padding: 50px;
   color: #ffffff;
   font-family: "Encode Sans Compressed", sans-serif;
@@ -11659,7 +11677,9 @@ Typography
 .page-fall-2020-star-awards .uw-body.container,
 .page-spring-2021-star-awards .uw-body.container,
 .page-fall-2021-star-awards .uw-body.container,
-.page-spring-2022-star-awards .uw-body.container {
+.page-spring-2022-star-awards .uw-body.container,
+.page-fall-2022-star-awards .uw-body.container,
+.page-spring-2023-star-awards .uw-body.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -11671,12 +11691,16 @@ Typography
 .page-spring-2021-star-awards .uw-body.container:before,
 .page-fall-2021-star-awards .uw-body.container:before,
 .page-spring-2022-star-awards .uw-body.container:before,
+.page-fall-2022-star-awards .uw-body.container:before,
+.page-spring-2023-star-awards .uw-body.container:before,
 .page-star-awards .uw-body.container:after,
 .page-spring-2020-star-awards .uw-body.container:after,
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   content: " ";
   display: table;
 }
@@ -11685,7 +11709,9 @@ Typography
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   clear: both;
 }
 .page-star-awards .uw-body.container:before,
@@ -11694,12 +11720,16 @@ Typography
 .page-spring-2021-star-awards .uw-body.container:before,
 .page-fall-2021-star-awards .uw-body.container:before,
 .page-spring-2022-star-awards .uw-body.container:before,
+.page-fall-2022-star-awards .uw-body.container:before,
+.page-spring-2023-star-awards .uw-body.container:before,
 .page-star-awards .uw-body.container:after,
 .page-spring-2020-star-awards .uw-body.container:after,
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   content: " ";
   display: table;
 }
@@ -11708,7 +11738,9 @@ Typography
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   clear: both;
 }
 .page-star-awards .uw-body.container:before,
@@ -11717,12 +11749,16 @@ Typography
 .page-spring-2021-star-awards .uw-body.container:before,
 .page-fall-2021-star-awards .uw-body.container:before,
 .page-spring-2022-star-awards .uw-body.container:before,
+.page-fall-2022-star-awards .uw-body.container:before,
+.page-spring-2023-star-awards .uw-body.container:before,
 .page-star-awards .uw-body.container:after,
 .page-spring-2020-star-awards .uw-body.container:after,
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   content: " ";
   display: table;
 }
@@ -11731,7 +11767,9 @@ Typography
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   clear: both;
 }
 .page-star-awards .uw-body.container:before,
@@ -11740,12 +11778,16 @@ Typography
 .page-spring-2021-star-awards .uw-body.container:before,
 .page-fall-2021-star-awards .uw-body.container:before,
 .page-spring-2022-star-awards .uw-body.container:before,
+.page-fall-2022-star-awards .uw-body.container:before,
+.page-spring-2023-star-awards .uw-body.container:before,
 .page-star-awards .uw-body.container:after,
 .page-spring-2020-star-awards .uw-body.container:after,
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   content: " ";
   display: table;
 }
@@ -11754,7 +11796,9 @@ Typography
 .page-fall-2020-star-awards .uw-body.container:after,
 .page-spring-2021-star-awards .uw-body.container:after,
 .page-fall-2021-star-awards .uw-body.container:after,
-.page-spring-2022-star-awards .uw-body.container:after {
+.page-spring-2022-star-awards .uw-body.container:after,
+.page-fall-2022-star-awards .uw-body.container:after,
+.page-spring-2023-star-awards .uw-body.container:after {
   clear: both;
 }
 .page-star-awards .uw-body.container > .navbar-header,
@@ -11763,12 +11807,16 @@ Typography
 .page-spring-2021-star-awards .uw-body.container > .navbar-header,
 .page-fall-2021-star-awards .uw-body.container > .navbar-header,
 .page-spring-2022-star-awards .uw-body.container > .navbar-header,
+.page-fall-2022-star-awards .uw-body.container > .navbar-header,
+.page-spring-2023-star-awards .uw-body.container > .navbar-header,
 .page-star-awards .uw-body.container > .navbar-collapse,
 .page-spring-2020-star-awards .uw-body.container > .navbar-collapse,
 .page-fall-2020-star-awards .uw-body.container > .navbar-collapse,
 .page-spring-2021-star-awards .uw-body.container > .navbar-collapse,
 .page-fall-2021-star-awards .uw-body.container > .navbar-collapse,
-.page-spring-2022-star-awards .uw-body.container > .navbar-collapse {
+.page-spring-2022-star-awards .uw-body.container > .navbar-collapse,
+.page-fall-2022-star-awards .uw-body.container > .navbar-collapse,
+.page-spring-2023-star-awards .uw-body.container > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -11779,12 +11827,16 @@ Typography
   .page-spring-2021-star-awards .uw-body.container > .navbar-header,
   .page-fall-2021-star-awards .uw-body.container > .navbar-header,
   .page-spring-2022-star-awards .uw-body.container > .navbar-header,
+  .page-fall-2022-star-awards .uw-body.container > .navbar-header,
+  .page-spring-2023-star-awards .uw-body.container > .navbar-header,
   .page-star-awards .uw-body.container > .navbar-collapse,
   .page-spring-2020-star-awards .uw-body.container > .navbar-collapse,
   .page-fall-2020-star-awards .uw-body.container > .navbar-collapse,
   .page-spring-2021-star-awards .uw-body.container > .navbar-collapse,
   .page-fall-2021-star-awards .uw-body.container > .navbar-collapse,
-  .page-spring-2022-star-awards .uw-body.container > .navbar-collapse {
+  .page-spring-2022-star-awards .uw-body.container > .navbar-collapse,
+  .page-fall-2022-star-awards .uw-body.container > .navbar-collapse,
+  .page-spring-2023-star-awards .uw-body.container > .navbar-collapse {
     margin-right: 0;
     margin-left: 0;
   }
@@ -11794,7 +11846,9 @@ Typography
 .page-fall-2020-star-awards .grid,
 .page-spring-2021-star-awards .grid,
 .page-fall-2021-star-awards .grid,
-.page-spring-2022-star-awards .grid {
+.page-spring-2022-star-awards .grid,
+.page-fall-2022-star-awards .grid,
+.page-spring-2023-star-awards .grid {
   width: 100%;
   margin: 10px 0;
   display: grid;
@@ -11808,7 +11862,9 @@ Typography
   .page-fall-2020-star-awards .grid,
   .page-spring-2021-star-awards .grid,
   .page-fall-2021-star-awards .grid,
-  .page-spring-2022-star-awards .grid {
+  .page-spring-2022-star-awards .grid,
+  .page-fall-2022-star-awards .grid,
+  .page-spring-2023-star-awards .grid {
     grid-template-columns: 375px 375px;
   }
 }
@@ -11818,7 +11874,9 @@ Typography
   .page-fall-2020-star-awards .grid,
   .page-spring-2021-star-awards .grid,
   .page-fall-2021-star-awards .grid,
-  .page-spring-2022-star-awards .grid {
+  .page-spring-2022-star-awards .grid,
+  .page-fall-2022-star-awards .grid,
+  .page-spring-2023-star-awards .grid {
     grid-template-columns: 375px 375px 375px;
   }
 }
@@ -11828,7 +11886,9 @@ Typography
   .page-fall-2020-star-awards .grid,
   .page-spring-2021-star-awards .grid,
   .page-fall-2021-star-awards .grid,
-  .page-spring-2022-star-awards .grid {
+  .page-spring-2022-star-awards .grid,
+  .page-fall-2022-star-awards .grid,
+  .page-spring-2023-star-awards .grid {
     grid-template-columns: 375px 375px 375px 375px;
   }
 }
@@ -11838,7 +11898,9 @@ Typography
   .page-fall-2020-star-awards .grid,
   .page-spring-2021-star-awards .grid,
   .page-fall-2021-star-awards .grid,
-  .page-spring-2022-star-awards .grid {
+  .page-spring-2022-star-awards .grid,
+  .page-fall-2022-star-awards .grid,
+  .page-spring-2023-star-awards .grid {
     grid-template-columns: 375px 375px 375px 375px 375px;
   }
 }
@@ -11847,7 +11909,9 @@ Typography
 .page-fall-2020-star-awards .flip-card,
 .page-spring-2021-star-awards .flip-card,
 .page-fall-2021-star-awards .flip-card,
-.page-spring-2022-star-awards .flip-card {
+.page-spring-2022-star-awards .flip-card,
+.page-fall-2022-star-awards .flip-card,
+.page-spring-2023-star-awards .flip-card {
   z-index: 1;
   background-color: transparent;
   width: 375px;
@@ -11861,12 +11925,16 @@ Typography
 .page-spring-2021-star-awards .flip-card p,
 .page-fall-2021-star-awards .flip-card p,
 .page-spring-2022-star-awards .flip-card p,
+.page-fall-2022-star-awards .flip-card p,
+.page-spring-2023-star-awards .flip-card p,
 .page-star-awards .flip-card h1,
 .page-spring-2020-star-awards .flip-card h1,
 .page-fall-2020-star-awards .flip-card h1,
 .page-spring-2021-star-awards .flip-card h1,
 .page-fall-2021-star-awards .flip-card h1,
-.page-spring-2022-star-awards .flip-card h1 {
+.page-spring-2022-star-awards .flip-card h1,
+.page-fall-2022-star-awards .flip-card h1,
+.page-spring-2023-star-awards .flip-card h1 {
   vertical-align: middle;
   color: #ffffff;
 }
@@ -11875,7 +11943,9 @@ Typography
 .page-fall-2020-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front,
 .page-spring-2021-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front,
 .page-fall-2021-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front,
-.page-spring-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front {
+.page-spring-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front,
+.page-fall-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front,
+.page-spring-2023-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front {
   background-color: #b7a57a;
 }
 .page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front p,
@@ -11884,12 +11954,16 @@ Typography
 .page-spring-2021-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front p,
 .page-fall-2021-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front p,
 .page-spring-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front p,
+.page-fall-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front p,
+.page-spring-2023-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front p,
 .page-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
 .page-spring-2020-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
 .page-fall-2020-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
 .page-spring-2021-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
 .page-fall-2021-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
-.page-spring-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1 {
+.page-spring-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
+.page-fall-2022-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1,
+.page-spring-2023-star-awards .flip-card:nth-child(even) .flip-card-inner .flip-card-front h1 {
   color: white;
 }
 .page-star-awards .flip-card-inner,
@@ -11897,7 +11971,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-inner,
 .page-spring-2021-star-awards .flip-card-inner,
 .page-fall-2021-star-awards .flip-card-inner,
-.page-spring-2022-star-awards .flip-card-inner {
+.page-spring-2022-star-awards .flip-card-inner,
+.page-fall-2022-star-awards .flip-card-inner,
+.page-spring-2023-star-awards .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -11912,7 +11988,9 @@ Typography
 .page-fall-2020-star-awards .flip-card:hover .flip-card-inner,
 .page-spring-2021-star-awards .flip-card:hover .flip-card-inner,
 .page-fall-2021-star-awards .flip-card:hover .flip-card-inner,
-.page-spring-2022-star-awards .flip-card:hover .flip-card-inner {
+.page-spring-2022-star-awards .flip-card:hover .flip-card-inner,
+.page-fall-2022-star-awards .flip-card:hover .flip-card-inner,
+.page-spring-2023-star-awards .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 .page-star-awards .winner-flip-card:hover .flip-card-inner,
@@ -11920,7 +11998,9 @@ Typography
 .page-fall-2020-star-awards .winner-flip-card:hover .flip-card-inner,
 .page-spring-2021-star-awards .winner-flip-card:hover .flip-card-inner,
 .page-fall-2021-star-awards .winner-flip-card:hover .flip-card-inner,
-.page-spring-2022-star-awards .winner-flip-card:hover .flip-card-inner {
+.page-spring-2022-star-awards .winner-flip-card:hover .flip-card-inner,
+.page-fall-2022-star-awards .winner-flip-card:hover .flip-card-inner,
+.page-spring-2023-star-awards .winner-flip-card:hover .flip-card-inner {
   transform: none;
 }
 .page-star-awards .flip-card-front,
@@ -11929,12 +12009,16 @@ Typography
 .page-spring-2021-star-awards .flip-card-front,
 .page-fall-2021-star-awards .flip-card-front,
 .page-spring-2022-star-awards .flip-card-front,
+.page-fall-2022-star-awards .flip-card-front,
+.page-spring-2023-star-awards .flip-card-front,
 .page-star-awards .flip-card-back,
 .page-spring-2020-star-awards .flip-card-back,
 .page-fall-2020-star-awards .flip-card-back,
 .page-spring-2021-star-awards .flip-card-back,
 .page-fall-2021-star-awards .flip-card-back,
-.page-spring-2022-star-awards .flip-card-back {
+.page-spring-2022-star-awards .flip-card-back,
+.page-fall-2022-star-awards .flip-card-back,
+.page-spring-2023-star-awards .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -11946,7 +12030,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-front,
 .page-spring-2021-star-awards .flip-card-front,
 .page-fall-2021-star-awards .flip-card-front,
-.page-spring-2022-star-awards .flip-card-front {
+.page-spring-2022-star-awards .flip-card-front,
+.page-fall-2022-star-awards .flip-card-front,
+.page-spring-2023-star-awards .flip-card-front {
   background-color: #4b2e83;
   color: white;
   padding: 15px;
@@ -11957,7 +12043,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-front.dashicons-star-empty::before,
 .page-spring-2021-star-awards .flip-card-front.dashicons-star-empty::before,
 .page-fall-2021-star-awards .flip-card-front.dashicons-star-empty::before,
-.page-spring-2022-star-awards .flip-card-front.dashicons-star-empty::before {
+.page-spring-2022-star-awards .flip-card-front.dashicons-star-empty::before,
+.page-fall-2022-star-awards .flip-card-front.dashicons-star-empty::before,
+.page-spring-2023-star-awards .flip-card-front.dashicons-star-empty::before {
   content: "\f154";
   position: absolute;
   right: 10px;
@@ -11971,7 +12059,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-front .first,
 .page-spring-2021-star-awards .flip-card-front .first,
 .page-fall-2021-star-awards .flip-card-front .first,
-.page-spring-2022-star-awards .flip-card-front .first {
+.page-spring-2022-star-awards .flip-card-front .first,
+.page-fall-2022-star-awards .flip-card-front .first,
+.page-spring-2023-star-awards .flip-card-front .first {
   width: 100%;
   font-size: 38px;
   line-height: 1;
@@ -11982,7 +12072,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-front .last,
 .page-spring-2021-star-awards .flip-card-front .last,
 .page-fall-2021-star-awards .flip-card-front .last,
-.page-spring-2022-star-awards .flip-card-front .last {
+.page-spring-2022-star-awards .flip-card-front .last,
+.page-fall-2022-star-awards .flip-card-front .last,
+.page-spring-2023-star-awards .flip-card-front .last {
   width: 100%;
   font-size: 63px;
   line-height: .75;
@@ -11992,7 +12084,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-front .unit,
 .page-spring-2021-star-awards .flip-card-front .unit,
 .page-fall-2021-star-awards .flip-card-front .unit,
-.page-spring-2022-star-awards .flip-card-front .unit {
+.page-spring-2022-star-awards .flip-card-front .unit,
+.page-fall-2022-star-awards .flip-card-front .unit,
+.page-spring-2023-star-awards .flip-card-front .unit {
   font-size: 23px;
   position: absolute;
   right: 15px;
@@ -12006,7 +12100,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-back,
 .page-spring-2021-star-awards .flip-card-back,
 .page-fall-2021-star-awards .flip-card-back,
-.page-spring-2022-star-awards .flip-card-back {
+.page-spring-2022-star-awards .flip-card-back,
+.page-fall-2022-star-awards .flip-card-back,
+.page-spring-2023-star-awards .flip-card-back {
   background-color: #ffffff;
   color: #3d3d3d;
   transform: rotateY(180deg);
@@ -12022,7 +12118,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-back .reverse-name,
 .page-spring-2021-star-awards .flip-card-back .reverse-name,
 .page-fall-2021-star-awards .flip-card-back .reverse-name,
-.page-spring-2022-star-awards .flip-card-back .reverse-name {
+.page-spring-2022-star-awards .flip-card-back .reverse-name,
+.page-fall-2022-star-awards .flip-card-back .reverse-name,
+.page-spring-2023-star-awards .flip-card-back .reverse-name {
   font-family: 'Encode Sans Compressed', sans-serif;
   font-weight: 600;
   font-size: .7em;
@@ -12033,7 +12131,9 @@ Typography
 .page-fall-2020-star-awards .flip-card-back p,
 .page-spring-2021-star-awards .flip-card-back p,
 .page-fall-2021-star-awards .flip-card-back p,
-.page-spring-2022-star-awards .flip-card-back p {
+.page-spring-2022-star-awards .flip-card-back p,
+.page-fall-2022-star-awards .flip-card-back p,
+.page-spring-2023-star-awards .flip-card-back p {
   font-family: "Open Sans";
   font-weight: 300;
   font-size: 14px;
@@ -12045,7 +12145,9 @@ Typography
 .page-fall-2020-star-awards #search,
 .page-spring-2021-star-awards #search,
 .page-fall-2021-star-awards #search,
-.page-spring-2022-star-awards #search {
+.page-spring-2022-star-awards #search,
+.page-fall-2022-star-awards #search,
+.page-spring-2023-star-awards #search {
   width: 25%;
   margin-top: 10px;
 }
@@ -12054,7 +12156,9 @@ Typography
 .page-fall-2020-star-awards .modal,
 .page-spring-2021-star-awards .modal,
 .page-fall-2021-star-awards .modal,
-.page-spring-2022-star-awards .modal {
+.page-spring-2022-star-awards .modal,
+.page-fall-2022-star-awards .modal,
+.page-spring-2023-star-awards .modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12072,7 +12176,9 @@ Typography
 .page-fall-2020-star-awards .modal-overlay,
 .page-spring-2021-star-awards .modal-overlay,
 .page-fall-2021-star-awards .modal-overlay,
-.page-spring-2022-star-awards .modal-overlay {
+.page-spring-2022-star-awards .modal-overlay,
+.page-fall-2022-star-awards .modal-overlay,
+.page-spring-2023-star-awards .modal-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -12085,7 +12191,9 @@ Typography
 .page-fall-2020-star-awards .modal-overlay a,
 .page-spring-2021-star-awards .modal-overlay a,
 .page-fall-2021-star-awards .modal-overlay a,
-.page-spring-2022-star-awards .modal-overlay a {
+.page-spring-2022-star-awards .modal-overlay a,
+.page-fall-2022-star-awards .modal-overlay a,
+.page-spring-2023-star-awards .modal-overlay a {
   display: block;
   width: 100%;
   height: 100%;
@@ -12095,7 +12203,9 @@ Typography
 .page-fall-2020-star-awards .modal-container,
 .page-spring-2021-star-awards .modal-container,
 .page-fall-2021-star-awards .modal-container,
-.page-spring-2022-star-awards .modal-container {
+.page-spring-2022-star-awards .modal-container,
+.page-fall-2022-star-awards .modal-container,
+.page-spring-2023-star-awards .modal-container {
   position: absolute;
   width: 80%;
   height: 58rem;
@@ -12111,7 +12221,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__header,
 .page-spring-2021-star-awards .modal-container__header,
 .page-fall-2021-star-awards .modal-container__header,
-.page-spring-2022-star-awards .modal-container__header {
+.page-spring-2022-star-awards .modal-container__header,
+.page-fall-2022-star-awards .modal-container__header,
+.page-spring-2023-star-awards .modal-container__header {
   position: absolute;
   top: 0;
   right: 0;
@@ -12125,7 +12237,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__header a,
 .page-spring-2021-star-awards .modal-container__header a,
 .page-fall-2021-star-awards .modal-container__header a,
-.page-spring-2022-star-awards .modal-container__header a {
+.page-spring-2022-star-awards .modal-container__header a,
+.page-fall-2022-star-awards .modal-container__header a,
+.page-spring-2023-star-awards .modal-container__header a {
   display: inline-block;
   text-align: center;
   color: #fff;
@@ -12141,7 +12255,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__header a .hide-text,
 .page-spring-2021-star-awards .modal-container__header a .hide-text,
 .page-fall-2021-star-awards .modal-container__header a .hide-text,
-.page-spring-2022-star-awards .modal-container__header a .hide-text {
+.page-spring-2022-star-awards .modal-container__header a .hide-text,
+.page-fall-2022-star-awards .modal-container__header a .hide-text,
+.page-spring-2023-star-awards .modal-container__header a .hide-text {
   display: inline-block;
   vertical-align: middle;
   width: 0;
@@ -12154,7 +12270,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__header a .icon-close,
 .page-spring-2021-star-awards .modal-container__header a .icon-close,
 .page-fall-2021-star-awards .modal-container__header a .icon-close,
-.page-spring-2022-star-awards .modal-container__header a .icon-close {
+.page-spring-2022-star-awards .modal-container__header a .icon-close,
+.page-fall-2022-star-awards .modal-container__header a .icon-close,
+.page-spring-2023-star-awards .modal-container__header a .icon-close {
   display: inline-block;
   vertical-align: middle;
 }
@@ -12163,7 +12281,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__header a:hover,
 .page-spring-2021-star-awards .modal-container__header a:hover,
 .page-fall-2021-star-awards .modal-container__header a:hover,
-.page-spring-2022-star-awards .modal-container__header a:hover {
+.page-spring-2022-star-awards .modal-container__header a:hover,
+.page-fall-2022-star-awards .modal-container__header a:hover,
+.page-spring-2023-star-awards .modal-container__header a:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .page-star-awards .modal-container__header a:hover .hide-text,
@@ -12171,7 +12291,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__header a:hover .hide-text,
 .page-spring-2021-star-awards .modal-container__header a:hover .hide-text,
 .page-fall-2021-star-awards .modal-container__header a:hover .hide-text,
-.page-spring-2022-star-awards .modal-container__header a:hover .hide-text {
+.page-spring-2022-star-awards .modal-container__header a:hover .hide-text,
+.page-fall-2022-star-awards .modal-container__header a:hover .hide-text,
+.page-spring-2023-star-awards .modal-container__header a:hover .hide-text {
   width: 3rem;
   opacity: 1;
 }
@@ -12180,7 +12302,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__content,
 .page-spring-2021-star-awards .modal-container__content,
 .page-fall-2021-star-awards .modal-container__content,
-.page-spring-2022-star-awards .modal-container__content {
+.page-spring-2022-star-awards .modal-container__content,
+.page-fall-2022-star-awards .modal-container__content,
+.page-spring-2023-star-awards .modal-container__content {
   overflow-x: none;
   overflow-y: auto;
   margin-top: 3rem;
@@ -12192,7 +12316,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__content-title,
 .page-spring-2021-star-awards .modal-container__content-title,
 .page-fall-2021-star-awards .modal-container__content-title,
-.page-spring-2022-star-awards .modal-container__content-title {
+.page-spring-2022-star-awards .modal-container__content-title,
+.page-fall-2022-star-awards .modal-container__content-title,
+.page-spring-2023-star-awards .modal-container__content-title {
   font-size: 1.4em;
   font-weight: bold;
   text-transform: uppercase;
@@ -12203,7 +12329,9 @@ Typography
 .page-fall-2020-star-awards .modal-container__content p + p,
 .page-spring-2021-star-awards .modal-container__content p + p,
 .page-fall-2021-star-awards .modal-container__content p + p,
-.page-spring-2022-star-awards .modal-container__content p + p {
+.page-spring-2022-star-awards .modal-container__content p + p,
+.page-fall-2022-star-awards .modal-container__content p + p,
+.page-spring-2023-star-awards .modal-container__content p + p {
   margin-top: .5rem;
 }
 .page-star-awards .modal.zoom-in .modal-container,
@@ -12211,7 +12339,9 @@ Typography
 .page-fall-2020-star-awards .modal.zoom-in .modal-container,
 .page-spring-2021-star-awards .modal.zoom-in .modal-container,
 .page-fall-2021-star-awards .modal.zoom-in .modal-container,
-.page-spring-2022-star-awards .modal.zoom-in .modal-container {
+.page-spring-2022-star-awards .modal.zoom-in .modal-container,
+.page-fall-2022-star-awards .modal.zoom-in .modal-container,
+.page-spring-2023-star-awards .modal.zoom-in .modal-container {
   transform: scale(0.8);
 }
 .page-star-awards .modal.zoom-out .modal-container,
@@ -12219,7 +12349,9 @@ Typography
 .page-fall-2020-star-awards .modal.zoom-out .modal-container,
 .page-spring-2021-star-awards .modal.zoom-out .modal-container,
 .page-fall-2021-star-awards .modal.zoom-out .modal-container,
-.page-spring-2022-star-awards .modal.zoom-out .modal-container {
+.page-spring-2022-star-awards .modal.zoom-out .modal-container,
+.page-fall-2022-star-awards .modal.zoom-out .modal-container,
+.page-spring-2023-star-awards .modal.zoom-out .modal-container {
   transform: scale(1.2);
 }
 .page-star-awards .modal:target,
@@ -12227,7 +12359,9 @@ Typography
 .page-fall-2020-star-awards .modal:target,
 .page-spring-2021-star-awards .modal:target,
 .page-fall-2021-star-awards .modal:target,
-.page-spring-2022-star-awards .modal:target {
+.page-spring-2022-star-awards .modal:target,
+.page-fall-2022-star-awards .modal:target,
+.page-spring-2023-star-awards .modal:target {
   opacity: 1;
   pointer-events: auto;
 }
@@ -12236,7 +12370,9 @@ Typography
 .page-fall-2020-star-awards .modal:target .modal-container,
 .page-spring-2021-star-awards .modal:target .modal-container,
 .page-fall-2021-star-awards .modal:target .modal-container,
-.page-spring-2022-star-awards .modal:target .modal-container {
+.page-spring-2022-star-awards .modal:target .modal-container,
+.page-fall-2022-star-awards .modal:target .modal-container,
+.page-spring-2023-star-awards .modal:target .modal-container {
   transform: scale(1);
 }
 .page-virtualwarmup #countdown {

@@ -1,223 +1,262 @@
-
 [
         {
-            "nominee": "Alice Lee",
-            "unit": "University Marketing and Communications"
+            "nominee": "Lee, Alice",
+            "unit": "UMAC",
+            "quote": "Alice's creative input has a positive impact on her team and she is a tri-force of compassion, widsom and hard work."
         },
         {
-            "nominee": "Michelle Ma",
-            "unit": "University Marketing and Communications"
+            "nominee": "Ma, Michelle",
+            "unit": "UMAC",
+            "quote": "Michelle is a huge driver of the UW News team's work — leading the team with thoughtfulness, kindness and compassion while encouraging creativity and innovation in sharing the great work of the UW. "
         },
         {
-            "nominee": "Elise Perachio",
-            "unit": "University Marketing and Communications"
+            "nominee": "Perachio, Elise",
+            "unit": "UMAC",
+            "quote": "Incredibly valuable and amazing colleague with Marketo skills honed to perfection!"
         },
         {
-            "nominee": "Megan Kitagawa",
-            "unit": "Development: UW Tacoma"
+            "nominee": "Kitagawa, Megan",
+            "unit": "Development: UWTacoma",
+            "quote": "Every day, Megan brings her full self in a commitment to excellence, innovation, collaboration and just plain getting stuff done."
         },
         {
-            "nominee": "Jess  Wang",
-            "unit": "Development: UWMed"
+            "nominee": "Wang, Jess ",
+            "unit": "Development: UWMed",
+            "quote": "Jess is someone you want on your team, both on the good days and the hard days, because she is cheerful, calm, encouraging, and always lends a hand. She lives the best of our UW and UA values each day simply by showing up and being herself. "
         },
         {
-            "nominee": "Tim Knight",
-            "unit": "Development: SPH"
+            "nominee": "Knight, Tim",
+            "unit": "Development: SPH",
+            "quote": "Tim’s accessible web designs make us standout as a top-ranked school of public health."
         },
         {
-            "nominee": "Elizar Mercado",
-            "unit": "Development: SPH"
+            "nominee": "Mercado, Elizar",
+            "unit": "Development: SPH",
+            "quote": "Elizar’s creative designs make us shine as a top-tier school of public health."
         },
         {
-            "nominee": "Kate Stringer",
-            "unit": "Development: SPH"
+            "nominee": "Stringer, Kate",
+            "unit": "Development: SPH",
+            "quote": "Kate crafts compelling stories featuring our scientific impact, diversity, and health equity mission of the School of Public Health."
         },
         {
-            "nominee": "Kristyn Danson ",
-            "unit": "Development: iSchool"
+            "nominee": "Danson , Kristyn",
+            "unit": "Development: iSchool",
+            "quote": "Kristyn is finding new and inventive ways to reach out to our alumni and is doing amazing work -- And she's a one-person shop! "
         },
         {
-            "nominee": "Sharon Dana",
-            "unit": "Development: Engineering"
+            "nominee": "Dana, Sharon",
+            "unit": "Development: Engineering",
+            "quote": "Sharon is a fabulous collaborator between unit and central fundraising and an incredible partner for corporate and foundation relations discussions on equitable and inclusive community engagement."
         },
         {
-            "nominee": "Marzette Mondin",
-            "unit": "Development: Engineering"
+            "nominee": "Mondin, Marzette",
+            "unit": "Development: Engineering",
+            "quote": "Marzette is an exemplar of leadership and charts the path for all of us with grace and integrity and the UW is a better place as a result of their efforts."
+        },        
+        {
+            "nominee": "Antonio, Joyce",
+            "unit": "Development: A&S",
+            "quote": "Joyce came in during COVID and immediately made an impact which has sustained and expanded."
         },
         {
-            "nominee": "Liz Young",
-            "unit": "Development: Engineering"
+            "nominee": "Joseph, Nancy",
+            "unit": "Development: A&S",
+            "quote": "Nancy is a master storyteller and word strategist. The care she takes in selecting, researching and telling stories has made her a trusted collaborator among faculty, staff, students, alumni, donors and friends. "
         },
         {
-            "nominee": "Joyce Antonio",
-            "unit": "Development: CAS"
+            "nominee": "Nessif, Joey",
+            "unit": "Advancement Operations",
+            "quote": "Joey is an absolutely incredible QA Test Analyst.  With her keen eye and ability to analyze functionality from multiple angles, she’s identified hundreds of bugs which have been fixed, creating a much smoother go live experience for our users!"
         },
         {
-            "nominee": "Nancy Joseph",
-            "unit": "Development: CAS"
+            "nominee": "Rodriguez, Juan",
+            "unit": "Development: A&S",
+            "quote": "Juan has gone above and beyond in his short time with UW College of Arts & Sciences, and has continuously produced incredibly high-quality work. Through his vision and collaborative spirit, he has set a new high bar that has truly inspired and cemented himself as an asset to his team and the University at large. "
         },
         {
-            "nominee": "Emily  Rigsby",
-            "unit": "Development: CAS"
+            "nominee": "Sabha, Reem",
+            "unit": "Development: A&S",
+            "quote": "Reem is a driven and hard-working colleague who is a great collaborator."
         },
         {
-            "nominee": "Juan Rodriguez",
-            "unit": "Development: CAS"
+            "nominee": "Blake, Tomitha",
+            "unit": "Development: ASA",
+            "quote": "Tomitha provides extraordinary leadership, vision and impact to ASA and the entire UW community. With an unwavering commitment to student success and philanthropic impact, she exemplifies UA values and aspirations."
         },
         {
-            "nominee": "Reem Sabha",
-            "unit": "Development: CAS"
+            "nominee": "ASO Team, Regional & International",
+            "unit": "Development Programs",
+            "quote": "The Regional & International ASO team goes above and beyond on a daily basis -- not just on our team but helping out across Advancement when needed. They are deeply committed to UW/UW Advancement values and our growth in diversity, equity and inclusion. "
         },
         {
-            "nominee": "Tomitha Blake",
-            "unit": "Development: ASA"
+            "nominee": "Cisse, Kesia ",
+            "unit": "Development Programs",
+            "quote": "Kesia's warmth and kindness are sure to bring a smile to anybody's face on even the worst of days. Whether she is helping to brainstorm new ideas, challenge old ideas, or help us understand existing ideas - Kesia ensures we are doing our best work."
         },
         {
-            "nominee": "Regional & International ASO Team",
-            "unit": "Development Programs"
+            "nominee": "Dugan, Angela",
+            "unit": "Development Programs",
+            "quote": "Angela is an excellent fundraiser who is passionate about the UW's mission, values and goals. She is a leader in our efforts to grow in our knowledge of and commitment to diversity, equity and inclusion. "
         },
         {
-            "nominee": "Kesia  Cisse",
-            "unit": "Development Programs"
+            "nominee": "Kim, Marianne",
+            "unit": "Development Programs",
+            "quote": "Marianne creates profound engagement through her events work and profound impact in all the ways she goes above and beyond for her team. "
         },
         {
-            "nominee": "Angela Dugan",
-            "unit": "Development Programs"
+            "nominee": "LeSourd, Michelle ",
+            "unit": "Development Programs",
+            "quote": "From helping to shape a deeply caring culture to always seeking to deepen our own understanding of our work and its relationship to those around us, Michelle brings authenticity and empathy to our team."
         },
         {
-            "nominee": "Marianne Kim",
-            "unit": "Development Programs"
+            "nominee": "McFaul, Joey",
+            "unit": "Development Programs",
+            "quote": "Joey is a shining star to Planned Giving. We want others to see and know the sparkle she brings with her outstanding collaborative, creative and positive work."
         },
         {
-            "nominee": "Michelle  LeSourd",
-            "unit": "Development Programs"
+            "nominee": "Smith, Carolyn",
+            "unit": "Development Programs",
+            "quote": "Carolyn is always open to supporting her colleagues. She is a great listener and empathetic, she connects with others with humor and understanding. She is always eager to help and support our JEDI Collaborative work."
         },
         {
-            "nominee": "Joey McFaul",
-            "unit": "Development Programs"
+            "nominee": "Ballesteros, Luis",
+            "unit": "ASE",
+            "quote": "Luis has shown the sort of grit and curiosity that makes our work in Advancement possible. He's a clear example of how our best work is done together."
         },
         {
-            "nominee": "Carolyn Smith",
-            "unit": "Development Programs"
+            "nominee": "Barrera, Laura",
+            "unit": "Development: CBE",
+            "quote": "Laura brings her whole self to the table, working tirelessly to ensure success for the CBE community."
         },
         {
-            "nominee": "Luis Ballesteros",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Bhatia, Eileen",
+            "unit": "Development: Foster",
+            "quote": "A consummate professional, Eileen advances the University and Foster School missions through outstanding relationship building with corporate stakeholders and partners. "
         },
         {
-            "nominee": "Laura Barrera",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Carman, Evan",
+            "unit": "ASE",
+            "quote": "Evan is a quiet powerhouse whose tenacity and thoughtfulness have profoundly improved systems and programs that deeply impact and connect students and alumni."
         },
         {
-            "nominee": "Eileen Bhatia",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Flanders, Greg",
+            "unit": "ASE",
+            "quote": "Team player. Team pundit. We're glad he's part of our team!"
         },
         {
-            "nominee": "Evan Carman",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Garber, Seneca",
+            "unit": "ASE",
+            "quote": "Seneca joined us in February 2022 in a newly created position of Assistant Director of Marketing, making it immediately clear why we needed that position. He brings a sense of humor and years of experience to his role, making him the ideal person to hand over a project and not worry."
         },
         {
-            "nominee": "Greg Flanders",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Goodloe, Amy",
+            "unit": "ASE",
+            "quote": "We honestly don't know how Amy does it. She oversees a massive portfolio of work and does it all with kindness, generosity, and fun. "
         },
         {
-            "nominee": "Seneca Garber",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Hiroshima, Terri",
+            "unit": "ASE",
+            "quote": "Terri's leadership, commitment and investment at UW is admirable. She is a recognized leader of character and competence, Terri nurtures a culture of inclusion, empathy and excellence. Her impact at ASE and across our community of practice is distinctive."
         },
         {
-            "nominee": "Amy Goodloe",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Lerer, Virginia ",
+            "unit": "ASE",
+            "quote": "Virginia is a leader of distinction and impact. Her contributions to ASE/UWAA are immeasurable. She leads with compassion and competence; her keen insight and executive resilience foster a culture of innovation and inclusion and elevates her colleagues and expands the capacity and impact of her organization. "
         },
         {
-            "nominee": "Terri Hiroshima",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "MacDonald, Kerry",
+            "unit": "ASE",
+            "quote": "Kerry shouldered a marked increase in responsibilities and enabled others to act in support of a shared vision. Her commitment to excellence and the respect she earns and provides is a model for all.  "
         },
         {
-            "nominee": "Virginia  Lerer",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Manjarrez, Jaden",
+            "unit": "ASE",
+            "quote": "Jaden provides a fresh perspective in ASE and takes great care in getting things accomplished in such a smooth and accurate way.\r\n\r\n"
         },
         {
-            "nominee": "Kerry MacDonald",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Reynolds, Katura",
+            "unit": "ASE",
+            "quote": "Katura's positive outlook and can do attitude are an asset to UWAA's marketing team. She's the first to ask a question, to share an insight, or to lean in to learn something new."
         },
         {
-            "nominee": "Jaden Manjarrez",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Rickard, Kate",
+            "unit": "ASE",
+            "quote": "Kate initiated a complex program with multiple stakeholders and achieved success by enabling others to act in support of a beautiful vision that was shared by all. During a time of scarcity of resources, time, staff - Kate led with an abundance of inclusivity, perseverance, collaboration, and positivity."
         },
         {
-            "nominee": "Katura Reynolds",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Tes, Sophanna",
+            "unit": "ASE",
+            "quote": "Sophanna is thoughtful in the care that he gives to patrons and staff. "
         },
         {
-            "nominee": "Kate Rickard",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Urquhart, Sabrina",
+            "unit": "ASE",
+            "quote": "Sabrina is a leader of integrity and resolve. Joy, passion and focus complement her deep commitment to the transformational impact of higher education and public service."
         },
         {
-            "nominee": "Sophanna Tes",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "White, Taylor",
+            "unit": "ASE",
+            "quote": "Taylor has leaned into areas of disorganization and collaborated with others to create new and efficient systems; she leaned into vulnerability and earned even ore trust and respect from colleagues and stakeholders."
         },
         {
-            "nominee": "Sabrina Urguhart",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Bailey, Lindsay",
+            "unit": "Development: A&S",
+            "quote": "Lindsay is a gem: supremely organized, able to answer just about any question directly or connect you to the right resource, super fun, and committed to continuous process improvement."
         },
         {
-            "nominee": "Taylor White",
-            "unit": "Alumni and Stakeholder Engagement"
+            "nominee": "Berg, Gunnar",
+            "unit": "Advancement Operations",
+            "quote": "Working with Gunnar is a joy! His attitude consistently inspires, from his excitement about new challenges to his willingness to help out his teammates. He has an amazing ability to quickly digest new information and come up with solutions to difficult problems."
         },
         {
-            "nominee": "Lindsay Bailey",
-            "unit": "Advancement Operations"
+            "nominee": "Cato, Barron",
+            "unit": "Advancement Operations",
+            "quote": "Barron’s dedication to cultivating and promoting the Market Research, Analytics, and Insights (MRAI) concept and team is noteworthy. His commitment to excellence is a testament to his character, and I appreciate his contributions and consultation."
         },
         {
-            "nominee": "Gunnar Berg",
-            "unit": "Advancement Operations"
+            "nominee": "Dennehy, Jere",
+            "unit": "Advancement Operations",
+            "quote": "Jere has a can do attitude and represents innovation and  is true to our best work done together value. "
         },
         {
-            "nominee": "Barron Cato",
-            "unit": "Advancement Operations"
+            "nominee": "Fuentes, Chris ",
+            "unit": "Advancement Operations",
+            "quote": "Chris has been an amazing addition to our IM team. His organizational skills and patience is the right amount of balance we need to add to our team. "
         },
         {
-            "nominee": "Jere Dennehy",
-            "unit": "Advancement Operations"
+            "nominee": "Kuromi, September",
+            "unit": "Advancement Operations",
+            "quote": "September has an amazing ability to quickly understand complex concepts.  She is smart, level-headed, and has the can-do spirit we need to bring the CRM conversion project to completion. We are so fortunate to have her on the team!"
         },
         {
-            "nominee": "Chris  Fuentes",
-            "unit": "Advancement Operations"
+            "nominee": "Miles, Kelly",
+            "unit": "Advancement Operations",
+            "quote": "Kelly is a master of kindness and collaboration with a smile. "
         },
         {
-            "nominee": "September Kuromi",
-            "unit": "Advancement Operations"
+            "nominee": "Newlin, Kelsey",
+            "unit": "Advancement Operations",
+            "quote": "Kelsey went above and beyond to develop a new training course for Reportal!"
         },
         {
-            "nominee": "Theresa Mejia",
-            "unit": "Advancement Operations"
+            "nominee": "Oakley, Daranee",
+            "unit": "Advancement Operations",
+            "quote": "Daranee's passion and creative \"solutioning\" are the key ingredients to many of our successful processes. We are lucky to have this star on our team!"
         },
         {
-            "nominee": "Kelly Miles",
-            "unit": "Advancement Operations"
+            "nominee": "Ogwude, Isi",
+            "unit": "Advancement Operations",
+            "quote": "Isi's talent, expertise and approach adds so much value to the UW and UA, and I feel tremendously thankful to be her colleague."
         },
         {
-            "nominee": "Kelsey Newlin",
-            "unit": "Advancement Operations"
+            "nominee": "Russell, Dayna",
+            "unit": "Advancement Operations",
+            "quote": "Dayna put together a team that has become key to the success of our Tandem launch due to their rigorous testing efforts. She is a natural leader, a great project manager, a wonderful colleague and someone who champions learning and teamwork. "
         },
         {
-            "nominee": "Daranee Oakley",
-            "unit": "Advancement Operations"
-        },
-        {
-            "nominee": "Isi Ogwude",
-            "unit": "Advancement Operations"
-        },
-        {
-            "nominee": "Juan Rodriguez",
-            "unit": "Advancement Operations"
-        },
-        {
-            "nominee": "Dayna Russell",
-            "unit": "Advancement Operations"
-        },
-        {
-            "nominee": "Fernanda  Spratt",
-            "unit": "Advancement Operations"
+            "nominee": "Spratt, Fernanda ",
+            "unit": "Advancement Operations",
+            "quote": "Innovative, resourceful and equity-minded, Fernanda is a trusted and strategic partner who goes above and beyond for her colleagues. "
         }
-    ]
+]

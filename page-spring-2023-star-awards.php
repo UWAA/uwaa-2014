@@ -5,7 +5,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
 
 <div class="uw-hero-image star-awards">
-  <h2 class="star-site-title">Spring 2021 Advancement Star Awards</h2>
+  <h2 class="star-site-title">Spring 2023 Advancement Star Awards</h2>
 
 </div>
 
@@ -64,7 +64,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
 
         <div id="winner-cards">
           <div class="grid">
-            <?php $UWAA->UI->makeStarAwardWinnerCards('spring2021'); ?>
+            <?php $UWAA->UI->makeStarAwardWinnerCards('spring2023'); ?>
           </div>
         </div>
 
@@ -75,7 +75,7 @@ wp_enqueue_script(array('starsAwardsSearch'));
     <div id="cards">
         <div class ="grid">
       
-            <?php $UWAA->UI->makeStarAwardCards('spring2021'); ?>
+            <?php $UWAA->UI->makeStarAwardCards('spring2023'); ?>
        
         
         </div>  
