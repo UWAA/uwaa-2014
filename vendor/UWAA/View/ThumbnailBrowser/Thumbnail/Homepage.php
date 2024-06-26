@@ -42,13 +42,19 @@ class Homepage extends ThumbnailBrowser implements Thumbnail
         ),
       'posts_per_page' => 10,
       'tax_query' => array(
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'term_id',
+          'terms'    => array( 5 ),
+          'operator' => 'NOT IN',
+        ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'slug',
           'terms'    => array( 'home-programs')
-
-          )
-        ),
+        )
+      ),
       'orderby' => 'rand'
       );
 

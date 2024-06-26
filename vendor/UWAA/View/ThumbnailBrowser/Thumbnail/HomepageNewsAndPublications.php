@@ -42,22 +42,20 @@ class HomepageNewsAndPublications extends ThumbnailBrowser implements Thumbnail
         ),
       'posts_per_page' => 5,
       'orderby' => 'rand',
-      // 'tag' => 'Home'
-
       'tax_query' => array(
-        // 'relation' => 'AND',
-        // array(
-        //   'taxonomy' => 'destinations',
-        //   'field'    => 'name',
-        //   'terms'    => array( 'asia')
-        // ),
+        'relation' => 'AND',
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'term_id',
+          'terms'    => array( 5 ),
+          'operator' => 'NOT IN',
+        ),
         array(
           'taxonomy' => 'uwaa_content_promotion',
           'field'    => 'slug',
           'terms'    => array( 'home-news-pubs')
-
-          )
-      ) //End tax query
+        )
+      )
       );
 
     return $args;
