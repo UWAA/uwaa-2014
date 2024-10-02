@@ -42,13 +42,14 @@ var paths = {
   }
 }
 
-gulp.task('default', function() {
-  console.log(this);
+gulp.task('default', function(done) {
+  console.log('Running All Gulp Tasks');
+done();
 });
 
 
 // Builds both dev and minified version of our JS files.
-gulp.task('scripts', function() {
+gulp.task('scripts', function(done) {
 
   
   gulp.src([ './js/_*.js'])
@@ -97,11 +98,14 @@ gulp.src(['./js/admin/_*.js'])
     }))
     .on('error', catchErrors)
     .pipe(gulp.dest('./js/admin'));
+
+done();
 });
 
 
 
-gulp.task('less', function () {
+gulp.task('less', function (done) {
+    console.log('Processing LESS Files');
      gulp.src('./less/style.less')     
     .pipe(less())
     .pipe(minifyCss())
@@ -135,18 +139,22 @@ gulp.task('less', function () {
     .on('error', catchErrors)     
     .pipe(gulp.dest('./'));
 
+  done();
 
   });
 
-gulp.task('watch', function () {
-    gulp.watch('less/**/*.less', ['less']);
-    gulp.watch(['js/_*.js', 'js/admin/_*.js', 'js/support/*.js', '!js/support/*.min.js'], ['scripts']);
+gulp.task('watch', function (cb) {
+  console.log('Watching JS and Less Files for Compilation');
+    gulp.watch('less/**/*.less', gulp.series('less'));
+    gulp.watch(['js/_*.js', 'js/admin/_*.js', 'js/support/*.js', '!js/support/*.min.js'], gulp.series('scripts'));
+    cb();
 });
 
 
-gulp.task('library', function() {
-    gulp.src(mainBowerFiles(/* options */), { base: 'bower_components' })
+gulp.task('library', function(done) {
+  gulp.src(mainBowerFiles(/* options */), { base: 'bower_components' })
     .pipe(gulp.dest('./js/libraries'));
+  done();
 });
  
  
