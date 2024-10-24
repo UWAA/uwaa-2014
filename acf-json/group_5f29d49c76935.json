@@ -6,6 +6,7 @@
             "key": "field_5f29d4d774b83",
             "label": "Custom Text One",
             "name": "custom_text_one",
+            "aria-label": "",
             "type": "text",
             "instructions": "Homepage - Content Row One Title",
             "required": 0,
@@ -25,6 +26,7 @@
             "key": "field_5f29d4ef74b84",
             "label": "Custom Text One Two",
             "name": "custom_text_two",
+            "aria-label": "",
             "type": "text",
             "instructions": "Homepage - Content Row Two Title",
             "required": 0,
@@ -44,6 +46,7 @@
             "key": "field_5f29d4f974b85",
             "label": "Custom Text One Three",
             "name": "custom_text_three",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -75,7 +78,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "Use these fields to update special content as indicated by your WordPress developer",
-    "modified": 1598049409
+    "show_in_rest": false,
+    "modified": 1729009398
 }

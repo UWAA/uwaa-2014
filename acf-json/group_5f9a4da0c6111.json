@@ -6,6 +6,7 @@
             "key": "field_5f9a4db5b893f",
             "label": "Countdown End Time",
             "name": "countdown_end_time",
+            "aria-label": "",
             "type": "date_time_picker",
             "instructions": "",
             "required": 0,
@@ -23,6 +24,7 @@
             "key": "field_5f9a4ea6d4895",
             "label": "Zoom Slides",
             "name": "zoom-slides",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "Add zoom images",
             "required": 0,
@@ -36,12 +38,14 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_5f9a4f0dd4896",
                     "label": "Zoom Background",
                     "name": "zoom-background",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -60,7 +64,8 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_5f9a4ea6d4895"
                 }
             ]
         }
@@ -80,7 +85,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1603950183
+    "show_in_rest": false,
+    "modified": 1729009398
 }
