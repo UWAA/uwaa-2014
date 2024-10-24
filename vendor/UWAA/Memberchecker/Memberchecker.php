@@ -62,17 +62,17 @@ class Memberchecker {
         }
 
 
-
-        if ($this->memberCheckerCookieValues->loggedIn) {
+// PHP 8 - October 2024 update added null-safe operators ?-> line 66, 70, 74, 75
+        if ($this->memberCheckerCookieValues?->loggedIn) {
             $this->isLoggedIn = true;
         }
 
-        if(preg_match('(A|G)', $this->memberCheckerCookieValues->memberStatus) === 1) {
+        if(preg_match('(A|G)', $this->memberCheckerCookieValues?->memberStatus) === 1) {
             $this->hasActiveMembership = true;
         }
 
-        if($this->getMembershipType($this->memberCheckerCookieValues->membershipType) != "") {
-            $this->membershipType = $this->getMembershipType($this->memberCheckerCookieValues->membershipType);
+        if($this->getMembershipType($this->memberCheckerCookieValues?->membershipType) != "") {
+            $this->membershipType = $this->getMembershipType($this->memberCheckerCookieValues?->membershipType);
         }
         
         

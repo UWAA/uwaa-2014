@@ -331,7 +331,8 @@ public function addGetPermalinkButton($arg, $post_id) {
 
 
 
-public function redirectDirectAccessToMembergrams( $query ) {    
+public function redirectDirectAccessToMembergrams( $query ) {   
+ if(isset($query->query_vars['post_type'])){    
     if ( ('tpcmembergrams' == $query->query_vars['post_type'] || 'membergrams' == $query->query_vars['post_type'] ) && ! is_admin() ) {
 
         if ( 'feed' != $query->query_vars['feed'] ) {
@@ -342,7 +343,9 @@ public function redirectDirectAccessToMembergrams( $query ) {
         }
         
     }
-    
+} else {
+    //
+}
     return $query;
 }
 

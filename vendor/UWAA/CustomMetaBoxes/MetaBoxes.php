@@ -33,8 +33,11 @@ class MetaBoxes
 
             $screen = get_current_screen();
             remove_meta_box( 'postimagediv', $screen, 'side' );
+           
+          if($screen->base != 'dashboard' ) {     
             add_meta_box('postimagediv', __('Post Header/Thumbnail Image'), 'post_thumbnail_meta_box', $screen, 'side', 'high');
-        }
+          }
+    }
 
         public function moveEditorBox() {
             global $post, $wp_meta_boxes;

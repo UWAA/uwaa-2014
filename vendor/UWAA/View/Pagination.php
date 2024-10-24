@@ -233,10 +233,16 @@ CONTENT;
     private function getNextAndPreviousPostIDs() 
     {
         $current = array_search($this->currentID, $this->arrayOfPosts);
-
+        if(isset($this->arrayOfPosts[$current-1])) {
         $this->previousID = $this->arrayOfPosts[$current-1];
+        } else {
+            $this->previousID = null;
+        }
+        if(isset($this->arrayOfPosts[$current+1])) {
         $this->nextID = $this->arrayOfPosts[$current+1];
-        
+        } else {
+            $this->nextID = null;
+        }
     }
 
    

@@ -1,5 +1,6 @@
 <div class="uw-homepage-slider-container uwaa-superhero">
-
+<!-- Check for slides -->
+<?php if( $superhero->get_latest_slideshow() == TRUE ) : ?>
 <!-- Move this logic to the calling page,  -->
   <?php foreach ( $superhero->get_latest_slideshow() as $slide ) :
   // if ( class_exists('\UWAA\Slideshow') ) :  
@@ -42,5 +43,5 @@
       <div class="slideshow-controls">
           <p class="next-headline"></p>
       </div>
-
+<?php endif; ?>
 </div>

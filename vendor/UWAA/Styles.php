@@ -87,7 +87,8 @@ class Styles
       {
         $style = (object) $style;
 
-        if (array_key_exists( 'support', $style) && $style->support )
+        //if (array_key_exists( 'support', $style) && $style->support ) **deprecated in PHP 8.0 -- Updated October 2024 jdpritch
+        if(property_exists($style, 'support') && $style->support )
       {
 
         wp_register_style(
@@ -107,7 +108,8 @@ class Styles
       {
         $style = (object) $style;
 
-        if (!array_key_exists( 'support', $style) )
+        //if (!array_key_exists( 'support', $style) )  **deprecated in PHP 8.0 -- Updated October 2024 jdpritch
+        if(!property_exists($style, 'support'))
       {
 
         wp_enqueue_style(
@@ -132,8 +134,9 @@ class Styles
 
       $style = (object) $style;
 
-      if ( array_key_exists( 'admin', $style)
-            && $style->admin )
+     // if ( array_key_exists( 'admin', $style)
+     //       && $style->admin )  **deprecated in PHP 8.0 -- Updated October 2024 jdpritch
+         if (property_exists($style, 'admin') && $style->admin ) 
       {
         wp_register_style(
           $style->id,

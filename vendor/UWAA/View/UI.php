@@ -56,9 +56,10 @@ class UI
 
         
         $url = wp_get_attachment_image_src($id, $size);
-        
-        
+      // Added $url content check October 2024  
+      if(isset($url[0])) {
         return($url[0]);
+      }
     }
 
     public function returnAppImageURL($id)

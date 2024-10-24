@@ -53,8 +53,9 @@ class Button
         if (property_exists($attributes, 'new')){
             $target = "target=\"_blank\"";
         }
-
-        $class_string = implode($classes, ' ');        
+// PHP 8 update - October 2024  change to implode
+        //$class_string = implode($classes, ' '); 
+        $class_string = implode( ' ', $classes );       
         return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s" %s>%s</a></div>', $class_string, $color, $url, $target, $content);
     }
 }

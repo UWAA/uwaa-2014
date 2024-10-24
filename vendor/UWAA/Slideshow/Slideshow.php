@@ -88,8 +88,12 @@ public function get_latest_slideshow()
     
     wp_reset_postdata();
 
-
+    if(isset($slides)) {
     return $slides ? json_decode( json_encode( array_reverse( $slides ) ) ) : array();
+    } else {
+       $slides = null;
+    return $slides;   
+    }
 
   }
 
