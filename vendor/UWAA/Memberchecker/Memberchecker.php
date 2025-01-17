@@ -228,6 +228,8 @@ if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfi
 
         if ($details['membershipType'] == 'Annual Member') {
             $renewal = '<p class="renewal">Renew: ' . $details['membershipExpiry'].'</p>';
+        } else {
+            $renewal = NULL;
         }
 
         $name = " " . $details['firstName'] . " " . $details['lastName'] . " ";

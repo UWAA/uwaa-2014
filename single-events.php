@@ -87,7 +87,7 @@ if (has_category('Veterans Week')) {
 
     <div class="col-md-8 uw-content" role='small'>
 
-    <?php if ($defaultHeader) { uw_site_title(); }; ?>
+    <?php if (isset($defaultHeader)) { uw_site_title(); }; ?>
 
       <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
 

@@ -20,6 +20,7 @@ class REJEvents extends ThumbnailBrowser implements Thumbnail
     protected $postImageThumbnailURL;
     protected $postExcerpt;
     protected $postImageAltText;
+    protected $format;
 
 
     public function __construct()

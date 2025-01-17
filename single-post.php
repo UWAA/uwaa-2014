@@ -61,7 +61,7 @@ else {
     
     <div <?php uw_content_class(); ?> role='main' >
 
-      <?php if (!empty($defaultHeader)) { uw_site_title(); }; ?>
+      <?php if (isset($defaultHeader)) { uw_site_title(); }; ?>
 
           <?php include(locate_template( 'partials/sidebar-single-breadcrumbs.php')); ?>
 

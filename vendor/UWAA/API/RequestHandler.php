@@ -151,7 +151,7 @@ class RequestHandler
         }
 
         $query = new \WP_query($args);        
-        set_transient($transientName, $query, 6 * 'HOURS_IN_SECONDS');        
+        set_transient($transientName, $query, 6 * 'HOUR_IN_SECONDS');        
         return $query;   
         }     
 

@@ -51,7 +51,9 @@ class TourBrochureButton
         
 
         // Default style gold, slant-right, match styles
-        $class_string = implode($classes, ' ');        
+        // PHP 8 update - January 2025  change to implode
+
+        $class_string = implode( ' ', $classes );       
         $buttonHTML = sprintf('<div class="uwaa-btn-wrapper brochure-request" data-toggle="modal" data-target="#brochure-modal"><a class="%s %s" href="%s">%s</a></div>', $class_string, $color, $url, $content);
 
         $output =  <<<SCRIPT

@@ -314,7 +314,7 @@ if (previewOrActiveDrive() ) {  //Content in this shows if a user is logged in, 
        if(get_field('store_option_rate_codes') != '' && !array_key_exists("MEMBCODES", $childPageParams)) {
             $paremeterPrefix = "?";
 
-            if ($childPageQueryString) {
+            if (isset($childPageQueryString)) {
                 $paremeterPrefix = "&";
             }
             

@@ -5,25 +5,34 @@ $rawParentQueryStringParams = strtoupper($_SERVER['QUERY_STRING']);
 $UWAA->Memberchecker->getSession();
 
 function previewOrActiveDrive() {
-  if (is_user_logged_in() && get_field('controls')['drive_preview_drive_content'] === true )  {
-    return true;
-    
+  $controls = get_field('controls');
+  if( $controls && isset(get_field('controls')['drive_preview_drive_content']) ){
+    if (is_user_logged_in() && get_field('controls')['drive_preview_drive_content'] === true )  {
+      return true;
+      
+    }
   }
   return false;
 }
 
 function driveIsActive() {
-  if (get_field('controls')['drive_custom_is_active'] === true) {
-    return true;
-    
+  $controls = get_field('controls');
+  if($controls && isset(get_field('controls')['drive_custom_is_active'])) {
+      if (get_field('controls')['drive_custom_is_active'] === true) {
+        return true;
+        
+      }
   }
   return false;
 }
 
 function cyber() {
+  $controls = get_field('controls');
+  if($controls && isset(get_field('controls')['drive_custom_cyber']) ) {
   if (get_field('controls')['drive_custom_cyber'] === true) {    
     return true;
     }
+  }  
   return false;
 }
 

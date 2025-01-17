@@ -16,7 +16,7 @@ class OpenGraph
 
     public function handleOpenGraph() {
     global $post;
-
+if( is_singular() && isset($post) ) {
     if(get_the_title($post->ID) == "Choose a membership option") {
 
         $speciaOGTitle = sanitize_text_field(get_post_meta(get_the_ID(), 'mb_special_og_title', true));
@@ -44,7 +44,7 @@ class OpenGraph
             <?php
             return;
         }
-
+    }
  
     if(is_single() || is_page()) {
 

@@ -50,7 +50,7 @@ class OdysseySignupButton
             $target = "target=\"_blank\"";
         }
 
-        $class_string = implode($classes, ' ');        
+        $class_string = implode( ' ', $classes );  
 
          if(empty($content)){
             return sprintf('<div class="uwaa-btn-wrapper"><a class="%s %s" href="%s" %s>book trip</a></div>', $class_string, $color, $url, $target);
