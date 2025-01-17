@@ -154,6 +154,7 @@
 
           public function addFeedAugmentations() {
 
+        if(isset($_REQUEST['post_type'])){
             switch ($_REQUEST['post_type']) {
                 case 'events':
                     $this->augmentFeed('events', $this->eventFields['fields'], $this->eventFields['hasTaxonomy'], $this->eventFields['taxonomyName'] , $this->eventFields['hasGeotag'] );
@@ -185,7 +186,7 @@
                     return;
                     break;
             }
-              
+        }
               
               
               
@@ -248,8 +249,9 @@
               $id = get_the_id();
               if( has_post_thumbnail( $id ) ) {
                   $imageID = get_post_thumbnail_id( $id );
-                  
-                  $url = \UWAA\View\UI::returnAppImageURL($imageID);                  
+                  $uiclass = new \UWAA\View\UI;
+                  //$url = \UWAA\View\UI::returnAppImageURL($imageID);  
+                  $url = $uiclass->returnAppImageURL($imageID);                
                   echo "<uwaa_app:itemImage><![CDATA[{$url}]]></uwaa_app:itemImage>\n";
 
               }

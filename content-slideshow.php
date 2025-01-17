@@ -25,9 +25,9 @@
 
           <?php echo apply_filters( 'the_content', $slide->text ); ?> 
 
-        <?php if(isset($slide->alternateLink)) { ?>
+        <?php if(isset($slide->alternateLink) || isset($slide->link)) { ?>
           <a class="uw-btn btn-sm btn-gold" href="<?php echo $slide->alternateLink ? $slide->alternateLink : $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
-        <?php endif; ?>
+        <?php } ?>
         </div>
 
       </div>
