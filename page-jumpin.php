@@ -72,9 +72,6 @@ get_header();
                 <a class="instagram" href="http://instagram.com/uwalum">Instagram</a>
               </li>
               <li>
-                <a class="twitter" href="https://www.twitter.com/UWalum">Twitter</a>
-              </li>
-              <li>
                 <a class="facebook" href="https://www.facebook.com/UWalum">facebook</a>
               </li>
               <li>
