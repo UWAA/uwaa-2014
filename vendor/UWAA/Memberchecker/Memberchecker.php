@@ -193,6 +193,8 @@ if ($callSuccess && remove_accents(ucfirst(strtolower(trim($lastName)))) != ucfi
             "loggedIn" => (bool) true,
             "active" => (bool) true
             );
+    } else {
+        $this->memberDetails = array();
     }
 
 

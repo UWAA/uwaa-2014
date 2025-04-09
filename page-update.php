@@ -30,7 +30,7 @@ get_header();
              */
             get_template_part( 'content', 'page' );
 
-            $headers = "?reference=UWAA&hideComments=yes&personOrOrg=P";
+            $headers = "?reference=UWAA&amp;hideComments=yes&amp;personOrOrg=P";
             
             ?>
             <div class="text-center">
