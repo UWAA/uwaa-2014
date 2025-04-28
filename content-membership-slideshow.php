@@ -27,8 +27,11 @@
           <?php echo apply_filters( 'the_content', $slide->text ); ?> 
           </div>
 
-          
-          <a class="uw-btn btn-sm btn-gold membership-superhero-btn" href="<?php echo $slide->alternateLink ? $slide->alternateLink : $slide->link; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
+          <?php 
+if(!empty($slide->alternateLink) ) { $slidelink = $slide->alternateLink; } else { $slidelink = $slide->link; }
+?>
+
+        <a class="uw-btn btn-sm btn-gold membership-superhero-btn" href="<?php echo $slidelink; ?>" aria-describedby="<?php echo $slide->id; ?>-title">Learn more </a>
 
         </div>
 
