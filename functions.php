@@ -183,6 +183,33 @@ function uw_meta_tags() {
   return;
 }
 
+function flexible_embed( $atts) {
+	ob_start();
+
+	// Attributes
+	extract( shortcode_atts(
+		array(
+		'script' => '',
+		'height' => '',	
+    'width' => '',
+    'minheight' => '',
+    'title' => '',
+		), $atts )
+	);
+	
+    // run the loop based on the query
+
+    echo '<iframe src="'. $script .'" height="'. $height .'" width="'. $width .'" frameBorder="0" style="min-height: '. $minheight .';" allow="clipboard-write" title="'. $title .'"></iframe>';
+    ?>
+    <?php
+        $myvariable = ob_get_clean();
+        return $myvariable;
+  
+	
+}
+
+add_shortcode( 'flexible_embed', 'flexible_embed' );
+
 add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
 function load_dashicons_front_end() {
   wp_enqueue_style( 'dashicons' );

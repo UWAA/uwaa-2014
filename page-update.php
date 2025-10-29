@@ -34,7 +34,7 @@ get_header();
             
             ?>
             <div class="text-center">
-              <iframe id="givingFrame" width="520" scrolling="no" height="1725" frameborder="0" src="https://im.gifts.uw.edu/bioupdate<?php echo $headers;?>"> … </iframe>
+              <iframe id="givingFrame" width="520" scrolling="no" height="4900" frameborder="0" src="https://im.gifts.uw.edu/bioupdate<?php echo $headers;?>"> … </iframe>
             </div>
             
             <?php
