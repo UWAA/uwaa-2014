@@ -1,0 +1,25 @@
+.page-linktree, body {background: #d9d9d9; }
+.page-linktree #uw-container { display: flex; flex-direction: column; height: 100%;}
+.page-linktree #uw-container div#uw-container-inner { background-color: #d9d9d9;box-shadow: none; height: 100%; justify-content: center; align-items: center; min-height: 100vh;  box-sizing: border-box; padding-top: 29px; }
+.page-linktree .linktree { max-width: 576px; background: #ffffff; padding: 40px; box-shadow: #d9d9d9 3px 3px 5px; } 
+
+.page-linktree .linktree h1, .page-linktree .linktree h2 { text-align: center; margin-right: 0; width: 100%;  } 
+.page-linktree .linktree .linktree-blurb p { text-align: center;  } 
+
+.page-linktree .linktree .linktree-title {margin-top: 0; visibility: hidden; display: none;  }
+
+.page-linktree .linktree .alumnilogo { width: 80%; height: auto; margin-left: auto; margin-right: auto; display: block; margin-bottom: 29px;  }
+
+.page-linktree .linktree h2 { font-family: 'Open Sans', sans-serif; text-transform: uppercase; font-size: 16px; letter-spacing: 1px; color: #666666; }
+
+.page-linktree .linktree .link-block a { display: block; width: 100%; margin-bottom: 15px; background: #4b2e83; padding: 20px 12px; text-align: center; color: #ffffff; font-weight: 800;  }
+.page-linktree .linktree .link-block a:hover, .page-linktree .linktree .link-block a:focus { background: #000000; }
+
+@media screen and (max-width: 767px ) {
+    .page-linktree #uw-container div#uw-container-inner { padding-top: 0px !important; }
+    .page-linktree .linktree { padding-top: 40px !important; margin-bottom: 0px; min-height: 100vh; }
+}
+@media screen and (max-width: 600px ) {
+html { margin-top: 0 !important; }
+
+}
