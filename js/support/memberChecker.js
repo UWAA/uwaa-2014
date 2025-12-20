@@ -1,5 +1,5 @@
 /* <![CDATA[ */
-var callMemberCheckerAJAX = {"ajaxurl":"\/api\/memberValidator"};
+var callMemberCheckerAJAX = {"ajaxurl":"\/alumni\/api\/memberValidator"};
 /* ]]> */
 
 jQuery(document).ready(function($){
