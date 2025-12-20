@@ -1,56 +1,71 @@
-/* <![CDATA[ */
-var callMemberCheckerAJAX = {"ajaxurl":"\/alumni\/api\/memberValidator"};
-/* ]]> */
+// checker.js
+$(document).ready(function(){
 
-jQuery(document).ready(function($){
-    $("input#memberCheckerLogout").on("click", function(){
-        $("form#memberloginForm").submit();
-    });
+$('input#memberCheckerLogout').on('click', function() {
+    console.log('Clicked');
+    $('form#memberloginForm').submit();
+});
 
-    $("form#memberloginForm").on("submit", function(e){
+$('form#memberloginForm').on('submit', function(event) {
+// @TODO  Pull  canvas stuff.  Here for debugging
+    var canvas = $('#form-message'),
+    errorMessage = $('#error-message'),
+    form = $(this);   
 
-        var $formMessage = $("#form-message"),
-            $errorMessage = $("#error-message"),
-            $form = $(this);
+     $.ajax({            
+            type: form.attr('method'),
+            // action: 'callMemberChecker',
+            url: callMemberCheckerAJAX.ajaxurl +'/login',
+            data: form.serialize(),
+            dataType: 'json',
+            // Remove for prod @TODO
+            success: function(data) {
 
-        $.ajax({
-            type: $form.attr("method"),
-            url: callMemberCheckerAJAX.ajaxurl + "/login",
-            data: $form.serialize(),
-            success: function(response){
-                if(!response.error) location.reload();
-                $formMessage.html(response.message);
-                $errorMessage.html(response.errorMessage);
+                if(!data.error) {
+                    location.reload();
+                } 
+                canvas.html(data.message);
+                errorMessage.html(data.errorMessage);
+                    
             },
-            error: function(xhr){
-                $formMessage.html(xhr.error);
-                console.log(xhr.error);
+            //Remove for prod @TODO
+            error: function(data){                
+                canvas.html(data.error);
+           
             }
         });
-        e.preventDefault();
-    });
+     event.preventDefault();
 
-    $("#memberCheckerLogout").on("click", function(){
-        $("form#memberlogout").submit();
-    });
+});
 
-    $("form#memberlogout").on("submit", function(e){
-        var $output = $("#output"),
-            $form = $(this);
+$('#memberCheckerLogout').on('click', function() {
+    console.log('Clicked');
+    $('form#memberlogout').submit();
+});
 
-        $.ajax({
-            type: $form.attr("method"),
-            url: callMemberCheckerAJAX.ajaxurl + "/logout",
-            data: $form.serialize(),
-            success: function(response){
-                console.log("success");
+$('form#memberlogout').on('submit', function(event) {
+    var canvas = $('#output'),
+    form = $(this);   
+
+     $.ajax({            
+            type: form.attr('method'),
+            url: callMemberCheckerAJAX.ajaxurl +'/logout',
+            data: form.serialize(),
+
+            success: function(data) {
+                console.log('success');
                 location.reload();
             },
-            error: function(xhr){
-                console.log("error");
-                $output.html(xhr);
-            }
+
+                error: function(data){
+                console.log('error');
+                canvas.html(data);
+            }            
         });
-        e.preventDefault();
-    });
+     event.preventDefault();
+
+});
+
+
+
 });
