@@ -1,6 +1,6 @@
 <?php
 wp_enqueue_script('memberChecker');
-wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => home_url('/api/memberValidator')) );
+wp_localize_script( 'memberChecker', 'callMemberCheckerAJAX', array( 'ajaxurl' => 'https://www.washington.edu/alumni/api/memberValidator') );
 ?>
 
     
